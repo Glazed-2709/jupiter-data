@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jupiter — Accueil</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0e1016">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Jupiter">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--card:rgba(14,16,21,.78);
+  --line:rgba(255,255,255,.14);--line-soft:rgba(255,255,255,.07);
+  --txt:#eff2f8;--txt-dim:#79839a;--txt-dim2:#3f4a5e;
+  --accent:#ff2f6d;   /* MPSI */
+  --accent2:#ff8c20;  /* PSI */
+  --accent3:#3ca6ff;  /* Culture */
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#000}
+html,body{scrollbar-width:thin;scrollbar-color:#1a1c24 transparent;min-height:100%;background:#000;color:var(--txt);font-family:var(--mono);
+  -webkit-tap-highlight-color:transparent}
+body{overflow-x:hidden;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:#000}
+body::after{content:"";position:fixed;inset:0;z-index:-1;
+  background:radial-gradient(110% 70% at 18% -10%, rgba(255,48,120,.09), transparent 55%),
+             radial-gradient(110% 70% at 82% 0%, rgba(255,140,32,.07), transparent 55%),
+             radial-gradient(90% 80% at 50% 120%, rgba(60,166,255,.07), transparent 55%),transparent}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:14px;
+  padding:14px 28px;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line-soft)}
+header .bar{height:15px;width:3px;background:var(--accent)}
+header h1{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--txt-dim)}
+header .spacer{flex:1}
+.fchip{display:none;align-items:center;gap:9px;border:1px solid var(--line-soft);
+  padding:6px 11px;font-size:9.5px;color:var(--txt-dim);letter-spacing:.4px}
+.fchip.on{display:flex}
+.fchip .gdot{width:7px;height:7px;border-radius:50%;background:#39d98a;box-shadow:0 0 8px #39d98a;flex:0 0 auto}
+.fchip b{color:var(--txt);font-weight:600;letter-spacing:.6px}
+.minibtn{border:1px solid var(--line);background:transparent;color:var(--txt-dim);
+  font-family:var(--mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;
+  padding:6px 11px;cursor:pointer;transition:.16s}
+.minibtn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- gate : connexion dossier racine ---------- */
+#gate{position:fixed;inset:0;z-index:50;background:#000;display:flex;align-items:center;
+  justify-content:center;transition:opacity .45s}
+#gate.hide{opacity:0;pointer-events:none}
+.gatebox{max-width:520px;width:100%;padding:0 24px;text-align:center}
+.gatebox .gico{font-size:38px;margin-bottom:16px}
+.gatebox h2{font-size:23px;font-weight:600;letter-spacing:.2px;margin-bottom:10px}
+.gatebox p{font-size:12.5px;color:var(--txt-dim);line-height:1.75;margin-bottom:24px}
+.gatebtn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--accent);
+  background:rgba(255,48,120,.12);color:var(--txt);font-family:var(--mono);font-size:11px;
+  letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:14px 24px;cursor:pointer;transition:.18s}
+.gatebtn:hover{background:rgba(255,48,120,.26);box-shadow:0 0 24px rgba(255,48,120,.3)}
+.gatebtn svg{width:15px;height:15px}
+.gateerr{font-family:var(--mono);font-size:10px;color:#ff6a6a;margin-top:14px;letter-spacing:.3px;display:none}
+.gatetree{text-align:left;font-family:var(--mono);font-size:10.5px;line-height:2;color:var(--txt-dim);
+  background:rgba(14,16,21,.8);border:1px solid var(--line-soft);padding:16px 18px;margin-top:24px}
+.gatetree b{color:var(--txt)}
+.gatetree .x1{color:var(--accent)}.gatetree .x2{color:var(--accent2)}.gatetree .x3{color:var(--accent3)}
+.gatetree .c{color:var(--txt-dim2)}
+#gateLoading{display:none}
+#gateLoading .ring{width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--accent);
+  border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 14px}
+#gateLoading p{font-size:10px;color:var(--txt-dim);letter-spacing:2px;text-transform:uppercase}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- main ---------- */
+main{display:none;padding:64px 28px 80px;max-width:1180px;margin:0 auto}
+main.on{display:block;animation:fade .5s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.eyebrow{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;text-align:center}
+.htitle{font-size:32px;font-weight:600;letter-spacing:.3px;text-align:center;margin-bottom:14px}
+.hpath{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+  font-size:11px;color:var(--txt-dim);letter-spacing:.4px;margin-bottom:54px}
+.hpath .seg{border:1px solid var(--line-soft);padding:4px 10px}
+.hpath .sep{color:var(--txt-dim2)}
+
+/* ---------- cards grid ---------- */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(3,1fr)}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+
+.card{position:relative;background:var(--card);border:1px solid var(--line-soft);
+  padding:28px 26px 26px;cursor:pointer;overflow:hidden;text-decoration:none;color:var(--txt);
+  display:flex;flex-direction:column;min-height:280px;
+  transition:transform .2s cubic-bezier(.3,0,.2,1),border-color .2s,background .2s;
+  opacity:0;animation:rise .55s ease forwards;transform:translateY(16px)}
+@keyframes rise{to{opacity:1;transform:none}}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cc,#ff2f6d)}
+.card:hover{transform:translateY(-4px);border-color:var(--line);background:rgba(20,23,30,.92)}
+.card:hover .orbit{opacity:1}
+.card:hover .orbit .planet{animation-play-state:running}
+
+/* icône orbite */
+.orbit{width:54px;height:54px;position:relative;margin-bottom:22px;opacity:.7;transition:opacity .25s}
+.orbit svg{width:100%;height:100%}
+.orbit .planet{animation:orbitspin 7s linear infinite paused;transform-origin:27px 27px}
+@keyframes orbitspin{to{transform:rotate(360deg)}}
+
+.card .co{font-size:9px;letter-spacing:2.5px;color:var(--txt-dim2);text-transform:uppercase}
+.card .ct{font-size:22px;font-weight:700;margin:10px 0 10px;letter-spacing:1px}
+.card .cd{font-size:11.5px;color:var(--txt-dim);line-height:1.65;flex:1}
+.card .cpath{font-family:var(--mono);font-size:9px;color:var(--txt-dim2);letter-spacing:.3px;margin:14px 0 4px}
+.card .cfoot{display:flex;align-items:center;gap:8px;margin-top:14px;
+  font-size:9px;letter-spacing:.8px;color:var(--txt-dim);text-transform:uppercase}
+.card .pill{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-soft);padding:4px 9px}
+.card .dot{width:6px;height:6px;border-radius:50%;background:var(--cc,#ff2f6d)}
+.card .arrow{margin-left:auto;color:var(--txt-dim2);font-size:14px;transition:.18s}
+.card:hover .arrow{color:var(--cc,#ff2f6d);transform:translateX(4px)}
+.card.empty{opacity:.62}
+.card.empty:hover{opacity:1}
+
+/* ---------- footer ---------- */
+.foot{margin-top:60px;text-align:center;font-size:9.5px;color:var(--txt-dim2);
+  letter-spacing:.4px;line-height:1.9;border-top:1px solid var(--line-soft);padding-top:26px}
+.foot b{color:var(--txt-dim)}
+
+/* ---------- toast ---------- */
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:60;
+  background:rgba(12,13,17,.95);border:1px solid var(--accent);color:var(--txt);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.4px;padding:12px 18px;
+  backdrop-filter:blur(8px);max-width:90vw;text-align:center}
+
+@media(max-width:560px){
+  header{padding:12px 18px}
+  main{padding:44px 18px 60px}
+  .htitle{font-size:24px}
+}
+  /* scrollbar discrète */
+  ::-webkit-scrollbar{width:5px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:#1a1c24;border-radius:3px}
+  ::-webkit-scrollbar-thumb:hover{background:#252830}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar"></div>
+  <h1>Jupiter</h1>
+  <div class="spacer"></div>
+  <div class="fchip" id="fchip">
+    <span class="gdot"></span>
+    <span>📁&nbsp;<b id="rootName">—</b></span>
+  </div>
+  <button class="minibtn" id="changeBtn" style="display:none">Changer</button>
+  <a href="editeur.html" class="minibtn" style="text-decoration:none">Éditeur</a>
+  <a href="deposer.html" class="minibtn" style="text-decoration:none">Déposer</a>
+</header>
+
+<!-- ====== gate : connexion au dossier racine ====== -->
+<div id="gate">
+  <div class="gatebox">
+    <div id="gateConnect">
+      <div class="gico">🪐</div>
+      <h2>Connecte ton espace de travail</h2>
+      <p>Choisis le dossier <b>racine</b> de ton dépôt Jupiter. </p>
+      <button class="gatebtn" id="gateBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Choisir le dossier racine
+      </button>
+      <div class="gateerr" id="gateErr">Ce navigateur ne supporte pas l'accès direct aux dossiers. Utilise Chrome ou Edge.</div>
+      <div class="gatetree">
+        <b>racine/</b>  <span class="c">— le dossier que tu choisis</span><br>
+        ├─ schema.json&nbsp;&nbsp;<span class="c">architecture (généré par l'éditeur)</span><br>
+        ├─ <span class="x1">MPSI/</span>&nbsp;&nbsp;<span class="c">section 1</span><br>
+        └─ <span class="x2">…/</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="c">autres sections</span>
+      </div>
+    </div>
+    <div id="gateReconnect" style="display:none">
+      <div class="gico">🔑</div>
+      <h2>Reconnecter <span class="gname">le dossier</span></h2>
+      <p>Le dossier <b class="gname">X</b> est mémorisé. </p>
+      <button class="gatebtn" id="gateReBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Autoriser l'accès
+      </button>
+    </div>
+    <div id="gateLoading">
+      <div class="ring"></div>
+      <p>Lecture de <span class="gname">X</span>…</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== contenu principal ====== -->
+<main id="main">
+  <div class="eyebrow">Accueil</div>
+  <div class="htitle">Choisis ton espace</div>
+  <div class="hpath" id="hpath"></div>
+
+  <div class="grid" id="cardGrid">
+    <!-- généré dynamiquement depuis schema.json -->
+  </div>
+
+  <div class="foot">
+    Dossier connecté : <b id="footRoot">—</b><br>
+  </div>
+</main>
+
+<script>
+/* ============================================================
+   JUPITER — Accueil / sélecteur de section
+   Lit schema.json depuis le dossier racine et génère les cards dynamiquement.
+   ============================================================ */
+const SECTION_KEY='jupiter-section';
+
+/* ---- persistance partagée du dossier racine (IDB partagé avec les autres pages) ---- */
+const XROOT_DB='jupiter-xroot', XROOT_STORE='h';
+function xidb(){return new Promise((res,rej)=>{const r=indexedDB.open(XROOT_DB,1);
+  r.onupgradeneeded=()=>r.result.createObjectStore(XROOT_STORE);
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function xGet(){const db=await xidb();return new Promise((res,rej)=>{
+  const t=db.transaction(XROOT_STORE,'readonly');const rq=t.objectStore(XROOT_STORE).get('root');
+  rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error);});}
+async function xSet(h){const db=await xidb();return new Promise((res,rej)=>{
+  const t=db.transaction(XROOT_STORE,'readwrite');t.objectStore(XROOT_STORE).put(h,'root');
+  t.oncomplete=()=>res();t.onerror=()=>rej(t.error);});}
+
+let xRootHandle=null, schemaData=null;
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function toast(msg){const t=document.createElement('div');t.className='toast';t.textContent=msg;
+  document.body.appendChild(t);setTimeout(()=>t.remove(),3400);}
+function ignored(name){return name.startsWith('_')||name.startsWith('.');}
+
+function setGate(state,name){
+  const gate=document.getElementById('gate');
+  if(state==='hidden'){gate.classList.add('hide');setTimeout(()=>gate.style.display='none',460);return;}
+  gate.style.display='flex';gate.classList.remove('hide');
+  document.getElementById('gateConnect').style.display   =state==='connect'  ?'block':'none';
+  document.getElementById('gateReconnect').style.display =state==='reconnect'?'block':'none';
+  document.getElementById('gateLoading').style.display   =state==='loading'  ?'block':'none';
+  if(name) document.querySelectorAll('.gname').forEach(e=>e.textContent=name);
+}
+
+/* ---- connexion ---- */
+async function connectFolder(){
+  if(!window.showDirectoryPicker){document.getElementById('gateErr').style.display='block';return;}
+  try{
+    xRootHandle=await window.showDirectoryPicker({mode:'readwrite',id:'jupiter-root'});
+    await xSet(xRootHandle); await boot();
+  }catch(e){}
+}
+async function tryRestore(){
+  if(!window.showDirectoryPicker){setGate('connect');document.getElementById('gateErr').style.display='block';return;}
+  let h=null;try{h=await xGet();}catch(e){}
+  if(!h){setGate('connect');return;}
+  xRootHandle=h;
+  let perm='prompt';try{perm=await h.queryPermission({mode:'readwrite'});}catch(e){}
+  if(perm==='granted') await boot();
+  else setGate('reconnect',h.name||'X');
+}
+async function reconnectFolder(){
+  try{const perm=await xRootHandle.requestPermission({mode:'readwrite'});
+    if(perm==='granted') await boot();else setGate('connect');}
+  catch(e){setGate('connect');}
+}
+
+/* ---- lecture du schema.json ---- */
+async function loadSchema(){
+  try{
+    const fh=await xRootHandle.getFileHandle('schema.json');
+    const f=await fh.getFile();
+    const s=JSON.parse(await f.text());
+    if(s&&s.sections) return s;
+  }catch(e){}
+  return null;
+}
+
+/* ---- génération des cards depuis le schema ---- */
+const ORBIT_ANGLES=[-18,18,-18,5,-5,12];
+async function buildCards(schema){
+  const grid=document.getElementById('cardGrid');
+  grid.innerHTML='';
+  const sections=schema.sections;
+  sections.forEach((sec,i)=>{
+    const color=sec.color||'#888';
+    const angle=ORBIT_ANGLES[i%ORBIT_ANGLES.length];
+    const card=document.createElement('a');
+    card.className='card';
+    card.id='card-'+sec.id;
+    card.style.cssText=`--cc:${color}`;
+    card.innerHTML=`
+      <div class="orbit">
+        <svg viewBox="0 0 54 54">
+          <ellipse cx="27" cy="27" rx="23" ry="11" fill="none" stroke="${esc(color)}" stroke-width="1.2" opacity=".35" transform="rotate(${angle} 27 27)"/>
+          <circle cx="27" cy="27" r="5" fill="${esc(color)}" opacity=".9"/>
+          <g class="planet"><circle cx="50" cy="27" r="2.6" fill="${esc(color)}"/></g>
+        </svg>
+      </div>
+      <div class="co">Section ${String(i+1).padStart(2,'0')}</div>
+      <div class="ct">${esc(sec.label||sec.id)}</div>
+      <div class="cd">${esc((sec.subjects||[]).map(s=>s.label||s.id).join(' · ')||'Aucune branche définie')}</div>
+      <div class="cpath" id="path-${esc(sec.id)}"></div>
+      <div class="cfoot"><span class="pill" id="stat-${esc(sec.id)}"><span class="dot"></span>—</span><span class="arrow">→</span></div>`;
+    card.addEventListener('click',e=>{e.preventDefault();openSection(sec.id);});
+    grid.appendChild(card);
+  });
+  /* card "Configurer" si schema vide */
+  if(!sections.length){
+    grid.innerHTML=`<a class="card" href="editeur.html" style="--cc:#5b8cff">
+      <div class="co">Aucune section</div>
+      <div class="ct">Configurer</div>
+      <div class="cd">Aucune section définie dans schema.json. Ouvre l'éditeur pour créer ton architecture.</div>
+      <div class="cfoot"><span class="arrow">→ Éditeur</span></div>
+    </a>`;
+  }
+}
+
+async function scanCard(sec){
+  const statEl=document.getElementById('stat-'+sec.id);
+  const pathEl=document.getElementById('path-'+sec.id);
+  if(!statEl) return;
+  if(pathEl) pathEl.textContent=(xRootHandle.name||'X')+' / '+sec.id;
+  try{
+    const h=await xRootHandle.getDirectoryHandle(sec.id);
+    let n=0;
+    for await(const [name,dh] of h.entries()){if(dh.kind==='directory'&&!ignored(name))n++;}
+    statEl.innerHTML=`<span class="dot"></span>${n} branche${n===1?'':'s'}`;
+    document.getElementById('card-'+sec.id)?.classList.remove('empty');
+  }catch(e){
+    statEl.innerHTML=`<span class="dot"></span>Non créé`;
+    document.getElementById('card-'+sec.id)?.classList.add('empty');
+  }
+}
+
+async function boot(){
+  setGate('loading',xRootHandle.name||'X');
+  document.getElementById('rootName').textContent=xRootHandle.name||'X';
+  document.getElementById('footRoot').textContent=xRootHandle.name||'X';
+  document.getElementById('fchip').classList.add('on');
+  document.getElementById('changeBtn').style.display='inline-block';
+
+  /* lire le schema */
+  schemaData=await loadSchema();
+
+  if(!schemaData){
+    /* pas de schema → card unique vers l'éditeur */
+    const grid=document.getElementById('cardGrid');
+    grid.innerHTML=`<a class="card" href="editeur.html" style="--cc:#5b8cff;animation-delay:.1s">
+      <div class="co">Aucun schema détecté</div>
+      <div class="ct">Créer l'architecture</div>
+      <div class="cd">Aucun fichier <code style="font-family:var(--mono);font-size:11px">schema.json</code> trouvé à la racine. Ouvre l'éditeur pour définir tes sections et générer la structure.</div>
+      <div class="cfoot"><span class="arrow">→ Éditeur</span></div>
+    </a>`;
+    document.getElementById('hpath').innerHTML=`<span class="seg">📁 ${esc(xRootHandle.name||'X')}</span>`;
+    setGate('hidden');
+    document.getElementById('main').classList.add('on');
+    return;
+  }
+
+  await buildCards(schemaData);
+  document.getElementById('hpath').innerHTML=
+    `<span class="seg">📁 ${esc(xRootHandle.name||'X')}</span>`+
+    schemaData.sections.map(s=>`<span class="sep">/</span><span class="seg">${esc(s.label||s.id)}</span>`).join('');
+
+  /* scan des sections en parallèle */
+  await Promise.all(schemaData.sections.map(sec=>scanCard(sec)));
+  setGate('hidden');
+  document.getElementById('main').classList.add('on');
+}
+
+/* ---- ouverture d'une section ---- */
+async function openSection(secId){
+  try{await xRootHandle.getDirectoryHandle(secId);}
+  catch(e){
+    try{
+      const perm=await xRootHandle.requestPermission({mode:'readwrite'});
+      if(perm!=='granted') throw new Error('perm');
+      await xRootHandle.getDirectoryHandle(secId,{create:true});
+    }catch(e2){toast(`Crée le dossier « ${secId} » dans ${xRootHandle.name||'X'}/, puis réessaie.`);return;}
+  }
+  localStorage.setItem(SECTION_KEY,secId);
+  location.href='arbre.html';
+}
+
+/* ---- bindings ---- */
+document.getElementById('gateBtn').onclick=connectFolder;
+document.getElementById('gateReBtn').onclick=reconnectFolder;
+document.getElementById('changeBtn').onclick=connectFolder;
+tryRestore();
+</script>
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(r=>console.log('SW Jupiter enregistré',r.scope))
+      .catch(e=>console.warn('SW erreur',e));
+  });
+}
+</script>
+</body>
+</html>

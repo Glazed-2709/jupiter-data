@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Jupiter — Éditeur (graphe 3D)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--surface:rgba(14,16,21,.88);--surface2:rgba(14,16,21,.6);--surface3:rgba(20,22,28,.9);
+  --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --txt:#eff2f8;--dim:#79839a;--dim2:#3f4a5e;
+  --accent:#ff2f6d;--blue:#5b8cff;--ok:#3fb98a;--warn:#ffb454;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{scrollbar-width:thin;scrollbar-color:#1a1c24 transparent;height:100%;background:var(--bg);color:var(--txt);font-family:var(--mono)}
+body{display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
+
+html,body{overflow:hidden}
+
+/* ---- toast ---- */
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:28px;z-index:80;
+  background:rgba(20,22,28,.96);border:1px solid var(--line2);color:var(--txt);
+  font-size:12.5px;padding:11px 18px;pointer-events:none;
+  opacity:0;transition:opacity .25s;font-family:var(--mono)}
+.toast.on{opacity:1}
+
+/* ---- graphe : plein écran, centré sur toute la page ; le panneau latéral
+   passe PAR-DESSUS en profondeur (z-index) plutôt que de réduire sa largeur ---- */
+:root{--panelw:340px}
+#g3Container{position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:1}
+#g3Container canvas{display:block}
+#g3Labels{position:fixed;top:0;left:0;right:0;bottom:0;z-index:4;pointer-events:none;overflow:hidden}
+#g3Labels .g3lab{position:absolute;left:0;top:0;white-space:nowrap;font-family:var(--mono);
+  font-size:10px;letter-spacing:.2px;color:#fff;text-shadow:0 0 5px #000,0 1px 2px #000;opacity:0;
+  transition:opacity .2s;will-change:transform}
+#g3Labels .g3lab.on{opacity:.92}
+#g3Empty{position:fixed;top:0;left:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;
+  z-index:3;flex-direction:column;gap:8px;color:var(--dim);font-size:12.5px;text-align:center;padding:20px}
+#g3Empty.on{display:flex}
+
+/* ---- header flottant (haut-gauche) ---- */
+#header{position:fixed;top:16px;left:16px;z-index:10;display:flex;align-items:center;gap:9px}
+#header .navicon{display:flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border:1px solid var(--line2);color:var(--dim);text-decoration:none;background:var(--surface);
+  transition:.16s;flex:0 0 auto;cursor:pointer}
+#header .navicon:hover{border-color:var(--accent);color:var(--accent)}
+#header .navicon svg{width:13px;height:13px}
+
+/* ---- barre du bas (identique à arbre.html) ---- */
+#bottombar{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:10;
+  display:flex;align-items:center;gap:14px;padding:8px 14px;
+  background:var(--surface);border:1px solid var(--line2);backdrop-filter:blur(8px)}
+#bottombar .sep{width:1px;height:22px;background:var(--line)}
+.grp{display:flex;align-items:center;gap:8px}
+.grp .cap{font-size:8.5px;text-transform:uppercase;letter-spacing:1.6px;color:var(--dim)}
+.sw{position:relative;width:38px;height:18px;flex:0 0 auto}
+.sw input{opacity:0;width:0;height:0}
+.sl{position:absolute;inset:0;background:#000;border:1px solid var(--line2);cursor:pointer;transition:.16s}
+.sl::before{content:"";position:absolute;width:11px;height:11px;left:2px;top:2px;background:var(--dim);transition:.16s}
+.sw input:checked+.sl{border-color:var(--accent)}
+.sw input:checked+.sl::before{transform:translateX(20px);background:var(--accent);box-shadow:0 0 8px var(--accent)}
+.iconbtn{border:1px solid var(--line2);background:transparent;color:var(--dim);cursor:pointer;
+  width:30px;height:26px;display:flex;align-items:center;justify-content:center;transition:.16s;padding:0}
+.iconbtn:hover{border-color:var(--accent);color:var(--accent)}
+.iconbtn svg{width:13px;height:13px}
+.btn{border:1px solid var(--line2);background:transparent;color:var(--dim);font-family:var(--mono);
+  font-size:9px;letter-spacing:1.2px;text-transform:uppercase;padding:7px 11px;cursor:pointer;transition:.16s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---- recherche (au-dessus de la barre) ---- */
+#searchwrap{position:fixed;left:50%;bottom:62px;transform:translateX(-50%) translateY(8px);z-index:11;
+  opacity:0;pointer-events:none;transition:.18s}
+#searchwrap.on{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+#search{width:300px;max-width:70vw;background:rgba(10,11,14,.92);border:1px solid var(--accent);
+  color:var(--txt);font-family:var(--mono);font-size:12px;padding:10px 13px;outline:none;letter-spacing:.3px;
+  backdrop-filter:blur(8px)}
+#search::placeholder{color:var(--dim)}
+
+/* ---- stats ---- */
+#g3Stats{position:fixed;bottom:16px;left:16px;z-index:10;display:flex;gap:14px;
+  font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.6px}
+#g3Stats b{color:var(--txt);font-weight:700}
+
+/* ---- panneau latéral droit (toujours présent) ---- */
+#panel{position:fixed;top:0;right:0;width:var(--panelw);height:100%;z-index:15;
+  background:rgba(8,9,12,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-left:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+#panel .ptop{padding:20px 20px 16px;border-bottom:1px solid var(--line);flex:0 0 auto}
+#panel .ptype{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
+#panel .pname{font-size:16px;font-weight:600;margin-top:11px;letter-spacing:.2px;
+  display:flex;gap:9px;align-items:center}
+#panel .pname input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:var(--txt);
+  font-family:var(--mono);font-size:16px;font-weight:600;letter-spacing:.2px;padding:2px 0;
+  border-bottom:1px solid transparent;transition:.15s}
+#panel .pname input:hover:not(:disabled){border-bottom-color:var(--line2)}
+#panel .pname input:focus{border-bottom-color:var(--accent)}
+#panel .pswatch{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+#panel .pcrumb{margin-top:13px;font-size:9.5px;line-height:1.7;color:var(--dim);word-break:break-word}
+#panel .pcrumb a{color:var(--dim);cursor:pointer;text-decoration:none;border-bottom:1px dotted transparent}
+#panel .pcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+#panel .pcrumb .s{opacity:.4;margin:0 5px}
+#panel .pmeta{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:22px;flex:0 0 auto}
+#panel .pmeta div b{font-size:17px;font-weight:700;display:block;line-height:1}
+#panel .pmeta div small{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:1.2px}
+#panel .pbody{flex:1;min-height:0;overflow-y:auto}
+#panel .psection{border-bottom:1px solid var(--line);transition:.15s}
+#panel .psection:last-child{border-bottom:none}
+#panel .psection.drag{background:rgba(255,47,109,.07);box-shadow:inset 0 0 0 1px var(--accent)}
+#panel .psection#pfilesSection{min-height:110px}
+#panel .pchildren .ch.nolink{cursor:default}
+#panel .pchildren .ch.nolink:hover{border-left-color:transparent}
+#panel .slabel{padding:11px 20px 5px;font-size:8.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim2)}
+#panel .pchildren{padding:4px 0 8px}
+#panel .pchildren .ch{display:flex;align-items:center;gap:10px;padding:9px 20px;cursor:pointer;
+  font-size:11.5px;transition:background .12s;border-left:2px solid transparent}
+#panel .pchildren .ch:hover{background:rgba(255,255,255,.04);border-left-color:var(--accent)}
+#panel .pchildren .ch .cdot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+#panel .pchildren .ch .cn{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#panel .pchildren .ch .cc{font-size:8.5px;color:var(--dim)}
+#panel .pempty{padding:10px 20px 16px;font-size:10px;color:var(--dim);letter-spacing:.4px}
+#panel .pedit{flex:0 0 auto;padding:14px 20px 18px;border-top:1px solid var(--line)}
+#panel .pedit .erow{display:flex;gap:8px;align-items:stretch}
+#panel .pedit .erow .btn{flex:1;text-align:center}
+#panel .pedit .trashsq{flex:0 0 34px;width:34px;border:1px solid var(--accent);background:rgba(255,47,109,.08);
+  color:var(--accent);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.15s;padding:0}
+#panel .pedit .trashsq:hover{background:rgba(255,47,109,.2)}
+#panel .pedit .trashsq svg{width:14px;height:14px}
+#panel .pedit .trashsq:disabled,#panel .pedit .btn:disabled,#panel .pname input:disabled{opacity:.4;cursor:default;pointer-events:none}
+#panel .pintro{padding:24px 20px;font-size:12px;color:var(--dim);line-height:1.8;overflow-y:auto;flex:1;min-height:0}
+#panel .pintro h3{font-size:14px;color:var(--txt);margin-bottom:10px;font-weight:600}
+
+/* ---- slider de teinte : seul paramètre qui compte réellement pour le dégradé
+   (saturation/luminosité sont fixées par la palette), donc pas de sélecteur de
+   couleur natif — juste une barre de teinte 0-360°. ---- */
+.huerow{margin-bottom:12px}
+.huerow .hcap{display:block;font-family:var(--mono);font-size:9px;text-transform:uppercase;
+  letter-spacing:1.4px;color:var(--dim);margin-bottom:7px}
+.huerange{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:2px;cursor:pointer;
+  background:linear-gradient(90deg,hsl(0,85%,55%),hsl(60,85%,55%),hsl(120,85%,55%),hsl(180,85%,55%),
+    hsl(240,85%,55%),hsl(300,85%,55%),hsl(360,85%,55%));outline:none}
+.huerange::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;
+  background:#fff;border:2px solid #0a0a0c;cursor:pointer;box-shadow:0 0 6px rgba(0,0,0,.5)}
+.huerange::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:#fff;
+  border:2px solid #0a0a0c;cursor:pointer;box-shadow:0 0 6px rgba(0,0,0,.5)}
+.huerange::-moz-range-track{height:10px;border-radius:2px;background:transparent}
+
+/* ---- boutons rouges (danger) : réutilisés dans le panneau et les modales ---- */
+.btn.danger{border-color:#ff4d4d;color:#ff4d4d}
+.btn.danger:hover{background:rgba(255,77,77,.14);border-color:#ff4d4d}
+.btn.primary{border-color:var(--accent);color:var(--txt);background:rgba(255,47,109,.14)}
+.btn.primary:hover{background:rgba(255,47,109,.26)}
+
+/* ---- modale (remplace prompt()/confirm() natifs) ---- */
+.g3modal{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:20px}
+.g3modal.on{display:flex}
+.g3modalbox{width:300px;max-width:100%;background:rgba(14,16,21,.98);border:1px solid var(--accent);padding:20px;font-family:var(--mono)}
+.g3modaltitle{font-size:12px;letter-spacing:.3px;color:var(--txt);margin-bottom:12px;line-height:1.5}
+.g3modalbox input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--mono);font-size:13px;padding:9px 11px;outline:none;transition:.15s}
+.g3modalbox input:focus{border-color:var(--accent)}
+.g3modalrow{display:flex;gap:8px;margin-top:14px}
+.g3modalrow .btn{flex:1;text-align:center}
+
+  /* scrollbar discrète */
+  ::-webkit-scrollbar{width:5px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:#1a1c24;border-radius:3px}
+  ::-webkit-scrollbar-thumb:hover{background:#252830}
+</style>
+</head>
+<body>
+
+<div id="g3Container"></div>
+<div id="g3Labels"></div>
+<div id="g3Empty"><span>Aucun dossier connecté.</span><span style="font-size:11px">Connecte le dossier racine depuis l'accueil (index.html).</span></div>
+
+<div id="header">
+  <a class="navicon" href="index.html" title="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+  </a>
+</div>
+
+<div id="searchwrap"><input id="search" placeholder="rechercher un dossier…  (Échap pour fermer)" autocomplete="off"/></div>
+
+<div id="bottombar">
+  <div class="grp"><span class="cap">Rotation</span>
+    <label class="sw"><input type="checkbox" id="rotChk" checked><span class="sl"></span></label></div>
+  <div class="sep"></div>
+  <button class="iconbtn" id="searchBtn" title="Rechercher ( / )">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+  </button>
+  <button class="iconbtn" id="rescanBtn" title="Relire le dossier">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg>
+  </button>
+  <button class="btn" id="resetBtn">Réinit.</button>
+</div>
+
+<div id="g3Stats"><span><b id="g3sf">—</b> dossiers</span><span><b id="g3sd">—</b> profondeur</span></div>
+
+<div id="panel"></div>
+
+<div class="g3modal" id="g3Modal">
+  <div class="g3modalbox">
+    <div class="g3modaltitle" id="g3ModalTitle"></div>
+    <input id="g3ModalInput" autocomplete="off" spellcheck="false"/>
+    <div class="g3modalrow">
+      <button class="btn" id="g3ModalCancel">Annuler</button>
+      <button class="btn primary" id="g3ModalOk">OK</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph/dist/3d-force-graph.min.js"></script>
+<script>
+/* =====================================================================
+   JUPITER ÉDITEUR — graphe 3D visuel du système de fichiers
+   Le disque est la source de vérité (scan direct via File System Access API,
+   handle racine partagé avec arbre.html/index.html via IndexedDB jupiter-xroot).
+   ===================================================================== */
+const $=s=>document.querySelector(s);
+
+/* ---- état global ---- */
+let rootHandle=null;
+
+/* ---- toast ---- */
+let toastT;
+function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('on');
+  clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('on'),2200);}
+
+function ignored(n){return n.startsWith('_')||n.startsWith('.');}
+
+/* ---- préchargement depuis le dossier racine IDB partagé avec l'index ---- */
+const XROOT_DB='jupiter-xroot', XROOT_STORE='h';
+async function xidb(){return new Promise((res,rej)=>{const r=indexedDB.open(XROOT_DB,1);
+  r.onupgradeneeded=()=>r.result.createObjectStore(XROOT_STORE);
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function editorInit(){
+  /* tenter de charger le handle partagé */
+  try{
+    const db=await xidb();
+    const h=await new Promise((res,rej)=>{
+      const t=db.transaction(XROOT_STORE,'readonly');
+      const rq=t.objectStore(XROOT_STORE).get('root');
+      rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error);
+    });
+    if(h){
+      let perm='prompt';
+      try{perm=await h.queryPermission({mode:'readwrite'});}catch(e){}
+      if(perm!=='granted'){
+        try{perm=await h.requestPermission({mode:'readwrite'});}catch(e){}
+      }
+      if(perm==='granted'){
+        rootHandle=h;
+        await scanAndRenderGraph3D();
+      } else {
+        toast('Permission refusée pour '+(h.name||'le dossier')+' — reconnecte-le depuis l\'accueil.');
+      }
+    } else {
+      toast('Aucun dossier mémorisé — connecte-le depuis l\'accueil (index.html).');
+    }
+  }catch(e){ console.error('editorInit : ',e); toast('Erreur editorInit : '+e.message); }
+  if(!rootHandle){ const ge=document.getElementById('g3Empty'); if(ge) ge.classList.add('on'); }
+}
+
+/* ================================================================
+   GRAPHE 3D — éditeur visuel (fichiers/dossiers = source de vérité)
+   Même moteur qu'arbre.html (3d-force-graph + croissance directionnelle).
+   ================================================================ */
+let g3Nodes=[], g3Links=[], g3ById={}, g3Cmap={}, g3Root=null, g3Id=0;
+let G3=null, g3LabelEls=[], g3DataReady=false, g3BaseHue=343; /* 343° ≈ #ff2f6d */
+/* rotation auto : vitesse cible + drapeau survol — le ralentissement/la reprise
+   se fait en douceur (lerp) dans g3StartLoop plutôt qu'un arrêt net */
+let g3RotSpeed=0.35, g3RotHover=false;
+
+function g3AddNode(name,type,parent,handle){
+  const id=++g3Id;
+  const n={id,name,type,parent:parent?parent.id:null,handle:handle||null,
+    path:parent?(parent.path?parent.path+'/'+name:name):name};
+  g3Nodes.push(n);
+  if(parent) g3Links.push({source:parent.id,target:id});
+  return n;
+}
+
+/* ne scanne QUE les dossiers — les fichiers ne sont pas représentés dans ce graphe */
+async function g3BuildFromDir(dirHandle, parent, depth){
+  const dirs=[];
+  for await(const [name,h] of dirHandle.entries()){
+    if(ignored(name)||h.kind!=='directory') continue;
+    dirs.push([name,h]);
+  }
+  dirs.sort((a,b)=>a[0].localeCompare(b[0],'fr',{numeric:true}));
+  for(const [name,h] of dirs){
+    const f=g3AddNode(name,'folder',parent,h);
+    await g3BuildFromDir(h,f,depth+1);
+  }
+}
+
+let g3MaxDepth=0;
+function g3ComputeDerived(){
+  g3Cmap={}; g3Links.forEach(l=>{(g3Cmap[l.source]||(g3Cmap[l.source]=[])).push(l.target);});
+  g3ById=Object.fromEntries(g3Nodes.map(n=>[n.id,n]));
+  const q=[g3Root.id]; g3ById[g3Root.id].depth=0; g3MaxDepth=0;
+  while(q.length){ const id=q.shift(); (g3Cmap[id]||[]).forEach(c=>{ g3ById[c].depth=g3ById[id].depth+1; g3MaxDepth=Math.max(g3MaxDepth,g3ById[c].depth); q.push(c); }); }
+  const desc=id=>{ let c=0; (g3Cmap[id]||[]).forEach(ch=>c+=1+desc(ch)); return c; };
+  g3Nodes.forEach(n=>{
+    n.desc=desc(n.id);
+    n.childCount=(g3Cmap[n.id]||[]).length;
+    n.val=n.type==='root'?30:4+Math.log2(1+n.desc)*1.5;
+  });
+  g3AssignHues();
+}
+/* ---- sous-arbre / lignée (pour le focus au clic) ---- */
+function g3Subtree(id){const set=new Set([id]);const st=[id];
+  while(st.length){const x=st.pop();(g3Cmap[x]||[]).forEach(c=>{set.add(c);st.push(c);});}return set;}
+function g3Ancestry(id){const a=[];let cur=g3ById[id];while(cur.parent!=null){a.push(cur.parent);cur=g3ById[cur.parent];}return a;}
+function g3BaseR(n){return 6.5*Math.cbrt(n.val||2.2);}
+
+/* ---- croissance directionnelle (même principe qu'arbre.html) ---- */
+const G3_SEG=520, G3_SPREAD=0.55, G3_FAN=0.10;
+function g3Norm(v){const m=Math.hypot(v[0],v[1],v[2])||1;return [v[0]/m,v[1]/m,v[2]/m];}
+function g3Perp(d){const a=Math.abs(d[0])<0.9?[1,0,0]:[0,1,0];
+  return g3Norm([d[1]*a[2]-d[2]*a[1],d[2]*a[0]-d[0]*a[2],d[0]*a[1]-d[1]*a[0]]);}
+function g3Grow(){
+  g3Root.x=0;g3Root.y=0;g3Root.z=0;g3Root.dir=[0,1,0];
+  const kids=g3Cmap[g3Root.id]||[]; const m=kids.length;
+  kids.forEach((cid,i)=>{
+    const y=1-((i+0.5)/m)*2, rad=Math.sqrt(Math.max(0,1-y*y)), th=Math.PI*(3-Math.sqrt(5))*i;
+    const c=g3ById[cid]; c.dir=g3Norm([Math.cos(th)*rad,y,Math.sin(th)*rad]);
+    const len=G3_SEG*(0.9+Math.random()*0.3);
+    c.x=g3Root.x+c.dir[0]*len; c.y=g3Root.y+c.dir[1]*len; c.z=g3Root.z+c.dir[2]*len;
+  });
+  const q=[...kids];
+  const segAt=d=>G3_SEG*Math.pow(0.82,Math.max(0,d-1));
+  while(q.length){
+    const id=q.shift(); const p=g3ById[id]; const pd=p.dir;
+    const ch=g3Cmap[id]||[];
+    const u=g3Perp(pd), v=g3Norm([pd[1]*u[2]-pd[2]*u[1],pd[2]*u[0]-pd[0]*u[2],pd[0]*u[1]-pd[1]*u[0]]);
+    ch.forEach((cid,i)=>{
+      const c=g3ById[cid]; let ddir;
+      if(ch.length===1){ ddir=[pd[0]+(Math.random()*2-1)*G3_FAN,pd[1]+(Math.random()*2-1)*G3_FAN,pd[2]+(Math.random()*2-1)*G3_FAN]; }
+      else{ const ang=(i/ch.length)*Math.PI*2+Math.random()*0.5, sp=G3_SPREAD*(0.5+Math.random()*0.8);
+        ddir=[pd[0]+(u[0]*Math.cos(ang)+v[0]*Math.sin(ang))*sp, pd[1]+(u[1]*Math.cos(ang)+v[1]*Math.sin(ang))*sp, pd[2]+(u[2]*Math.cos(ang)+v[2]*Math.sin(ang))*sp]; }
+      c.dir=g3Norm(ddir);
+      const len=segAt(c.depth)*(0.8+Math.random()*0.4);
+      c.x=p.x+c.dir[0]*len; c.y=p.y+c.dir[1]*len; c.z=p.z+c.dir[2]*len;
+      q.push(cid);
+    });
+  }
+}
+function g3Layout(){
+  g3Grow();
+  /* état d'échelle (grossissement au survol, identique à arbre.html) : _s suit _st
+     avec un lerp doux dans g3StartLoop ; _cr est le rayon utilisé par la force de
+     collision, qui grandit avec _s pour repousser les voisins pendant le survol. */
+  g3Nodes.forEach(n=>{ n._s=1; n._st=1; n._cr=g3BaseR(n);
+    if(n.parent!=null){ const p=g3ById[n.parent]; n._ox=n.x-p.x; n._oy=n.y-p.y; n._oz=n.z-p.z; } });
+}
+
+/* ---- couleur : palette à 7 arrêts non-linéaire (identique à arbre.html), rebasable
+   via une couleur de départ PARTAGÉE (même clé localStorage, synchronisée en direct
+   entre les onglets/pages). Dégradé lié à la PROFONDEUR et toujours ancré sur la
+   couleur de base globale (le dégradé "en cascade depuis le parent" est réservé
+   au highlight des tuiles de revisions.html, pas au graphe). */
+const G3_HUE_OFFSETS=[0,19,47,61,127,205,239];
+const G3_DEPTH_SCALE=G3_HUE_OFFSETS.length-1;
+function g3HexToHsl(hex){
+  const r=parseInt(hex.slice(1,3),16)/255, g=parseInt(hex.slice(3,5),16)/255, b=parseInt(hex.slice(5,7),16)/255;
+  const max=Math.max(r,g,b), min=Math.min(r,g,b); let h=0,s=0; const l=(max+min)/2;
+  if(max!==min){ const d=max-min; s=l>0.5?d/(2-max-min):d/(max+min);
+    switch(max){ case r: h=(g-b)/d+(g<b?6:0); break; case g: h=(b-r)/d+2; break; default: h=(r-g)/d+4; }
+    h*=60;
+  }
+  return [h,s*100,l*100];
+}
+/* conversion inverse : le slider ne manipule qu'une teinte (0-360°) — on la
+   reconvertit en hex pour rester compatible avec le format déjà utilisé partout
+   (_meta.json/color, schema.json/sections[].color, etc). */
+function g3HslToHex(h,s,l){
+  s/=100; l/=100;
+  const k=n=>(n+h/30)%12;
+  const a=s*Math.min(l,1-l);
+  const f=n=>l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));
+  const toHex=x=>Math.round(x*255).toString(16).padStart(2,'0');
+  return '#'+toHex(f(0))+toHex(f(8))+toHex(f(4));
+}
+function g3LerpStopsHueFrom(base,t){
+  t=Math.max(0,Math.min(1,t));
+  const s=t*(G3_HUE_OFFSETS.length-1), i=Math.floor(s), f=s-i;
+  const a=G3_HUE_OFFSETS[i], b=G3_HUE_OFFSETS[Math.min(i+1,G3_HUE_OFFSETS.length-1)];
+  return (base+a+(b-a)*f+360)%360;
+}
+function g3LerpStopsHue(t){ return g3LerpStopsHueFrom(g3BaseHue,t); }
+/* teinte déterministe à partir d'un nom (identique à revisions.html/arbre.html) —
+   jamais figée en dur, sert de repli pour une section sans couleur choisie. */
+function g3HashHue(str){
+  let h=0; for(let i=0;i<str.length;i++){ h=(h*31+str.charCodeAt(i))>>>0; }
+  return g3LerpStopsHue((h%1000)/1000);
+}
+function g3LFor(hue){ return hue>=40&&hue<=80?46:(hue>=160&&hue<=260?58:54); }
+/* chaque section (dossier de classe 1, enfant direct de la racine) ancre son PROPRE
+   dégradé sur sa couleur choisie dans l'éditeur (_meta.json/color, chargée par
+   g3LoadSectionColors) ou à défaut sur g3HashHue(nom) — jamais uniquement sur
+   l'accent global, qui ne sert plus que pour la racine elle-même. */
+function g3AssignHues(){
+  (g3Cmap[g3Root.id]||[]).forEach(id=>{
+    const sec=g3ById[id];
+    sec._anchorHue = sec.metaColor ? g3HexToHsl(sec.metaColor)[0] : g3HashHue(sec.name);
+  });
+  g3ById[g3Root.id]._anchorHue=g3BaseHue;
+  g3Nodes.forEach(n=>{
+    if(n.id===g3Root.id){ n.t=0; n.hue=g3BaseHue; return; }
+    const anchorHue = n.depth===1 ? n._anchorHue : g3ById[n.parent]._anchorHue;
+    if(n.depth>1) n._anchorHue=anchorHue;
+    const relT=Math.max(0,Math.min(1,(n.depth-1)/G3_DEPTH_SCALE));
+    n.t=relT;
+    n.hue=g3LerpStopsHueFrom(anchorHue,relT);
+  });
+}
+function g3Hsl(n){
+  const hue=n.hue||0;
+  return `hsl(${hue.toFixed(1)},88%,${n.type==='root'?68:g3LFor(hue)}%)`;
+}
+function g3HslBright(n){ const hue=n.hue||0; return `hsl(${hue.toFixed(1)},95%,68%)`; }
+function g3HslDim(n){ const hue=n.hue||0; return `hsl(${hue.toFixed(1)},55%,13%)`; }
+/* ---- état d'interaction : recherche / focus au clic / survol ---- */
+let g3SearchSet=null, g3ClickSet=null, g3FocusedId=null;
+let g3HlSet=new Set(), g3Hovered=null;
+function g3NodeColor(n){
+  const f=g3SearchSet||g3ClickSet;
+  if(f) return f.has(n.id)?g3HslBright(n):g3HslDim(n);
+  if(g3HlSet.size) return g3HlSet.has(n.id)?g3HslBright(n):g3Hsl(n);
+  return g3Hsl(n);
+}
+function g3LinkColor(l){
+  const sid=l.source.id??l.source, tid=l.target.id??l.target;
+  const a=g3ById[sid], b=g3ById[tid]; if(!a||!b) return 'rgba(255,255,255,.12)';
+  const anchorHue = b._anchorHue!=null ? b._anchorHue : g3BaseHue;
+  const hue=g3LerpStopsHueFrom(anchorHue,((a.t||0)+(b.t||0))/2);
+  const f=g3SearchSet||g3ClickSet;
+  if(f) return (f.has(sid)&&f.has(tid))?`hsla(${hue.toFixed(1)},60%,45%,.55)`:'rgba(10,10,12,.4)';
+  return `hsla(${hue.toFixed(1)},60%,45%,.55)`;
+}
+function g3Refresh(){ if(G3) G3.nodeColor(g3NodeColor).linkColor(g3LinkColor); }
+
+/* ---- forces de structure (identiques à arbre.html, sans collision animée au survol) ---- */
+function g3TreeForce(strength){ let ns;
+  const f=()=>{ for(const n of ns){ if(n.parent==null) continue; const p=g3ById[n.parent];
+    n.vx+=(p.x+n._ox-n.x)*strength; n.vy+=(p.y+n._oy-n.y)*strength; n.vz+=(p.z+n._oz-n.z)*strength; } };
+  f.initialize=_ns=>{ns=_ns;}; return f;
+}
+function g3CollideForce(strength){ let ns; const cell=300;
+  const f=()=>{ const grid=new Map(); const key=(a,b,c)=>a+'|'+b+'|'+c;
+    for(const n of ns){ const ix=Math.floor(n.x/cell),iy=Math.floor(n.y/cell),iz=Math.floor(n.z/cell);
+      const k=ix+'|'+iy+'|'+iz; let b=grid.get(k); if(!b){b=[];grid.set(k,b);} b.push(n);
+      n._cix=ix;n._ciy=iy;n._ciz=iz; }
+    for(const n of ns){ const rn=n._cr||g3BaseR(n);
+      for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(let dz=-1;dz<=1;dz++){
+        const b=grid.get(key(n._cix+dx,n._ciy+dy,n._ciz+dz)); if(!b)continue;
+        for(const m of b){ if(m.id<=n.id) continue;
+          let ox=m.x-n.x,oy=m.y-n.y,oz=m.z-n.z; let d2=ox*ox+oy*oy+oz*oz;
+          const rm=m._cr||g3BaseR(m); const rr=rn+rm;
+          if(d2<rr*rr && d2>1e-6){ const d=Math.sqrt(d2); const push=(rr-d)/d*strength*0.5;
+            ox*=push;oy*=push;oz*=push; n.vx-=ox;n.vy-=oy;n.vz-=oz; m.vx+=ox;m.vy+=oy;m.vz+=oz; } } } } };
+  f.initialize=_ns=>{ns=_ns;}; return f;
+}
+
+/* ---- construction paresseuse du graphe ---- */
+function ensureGraph3D(){
+  if(G3) return;
+  const el=document.getElementById('g3Container');
+  G3=ForceGraph3D({controlType:'orbit'})(el)
+    .backgroundColor('#000000').showNavInfo(false).enableNodeDrag(false)
+    .nodeColor(g3NodeColor).nodeVal('val').nodeRelSize(6.5).nodeResolution(12).nodeOpacity(0.92)
+    .linkColor(g3LinkColor).linkOpacity(0.85).linkWidth(0.6)
+    .onNodeClick(n=>focusNode(n))
+    .onBackgroundClick(()=>clearFocus())
+    .onNodeHover(n=>{
+      document.body.style.cursor=n?'pointer':'default';
+      g3RotHover=!!n; /* ralentit/relance la rotation en douceur (voir g3StartLoop) */
+      /* grossissement + léger highlight des enfants/parent, identique à arbre.html :
+         la taille cible (_st) est atteinte par un petit lerp dans g3StartLoop (0.28),
+         pas de saut instantané ; les enfants/parent passent en couleur plus vive. */
+      if(g3Hovered) g3Hovered._st=1;
+      g3Hovered=n; g3HlSet.clear();
+      if(n){
+        n._st=2.5;
+        g3HlSet.add(n.id); (g3Cmap[n.id]||[]).forEach(c=>g3HlSet.add(c)); if(n.parent!=null) g3HlSet.add(n.parent);
+      }
+      if(!(g3SearchSet||g3ClickSet)) g3Refresh();
+    })
+    .graphData({nodes:[],links:[]})
+    .cooldownTime(Infinity);
+  G3.d3Force('center',null);
+  const lf=G3.d3Force('link'); if(lf) lf.strength(0);
+  G3.d3Force('charge',null);
+  G3.d3Force('tree', g3TreeForce(0.045));
+  G3.d3Force('collide', g3CollideForce(0.32));
+  G3.d3VelocityDecay(0.62); G3.d3AlphaDecay(0); G3.d3AlphaMin(0);
+  try{ G3.controls().autoRotate=true; G3.controls().autoRotateSpeed=g3RotSpeed; }catch(e){}
+  try{ G3.cameraPosition({x:0,y:0,z:1400}); }catch(e){}
+  g3StartLoop();
+  renderPanelIntro();
+  if(g3DataReady) g3ApplyData();
+}
+
+/* ---- étiquettes : dossiers uniquement, positions projetées à l'écran ----
+   En mode focus (clic sur un dossier) : seuls le sous-arbre du dossier cliqué
+   et les dossiers de son propre niveau (frères, où qu'ils soient dans l'arbre)
+   gardent leur nom affiché ; le reste (ancêtres, branches non reliées, enfants
+   des dossiers de même niveau) n'affiche plus de nom. */
+function g3VisibleLabelIds(){
+  if(g3SearchSet) return g3SearchSet; /* recherche active : uniquement les correspondances */
+  if(!g3ClickSet||g3FocusedId==null) return null; /* null = tout est visible */
+  const sub=g3Subtree(g3FocusedId);
+  const fd=g3ById[g3FocusedId].depth;
+  const set=new Set();
+  g3Nodes.forEach(n=>{ if(sub.has(n.id)||n.depth===fd) set.add(n.id); });
+  return set;
+}
+function g3ClearLabels(){ document.getElementById('g3Labels').innerHTML=''; g3LabelEls=[]; }
+function g3BuildLabels(){
+  g3ClearLabels();
+  const vis=g3VisibleLabelIds();
+  const frag=document.createDocumentFragment();
+  g3Nodes.filter(n=>(n.type==='folder'||n.type==='root')&&(!vis||vis.has(n.id))).forEach(n=>{
+    const el=document.createElement('div'); el.className='g3lab';
+    el.textContent=n.name.length>22?n.name.slice(0,21)+'…':n.name;
+    frag.appendChild(el); g3LabelEls.push({node:n,el});
+  });
+  document.getElementById('g3Labels').appendChild(frag);
+}
+/* résolution des sphères adaptée à la distance de CHAQUE noeud à la caméra :
+   basse quand il est loin (perf.), haute quand on zoome dessus (rondeur).
+   On modifie directement la géométrie du mesh existant (node.__threeObj) —
+   ainsi ça marche aussi bien pour le zoom manuel (molette) que le zoom automatique. */
+function g3ResForDist(d){
+  if(d>2400) return 8;
+  if(d>1200) return 12;
+  if(d>600) return 18;
+  if(d>250) return 24;
+  return 32;
+}
+function g3AdaptNodeResolution(node,cam){
+  const obj=node.__threeObj;
+  if(!obj||!obj.geometry||!obj.geometry.parameters) return;
+  const dx=node.x-cam.position.x, dy=node.y-cam.position.y, dz=node.z-cam.position.z;
+  const dist=Math.hypot(dx,dy,dz)||1;
+  const wantRes=g3ResForDist(dist);
+  const curRes=obj.geometry.parameters.widthSegments;
+  if(curRes && curRes!==wantRes){
+    const r=obj.geometry.parameters.radius;
+    const GeomCtor=obj.geometry.constructor;
+    obj.geometry.dispose();
+    obj.geometry=new GeomCtor(r,wantRes,wantRes);
+  }
+}
+let g3LoopStarted=false;
+function g3StartLoop(){
+  if(g3LoopStarted) return; g3LoopStarted=true;
+  const cam=G3.camera(), ctrl=G3.controls();
+  (function loop(){
+    /* rotation auto : approche la vitesse cible en douceur (ralentit au survol, reprend en le quittant) */
+    const rotTarget=g3RotHover?0:g3RotSpeed;
+    ctrl.autoRotateSpeed+=(rotTarget-ctrl.autoRotateSpeed)*0.06;
+    for(const n of g3Nodes){
+      const animS=Math.abs(n._s-n._st)>0.001;
+      if(animS) n._s+=(n._st-n._s)*0.28;
+      n._cr=g3BaseR(n)*(1+(n._s-1)*7.5);
+      const obj=n.__threeObj;
+      if(obj && animS) obj.scale.setScalar(n._s);
+    }
+    for(const n of g3Nodes) g3AdaptNodeResolution(n,cam);
+    if(G3 && g3LabelEls.length){
+      const placed=[]; const MINX=60, MINY=15;
+      const tgt=ctrl.target;
+      let fx=tgt.x-cam.position.x, fy=tgt.y-cam.position.y, fz=tgt.z-cam.position.z;
+      const fm=Math.hypot(fx,fy,fz)||1; fx/=fm; fy/=fm; fz/=fm;
+      const vis=[];
+      for(const it of g3LabelEls){
+        const node=it.node;
+        let vx=node.x-cam.position.x, vy=node.y-cam.position.y, vz=node.z-cam.position.z;
+        const dist=Math.hypot(vx,vy,vz)||1;
+        const facing=(vx*fx+vy*fy+vz*fz)/dist;
+        if(facing<=0.15){ it.el.classList.remove('on'); continue; }
+        const sc=G3.graph2ScreenCoords(node.x,node.y,node.z);
+        if(!sc||sc.x<-40||sc.x>innerWidth+40||sc.y<-20||sc.y>innerHeight+20){ it.el.classList.remove('on'); continue; }
+        vis.push({it,sc,dist});
+      }
+      vis.sort((a,b)=>a.dist-b.dist);
+      for(const {it,sc} of vis){
+        let ok=true;
+        for(const p of placed){ if(Math.abs(p.x-sc.x)<MINX && Math.abs(p.y-sc.y)<MINY){ ok=false; break; } }
+        if(ok){ it.el.style.transform=`translate(${sc.x}px,${sc.y}px) translate(-50%,-180%)`; it.el.classList.add('on'); placed.push(sc); }
+        else it.el.classList.remove('on');
+      }
+    }
+    requestAnimationFrame(loop);
+  })();
+}
+
+/* cadrage par défaut : vise TOUJOURS le vrai centre (0,0,0, la racine, fixe) plutôt
+   que le centre géométrique de zoomToFit (qui peut dériver si l'arbre pousse de façon
+   asymétrique), avec un zoom plus prononcé qu'un simple cadrage complet — et une seule
+   transition animée (cameraPosition), donc fluide, sans saut instantané. */
+function g3DefaultView(ms){
+  let R=0;
+  g3Nodes.forEach(n=>{ R=Math.max(R, Math.hypot(n.x,n.y,n.z)+g3BaseR(n)); });
+  R=Math.max(R, g3BaseR(g3Root)*4);
+  const cam=G3.camera(), fov=(cam.fov||50)*Math.PI/180;
+  const dist=(R/Math.sin(fov/2))*1.15*0.62;
+  const dir=g3Norm([0.35,0.28,1]);
+  G3.cameraPosition({x:dir[0]*dist,y:dir[1]*dist,z:dir[2]*dist},{x:0,y:0,z:0},ms);
+}
+function g3ApplyData(){
+  document.getElementById('g3sf').textContent=g3Nodes.length;
+  document.getElementById('g3sd').textContent=g3MaxDepth;
+  document.getElementById('g3Empty').classList.remove('on');
+  if(G3){
+    G3.graphData({nodes:g3Nodes,links:g3Links});
+    /* rouvre directement le dernier dossier visité (mémorisé entre toutes les pages Jupiter) ;
+       sinon recadre la caméra sur l'arbre entier, quelle que soit sa taille */
+    setTimeout(()=>{
+      if(!g3TryRestoreLastPath()){
+        try{ g3DefaultView(900); }catch(e){ console.error('defaultView',e); }
+      }
+    },250);
+  }
+  g3BuildLabels();
+  if(!g3ClickSet) renderPanelIntro();
+}
+
+async function scanAndRenderGraph3D(){
+  if(!rootHandle) return;
+  try{
+    g3Id=0; g3Nodes=[]; g3Links=[];
+    g3Root=g3AddNode(rootHandle.name||'racine','root',null,rootHandle);
+    await g3BuildFromDir(rootHandle,g3Root,1);
+    g3ComputeDerived();
+    await g3LoadSectionColors();
+    g3AssignHues();
+    g3Layout();
+    g3DataReady=true;
+    if(!G3) ensureGraph3D();
+    g3ApplyData();
+    toast(g3Nodes.length+' dossier(s) chargé(s) depuis '+rootHandle.name);
+  }catch(e){
+    console.error('scanAndRenderGraph3D : ',e);
+    toast('Erreur scan : '+e.message);
+  }
+}
+
+/* ================================================================
+   FOCUS AU CLIC — met en évidence le sous-arbre + lignée, cadre la caméra,
+   ouvre le panneau latéral droit avec les infos du dossier sélectionné.
+   ================================================================ */
+/* ---- mémorisation du dernier dossier ouvert (partagée entre toutes les pages Jupiter) ----
+   editeur.html scanne depuis la racine X elle-même, donc n.path est déjà le chemin complet
+   (ex. "MPSI/Physique/Oscillateurs"), directement compatible avec arbre.html/revisions.html. */
+const G3_LASTPATH_KEY='jupiter-last-path';
+function g3SaveLastPath(n){ try{ localStorage.setItem(G3_LASTPATH_KEY, n.path); }catch(e){} }
+function g3TryRestoreLastPath(){
+  let full=null; try{ full=localStorage.getItem(G3_LASTPATH_KEY); }catch(e){}
+  if(!full) return false;
+  const target=g3Nodes.find(n=>n.path===full);
+  if(!target) return false;
+  focusNode(target);
+  return true;
+}
+function clearFocus(){
+  g3ClickSet=null; g3FocusedId=null; g3Refresh(); g3BuildLabels(); renderPanelIntro();
+}
+function focusNode(n){
+  g3SaveLastPath(n);
+  const sub=g3Subtree(n.id), anc=g3Ancestry(n.id);
+  g3ClickSet=new Set([...sub,...anc]); g3FocusedId=n.id; g3Refresh();
+  g3BuildLabels();
+  renderPanelNode(n);
+  /* cadrer la caméra sur le sous-arbre entier */
+  const ids=[...sub];
+  let cx=0,cy=0,cz=0;
+  ids.forEach(id=>{const m=g3ById[id]; cx+=m.x; cy+=m.y; cz+=m.z;});
+  cx/=ids.length; cy/=ids.length; cz/=ids.length;
+  let R=0;
+  ids.forEach(id=>{const m=g3ById[id]; R=Math.max(R, Math.hypot(m.x-cx,m.y-cy,m.z-cz)+g3BaseR(m));});
+  R=Math.max(R, g3BaseR(n)*4);
+  const cam=G3.camera(), fov=(cam.fov||50)*Math.PI/180;
+  const dist=(R/Math.sin(fov/2))*1.15;
+  let dx=cx,dy=cy,dz=cz; const dm=Math.hypot(dx,dy,dz)||1; dx/=dm;dy/=dm;dz/=dm;
+  G3.cameraPosition({x:cx+dx*dist,y:cy+dy*dist,z:cz+dz*dist},{x:cx,y:cy,z:cz},1000);
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+/* ================================================================
+   PANNEAU LATÉRAL DROIT — toujours présent
+   ================================================================ */
+const panelEl=document.getElementById('panel');
+function renderPanelIntro(){
+  if(!g3DataReady||!g3Root){
+    panelEl.innerHTML=`<div class="pintro"><h3>Éditeur Jupiter</h3><p>Connecte le dossier racine depuis l'accueil pour voir apparaître le graphe.</p></div>`;
+    return;
+  }
+  const folders=g3Nodes.length;
+  panelEl.innerHTML=`<div class="pintro">
+    <h3>${esc(g3Root.name)}</h3>
+    <p><b>${folders}</b> dossier(s) · profondeur max <b>${g3MaxDepth}</b></p>
+    <p style="margin-top:14px">Clique sur un dossier pour l'explorer et le modifier.</p>
+  </div>
+  <div class="pedit">
+    <div class="erow">
+      <button class="btn" id="btnLoadSchema" disabled>Charger schéma</button>
+      <button class="btn" id="btnSaveSchema">Sauvegarder schéma</button>
+    </div>
+    <div class="erow" style="margin-top:8px">
+      <button class="btn" id="btnUpdateGit" disabled title="Bientôt disponible">Update git</button>
+    </div>
+  </div>`;
+  const btnLoad=panelEl.querySelector('#btnLoadSchema');
+  const btnSave=panelEl.querySelector('#btnSaveSchema');
+  const btnGit=panelEl.querySelector('#btnUpdateGit');
+  if(btnSave) btnSave.onclick=g3SaveSchema;
+  if(btnGit) btnGit.onclick=()=>toast('Update git : bientôt disponible.');
+  if(btnLoad){
+    btnLoad.onclick=g3LoadSchema;
+    /* le chargement d'un schéma n'a de sens QUE sur un dossier racine vide
+       (sinon on risquerait d'entrer en collision avec des dossiers existants) */
+    g3IsRootEmpty().then(empty=>{
+      btnLoad.disabled=!empty;
+      btnLoad.title=empty?'':'Le dossier racine doit être vide pour charger un schéma.';
+    });
+  }
+}
+function renderPanelNode(n){
+  const anc=g3Ancestry(n.id).reverse();
+  const crumb=anc.map(id=>`<a data-id="${id}">${esc(g3ById[id].name)}</a>`).join('<span class="s">›</span>');
+  const kids=(g3Cmap[n.id]||[]).map(id=>g3ById[id]).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+  const kidsHtml=kids.length
+    ? kids.map(c=>`<div class="ch" data-id="${c.id}"><span class="cdot" style="background:${g3Hsl(c)}"></span>`+
+        `<span class="cn">📁 ${esc(c.name)}</span><span class="cc">${c.childCount} él.</span></div>`).join('')
+    : `<div class="pempty">Aucun sous-dossier.</div>`;
+  const editRow=n.type==='root'
+    ? `<div class="erow"><button class="btn" id="btnAddSub">+ Sous-dossier</button></div>`
+    : `<div class="erow"><button class="btn" id="btnAddSub">+ Sous-dossier</button>`+
+      `<button class="trashsq" id="btnTrash" title="Supprimer ce dossier">`+
+      `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">`+
+      `<path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>`+
+      `</button></div>`;
+  panelEl.innerHTML=`
+    <div class="ptop">
+      <div class="ptype">${n.type==='root'?'Racine':'Dossier'}</div>
+      <div class="pname"><span class="pswatch" style="background:${g3Hsl(n)}"></span>`+
+      `<input id="pnameInput" value="${esc(n.name)}" ${n.type==='root'?'disabled':''} spellcheck="false" autocomplete="off"></div>
+      <div class="pcrumb">${crumb||'<span style="opacity:.5">—</span>'}</div>
+    </div>
+    <div class="pmeta">
+      <div><b>${n.childCount}</b><small>Direct</small></div>
+      <div><b>${n.desc}</b><small>Total</small></div>
+      <div><b>${n.depth}</b><small>Niveau</small></div>
+    </div>
+    <div class="pbody">
+      <div class="psection">
+        <div class="slabel">Sous-dossiers</div>
+        <div class="pchildren">${kidsHtml}</div>
+      </div>
+      <div class="psection" id="pfilesSection">
+        <div class="slabel">Fichiers <span style="opacity:.6;text-transform:none;letter-spacing:0">— dépose ici</span></div>
+        <div class="pchildren" id="pfilesList"><div class="pempty">Lecture…</div></div>
+      </div>
+    </div>
+    <div class="pedit">
+      ${n.depth===1?`<div class="huerow">
+        <span class="hcap">Couleur de la section</span>
+        <input type="range" id="secHueInput" class="huerange" min="0" max="359" step="1" value="0">
+      </div>`:''}
+      ${editRow}
+    </div>`;
+  panelEl.querySelectorAll('.pcrumb a').forEach(a=>a.onclick=()=>focusNode(g3ById[+a.dataset.id]));
+  panelEl.querySelectorAll('.pchildren .ch[data-id]').forEach(el=>el.onclick=()=>focusNode(g3ById[+el.dataset.id]));
+  const nameInp=panelEl.querySelector('#pnameInput');
+  if(nameInp && n.type!=='root'){
+    nameInp.addEventListener('keydown',e=>{
+      if(e.key==='Enter') nameInp.blur();
+      else if(e.key==='Escape'){ nameInp.value=n.name; nameInp.blur(); }
+    });
+    nameInp.addEventListener('blur',()=>{
+      const val=nameInp.value.trim();
+      if(!val||val===n.name){ nameInp.value=n.name; return; }
+      /* verrouille le panneau pendant le renommage pour éviter toute action
+         (ex: + Sous-dossier) sur ce noeud désormais obsolète */
+      nameInp.disabled=true;
+      const ba=panelEl.querySelector('#btnAddSub'); if(ba) ba.disabled=true;
+      const bt=panelEl.querySelector('#btnTrash'); if(bt) bt.disabled=true;
+      g3DoRename(n,val);
+    });
+  }
+  const btnAddSub=panelEl.querySelector('#btnAddSub'); if(btnAddSub) btnAddSub.onclick=()=>g3DoAddSub(n);
+  const btnTrash=panelEl.querySelector('#btnTrash'); if(btnTrash) btnTrash.onclick=()=>g3DoTrash(n);
+  const hueInp=panelEl.querySelector('#secHueInput');
+  if(hueInp){
+    /* position de départ du slider = teinte déjà choisie, sinon celle qui serait
+       utilisée par défaut (hashHue du nom) — jamais une valeur figée en dur */
+    hueInp.value=Math.round(n.metaColor?g3HexToHsl(n.metaColor)[0]:g3HashHue(n.name));
+    g3ReadMetaColor(n).then(c=>{ if(c) hueInp.value=Math.round(g3HexToHsl(c)[0]); });
+    let hueSaveT=null;
+    hueInp.oninput=()=>{
+      /* retour visuel immédiat dans le graphe 3D pendant qu'on glisse le slider */
+      const hex=g3HslToHex(+hueInp.value,85,55);
+      n.metaColor=hex;
+      g3AssignHues();
+      g3Refresh();
+      clearTimeout(hueSaveT);
+      hueSaveT=setTimeout(async()=>{
+        await g3SaveMetaColor(n,hex);
+        toast('Couleur de section enregistrée.');
+      },400);
+    };
+  }
+  const dz=panelEl.querySelector('#pfilesSection');
+  if(dz){
+    dz.addEventListener('dragover',e=>{ e.preventDefault(); dz.classList.add('drag'); });
+    dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
+    dz.addEventListener('drop',e=>{ e.preventDefault(); dz.classList.remove('drag'); g3DoDrop(n,e); });
+  }
+  g3LoadFilesInto(n,'pfilesList');
+}
+
+/* ================================================================
+   ÉDITION — écrit directement sur le disque (File System Access API)
+   ================================================================ */
+function g3FindByPath(path){ return g3Nodes.find(n=>n.path===path); }
+async function g3RescanAndRefocus(path){
+  await scanAndRenderGraph3D();
+  if(path){ const n=g3FindByPath(path); if(n) focusNode(n); }
+}
+
+/* ---- schéma (architecture des sous-dossiers, sans les fichiers) ---- */
+async function g3IsRootEmpty(){
+  if(!g3Root||!g3Root.handle) return false;
+  try{ for await(const _ of g3Root.handle.entries()){ return false; } return true; }
+  catch(e){ return false; }
+}
+function g3BuildSchemaNode(n){
+  return { name:n.name, children:(g3Cmap[n.id]||[]).map(id=>g3BuildSchemaNode(g3ById[id])) };
+}
+/* ---- _meta.json (description, couleur de section) — un seul fichier lu/écrit
+   fusionné pour ne jamais écraser un champ existant ---- */
+async function g3ReadMeta(n){
+  try{
+    const fh=await n.handle.getFileHandle('_meta.json');
+    const f=await fh.getFile();
+    return JSON.parse(await f.text())||{};
+  }catch(e){ return {}; }
+}
+async function g3ReadMetaColor(n){
+  const meta=await g3ReadMeta(n);
+  return meta.color||null;
+}
+/* charge la couleur choisie (_meta.json/color) de chaque section (classe 1) — sert
+   d'ancre à g3AssignHues() pour toute sa branche dans le graphe 3D. */
+async function g3LoadSectionColors(){
+  const secNodes=(g3Cmap[g3Root.id]||[]).map(id=>g3ById[id]);
+  await Promise.all(secNodes.map(async sec=>{ sec.metaColor=await g3ReadMetaColor(sec); }));
+}
+async function g3SaveMetaColor(n,color){
+  try{
+    const meta=await g3ReadMeta(n);
+    meta.color=color;
+    const fh=await n.handle.getFileHandle('_meta.json',{create:true});
+    const w=await fh.createWritable();
+    await w.write(JSON.stringify(meta,null,2));
+    await w.close();
+  }catch(e){ console.error('saveMetaColor',e); toast('Erreur enregistrement couleur : '+e.message); }
+}
+async function g3SaveSchema(){
+  if(!g3Root) return;
+  try{
+    const tree=g3BuildSchemaNode(g3Root);
+    /* index.html attend en plus un champ "sections" (les dossiers de classe 1,
+       ex. MPSI / Projet X / Culture) avec leurs "subjects" (classe 2) et leur
+       couleur (choisie dans l'éditeur, _meta.json/color) — dérivé ici de
+       l'arborescence complète, sans rien y coder en dur. */
+    const secNodes=(g3Cmap[g3Root.id]||[]).map(id=>g3ById[id]);
+    /* jamais gris par défaut : la couleur choisie si elle existe, sinon la même
+       teinte déterministe par nom qu'utilisent revisions.html/arbre.html/l'éditeur. */
+    const sections=await Promise.all(secNodes.map(async sec=>{
+      const chosen=await g3ReadMetaColor(sec);
+      const hue=chosen?g3HexToHsl(chosen)[0]:g3HashHue(sec.name);
+      return {
+        id:sec.name, label:sec.name,
+        color:chosen||`hsl(${hue.toFixed(1)},88%,${g3LFor(hue)}%)`,
+        subjects:(g3Cmap[sec.id]||[]).map(id=>g3ById[id]).map(sub=>({id:sub.name,label:sub.name}))
+      };
+    }));
+    const schema={...tree, sections};
+    const fh=await g3Root.handle.getFileHandle('schema.json',{create:true});
+    const w=await fh.createWritable();
+    await w.write(JSON.stringify(schema,null,2));
+    await w.close();
+    toast('schema.json enregistré dans '+g3Root.name+'.');
+  }catch(e){ console.error('saveSchema',e); toast('Erreur enregistrement schéma : '+e.message); }
+}
+async function g3CreateFromSchema(dirHandle,node){
+  for(const child of (node.children||[])){
+    if(!child||!child.name) continue;
+    const ch=await dirHandle.getDirectoryHandle(child.name,{create:true});
+    await g3CreateFromSchema(ch,child);
+  }
+}
+async function g3LoadSchema(){
+  if(!g3Root) return;
+  if(!(await g3IsRootEmpty())){ toast('Le dossier racine doit être vide pour charger un schéma.'); return; }
+  if(!window.showOpenFilePicker){ toast('Ce navigateur ne permet pas de choisir un fichier ici.'); return; }
+  try{
+    const [fh]=await window.showOpenFilePicker({types:[{description:'Schéma Jupiter',accept:{'application/json':['.json']}}]});
+    const f=await fh.getFile();
+    const schema=JSON.parse(await f.text());
+    await g3CreateFromSchema(g3Root.handle,schema);
+    toast('Schéma chargé — relecture du dossier…');
+    await g3RescanAndRefocus();
+  }catch(e){
+    if(e&&e.name==='AbortError') return;
+    console.error('loadSchema',e); toast('Erreur chargement schéma : '+e.message);
+  }
+}
+
+/* ---- modale maison (remplace prompt()/confirm() natifs du navigateur) ---- */
+function g3ModalBase(title,{input,okLabel,danger}){
+  return new Promise(resolve=>{
+    const modal=document.getElementById('g3Modal');
+    const titleEl=document.getElementById('g3ModalTitle');
+    const inp=document.getElementById('g3ModalInput');
+    const okBtn=document.getElementById('g3ModalOk');
+    const cancelBtn=document.getElementById('g3ModalCancel');
+    titleEl.textContent=title;
+    inp.style.display=(input!=null)?'':'none'; /* '' est un input valide (prompt) — ne pas le confondre avec falsy */
+    inp.value=input||'';
+    okBtn.textContent=okLabel;
+    okBtn.classList.toggle('danger',!!danger);
+    okBtn.classList.toggle('primary',!danger);
+    modal.classList.add('on');
+    setTimeout(()=>{ if(input!=null){ inp.focus(); inp.select(); } else okBtn.focus(); },30);
+    function cleanup(val){
+      modal.classList.remove('on');
+      okBtn.onclick=null; cancelBtn.onclick=null; inp.onkeydown=null;
+      resolve(val);
+    }
+    okBtn.onclick=()=> cleanup(input!=null?(inp.value.trim()||null):true);
+    cancelBtn.onclick=()=> cleanup(input!=null?null:false);
+    inp.onkeydown=e=>{
+      if(e.key==='Enter'){ e.preventDefault(); cleanup(inp.value.trim()||null); }
+      else if(e.key==='Escape'){ e.preventDefault(); cleanup(null); }
+    };
+  });
+}
+function g3ModalPrompt(title){ return g3ModalBase(title,{input:'',okLabel:'Créer',danger:false}); }
+function g3ModalConfirm(title,okLabel){ return g3ModalBase(title,{input:null,okLabel:okLabel||'Confirmer',danger:true}); }
+function g3FmtSize(b){
+  if(b<1024) return b+' o';
+  if(b<1024*1024) return (b/1024).toFixed(1)+' Ko';
+  return (b/1024/1024).toFixed(1)+' Mo';
+}
+let g3FilesReq=0;
+async function g3LoadFilesInto(n,containerId){
+  const reqId=++g3FilesReq;
+  try{
+    const files=[];
+    for await(const [name,h] of n.handle.entries()){
+      if(ignored(name)||h.kind!=='file'||name==='manifest.json'||name==='questions.json') continue;
+      files.push([name,h]);
+    }
+    files.sort((a,b)=>a[0].localeCompare(b[0],'fr',{numeric:true}));
+    if(reqId!==g3FilesReq) return;
+    const el=document.getElementById(containerId); if(!el) return;
+    if(!files.length){ el.innerHTML='<div class="pempty">Aucun fichier — dépose-en ici.</div>'; return; }
+    const rows=await Promise.all(files.map(async([name,h])=>{
+      let size='';
+      try{ const f=await h.getFile(); size=g3FmtSize(f.size); }catch(e){}
+      return `<div class="ch nolink"><span class="cdot" style="background:var(--dim2)"></span><span class="cn">📄 ${esc(name)}</span><span class="cc">${size}</span></div>`;
+    }));
+    if(reqId!==g3FilesReq) return;
+    el.innerHTML=rows.join('');
+  }catch(e){
+    console.error('list files',e);
+    if(reqId===g3FilesReq){ const el=document.getElementById(containerId); if(el) el.innerHTML='<div class="pempty">Erreur de lecture.</div>'; }
+  }
+}
+/* copie récursive dossier→dossier : repli utilisé quand handle.move() est
+   indisponible ou échoue (renommage = copier sous le nouveau nom, puis supprimer l'ancien) */
+async function g3CopyDirRecursive(srcHandle, destParentHandle, name){
+  const destHandle=await destParentHandle.getDirectoryHandle(name,{create:true});
+  const entries=[];
+  for await(const [entryName,entryHandle] of srcHandle.entries()){ entries.push([entryName,entryHandle]); }
+  /* copies en parallèle à chaque niveau — bien plus rapide qu'une copie séquentielle */
+  await Promise.all(entries.map(async([entryName,entryHandle])=>{
+    if(entryHandle.kind==='file'){
+      const file=await entryHandle.getFile();
+      const nfh=await destHandle.getFileHandle(entryName,{create:true});
+      const w=await nfh.createWritable();
+      await w.write(file); await w.close();
+    } else {
+      await g3CopyDirRecursive(entryHandle, destHandle, entryName);
+    }
+  }));
+  return destHandle;
+}
+async function g3DoRename(n,name){
+  try{
+    const parent=n.parent!=null?g3ById[n.parent]:null;
+    if(!parent) throw new Error('La racine ne peut pas être renommée.');
+    toast('Renommage en cours…');
+    let done=false;
+    if(typeof n.handle.move==='function'){
+      try{ await n.handle.move(name); done=true; }
+      catch(err){ console.warn('handle.move() a échoué, repli sur copie+suppression :',err); }
+    }
+    if(!done){
+      let collision=false;
+      try{ await parent.handle.getDirectoryHandle(name); collision=true; }catch(e){}
+      if(collision) throw new Error('Un dossier « '+name+' » existe déjà ici.');
+      await g3CopyDirRecursive(n.handle, parent.handle, name);
+      await parent.handle.removeEntry(n.name,{recursive:true});
+    }
+    toast('Renommé en « '+name+' ».');
+    const newPath=parent.path?parent.path+'/'+name:name;
+    await g3RescanAndRefocus(newPath);
+  }catch(e){ console.error('rename',e); toast('Erreur renommage : '+e.message); }
+}
+async function g3DoAddSub(n){
+  const name=await g3ModalPrompt('Nom du nouveau sous-dossier de « '+n.name+' »');
+  if(!name) return;
+  try{
+    await n.handle.getDirectoryHandle(name,{create:true});
+    toast('Sous-dossier « '+name+' » créé.');
+    await g3RescanAndRefocus(n.path);
+  }catch(e){ console.error('addsub',e); toast('Erreur création : '+e.message); }
+}
+async function g3DoTrash(n){
+  if(n.type==='root') return;
+  const ok=await g3ModalConfirm('Supprimer définitivement « '+n.name+' » et tout son contenu ?','Supprimer');
+  if(!ok) return;
+  try{
+    const parent=g3ById[n.parent];
+    await parent.handle.removeEntry(n.name,{recursive:true});
+    toast('« '+n.name+' » supprimé.');
+    const parentPath=parent.path;
+    clearFocus();
+    await g3RescanAndRefocus(parentPath);
+  }catch(e){ console.error('trash',e); toast('Erreur suppression : '+e.message); }
+}
+async function g3DoDrop(n,e){
+  const items=e.dataTransfer && e.dataTransfer.items;
+  if(!items||!items.length) return;
+  let ok=0, skip=0;
+  for(const item of items){
+    if(item.kind!=='file') continue;
+    const entry=item.webkitGetAsEntry && item.webkitGetAsEntry();
+    if(entry && entry.isDirectory){ skip++; continue; }
+    const file=item.getAsFile();
+    if(!file) continue;
+    try{
+      const fh=await n.handle.getFileHandle(file.name,{create:true});
+      const w=await fh.createWritable();
+      await w.write(file); await w.close();
+      ok++;
+    }catch(err){ console.error('drop write',err); }
+  }
+  let msg='';
+  if(ok) msg+=ok+' fichier(s) déposé(s)';
+  if(skip) msg+=(msg?' · ':'')+skip+' dossier(s) ignoré(s) (fichiers uniquement)';
+  if(msg) toast(msg+' dans « '+n.name+' ».');
+  if(ok) g3LoadFilesInto(n,'pfilesList');
+}
+function renderPanelSearch(q){
+  const matches=g3Nodes.filter(n=>n.name.toLowerCase().includes(q)).sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+  const html=matches.length
+    ? matches.map(n=>`<div class="ch" data-id="${n.id}"><span class="cdot" style="background:${g3Hsl(n)}"></span>`+
+        `<span class="cn">📁 ${esc(n.name)}</span><span class="cc">niv. ${n.depth}</span></div>`).join('')
+    : `<div class="pempty">Aucun dossier ne correspond.</div>`;
+  panelEl.innerHTML=`
+    <div class="ptop">
+      <div class="ptype">Recherche</div>
+      <div class="pname">« ${esc(q)} »</div>
+      <div class="pcrumb">${matches.length} résultat(s)</div>
+    </div>
+    <div class="pbody"><div class="pchildren">${html}</div></div>`;
+  /* cliquer un résultat ferme la recherche et active le focus (sous-arbre allumé) */
+  panelEl.querySelectorAll('.pchildren .ch').forEach(el=>el.onclick=()=>{
+    const node=g3ById[+el.dataset.id];
+    closeSearch();
+    focusNode(node);
+  });
+}
+
+/* ---- couleur de base globale : plus de sélecteur ici (chaque section a son
+   propre slider de teinte dans le panneau) — on lit juste la valeur partagée
+   pour la racine et le repli hashHue, et on reste synchronisé si elle change
+   depuis une autre page/onglet Jupiter. */
+const G3_COLOR_KEY='jupiter-graph-basecolor';
+g3BaseHue=g3HexToHsl(localStorage.getItem(G3_COLOR_KEY)||'#ff2f6d')[0];
+addEventListener('storage',e=>{
+  if(e.key===G3_COLOR_KEY && e.newValue){
+    g3BaseHue=g3HexToHsl(e.newValue)[0];
+    if(g3Root) g3AssignHues();
+    g3Refresh();
+  }
+});
+
+/* ---- rotation : bascule la vitesse cible, la transition est lissée dans g3StartLoop ---- */
+document.getElementById('rotChk').addEventListener('change',e=>{ g3RotSpeed=e.target.checked?0.35:0; });
+
+/* ---- recherche ---- */
+const searchwrap=document.getElementById('searchwrap'), searchInp=document.getElementById('search');
+function openSearch(){ searchwrap.classList.add('on'); searchInp.focus(); }
+function panelBackToContext(){
+  if(g3FocusedId!=null && g3ById[g3FocusedId]) renderPanelNode(g3ById[g3FocusedId]);
+  else renderPanelIntro();
+}
+function closeSearch(){ searchwrap.classList.remove('on'); searchInp.value=''; g3SearchSet=null; g3Refresh(); g3BuildLabels(); panelBackToContext(); }
+document.getElementById('searchBtn').onclick=()=> searchwrap.classList.contains('on')?closeSearch():openSearch();
+searchInp.addEventListener('input',()=>{
+  const q=searchInp.value.trim().toLowerCase();
+  if(!q){
+    /* barre de recherche vidée : réinitialise le graphe comme le bouton Réinit. */
+    g3SearchSet=null;
+    doReset();
+    return;
+  }
+  g3SearchSet=new Set(g3Nodes.filter(n=>n.name.toLowerCase().includes(q)).map(n=>n.id));
+  g3Refresh();
+  g3BuildLabels();
+  renderPanelSearch(q);
+});
+searchInp.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSearch(); });
+addEventListener('keydown',e=>{ if(e.key==='/' && document.activeElement!==searchInp){ e.preventDefault(); openSearch(); } });
+
+/* ---- réinit. : remet le focus à la racine de la branche courante (pas à l'ultra-racine) ---- */
+function doReset(){
+  const cur=g3FocusedId!=null?g3ById[g3FocusedId]:null;
+  if(cur && cur.depth>1){
+    const anc=g3Ancestry(cur.id);
+    const branchRoot=g3ById[anc[anc.length-2]];
+    focusNode(branchRoot);
+    return;
+  }
+  clearFocus();
+  if(G3){ try{ g3DefaultView(700); }catch(e){} }
+}
+document.getElementById('resetBtn').onclick=()=>{ closeSearch(); doReset(); };
+
+/* ---- rescan ---- */
+document.getElementById('rescanBtn').onclick=async()=>{
+  if(!rootHandle){ toast('Aucun dossier connecté.'); return; }
+  await scanAndRenderGraph3D();
+  toast('Arborescence relue.');
+};
+
+function onG3Resize(){
+  if(!G3) return;
+  /* le graphe occupe toute la page ; le panneau passe par-dessus (z-index), pas à côté */
+  G3.width(window.innerWidth).height(window.innerHeight);
+}
+addEventListener('resize',onG3Resize);
+
+/* ---- démarrage ---- */
+if(typeof ForceGraph3D==='undefined'){
+  toast('3d-force-graph n\'a pas pu charger (CDN bloqué ?).');
+  console.error('ForceGraph3D indisponible — vérifie que jsdelivr n\'est pas bloqué par un adblocker/réseau.');
+} else {
+  try{ ensureGraph3D(); }catch(e){ console.error('Graphe 3D : échec init',e); toast('Erreur graphe 3D : '+e.message); }
+}
+editorInit();
+</script>
+</body>
+</html>

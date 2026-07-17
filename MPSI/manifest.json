@@ -1,0 +1,3409 @@
+{
+  "name": "MPSI",
+  "path": "",
+  "description": "",
+  "children": [
+    {
+      "name": "111",
+      "path": "111",
+      "description": "",
+      "children": [
+        {
+          "name": "zigga123",
+          "path": "111/zigga123",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 45.84615384615381,
+          "color": "hsl(45.8,88%,46%)"
+        }
+      ],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": true,
+      "hue": 45.84615384615381,
+      "color": "hsl(45.8,88%,46%)"
+    },
+    {
+      "name": "Français",
+      "path": "Français",
+      "description": "",
+      "children": [],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": false,
+      "hue": 78.84615384615381,
+      "color": "hsl(78.8,88%,46%)"
+    },
+    {
+      "name": "Informatique",
+      "path": "Informatique",
+      "description": "",
+      "children": [
+        {
+          "name": "DM",
+          "path": "Informatique/DM",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 106.84615384615381,
+          "color": "hsl(106.8,88%,54%)"
+        },
+        {
+          "name": "DS",
+          "path": "Informatique/DS",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 153.8461538461538,
+          "color": "hsl(153.8,88%,54%)"
+        },
+        {
+          "name": "Ressources",
+          "path": "Informatique/Ressources",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 233.8461538461538,
+          "color": "hsl(233.8,88%,58%)"
+        },
+        {
+          "name": "TP",
+          "path": "Informatique/TP",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 345.8461538461538,
+          "color": "hsl(345.8,88%,54%)"
+        }
+      ],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": true,
+      "hue": 106.84615384615381,
+      "color": "hsl(106.8,88%,54%)"
+    },
+    {
+      "name": "Mathématiques",
+      "path": "Mathématiques",
+      "description": "",
+      "children": [
+        {
+          "name": "01 - Fonctions usuelles _ 1",
+          "path": "Mathématiques/01 - Fonctions usuelles _ 1",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/01 - Fonctions usuelles _ 1/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 211.8461538461538,
+              "color": "hsl(211.8,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/01 - Fonctions usuelles _ 1/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 258.8461538461538,
+              "color": "hsl(258.8,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/01 - Fonctions usuelles _ 1/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 338.8461538461538,
+              "color": "hsl(338.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/01 - Fonctions usuelles _ 1/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 90.84615384615381,
+              "color": "hsl(90.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 211.8461538461538,
+          "color": "hsl(211.8,88%,58%)"
+        },
+        {
+          "name": "02 - Quantificateurs, éléments de logique",
+          "path": "Mathématiques/02 - Quantificateurs, éléments de logique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/02 - Quantificateurs, éléments de logique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 222.20979020979019,
+              "color": "hsl(222.2,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/02 - Quantificateurs, éléments de logique/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.2097902097902,
+              "color": "hsl(269.2,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/02 - Quantificateurs, éléments de logique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 349.2097902097902,
+              "color": "hsl(349.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/02 - Quantificateurs, éléments de logique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 101.20979020979019,
+              "color": "hsl(101.2,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 222.20979020979019,
+          "color": "hsl(222.2,88%,58%)"
+        },
+        {
+          "name": "03 - Quelques types de raisonnements",
+          "path": "Mathématiques/03 - Quelques types de raisonnements",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/03 - Quelques types de raisonnements/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 233.39160839160832,
+              "color": "hsl(233.4,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/03 - Quelques types de raisonnements/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 280.3916083916083,
+              "color": "hsl(280.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/03 - Quelques types de raisonnements/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 0.3916083916083153,
+              "color": "hsl(0.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/03 - Quelques types de raisonnements/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 112.39160839160832,
+              "color": "hsl(112.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 233.39160839160832,
+          "color": "hsl(233.4,88%,58%)"
+        },
+        {
+          "name": "04 - Sommes et produits",
+          "path": "Mathématiques/04 - Sommes et produits",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/04 - Sommes et produits/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 248.66433566433557,
+              "color": "hsl(248.7,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/04 - Sommes et produits/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.66433566433557,
+              "color": "hsl(295.7,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/04 - Sommes et produits/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 15.664335664335567,
+              "color": "hsl(15.7,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/04 - Sommes et produits/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 127.66433566433557,
+              "color": "hsl(127.7,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 248.66433566433557,
+          "color": "hsl(248.7,88%,58%)"
+        },
+        {
+          "name": "05 - Ensembles et applications",
+          "path": "Mathématiques/05 - Ensembles et applications",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/05 - Ensembles et applications/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 222.20979020979019,
+              "color": "hsl(222.2,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/05 - Ensembles et applications/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.2097902097902,
+              "color": "hsl(269.2,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/05 - Ensembles et applications/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 349.2097902097902,
+              "color": "hsl(349.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/05 - Ensembles et applications/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 101.20979020979019,
+              "color": "hsl(101.2,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 222.20979020979019,
+          "color": "hsl(222.2,88%,58%)"
+        },
+        {
+          "name": "06 - Nombres complexes",
+          "path": "Mathématiques/06 - Nombres complexes",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/06 - Nombres complexes/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 233.39160839160832,
+              "color": "hsl(233.4,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/06 - Nombres complexes/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 280.3916083916083,
+              "color": "hsl(280.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/06 - Nombres complexes/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 0.3916083916083153,
+              "color": "hsl(0.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/06 - Nombres complexes/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 112.39160839160832,
+              "color": "hsl(112.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 233.39160839160832,
+          "color": "hsl(233.4,88%,58%)"
+        },
+        {
+          "name": "07 - Inégalités",
+          "path": "Mathématiques/07 - Inégalités",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/07 - Inégalités/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 248.66433566433557,
+              "color": "hsl(248.7,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/07 - Inégalités/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.66433566433557,
+              "color": "hsl(295.7,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/07 - Inégalités/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 15.664335664335567,
+              "color": "hsl(15.7,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/07 - Inégalités/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 127.66433566433557,
+              "color": "hsl(127.7,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 248.66433566433557,
+          "color": "hsl(248.7,88%,58%)"
+        },
+        {
+          "name": "08 - Fonctions usuelles _ 2",
+          "path": "Mathématiques/08 - Fonctions usuelles _ 2",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/08 - Fonctions usuelles _ 2/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 261.3916083916083,
+              "color": "hsl(261.4,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/08 - Fonctions usuelles _ 2/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 308.3916083916083,
+              "color": "hsl(308.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/08 - Fonctions usuelles _ 2/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.391608391608315,
+              "color": "hsl(28.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/08 - Fonctions usuelles _ 2/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 140.39160839160832,
+              "color": "hsl(140.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 261.3916083916083,
+          "color": "hsl(261.4,88%,54%)"
+        },
+        {
+          "name": "09 - Calcul intégral",
+          "path": "Mathématiques/09 - Calcul intégral",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/09 - Calcul intégral/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 233.39160839160832,
+              "color": "hsl(233.4,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/09 - Calcul intégral/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 280.3916083916083,
+              "color": "hsl(280.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/09 - Calcul intégral/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 0.3916083916083153,
+              "color": "hsl(0.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/09 - Calcul intégral/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 112.39160839160832,
+              "color": "hsl(112.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 233.39160839160832,
+          "color": "hsl(233.4,88%,58%)"
+        },
+        {
+          "name": "10 - Equations différentielles linéaires d'ordre 1",
+          "path": "Mathématiques/10 - Equations différentielles linéaires d'ordre 1",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/10 - Equations différentielles linéaires d'ordre 1/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 248.66433566433557,
+              "color": "hsl(248.7,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/10 - Equations différentielles linéaires d'ordre 1/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.66433566433557,
+              "color": "hsl(295.7,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/10 - Equations différentielles linéaires d'ordre 1/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 15.664335664335567,
+              "color": "hsl(15.7,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/10 - Equations différentielles linéaires d'ordre 1/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 127.66433566433557,
+              "color": "hsl(127.7,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 248.66433566433557,
+          "color": "hsl(248.7,88%,58%)"
+        },
+        {
+          "name": "11 - Equations différentielles linéaires d'ordre 2",
+          "path": "Mathématiques/11 - Equations différentielles linéaires d'ordre 2",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/11 - Equations différentielles linéaires d'ordre 2/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 261.3916083916083,
+              "color": "hsl(261.4,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/11 - Equations différentielles linéaires d'ordre 2/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 308.3916083916083,
+              "color": "hsl(308.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/11 - Equations différentielles linéaires d'ordre 2/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.391608391608315,
+              "color": "hsl(28.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/11 - Equations différentielles linéaires d'ordre 2/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 140.39160839160832,
+              "color": "hsl(140.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 261.3916083916083,
+          "color": "hsl(261.4,88%,54%)"
+        },
+        {
+          "name": "12 - Structures algébriques",
+          "path": "Mathématiques/12 - Structures algébriques",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/12 - Structures algébriques/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.02797202797206,
+              "color": "hsl(269.0,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/12 - Structures algébriques/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 316.02797202797206,
+              "color": "hsl(316.0,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/12 - Structures algébriques/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 36.027972027972055,
+              "color": "hsl(36.0,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/12 - Structures algébriques/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 148.02797202797206,
+              "color": "hsl(148.0,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 269.02797202797206,
+          "color": "hsl(269.0,88%,54%)"
+        },
+        {
+          "name": "13 - Arithmétique",
+          "path": "Mathématiques/13 - Arithmétique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/13 - Arithmétique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 248.66433566433557,
+              "color": "hsl(248.7,88%,58%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/13 - Arithmétique/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.66433566433557,
+              "color": "hsl(295.7,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/13 - Arithmétique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 15.664335664335567,
+              "color": "hsl(15.7,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/13 - Arithmétique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 127.66433566433557,
+              "color": "hsl(127.7,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 248.66433566433557,
+          "color": "hsl(248.7,88%,58%)"
+        },
+        {
+          "name": "14 - L'ensemble des nombres réel",
+          "path": "Mathématiques/14 - L'ensemble des nombres réel",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/14 - L'ensemble des nombres réel/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 261.3916083916083,
+              "color": "hsl(261.4,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/14 - L'ensemble des nombres réel/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 308.3916083916083,
+              "color": "hsl(308.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/14 - L'ensemble des nombres réel/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.391608391608315,
+              "color": "hsl(28.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/14 - L'ensemble des nombres réel/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 140.39160839160832,
+              "color": "hsl(140.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 261.3916083916083,
+          "color": "hsl(261.4,88%,54%)"
+        },
+        {
+          "name": "15 - Suites réelles",
+          "path": "Mathématiques/15 - Suites réelles",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/15 - Suites réelles/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.02797202797206,
+              "color": "hsl(269.0,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/15 - Suites réelles/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 316.02797202797206,
+              "color": "hsl(316.0,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/15 - Suites réelles/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 36.027972027972055,
+              "color": "hsl(36.0,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/15 - Suites réelles/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 148.02797202797206,
+              "color": "hsl(148.0,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 269.02797202797206,
+          "color": "hsl(269.0,88%,54%)"
+        },
+        {
+          "name": "16 - Polynômes",
+          "path": "Mathématiques/16 - Polynômes",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/16 - Polynômes/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 290.8461538461538,
+              "color": "hsl(290.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/16 - Polynômes/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 337.8461538461538,
+              "color": "hsl(337.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/16 - Polynômes/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 57.84615384615381,
+              "color": "hsl(57.8,88%,46%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/16 - Polynômes/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 169.8461538461538,
+              "color": "hsl(169.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 290.8461538461538,
+          "color": "hsl(290.8,88%,54%)"
+        },
+        {
+          "name": "17 - Matrices et systèmes linéaires",
+          "path": "Mathématiques/17 - Matrices et systèmes linéaires",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/17 - Matrices et systèmes linéaires/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 261.3916083916083,
+              "color": "hsl(261.4,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/17 - Matrices et systèmes linéaires/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 308.3916083916083,
+              "color": "hsl(308.4,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/17 - Matrices et systèmes linéaires/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.391608391608315,
+              "color": "hsl(28.4,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/17 - Matrices et systèmes linéaires/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 140.39160839160832,
+              "color": "hsl(140.4,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 261.3916083916083,
+          "color": "hsl(261.4,88%,54%)"
+        },
+        {
+          "name": "18 - Limites et continuité",
+          "path": "Mathématiques/18 - Limites et continuité",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/18 - Limites et continuité/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.02797202797206,
+              "color": "hsl(269.0,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/18 - Limites et continuité/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 316.02797202797206,
+              "color": "hsl(316.0,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/18 - Limites et continuité/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 36.027972027972055,
+              "color": "hsl(36.0,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/18 - Limites et continuité/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 148.02797202797206,
+              "color": "hsl(148.0,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 269.02797202797206,
+          "color": "hsl(269.0,88%,54%)"
+        },
+        {
+          "name": "19 - Dérivation",
+          "path": "Mathématiques/19 - Dérivation",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/19 - Dérivation/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 290.8461538461538,
+              "color": "hsl(290.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/19 - Dérivation/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 337.8461538461538,
+              "color": "hsl(337.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/19 - Dérivation/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 57.84615384615381,
+              "color": "hsl(57.8,88%,46%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/19 - Dérivation/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 169.8461538461538,
+              "color": "hsl(169.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 290.8461538461538,
+          "color": "hsl(290.8,88%,54%)"
+        },
+        {
+          "name": "20 - Convexité",
+          "path": "Mathématiques/20 - Convexité",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/20 - Convexité/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 326.8461538461538,
+              "color": "hsl(326.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/20 - Convexité/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 13.846153846153811,
+              "color": "hsl(13.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/20 - Convexité/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 93.84615384615381,
+              "color": "hsl(93.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/20 - Convexité/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 205.8461538461538,
+              "color": "hsl(205.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 326.8461538461538,
+          "color": "hsl(326.8,88%,54%)"
+        },
+        {
+          "name": "21 - Suites récurrentes",
+          "path": "Mathématiques/21 - Suites récurrentes",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/21 - Suites récurrentes/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 269.02797202797206,
+              "color": "hsl(269.0,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/21 - Suites récurrentes/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 316.02797202797206,
+              "color": "hsl(316.0,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/21 - Suites récurrentes/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 36.027972027972055,
+              "color": "hsl(36.0,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/21 - Suites récurrentes/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 148.02797202797206,
+              "color": "hsl(148.0,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 269.02797202797206,
+          "color": "hsl(269.0,88%,54%)"
+        },
+        {
+          "name": "22 - Calculs asymptotiques",
+          "path": "Mathématiques/22 - Calculs asymptotiques",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/22 - Calculs asymptotiques/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 290.8461538461538,
+              "color": "hsl(290.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/22 - Calculs asymptotiques/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 337.8461538461538,
+              "color": "hsl(337.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/22 - Calculs asymptotiques/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 57.84615384615381,
+              "color": "hsl(57.8,88%,46%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/22 - Calculs asymptotiques/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 169.8461538461538,
+              "color": "hsl(169.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 290.8461538461538,
+          "color": "hsl(290.8,88%,54%)"
+        },
+        {
+          "name": "23 - Espaces vectoriels",
+          "path": "Mathématiques/23 - Espaces vectoriels",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/23 - Espaces vectoriels/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 326.8461538461538,
+              "color": "hsl(326.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/23 - Espaces vectoriels/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 13.846153846153811,
+              "color": "hsl(13.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/23 - Espaces vectoriels/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 93.84615384615381,
+              "color": "hsl(93.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/23 - Espaces vectoriels/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 205.8461538461538,
+              "color": "hsl(205.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 326.8461538461538,
+          "color": "hsl(326.8,88%,54%)"
+        },
+        {
+          "name": "24 - Applications linéaires",
+          "path": "Mathématiques/24 - Applications linéaires",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/24 - Applications linéaires/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 7.2097902097900715,
+              "color": "hsl(7.2,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/24 - Applications linéaires/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 54.20979020979007,
+              "color": "hsl(54.2,88%,46%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/24 - Applications linéaires/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 134.20979020979007,
+              "color": "hsl(134.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/24 - Applications linéaires/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 246.20979020979007,
+              "color": "hsl(246.2,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 7.2097902097900715,
+          "color": "hsl(7.2,88%,54%)"
+        },
+        {
+          "name": "25 - Intégration",
+          "path": "Mathématiques/25 - Intégration",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/25 - Intégration/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 290.8461538461538,
+              "color": "hsl(290.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/25 - Intégration/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 337.8461538461538,
+              "color": "hsl(337.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/25 - Intégration/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 57.84615384615381,
+              "color": "hsl(57.8,88%,46%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/25 - Intégration/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 169.8461538461538,
+              "color": "hsl(169.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 290.8461538461538,
+          "color": "hsl(290.8,88%,54%)"
+        },
+        {
+          "name": "26 - Dimension finie",
+          "path": "Mathématiques/26 - Dimension finie",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/26 - Dimension finie/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 326.8461538461538,
+              "color": "hsl(326.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/26 - Dimension finie/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 13.846153846153811,
+              "color": "hsl(13.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/26 - Dimension finie/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 93.84615384615381,
+              "color": "hsl(93.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/26 - Dimension finie/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 205.8461538461538,
+              "color": "hsl(205.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 326.8461538461538,
+          "color": "hsl(326.8,88%,54%)"
+        },
+        {
+          "name": "27 - Matrices d'applications linéaires",
+          "path": "Mathématiques/27 - Matrices d'applications linéaires",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/27 - Matrices d'applications linéaires/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 7.2097902097900715,
+              "color": "hsl(7.2,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/27 - Matrices d'applications linéaires/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 54.20979020979007,
+              "color": "hsl(54.2,88%,46%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/27 - Matrices d'applications linéaires/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 134.20979020979007,
+              "color": "hsl(134.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/27 - Matrices d'applications linéaires/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 246.20979020979007,
+              "color": "hsl(246.2,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 7.2097902097900715,
+          "color": "hsl(7.2,88%,54%)"
+        },
+        {
+          "name": "28 - Séries et familles sommables",
+          "path": "Mathématiques/28 - Séries et familles sommables",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/28 - Séries et familles sommables/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 49.7552447552448,
+              "color": "hsl(49.8,88%,46%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/28 - Séries et familles sommables/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 96.7552447552448,
+              "color": "hsl(96.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/28 - Séries et familles sommables/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 176.7552447552448,
+              "color": "hsl(176.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/28 - Séries et familles sommables/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 288.7552447552448,
+              "color": "hsl(288.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 49.7552447552448,
+          "color": "hsl(49.8,88%,46%)"
+        },
+        {
+          "name": "29 - Espaces préhilbertiens réels",
+          "path": "Mathématiques/29 - Espaces préhilbertiens réels",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/29 - Espaces préhilbertiens réels/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 326.8461538461538,
+              "color": "hsl(326.8,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/29 - Espaces préhilbertiens réels/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 13.846153846153811,
+              "color": "hsl(13.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/29 - Espaces préhilbertiens réels/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 93.84615384615381,
+              "color": "hsl(93.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/29 - Espaces préhilbertiens réels/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 205.8461538461538,
+              "color": "hsl(205.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 326.8461538461538,
+          "color": "hsl(326.8,88%,54%)"
+        },
+        {
+          "name": "30 - Probabilités",
+          "path": "Mathématiques/30 - Probabilités",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/30 - Probabilités/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 7.2097902097900715,
+              "color": "hsl(7.2,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/30 - Probabilités/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 54.20979020979007,
+              "color": "hsl(54.2,88%,46%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/30 - Probabilités/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 134.20979020979007,
+              "color": "hsl(134.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/30 - Probabilités/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 246.20979020979007,
+              "color": "hsl(246.2,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 7.2097902097900715,
+          "color": "hsl(7.2,88%,54%)"
+        },
+        {
+          "name": "31 - Groupes symétriques",
+          "path": "Mathématiques/31 - Groupes symétriques",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/31 - Groupes symétriques/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 49.7552447552448,
+              "color": "hsl(49.8,88%,46%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/31 - Groupes symétriques/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 96.7552447552448,
+              "color": "hsl(96.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/31 - Groupes symétriques/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 176.7552447552448,
+              "color": "hsl(176.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/31 - Groupes symétriques/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 288.7552447552448,
+              "color": "hsl(288.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 49.7552447552448,
+          "color": "hsl(49.8,88%,46%)"
+        },
+        {
+          "name": "32 - Déterminant",
+          "path": "Mathématiques/32 - Déterminant",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/32 - Déterminant/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 72.3006993006993,
+              "color": "hsl(72.3,88%,46%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/32 - Déterminant/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 119.3006993006993,
+              "color": "hsl(119.3,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/32 - Déterminant/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 199.3006993006993,
+              "color": "hsl(199.3,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/32 - Déterminant/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 311.3006993006993,
+              "color": "hsl(311.3,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 72.3006993006993,
+          "color": "hsl(72.3,88%,46%)"
+        },
+        {
+          "name": "33 - Fonctions de deux variables",
+          "path": "Mathématiques/33 - Fonctions de deux variables",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Mathématiques/33 - Fonctions de deux variables/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 7.2097902097900715,
+              "color": "hsl(7.2,88%,54%)"
+            },
+            {
+              "name": "Cours",
+              "path": "Mathématiques/33 - Fonctions de deux variables/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 54.20979020979007,
+              "color": "hsl(54.2,88%,46%)"
+            },
+            {
+              "name": "DM",
+              "path": "Mathématiques/33 - Fonctions de deux variables/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 134.20979020979007,
+              "color": "hsl(134.2,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/33 - Fonctions de deux variables/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 246.20979020979007,
+              "color": "hsl(246.2,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 7.2097902097900715,
+          "color": "hsl(7.2,88%,54%)"
+        }
+      ],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": false,
+      "hue": 211.8461538461538,
+      "color": "hsl(211.8,88%,58%)"
+    },
+    {
+      "name": "Physique",
+      "path": "Physique",
+      "description": "",
+      "children": [
+        {
+          "name": "01 - Optique",
+          "path": "Physique/01 - Optique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/01 - Optique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 78.84615384615381,
+              "color": "hsl(78.8,88%,46%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/01 - Optique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 125.84615384615381,
+              "color": "hsl(125.8,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/01 - Optique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 205.8461538461538,
+              "color": "hsl(205.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/01 - Optique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 317.8461538461538,
+              "color": "hsl(317.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 78.84615384615381,
+          "color": "hsl(78.8,88%,46%)"
+        },
+        {
+          "name": "02 - Régime continu et ordre 1",
+          "path": "Physique/02 - Régime continu et ordre 1",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/02 - Régime continu et ordre 1/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 95.13186813186809,
+              "color": "hsl(95.1,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/02 - Régime continu et ordre 1/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 142.1318681318681,
+              "color": "hsl(142.1,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/02 - Régime continu et ordre 1/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 222.13186813186803,
+              "color": "hsl(222.1,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/02 - Régime continu et ordre 1/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 334.13186813186803,
+              "color": "hsl(334.1,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 95.13186813186809,
+          "color": "hsl(95.1,88%,54%)"
+        },
+        {
+          "name": "03 - Oscillateur",
+          "path": "Physique/03 - Oscillateur",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/03 - Oscillateur/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 117.84615384615381,
+              "color": "hsl(117.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/03 - Oscillateur/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 164.8461538461538,
+              "color": "hsl(164.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/03 - Oscillateur/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 244.8461538461538,
+              "color": "hsl(244.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/03 - Oscillateur/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 356.8461538461538,
+              "color": "hsl(356.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 117.84615384615381,
+          "color": "hsl(117.8,88%,54%)"
+        },
+        {
+          "name": "04 - Régime sinusoïdal forcé",
+          "path": "Physique/04 - Régime sinusoïdal forcé",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/04 - Régime sinusoïdal forcé/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 133.8461538461538,
+              "color": "hsl(133.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/04 - Régime sinusoïdal forcé/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 180.8461538461538,
+              "color": "hsl(180.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/04 - Régime sinusoïdal forcé/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 260.8461538461538,
+              "color": "hsl(260.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/04 - Régime sinusoïdal forcé/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 12.846153846153811,
+              "color": "hsl(12.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 133.8461538461538,
+          "color": "hsl(133.8,88%,54%)"
+        },
+        {
+          "name": "05 - Filtrage linéaire",
+          "path": "Physique/05 - Filtrage linéaire",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/05 - Filtrage linéaire/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 95.13186813186809,
+              "color": "hsl(95.1,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/05 - Filtrage linéaire/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 142.1318681318681,
+              "color": "hsl(142.1,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/05 - Filtrage linéaire/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 222.13186813186803,
+              "color": "hsl(222.1,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/05 - Filtrage linéaire/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 334.13186813186803,
+              "color": "hsl(334.1,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 95.13186813186809,
+          "color": "hsl(95.1,88%,54%)"
+        },
+        {
+          "name": "06 - Propagation d'un signal",
+          "path": "Physique/06 - Propagation d'un signal",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/06 - Propagation d'un signal/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 117.84615384615381,
+              "color": "hsl(117.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/06 - Propagation d'un signal/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 164.8461538461538,
+              "color": "hsl(164.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/06 - Propagation d'un signal/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 244.8461538461538,
+              "color": "hsl(244.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/06 - Propagation d'un signal/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 356.8461538461538,
+              "color": "hsl(356.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 117.84615384615381,
+          "color": "hsl(117.8,88%,54%)"
+        },
+        {
+          "name": "07 - Cinématique du point",
+          "path": "Physique/07 - Cinématique du point",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/07 - Cinématique du point/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 133.8461538461538,
+              "color": "hsl(133.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/07 - Cinématique du point/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 180.8461538461538,
+              "color": "hsl(180.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/07 - Cinématique du point/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 260.8461538461538,
+              "color": "hsl(260.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/07 - Cinématique du point/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 12.846153846153811,
+              "color": "hsl(12.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 133.8461538461538,
+          "color": "hsl(133.8,88%,54%)"
+        },
+        {
+          "name": "08 - Principes de la dynamique",
+          "path": "Physique/08 - Principes de la dynamique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/08 - Principes de la dynamique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 168.13186813186803,
+              "color": "hsl(168.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/08 - Principes de la dynamique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 215.13186813186803,
+              "color": "hsl(215.1,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/08 - Principes de la dynamique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.13186813186803,
+              "color": "hsl(295.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/08 - Principes de la dynamique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.13186813186803,
+              "color": "hsl(47.1,88%,46%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 168.13186813186803,
+          "color": "hsl(168.1,88%,58%)"
+        },
+        {
+          "name": "09 - Energie mécanique",
+          "path": "Physique/09 - Energie mécanique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/09 - Energie mécanique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 117.84615384615381,
+              "color": "hsl(117.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/09 - Energie mécanique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 164.8461538461538,
+              "color": "hsl(164.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/09 - Energie mécanique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 244.8461538461538,
+              "color": "hsl(244.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/09 - Energie mécanique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 356.8461538461538,
+              "color": "hsl(356.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 117.84615384615381,
+          "color": "hsl(117.8,88%,54%)"
+        },
+        {
+          "name": "10 - Champ électrique et magnétique",
+          "path": "Physique/10 - Champ électrique et magnétique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/10 - Champ électrique et magnétique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 133.8461538461538,
+              "color": "hsl(133.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/10 - Champ électrique et magnétique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 180.8461538461538,
+              "color": "hsl(180.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/10 - Champ électrique et magnétique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 260.8461538461538,
+              "color": "hsl(260.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/10 - Champ électrique et magnétique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 12.846153846153811,
+              "color": "hsl(12.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 133.8461538461538,
+          "color": "hsl(133.8,88%,54%)"
+        },
+        {
+          "name": "11 - Moment cinétique",
+          "path": "Physique/11 - Moment cinétique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/11 - Moment cinétique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 168.13186813186803,
+              "color": "hsl(168.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/11 - Moment cinétique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 215.13186813186803,
+              "color": "hsl(215.1,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/11 - Moment cinétique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.13186813186803,
+              "color": "hsl(295.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/11 - Moment cinétique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.13186813186803,
+              "color": "hsl(47.1,88%,46%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 168.13186813186803,
+          "color": "hsl(168.1,88%,58%)"
+        },
+        {
+          "name": "12 - Forces centrales",
+          "path": "Physique/12 - Forces centrales",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/12 - Forces centrales/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 228.13186813186803,
+              "color": "hsl(228.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/12 - Forces centrales/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 275.13186813186803,
+              "color": "hsl(275.1,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/12 - Forces centrales/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 355.13186813186803,
+              "color": "hsl(355.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/12 - Forces centrales/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 107.13186813186803,
+              "color": "hsl(107.1,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 228.13186813186803,
+          "color": "hsl(228.1,88%,58%)"
+        },
+        {
+          "name": "13 - Système thermodynamique",
+          "path": "Physique/13 - Système thermodynamique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/13 - Système thermodynamique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 133.8461538461538,
+              "color": "hsl(133.8,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/13 - Système thermodynamique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 180.8461538461538,
+              "color": "hsl(180.8,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/13 - Système thermodynamique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 260.8461538461538,
+              "color": "hsl(260.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/13 - Système thermodynamique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 12.846153846153811,
+              "color": "hsl(12.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 133.8461538461538,
+          "color": "hsl(133.8,88%,54%)"
+        },
+        {
+          "name": "14 - Premier principe",
+          "path": "Physique/14 - Premier principe",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/14 - Premier principe/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 168.13186813186803,
+              "color": "hsl(168.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/14 - Premier principe/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 215.13186813186803,
+              "color": "hsl(215.1,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/14 - Premier principe/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.13186813186803,
+              "color": "hsl(295.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/14 - Premier principe/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.13186813186803,
+              "color": "hsl(47.1,88%,46%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 168.13186813186803,
+          "color": "hsl(168.1,88%,58%)"
+        },
+        {
+          "name": "15 - Deuxième principe",
+          "path": "Physique/15 - Deuxième principe",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/15 - Deuxième principe/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 228.13186813186803,
+              "color": "hsl(228.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/15 - Deuxième principe/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 275.13186813186803,
+              "color": "hsl(275.1,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/15 - Deuxième principe/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 355.13186813186803,
+              "color": "hsl(355.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/15 - Deuxième principe/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 107.13186813186803,
+              "color": "hsl(107.1,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 228.13186813186803,
+          "color": "hsl(228.1,88%,58%)"
+        },
+        {
+          "name": "16 - Machines thermiques",
+          "path": "Physique/16 - Machines thermiques",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/16 - Machines thermiques/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 288.7032967032967,
+              "color": "hsl(288.7,88%,54%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/16 - Machines thermiques/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 335.7032967032967,
+              "color": "hsl(335.7,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/16 - Machines thermiques/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 55.7032967032967,
+              "color": "hsl(55.7,88%,46%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/16 - Machines thermiques/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 167.7032967032967,
+              "color": "hsl(167.7,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 288.7032967032967,
+          "color": "hsl(288.7,88%,54%)"
+        },
+        {
+          "name": "17 - Champ magnétique",
+          "path": "Physique/17 - Champ magnétique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/17 - Champ magnétique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 168.13186813186803,
+              "color": "hsl(168.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/17 - Champ magnétique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 215.13186813186803,
+              "color": "hsl(215.1,88%,58%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/17 - Champ magnétique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 295.13186813186803,
+              "color": "hsl(295.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/17 - Champ magnétique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.13186813186803,
+              "color": "hsl(47.1,88%,46%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 168.13186813186803,
+          "color": "hsl(168.1,88%,58%)"
+        },
+        {
+          "name": "18 - Induction électromagnétique",
+          "path": "Physique/18 - Induction électromagnétique",
+          "description": "",
+          "children": [
+            {
+              "name": "Colle",
+              "path": "Physique/18 - Induction électromagnétique/Colle",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 228.13186813186803,
+              "color": "hsl(228.1,88%,58%)"
+            },
+            {
+              "name": "DM",
+              "path": "Physique/18 - Induction électromagnétique/DM",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 275.13186813186803,
+              "color": "hsl(275.1,88%,54%)"
+            },
+            {
+              "name": "DS",
+              "path": "Physique/18 - Induction électromagnétique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 355.13186813186803,
+              "color": "hsl(355.1,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/18 - Induction électromagnétique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 107.13186813186803,
+              "color": "hsl(107.1,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 228.13186813186803,
+          "color": "hsl(228.1,88%,58%)"
+        }
+      ],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": false,
+      "hue": 78.84615384615381,
+      "color": "hsl(78.8,88%,46%)"
+    },
+    {
+      "name": "SI",
+      "path": "SI",
+      "description": "",
+      "children": [
+        {
+          "name": "01 - Cinématique",
+          "path": "SI/01 - Cinématique",
+          "description": "",
+          "children": [
+            {
+              "name": "DS",
+              "path": "SI/01 - Cinématique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 106.84615384615381,
+              "color": "hsl(106.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "SI/01 - Cinématique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 153.8461538461538,
+              "color": "hsl(153.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 106.84615384615381,
+          "color": "hsl(106.8,88%,54%)"
+        },
+        {
+          "name": "02 - Statique",
+          "path": "SI/02 - Statique",
+          "description": "",
+          "children": [
+            {
+              "name": "DS",
+              "path": "SI/02 - Statique/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 153.8461538461538,
+              "color": "hsl(153.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "SI/02 - Statique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 200.8461538461538,
+              "color": "hsl(200.8,88%,58%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 153.8461538461538,
+          "color": "hsl(153.8,88%,54%)"
+        },
+        {
+          "name": "03 - Engrenages",
+          "path": "SI/03 - Engrenages",
+          "description": "",
+          "children": [
+            {
+              "name": "DS",
+              "path": "SI/03 - Engrenages/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 233.8461538461538,
+              "color": "hsl(233.8,88%,58%)"
+            },
+            {
+              "name": "TD",
+              "path": "SI/03 - Engrenages/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 280.8461538461538,
+              "color": "hsl(280.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 233.8461538461538,
+          "color": "hsl(233.8,88%,58%)"
+        },
+        {
+          "name": "04 - Asservissement",
+          "path": "SI/04 - Asservissement",
+          "description": "",
+          "children": [
+            {
+              "name": "DS",
+              "path": "SI/04 - Asservissement/DS",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 345.8461538461538,
+              "color": "hsl(345.8,88%,54%)"
+            },
+            {
+              "name": "TD",
+              "path": "SI/04 - Asservissement/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 32.84615384615381,
+              "color": "hsl(32.8,88%,54%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 345.8461538461538,
+          "color": "hsl(345.8,88%,54%)"
+        }
+      ],
+      "files": [],
+      "questions": [],
+      "hasQuestions": false,
+      "isAvantDernier": false,
+      "hue": 106.84615384615381,
+      "color": "hsl(106.8,88%,54%)"
+    }
+  ],
+  "files": [],
+  "questions": [],
+  "hasQuestions": false,
+  "isAvantDernier": false,
+  "hue": 45.84615384615384,
+  "color": "hsl(45.8,88%,46%)"
+}

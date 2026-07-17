@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Jupiter — Arborescence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000;--panel:rgba(10,11,14,.72);--line:rgba(255,255,255,.14);
+    --line-soft:rgba(255,255,255,.07);--txt:#eff2f8;--txt-dim:#79839a;
+    --accent:#ff2f6d;--font:"JetBrains Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%;overflow:hidden;background:#000;color:var(--txt);
+    font-family:var(--font);-webkit-tap-highlight-color:transparent}
+  #graph{position:fixed;inset:0;background:#000}
+  #graph canvas{display:block}
+
+  #header{position:fixed;top:16px;left:16px;z-index:10;display:flex;align-items:center;gap:9px}
+
+  #bottombar{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:10;
+    display:flex;align-items:center;gap:14px;padding:8px 14px;
+    background:var(--panel);border:1px solid var(--line-soft);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  #bottombar .sep{width:1px;height:22px;background:var(--line-soft)}
+  .grp{display:flex;align-items:center;gap:8px}
+  .grp .cap{font-size:8.5px;text-transform:uppercase;letter-spacing:1.6px;color:var(--txt-dim)}
+  .grad{height:8px;width:120px;border:1px solid var(--line)}
+  .gradtxt{font-size:8px;letter-spacing:.8px;color:var(--txt-dim)}
+  .sw{position:relative;width:38px;height:18px;flex:0 0 auto}
+  .sw input{opacity:0;width:0;height:0}
+  .sl{position:absolute;inset:0;background:#000;border:1px solid var(--line);cursor:pointer;transition:.16s}
+  .sl::before{content:"";position:absolute;width:11px;height:11px;left:2px;top:2px;background:var(--txt-dim);transition:.16s}
+  .sw input:checked+.sl{border-color:var(--accent)}
+  .sw input:checked+.sl::before{transform:translateX(20px);background:var(--accent);box-shadow:0 0 8px var(--accent)}
+  .iconbtn{border:1px solid var(--line);background:transparent;color:var(--txt-dim);cursor:pointer;
+    width:30px;height:26px;display:flex;align-items:center;justify-content:center;transition:.16s;padding:0}
+  .iconbtn:hover{border-color:var(--accent);color:var(--accent)}
+  .iconbtn svg{width:13px;height:13px}
+  .btn{border:1px solid var(--line);background:transparent;color:var(--txt-dim);font-family:var(--font);
+    font-size:9px;letter-spacing:1.2px;text-transform:uppercase;padding:7px 11px;cursor:pointer;transition:.16s}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* recherche discrète (au-dessus de la barre) */
+  #searchwrap{position:fixed;left:50%;bottom:62px;transform:translateX(-50%) translateY(8px);z-index:11;
+    opacity:0;pointer-events:none;transition:.18s}
+  #searchwrap.on{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  #search{width:340px;max-width:80vw;background:rgba(10,11,14,.92);border:1px solid var(--accent);
+    color:var(--txt);font-family:var(--font);font-size:12px;padding:10px 13px;outline:none;letter-spacing:.3px;
+    backdrop-filter:blur(8px)}
+  #search::placeholder{color:var(--txt-dim)}
+
+  #stats{position:fixed;bottom:16px;right:16px;z-index:10;display:flex;gap:14px;font-size:9px;
+    color:var(--txt-dim);letter-spacing:.6px}
+  #stats b{color:var(--txt);font-weight:700}
+
+  /* panneau de détail (jupiter) */
+  #detail{position:fixed;top:0;right:0;height:100%;width:340px;max-width:86vw;z-index:15;
+    background:rgba(8,9,12,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-left:1px solid var(--line);transform:translateX(102%);transition:transform .32s cubic-bezier(.4,0,.1,1);
+    display:flex;flex-direction:column}
+  #detail.on{transform:translateX(0)}
+  #detail .top{padding:20px 20px 16px;border-bottom:1px solid var(--line-soft)}
+  #detail .dtype{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--txt-dim);display:flex;
+    align-items:center;justify-content:space-between}
+  #detail .dclose{cursor:pointer;color:var(--txt-dim);font-size:14px;line-height:1;padding:2px 4px}
+  #detail .dclose:hover{color:var(--accent)}
+  #detail .dname{font-size:16px;font-weight:600;margin-top:11px;letter-spacing:.2px;word-break:break-word;
+    display:flex;gap:9px;align-items:flex-start}
+  #detail .dswatch{width:11px;height:11px;border-radius:50%;flex:0 0 auto;margin-top:5px}
+  #detail .dcrumb{margin-top:13px;font-size:9.5px;line-height:1.7;color:var(--txt-dim);word-break:break-word}
+  #detail .dcrumb a{color:var(--txt-dim);cursor:pointer;text-decoration:none;border-bottom:1px dotted transparent}
+  #detail .dcrumb a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  #detail .dcrumb .s{opacity:.4;margin:0 5px}
+  #detail .dmeta{padding:14px 20px;border-bottom:1px solid var(--line-soft);display:flex;gap:22px}
+  #detail .dmeta div b{font-size:17px;font-weight:700;display:block;line-height:1}
+  #detail .dmeta div small{font-size:8px;color:var(--txt-dim);text-transform:uppercase;letter-spacing:1.2px}
+  #detail .dchildren{flex:1;overflow-y:auto;padding:8px 0}
+  #detail .dchildren .ch{display:flex;align-items:center;gap:10px;padding:9px 20px;cursor:pointer;
+    font-size:11.5px;transition:background .12s;border-left:2px solid transparent}
+  #detail .dchildren .ch:hover{background:rgba(255,255,255,.04);border-left-color:var(--accent)}
+  #detail .dchildren .ch .cdot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
+  #detail .dchildren .ch .cn{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #detail .dchildren .ch .cc{font-size:8.5px;color:var(--txt-dim)}
+  #detail .dempty{padding:18px 20px;font-size:10px;color:var(--txt-dim);letter-spacing:.4px}
+  #detail ::-webkit-scrollbar{width:8px}#detail ::-webkit-scrollbar-thumb{background:var(--line)}
+
+  /* étiquettes flottantes désactivées : redondantes avec la petite fenêtre colorée
+     (#tip) déjà affichée au survol d'un nœud — celle-ci suffit. */
+  #labels{display:none}
+  #labels .lab{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;
+    font-size:10px;letter-spacing:.2px;color:#fff;text-shadow:0 0 5px #000,0 1px 2px #000;
+    padding:0;opacity:0;transition:opacity .2s}
+  #labels .lab.on{opacity:1}
+  #labels .lab.fold{font-weight:500;font-size:11px;letter-spacing:.5px;
+    text-shadow:0 0 6px #000,0 1px 3px #000}
+  #labels .lab.fold.d2.on{opacity:.82}
+  #labels .lab.fold.d3.on{opacity:.32}
+
+  #tip{position:fixed;z-index:20;pointer-events:none;background:rgba(9,10,13,.92);
+    border:1px solid var(--accent);padding:5px 8px;font-size:10px;max-width:280px;
+    opacity:0;transition:opacity .1s;backdrop-filter:blur(9px)}
+  #tip .tn{font-weight:600;letter-spacing:.2px}
+  #tip .tm{color:var(--txt-dim);font-size:8.5px;margin-top:2px;letter-spacing:.4px}
+
+  #loader{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
+    flex-direction:column;gap:14px;background:#000;transition:opacity .5s}
+  #loader .ring{width:28px;height:28px;border:2px solid var(--line);border-top-color:var(--accent);animation:spin 1s linear infinite}
+  #loader p{font-size:10px;color:var(--txt-dim);letter-spacing:2px;text-transform:uppercase}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  /* gate : écran de connexion dossier */
+  #gate{position:fixed;inset:0;z-index:50;background:#000;display:flex;align-items:center;justify-content:center;transition:opacity .45s}
+  #gate.hide{opacity:0;pointer-events:none}
+  .gatebox{max-width:480px;width:100%;padding:0 24px;text-align:center}
+  .gatebox .gico{font-size:36px;margin-bottom:16px}
+  .gatebox h2{font-size:22px;font-weight:600;letter-spacing:.2px;margin-bottom:10px}
+  .gatebox p{font-size:12px;color:var(--txt-dim);line-height:1.7;margin-bottom:24px}
+  .gatebtn{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--accent);
+    background:rgba(255,48,120,.12);color:var(--txt);font-family:var(--mono);font-size:11px;
+    letter-spacing:2px;text-transform:uppercase;font-weight:600;padding:14px 22px;cursor:pointer;transition:.18s}
+  .gatebtn:hover{background:rgba(255,48,120,.26);box-shadow:0 0 22px rgba(255,48,120,.3)}
+  .gatebtn svg{width:15px;height:15px}
+  .gateerr{font-family:var(--mono);font-size:10px;color:#ff6a6a;margin-top:14px;letter-spacing:.3px;display:none}
+  .gatetree{text-align:left;font-family:var(--mono);font-size:10px;line-height:1.9;color:var(--txt-dim);
+    background:rgba(14,16,21,.8);border:1px solid var(--line-soft);padding:14px 16px;margin-top:22px;
+    white-space:pre;overflow-x:auto}
+  .gatetree b{color:var(--accent)}.gatetree .c{color:var(--txt-dim2)}
+  #gateLoading{display:none}
+  #gateLoading .ring{width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--accent);
+    animation:spin 1s linear infinite;margin:0 auto 14px}
+  #gateLoading p{font-size:10px;color:var(--txt-dim);letter-spacing:2px;text-transform:uppercase}
+
+  /* chip dossier dans la bottombar */
+  .fchip{display:none;align-items:center;gap:7px;border:1px solid var(--line-soft);
+    padding:4px 9px;font-size:9px;letter-spacing:.4px;color:var(--txt-dim)}
+  .fchip.on{display:inline-flex}
+  .fchip .gdot{width:7px;height:7px;border-radius:50%;background:#39d98a;box-shadow:0 0 7px #39d98a;flex:0 0 auto}
+  #folderTools{display:none;align-items:center;gap:8px}
+  #folderTools.on{display:flex}
+  #folderTools .fchip{display:inline-flex;align-items:center;border:1px solid var(--line-soft);
+    padding:7px 11px;font-family:var(--font);font-size:9.5px;letter-spacing:1.5px;
+    text-transform:uppercase;color:var(--txt-dim)}
+  #folderTools .fchip b{color:var(--txt);font-weight:700}
+
+  /* icônes de navigation, groupées dans le header (haut-gauche) pour ne pas
+     se superposer au panneau de détail (haut-droite) */
+  #header .navicon{display:flex;align-items:center;justify-content:center;width:26px;height:26px;
+    border:1px solid var(--line-soft);color:var(--txt-dim);text-decoration:none;
+    transition:.16s;flex:0 0 auto;cursor:pointer;background:transparent;margin-left:4px}
+  #header .navicon:hover{border-color:var(--accent);color:var(--accent)}
+  #header .navicon svg{width:13px;height:13px}
+</style>
+</head>
+<body>
+<div id="graph"></div>
+
+<div id="searchwrap"><input id="search" placeholder="rechercher une note, un dossier…  (Échap pour fermer)" autocomplete="off"/></div>
+
+<div id="bottombar">
+  <div class="grp">
+    <span class="cap">Profondeur</span><span class="gradtxt">centre</span>
+    <div class="grad" id="gradSwatch"></div><span class="gradtxt">bord</span>
+  </div>
+  <div class="sep"></div>
+  <div class="grp"><span class="cap">Rotation</span>
+    <label class="sw"><input type="checkbox" id="rotChk" checked><span class="sl"></span></label></div>
+  <div class="sep"></div>
+  <button class="iconbtn" id="searchBtn" title="Rechercher ( / )">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+  </button>
+  <button class="btn" id="resetBtn">Réinit.</button>
+  <div class="sep"></div>
+  <div id="folderTools">
+    <span class="fchip on"><b id="sectionName">—</b></span>
+    
+  </div>
+</div>
+
+<div id="stats">
+  <span><b id="sf">—</b> dossiers</span><span><b id="sk">—</b> fichiers</span><span><b id="st">—</b> nœuds</span>
+</div>
+
+<div id="detail">
+  <div class="top">
+    <div class="dtype"><span id="dtype">—</span><span class="dclose" id="dclose">✕</span></div>
+    <div class="dname"><span class="dswatch" id="dswatch"></span><span id="dname">—</span></div>
+    <div class="dcrumb" id="dcrumb"></div>
+  </div>
+  <div class="dmeta" id="dmeta"></div>
+  <div class="dchildren" id="dchildren"></div>
+</div>
+
+<div id="labels"></div>
+<div id="tip"></div>
+
+<!-- navigation : groupée en haut à gauche pour ne pas chevaucher le panneau de détail -->
+<div id="header">
+  <a class="navicon" href="index.html" title="Accueil">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/>
+    </svg>
+  </a>
+  <a class="navicon" href="revisions.html" title="Révisions">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+      <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    </svg>
+  </a>
+</div>
+
+<!-- gate : connexion dossier -->
+<div id="gate">
+  <div class="gatebox">
+    <!-- état connect : aucune racine X mémorisée → renvoyer vers l'accueil -->
+    <div id="gateConnect">
+      <div class="gico">🪐</div>
+      <h2>Connecte-toi depuis l'accueil</h2>
+      <p>Jupiter n'a pas encore de dossier de travail mémorisé. Rends-toi sur l'accueil pour connecter le dossier racine (celui qui contient <b>Core</b>, <b>MPSI</b>, <b>PSI</b> et <b>Culture</b>) et choisir une section.</p>
+      <button class="gatebtn" id="gateBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Aller à l'accueil
+      </button>
+      <div class="gateerr" id="gateErr">Ce navigateur ne supporte pas l'accès direct aux dossiers. Utilise Chrome ou Edge.</div>
+    </div>
+    <!-- état reconnect : racine X mémorisée mais permission à reconfirmer -->
+    <div id="gateReconnect" style="display:none">
+      <div class="gico">🔑</div>
+      <h2>Reconnecter <span class="gname">X</span></h2>
+      <p>Le dossier <b class="gname">X</b> est mémorisé. Chrome demande de confirmer l'accès à l'ouverture de la page.</p>
+      <button class="gatebtn" id="gateReBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Autoriser l'accès
+      </button>
+    </div>
+    <!-- état missing : la section (MPSI/PSI/Culture) n'existe pas dans X -->
+    <div id="gateMissing" style="display:none">
+      <div class="gico">🗂️</div>
+      <h2>Section introuvable</h2>
+      <p>Le dossier <b class="gsec">—</b> n'existe pas dans <b class="gname">X</b>. Retourne à l'accueil pour le créer ou choisir une autre section.</p>
+      <button class="gatebtn" id="gateHomeBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Aller à l'accueil
+      </button>
+    </div>
+    <!-- état loading -->
+    <div id="gateLoading">
+      <div class="ring"></div>
+      <p>Lecture de <span class="gname">X</span>…</p>
+    </div>
+  </div>
+</div>
+
+<!-- outil dossier dans la bottombar (injecté via JS quand connecté) -->
+
+<script src="https://cdn.jsdelivr.net/npm/three-spritetext@1.8.2/dist/three-spritetext.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/3d-force-graph/dist/3d-force-graph.min.js"></script>
+<script>
+/* ============================================================ 1. DONNÉES (lues depuis le dossier de la section active : X/MPSI, X/PSI ou X/Culture) ============================================================ */
+let _id=0; let nodes=[],links=[];
+const EXT_TYPE={docx:'doc',doc:'doc',odt:'doc',rtf:'doc',
+  xlsx:'sheet',xls:'sheet',csv:'sheet',ods:'sheet',
+  pdf:'pdf', pptx:'slide',ppt:'slide',odp:'slide',
+  png:'img',jpg:'img',jpeg:'img',gif:'img',svg:'img',webp:'img',heic:'img',
+  md:'text',txt:'text',tex:'text',json:'text'};
+const ICON={folder:'📁',root:'🗂️',doc:'📄',sheet:'📊',pdf:'📕',slide:'📑',img:'🖼️',text:'📝'};
+function typeFromName(name){ const ext=(name.split('.').pop()||'').toLowerCase(); return EXT_TYPE[ext]||'text'; }
+function addN(name,type,parent,handle){const id=++_id;
+  const n={id,name,type,parent:parent?parent.id:null,path:parent?parent.path+'/'+name:name,handle:handle||null};
+  nodes.push(n); if(parent)links.push({source:parent.id,target:id}); return n;}
+function ignoredName(n){ return n.startsWith('.')||n.startsWith('_'); }
+async function readJson(dirHandle,name){
+  try{ const fh=await dirHandle.getFileHandle(name); const f=await fh.getFile();
+    return JSON.parse(await f.text()); }catch(e){ return null; }
+}
+
+/* construit nodes/links récursivement depuis un FileSystemDirectoryHandle */
+async function buildFromDir(dirHandle, parent, depth){
+  /* on récupère et trie les entrées : dossiers d'abord, puis fichiers, ordre alpha/numérique */
+  const dirs=[], files=[];
+  for await (const [name,h] of dirHandle.entries()){
+    if(ignoredName(name)) continue;
+    (h.kind==='directory'?dirs:files).push([name,h]);
+  }
+  const coll=(a,b)=>a[0].localeCompare(b[0],'fr',{numeric:true});
+  dirs.sort(coll); files.sort(coll);
+  for(const [name,h] of dirs){
+    const f=addN(name,'folder',parent,h);
+    await buildFromDir(h, f, depth+1);
+  }
+  for(const [name,h] of files){
+    addN(name, typeFromName(name), parent, h);
+  }
+}
+
+let root=null;
+async function loadTreeFromHandle(handle){
+  _id=0; nodes=[]; links=[];
+  root=addN(handle.name||getSection(),'root',null,handle);
+  await buildFromDir(handle, root, 1);
+  /* couleur de départ du graphe : celle choisie dans l'éditeur pour cette section
+     (_meta.json/color), sinon une teinte déterministe dérivée du nom. */
+  const meta=await readJson(handle,'_meta.json')||{};
+  root.metaColor=meta.color||null;
+  computeDerived();
+}
+/* ---- dérivés (recalculés à chaque scan) ---- */
+let cmap={}, byId={};
+function computeDerived(){
+  cmap={}; links.forEach(l=>{(cmap[l.source]||(cmap[l.source]=[])).push(l.target);});
+  byId=Object.fromEntries(nodes.map(n=>[n.id,n]));
+  const desc=(id)=>{let c=0;(cmap[id]||[]).forEach(ch=>c+=1+desc(ch));return c;};
+  nodes.forEach(n=>{n.desc=(n.type==='folder'||n.type==='root')?desc(n.id):0;
+    n.childCount=(cmap[n.id]||[]).length; n.depth=0;});
+  const q=[root.id]; byId[root.id].depth=0;
+  while(q.length){const id=q.shift();(cmap[id]||[]).forEach(c=>{byId[c].depth=byId[id].depth+1;q.push(c);});}
+  assignVisuals();
+}
+function subtree(id){const set=new Set([id]);const st=[id];
+  while(st.length){const x=st.pop();(cmap[x]||[]).forEach(c=>{set.add(c);st.push(c);});}return set;}
+function ancestry(id){const a=[];let cur=byId[id];while(cur.parent!=null){a.push(cur.parent);cur=byId[cur.parent];}return a;}
+
+/* ---- teinte chaude : palette à 7 arrêts non-linéaire (façon arc-en-ciel chaud→froid),
+   rebasable via une couleur de départ PARTAGÉE avec editeur.html (même clé localStorage,
+   se synchronise en direct entre les onglets/pages). Les écarts entre arrêts reprennent
+   la forme de l'ancienne palette fixe, mais pivotent tous ensemble avec la teinte choisie. */
+const HUE_OFFSETS=[0,19,47,61,127,205,239];
+const G3_COLOR_KEY='jupiter-graph-basecolor';
+function hexToHue(hex){
+  const r=parseInt(hex.slice(1,3),16)/255, g=parseInt(hex.slice(3,5),16)/255, b=parseInt(hex.slice(5,7),16)/255;
+  const max=Math.max(r,g,b), min=Math.min(r,g,b), d=max-min; let h=0;
+  if(d!==0){ switch(max){ case r: h=((g-b)/d+(g<b?6:0)); break; case g: h=(b-r)/d+2; break; default: h=(r-g)/d+4; } h*=60; }
+  return h;
+}
+let baseHue=hexToHue(localStorage.getItem(G3_COLOR_KEY)||'#ff2f6d');
+/* teinte déterministe à partir d'un nom (ex. section : MPSI, Projet X, Culture…) —
+   identique à revisions.html, ancrée sur l'accent global baseHue (jamais figée en dur). */
+function hashHue(str){
+  let h=0; for(let i=0;i<str.length;i++){ h=(h*31+str.charCodeAt(i))>>>0; }
+  const t=Math.max(0,Math.min(1,(h%1000)/1000));
+  const s=t*(HUE_OFFSETS.length-1), i2=Math.floor(s), f=s-i2;
+  const a=HUE_OFFSETS[i2], b=HUE_OFFSETS[Math.min(i2+1,HUE_OFFSETS.length-1)];
+  return (baseHue+a+(b-a)*f+360)%360;
+}
+/* dégradé du GRAPHE : lié à la PROFONDEUR, ancré sur graphHue — la couleur choisie
+   dans l'éditeur pour CETTE section (_meta.json/color) si elle existe, sinon une
+   teinte déterministe dérivée du nom (jamais l'accent global seul). Recalculé par
+   assignHues() à chaque scan. */
+const DEPTH_SCALE=HUE_OFFSETS.length-1;
+let graphHue=baseHue;
+function lerpStopsHue(t){
+  t=Math.max(0,Math.min(1,t));
+  const s=t*(HUE_OFFSETS.length-1), i=Math.floor(s), f=s-i;
+  const a=HUE_OFFSETS[i], b=HUE_OFFSETS[Math.min(i+1,HUE_OFFSETS.length-1)];
+  return (graphHue+a+(b-a)*f+360)%360;
+}
+function lFor(hue){ return hue>=40&&hue<=80?46:(hue>=160&&hue<=260?58:54); }
+function therm(hue){ return `hsl(${hue.toFixed(1)},88%,${lFor(hue)}%)`; }
+function thermBright(hue){ return `hsl(${hue.toFixed(1)},95%,68%)`; }
+function thermDark(hue){ return `hsl(${hue.toFixed(1)},55%,13%)`; }
+function assignHues(){
+  graphHue = (root && root.metaColor) ? hexToHue(root.metaColor) : hashHue(getSection());
+  nodes.forEach(n=>{ n.t=n.depth/DEPTH_SCALE; n.hue=lerpStopsHue(n.t); });
+  updateGradSwatch();
+}
+/* la barre "Profondeur" doit refléter la RÉALITÉ affichée : l'ancrage réel du
+   dégradé courant (graphHue — couleur choisie pour cette section, ou repli
+   déterministe), jamais le seul accent global brut. */
+function updateGradSwatch(){
+  const stops=HUE_OFFSETS.map(o=>{const hue=(graphHue+o)%360; return `hsl(${hue.toFixed(1)},88%,${lFor(hue)}%)`;});
+  const el=document.getElementById('gradSwatch'); if(el) el.style.background=`linear-gradient(90deg,${stops.join(',')})`;
+}
+updateGradSwatch();
+/* re-synchronise si la couleur de base est changée depuis editeur.html (autre onglet/page) */
+addEventListener('storage',e=>{
+  if(e.key===G3_COLOR_KEY && e.newValue){
+    baseHue=hexToHue(e.newValue);
+    if(root) assignHues(); else updateGradSwatch();
+    if(typeof refresh==='function') refresh();
+  }
+});
+function assignVisuals(){
+  nodes.forEach(n=>{
+    if(n.type==='root') n.val=30;
+    else if(n.type==='folder') n.val=4+Math.log2(1+n.desc)*1.5;
+    else n.val=2.2;
+  });
+  assignHues();
+}
+const NODE_REL=6.5;
+const baseR=n=> NODE_REL*Math.cbrt(n.val||2.2);   /* rayon rendu par 3d-force-graph */
+
+
+/* ============================================================ 2. CROISSANCE DIRECTIONNELLE CUMULATIVE ============================================================ */
+const SEG=520, SPREAD=0.55, FAN=0.10;
+function norm(v){const m=Math.hypot(v[0],v[1],v[2])||1;return [v[0]/m,v[1]/m,v[2]/m];}
+function anyPerp(d){const a=Math.abs(d[0])<0.9?[1,0,0]:[0,1,0];
+  return norm([d[1]*a[2]-d[2]*a[1],d[2]*a[0]-d[0]*a[2],d[0]*a[1]-d[1]*a[0]]);}
+function grow(){
+  root.x=0;root.y=0;root.z=0;root.dir=[0,1,0];
+  const kids=cmap[root.id]||[]; const m=kids.length;
+  kids.forEach((cid,i)=>{
+    const y=1-((i+0.5)/m)*2, rad=Math.sqrt(Math.max(0,1-y*y)), th=Math.PI*(3-Math.sqrt(5))*i;
+    const c=byId[cid]; c.dir=norm([Math.cos(th)*rad,y,Math.sin(th)*rad]);
+    const len=SEG*(0.9+Math.random()*0.3);
+    c.x=root.x+c.dir[0]*len; c.y=root.y+c.dir[1]*len; c.z=root.z+c.dir[2]*len;
+  });
+  const q=[...kids];
+  const segAt=d=> SEG*Math.pow(0.82,Math.max(0,d-1));
+  while(q.length){
+    const id=q.shift(); const p=byId[id]; const pd=p.dir;
+    const ch=cmap[id]||[];
+    const u=anyPerp(pd), v=norm([pd[1]*u[2]-pd[2]*u[1],pd[2]*u[0]-pd[0]*u[2],pd[0]*u[1]-pd[1]*u[0]]);
+    ch.forEach((cid,i)=>{
+      const c=byId[cid]; let ddir;
+      if(ch.length===1){ ddir=[pd[0]+(Math.random()*2-1)*FAN,pd[1]+(Math.random()*2-1)*FAN,pd[2]+(Math.random()*2-1)*FAN]; }
+      else { const ang=(i/ch.length)*Math.PI*2+Math.random()*0.5, sp=SPREAD*(0.5+Math.random()*0.8);
+        ddir=[pd[0]+(u[0]*Math.cos(ang)+v[0]*Math.sin(ang))*sp, pd[1]+(u[1]*Math.cos(ang)+v[1]*Math.sin(ang))*sp, pd[2]+(u[2]*Math.cos(ang)+v[2]*Math.sin(ang))*sp]; }
+      c.dir=norm(ddir);
+      const len=segAt(c.depth)*(0.8+Math.random()*0.4);
+      c.x=p.x+c.dir[0]*len; c.y=p.y+c.dir[1]*len; c.z=p.z+c.dir[2]*len;
+      q.push(cid);
+    });
+  }
+}
+function layout(){
+  grow();
+  /* offset figé enfant↔parent (ressort de structure) + état d'échelle + expansion */
+  nodes.forEach(n=>{ n._s=1; n._st=1; n._cr=baseR(n); n._ex=1; n._ext=1;
+    if(n.parent!=null){const p=byId[n.parent]; n._ox=n.x-p.x; n._oy=n.y-p.y; n._oz=n.z-p.z;}});
+  const folderCt=nodes.filter(n=>n.type==='folder'||n.type==='root').length;
+  document.getElementById('sf').textContent=folderCt;
+  document.getElementById('sk').textContent=nodes.length-folderCt;
+  document.getElementById('st').textContent=nodes.length;
+}
+
+/* ============================================================ 3. GRAPHE ============================================================ */
+const elem=document.getElementById('graph'); const tip=document.getElementById('tip');
+let hlSet=new Set(), srchSet=null, clickSet=null, clickDepths=null;
+function nodeCol(n){
+  const f=srchSet||clickSet;
+  if(f) return f.has(n.id)?thermBright(n.hue):thermDark(n.hue);
+  if(hlSet.size) return hlSet.has(n.id)?thermBright(n.hue):therm(n.hue);
+  return therm(n.hue);
+}
+function linkCol(l){
+  const sid=l.source.id??l.source, tid=l.target.id??l.target;
+  const a=byId[sid], b=byId[tid]; if(!a||!b) return 'rgb(40,40,48)';
+  const mh=lerpStopsHue((a.t+b.t)/2); const f=srchSet||clickSet;
+  if(f) return (f.has(sid)&&f.has(tid))?therm(mh):'rgb(6,6,8)';
+  return therm(mh);
+}
+/* ---- icônes : sprite texturé en guise de nœud (rendu GPU, net, sans overlay) ---- */
+let TSprite=null,TSpriteMaterial=null,TCanvasTexture=null,iconsReady=false;
+(function initThree(){
+  /* stratégie 1 : THREE exposé globalement par la lib */
+  const W=(typeof window!=='undefined')?window:{};
+  if(W.THREE && W.THREE.Sprite && W.THREE.SpriteMaterial && (W.THREE.CanvasTexture||W.THREE.Texture)){
+    TSprite=W.THREE.Sprite; TSpriteMaterial=W.THREE.SpriteMaterial;
+    TCanvasTexture=W.THREE.CanvasTexture||W.THREE.Texture;
+  } else {
+    /* stratégie 2 : récupérer les classes via une instance SpriteText */
+    try{
+      const probe=new SpriteText('A');
+      if(typeof probe.update==='function'){ try{probe.update();}catch(e){} }
+      const stProto=Object.getPrototypeOf(probe);
+      TSprite=Object.getPrototypeOf(stProto).constructor;     /* THREE.Sprite (parent de SpriteText) */
+      TSpriteMaterial=probe.material && probe.material.constructor;
+      const tex=probe.material && probe.material.map;
+      if(tex && tex.constructor) TCanvasTexture=tex.constructor;
+    }catch(e){}
+  }
+  /* auto-validation : on ne déclare les icônes prêtes QUE si on sait fabriquer un sprite texturé */
+  try{
+    const cv=document.createElement('canvas'); cv.width=cv.height=8;
+    const t=new TCanvasTexture(cv); t.needsUpdate=true;
+    const m=new TSpriteMaterial({map:t, transparent:true});
+    const sp=new TSprite(m);
+    sp.scale.set(1,1,1);
+    iconsReady = !!(sp && m && t);
+  }catch(e){ iconsReady=false; }
+})();
+const _iconTex=new Map();
+function iconTexture(type){
+  const isF=(type==='folder'||type==='root');
+  const key=(isF?'F':'D');
+  if(_iconTex.has(key)) return _iconTex.get(key);
+  /* résolution des icônes : 256px (au lieu de 128) pour rester nettes de près —
+     sans coût puisque seulement 2 textures existent au total (dossier/fichier),
+     mises en cache ici et jamais régénérées. */
+  const S=256, cv=document.createElement('canvas'); cv.width=cv.height=S;
+  const c=cv.getContext('2d');
+  c.scale(S/128,S/128); /* tracé calibré pour 128 : on l'agrandit pour remplir le canvas 256 net */
+  c.strokeStyle='#fff'; c.fillStyle='#fff'; c.lineJoin='round'; c.lineCap='round'; c.lineWidth=10;
+  if(isF){
+    const x=18,y=42,w=92,h=56,tab=36;
+    c.beginPath(); c.moveTo(x,y); c.lineTo(x+tab,y); c.lineTo(x+tab+13,y-15); c.lineTo(x+w,y-15);
+    c.lineTo(x+w,y+h); c.lineTo(x,y+h); c.closePath();
+    c.globalAlpha=.30; c.fill(); c.globalAlpha=1; c.stroke();
+  } else {
+    const x=36,y=14,w=56,h=100,cr=26;
+    c.beginPath(); c.moveTo(x,y); c.lineTo(x+w-cr,y); c.lineTo(x+w,y+cr); c.lineTo(x+w,y+h); c.lineTo(x,y+h); c.closePath();
+    c.globalAlpha=.22; c.fill(); c.globalAlpha=1; c.stroke();
+    c.beginPath(); c.moveTo(x+w-cr,y); c.lineTo(x+w-cr,y+cr); c.lineTo(x+w,y+cr); c.stroke();
+    c.lineWidth=6.5; for(let i=0;i<3;i++){const ly=y+46+i*17; c.beginPath(); c.moveTo(x+13,ly); c.lineTo(x+w-13,ly); c.stroke();}
+  }
+  const tex=new TCanvasTexture(cv); if('colorSpace'in tex){try{tex.colorSpace='srgb';}catch(e){}}
+  tex.needsUpdate=true; _iconTex.set(key,tex); return tex;
+}
+function makeNodeObj(n){
+  if(!iconsReady) return false;            /* secours : sphère par défaut */
+  const mat=new TSpriteMaterial({map:iconTexture(n.type), transparent:true, depthWrite:false});
+  mat.color.set(therm(n.hue));               /* teinte l'icône blanche à la couleur du nœud */
+  const s=new TSprite(mat);
+  const r=baseR(n)*2.2;                     /* icône ≈ taille du nœud */
+  s.scale.set(r,r,1); s._baseR=r; s._mat=mat;
+  return s;
+}
+const G=ForceGraph3D({controlType:'orbit', rendererConfig:{antialias:true}})(elem)
+  .backgroundColor('#000000').showNavInfo(false).enableNodeDrag(false)
+  .nodeColor(nodeCol).nodeVal('val').nodeRelSize(NODE_REL).nodeResolution(12).nodeOpacity(0.92)
+  .nodeThreeObject(makeNodeObj).nodeThreeObjectExtend(false)
+  .linkColor(linkCol).linkOpacity(0.85).linkWidth(0.6)
+  .graphData({nodes,links})
+  .cooldownTime(Infinity);           /* simulation perpétuelle → la force de collision reste vivante */
+
+/* ressort de structure : chaque nœud vers parent + offset×expansion (rallonge les arêtes au focus) */
+function treeForce(strength){let ns;
+  const f=(alpha)=>{ for(const n of ns){ if(n.parent==null) continue; const p=byId[n.parent]; const e=n._ex;
+    n.vx+=(p.x+n._ox*e-n.x)*strength; n.vy+=(p.y+n._oy*e-n.y)*strength; n.vz+=(p.z+n._oz*e-n.z)*strength; } };
+  f.initialize=(_ns)=>{ns=_ns;}; return f;}
+/* collision sur grille : espace au repos ET repousse au survol (rayon = baseR × échelle courante) */
+function collideForce(strength){let ns; const cell=300;
+  const f=()=>{ const grid=new Map(); const key=(a,b,c)=>a+'|'+b+'|'+c;
+    for(const n of ns){ const ix=Math.floor(n.x/cell),iy=Math.floor(n.y/cell),iz=Math.floor(n.z/cell);
+      const k=ix+'|'+iy+'|'+iz; let b=grid.get(k); if(!b){b=[];grid.set(k,b);} b.push(n);
+      n._cix=ix;n._ciy=iy;n._ciz=iz; }
+    for(const n of ns){ const rn=n._cr;
+      for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++)for(let dz=-1;dz<=1;dz++){
+        const b=grid.get(key(n._cix+dx,n._ciy+dy,n._ciz+dz)); if(!b)continue;
+        for(const m of b){ if(m.id<=n.id)continue;
+          let ox=m.x-n.x,oy=m.y-n.y,oz=m.z-n.z; let d2=ox*ox+oy*oy+oz*oz; const rr=rn+m._cr;
+          if(d2<rr*rr && d2>1e-6){ const d=Math.sqrt(d2); const push=(rr-d)/d*strength*0.5;
+            ox*=push;oy*=push;oz*=push; n.vx-=ox;n.vy-=oy;n.vz-=oz; m.vx+=ox;m.vy+=oy;m.vz+=oz; } } } } };
+  f.initialize=(_ns)=>{ns=_ns;}; return f;}
+
+G.d3Force('center',null);
+G.d3Force('link').strength(0);
+G.d3Force('charge',null);            /* pas de many-body : structure = ressort + collision (léger, rapide) */
+G.d3Force('tree', treeForce(0.045)); /* souple → restitution douce (ease) */
+G.d3Force('collide', collideForce(0.32));
+G.d3VelocityDecay(0.62);
+G.d3AlphaDecay(0); G.d3AlphaMin(0);  /* alpha constant → forces toujours actives */
+
+function tuneLights(){            /* éclairage à plat → sphères = cercles parfaits, couleurs vives */
+  try{G.scene().traverse(o=>{
+    if(o.isAmbientLight) o.intensity=2.5;
+    if(o.isDirectionalLight||o.isPointLight||o.isHemisphereLight) o.intensity=0;
+  });}catch(e){}
+}
+
+/* ============================================================ 4. ROTATION MULTI-AXES (stop au survol) + ANIMATION D'ÉCHELLE ============================================================ */
+const ctrl=G.controls();
+ctrl.enableDamping=true; ctrl.dampingFactor=0.12; ctrl.rotateSpeed=0.9; ctrl.zoomSpeed=1.0; ctrl.autoRotate=false;
+const cam=G.camera();
+const labelLayer=document.getElementById('labels');
+let labelEls=[];
+
+let rotEnabled=true, hoverNode=false, dragging=false, rotF=1, phase=0, prevTilt=0;
+let pulsePhase=0, labelTick=0, breatheF=1; const PULSE_W=0.016, PULSE_AMP=0.025;   /* respiration : ±2,5%, subtile */
+const AZ=0.0016, TILT_AMP=0.20, TILT_W=0.005;
+ctrl.addEventListener('start',()=>{dragging=true;}); ctrl.addEventListener('end',()=>{dragging=false;});
+(function loop(){
+  /* rotation */
+  const want=(rotEnabled && !hoverNode && !dragging)?1:0; rotF+=(want-rotF)*0.06;
+  const tgt=ctrl.target;
+  let ox=cam.position.x-tgt.x, oy=cam.position.y-tgt.y, oz=cam.position.z-tgt.z;
+  const ay=AZ*rotF, cy=Math.cos(ay), sy=Math.sin(ay);
+  let nx=ox*cy-oz*sy, nz=ox*sy+oz*cy; ox=nx; oz=nz;
+  phase+=TILT_W*rotF; const curT=TILT_AMP*Math.sin(phase), dT=curT-prevTilt; prevTilt=curT;
+  const cx=Math.cos(dT), sx=Math.sin(dT);
+  let ny=oy*cx-oz*sx, nz2=oy*sx+oz*cx; oy=ny; oz=nz2;
+  cam.position.set(tgt.x+ox, tgt.y+oy, tgt.z+oz);
+  /* respiration : gonflement global depuis le centre — se fige en douceur au survol d'un nœud */
+  breatheF += ((hoverNode?0:1)-breatheF)*0.08;
+  pulsePhase+=PULSE_W*breatheF;
+  const breathe=1+Math.sin(pulsePhase)*PULSE_AMP;
+  try{ G.scene().scale.setScalar(breathe); }catch(e){}
+  /* échelle individuelle (ease survol) + expansion (ease focus) + rayon collision + état visuel icône */
+  const filt=srchSet||clickSet;
+  for(const n of nodes){
+    const animS=Math.abs(n._s-n._st)>0.001, animE=Math.abs(n._ex-n._ext)>0.001;
+    if(animS) n._s+=(n._st-n._s)*0.28;
+    if(animE) n._ex+=(n._ext-n._ex)*(n._ext<n._ex?0.12:0.07);
+    n._cr=baseR(n)*(1+(n._s-1)*7.5);
+    const obj=n.__threeObj;
+    if(obj){
+      if(animS){ if(obj._baseR){const r=obj._baseR*n._s; obj.scale.set(r,r,1);} else obj.scale.setScalar(n._s); }
+      const mat=obj._mat;
+      if(mat){
+        let dim=1;
+        if(srchSet){ dim=srchSet.has(n.id)?1:0.08; }
+        else if(clickDepths){
+          const d=clickDepths.get(n.id);
+          if(d===undefined) dim=0.08;          /* hors sous-arbre */
+          else if(d<0||d<=1) dim=1;            /* ancêtres, nœud cliqué, enfants directs */
+          else if(d===2) dim=0.45;             /* petits-enfants */
+          else dim=0.25;                       /* plus profond */
+        }
+        if(mat.opacity!==dim) mat.opacity=dim;
+      }
+    }
+  }
+  /* étiquettes : projetées, sans chevauchement, masquées si derrière la caméra (throttle 1/2 frame) */
+  labelTick++;
+  if(labelEls.length && (labelTick&1)===0){
+    const placed=[];                 /* positions déjà occupées à l'écran */
+    const MINX=64, MINY=15;           /* écart mini entre deux étiquettes */
+    /* direction de visée de la caméra (pour écarter ce qui est derrière) */
+    const tgt=ctrl.target;
+    let fx=tgt.x-cam.position.x, fy=tgt.y-cam.position.y, fz=tgt.z-cam.position.z;
+    const fm=Math.hypot(fx,fy,fz)||1; fx/=fm; fy/=fm; fz/=fm;
+    /* trier par distance caméra : les plus proches ont priorité d'affichage */
+    const vis=[];
+    for(const it of labelEls){
+      const node=it.node, bx=node.x*breathe, by=node.y*breathe, bz=node.z*breathe;
+      let vx=bx-cam.position.x, vy=by-cam.position.y, vz=bz-cam.position.z;
+      const dist=Math.hypot(vx,vy,vz)||1;
+      const facing=(vx*fx+vy*fy+vz*fz)/dist;     /* >0 = devant la caméra */
+      if(facing<=0.15){ it.el.classList.remove('on'); continue; }   /* derrière / trop latéral */
+      const sc=G.graph2ScreenCoords(bx,by,bz);
+      if(!sc || sc.x<-40 || sc.x>innerWidth+40 || sc.y<-20 || sc.y>innerHeight+20){ it.el.classList.remove('on'); continue; }
+      vis.push({it,sc,dist});
+    }
+    vis.sort((a,b)=>a.dist-b.dist);
+    for(const {it,sc} of vis){
+      let ok=true;
+      for(const p of placed){ if(Math.abs(p.x-sc.x)<MINX && Math.abs(p.y-sc.y)<MINY){ ok=false; break; } }
+      if(ok){ it.el.style.transform=`translate(${sc.x}px,${sc.y}px) translate(-50%,-220%)`; it.el.classList.add('on'); placed.push(sc); }
+      else it.el.classList.remove('on');
+    }
+  }
+  requestAnimationFrame(loop);
+})();
+document.getElementById('rotChk').addEventListener('change',e=>{rotEnabled=e.target.checked;});
+
+/* ============================================================ 5. INTERACTIONS ============================================================ */
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function refresh(){G.nodeColor(nodeCol).linkColor(linkCol);}
+elem.addEventListener('pointermove',e=>{tip.style.left=(e.clientX+16)+'px'; tip.style.top=(e.clientY+16)+'px';});
+
+let hovered=null;
+function clearLabels(){ labelLayer.innerHTML=''; labelEls=[]; }
+/* étiquettes par défaut : les 2 premières générations après l'origine (profondeur 1 et 2) */
+function defaultLabels(){ buildLabels(nodes.filter(n=>n.depth>=1 && n.depth<=2).map(n=>n.id)); }
+function buildLabels(ids){
+  clearLabels();
+  /* limite pour rester lisible : si le sous-arbre est énorme, n'étiqueter que les dossiers */
+  let list=[...ids].map(id=>byId[id]);
+  if(list.length>120) list=list.filter(n=>n.type==='folder'||n.type==='root');
+  const frag=document.createDocumentFragment();
+  list.forEach(node=>{
+    const el=document.createElement('div');
+    el.className='lab'+((node.type==='folder'||node.type==='root')?' fold':'')+((node.depth===2)?' d2':(node.depth>=3)?' d3':'');
+    const full=node.name; el.textContent=full.length>20?full.slice(0,19)+'…':full;
+
+    frag.appendChild(el); labelEls.push({node,el});
+  });
+  labelLayer.appendChild(frag);
+}
+G.onNodeHover(n=>{
+  if(hovered) hovered._st=1;                 /* l'ancien rétrécit en douceur */
+  hovered=n; hlSet.clear(); hoverNode=!!n;
+  if(n){
+    n._st=2.5;                               /* grossit (ease via la boucle) → pousse les voisins (collision) */
+    hlSet.add(n.id); (cmap[n.id]||[]).forEach(c=>hlSet.add(c)); if(n.parent!=null) hlSet.add(n.parent);
+    const isF=n.type==='folder'||n.type==='root';
+    tip.style.borderColor=therm(n.hue);        /* bord = couleur du sommet */
+    if(isF){
+      tip.innerHTML=`<div class="tn">${esc(n.name)}</div>`+
+        `<div class="tm">${n.childCount} · ${n.desc} au total</div>`;
+    } else {
+      /* Chemin : extraire les 3 derniers segments hors fichier = chapitre/catégorie/nom · EXT */
+      const parts=n.path.split('/');
+      const fname=parts[parts.length-1];
+      const dot=fname.lastIndexOf('.');
+      const base=dot>=0?fname.slice(0,dot):fname;
+      const ext=dot>=0?fname.slice(dot+1).toUpperCase():'';
+      const cat=parts.length>=2?parts[parts.length-2]:'';
+      const chap=parts.length>=3?parts[parts.length-3]:'';
+      /* label raccourci : retire le préfixe numérique du chapitre (01 - Titre → Titre) */
+      const chapLabel=chap.replace(/^\d+\s*[-–.]\s*/,'');
+      tip.innerHTML=`<div class="tn">${esc(chapLabel)}${cat?' / '+esc(cat):''}<span style="font-size:.7em;opacity:.45;margin-left:8px">${esc(ext)}</span></div>`;
+    }
+    tip.style.opacity=1; elem.style.cursor='pointer';
+  } else { tip.style.opacity=0; elem.style.cursor='default'; }
+  if(!(srchSet||clickSet) && !iconsReady) refresh();   /* repli sphères seulement : recolore au survol */
+});
+
+/* ---- ouverture d'un fichier : aperçu généré dans un nouvel onglet ---- */
+const TYPE_LABEL={doc:'Document Word',sheet:'Feuille de calcul',pdf:'Document PDF',slide:'Présentation',img:'Image',text:'Fichier texte'};
+const LOREM=['Synthèse des éléments clés et du périmètre concerné par ce document de travail.',
+  'Les points ci-dessous récapitulent les décisions prises ainsi que les actions à mener.',
+  'Chaque section détaille les responsabilités, les échéances et les livrables attendus.',
+  'Les annexes complètent le propos avec les données chiffrées et les références utiles.',
+  'Ce contenu est un aperçu de démonstration : il illustre la nature du fichier sélectionné.'];
+function fileBody(n){
+  const c=therm(n.hue);
+  if(n.type==='sheet'){
+    let rows='';
+    for(let r=0;r<14;r++){ let tds='';
+      for(let col=0;col<5;col++){ tds += r===0
+        ? `<th>${['Réf','Libellé','Quantité','Montant','Statut'][col]}</th>`
+        : `<td>${col===0?'L'+r:col===3?(Math.random()*9000|0)+' €':col===4?['OK','En cours','À valider'][r%3]:(col===2?(Math.random()*40|0):'…')}</td>`; }
+      rows += `<tr>${tds}</tr>`; }
+    return `<table>${rows}</table>`;
+  }
+  if(n.type==='slide'){
+    let s='';
+    for(let i=1;i<=6;i++) s+=`<div class="slide"><span class="sn">${i}</span><h3>${i===1?esc(n.name.replace(/\.[^.]+$/,'')):'Section '+i}</h3><div class="bul"></div><div class="bul" style="width:70%"></div><div class="bul" style="width:85%"></div></div>`;
+    return `<div class="slides">${s}</div>`;
+  }
+  if(n.type==='img'){
+    return `<div class="imgview" style="background:
+      linear-gradient(135deg, ${c}, #111)"><span>${esc(n.name)}</span></div>`;
+  }
+  /* doc / pdf / text */
+  let p=LOREM.map(t=>`<p>${t}</p>`).join('');
+  let extra=''; for(let i=0;i<3;i++) extra+=`<h2>${['Contexte','Objectifs','Mise en œuvre','Suivi','Conclusion'][i]}</h2>`+LOREM.slice(0,3).map(t=>`<p>${t}</p>`).join('');
+  return `<article>${p}${extra}</article>`;
+}
+async function openFile(n){
+  /* ouvre le vrai fichier si un FileSystemFileHandle est disponible */
+  if(n.handle && typeof n.handle.getFile==='function'){
+    try{
+      const f=await n.handle.getFile();
+      const url=URL.createObjectURL(f);
+      const w=window.open(url,'_blank');
+      if(!w) toast('Autorise les fenêtres pop-up pour ouvrir le fichier.');
+      setTimeout(()=>{try{URL.revokeObjectURL(url);}catch(e){}},60000);
+      return;
+    }catch(e){ /* handle inaccessible → repli sur aperçu */ }
+  }
+  /* repli : aperçu HTML généré (données de démo) */
+  const c=therm(n.hue);
+  const path=[...ancestry(n.id).reverse().map(id=>byId[id].name),n.name].join('  ›  ');
+  const html=`<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">
+<title>${esc(n.name)}</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0c0d11;color:#e9edf5;font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.6}
+.bar{position:sticky;top:0;display:flex;align-items:center;gap:12px;padding:14px 22px;
+  background:rgba(12,13,17,.92);border-bottom:1px solid rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+.bar .dot{width:12px;height:12px;border-radius:3px;background:${c};flex:0 0 auto;box-shadow:0 0 12px ${c}}
+.bar .meta{font-family:"IBM Plex Mono",monospace}
+.bar .nm{font-size:14px;font-weight:700;letter-spacing:.2px}
+.bar .tp{font-size:10px;color:#8a93a6;text-transform:uppercase;letter-spacing:1.5px;margin-top:2px}
+.crumb{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:#79839a;padding:9px 22px;
+  border-bottom:1px solid rgba(255,255,255,.06);word-break:break-word}
+.page{max-width:820px;margin:26px auto;background:#15171d;border:1px solid rgba(255,255,255,.08);
+  padding:46px 54px;min-height:60vh}
+article h2{font-family:"IBM Plex Mono",monospace;font-size:15px;color:${c};margin:26px 0 10px;letter-spacing:.3px}
+article p{margin:0 0 13px;color:#c2c9d6;font-size:14.5px}
+table{width:100%;border-collapse:collapse;font-family:"IBM Plex Mono",monospace;font-size:12px}
+th,td{border:1px solid rgba(255,255,255,.1);padding:7px 10px;text-align:left}
+th{background:${c};color:#0c0d11;font-weight:700;letter-spacing:.5px}
+td{color:#b8c0cf}
+.slides{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.slide{position:relative;aspect-ratio:16/9;background:#1b1e26;border:1px solid rgba(255,255,255,.1);
+  border-top:3px solid ${c};padding:18px}
+.slide .sn{position:absolute;top:8px;right:11px;font-family:"IBM Plex Mono",monospace;font-size:10px;color:#5d6677}
+.slide h3{font-size:14px;margin-bottom:12px}
+.slide .bul{height:7px;width:100%;background:rgba(255,255,255,.08);margin:7px 0;border-radius:2px}
+.imgview{aspect-ratio:4/3;display:flex;align-items:flex-end;justify-content:flex-start;
+  border:1px solid rgba(255,255,255,.1)}
+.imgview span{font-family:"IBM Plex Mono",monospace;font-size:12px;padding:14px 16px;
+  background:rgba(0,0,0,.45);color:#fff}
+.note{max-width:820px;margin:0 auto 40px;font-size:11px;color:#5d6677;text-align:center;font-family:"IBM Plex Mono",monospace}
+</style></head><body>
+<div class="bar"><span class="dot"></span><div class="meta"><div class="nm">${esc(n.name)}</div>
+  <div class="tp">${TYPE_LABEL[n.type]||'Fichier'}</div></div></div>
+<div class="crumb">${esc(path)}</div>
+<div class="page">${fileBody(n)}</div>
+<div class="note">Aperçu de démonstration — généré localement, aucun fichier réel n'est ouvert.</div>
+</body></html>`;
+  const url=URL.createObjectURL(new Blob([html],{type:'text/html'}));
+  const w=window.open(url,'_blank');
+  /* libère l'URL une fois la fenêtre chargée (sans casser l'ouverture) */
+  setTimeout(()=>{ try{URL.revokeObjectURL(url);}catch(e){} }, 8000);
+  if(!w){ /* popup bloquée : on ouvre au moins le panneau de détail en repli */ focusNode(n); }
+}
+function activate(n){ (n.type==='folder'||n.type==='root') ? focusNode(n) : openFile(n); }
+
+/* ---- focus (clic) : panneau + surbrillance descendance + lignée jusqu'à la racine ---- */
+const EXPAND=2.4;     /* facteur de dilatation des arêtes du sous-arbre au focus */
+function collapseAll(){ nodes.forEach(n=>{n._ext=1;}); }
+/* ---- mémorisation du dernier dossier ouvert (partagée entre toutes les pages Jupiter) ---- */
+const LASTPATH_KEY='jupiter-last-path';
+function saveLastPath(n){
+  try{ const sec=getSection(); localStorage.setItem(LASTPATH_KEY, sec?sec+'/'+n.path:n.path); }catch(e){}
+}
+function tryRestoreLastPath(){
+  let full=null; try{ full=localStorage.getItem(LASTPATH_KEY); }catch(e){}
+  if(!full) return false;
+  const sec=getSection();
+  let rel=full;
+  if(sec && full===sec) rel='';
+  else if(sec && full.startsWith(sec+'/')) rel=full.slice(sec.length+1);
+  const target=rel===''?root:nodes.find(n=>n.path===rel);
+  if(!target) return false;
+  focusNode(target);
+  return true;
+}
+/* cadrage par défaut : vise TOUJOURS le vrai centre (0,0,0 — la racine, fixe),
+   jamais le centre géométrique de zoomToFit (qui peut dériver si l'arbre pousse
+   de façon asymétrique), avec un zoom plus prononcé qu'un simple cadrage complet.
+   Une seule transition animée (cameraPosition) : fluide, sans saut instantané
+   contrairement à l'ancien zoomToFit()+correction de position non-animée. */
+function defaultView(ms){
+  let R=0;
+  nodes.forEach(n=>{ R=Math.max(R, Math.hypot(n.x,n.y,n.z)+baseR(n)); });
+  R=Math.max(R, baseR(root)*4);
+  const fov=(cam.fov||50)*Math.PI/180;
+  const dist=(R/Math.sin(fov/2))*1.15*0.62;
+  const dir=norm([0.35,0.28,1]);
+  G.cameraPosition({x:dir[0]*dist,y:dir[1]*dist,z:dir[2]*dist},{x:0,y:0,z:0},ms);
+}
+let focusedNodeId=null;
+function focusNode(n){
+  saveLastPath(n);
+  focusedNodeId=n.id;
+  const sub=subtree(n.id), anc=ancestry(n.id);
+  clickSet=new Set([...sub, ...anc]); refresh();
+  /* calcul des profondeurs relatives depuis le nœud cliqué */
+  clickDepths=new Map();
+  clickDepths.set(n.id,0);
+  const q=[n.id];
+  while(q.length){ const pid=q.shift(); const d=clickDepths.get(pid);
+    (cmap[pid]||[]).forEach(cid=>{if(!clickDepths.has(cid)){clickDepths.set(cid,d+1);q.push(cid);}});}
+  anc.forEach(id=>clickDepths.set(id,-1));      /* ancêtres : toujours opaques */
+  openDetail(n);
+  /* explose la branche : on écarte les nœuds DANS le sous-arbre (les arêtes internes s'allongent) */
+  collapseAll();
+  if(n.id!==root.id){ sub.forEach(id=>{ if(id!==n.id) byId[id]._ext=EXPAND; }); }
+  /* cadrer toute la branche sur son étendue APRÈS dilatation */
+  const ids=[...sub];
+  let cx=0,cy=0,cz=0;
+  ids.forEach(id=>{const m=byId[id]; cx+=m.x; cy+=m.y; cz+=m.z;});
+  cx/=ids.length; cy/=ids.length; cz/=ids.length;
+  let R=0;
+  ids.forEach(id=>{const m=byId[id]; R=Math.max(R, Math.hypot(m.x-cx,m.y-cy,m.z-cz)+baseR(m));});
+  R=Math.max(R, baseR(n)*4) * (n.id!==root.id?EXPAND:1);   /* tient compte de la dilatation à venir */
+  const fov=(cam.fov||50)*Math.PI/180;
+  const dist=(R/Math.sin(fov/2))*1.15;
+  let dx=cx,dy=cy,dz=cz; const dm=Math.hypot(dx,dy,dz)||1; dx/=dm;dy/=dm;dz/=dm;
+  G.cameraPosition({x:cx+dx*dist, y:cy+dy*dist, z:cz+dz*dist}, {x:cx,y:cy,z:cz}, 1200);
+}
+G.onNodeClick(activate);
+G.onBackgroundClick(()=>{ if(clickSet){clickSet=null; clickDepths=null; refresh();} focusedNodeId=null; collapseAll(); closeDetail(); });
+
+/* ---- panneau de détail (jupiter) ---- */
+const detail=document.getElementById('detail');
+function openDetail(n){
+  const isF=n.type==='folder'||n.type==='root';
+  document.getElementById('dtype').textContent = n.type==='root'?'Racine':(isF?'Dossier':'Fichier '+n.name.slice(n.name.lastIndexOf('.')));
+  document.getElementById('dname').textContent = n.name;
+  document.getElementById('dswatch').style.background = therm(n.hue);
+  /* fil d'ariane cliquable */
+  const anc=ancestry(n.id).reverse();
+  const crumb=document.getElementById('dcrumb');
+  crumb.innerHTML = anc.map(id=>`<a data-id="${id}">${esc(byId[id].name)}</a>`).join('<span class="s">›</span>') || '<span style="opacity:.5">—</span>';
+  crumb.querySelectorAll('a').forEach(a=>a.onclick=()=>focusNode(byId[+a.dataset.id]));
+  /* méta */
+  document.getElementById('dmeta').innerHTML = isF
+    ? `<div><b>${n.childCount}</b><small>Direct</small></div><div><b>${n.desc}</b><small>Total</small></div><div><b>${n.depth}</b><small>Niveau</small></div>`
+    : `<div><b>${n.depth}</b><small>Niveau</small></div>`;
+  /* enfants cliquables */
+  const box=document.getElementById('dchildren');
+  const kids=(cmap[n.id]||[]).map(id=>byId[id]).sort((a,b)=> (b.type==='folder')-(a.type==='folder') || a.name.localeCompare(b.name));
+  if(kids.length){
+    box.innerHTML = kids.map(c=>{
+      const cf=c.type==='folder'||c.type==='root';
+      return `<div class="ch" data-id="${c.id}"><span class="cdot" style="background:${therm(c.hue)}"></span>`+
+        `<span class="cn">${ICON[c.type]} ${esc(c.name)}</span>`+
+        `<span class="cc">${cf?c.childCount+' él.':''}</span></div>`;
+    }).join('');
+    box.querySelectorAll('.ch').forEach(el=>el.onclick=()=>activate(byId[+el.dataset.id]));
+  } else { box.innerHTML='<div class="dempty">Aucun élément contenu.</div>'; }
+  detail.classList.add('on');
+}
+function closeDetail(){ detail.classList.remove('on'); }
+document.getElementById('dclose').onclick=()=>{ closeDetail(); clickSet=null; clickDepths=null; focusedNodeId=null; collapseAll(); refresh(); };
+
+/* ---- recherche (discrète) ---- */
+const searchwrap=document.getElementById('searchwrap'), search=document.getElementById('search');
+function openSearch(){ searchwrap.classList.add('on'); search.focus(); }
+function closeSearch(){ searchwrap.classList.remove('on'); search.value=''; srchSet=null; refresh(); }
+document.getElementById('searchBtn').onclick=()=> searchwrap.classList.contains('on')?closeSearch():openSearch();
+search.addEventListener('input',()=>{ const q=search.value.trim().toLowerCase();
+  srchSet=q?new Set(nodes.filter(n=>n.name.toLowerCase().includes(q)).map(n=>n.id)):null; refresh(); });
+search.addEventListener('keydown',e=>{ if(e.key==='Escape') closeSearch(); });
+addEventListener('keydown',e=>{ if(e.key==='/' && document.activeElement!==search){ e.preventDefault(); openSearch(); } });
+
+/* ---- reset : si on est profondément dans une branche, remonte à la racine de CETTE
+   branche (l'enfant direct de la racine locale) plutôt que de tout dézoomer d'un coup —
+   ex. focus sur Physique/Oscillateurs/DM → réinit → focus sur Physique. Un reset depuis
+   la racine ou depuis un nœud déjà au premier niveau fait le dézoom complet habituel. */
+document.getElementById('resetBtn').addEventListener('click',()=>{
+  closeSearch();
+  const cur=focusedNodeId!=null?byId[focusedNodeId]:null;
+  if(cur && cur.depth>1){
+    const anc=ancestry(cur.id);              /* [...,depth1Id,root.id] */
+    const branchRoot=byId[anc[anc.length-2]];
+    focusNode(branchRoot);
+    return;
+  }
+  closeDetail(); collapseAll(); clickSet=null; clickDepths=null; hlSet.clear(); focusedNodeId=null; refresh(); defaultView(700); });
+
+function onResize(){G.width(innerWidth).height(innerHeight);}
+addEventListener('resize',onResize); onResize();
+
+/* ============================================================ 6. CONNEXION DOSSIER (File System Access API) + DÉMARRAGE ============================================================
+   Architecture : X/ (racine choisie depuis l'accueil) contient
+   Core/ (cette application), MPSI/, PSI/, Culture/.
+   Le handle de X est mémorisé une fois (IndexedDB partagée 'jupiter-xroot'),
+   et la section active (MPSI/PSI/Culture) dans localStorage.
+   `rootHandle` désigne ici directement le dossier de la SECTION active
+   (ex. X/MPSI), comme le faisait auparavant "SecondCerveau". */
+let rootHandle=null, xRootHandle=null, booted=false;
+const SECTION_KEY='jupiter-section';
+function getSection(){ return localStorage.getItem(SECTION_KEY)||''; }
+
+const XROOT_DB='jupiter-xroot', XROOT_STORE='h';
+function xidb(){return new Promise((res,rej)=>{const r=indexedDB.open(XROOT_DB,1);
+  r.onupgradeneeded=()=>r.result.createObjectStore(XROOT_STORE);
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function xGet(){const db=await xidb();return new Promise((res,rej)=>{
+  const t=db.transaction(XROOT_STORE,'readonly');const rq=t.objectStore(XROOT_STORE).get('root');
+  rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error);});}
+
+function setGate(state,name){
+  const gate=document.getElementById('gate');
+  if(state==='hidden'){ gate.classList.add('hide'); setTimeout(()=>gate.style.display='none',460); return; }
+  gate.style.display='flex'; gate.classList.remove('hide');
+  document.getElementById('gateConnect').style.display   = state==='connect'  ?'block':'none';
+  document.getElementById('gateReconnect').style.display = state==='reconnect'?'block':'none';
+  document.getElementById('gateMissing').style.display   = state==='missing' ?'block':'none';
+  document.getElementById('gateLoading').style.display   = state==='loading' ?'block':'none';
+  if(name) document.querySelectorAll('.gname').forEach(e=>e.textContent=name);
+}
+
+async function tryRestore(){
+  if(!window.showDirectoryPicker){ setGate('connect'); document.getElementById('gateErr').style.display='block'; return; }
+  let h=null; try{ h=await xGet(); }catch(e){}
+  if(!h){ setGate('connect'); return; }
+  xRootHandle=h;
+  let perm='prompt'; try{ perm=await h.queryPermission({mode:'read'}); }catch(e){}
+  if(perm==='granted') await resolveSectionAndScan();
+  else setGate('reconnect', h.name||'X');
+}
+async function reconnectFolder(){
+  try{ const perm=await xRootHandle.requestPermission({mode:'read'});
+    if(perm==='granted') await resolveSectionAndScan(); else setGate('connect'); }
+  catch(e){ setGate('connect'); }
+}
+async function resolveSectionAndScan(){
+  const sectionId=getSection();
+  /* charger le schema pour valider la section */
+  try{
+    const sfh=await xRootHandle.getFileHandle('schema.json');
+    const sf=await sfh.getFile();
+    const schema=JSON.parse(await sf.text());
+    /* vérifier que la section existe dans le schema */
+    const sec=schema?.sections?.find(s=>s.id===sectionId);
+    if(!sec && sectionId){
+      /* section inconnue du schema mais on tente quand même */
+    }
+  }catch(e){ /* pas de schema — on continue */ }
+  if(!sectionId){ setGate('connect'); return; }
+  try{ rootHandle=await xRootHandle.getDirectoryHandle(sectionId); }
+  catch(e){
+    document.querySelectorAll('.gsec').forEach(el=>el.textContent=(xRootHandle.name||'X')+'/'+sectionId);
+    setGate('missing', xRootHandle.name||'X');
+    return;
+  }
+  await scanAndBuild(sectionId);
+}
+
+async function scanAndBuild(section){
+  setGate('loading', (xRootHandle.name||'X')+' / '+(section||getSection()));
+  try{ await loadTreeFromHandle(rootHandle); }
+  catch(e){ setGate('connect'); return; }
+  layout();
+  /* (re)charge le graphe avec les vraies données */
+  root.fx=0; root.fy=0; root.fz=0;
+  G.graphData({nodes,links});
+  G.d3Force('tree', treeForce(0.045));
+  G.d3Force('collide', collideForce(0.32));
+  setGate('hidden');
+  /* rouvre directement le dernier dossier visité (mémorisé entre toutes les pages Jupiter),
+     s'il appartient bien à la section active ; sinon vue d'ensemble par défaut.
+     Les DEUX branches doivent attendre le même délai de stabilisation (200ms) avant
+     de toucher la caméra : sans ça, la restauration (focusNode → cameraPosition, ex-
+     synchrone) tirait sur une caméra/scène pas encore prête → centrage inconsistant. */
+  setTimeout(()=>{
+    tuneLights();
+    const restored=tryRestoreLastPath();
+    if(!restored) defaultView(1400);
+  }, 200);
+  /* boutons d'en-tête */
+  const ft=document.getElementById('folderTools');
+  if(ft){ ft.style.display='flex'; }
+  const sn=document.getElementById('sectionName'); if(sn) sn.textContent=getSection();
+}
+
+document.getElementById('gateBtn').onclick=()=>location.href='index.html';
+document.getElementById('gateHomeBtn').onclick=()=>location.href='index.html';
+document.getElementById('gateReBtn').onclick=reconnectFolder;
+/* changeFolder supprimé */
+
+tryRestore();
+</script>
+</body>
+</html>

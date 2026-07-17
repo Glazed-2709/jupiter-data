@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Jupiter — Déposeur de fichiers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--surface:#15171e;--surface2:#1b1e27;
+  --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --txt:#eef1f6;--dim:#8a93a6;--dim2:#576074;
+  --accent:#ff2f6d;--blue:#5b8cff;--ok:#3fb98a;--warn:#ffb454;
+  --sans:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{height:100%;overflow-y:scroll;scrollbar-width:thin;scrollbar-color:#1a1c24 transparent}
+body{min-height:100%;background:var(--bg);color:var(--txt);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased}
+body{padding:0;display:flex;flex-direction:column}
+.wrap{max-width:740px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px}
+h1{font-size:22px;font-weight:700;margin-bottom:6px}
+.sub{font-size:13px;color:var(--dim);line-height:1.55;margin-bottom:28px;max-width:580px}
+.divider{height:1px;background:var(--line);margin:24px 0}
+
+/* ---- setup ---- */
+.setup{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.setup-card{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--line);
+  padding:18px}
+.setup-card .sc-label{font-family:var(--mono);font-size:9.5px;letter-spacing:1.8px;
+  text-transform:uppercase;color:var(--dim2);margin-bottom:10px}
+.setup-card .sc-val{font-size:13px;font-weight:500;color:var(--dim)}
+.setup-card.done .sc-val{color:var(--ok)}
+.btn{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 14px;
+  border:1px solid var(--line2);background:transparent;color:var(--dim);
+  font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.13s;margin-top:10px}
+.btn svg{width:14px;height:14px}
+.btn:hover{border-color:var(--accent);color:var(--txt);background:rgba(255,47,109,.08)}
+.btn.primary{border-color:var(--accent);background:rgba(255,47,109,.14);color:var(--txt)}
+.btn.primary:hover{background:rgba(255,47,109,.26)}
+
+/* ---- zone de dépôt ---- */
+.drop-zone{border:2px dashed rgba(255,255,255,.1);
+  min-height:220px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:14px;text-align:center;padding:40px 20px;
+  transition:.2s;cursor:pointer;position:relative}
+.drop-zone.active{border-color:var(--accent);background:rgba(255,47,109,.06)}
+.drop-zone.disabled{opacity:.4;pointer-events:none}
+.drop-zone svg{width:40px;height:40px;color:var(--dim2)}
+.drop-zone .dz-title{font-size:16px;font-weight:600}
+.drop-zone .dz-sub{font-size:12.5px;color:var(--dim)}
+.drop-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer}
+
+/* ---- résultats ---- */
+.result-list{margin-top:22px;display:flex;flex-direction:column;gap:10px}
+.result-item{background:var(--surface);border:1px solid var(--line);
+  padding:16px;display:flex;align-items:flex-start;gap:14px}
+.ri-icon{width:36px;height:36px;flex:0 0 auto;;display:flex;
+  align-items:center;justify-content:center;background:var(--surface2)}
+.ri-icon svg{width:17px;height:17px}
+.ri-icon.ok{background:rgba(63,185,138,.14);color:var(--ok)}
+.ri-icon.warn{background:rgba(255,180,84,.14);color:var(--warn)}
+.ri-icon.err{background:rgba(255,47,109,.14);color:var(--accent)}
+.ri-body{flex:1;min-width:0}
+.ri-name{font-size:13.5px;font-weight:600;margin-bottom:4px;word-break:break-all}
+.ri-path{font-family:var(--mono);font-size:11px;color:var(--ok);margin-bottom:4px;word-break:break-all}
+.ri-msg{font-size:12px;color:var(--dim);line-height:1.5}
+.ri-act{flex:0 0 auto}
+.confirm-btn{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;
+  border:1px solid var(--ok);background:rgba(63,185,138,.14);
+  color:var(--txt);font-family:var(--sans);font-size:12px;font-weight:600;cursor:pointer;transition:.13s}
+.confirm-btn:hover{background:rgba(63,185,138,.28)}
+.confirm-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* ---- convention reference ---- */
+
+/* ---- toast ---- */
+/* scrollbar discrète */
+  ::-webkit-scrollbar{width:5px}
+  ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:#1a1c24;border-radius:3px}
+  ::-webkit-scrollbar-thumb:hover{background:#252830}
+
+  .toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:80;
+  background:rgba(20,22,28,.96);border:1px solid var(--line2);color:var(--txt);
+  font-size:12.5px;padding:11px 18px;pointer-events:none;
+  opacity:0;transition:opacity .25s;font-family:var(--mono)}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap" style="padding:44px 24px 60px;overflow-y:auto;flex:1;height:100%">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
+    <a href="index.html" class="btn" style="margin-top:0;text-decoration:none">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Accueil
+    </a>
+    <span style="width:1px;height:22px;background:var(--line);flex:0 0 auto"></span>
+    <span style="font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dim)"><b style="color:var(--txt)">Jupiter</b> — Déposeur</span>
+  </div>
+  <div style="margin-bottom:28px">
+    <h1 style="font-size:22px;font-weight:700;margin-bottom:6px">Déposeur de fichiers</h1>
+    <p class="sub" style="margin-bottom:0">Glisse un fichier dont le nom suit la convention définie dans ton schema. Il sera analysé et déposé automatiquement dans le bon dossier de ton dépôt local.</p>
+  </div>
+
+  <div class="setup">
+    <div class="setup-card" id="schemaCard">
+      <div class="sc-label">Schema d'architecture</div>
+      <div class="sc-val" id="schemaVal">Non chargé</div>
+      <button class="btn" id="loadSchemaBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Charger schema.json
+      </button>
+    </div>
+    <div class="setup-card" id="rootCard">
+      <div class="sc-label">Dossier racine du dépôt</div>
+      <div class="sc-val" id="rootVal">Non sélectionné</div>
+      <button class="btn" id="pickRootBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Choisir le dossier
+      </button>
+    </div>
+  </div>
+
+  <!-- sélecteur de section -->
+  <div class="setup-card" id="sectionCard" style="display:none;margin-bottom:24px;border-color:var(--line2)">
+    <div class="sc-label">Section cible</div>
+    <div style="margin-top:10px;position:relative">
+      <select id="sectionSelect" style="width:100%;appearance:none;-webkit-appearance:none;
+        background:var(--surface2);border:1px solid var(--line2);color:var(--txt);
+        font-family:var(--mono);font-size:12px;letter-spacing:.5px;
+        padding:10px 36px 10px 12px;cursor:pointer;outline:none;transition:.13s">
+        <option value="">— Choisir une section —</option>
+      </select>
+      <svg style="position:absolute;right:12px;top:50%;transform:translateY(-50%);
+        pointer-events:none;color:var(--dim2)" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </div>
+
+  <div class="drop-zone disabled" id="dropZone">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <div class="dz-title">Dépose tes fichiers ici</div>
+    <div class="dz-sub">ou clique pour sélectionner</div>
+    <input type="file" id="fileInput" multiple>
+  </div>
+
+  <div class="result-list" id="resultList"></div>
+
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+let schema=null, rootHandle=null;
+let toastT;
+function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('on');
+  clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('on'),2400);}
+
+/* ---- persistance IndexedDB (handle dossier) ---- */
+const IDB='jupiter-deposeur';
+function pidb(){return new Promise((res,rej)=>{const r=indexedDB.open(IDB,1);
+  r.onupgradeneeded=()=>{r.result.createObjectStore('h');r.result.createObjectStore('s');};
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function pSet(store,k,v){const db=await pidb();return new Promise((res,rej)=>{
+  const t=db.transaction(store,'readwrite');t.objectStore(store).put(v,k);
+  t.oncomplete=()=>res();t.onerror=()=>rej(t.error);});}
+async function pGet(store,k){const db=await pidb();return new Promise((res,rej)=>{
+  const t=db.transaction(store,'readonly');const rq=t.objectStore(store).get(k);
+  rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error);});}
+
+function applySchema(s){
+  schema=s;
+  $('#schemaVal').textContent=s.sections.length+' section(s)';
+  $('#schemaCard').classList.add('done');
+  /* peupler le sélecteur de section */
+  const sel=$('#sectionSelect');
+  sel.innerHTML='<option value="">— Choisir une section —</option>';
+  (s.sections||[]).forEach(sec=>{
+    const o=document.createElement('option');
+    o.value=sec.id; o.textContent=sec.label||sec.id;
+    sel.appendChild(o);
+  });
+  $('#sectionCard').style.display='block';
+  checkReady();
+}
+function applyRoot(h){
+  rootHandle=h;
+  $('#rootVal').textContent=h.name;
+  $('#rootCard').classList.add('done');
+  checkReady();
+}
+
+/* ---- chargement schema (fichier) ---- */
+$('#loadSchemaBtn').onclick=()=>{
+  const inp=document.createElement('input'); inp.type='file'; inp.accept='.json';
+  inp.onchange=async()=>{
+    try{
+      const txt=await inp.files[0].text();
+      const s=JSON.parse(txt);
+      if(!s.sections) throw new Error('Format invalide — pas de clé "sections"');
+      applySchema(s);
+      await pSet('s','schema',JSON.stringify(s));
+      toast('Schema chargé et mémorisé.');
+    }catch(e){ toast('Erreur : '+e.message); }
+  };
+  inp.click();
+};
+
+/* ---- sélection dossier racine ---- */
+$('#pickRootBtn').onclick=async()=>{
+  if(!window.showDirectoryPicker){ toast('Chrome ou Edge requis.'); return; }
+  try{
+    const h=await window.showDirectoryPicker({mode:'readwrite'});
+    applyRoot(h);
+    await pSet('h','root',h);
+    toast('Dossier sélectionné et mémorisé : '+h.name);
+  }catch(e){}
+};
+
+function checkReady(){
+  const sec=$('#sectionSelect')?.value;
+  if(schema&&rootHandle&&sec) $('#dropZone').classList.remove('disabled');
+  else $('#dropZone').classList.add('disabled');
+}
+/* réactiver la drop zone quand la section change */
+document.addEventListener('change', e=>{
+  if(e.target.id==='sectionSelect') checkReady();
+});
+
+/* ---- restauration au démarrage ---- */
+async function restore(){
+  try{
+    const h=await pGet('h','root');
+    if(h){
+      let perm='prompt';
+      try{ perm=await h.queryPermission({mode:'readwrite'}); }catch(e){}
+      if(perm!=='granted'){
+        try{ perm=await h.requestPermission({mode:'readwrite'}); }catch(e){}
+      }
+      if(perm==='granted'){
+        applyRoot(h);
+        /* toujours relire schema.json depuis le disque — jamais depuis le cache */
+        try{
+          const fh=await h.getFileHandle('schema.json');
+          const f=await fh.getFile();
+          const s=JSON.parse(await f.text());
+          if(s&&s.sections){
+            await pSet('s','schema',JSON.stringify(s)); /* mettre à jour le cache */
+            applySchema(s);
+          }
+        }catch(e){
+          /* schema.json absent : fallback sur le cache */
+          try{
+            const sJson=await pGet('s','schema');
+            if(sJson){ const s=JSON.parse(sJson); if(s.sections) applySchema(s); }
+          }catch(e2){}
+        }
+      }
+    } else {
+      /* pas de dossier mémorisé : essayer le cache schema seul */
+      try{
+        const sJson=await pGet('s','schema');
+        if(sJson){ const s=JSON.parse(sJson); if(s.sections) applySchema(s); }
+      }catch(e){}
+    }
+  }catch(e){}
+}
+restore();
+
+
+/* ---- drop zone ---- */
+const dz=$('#dropZone');
+dz.addEventListener('dragover',e=>{ e.preventDefault(); dz.classList.add('active'); });
+dz.addEventListener('dragleave',()=>dz.classList.remove('active'));
+dz.addEventListener('drop',e=>{ e.preventDefault(); dz.classList.remove('active');
+  processFiles([...e.dataTransfer.files]); });
+$('#fileInput').onchange=e=>processFiles([...e.target.files]);
+
+/* ================================================================
+   PARSING DU NOM DE FICHIER SELON LE SCHEMA
+   ================================================================ */
+
+/* Détecte si le fichier est un questions.json et retourne le chapitre cible */
+function parseQuestionsFile(fname){
+  if(!schema) return null;
+  /* format attendu : NomChapitre_Questions.json (insensible à la casse) */
+  const lower=fname.toLowerCase();
+  if(!lower.endsWith('_questions.json') && lower!=='questions.json') return null;
+  const chapPart=fname.replace(/_[Qq]uestions\.json$/i,'');
+  if(!chapPart||chapPart===fname) return null;
+  const selectedSecId=$('#sectionSelect')?.value;
+  const sections=selectedSecId
+    ? schema.sections.filter(s=>s.id===selectedSecId)
+    : schema.sections;
+  const normC=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
+  const chapNorm=normC(chapPart);
+  for(const sec of sections){
+    for(const subj of (sec.subjects||[])){
+      if(subj.structure==='direct') continue;
+      const match=(subj.chapters||[]).find(c=>{
+        const cn=normC(c.nom||c.id);
+        return cn===chapNorm||cn.startsWith(chapNorm)||chapNorm.startsWith(cn);
+      });
+      if(match) return {sec,subj,chapter:match.nom||match.id,chapId:match.id,isQuestions:true};
+    }
+  }
+  return null;
+}
+
+function parseFileName(fname){
+  if(!schema) return null;
+  const base=fname.replace(/\.[^.]+$/,'');
+  const ext=fname.match(/\.([^.]+)$/)?.[1]||'';
+  const selectedSecId=$('#sectionSelect')?.value;
+  const sections=selectedSecId
+    ? schema.sections.filter(s=>s.id===selectedSecId)
+    : schema.sections;
+  for(const sec of sections){
+    for(const subj of (sec.subjects||[])){
+      const sep=subj.naming?.separator||'_';
+      const order=subj.naming?.order||'cat_chap';
+      const parts=base.split(sep);
+      if(parts.length<2) continue;
+      for(const cat of (subj.categories||[])){
+        const abbrev=(cat.abbrev||cat.id).toLowerCase();
+        const idx=parts.findIndex(p=>p.replace(/\d+$/,'').toLowerCase()===abbrev);
+        if(idx<0) continue;
+        /* chapitre = segment juste avant l'abbrev si possible, sinon après */
+        const chapter = idx>0 ? parts[idx-1] : (parts.length>1 ? parts[idx+1] : '');
+        if(!chapter) continue;
+        /* vérifier que le chapitre existe dans la liste du schema (tolérance accents/casse) */
+        const normC=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
+        const chapNormP=normC(chapter);
+        const knownChaps=subj.chapters||[];
+        if(knownChaps.length){
+          const match=knownChaps.find(c=>{
+            const cn=normC(c.nom||c.id);
+            return cn===chapNormP||cn.startsWith(chapNormP)||chapNormP.startsWith(cn);
+          });
+          if(!match) continue; /* ce chapitre n'appartient pas à cette matière */
+        }
+        return {sec,subj,cat,chapter,ext,path:`${sec.id}/${subj.id}`};
+      }
+    }
+  }
+  return null;
+}
+
+/* ================================================================
+   TRAITEMENT DES FICHIERS DÉPOSÉS
+   ================================================================ */
+async function processFiles(files){
+  const list=$('#resultList');
+  for(const file of files){
+    /* tester d'abord si c'est un questions.json */
+    const qParsed=parseQuestionsFile(file.name);
+    const parsed=qParsed||parseFileName(file.name);
+    const div=document.createElement('div'); div.className='result-item';
+
+    if(!parsed){
+      div.innerHTML=`
+        <div class="ri-icon err"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div>
+        <div class="ri-body">
+          <div class="ri-name">${esc(file.name)}</div>
+          <div class="ri-msg" style="color:var(--accent)">Nom non reconnu. Pour un fichier de questions : <code style="font-family:var(--mono);font-size:10px">Chapitre_Questions.json</code></div>
+        </div>`;
+      list.prepend(div); continue;
+    }
+
+    /* construire le chemin cible */
+    let targetPath, msgExtra='';
+    if(qParsed){
+      /* questions.json → racine du dossier chapitre */
+      targetPath=`${qParsed.sec.id}/${qParsed.subj.id}/${qParsed.chapter}/`;
+      msgExtra=`<span style="font-family:var(--mono);font-size:10px;color:var(--blue)">questions.json</span> · ${esc(qParsed.sec.id)} · ${esc(qParsed.subj.label||qParsed.subj.id)} · branche : <b>${esc(qParsed.chapter)}</b>`;
+    } else {
+      const {sec,subj,cat,chapter} = parsed;
+      targetPath=subj.structure==='direct'
+        ? `${sec.id}/${subj.id}/`
+        : `${sec.id}/${subj.id}/${chapter}/${cat.id}/`;
+      msgExtra=`${esc(sec.id)} · ${esc(subj.label||subj.id)} · ${esc(cat.label||cat.id)} · branche : <b>${esc(chapter)}</b>`;
+    }
+
+    div.innerHTML=`
+      <div class="ri-icon ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+      <div class="ri-body">
+        <div class="ri-name">${esc(file.name)}</div>
+        <div class="ri-path">→ ${esc(targetPath)}${esc(file.name)}</div>
+        <div class="ri-msg">${msgExtra}</div>
+      </div>
+      <div class="ri-act">
+        <button class="confirm-btn" id="conf-${file.name.replace(/[^a-z0-9]/gi,'_')}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>
+          Déposer
+        </button>
+      </div>`;
+    list.prepend(div);
+
+    const btnId='conf-'+file.name.replace(/[^a-z0-9]/gi,'_');
+    div.querySelector('#'+btnId).onclick=async()=>{
+      if(qParsed) await depositQFile(file, qParsed, div);
+      else { const {sec,subj,cat,chapter}=parsed; await depositFile(file,sec,subj,cat,chapter,div); }
+    };
+  }
+}
+
+async function depositFile(file, sec, subj, cat, chapter, div){
+  const btn=div.querySelector('.confirm-btn');
+  btn.disabled=true; btn.textContent='Dépôt…';
+  try{
+    let handle=rootHandle;
+    try{ handle=await handle.getDirectoryHandle(sec.id); }
+    catch(e){ throw new Error('Dossier section introuvable : '+sec.id); }
+    try{ handle=await handle.getDirectoryHandle(subj.id); }
+    catch(e){ throw new Error('Dossier branche introuvable : '+subj.id); }
+    if(subj.structure!=='direct'){
+      let chapHandle=null;
+      const chapNorm=normalizeChap(chapter);
+      for await(const [dn,dh] of handle.entries()){
+        if(dh.kind==='directory'&&(normalizeChap(dn)===chapNorm||normalizeChap(dn).includes(chapNorm)||chapNorm.includes(normalizeChap(dn)))){
+          chapHandle=dh; break;
+        }
+      }
+      if(!chapHandle) throw new Error('Dossier branche introuvable : "'+chapter+'". Lance d\'abord Créer/Actualiser dans l\'éditeur.');
+      handle=chapHandle;
+      try{ handle=await handle.getDirectoryHandle(cat.id); }
+      catch(e){ throw new Error('Dossier catégorie introuvable : '+cat.id+' dans "'+chapter+'"'); }
+    }
+    const finalName=await uniqueName(handle, file.name);
+    const fh=await handle.getFileHandle(finalName,{create:true});
+    const w=await fh.createWritable();
+    await w.write(file); await w.close();
+    div.querySelector('.ri-icon').className='ri-icon ok';
+    div.querySelector('.ri-act').innerHTML='<span style="font-family:var(--mono);font-size:11px;color:var(--ok)">✓ Déposé'+(finalName!==file.name?' (renommé)':'')+'</span>';
+    toast('Fichier déposé : '+finalName);
+  }catch(e){
+    btn.disabled=false; btn.textContent='Réessayer';
+    div.querySelector('.ri-msg').innerHTML='<span style="color:var(--accent)">✕ '+esc(e.message)+'</span>';
+    toast('Erreur : '+e.message);
+  }
+}
+
+async function uniqueName(dirH, name){
+  const dot=name.lastIndexOf('.');
+  const base=dot>=0?name.slice(0,dot):name;
+  const ext=dot>=0?name.slice(dot):'';
+  let candidate=name, n=1;
+  while(true){
+    try{ await dirH.getFileHandle(candidate); candidate=`${base} (${n++})${ext}`; }
+    catch(e){ return candidate; }
+  }
+}
+
+async function depositQFile(file, qParsed, div){
+  const btn=div.querySelector('.confirm-btn');
+  btn.disabled=true; btn.textContent='Dépôt…';
+  const {sec,subj,chapter} = qParsed;
+  try{
+    let handle=rootHandle;
+    try{ handle=await handle.getDirectoryHandle(sec.id); }
+    catch(e){ throw new Error('Dossier section introuvable : '+sec.id); }
+    try{ handle=await handle.getDirectoryHandle(subj.id); }
+    catch(e){ throw new Error('Dossier branche introuvable : '+subj.id); }
+    /* trouver le dossier chapitre */
+    let chapHandle=null;
+    const chapNorm=normalizeChap(chapter);
+    for await(const [dn,dh] of handle.entries()){
+      if(dh.kind==='directory'&&(normalizeChap(dn)===chapNorm||normalizeChap(dn).includes(chapNorm)||chapNorm.includes(normalizeChap(dn)))){
+        chapHandle=dh; break;
+      }
+    }
+    if(!chapHandle) throw new Error(`Dossier branche introuvable : ${chapter}. Lance Créer/Actualiser dans l'éditeur.`);
+    /* déposer à la racine du chapitre — toujours nommé questions.json */
+    const fh=await chapHandle.getFileHandle('questions.json',{create:true});
+    const w=await fh.createWritable(); await w.write(file); await w.close();
+    div.querySelector('.ri-icon').className='ri-icon ok';
+    div.querySelector('.ri-act').innerHTML='<span style="font-family:var(--mono);font-size:11px;color:var(--ok)">✓ Déposé comme questions.json</span>';
+    toast('Questions déposées dans '+qParsed.chapter);
+  }catch(e){
+    btn.disabled=false; btn.textContent='Réessayer';
+    div.querySelector('.ri-msg').innerHTML='<span style="color:var(--accent)">✕ '+esc(e.message)+'</span>';
+    toast('Erreur : '+e.message);
+  }
+}
+
+function normalizeChap(s){
+  return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
+}
+</script>
+</body>
+</html>

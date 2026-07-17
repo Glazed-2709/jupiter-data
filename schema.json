@@ -1,0 +1,2002 @@
+{
+  "name": "Test",
+  "children": [
+    {
+      "name": "Culture",
+      "children": [
+        {
+          "name": "Art",
+          "children": []
+        },
+        {
+          "name": "Bonheur",
+          "children": []
+        },
+        {
+          "name": "Conscience",
+          "children": []
+        },
+        {
+          "name": "Devoir",
+          "children": []
+        },
+        {
+          "name": "Etat",
+          "children": []
+        },
+        {
+          "name": "Inconscient",
+          "children": []
+        },
+        {
+          "name": "Justice",
+          "children": []
+        },
+        {
+          "name": "Langage",
+          "children": []
+        },
+        {
+          "name": "Liberte",
+          "children": []
+        },
+        {
+          "name": "Nature",
+          "children": []
+        },
+        {
+          "name": "Pouvoir",
+          "children": []
+        },
+        {
+          "name": "Raison",
+          "children": []
+        },
+        {
+          "name": "Religion",
+          "children": []
+        },
+        {
+          "name": "Science",
+          "children": []
+        },
+        {
+          "name": "Technique",
+          "children": []
+        },
+        {
+          "name": "Temps",
+          "children": []
+        },
+        {
+          "name": "Travail",
+          "children": []
+        },
+        {
+          "name": "Verite",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "MPSI",
+      "children": [
+        {
+          "name": "111",
+          "children": [
+            {
+              "name": "zigga123",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Français",
+          "children": []
+        },
+        {
+          "name": "Informatique",
+          "children": [
+            {
+              "name": "DM",
+              "children": []
+            },
+            {
+              "name": "DS",
+              "children": []
+            },
+            {
+              "name": "Ressources",
+              "children": []
+            },
+            {
+              "name": "TP",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Mathématiques",
+          "children": [
+            {
+              "name": "01 - Fonctions usuelles _ 1",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Quantificateurs, éléments de logique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Quelques types de raisonnements",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Sommes et produits",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "05 - Ensembles et applications",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "06 - Nombres complexes",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "07 - Inégalités",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "08 - Fonctions usuelles _ 2",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "09 - Calcul intégral",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "10 - Equations différentielles linéaires d'ordre 1",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "11 - Equations différentielles linéaires d'ordre 2",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "12 - Structures algébriques",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "13 - Arithmétique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "14 - L'ensemble des nombres réel",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "15 - Suites réelles",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "16 - Polynômes",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "17 - Matrices et systèmes linéaires",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "18 - Limites et continuité",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "19 - Dérivation",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "20 - Convexité",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "21 - Suites récurrentes",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "22 - Calculs asymptotiques",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "23 - Espaces vectoriels",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "24 - Applications linéaires",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "25 - Intégration",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "26 - Dimension finie",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "27 - Matrices d'applications linéaires",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "28 - Séries et familles sommables",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "29 - Espaces préhilbertiens réels",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "30 - Probabilités",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "31 - Groupes symétriques",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "32 - Déterminant",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "33 - Fonctions de deux variables",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Physique",
+          "children": [
+            {
+              "name": "01 - Optique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Régime continu et ordre 1",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Oscillateur",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Régime sinusoïdal forcé",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "05 - Filtrage linéaire",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "06 - Propagation d'un signal",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "07 - Cinématique du point",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "08 - Principes de la dynamique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "09 - Energie mécanique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "10 - Champ électrique et magnétique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "11 - Moment cinétique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "12 - Forces centrales",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "13 - Système thermodynamique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "14 - Premier principe",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "15 - Deuxième principe",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "16 - Machines thermiques",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "17 - Champ magnétique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "18 - Induction électromagnétique",
+              "children": [
+                {
+                  "name": "Colle",
+                  "children": []
+                },
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SI",
+          "children": [
+            {
+              "name": "01 - Cinématique",
+              "children": [
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Statique",
+              "children": [
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Engrenages",
+              "children": [
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Asservissement",
+              "children": [
+                {
+                  "name": "DS",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Projet X",
+      "children": [
+        {
+          "name": "Chimie",
+          "children": [
+            {
+              "name": "01 - Cinétique et Molécules",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Cristaux et Dissolution",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Acide-base et diagrames",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Oxydoréduction et diagrames",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "egzqergzerge",
+          "children": []
+        },
+        {
+          "name": "Mathématiques",
+          "children": [
+            {
+              "name": "01 - Ensembles et applications",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Calcul algébrique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Nombres complexes",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Calcul intégral",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "05 - Equations différentielles",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "06 - Structures algébriques",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "07 - Arithmétique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "08 - Réels",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "09 - Suites Classiques et récurrentes",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "10 - Polynômes",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "11 - Limite et Continuité",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "12 - Dérivation",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "13 - Convexité",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "14 - Analyse asymptotique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "15 - Espaces vectoriels",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "16 - Intégration",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "17 - Matrices d'applications linéaires",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "18 - Séries et familles sommables",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "19 - Espaces préhilbertiens",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "20 - Probabilités",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "21 - Déterminant et Symétrique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "22 - Fonctions de deux variables",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Physique",
+          "children": [
+            {
+              "name": "01 - Optique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Electricité",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Oscillateurs",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Filtrage linéaire",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "05 - Propagation d'un signal",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "06 - Cinématique et Dynamique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "07 - Energie mécanique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "08 - Mouvement dans un champ",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "09 - Moment cinétique et Force centrale",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "10 - Thermodynamique",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "11 - Machines thermiques",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "12 - Electromagnétisme",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "13 - Amplification linéaire",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SI",
+          "children": [
+            {
+              "name": "01 - Cinématique",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "02 - Statique",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "03 - Engrenages",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "04 - Asservissement",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "05 - Concours",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "Culture",
+      "label": "Culture",
+      "color": "hsl(342.1,88%,54%)",
+      "manifest": "Culture/manifest.json",
+      "subjects": [
+        {
+          "id": "Art",
+          "label": "Art"
+        },
+        {
+          "id": "Bonheur",
+          "label": "Bonheur"
+        },
+        {
+          "id": "Conscience",
+          "label": "Conscience"
+        },
+        {
+          "id": "Devoir",
+          "label": "Devoir"
+        },
+        {
+          "id": "Etat",
+          "label": "Etat"
+        },
+        {
+          "id": "Inconscient",
+          "label": "Inconscient"
+        },
+        {
+          "id": "Justice",
+          "label": "Justice"
+        },
+        {
+          "id": "Langage",
+          "label": "Langage"
+        },
+        {
+          "id": "Liberte",
+          "label": "Liberte"
+        },
+        {
+          "id": "Nature",
+          "label": "Nature"
+        },
+        {
+          "id": "Pouvoir",
+          "label": "Pouvoir"
+        },
+        {
+          "id": "Raison",
+          "label": "Raison"
+        },
+        {
+          "id": "Religion",
+          "label": "Religion"
+        },
+        {
+          "id": "Science",
+          "label": "Science"
+        },
+        {
+          "id": "Technique",
+          "label": "Technique"
+        },
+        {
+          "id": "Temps",
+          "label": "Temps"
+        },
+        {
+          "id": "Travail",
+          "label": "Travail"
+        },
+        {
+          "id": "Verite",
+          "label": "Verite"
+        }
+      ]
+    },
+    {
+      "id": "MPSI",
+      "label": "MPSI",
+      "color": "#eec02b",
+      "manifest": "MPSI/manifest.json",
+      "subjects": [
+        {
+          "id": "111",
+          "label": "111"
+        },
+        {
+          "id": "Français",
+          "label": "Français"
+        },
+        {
+          "id": "Informatique",
+          "label": "Informatique"
+        },
+        {
+          "id": "Mathématiques",
+          "label": "Mathématiques"
+        },
+        {
+          "id": "Physique",
+          "label": "Physique"
+        },
+        {
+          "id": "SI",
+          "label": "SI"
+        }
+      ]
+    },
+    {
+      "id": "Projet X",
+      "label": "Projet X",
+      "color": "hsl(257.1,88%,58%)",
+      "manifest": "Projet X/manifest.json",
+      "subjects": [
+        {
+          "id": "Chimie",
+          "label": "Chimie"
+        },
+        {
+          "id": "egzqergzerge",
+          "label": "egzqergzerge"
+        },
+        {
+          "id": "Mathématiques",
+          "label": "Mathématiques"
+        },
+        {
+          "id": "Physique",
+          "label": "Physique"
+        },
+        {
+          "id": "SI",
+          "label": "SI"
+        }
+      ]
+    }
+  ]
+}
