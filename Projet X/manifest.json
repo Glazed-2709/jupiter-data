@@ -22,8 +22,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 235.9821428571429,
-              "color": "hsl(236.0,88%,58%)"
+              "hue": 257.13090461538457,
+              "color": "hsl(257.1,88%,58%)"
             },
             {
               "name": "TD",
@@ -34,16 +34,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 282.9821428571429,
-              "color": "hsl(283.0,88%,54%)"
+              "hue": 304.13090461538457,
+              "color": "hsl(304.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 235.9821428571429,
-          "color": "hsl(236.0,88%,58%)"
+          "hue": 257.13090461538457,
+          "color": "hsl(257.1,88%,58%)"
         },
         {
           "name": "02 - Cristaux et Dissolution",
@@ -59,8 +59,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 282.9821428571429,
-              "color": "hsl(283.0,88%,54%)"
+              "hue": 304.13090461538457,
+              "color": "hsl(304.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -71,16 +71,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 329.9821428571429,
-              "color": "hsl(330.0,88%,54%)"
+              "hue": 351.13090461538457,
+              "color": "hsl(351.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 282.9821428571429,
-          "color": "hsl(283.0,88%,54%)"
+          "hue": 304.13090461538457,
+          "color": "hsl(304.1,88%,54%)"
         },
         {
           "name": "03 - Acide-base et diagrames",
@@ -96,8 +96,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 2.9821428571428896,
-              "color": "hsl(3.0,88%,54%)"
+              "hue": 24.130904615384566,
+              "color": "hsl(24.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -108,16 +108,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 49.98214285714289,
-              "color": "hsl(50.0,88%,46%)"
+              "hue": 71.13090461538457,
+              "color": "hsl(71.1,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 2.9821428571428896,
-          "color": "hsl(3.0,88%,54%)"
+          "hue": 24.130904615384566,
+          "color": "hsl(24.1,88%,54%)"
         },
         {
           "name": "04 - Oxydoréduction et diagrames",
@@ -133,8 +133,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 114.98214285714289,
-              "color": "hsl(115.0,88%,54%)"
+              "hue": 136.13090461538457,
+              "color": "hsl(136.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -145,24 +145,24 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 161.9821428571429,
-              "color": "hsl(162.0,88%,58%)"
+              "hue": 183.13090461538457,
+              "color": "hsl(183.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 114.98214285714289,
-          "color": "hsl(115.0,88%,54%)"
+          "hue": 136.13090461538457,
+          "color": "hsl(136.1,88%,54%)"
         }
       ],
       "files": [],
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 235.9821428571429,
-      "color": "hsl(236.0,88%,58%)"
+      "hue": 257.13090461538457,
+      "color": "hsl(257.1,88%,58%)"
     },
     {
       "name": "egzqergzerge",
@@ -173,8 +173,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 268.9821428571429,
-      "color": "hsl(269.0,88%,54%)"
+      "hue": 290.13090461538457,
+      "color": "hsl(290.1,88%,54%)"
     },
     {
       "name": "Mathématiques",
@@ -191,175 +191,32 @@
               "path": "Mathématiques/01 - Ensembles et applications/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Ensembles et applications_DM_Involutions et point fixe corrige.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/DM/Ensembles%20et%20applications_DM_Involutions%20et%20point%20fixe%20corrige.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Ensembles et applications_DM_Involutions et point fixe.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/DM/Ensembles%20et%20applications_DM_Involutions%20et%20point%20fixe.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 296.9821428571429,
-              "color": "hsl(297.0,88%,54%)"
+              "hue": 318.13090461538457,
+              "color": "hsl(318.1,88%,54%)"
             },
             {
               "name": "TD",
               "path": "Mathématiques/01 - Ensembles et applications/TD",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Ensembles et applications_TD_Approfondissement.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_Approfondissement.pdf",
-                  "corrige": false
-                },
-                {
-                  "name": "Ensembles et applications_TD_Approfondissements corrigé.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_Approfondissements%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Ensembles et applications_TD_Automatismes corrigé.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_Automatismes%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Ensembles et applications_TD_Automatismes.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_Automatismes.pdf",
-                  "corrige": false
-                },
-                {
-                  "name": "Ensembles et applications_TD_Série renforcée corrigé.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_S%C3%A9rie%20renforc%C3%A9e%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Ensembles et applications_TD_Série renforcée.pdf",
-                  "path": "Math%C3%A9matiques/01%20-%20Ensembles%20et%20applications/TD/Ensembles%20et%20applications_TD_S%C3%A9rie%20renforc%C3%A9e.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 343.9821428571429,
-              "color": "hsl(344.0,88%,54%)"
+              "hue": 5.130904615384566,
+              "color": "hsl(5.1,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Méthode",
-              "enonce": "Décrire la méthode de la double inclusion pour montrer l'égalité de deux ensembles.",
-              "reponse": "Hypothèses : Deux ensembles $E$ et $F$.\nPour montrer que $E = F$, la méthode de la double inclusion consiste à prouver successivement :\n1. L'inclusion directe : $E \\subset F$ (soit $\\forall x \\in E, x \\in F$)\n2. L'inclusion réciproque : $F \\subset E$ (soit $\\forall x \\in F, x \\in E$)"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le produit cartésien de deux ensembles $E$ et $F$, puis sa généralisation à $n$ ensembles.",
-              "reponse": "Hypothèses : Ensembles $E, F$ et $E_1, E_2, \\dots, E_n$ (avec $n \\ge 2$). Relations :\n- Produit cartésien de $E$ et $F$ :\n$$E \\times F = \\{(x, y) \\mid x \\in E, y \\in F\\}$$\n- Produit cartésien de $n$ ensembles :\n$$E_1 \\times E_2 \\times \\dots \\times E_n = \\{(x_1, x_2, \\dots, x_n) \\mid \\forall i \\in \\llbracket 1, n \\rrbracket, x_i \\in E_i\\}$$\nSi tous les ensembles $E_i$ sont égaux à $E$, cet ensemble produit est noté $E^n$."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le complémentaire, la réunion, l'intersection et la différence de deux parties $A$ et $B$ d'un ensemble $E$.",
-              "reponse": "Hypothèses : $A$ et $B$ sont deux parties d'un ensemble $E$. Définitions :\n- Complémentaire de $A$ (noté $\\overline{A}$, $E \\setminus A$ ou $A^c$) :\n$$\\overline{A} = \\{x \\in E \\mid x \\notin A\\}$$\n- Réunion $A \\cup B$ :\n$$A \\cup B = \\{x \\in E \\mid x \\in A \\text{ ou } x \\in B\\}$$\n- Intersection $A \\cap B$ :\n$$A \\cap B = \\{x \\in E \\mid x \\in A \\text{ et } x \\in B\\}$$\n- Différence $A \\setminus B$ :\n$$A \\setminus B = A \\cap \\overline{B} = \\{x \\in A \\mid x \\notin B\\}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer les deux lois de Morgan pour les opérations ensemblistes de deux parties $A$ et $B$.",
-              "reponse": "Hypothèses : $A$ et $B$ deux parties d'un ensemble $E$. Relations :\n$$\\overline{A \\cap B} = \\overline{A} \\cup \\overline{B}$$\n$$\\overline{A \\cup B} = \\overline{A} \\cap \\overline{B}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir un recouvrement disjoint et une partition d'un ensemble $E$.",
-              "reponse": "Hypothèses : Soit $E$ un ensemble, $n \\in \\mathbb{N}^*$ et une famille de parties $\\mathcal{A} = (A_1, \\dots, A_n) \\in (\\mathcal{P}(E))^n$.\n- **Recouvrement disjoint** : $\\mathcal{A}$ est un recouvrement disjoint si les parties sont deux à deux disjointes et que leur réunion forme $E$ :\n$$\\forall(i, j) \\in \\llbracket 1, n \\rrbracket, i \\neq j \\implies A_i \\cap A_j = \\emptyset \\quad \\text{et} \\quad \\bigcup_{i=1}^n A_i = E$$\n- **Partition** : $\\mathcal{A}$ est une partition de $E$ si c'est un recouvrement disjoint et qu'aucune de ses parties n'est vide ($\\forall i \\in \\llbracket 1, n \\rrbracket, A_i \\neq \\emptyset$)."
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les expressions des fonctions indicatrices du complémentaire $\\mathbf{1}_{\\overline{A}}$, de l'intersection $\\mathbf{1}_{A \\cap B}$ et de la réunion $\\mathbf{1}_{A \\cup B}$.",
-              "reponse": "Hypothèses : $A$ et $B$ deux parties d'un ensemble $E$. Les relations à connaître pour tout $x \\in E$ sont :\n- Complémentaire : $\\mathbf{1}_{\\overline{A}} = 1 - \\mathbf{1}_A$\n- Intersection : $\\mathbf{1}_{A \\cap B} = \\mathbf{1}_A \\cdot \\mathbf{1}_B = \\min(\\mathbf{1}_A, \\mathbf{1}_B)$\n- Réunion : $\\mathbf{1}_{A \\cup B} = \\mathbf{1}_A + \\mathbf{1}_B - \\mathbf{1}_A \\cdot \\mathbf{1}_B = \\max(\\mathbf{1}_A, \\mathbf{1}_B)$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la restriction d'une application, un prolongement et une application induite.",
-              "reponse": "Hypothèses : Soient $E, F$ deux ensembles, $A \\subset E$, $B \\subset F$ et $f : E \\to F$.\n- **Restriction** : La restriction de $f$ à $A$, notée $f_{|A}$, est l'application :\n$$f_{|A} : A \\longrightarrow F, \\quad x \\mapsto f(x)$$\n- **Prolongement** : On dit que $f$ est un prolongement de $g$ si $g$ est une restriction de $f$.\n- **Application induite** : Si $\\forall x \\in A, f(x) \\in B$, l'application induite par $f$ de $A$ dans $B$ est l'application $\\tilde{f} : A \\to B$ définie par $\\forall x \\in A, \\tilde{f}(x) = f(x)$."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Énoncer la définition formelle d'une application injective et la formulation logique pour la démontrer.",
-              "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Définition** : Tout élément de $F$ admet au plus un antécédent dans $E$ par $f$.\n- **Formulation logique** :\n$$\\forall(x, x') \\in E^2, \\quad f(x) = f(x') \\implies x = x'$$\nou par contraposée : $\\forall(x, x') \\in E^2, \\quad x \\neq x' \\implies f(x) \\neq f(x')$."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Énoncer la définition formelle d'une application surjective et sa formulation logique.",
-              "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Définition** : Tout élément de $F$ admet au moins un antécédent dans $E$ par $f$.\n- **Formulation logique** :\n$$\\forall y \\in F, \\quad \\exists x \\in E \\mid y = f(x)$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir une application bijective et sa bijection réciproque $f^{-1}$.",
-              "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Bijective** : $f$ est bijective si elle est à la fois injective et surjective (chaque élément de $F$ possède un unique antécédent dans $E$).\n- **Bijection réciproque** : L'application $f^{-1} : F \\to E$ qui associe à tout $y \\in F$ son unique antécédent $x \\in E$ par $f$. On a l'équivalence :\n$$\\forall x \\in E, \\forall y \\in F, \\quad y = f(x) \\iff x = f^{-1}(y)$$\nDe plus, $f \\circ f^{-1} = \\mathrm{id}_F$ et $f^{-1} \\circ f = \\mathrm{id}_E$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés de la composition $g \\circ f$ de deux applications injectives, surjectives et bipectives.",
-              "reponse": "Hypothèses : Deux applications composables $f : E \\to F$ et $g : F \\to G$.\n1. Si $f$ et $g$ sont injectives, alors $g \\circ f$ est injective.\n2. Si $f$ et $g$ sont surjectives, alors $g \\circ f$ est surjective.\n3. Si $f$ et $g$ sont bijectives, alors $g \\circ f$ est bijective, et sa bijection réciproque vérifie :\n$$(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir l'image directe d'une partie $A \\subset E$ et l'image réciproque d'une partie $B \\subset F$ par une application $f : E \\to F$.",
-              "reponse": "Hypothèses : $f : E \\to F$, $A \\subset E$ et $B \\subset F$.\n- **Image directe** de $A$ par $f$ :\n$$f(A) = \\{f(x) \\mid x \\in A\\} = \\{y \\in F \\mid \\exists x \\in A, y = f(x)\\}$$\n- **Image réciproque** de $B$ par $f$ :\n$$f^{-1}(B) = \\{x \\in E \\mid f(x) \\in B\\}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les relations de l'image directe et de l'image réciproque d'une application $f : E \\to F$ vis-à-vis de la réunion et de l'intersection de deux parties.",
-              "reponse": "Hypothèses : Soit $f : E \\to F$, $(A, B) \\in (\\mathcal{P}(E))^2$ et $(X, Y) \\in (\\mathcal{P}(F))^2$. Relations :\n- Réunion : $f(A \\cup B) = f(A) \\cup f(B)$ et $f^{-1}(X \\cup Y) = f^{-1}(X) \\cup f^{-1}(Y)$\n- Intersection : $f(A \\cap B) \\subset f(A) \\cap f(B)$ (l'inclusion peut être stricte) et $f^{-1}(X \\cap Y) = f^{-1}(X) \\cap f^{-1}(Y)$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer le théorème de dénombrement par bijection et le principe d'addition pour les ensembles finis.",
-              "reponse": "Théorèmes :\n- **Théorème de dénombrement** : Si $E$ est un ensemble fini non vide et s'il existe une bijection entre $E$ et $F$, alors $F$ est de cardinal fini et $\\mathrm{card}(F) = \\mathrm{card}(E)$.\n- **Principe d'addition** : Si $E$ et $F$ sont deux ensembles finis disjoints ($E \\cap F = \\emptyset$), alors $E \\cup F$ est fini et :\n$$\\mathrm{card}(E \\cup F) = \\mathrm{card}(E) + \\mathrm{card}(F)$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer l'équivalence entre l'injectivité, la surjectivité et la bijectivité pour une application entre deux ensembles finis de même cardinal.",
-              "reponse": "Hypothèses : Soient $E$ et $F$ deux ensembles finis de **même cardinal** $n$, et $f : E \\to F$.\nLes trois conditions suivantes sont équivalentes :\ni) $f$ est bijective ;\nii) $f$ est surjective ;\niii) $f$ est injective."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir une relation binaire $\\mathcal{R}$ sur un ensemble $E$ et ses quatre propriétés caractéristiques fondamentales (réflexivité, symétrie, antisymétrie, transitivité).",
-              "reponse": "Hypothèses : Une relation binaire $\\mathcal{R}$ sur un ensemble $E$ (sous-ensemble du produit cartésien $E \\times E$). Propriétés :\n- **Réflexive** : $\\forall x \\in E, \\quad x\\mathcal{R}x$\n- **Symétrique** : $\\forall(x, y) \\in E^2, \\quad x\\mathcal{R}y \\iff y\\mathcal{R}x$\n- **Antisymétrique** : $\\forall(x, y) \\in E^2, \\quad (x\\mathcal{R}y \\text{ et } y\\mathcal{R}x) \\implies x = y$\n- **Transitive** : $\\forall(x, y, z) \\in E^3, \\quad (x\\mathcal{R}y \\text{ et } y\\mathcal{R}z) \\implies x\\mathcal{R}z$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir une relation d'ordre (partiel ou total) et une relation d'équivalence.",
-              "reponse": "Définitions :\n- **Relation d'ordre** : Une relation binaire qui est **réflexive**, **antisymétrique** et **transitive**. L'ordre est dit **total** si $\\forall(x, y) \\in E^2$, on a $x\\mathcal{R}y$ ou $y\\mathcal{R}x$ ; sinon il est dit **partiel**.\n- **Relation d'équivalence** : Une relation binaire qui est **réflexive**, **symétrique** et **transitive**."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir les notions de majorant, minorant, plus grand élément (maximum) et plus petit élément (minimum) d'une partie $A$ d'un ensemble ordonné $(E, \\le)$.",
-              "reponse": "Hypothèses : $A$ une partie d'un ensemble ordonné $(E, \\le)$, $m \\in E$ et $M \\in E$.\n- **Majorant** : $M$ majore $A$ si $\\forall a \\in A, a \\le M$.\n- **Minorant** : $m$ minore $A$ si $\\forall a \\in A, a \\ge m$.\n- **Plus grand élément (maximum)** : $M$ est le maximum de $A$ si $M \\in A$ et $M$ majore $A$ (il est unique et noté $\\max(A)$).\n- **Plus petit élément (minimum)** : $m$ est le minimum de $A$ si $m \\in A$ et $m$ minore $A$ (il est unique et noté $\\min(A)$)."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la croissance et la stricte croissance d'une application $f$ entre deux ensembles ordonnés $(A, \\mathcal{R})$ et $(B, \\mathcal{S})$.",
-              "reponse": "Hypothèses : $f : A \\to B$ où $(A, \\mathcal{R})$ et $(B, \\mathcal{S})$ sont deux ensembles ordonnés.\n- **Croissante** : si $\\forall(a, a') \\in A^2, \\quad a\\mathcal{R}a' \\implies f(a)\\mathcal{S}f(a')$.\n- **Strictement croissante** : si elle est croissante et injective."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la classe d'équivalence $[x]$ d'un élément $x$ pour une relation d'équivalence $\\mathcal{R}$ sur un ensemble $E$.",
-              "reponse": "Hypothèses : Un ensemble $E$ muni d'une relation d'équivalence $\\mathcal{R}$.\nLa classe d'équivalence de $x \\in E$ est l'ensemble des éléments de $E$ en relation avec $x$ :\n$$[x] = \\{y \\in E \\mid x\\mathcal{R}y\\}$$"
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 296.9821428571429,
-          "color": "hsl(297.0,88%,54%)"
+          "hue": 318.13090461538457,
+          "color": "hsl(318.1,88%,54%)"
         },
         {
           "name": "02 - Calcul algébrique",
@@ -371,161 +228,32 @@
               "path": "Mathématiques/02 - Calcul algébrique/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Calcul algébrique_DM_De binôme à concentration corrigé.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/DM/Calcul%20alg%C3%A9brique_DM_De%20bin%C3%B4me%20%C3%A0%20concentration%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Calcul algébrique_DM_De binôme à concentration.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/DM/Calcul%20alg%C3%A9brique_DM_De%20bin%C3%B4me%20%C3%A0%20concentration.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 311.2321428571429,
-              "color": "hsl(311.2,88%,54%)"
+              "hue": 332.38090461538457,
+              "color": "hsl(332.4,88%,54%)"
             },
             {
               "name": "TD",
               "path": "Mathématiques/02 - Calcul algébrique/TD",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Calcul algébrique_TD_Approfondissements corrigé.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/TD/Calcul%20alg%C3%A9brique_TD_Approfondissements%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Calcul algébrique_TD_Approfondissements.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/TD/Calcul%20alg%C3%A9brique_TD_Approfondissements.pdf",
-                  "corrige": false
-                },
-                {
-                  "name": "Calcul algébrique_TD_Automatismes corrigé.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/TD/Calcul%20alg%C3%A9brique_TD_Automatismes%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Calcul algébrique_TD_Automatismes.pdf",
-                  "path": "Math%C3%A9matiques/02%20-%20Calcul%20alg%C3%A9brique/TD/Calcul%20alg%C3%A9brique_TD_Automatismes.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 358.2321428571429,
-              "color": "hsl(358.2,88%,54%)"
+              "hue": 19.380904615384566,
+              "color": "hsl(19.4,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir la somme et le produit des éléments d'une famille $(a_i)_{i \\in I}$ indexée par un ensemble fini $I$, ainsi que la convention pour l'ensemble vide.",
-              "reponse": "Hypothèses : $I$ un ensemble fini et $(a_i)_{i \\in I}$ une famille de nombres réels ou complexes. Relations :\n- La somme se note :\n$$\\sum_{i \\in I} a_i$$\n- Le produit se note :\n$$\\prod_{i \\in I} a_i$$\nConvention pour l'ensemble vide : si $I = \\emptyset$, alors $\\sum_{i \\in \\emptyset} a_i = 0$ et $\\prod_{i \\in \\emptyset} a_i = 1$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés fondamentales des sommes et produits concernant la décomposition, la linéarité et la distribution de la puissance.",
-              "reponse": "Hypothèses : $m, n, p \\in \\mathbb{Z}$ tels que $m \\le n < p$, $\\lambda, \\mu, \\alpha \\in \\mathbb{C}$, et $q \\in \\mathbb{N}$. Relations :\n- Relation de Chasles pour les sommes :\n$$\\sum_{k=m}^n a_k + \\sum_{k=n+1}^p a_k = \\sum_{k=m}^p a_k$$\n- Décomposition pour les produits :\n$$\\left(\\prod_{k=m}^n a_k\\right) \\times \\left(\\prod_{k=n+1}^p a_k\\right) = \\prod_{k=m}^p a_k$$\n- Linéarité de la somme :\n$$\\sum_{k=m}^n (\\lambda a_k + \\mu b_k) = \\lambda \\sum_{k=m}^n a_k + \\mu \\sum_{k=m}^n b_k$$\n- Sortie d'une constante dans un produit :\n$$\\prod_{k=m}^n (\\alpha a_k) = \\alpha^{n-m+1} \\prod_{k=m}^n a_k$$\n- Produit de deux produits :\n$$\\prod_{k=m}^n a_k b_k = \\left(\\prod_{k=m}^n a_k\\right) \\left(\\prod_{k=m}^n b_k\\right)$$\n- Puissance d'un produit :\n$$\\prod_{k=m}^n a_k^q = \\left(\\prod_{k=m}^n a_k\\right)^q$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner la valeur de la somme de la constante 1 indexée de $m$ à $n$.",
-              "reponse": "Hypothèses : $m$ et $n$ deux entiers tels que $m \\le n$. Relation :\n$$\\sum_{k=m}^n 1 = n - m + 1$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la factorielle d'un entier naturel $n$ et préciser sa convention pour $n=0$.",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}$. Relations :\n- Pour $n \\in \\mathbb{N}^*$ :\n$$n! = \\prod_{k=1}^n k = 1 \\times 2 \\times \\dots \\times n$$\n- Convention pour $n = 0$ :\n$$0! = 1$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la formule d'identité remarquable générale (parfois appelée formule de Bernoulli) pour $a^{n+1} - b^{n+1}$.",
-              "reponse": "Hypothèses : Pour tout $a, b \\in \\mathbb{C}$ et $n \\in \\mathbb{N}$. Relation :\n$$a^{n+1} - b^{n+1} = (a - b) \\sum_{k=0}^n a^{n-k} b^k$$"
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Expliquer le principe du retournement d'une somme algébrique de 0 à $n$.",
-              "reponse": "Hypothèses : Une somme de $0$ à $n$.\nLe retournement consiste à changer l'indice de sommation pour numéroter les termes de la droite vers la gauche (du dernier au premier terme) en posant le changement d'indice $k = n - i$. Relation :\n$$\\sum_{i=0}^n a_i = \\sum_{k=0}^n a_{n-k}$$"
-            },
-            {
-              "type": "Calcul",
-              "enonce": "Retrouver la formule générale de simplification d'une somme télescopique $\\sum_{k=m}^n (b_{k+1} - b_k)$.",
-              "reponse": "Hypothèses : Famille $(b_k)$, entiers $m \\le n$. Relation à connaître :\n$$\\sum_{k=m}^n (b_{k+1} - b_k) = b_{n+1} - b_m$$",
-              "calcul": "Par linéarité de la somme :\n$$\\sum_{k=m}^n (b_{k+1} - b_k) = \\sum_{k=m}^n b_{k+1} - \\sum_{k=m}^n b_k$$\nEn effectuant le changement d'indice $j = k+1$ dans la première somme :\n$$\\sum_{j=m+1}^{n+1} b_j - \\sum_{k=m}^n b_k = \\left(\\sum_{j=m+1}^n b_j + b_{n+1}\\right) - \\left(b_m + \\sum_{k=m+1}^n b_k\\right) = b_{n+1} - b_m$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les expressions des sommes usuelles des premiers entiers $\\sum_{k=1}^n k$, des carrés $\\sum_{k=1}^n k^2$ et des cubes $\\sum_{k=1}^n k^3$.",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}^*$. Relations à retenir par cœur :\n- Somme des entiers :\n$$\\sum_{k=1}^n k = \\dfrac{n(n+1)}{2}$$\n- Somme des carrés :\n$$\\sum_{k=1}^n k^2 = \\dfrac{n(n+1)(2n+1)}{6}$$\n- Somme des cubes :\n$$\\sum_{k=1}^n k^3 = \\dfrac{n^2(n+1)^2}{4} = \\left(\\sum_{k=1}^n k\\right)^2$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner la formule de la somme des termes d'une suite arithmétique de raison $r$ et de premier terme $u_0=a$.",
-              "reponse": "Hypothèses : Suite arithmétique de raison $r \\in \\mathbb{C}$ et de premier terme $u_0 = a$. Relation pour la somme de $m$ à $n$ ($m \\le n$) :\n$$\\sum_{k=m}^n u_k = (n - m + 1) \\dfrac{u_m + u_n}{2} = (n - m + 1)a + r \\dfrac{(n - m + 1)(n + m)}{2}$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner la formule de la somme des termes d'une suite géométrique de raison $r$ et de premier terme $u_0=a$.",
-              "reponse": "Hypothèses : Suite géométrique de raison $r \\in \\mathbb{C}$ et de premier terme $u_0 = a$. Relation pour la somme de $m$ à $n$ ($m \\le n$) :\n- Si $r \\neq 1$ :\n$$\\sum_{k=m}^n u_k = a r^m \\dfrac{1 - r^{n-m+1}}{1 - r}$$\n- Si $r = 1$ :\n$$\\sum_{k=m}^n u_k = (n - m + 1)a$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les règles d'interversion de l'ordre de sommation pour une somme double rectangulaire et pour une somme double triangulaire.",
-              "reponse": "Hypothèses : Famille de complexes $a_{i,j}$. Relations :\n- **Somme rectangulaire** sur $\\llbracket 1, n \\rrbracket \\times \\llbracket 1, p \\rrbracket$ :\n$$\\sum_{i=1}^n \\left( \\sum_{j=1}^p a_{i,j} \\right) = \\sum_{j=1}^p \\left( \\sum_{i=1}^n a_{i,j} \\right)$$\n- **Somme triangulaire** sur $1 \\le i \\le j \\le n$ :\n$$\\sum_{1 \\le i \\le j \\le n} a_{i,j} = \\sum_{i=1}^n \\left( \\sum_{j=i}^n a_{i,j} \\right) = \\sum_{j=1}^n \\left( \\sum_{i=1}^j a_{i,j} \\right)$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la formule du produit de deux sommes indépendantes.",
-              "reponse": "Hypothèses : Deux familles de nombres complexes $(a_i)_{i \\in I}$ et $(b_j)_{j \\in J}$ indexées par deux ensembles finis indépendants $I$ et $J$. Relation :\n$$\\left( \\sum_{i \\in I} a_i \\right) \\left( \\sum_{j \\in J} b_j \\right) = \\sum_{(i,j) \\in I \\times J} a_i b_j$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir algébriquement le coefficient binomial $\\binom{n}{k}$ (« $k$ parmi $n$ ») et préciser sa valeur hors des bornes.",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\llbracket 0, n \\rrbracket$. Relation :\n$$\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$$\nSi $k < 0$ ou si $k > n$, on pose conventionnellement $\\binom{n}{k} = 0$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la propriété de symétrie des coefficients binomiaux.",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$\\binom{n}{k} = \\binom{n}{n-k}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la formule du pion (ou formule du chef).",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$k \\binom{n}{k} = n \\binom{n-1}{k-1}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la formule de Pascal pour les coefficients binomiaux.",
-              "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$\\binom{n}{k} + \\binom{n}{k+1} = \\binom{n+1}{k+1}$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la formule itérée de Pascal pour la sommation de coefficients binomiaux.",
-              "reponse": "Hypothèses : $n, p \\in \\mathbb{N}$ deux entiers naturels tels que $p \\le n$. Relation :\n$$\\sum_{k=p}^n \\binom{k}{p} = \\binom{n+1}{p+1}$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la formule du binôme de Newton et son corollaire pour la somme des coefficients d'une ligne.",
-              "reponse": "Hypothèses : Deux nombres complexes $a, b \\in \\mathbb{C}$ et un entier naturel $n \\in \\mathbb{N}$. Relations :\n- Binôme de Newton :\n$$(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^k b^{n-k} = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k$$\n- Corollaire (Somme de la ligne) :\n$$\\forall n \\in \\mathbb{N}, \\quad \\sum_{k=0}^n \\binom{n}{k} = 2^n$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la formule de Vandermonde sous ses deux formes d'écriture.",
-              "reponse": "Hypothèses : $a, b \\in \\mathbb{N}$ et $n \\in \\llbracket 0, a+b \\rrbracket$. Relations :\n- Formule de Vandermonde :\n$$\\sum_{k=0}^n \\binom{a}{k} \\binom{b}{n-k} = \\binom{a+b}{n}$$\n- Écriture alternative profitant de la nullité des coefficients binomiaux :\n$$\\sum_{k=0}^{a+b} \\binom{a}{k} \\binom{b}{n-k} = \\binom{a+b}{n}$$"
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 311.2321428571429,
-          "color": "hsl(311.2,88%,54%)"
+          "hue": 332.38090461538457,
+          "color": "hsl(332.4,88%,54%)"
         },
         {
           "name": "03 - Nombres complexes",
@@ -537,23 +265,12 @@
               "path": "Mathématiques/03 - Nombres complexes/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Calcul algébrique_DM_Polynômes de Tchebychev corrigé.pdf",
-                  "path": "Math%C3%A9matiques/03%20-%20Nombres%20complexes/DM/Calcul%20alg%C3%A9brique_DM_Polyn%C3%B4mes%20de%20Tchebychev%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Calcul algébrique_DM_Polynômes de Tchebychev.pdf",
-                  "path": "Math%C3%A9matiques/03%20-%20Nombres%20complexes/DM/Calcul%20alg%C3%A9brique_DM_Polyn%C3%B4mes%20de%20Tchebychev.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 329.9821428571429,
-              "color": "hsl(330.0,88%,54%)"
+              "hue": 351.13090461538457,
+              "color": "hsl(351.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -564,122 +281,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 16.98214285714289,
-              "color": "hsl(17.0,88%,54%)"
+              "hue": 38.130904615384566,
+              "color": "hsl(38.1,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir l'ensemble $\\mathbb{C}$ des nombres complexes, sa forme algébrique, sa partie réelle et sa partie imaginaire.",
-              "reponse": "L'ensemble $\\mathbb{C}$ est une extension de $\\mathbb{R}$ contenant un élément particulier noté $i$ tel que $i^2 = -1$.\nTout élément $z \\in \\mathbb{C}$ s'écrit de manière unique sous sa forme algébrique :\n$$z = x + iy$$\noù $(x, y) \\in \\mathbb{R}^2$.\n- $x$ est la **partie réelle** de $z$, notée $\\mathrm{Re}(z)$.\n- $y$ est la **partie imaginaire** de $z$, notée $\\mathrm{Im}(z)$."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir l'ensemble $\\mathbb{U}$ des nombres complexes de module 1.",
-              "reponse": "L'ensemble $\\mathbb{U}$ est le sous-ensemble de $\\mathbb{C}$ défini par :\n$$\\mathbb{U} = \\{z \\in \\mathbb{C} \\mid |z| = 1\\} = \\{e^{i\\theta} \\mid \\theta \\in \\mathbb{R}\\}$$\nGéométriquement, il correspond au cercle trigonométrique (cercle de centre l'origine et de rayon 1 dans le plan complexe)."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le conjugué $\\bar{z}$ d'un nombre complexe $z = x + iy$, et donner ses interprétations algébriques pour $\\mathrm{Re}(z)$ et $\\mathrm{Im}(z)$.",
-              "reponse": "Hypothèses : Soit $z = x + iy$ avec $(x, y) \\in \\mathbb{R}^2$.\nLe conjugué de $z$, noté $\\bar{z}$, est le nombre complexe :\n$$\\bar{z} = x - iy$$\nOn a les relations fondamentales :\n$$\\mathrm{Re}(z) = \\dfrac{z + \\bar{z}}{2} \\quad \\text{et} \\quad \\mathrm{Im}(z) = \\dfrac{z - \\bar{z}}{2i}$$\nDe plus, $z$ est réel si et seulement si $z = \\bar{z}$, et $z$ est imaginaire pur si et seulement si $z = -\\bar{z}$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés algébriques du conjugué vis-à-vis de la somme, du produit, de l'inverse et de la puissance.",
-              "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$ et $n \\in \\mathbb{Z}$. Relations :\n- Somme : $\\overline{z + z'} = \\bar{z} + \\overline{z'}$\n- Produit : $\\overline{z \\times z'} = \\bar{z} \\times \\overline{z'}$\n- Inverse : $\\overline{\\left(\\dfrac{1}{z}\\right)} = \\dfrac{1}{\\bar{z}}$ (pour $z \\neq 0$)\n- Puissance : $\\overline{z^n} = (\\bar{z})^n$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le module $|z|$ d'un nombre complexe $z = x + iy$ et donner sa relation avec $z\\bar{z}$.",
-              "reponse": "Hypothèses : Soit $z = x + iy$ avec $(x, y) \\in \\mathbb{R}^2$.\nLe module de $z$ est le nombre réel positif ou nul défini par :\n$$|z| = \\sqrt{x^2 + y^2}$$\nOn a la relation fondamentale : $z\\bar{z} = |z|^2$, ce qui permet d'écrire l'inverse de $z$ non nul sous la forme : $\\dfrac{1}{z} = \\dfrac{\\bar{z}}{|z|^2}$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés du module vis-à-vis du produit, de l'inverse, de la puissance et du conjugué.",
-              "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$ et $n \\in \\mathbb{Z}$. Relations :\n- Positivité et séparation : $|z| \\ge 0$, et $|z| = 0 \\iff z = 0$\n- Conjugué : $|\\bar{z}| = |z| = |-z|$\n- Produit : $|z \\times z'| = |z| \\times |z'|$\n- Inverse : $\\left|\\dfrac{1}{z}\\right| = \\dfrac{1}{|z|}$ (pour $z \\neq 0$)\n- Puissance : $|z^n| = |z|^n$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer l'inégalité triangulaire classique ainsi que son cas d'égalité, puis l'inégalité triangulaire renversée.",
-              "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$.\n- **Inégalité triangulaire** :\n$$|z + z'| \\le |z| + |z'|$$\n*Cas d'égalité* : $|z + z'| = |z| + |z'|$ si et seulement si $z$ et $z'$ sont positivement colinéaires (c'est-à-dire $\\exists \\lambda \\in \\mathbb{R}^+, z' = \\lambda z$ ou $z = 0$).\n- **Inégalité triangulaire renversée** :\n$$| |z| - |z'| | \\le |z - z'|$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir l'exponentielle complexe $e^{i\\theta}$ pour un réel $\\theta$, et énoncer la formule d'Euler associée.",
-              "reponse": "Pour tout $\\theta \\in \\mathbb{R}$, on définit l'élément $e^{i\\theta} \\in \\mathbb{U}$ par :\n$$e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$$\nLes formules d'Euler permettent d'exprimer les fonctions trigonométriques à l'aide de cette exponentielle :\n$$\\cos(\\theta) = \\dfrac{e^{i\\theta} + e^{-i\\theta}}{2} \\quad \\text{et} \\quad \\sin(\\theta) = \\dfrac{e^{i\\theta} - e^{-i\\theta}}{2i}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés algébriques fondamentales de l'exponentielle imaginaire $e^{i\\theta}$.",
-              "reponse": "Hypothèses : Soient $\\theta, \\theta' \\in \\mathbb{R}$ et $n \\in \\mathbb{Z}$. Relations :\n- Produit : $e^{i\\theta} \\times e^{i\\theta'} = e^{i(\\theta + \\theta')}$\n- Inverse et conjugué : $\\dfrac{1}{e^{i\\theta}} = \\overline{e^{i\\theta}} = e^{-i\\theta}$\n- Quotient : \\dfrac{e^{i\\theta}}{e^{i\\theta'}} = e^{i(\\theta - \\theta')}\n- Formule de Moivre : $\\left(e^{i\\theta}\\right)^n = e^{in\\theta}$, soit $(\\cos(\\theta) + i\\sin(\\theta))^n = \\cos(n\\theta) + i\\sin(n\\theta)$"
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Décrire la méthode de factorisation par l'angle moitié pour simplifier $e^{i\\alpha} + e^{i\\beta}$ et $e^{i\\alpha} - e^{i\\beta}$.",
-              "reponse": "Hypothèses : Soient $\\alpha, \\beta \\in \\mathbb{R}$.\nLa méthode consiste à mettre en facteur l'exponentielle de la demi-somme des angles, $e^{i\\frac{\\alpha+\\beta}{2}}$, afin de faire apparaître des formules d'Euler :\n- Pour la somme :\n$$e^{i\\alpha} + e^{i\\beta} = e^{i\\frac{\\alpha+\\beta}{2}} \\left( e^{i\\frac{\\alpha-\\beta}{2}} + e^{-i\\frac{\\alpha-\\beta}{2}} \\right) = 2\\cos\\left(\\dfrac{\\alpha-\\beta}{2}\\right)e^{i\\frac{\\alpha+\\beta}{2}}$$\n- Pour la différence :\n$$e^{i\\alpha} - e^{i\\beta} = e^{i\\frac{\\alpha+\\beta}{2}} \\left( e^{i\\frac{\\alpha-\\beta}{2}} - e^{-i\\frac{\\alpha-\\beta}{2}} \\right) = 2i\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)e^{i\\frac{\\alpha+\\beta}{2}}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la forme trigonométrique (ou exponentielle) d'un nombre complexe non nul $z$, et définir ses arguments.",
-              "reponse": "Hypothèses : Soit $z \\in \\mathbb{C}^*$.\nTout nombre complexe non nul $z$ peut s'écrire sous la forme :\n$$z = r e^{i\\theta} = r(\\cos(\\theta) + i\\sin(\\theta))$$\noù $r = |z| \\in ]0, +\\infty[$ est unique, et $\\theta \\in \\mathbb{R}$ est un argument de $z$, noté $\\arg(z)$.\nL'argument n'est pas unique, il est défini à un multiple de $2\\pi$ près : si $\\theta_0$ est un argument, l'ensemble des arguments de $z$ est $\\{\\theta_0 + 2k\\pi \\mid k \\in \\mathbb{Z}\\}$. L'unique argument appartenant à $]-\\pi, \\pi]$ est appelé l'**argument principal**."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés de l'argument d'un nombre complexe vis-à-vis du produit, de l'inverse, du quotient et du conjugué (modulo $2\\pi$).",
-              "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}^*$ et $n \\in \\mathbb{Z}$. Relations (valables modulo $2\\pi$) :\n- Produit : $\\arg(z \\times z') \\equiv \\arg(z) + \\arg(z') \\ [2\\pi]$\n- Inverse : $\\arg\\left(\\dfrac{1}{z}\\right) \\equiv -\\arg(z) \\ [2\\pi]$\n- Quotient : $\\arg\\left(\\dfrac{z}{z'}\\right) \\equiv \\arg(z) - \\arg(z') \\ [2\\pi]$\n- Conjugué : $\\arg(\\bar{z}) \\equiv -\\arg(z) \\ [2\\pi]$\n- Puissance : $\\arg(z^n) \\equiv n\\arg(z) \\ [2\\pi]$"
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Décrire la méthode pour déterminer les racines carrées complexes d'un nombre complexe donné $Z = a + ib$.",
-              "reponse": "Hypothèses : Un complexe $Z = a + ib$.\nOn cherche $z = x + iy$ tel que $z^2 = Z$. On résout le système à trois équations (dont l'une est redondante mais simplificatrice grâce au module) :\n$$\\begin{cases} x^2 - y^2 = a & \\text{(Identification des parties réelles)} \\\\ 2xy = b & \\text{(Identification des parties imaginaires)} \\\\ x^2 + y^2 = |Z| = \\sqrt{a^2+b^2} & \\text{(Identification des modules)} \\end{cases}$$\nEn additionnant et soustrayant la première et la troisième équation, on trouve $x^2$ et $y^2$, puis le signe du produit $2xy$ (donné par le signe de $b$) permet d'associer correctement les signes de $x$ et $y$. On obtient exactement deux solutions opposées."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Donner la formule de résolution d'une équation du second degré $az^2 + bz + c = 0$ à coefficients complexes ($a \\neq 0$).",
-              "reponse": "Hypothèses : $a, b, c \\in \\mathbb{C}$ avec $a \\neq 0$.\nOn calcule le discriminant complexe $\\Delta = b^2 - 4ac$.\nSoit $\\delta \\in \\mathbb{C}$ une racine carrée complexe de $\\Delta$ (telle que $\\delta^2 = \\Delta$).\nL'équation admet deux solutions (confondues si $\\Delta = 0$) données par :\n$$z_1 = \\dfrac{-b - \\delta}{2a} \\quad \\text{et} \\quad z_2 = \\dfrac{-b + \\delta}{2a}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir les racines $n$-ièmes de l'unité, donner leur notation $\\mathbb{U}_n$ et leur expression explicite.",
-              "reponse": "Hypothèses : Soit $n \\in \\mathbb{N}^*$.\nLes racines $n$-ièmes de l'unité sont les solutions complexes de l'équation $z^n = 1$.\nL'ensemble de ces solutions est noté $\\mathbb{U}_n$ et contient exactement $n$ éléments distincts donnés par :\n$$\\mathbb{U}_n = \\left\\{ e^{i\\frac{2k\\pi}{n}} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\}$$\nSi on note $\\omega = e^{i\\frac{2\\pi}{n}}$, alors $\\mathbb{U}_n = \\{1, \\omega, \\omega^2, \\dots, \\omega^{n-1}\\}$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner la valeur de la somme des racines $n$-ièmes de l'unité pour $n \\ge 2$.",
-              "reponse": "Hypothèses : Un entier $n \\ge 2$ et $\\omega = e^{i\\frac{2\\pi}{n}}$.\nLa somme de toutes les racines $n$-ièmes de l'unité est nulle :\n$$\\sum_{k=0}^{n-1} e^{i\\frac{2k\\pi}{n}} = \\sum_{k=0}^{n-1} \\omega^k = 0$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Décrire la méthode de résolution et donner l'expression des solutions de l'équation $z^n = a$ pour $a \\in \\mathbb{C}^*$.",
-              "reponse": "Hypothèses : Un entier $n \\in \\mathbb{N}^*$ et un complexe non nul $a = R e^{i\\phi}$.\nPour résoudre $z^n = a$, on cherche une solution particulière $z_0 = \\sqrt[n]{R} e^{i\\frac{\\phi}{n}}$.\nLes solutions de l'équation sont obtenues en multipliant cette solution particulière par les racines $n$-ièmes de l'unité :\n$$S = \\left\\{ z_0 \\times e^{i\\frac{2k\\pi}{n}} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\} = \\left\\{ \\sqrt[n]{R} e^{i\\left(\\frac{\\phi}{n} + \\frac{2k\\pi}{n}\\right)} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\}$$\nCes $n$ solutions forment les sommets d'un polygone régulier à $n$ côtés centré en l'origine."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner l'interprétation complexe de la distance entre deux points et de l'angle formé par trois points.",
-              "reponse": "Hypothèses : Soient $A, B, C$ trois points du plan complexe d'affixes respectives $z_A, z_B, z_C$ (avec $A \\neq B$ et $A \\neq C$).\n- **Distance** : La distance géométrique $AB$ est égale au module de la différence des affixes :\n$$AB = |z_B - z_A|$$\n- **Angle orienté** : L'angle orienté de vecteurs $(\\overrightarrow{AB}, \\overrightarrow{AC})$ est donné par l'argument du quotient des affixes :\n$$(\\overrightarrow{AB}, \\overrightarrow{AC}) \\equiv \\arg\\left(\\dfrac{z_C - z_A}{z_B - z_A}\\right) \\ [2\\pi]$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Donner l'expression analytique complexe d'une translation de vecteur $\\vec{u}$ et d'une homothétie de centre $\\Omega$ et de rapport $k$.",
-              "reponse": "- **Translation** de vecteur $\\vec{u}$ d'affixe $b$ : La transformation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que :\n$$z' = z + b$$\n- **Homothétie** de centre $\\Omega(\\omega)$ et de rapport $k \\in \\mathbb{R}^*$ : La transformation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que $z' - \\omega = k(z - \\omega)$, soit :\n$$z' = kz + (1 - k)\\omega$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Donner l'expression analytique complexe d'une rotation de centre $\\Omega$ et d'angle $\\alpha$.",
-              "reponse": "Hypothèses : Centre $\\Omega$ d'affixe $\\omega$ et angle $\\alpha \\in \\mathbb{R}$.\nLa rotation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que $z' - \\omega = e^{i\\alpha}(z - \\omega)$, soit :\n$$z' = e^{i\\alpha}z + (1 - e^{i\\alpha})\\omega$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir une similitude directe plane, donner sa forme générale $z' = az + b$ et interpréter ses éléments caractéristiques selon les valeurs de $a$.",
-              "reponse": "Une similitude directe est une transformation du plan complexe dont l'expression analytique est de la forme :\n$$z' = az + b$$\noù $a \\in \\mathbb{C}^*$ et $b \\in \\mathbb{C}$.\n- Si $a = 1$ : C'est une translation de vecteur d'affixe $b$.\n- Si $a \\neq 1$ : La similitude possède un unique point fixe (centre de la similitude) d'affixe $\\omega = \\dfrac{b}{1-a}$. C'est la composée commutative d'une homothétie de centre $\\omega$ et de rapport $|a|$, et d'une rotation de même centre $\\omega$ et d'angle $\\arg(a)$."
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 329.9821428571429,
-          "color": "hsl(330.0,88%,54%)"
+          "hue": 351.13090461538457,
+          "color": "hsl(351.1,88%,54%)"
         },
         {
           "name": "04 - Calcul intégral",
@@ -695,8 +306,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 347.4821428571429,
-              "color": "hsl(347.5,88%,54%)"
+              "hue": 8.630904615384566,
+              "color": "hsl(8.6,88%,54%)"
             },
             {
               "name": "TD",
@@ -707,77 +318,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 34.48214285714289,
-              "color": "hsl(34.5,88%,54%)"
+              "hue": 55.630904615384566,
+              "color": "hsl(55.6,88%,46%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir ce qu'est une primitive d'une fonction continue $f$ sur un intervalle $I$.",
-              "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ (où $\\mathbb{K} = \\mathbb{R}$ ou $\\mathbb{C}$) une fonction continue sur un intervalle $I$.\nUne fonction $F:I \\rightarrow \\mathbb{K}$ est appelée une primitive de $f$ sur $I$ si $F$ est dérivable sur $I$ et si sa dérivée est égale à $f$ :\n$$\\forall x \\in I, \\ F'(x) = f(x)$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer le théorème d'unicité des primitives à une constante additive près.",
-              "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ une fonction continue sur un intervalle $I$, admettant une primitive $F$ sur $I$.\nToutes les primitives de $f$ sur $I$ sont les fonctions de la forme :\n$$x \\mapsto F(x) + C$$\noù $C \\in \\mathbb{K}$ est une constante."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir l'intégrale d'une fonction continue $f$ entre deux bornes $a$ et $b$ à l'aide de ses primitives.",
-              "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ une fonction continue sur un intervalle $I$, et $(a, b) \\in I^2$.\nSi $F$ est une primitive quelconque de $f$ sur $I$, l'intégrale de $f$ de $a$ à $b$ est le scalaire défini par :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t = [F(t)]_a^b = F(b) - F(a)$$\nCette valeur est indépendante du choix de la primitive $F$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les propriétés fondamentales de l'intégrale liées aux bornes (relation de Chasles, inversion des bornes).",
-              "reponse": "Hypothèses : Soit $f$ une fonction continue sur un intervalle $I$ et $a, b, c \\in I$. Relations :\n- Inversion des bornes :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t = -\\int_{b}^{a} f(t) \\,\\mathrm{d}t$$\n- Intégrale sur un point : $\\int_{a}^{a} f(t) \\,\\mathrm{d}t = 0$\n- Relation de Chasles :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t + \\int_{b}^{c} f(t) \\,\\mathrm{d}t = \\int_{a}^{c} f(t) \\,\\mathrm{d}t$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la propriété de linéarité de l'intégrale.",
-              "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions continues sur $I$, $a, b \\in I$ et $\\lambda, \\mu \\in \\mathbb{K}$. Relation :\n$$\\int_{a}^{b} (\\lambda f(t) + \\mu g(t)) \\,\\mathrm{d}t = \\lambda \\int_{a}^{b} f(t) \\,\\mathrm{d}t + \\mu \\int_{a}^{b} g(t) \\,\\mathrm{d}t$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer les propriétés de positivité et de croissance de l'intégrale pour des fonctions à valeurs réelles.",
-              "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions continues sur $I$ à valeurs réelles, et $a, b \\in I$ avec $a \\le b$. Relations :\n- **Positivité** : Si $\\forall t \\in [a, b], \\ f(t) \\ge 0$, alors $\\int_{a}^{b} f(t) \\,\\mathrm{d}t \\ge 0$\n- **Croissance** : Si $\\forall t \\in [a, b], \\ f(t) \\le g(t)$, alors $\\int_{a}^{b} f(t) \\,\\mathrm{d}t \\le \\int_{a}^{b} g(t) \\,\\mathrm{d}t$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer l'inégalité triangulaire pour les intégrales (majororation du module ou de la valeur absolue).",
-              "reponse": "Hypothèses : Soit $f$ une fonction continue sur $I$ et $a, b \\in I$ avec $a \\le b$. Relation :\n$$\\left| \\int_{a}^{b} f(t) \\,\\mathrm{d}t \\right| \\le \\int_{a}^{b} |f(t)| \\,\\mathrm{d}t$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la formule d'intégration par parties (IPP) pour les intégrales définies.",
-              "reponse": "Hypothèses : Soient $u$ et $v$ deux fonctions de classe $\\mathcal{C}^1$ sur un intervalle $I$, et $a, b \\in I$. Relation :\n$$\\int_{a}^{b} u'(t)v(t) \\,\\mathrm{d}t = [u(t)v(t)]_a^b - \\int_{a}^{b} u(t)v'(t) \\,\\mathrm{d}t$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer le théorème de changement de variable pour une intégrale définie.",
-              "reponse": "Hypothèses : Soit $f$ une fonction continue sur un intervalle $I$. Soit $\\varphi:[\\alpha, \\beta] \\rightarrow I$ une fonction de classe $\\mathcal{C}^1$. Relation :\n$$\\int_{\\alpha}^{\\beta} f(\\varphi(t)) \\varphi'(t) \\,\\mathrm{d}t = \\int_{\\varphi(\\alpha)}^{\\varphi(\\beta)} f(x) \\,\\mathrm{d}x$$\n*(On pose le changement de variable $x = \\varphi(t)$, ce qui donne $\\mathrm{d}x = \\varphi'(t)\\,\\mathrm{d}t$ avec modification des bornes).*"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les primitives usuelles des fonctions de la forme $x \\mapsto x^n$ (pour $n \\in \\mathbb{Z}$, $n \\neq -1$) et $x \\mapsto \\dfrac{1}{x}$.",
-              "reponse": "- Pour $n \\in \\mathbb{Z} \\setminus \\{-1\\}$, les primitives de $x \\mapsto x^n$ sur tout intervalle inclus dans son domaine sont de la forme :\n$$x \\mapsto \\dfrac{x^{n+1}}{n+1} + C$$\n- Les primitives de $x \\mapsto \\dfrac{1}{x}$ sur $]0, +\\infty[$ ou $]-\\infty, 0[$ sont de la forme :\n$$x \\mapsto \\ln(|x|) + C$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les primitives usuelles des fonctions trigonométriques directes $\\cos$, $\\sin$ ainsi que de $x \\mapsto \\dfrac{1}{1+x^2}$.",
-              "reponse": "- Les primitives de $x \\mapsto \\cos(x)$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto \\sin(x) + C$\n- Les primitives de $x \\mapsto \\sin(x)$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto -\\cos(x) + C$\n- Les primitives de $x \\mapsto \\dfrac{1}{1+x^2}$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto \\arctan(x) + C$"
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Expliquer comment calculer les primitives d'une fonction à valeurs réelles de la forme $x \\mapsto e^{ax}\\cos(bx)$ en passant par les complexes.",
-              "reponse": "Hypothèses : $a, b \\in \\mathbb{R}$ avec $b \\neq 0$.\nLa méthode consiste à introduire la fonction à valeurs complexes $f: x \\mapsto e^{ax} e^{ibx} = e^{(a+ib)x}$.\n1. On cherche une primitive complexe de $f$, donnée par $F(x) = \\dfrac{e^{(a+ib)x}}{a+ib}$.\n2. On transforme l'expression en multipliant par la quantité conjuguée du dénominateur :\n$$F(x) = \\dfrac{a-ib}{a^2+b^2} e^{ax}(\\cos(bx) + i\\sin(bx))$$\n3. La fonction initiale $e^{ax}\\cos(bx)$ étant la partie réelle de $f(x)$, ses primitives réelles s'obtiennent en prenant la partie réelle de $F(x)$ :\n$$\\int e^{ax}\\cos(bx) \\,\\mathrm{d}x = \\dfrac{e^{ax}}{a^2+b^2} \\big( a\\cos(bx) + b\\sin(bx) \\big) + C$$"
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 347.4821428571429,
-          "color": "hsl(347.5,88%,54%)"
+          "hue": 8.630904615384566,
+          "color": "hsl(8.6,88%,54%)"
         },
         {
           "name": "05 - Equations différentielles",
@@ -793,8 +343,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 311.2321428571429,
-              "color": "hsl(311.2,88%,54%)"
+              "hue": 332.38090461538457,
+              "color": "hsl(332.4,88%,54%)"
             },
             {
               "name": "TD",
@@ -805,87 +355,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 358.2321428571429,
-              "color": "hsl(358.2,88%,54%)"
+              "hue": 19.380904615384566,
+              "color": "hsl(19.4,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir ce qu'est une équation différentielle linéaire du premier ordre et préciser ce que signifie la normaliser.",
-              "reponse": "Hypothèses : Soient $a$, $b$ et $c$ trois fonctions continues sur un intervalle $I$ à valeurs dans $\\mathbb{K}$ ($\\mathbb{R}$ ou $\\mathbb{C}$).\nUne équation différentielle linéaire du premier ordre est une équation de la forme :\n$$a(t)y'(t) + b(t)y(t) = c(t)$$\nd'inconnue la fonction $y: I \\rightarrow \\mathbb{K}$ supposée dérivable.\nSi la fonction $a$ ne s'annule pas sur $I$, **normaliser** l'équation consiste à diviser par $a(t)$ pour la ramener à la forme :\n$$y'(t) + A(t)y(t) = B(t)$$\noù $A = \\dfrac{b}{a}$ et $B = \\dfrac{c}{a}$ sont des fonctions continues sur $I$."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Donner l'expression générale des solutions de l'équation différentielle homogène (ou sans second membre) $y'(t) + A(t)y(t) = 0$.",
-              "reponse": "Hypothèses : Soit $A$ une fonction continue sur un intervalle $I$ à valeurs dans $\\mathbb{K}$, et $W$ une primitive de $A$ sur $I$.\nLes solutions sur $I$ de l'équation homogène $y'(t) + A(t)y(t) = 0$ sont les fonctions de la forme :\n$$y_H(t) = \\lambda e^{-W(t)}$$\noù $\\lambda \\in \\mathbb{K}$ est une constante scalaire arbitraire."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la structure générale des solutions d'une équation différentielle linéaire du premier ordre avec second membre.",
-              "reponse": "L'ensemble des solutions d'une équation linéaire avec second membre s'obtient en additionnant les solutions de l'équation homogène associée et une solution particulière unique de l'équation complète :\n$$y(t) = y_H(t) + y_0(t)$$\noù $y_H$ est la forme générale des solutions de l'équation homogène et $y_0$ est **une** solution particulière de l'équation avec second membre."
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Expliquer le principe de la méthode de variation de la constante pour trouver une solution particulière de $y'(t) + A(t)y(t) = B(t)$.",
-              "reponse": "Hypothèses : Soit $W$ une primitive de $A$ sur $I$. La solution générale de l'équation homogène est $\\lambda e^{-W(t)}$.\nLa méthode consiste à chercher une solution particulière sous la forme :\n$$y_0(t) = \\lambda(t) e^{-W(t)}$$\noù $\\lambda$ est désormais une fonction dérivable à déterminer.\nEn injectant $y_0$ dans l'équation complète $y' + Ay = B$, les termes en $\\lambda(t)$ se simplifient et on obtient l'équation simplifiée sur la dérivée :\n$$\\lambda'(t) e^{-W(t)} = B(t) \\iff \\lambda'(t) = B(t) e^{W(t)}$$\nIl suffit ensuite d'intégrer (trouver une primitive de) $\\lambda'$ pour obtenir $\\lambda(t)$, ce qui fournit la solution particulière $y_0(t)$."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer le principe de superposition pour les équations différentielles linéaires.",
-              "reponse": "Hypothèses : Soit une équation dont le second membre est la somme de deux fonctions : $y' + Ay = B_1 + B_2$.\nSi $y_1$ est une solution particulière de l'équation $y' + Ay = B_1$ et $y_2$ est une solution particulière de l'équation $y' + Ay = B_2$, alors la fonction :\n$$y_0 = y_1 + y_2$$\nest une solution particulière de l'équation complète initiale."
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Donner la forme de la solution particulière pour l'équation à coefficients constants $y' + ay = P(t)e^{\\alpha t}$ où $P$ est un polynôme et $a, \\alpha \\in \\mathbb{K}$.",
-              "reponse": "Pour chercher une solution particulière de $y' + ay = P(t)e^{\\alpha t}$ :\n- Si $\\alpha \\neq -a$ (c'est-à-dire que $\\alpha$ n'est pas solution de l'équation caractéristique associée), on cherche une solution de la forme :\n$$y_0(t) = Q(t)e^{\\alpha t}$$\noù $Q$ est un polynôme de **même degré** que $P$.\n- Si $\\alpha = -a$, on cherche une solution de la forme :\n$$y_0(t) = t Q(t)e^{\\alpha t}$$\noù $Q$ est un polynôme de **même degré** que $P$ (le degré global de la partie polynomiale augmente de 1)."
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Donner la méthode pour chercher une solution particulière de $y' + ay = \\beta_1 \\cos(\\omega t) + \\beta_2 \\sin(\\omega t)$ lorsque $a \\in \\mathbb{K}$ et $\\omega \\in \\mathbb{R}$.",
-              "reponse": "Une telle équation linéaire à coefficients constants avec un second membre sinusoïdal admet toujours une solution particulière de la même forme résonnante (sauf cas complexes particuliers), c'est-à-dire :\n$$y_0(t) = \\mu_1 \\cos(\\omega t) + \\mu_2 \\sin(\\omega t)$$\noù $\\mu_1$ et $\\mu_2$ sont deux constantes scalaires à déterminer en injectant l'expression dans l'équation différentielle et en identifiant les coefficients devant $\\cos(\\omega t)$ et $\\sin(\\omega t)$.\n*(Alternative : passer par les complexes en écrivant le second membre sous la forme $\\mathrm{Re}(\\gamma e^{i\\omega t})$).*"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Définir ce qu'est un problème de Cauchy pour une équation différentielle linéaire d'ordre 1 et énoncer son théorème d'existence et d'unicité.",
-              "reponse": "Un **problème de Cauchy** est la donnée conjointe d'une équation différentielle linéaire et d'une condition initiale fixée en un point :\n$$\\begin{cases} a(t)y'(t) + b(t)y(t) = c(t) \\\\ y(t_0) = y_0 \\end{cases}$$\noù $t_0 \\in I$ et $y_0 \\in \\mathbb{K}$.\n\n**Théorème d'existence et d'unicité** :\nSi les fonctions $a$, $b$ et $c$ sont continues sur $I$ et si la fonction $a$ **ne s'annule pas** sur $I$, alors pour tout choix de $(t_0, y_0) \\in I \\times \\mathbb{K}$, le problème de Cauchy possède **une unique solution** définie sur l'intervalle $I$ tout entier."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir ce qu'est une équation différentielle linéaire du second ordre à coefficients constants et préciser le cas d'une équation homogène.",
-              "reponse": "Hypothèses : Soient $a, b, c \\in \\mathbb{K}$ (avec $a \\neq 0$) et $f$ une fonction continue sur un intervalle $I$ à valeurs dans $\\mathbb{K}$.\nUne équation différentielle linéaire du second ordre à coefficients constants est une équation de la forme :\n$$ay''(t) + by'(t) + cy(t) = f(t)$$\nd'inconnue la fonction $y: I \\rightarrow \\mathbb{K}$ supposée deux fois dérivable sur $I$.\nLorsque $f \\equiv 0$ (la fonction second membre est identiquement nulle), l'équation est dite **homogène** ou **sans second membre**."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir l'équation caractéristique associée à l'équation différentielle homogène $ay''(t) + by'(t) + cy(t) = 0$.",
-              "reponse": "Hypothèses : Soient $a, b, c \\in \\mathbb{K}$ avec $a \\neq 0$.\nL'**équation caractéristique** associée à l'équation homogène $ay'' + by' + cy = 0$ est l'équation polynomiale du second degré d'inconnue complexe $r$ :\n$$ar^2 + br + c = 0$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Donner la forme générale des solutions complexes de l'équation homogène $ay''(t) + by'(t) + cy(t) = 0$ lorsque $a, b, c \\in \\mathbb{C}$.",
-              "reponse": "Hypothèses : Soit $\\Delta = b^2 - 4ac$ le discriminant de l'équation caractéristique $ar^2 + br + c = 0$.\n- **Si $\\Delta \\neq 0$** : l'équation caractéristique admet deux racines complexes distinctes $r_1$ et $r_2$. Les solutions de l'équation différentielle sont les fonctions de la forme :\n$$y(t) = \\lambda e^{r_1 t} + \\mu e^{r_2 t} \\quad (\\lambda, \\mu \\in \\mathbb{C})$$\n- **Si $\\Delta = 0$** : l'équation caractéristique admet une racine double $r_0 = -\\dfrac{b}{2a}$. Les solutions sont les fonctions de la forme :\n$$y(t) = (\\lambda t + \\mu) e^{r_0 t} \\quad (\\lambda, \\mu \\in \\mathbb{C})$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Donner la forme générale des solutions réelles de l'équation homogène $ay''(t) + by'(t) + cy(t) = 0$ lorsque $a, b, c \\in \\mathbb{R}$.",
-              "reponse": "Hypothèses : Soit $\\Delta = b^2 - 4ac$ le discriminant réel de l'équation caractéristique.\n- **Si $\\Delta > 0$** : deux racines réelles distinctes $r_1, r_2$. Les solutions réelles sont :\n$$y(t) = \\lambda e^{r_1 t} + \\mu e^{r_2 t} \\quad (\\lambda, \\mu \\in \\mathbb{R})$$\n- **Si $\\Delta = 0$** : une racine réelle double $r_0$. Les solutions réelles sont :\n$$y(t) = (\\lambda t + \\mu) e^{r_0 t} \\quad (\\lambda, \\mu \\in \\mathbb{R})$$\n- **Si $\\Delta < 0$** : deux racines complexes conjuguées $r = \\alpha \\pm i\\beta$ (où $\\alpha, \\beta \\in \\mathbb{R}, \\beta \\neq 0$). Les solutions réelles sont :\n$$y(t) = e^{\\alpha t} \\big( \\lambda \\cos(\\beta t) + \\mu \\sin(\\beta t) \\big) \\quad (\\lambda, \\mu \\in \\mathbb{R})$$"
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Donner la forme de la solution particulière pour l'équation $ay'' + by' + cy = P(t)e^{\\alpha t}$ où $P$ est un polynôme et $\\alpha \\in \\mathbb{K}$.",
-              "reponse": "On cherche une solution particulière sous la forme $y_0(t) = Q(t)e^{\\alpha t}$ où $Q$ est un polynôme dont le degré dépend du statut de $\\alpha$ vis-à-vis de l'équation caractéristique :\n- **Si $\\alpha$ n'est pas racine** de l'équation caractéristique : $\\deg(Q) = \\deg(P)$.\n- **Si $\\alpha$ est racine simple** de l'équation caractéristique : $\\deg(Q) = \\deg(P) + 1$.\n- **Si $\\alpha$ est racine double** de l'équation caractéristique : $\\deg(Q) = \\deg(P) + 2$."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Définir ce qu'est un problème de Cauchy pour une équation différentielle linéaire d'ordre 2 à coefficients constants et énoncer son théorème d'existence et d'unicité.",
-              "reponse": "Un **problème de Cauchy** pour une équation d'ordre 2 est la donnée conjointe de l'équation différentielle et de deux conditions initiales fixées au même point $t_0$ (la valeur de la fonction et de sa dérivée première) :\n$$\\begin{cases} ay''(t) + by'(t) + cy(t) = f(t) \\\\ y(t_0) = y_0 \\\\ y'(t_0) = y_1 \\end{cases}$$\noù $t_0 \\in I$ et $y_0, y_1 \\in \\mathbb{K}$.\n\n**Théorème d'existence et d'unicité** :\nSi $a \\neq 0$ et si la fonction $f$ est continue sur l'intervalle $I$, alors pour tout choix de $(t_0, y_0, y_1) \\in I \\times \\mathbb{K} \\times \\mathbb{K}$, ce problème de Cauchy possède **une unique solution** globale définie sur $I$ tout entier."
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 311.2321428571429,
-          "color": "hsl(311.2,88%,54%)"
+          "hue": 332.38090461538457,
+          "color": "hsl(332.4,88%,54%)"
         },
         {
           "name": "06 - Structures algébriques",
@@ -901,8 +380,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 329.9821428571429,
-              "color": "hsl(330.0,88%,54%)"
+              "hue": 351.13090461538457,
+              "color": "hsl(351.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -913,16 +392,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 16.98214285714289,
-              "color": "hsl(17.0,88%,54%)"
+              "hue": 38.130904615384566,
+              "color": "hsl(38.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 329.9821428571429,
-          "color": "hsl(330.0,88%,54%)"
+          "hue": 351.13090461538457,
+          "color": "hsl(351.1,88%,54%)"
         },
         {
           "name": "07 - Arithmétique",
@@ -938,8 +417,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 347.4821428571429,
-              "color": "hsl(347.5,88%,54%)"
+              "hue": 8.630904615384566,
+              "color": "hsl(8.6,88%,54%)"
             },
             {
               "name": "TD",
@@ -950,16 +429,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 34.48214285714289,
-              "color": "hsl(34.5,88%,54%)"
+              "hue": 55.630904615384566,
+              "color": "hsl(55.6,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 347.4821428571429,
-          "color": "hsl(347.5,88%,54%)"
+          "hue": 8.630904615384566,
+          "color": "hsl(8.6,88%,54%)"
         },
         {
           "name": "08 - Réels",
@@ -975,8 +454,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 357.9821428571429,
-              "color": "hsl(358.0,88%,54%)"
+              "hue": 19.130904615384566,
+              "color": "hsl(19.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -987,16 +466,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 44.98214285714289,
-              "color": "hsl(45.0,88%,46%)"
+              "hue": 66.13090461538457,
+              "color": "hsl(66.1,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 357.9821428571429,
-          "color": "hsl(358.0,88%,54%)"
+          "hue": 19.130904615384566,
+          "color": "hsl(19.1,88%,54%)"
         },
         {
           "name": "09 - Suites Classiques et récurrentes",
@@ -1012,8 +491,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 329.9821428571429,
-              "color": "hsl(330.0,88%,54%)"
+              "hue": 351.13090461538457,
+              "color": "hsl(351.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1024,16 +503,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 16.98214285714289,
-              "color": "hsl(17.0,88%,54%)"
+              "hue": 38.130904615384566,
+              "color": "hsl(38.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 329.9821428571429,
-          "color": "hsl(330.0,88%,54%)"
+          "hue": 351.13090461538457,
+          "color": "hsl(351.1,88%,54%)"
         },
         {
           "name": "10 - Polynômes",
@@ -1049,8 +528,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 347.4821428571429,
-              "color": "hsl(347.5,88%,54%)"
+              "hue": 8.630904615384566,
+              "color": "hsl(8.6,88%,54%)"
             },
             {
               "name": "TD",
@@ -1061,16 +540,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 34.48214285714289,
-              "color": "hsl(34.5,88%,54%)"
+              "hue": 55.630904615384566,
+              "color": "hsl(55.6,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 347.4821428571429,
-          "color": "hsl(347.5,88%,54%)"
+          "hue": 8.630904615384566,
+          "color": "hsl(8.6,88%,54%)"
         },
         {
           "name": "11 - Limite et Continuité",
@@ -1086,8 +565,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 357.9821428571429,
-              "color": "hsl(358.0,88%,54%)"
+              "hue": 19.130904615384566,
+              "color": "hsl(19.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1098,16 +577,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 44.98214285714289,
-              "color": "hsl(45.0,88%,46%)"
+              "hue": 66.13090461538457,
+              "color": "hsl(66.1,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 357.9821428571429,
-          "color": "hsl(358.0,88%,54%)"
+          "hue": 19.130904615384566,
+          "color": "hsl(19.1,88%,54%)"
         },
         {
           "name": "12 - Dérivation",
@@ -1123,8 +602,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 47.48214285714289,
-              "color": "hsl(47.5,88%,46%)"
+              "hue": 68.63090461538457,
+              "color": "hsl(68.6,88%,46%)"
             },
             {
               "name": "TD",
@@ -1135,16 +614,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 94.48214285714289,
-              "color": "hsl(94.5,88%,54%)"
+              "hue": 115.63090461538457,
+              "color": "hsl(115.6,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 47.48214285714289,
-          "color": "hsl(47.5,88%,46%)"
+          "hue": 68.63090461538457,
+          "color": "hsl(68.6,88%,46%)"
         },
         {
           "name": "13 - Convexité",
@@ -1160,8 +639,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 347.4821428571429,
-              "color": "hsl(347.5,88%,54%)"
+              "hue": 8.630904615384566,
+              "color": "hsl(8.6,88%,54%)"
             },
             {
               "name": "TD",
@@ -1172,16 +651,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 34.48214285714289,
-              "color": "hsl(34.5,88%,54%)"
+              "hue": 55.630904615384566,
+              "color": "hsl(55.6,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 347.4821428571429,
-          "color": "hsl(347.5,88%,54%)"
+          "hue": 8.630904615384566,
+          "color": "hsl(8.6,88%,54%)"
         },
         {
           "name": "14 - Analyse asymptotique",
@@ -1197,8 +676,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 357.9821428571429,
-              "color": "hsl(358.0,88%,54%)"
+              "hue": 19.130904615384566,
+              "color": "hsl(19.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1209,16 +688,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 44.98214285714289,
-              "color": "hsl(45.0,88%,46%)"
+              "hue": 66.13090461538457,
+              "color": "hsl(66.1,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 357.9821428571429,
-          "color": "hsl(358.0,88%,54%)"
+          "hue": 19.130904615384566,
+          "color": "hsl(19.1,88%,54%)"
         },
         {
           "name": "15 - Espaces vectoriels",
@@ -1234,8 +713,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 47.48214285714289,
-              "color": "hsl(47.5,88%,46%)"
+              "hue": 68.63090461538457,
+              "color": "hsl(68.6,88%,46%)"
             },
             {
               "name": "TD",
@@ -1246,16 +725,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 94.48214285714289,
-              "color": "hsl(94.5,88%,54%)"
+              "hue": 115.63090461538457,
+              "color": "hsl(115.6,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 47.48214285714289,
-          "color": "hsl(47.5,88%,46%)"
+          "hue": 68.63090461538457,
+          "color": "hsl(68.6,88%,46%)"
         },
         {
           "name": "16 - Intégration",
@@ -1271,8 +750,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1283,16 +762,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         },
         {
           "name": "17 - Matrices d'applications linéaires",
@@ -1308,8 +787,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 357.9821428571429,
-              "color": "hsl(358.0,88%,54%)"
+              "hue": 19.130904615384566,
+              "color": "hsl(19.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1320,16 +799,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 44.98214285714289,
-              "color": "hsl(45.0,88%,46%)"
+              "hue": 66.13090461538457,
+              "color": "hsl(66.1,88%,46%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 357.9821428571429,
-          "color": "hsl(358.0,88%,54%)"
+          "hue": 19.130904615384566,
+          "color": "hsl(19.1,88%,54%)"
         },
         {
           "name": "18 - Séries et familles sommables",
@@ -1345,8 +824,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 47.48214285714289,
-              "color": "hsl(47.5,88%,46%)"
+              "hue": 68.63090461538457,
+              "color": "hsl(68.6,88%,46%)"
             },
             {
               "name": "TD",
@@ -1357,16 +836,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 94.48214285714289,
-              "color": "hsl(94.5,88%,54%)"
+              "hue": 115.63090461538457,
+              "color": "hsl(115.6,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 47.48214285714289,
-          "color": "hsl(47.5,88%,46%)"
+          "hue": 68.63090461538457,
+          "color": "hsl(68.6,88%,46%)"
         },
         {
           "name": "19 - Espaces préhilbertiens",
@@ -1382,8 +861,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1394,16 +873,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         },
         {
           "name": "20 - Probabilités",
@@ -1419,8 +898,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 150.4821428571429,
-              "color": "hsl(150.5,88%,54%)"
+              "hue": 171.63090461538457,
+              "color": "hsl(171.6,88%,58%)"
             },
             {
               "name": "TD",
@@ -1431,16 +910,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 197.4821428571429,
-              "color": "hsl(197.5,88%,58%)"
+              "hue": 218.63090461538457,
+              "color": "hsl(218.6,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 150.4821428571429,
-          "color": "hsl(150.5,88%,54%)"
+          "hue": 171.63090461538457,
+          "color": "hsl(171.6,88%,58%)"
         },
         {
           "name": "21 - Déterminant et Symétrique",
@@ -1456,8 +935,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 47.48214285714289,
-              "color": "hsl(47.5,88%,46%)"
+              "hue": 68.63090461538457,
+              "color": "hsl(68.6,88%,46%)"
             },
             {
               "name": "TD",
@@ -1468,16 +947,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 94.48214285714289,
-              "color": "hsl(94.5,88%,54%)"
+              "hue": 115.63090461538457,
+              "color": "hsl(115.6,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 47.48214285714289,
-          "color": "hsl(47.5,88%,46%)"
+          "hue": 68.63090461538457,
+          "color": "hsl(68.6,88%,46%)"
         },
         {
           "name": "22 - Fonctions de deux variables",
@@ -1493,8 +972,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1505,24 +984,24 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         }
       ],
       "files": [],
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 296.9821428571429,
-      "color": "hsl(297.0,88%,54%)"
+      "hue": 318.13090461538457,
+      "color": "hsl(318.1,88%,54%)"
     },
     {
       "name": "Physique",
@@ -1539,176 +1018,32 @@
               "path": "Physique/01 - Optique/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Optique_DM_Matrcies de dioptres corrigé.pdf",
-                  "path": "Physique/01%20-%20Optique/DM/Optique_DM_Matrcies%20de%20dioptres%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Optique_DM_Matrcies de dioptres.pdf",
-                  "path": "Physique/01%20-%20Optique/DM/Optique_DM_Matrcies%20de%20dioptres.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 41.98214285714289,
-              "color": "hsl(42.0,88%,46%)"
+              "hue": 63.130904615384566,
+              "color": "hsl(63.1,88%,46%)"
             },
             {
               "name": "TD",
               "path": "Physique/01 - Optique/TD",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Optique_TD_Approfondissement corrigé.pdf",
-                  "path": "Physique/01%20-%20Optique/TD/Optique_TD_Approfondissement%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Optique_TD_Approfondissement.pdf",
-                  "path": "Physique/01%20-%20Optique/TD/Optique_TD_Approfondissement.pdf",
-                  "corrige": false
-                },
-                {
-                  "name": "Optique_TD_Automatismes corrigé.pdf",
-                  "path": "Physique/01%20-%20Optique/TD/Optique_TD_Automatismes%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Optique_TD_Automatismes.pdf",
-                  "path": "Physique/01%20-%20Optique/TD/Optique_TD_Automatismes.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 88.98214285714289,
-              "color": "hsl(89.0,88%,54%)"
+              "hue": 110.13090461538457,
+              "color": "hsl(110.1,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir l'indice de réfraction $n$ d'un milieu transparent et donner sa condition de validité numérique.",
-              "reponse": "Hypothèses : Milieu transparent quelconque. Relation à connaître :\n$$n = \\dfrac{c}{v}$$\noù $c$ est la célérité de la lumière dans le vide ($c = 299\\,792\\,458\\,\\mathrm{m\\cdot s^{-1}}$) et $v$ la vitesse de propagation dans le milieu. Condition numérique : $n \\ge 1$."
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner la relation entre la longueur d'onde dans le vide $\\lambda_0$, la longueur d'onde dans un milieu $\\lambda$ et l'indice de réfraction $n$.",
-              "reponse": "Hypothèses : Lumière monochromatique de fréquence $f$ déterminée par l'émetteur se propageant dans un milieu d'indice $n$. Relations :\n$$\\lambda = \\dfrac{v}{f} \\quad \\text{et} \\quad \\lambda_0 = \\dfrac{c}{f} \\implies \\lambda = \\dfrac{\\lambda_0}{n}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les ordres de grandeur des longueurs d'onde dans le vide $\\lambda_0$ pour les limites du spectre visible ainsi que pour les couleurs violette et rouge.",
-              "reponse": "L'intervalle de la lumière visible correspond environ aux fréquences $4\\cdot10^{14}\\,\\mathrm{Hz} < f < 8\\cdot10^{14}\\,\\mathrm{Hz}$.\nSur l'échelle des couleurs, les longueurs d'onde dans le vide $\\lambda_0$ remarquables sont :\n- Limite violet / début du visible : $\\lambda_0 \\approx 400\\,\\mathrm{nm}$\n- Transition bleu / vert : $\\lambda_0 \\approx 500\\,\\mathrm{nm}$\n- Transition jaune-orange / rouge : $\\lambda_0 \\approx 650\\,\\mathrm{nm}$\n- Limite rouge / fin du visible : $\\lambda_0 \\approx 800\\,\\mathrm{nm}$"
-            },
-            {
-              "type": "Principe",
-              "enonce": "Énoncer les hypothèses de l'approximation de l'optique géométrique.",
-              "reponse": "Hypothèses :\n1. La lumière est modélisée par un ensemble de **rayons lumineux** indépendants les uns des autres (ce qui suppose l'absence d'interférences).\n2. Dans un milieu transparent homogène et isotrope, les rayons lumineux sont **rectilignes** (ce qui suppose d'éviter la diffraction, avec des systèmes suffisamment larges devant la longueur d'onde)."
-            },
-            {
-              "type": "Loi",
-              "enonce": "Énoncer les trois lois de Snell-Descartes pour la réflexion et la réfraction.",
-              "reponse": "Hypothèses : Un rayon lumineux incident arrive sur un dioptre séparant deux milieux transparents d'indices $n_1$ et $n_2$. Lois :\n1. Les rayons réfléchi et réfracté sont dans le **plan d'incidence** (défini par le rayon incident et la normale au dioptre).\n2. L'angle de réflexion $i'_1$ vérifie : $i'_1 = -i_1$ (angles orientés) ou $i'_1 = i_1$ (angles non orientés).\n3. L'angle de réfraction $i_2$ est lié à l'angle d'incidence $i_1$ par : $$n_1 \\sin i_1 = n_2 \\sin i_2$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Énoncer la loi du retour inverse de la lumière.",
-              "reponse": "Hypothèses : Propagation de la lumière entre deux points à travers un système optique quelconque. Propriété : Le trajet suivi par la lumière pour aller d'un point $A$ à un point $B$ est le même que celui suivi pour aller de $B$ à $A$."
-            },
-            {
-              "type": "Calcul",
-              "enonce": "Déterminer l'expression de l'angle limite d'incidence $i_{\\mathrm{lim}}$ et définir la condition de réflexion totale.",
-              "reponse": "Hypothèses : Passage d'un milieu d'indice $n_1$ à un milieu moins réfringent d'indice $n_2$ tel que $n_2 < n_1$. Relation à connaître : $$i_{\\mathrm{lim}} = \\arcsin\\left(\\dfrac{n_2}{n_1}\\right)$$ Si l'angle d'incidence vérifie $i_1 > i_{\\mathrm{lim}}$, il n'y a pas de rayon réfracté : c'est le phénomène de **réflexion totale**.",
-              "calcul": "D'après la loi de Snell-Descartes : $n_1 \\sin i_1 = n_2 \\sin i_2 \\implies \\sin i_2 = \\dfrac{n_1}{n_2} \\sin i_1$.\nLa réfraction limite correspond à l'angle de réfraction maximal possible dans le second milieu, soit $i_2 = \\dfrac{\\pi}{2}$ (rayon rasant).\nOn a alors : $n_1 \\sin i_{\\mathrm{lim}} = n_2 \\sin\\left(\\dfrac{\\pi}{2}\\right) = n_2 \\implies \\sin i_{\\mathrm{lim}} = \\dfrac{n_2}{n_1}$.\nD'où : $i_{\\mathrm{lim}} = \\arcsin\\left(\\dfrac{n_2}{n_1}\\right)$."
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les expressions de l'ouverture numérique $o_n$ et du cône d'acceptance $\\theta_a$ d'une fibre optique à saut d'indice.",
-              "reponse": "Hypothèses : Fibre optique constituée d'un cœur d'indice $n_c$ entouré d'une gaine d'indice $n_g < n_c$, plongée dans un milieu extérieur d'indice $n_0$. Relations à connaître :\n- Angle maximal du cône d'acceptance : $$\\theta_a = \\arcsin\\left(\\dfrac{\\sqrt{n_c^2 - n_g^2}}{n_0}\\right)$$\n- Ouverture numérique : $$o_n = n_0 \\sin \\theta_a = \\sqrt{n_c^2 - n_g^2}$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner l'expression de la dispersion intermodale $\\Delta t$ dans une fibre optique à saut d'indice.",
-              "reponse": "Hypothèses : Guidage d'un faisceau lumineux dans une fibre optique rectiligne à saut d'indice de longueur $L$. $\\Delta t$ représente la différence de temps de trajet entre le rayon le plus lent et le rayon le plus rapide. Relation à connaître :\n$$\\Delta t = \\dfrac{L n_c (n_c - n_g)}{c n_g}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le stigmatisme d'un système optique ainsi que les notions de point objet et point image.",
-              "reponse": "Hypothèses : Système optique $S$ formé de dioptres ou miroirs.\n- **Point objet** : Point d'intersection des rayons incidents (réel si les rayons en sont issus directement, virtuel si ce sont leurs prolongements).\n- **Stigmatisme** : Un système est dit stigmatique si tous les rayons émergents correspondant aux rayons issus d'un unique point objet $A$ convergent en un unique point $A'$ ou semblent en provenir.\n- **Point image** : Ce point de convergence ou de provenance $A'$ des rayons émergents (réelle si les rayons y convergent vraiment, virtuelle si ce sont leurs prolongements)."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir un système optique centré et la propriété d'aplanétisme.",
-              "reponse": "Définitions :\n- **Système centré** : Système optique possédant un axe de symétrie de révolution, appelé **axe optique**.\n- **Aplanétisme** : Propriété d'un système centré pour lequel l'image d'un objet plan orthogonal à l'axe optique est également un plan orthogonal à l'axe optique."
-            },
-            {
-              "type": "Principe",
-              "enonce": "Énoncer les conditions de Gauss permettant d'obtenir un stigmatisme approché.",
-              "reponse": "Hypothèses : Système optique centré utilisé avec des rayons dits **paraxiaux**. Conditions de Gauss :\n1. Les rayons doivent rencontrer le système près de l'axe optique.\n2. Les rayons doivent être peu inclinés par rapport à cet axe.\nEn pratique, ces conditions sont réalisées à l'aide d'un diaphragme empêchant les rayons trop éloignés ou trop inclinés de traverser le système."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir les foyers principaux objet $F$ et image $F'$ ainsi que les plans focaux associés.",
-              "reponse": "Hypothèses : Système optique centré utilisé dans les conditions de Gauss.\n- **Foyer principal objet $F$** : Point de l'axe optique dont l'image par le système est située à l'infini sur l'axe.\n- **Foyer principal image $F'$** : Point de l'axe optique qui est l'image d'un point objet situé à l'infini sur l'axe.\n- **Plan focal objet (resp. image)** : Plan passant par $F$ (resp. $F'$) et orthogonal à l'axe optique."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la distance focale objet $f$, la distance focale image $f'$ et la vergence $V$ d'une lentille mince.",
-              "reponse": "Hypothèses : Lentille mince de centre optique $O$ utilisée dans les conditions de Gauss. Relations à connaître :\n- Distances focales algébriques : $f = \\overline{OF}$ et $f' = \\overline{OF'}$. Par symétrie, $f = -f'$.\n- Vergence : $$V = \\dfrac{1}{f'} = -\\dfrac{1}{f}$$\nL'unité de vergence est le mètre inverse ($\\mathrm{m^{-1}}$), également appelé **dioptrie** ($\\delta$). $V$ et $f'$ sont positives pour une lentille convergente, négatives pour une lentille divergente."
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les formules de conjugaison et de grandissement d'une lentille mince dites de Descartes.",
-              "reponse": "Hypothèses : Lentille mince de centre optique $O$, conditions de Gauss. Objet $AB$ orthogonal à l'axe avec $A$ sur l'axe, image $A'B'$. Relations de Descartes :\n- Conjugaison : $$\\dfrac{1}{\\overline{OA'}} - \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{f'}$$\n- Grandissement transversal $\\gamma$ : $$\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{OA'}}{\\overline{OA}}$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner les formules de conjugaison et de grandissement d'une lentille mince dites de Newton.",
-              "reponse": "Hypothèses : Lentille mince de foyers $F$ et $F'$, conditions de Gauss. Objet $AB$ orthogonal à l'axe avec $A$ sur l'axe, image $A'B'$. Relations de Newton :\n- Conjugaison : $$\\overline{FA} \\cdot \\overline{F'A'} = -{f'}^2 = -\\overline{OF'}^2$$\n- Grandissement transversal $\\gamma$ : $$\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = -\\dfrac{\\overline{FO}}{\\overline{FA}} = -\\dfrac{\\overline{F'A'}}{\\overline{F'O}}$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner la condition sur la distance $D$ entre un objet réel et un écran pour former une image réelle à l'aide d'une lentille convergente.",
-              "reponse": "Hypothèses : Lentille convergente de focale image $f' > 0$, objet réel et écran réel. Relation à connaître :\n$$D \\ge 4f'$$"
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner la valeur de l'écart angulaire minimum $\\alpha_{\\mathrm{min}}$ permettant à l'œil humain de distinguer deux points.",
-              "reponse": "Valeur remarquable du pouvoir de résolution de l'œil (pouvoir séparateur) : \n$$\\alpha_{\\mathrm{min}} = 3\\cdot10^{-4}\\,\\mathrm{rad}$$\nSi l'écart angulaire est inférieur à cette valeur, les images des deux points se forment sur une seule et même cellule réceptrice de la rétine et ne sont pas distinguées."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir le punctum remotum (PR), le punctum proximum (PP) et la plage d'accommodation pour un œil emmétrope.",
-              "reponse": "Hypothèses : Œil emmétrope (sans défaut au repos).\n- **Punctum remotum (PR)** : Point le plus éloigné vu nettement par l'œil sans accommoder. Pour un œil emmétrope, le PR est situé à l'**infini** ($d = f'_0$).\n- **Punctum proximum (PP)** : Point le plus proche vu nettement par l'œil en accommodant au maximum. La distance minimale œil-PP est notée $d_{\\mathrm{m}}$ et vaut conventionnellement $0{,}25\\,\\mathrm{m}$.\n- **Plage d'accommodation** : Intervalle de distance entre le PP et le PR."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer le théorème des vergences pour deux lentilles minces accolées (théorème de Gullstrand).",
-              "reponse": "Hypothèses : Deux lentilles minces de vergences respectives $V_1$ et $V_2$ accolées (espace entre elles négligeable). Relation à connaître : Le système est équivalent à une seule lentille mince de vergence $V$ telle que :\n$$V = V_1 + V_2$$"
-            },
-            {
-              "type": "Formule",
-              "enonce": "Donner la relation du grandissement global $\\gamma$ pour une association de deux lentilles successives.",
-              "reponse": "Hypothèses : Système optique constitué de deux lentilles successives $L_1$ et $L_2$ de grandissements respectifs $\\gamma_1$ et $\\gamma_2$. Relation à connaître :\n$$\\gamma = \\gamma_1 \\times \\gamma_2$$\nPar définition, avec un objet $AB$, une image intermédiaire $A_1B_1$ et une image finale $A'B'$ : $\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{A'B'}}{\\overline{A_1B_1}} \\times \\dfrac{\\overline{A_1B_1}}{\\overline{AB}}$."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la condition d'afocalité d'un instrument d'optique, comme la lunette astronomique.",
-              "reponse": "Hypothèses : Lunette astronomique constituée d'un objectif de foyer image $F'_1$ et d'un oculaire de foyer objet $F_2$. Définition : Un instrument est dit **afocal** si le foyer principal image de l'objectif coïncide avec le foyer principal objet de l'oculaire :\n$$F'_1 = F_2$$\nAinsi, un objet situé à l'infini donne une image intermédiaire dans le plan focal commun, et l'image finale renvoyée par l'oculaire se trouve également à l'infini, permettant une observation par l'œil sans accommoder."
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 41.98214285714289,
-          "color": "hsl(42.0,88%,46%)"
+          "hue": 63.130904615384566,
+          "color": "hsl(63.1,88%,46%)"
         },
         {
           "name": "02 - Electricité",
@@ -1720,23 +1055,12 @@
               "path": "Physique/02 - Electricité/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Optique_DM_Puissance et énergie corrigé.pdf",
-                  "path": "Physique/02%20-%20Electricit%C3%A9/DM/Optique_DM_Puissance%20et%20%C3%A9nergie%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "Optique_DM_Puissance et énergie.pdf",
-                  "path": "Physique/02%20-%20Electricit%C3%A9/DM/Optique_DM_Puissance%20et%20%C3%A9nergie.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 60.98214285714289,
-              "color": "hsl(61.0,88%,46%)"
+              "hue": 82.13090461538457,
+              "color": "hsl(82.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1747,16 +1071,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 107.98214285714289,
-              "color": "hsl(108.0,88%,54%)"
+              "hue": 129.13090461538457,
+              "color": "hsl(129.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 60.98214285714289,
-          "color": "hsl(61.0,88%,46%)"
+          "hue": 82.13090461538457,
+          "color": "hsl(82.1,88%,54%)"
         },
         {
           "name": "03 - Oscillateurs",
@@ -1768,23 +1092,12 @@
               "path": "Physique/03 - Oscillateurs/DM",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "oscillateurs_couplés_corrige.pdf",
-                  "path": "Physique/03%20-%20Oscillateurs/DM/oscillateurs_coupl%C3%A9s_corrige.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "oscillateurs_couplés.pdf",
-                  "path": "Physique/03%20-%20Oscillateurs/DM/oscillateurs_coupl%C3%A9s.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 88.98214285714289,
-              "color": "hsl(89.0,88%,54%)"
+              "hue": 110.13090461538457,
+              "color": "hsl(110.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1795,16 +1108,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 135.9821428571429,
-              "color": "hsl(136.0,88%,54%)"
+              "hue": 157.13090461538457,
+              "color": "hsl(157.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 88.98214285714289,
-          "color": "hsl(89.0,88%,54%)"
+          "hue": 110.13090461538457,
+          "color": "hsl(110.1,88%,54%)"
         },
         {
           "name": "04 - Filtrage linéaire",
@@ -1820,8 +1133,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1832,16 +1145,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         },
         {
           "name": "05 - Propagation d'un signal",
@@ -1857,8 +1170,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 60.98214285714289,
-              "color": "hsl(61.0,88%,46%)"
+              "hue": 82.13090461538457,
+              "color": "hsl(82.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1869,16 +1182,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 107.98214285714289,
-              "color": "hsl(108.0,88%,54%)"
+              "hue": 129.13090461538457,
+              "color": "hsl(129.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 60.98214285714289,
-          "color": "hsl(61.0,88%,46%)"
+          "hue": 82.13090461538457,
+          "color": "hsl(82.1,88%,54%)"
         },
         {
           "name": "06 - Cinématique et Dynamique",
@@ -1894,8 +1207,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 88.98214285714289,
-              "color": "hsl(89.0,88%,54%)"
+              "hue": 110.13090461538457,
+              "color": "hsl(110.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1906,16 +1219,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 135.9821428571429,
-              "color": "hsl(136.0,88%,54%)"
+              "hue": 157.13090461538457,
+              "color": "hsl(157.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 88.98214285714289,
-          "color": "hsl(89.0,88%,54%)"
+          "hue": 110.13090461538457,
+          "color": "hsl(110.1,88%,54%)"
         },
         {
           "name": "07 - Energie mécanique",
@@ -1931,8 +1244,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -1943,16 +1256,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         },
         {
           "name": "08 - Mouvement dans un champ",
@@ -1968,8 +1281,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 168.9821428571429,
-              "color": "hsl(169.0,88%,58%)"
+              "hue": 190.13090461538457,
+              "color": "hsl(190.1,88%,58%)"
             },
             {
               "name": "TD",
@@ -1980,16 +1293,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 215.9821428571429,
-              "color": "hsl(216.0,88%,58%)"
+              "hue": 237.13090461538457,
+              "color": "hsl(237.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 168.9821428571429,
-          "color": "hsl(169.0,88%,58%)"
+          "hue": 190.13090461538457,
+          "color": "hsl(190.1,88%,58%)"
         },
         {
           "name": "09 - Moment cinétique et Force centrale",
@@ -2005,8 +1318,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 88.98214285714289,
-              "color": "hsl(89.0,88%,54%)"
+              "hue": 110.13090461538457,
+              "color": "hsl(110.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2017,16 +1330,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 135.9821428571429,
-              "color": "hsl(136.0,88%,54%)"
+              "hue": 157.13090461538457,
+              "color": "hsl(157.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 88.98214285714289,
-          "color": "hsl(89.0,88%,54%)"
+          "hue": 110.13090461538457,
+          "color": "hsl(110.1,88%,54%)"
         },
         {
           "name": "10 - Thermodynamique",
@@ -2042,8 +1355,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2054,16 +1367,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         },
         {
           "name": "11 - Machines thermiques",
@@ -2079,8 +1392,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 168.9821428571429,
-              "color": "hsl(169.0,88%,58%)"
+              "hue": 190.13090461538457,
+              "color": "hsl(190.1,88%,58%)"
             },
             {
               "name": "TD",
@@ -2091,16 +1404,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 215.9821428571429,
-              "color": "hsl(216.0,88%,58%)"
+              "hue": 237.13090461538457,
+              "color": "hsl(237.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 168.9821428571429,
-          "color": "hsl(169.0,88%,58%)"
+          "hue": 190.13090461538457,
+          "color": "hsl(190.1,88%,58%)"
         },
         {
           "name": "12 - Electromagnétisme",
@@ -2116,8 +1429,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 246.9821428571429,
-              "color": "hsl(247.0,88%,58%)"
+              "hue": 268.13090461538457,
+              "color": "hsl(268.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2128,16 +1441,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 293.9821428571429,
-              "color": "hsl(294.0,88%,54%)"
+              "hue": 315.13090461538457,
+              "color": "hsl(315.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 246.9821428571429,
-          "color": "hsl(247.0,88%,58%)"
+          "hue": 268.13090461538457,
+          "color": "hsl(268.1,88%,54%)"
         },
         {
           "name": "13 - Amplification linéaire",
@@ -2153,8 +1466,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 102.98214285714289,
-              "color": "hsl(103.0,88%,54%)"
+              "hue": 124.13090461538457,
+              "color": "hsl(124.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2165,24 +1478,24 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 149.9821428571429,
-              "color": "hsl(150.0,88%,54%)"
+              "hue": 171.13090461538457,
+              "color": "hsl(171.1,88%,58%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 102.98214285714289,
-          "color": "hsl(103.0,88%,54%)"
+          "hue": 124.13090461538457,
+          "color": "hsl(124.1,88%,54%)"
         }
       ],
       "files": [],
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 41.98214285714289,
-      "color": "hsl(42.0,88%,46%)"
+      "hue": 63.130904615384566,
+      "color": "hsl(63.1,88%,46%)"
     },
     {
       "name": "SI",
@@ -2199,115 +1512,32 @@
               "path": "SI/01 - Cinématique/Cours",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "Cinématique_Cours_Essentiel de cinématique.pdf",
-                  "path": "SI/01%20-%20Cin%C3%A9matique/Cours/Cin%C3%A9matique_Cours_Essentiel%20de%20cin%C3%A9matique.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 268.9821428571429,
-              "color": "hsl(269.0,88%,54%)"
+              "hue": 290.13090461538457,
+              "color": "hsl(290.1,88%,54%)"
             },
             {
               "name": "TD",
               "path": "SI/01 - Cinématique/TD",
               "description": "",
               "children": [],
-              "files": [
-                {
-                  "name": "01 - Cinématique_TD_Loi entrée sortie Tapis volant corrigé.pdf",
-                  "path": "SI/01%20-%20Cin%C3%A9matique/TD/01%20-%20Cin%C3%A9matique_TD_Loi%20entr%C3%A9e%20sortie%20Tapis%20volant%20corrig%C3%A9.pdf",
-                  "corrige": true
-                },
-                {
-                  "name": "01 - Cinématique_TD_Loi entrée sortie Tapis volant.pdf",
-                  "path": "SI/01%20-%20Cin%C3%A9matique/TD/01%20-%20Cin%C3%A9matique_TD_Loi%20entr%C3%A9e%20sortie%20Tapis%20volant.pdf",
-                  "corrige": false
-                },
-                {
-                  "name": "01 - Cinématique_TD_Loi entrée sortie.pdf",
-                  "path": "SI/01%20-%20Cin%C3%A9matique/TD/01%20-%20Cin%C3%A9matique_TD_Loi%20entr%C3%A9e%20sortie.pdf",
-                  "corrige": false
-                }
-              ],
+              "files": [],
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 315.9821428571429,
-              "color": "hsl(316.0,88%,54%)"
+              "hue": 337.13090461538457,
+              "color": "hsl(337.1,88%,54%)"
             }
           ],
           "files": [],
-          "questions": [
-            {
-              "type": "Définition",
-              "enonce": "Définir formellement un solide indéformable $S$ et préciser le nombre de degrés de liberté associé dans l'espace 3D.",
-              "reponse": "Un solide indéformable $S$ est un ensemble continu de points matériels caractérisé par le fait que la distance entre deux points quelconques du solide reste constante à chaque instant au cours de son mouvement :\n$$\\forall A \\in S, \\ \\forall B \\in S, \\quad ||\\vec{AB}|| = \\text{constante}$$\nLa connaissance de la position d'un point unique de $S$ et de l'orientation de $S$ dans l'espace suffit à déterminer la position de tous les autres points. Un solide libre dans l'espace possède ainsi exactement **6 degrés de liberté (ddl)** : 3 translations et 3 rotations."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Expliquer la différence fondamentale en Sciences Industrielles entre un repère et un référentiel.",
-              "reponse": "- Un **référentiel** (noté $\\mathcal{R}$) est un objet physique réel, un solide de référence (ex: le bâti d'une machine, le sol, le châssis d'un véhicule) par rapport auquel on observe et on mesure un mouvement. On dit : « le mouvement de $S$ dans le référentiel $\\mathcal{R}$ ».\n- Un **repère** (noté $R$) est un outil de calcul purement mathématique défini par une origine $O$ et une base géométrique de trois vecteurs unitaires orthonormés directs $(\\vec{x}, \\vec{y}, \\vec{z})$. Il sert uniquement à projeter des vecteurs et à réaliser des calculs de coordonnées.\n*Ancrage :* On attache généralement un repère mathématique à un référentiel physique pour pouvoir quantifier le mouvement."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer et démontrer la propriété d'équiprojectivité des vitesses pour deux points d'un même solide.",
-              "reponse": "**Énoncé :** Soient $A$ et $B$ deux points appartenant à un même solide indéformable $S$ en mouvement par rapport à un référentiel $\\mathcal{R}_0$. Les projections sous forme de produit scalaire de leurs vecteurs vitesse sur la droite $(AB)$ sont égales :\n$$\\vec{V}(A \\in S/\\mathcal{R}_0) \\cdot \\vec{AB} = \\vec{V}(B \\in S/\\mathcal{R}_0) \\cdot \\vec{AB}$$\n\n**Démonstration :** \nPar définition du solide indéformable, la distance $AB$ est constante, donc $||\\vec{AB}||^2 = \\vec{AB} \\cdot \\vec{AB} = \\text{Cste}$. Dérivons cette constante par rapport au temps dans le référentiel d'observation $\\mathcal{R}_0$ :\n$$\\left.\\frac{d}{dt}(\\vec{AB} \\cdot \\vec{AB})\\right|_{\\mathcal{R}_0} = 0 \\implies 2\\vec{AB} \\cdot \\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = 0$$\nEn utilisant la relation de Chasles avec une origine fixe $O$ de $\\mathcal{R}_0$, on a $\\vec{AB} = \\vec{OB} - \\vec{OA}$. Par définition de la vitesse d'un point, $\\left.\\frac{d\\vec{OB}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(B \\in S/\\mathcal{R}_0)$ et $\\left.\\frac{d\\vec{OA}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(A \\in S/\\mathcal{R}_0)$. On injecte :\n$$\\vec{AB} \\cdot \\big(\\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0)\\big) = 0 \\implies \\vec{V}(A \\in S/\\mathcal{R}_0) \\cdot \\vec{AB} = \\vec{V}(B \\in S/\\mathcal{R}_0) \\cdot \\vec{AB}$$"
-            },
-            {
-              "type": "Piège",
-              "enonce": "Quelle est l'erreur d'interprétation fréquente concernant la propriété d'équiprojectivité ?",
-              "reponse": "L'équiprojectivité traduit uniquement l'égalité des *projections* des vitesses sur l'axe $(AB)$. Un piège classique est de croire ou d'écrire que les vecteurs vitesse sont égaux ($\\vec{V}(A) = \\vec{V}(B)$). C'est faux dès lors que le solide est en rotation : les composants perpendiculaires à la droite $(AB)$ peuvent être totalement différents."
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir mathématiquement le vecteur rotation instantanée d'un solide $S$ par rapport à un référentiel $\\mathcal{R}_0$.",
-              "reponse": "Le vecteur rotation instantanée, noté $\\vec{\\Omega}_{S/\\mathcal{R}_0}$, est l'unique vecteur structurel lié au mouvement de $S$ dans $\\mathcal{R}_0$ tel que, pour tout vecteur $\\vec{u}$ rigidement lié (fixe) au solide $S$, sa dérivée temporelle calculée dans $\\mathcal{R}_0$ s'obtient par le produit vectoriel :\n$$\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{u}$$\nSa direction définit l'axe instantané de rotation du solide et sa norme correspond à la vitesse angulaire instantanée (en rad/s)."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les formules de dérivation temporelle des vecteurs de la base polaire/cylindrique $(\\vec{e}_r, \\vec{e}_\\theta)$ tournant autour d'un axe fixe $\\vec{z}$ à la vitesse $\\dot{\\theta}$.",
-              "reponse": "Soit la base mobile $\\mathcal{R}_1$ tournant à la vitesse angulaire $\\dot{\\theta}$ par rapport à la base fixe $\\mathcal{R}_0$ autour de l'axe commun $\\vec{z}$ (donc $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} = \\dot{\\theta}\\vec{z}$).\n- Dérivée de $\\vec{e}_r$ : \n$$\\left.\\frac{d\\vec{e}_r}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{e}_r = (\\dot{\\theta}\\vec{z}) \\wedge \\vec{e}_r = \\dot{\\theta}\\vec{e}_\\theta$$\n- Dérivée de $\\vec{e}_\\theta$ : \n$$\\left.\\frac{d\\vec{e}_\\theta}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{e}_\\theta = (\\dot{\\theta}\\vec{z}) \\wedge \\vec{e}_\\theta = -\\dot{\\theta}\\vec{e}_r$$"
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer la formule de la base mobile (formule de Bour) permettant de changer de référentiel de dérivation pour un vecteur quelconque.",
-              "reponse": "Pour un vecteur quelconque $\\vec{u}$ (qu'il soit fixe ou mobile dans ses repères) et deux référentiels distincts $\\mathcal{R}_0$ (référentiel de calcul global) et $\\mathcal{R}_1$ (référentiel local mobile), la formule de Bour s'énonce :\n$$\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1} + \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$$\n*Interprétation :* La variation totale d'un vecteur est la somme de sa variation interne dans le repère local (dérivée de ses composantes) et d'un terme correctif de rotation entraîné par le mouvement de la base locale par rapport à la base globale."
-            },
-            {
-              "type": "Méthode",
-              "enonce": "Détailler la méthode systématique pour dériver un vecteur à l'aide de la formule de Bour sans risquer d'erreur de projection.",
-              "reponse": "Pour dériver un vecteur $\\vec{u}$ exprimé dans une base mobile $\\mathcal{R}_1$ par rapport à un référentiel $\\mathcal{R}_0$ :\n1. Écrire explicitement la formule de Bour : $\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1} + \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$.\n2. Calculer le premier terme $\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1}$ en dérivant directement les composantes scalaires de $\\vec{u}$ comme si la base $\\mathcal{R}_1$ était parfaitement fixe.\n3. Déterminer le vecteur rotation $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0}$.\n4. Effectuer le produit vectoriel $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$ en conservant de préférence les vecteurs exprimés dans la même base mobile $\\mathcal{R}_1$.\n5. Sommer les deux résultats. Cela évite d'avoir à projeter prématurément le vecteur dans la base fixe."
-            },
-            {
-              "type": "Propriété",
-              "enonce": "Donner les règles d'antisymétrie et de composition (relation de Chasles) s'appliquant aux vecteurs rotation.",
-              "reponse": "- **Propriété d'antisymétrie :** Le vecteur rotation change de signe direct lorsque l'on intervertit le solide observé et le référentiel d'observation :\n$$\\vec{\\Omega}_{S_2/S_1} = -\\vec{\\Omega}_{S_1/S_2}$$\n- **Loi de composition des mouvements :** Pour une chaîne cinématique de plusieurs solides intermédiaires (ex: $S_0, S_1, S_2$), les vecteurs rotation instantanée s'additionnent vectoriellement (structure de type Chasles) :\n$$\\vec{\\Omega}_{S_2/S_0} = \\vec{\\Omega}_{S_2/S_1} + \\vec{\\Omega}_{S_1/S_0}$$\n*Attention :* Cette linéarité ne s'applique qu'aux vecteurs complets, pas directement aux amplitudes scalaires si les axes de rotation changent d'orientation."
-            },
-            {
-              "type": "Théorème",
-              "enonce": "Énoncer et démontrer la formule fondamentale du champ des vitesses d'un solide indéformable (formule de Babinet / transport des vitesses).",
-              "reponse": "**Énoncé :** Pour deux points quelconques $A$ et $B$ appartenant à un même solide $S$ en mouvement par rapport à un référentiel $\\mathcal{R}_0$, la relation de transport de la vitesse (relation du « bras de levier ») s'écrit :\n$$\\vec{V}(B \\in S/\\mathcal{R}_0) = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{BA} \\wedge \\vec{\\Omega}_{S/\\mathcal{R}_0} = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$$\n\n**Démonstration :** \nPar définition du vecteur rotation, pour le vecteur $\\vec{AB}$ qui est rigidement lié au solide $S$, on a : $\\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$.\nExprimons ce même vecteur par la relation de Chasles à l'aide d'un point fixe $O$ de $\\mathcal{R}_0$ : $\\vec{AB} = \\vec{OB} - \\vec{OA}$. Dérivons cette expression par rapport au temps dans $\\mathcal{R}_0$ :\n$$\\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{OB}}{dt}\\right|_{\\mathcal{R}_0} - \\left.\\frac{d\\vec{OA}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0)$$\nEn égalisant les deux expressions de la dérivée de $\\vec{AB}$, on obtient immédiatement :\n$$\\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0) = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB} \\implies \\vec{V}(B \\in S/\\mathcal{R}_0) = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$$"
-            },
-            {
-              "type": "Définition",
-              "enonce": "Définir la notion cinématique de torseur et présenter la structure du torseur cinématique d'un solide.",
-              "reponse": "Un torseur est un outil mathématique modélisant un champ de vecteurs équiprojectif. Il est entièrement déterminé par deux vecteurs appelés ses **éléments de réduction** en un point donné $A$ :\n- Sa **résultante** (qui est indépendante du point de calcul).\n- Son **moment** (qui dépend du point de calcul selon la loi de transport des moments).\n\nPour un solide $S$ en mouvement par rapport à $\\mathcal{R}_0$, le **torseur cinématique** noté $\\{\\mathcal{V}_{S/\\mathcal{R}_0}\\}$ regroupe ces éléments au point $A$ :\n$$\\{\\mathcal{V}_{S/\\mathcal{R}_0}\\} = \\begin{matrix} \\\\\\ \\end{matrix} \\begin{Bmatrix} \\vec{\\Omega}_{S/\\mathcal{R}_0} \\\\ \\vec{V}(A \\in S/\\mathcal{R}_0) \\end{Bmatrix}_A$$\nLa résultante est le vecteur rotation $\\vec{\\Omega}_{S/\\mathcal{R}_0}$ et le moment est le vecteur vitesse au point $A$, $\\vec{V}(A \\in S/\\mathcal{R}_0)$."
-            },
-            {
-              "type": "Piège",
-              "enonce": "Quel est le piège classique à éviter lors de l'écriture ou de la somme de deux torseurs complexes ?",
-              "reponse": "Le piège majeur est d'effectuer des opérations (somme, identification) sur des torseurs dont les éléments de réduction ne sont pas exprimés **au même point**. Le vecteur vitesse (moment du torseur) changeant de valeur d'un point à un autre du solide, il est impératif d'utiliser la formule de transport des vitesses pour exprimer tous les torseurs au même point physique de réduction avant toute manipulation algébrique."
-            }
-          ],
-          "hasQuestions": true,
+          "questions": [],
+          "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 268.9821428571429,
-          "color": "hsl(269.0,88%,54%)"
+          "hue": 290.13090461538457,
+          "color": "hsl(290.1,88%,54%)"
         },
         {
           "name": "02 - Statique",
@@ -2323,8 +1553,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 301.9821428571429,
-              "color": "hsl(302.0,88%,54%)"
+              "hue": 323.13090461538457,
+              "color": "hsl(323.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2335,16 +1565,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 348.9821428571429,
-              "color": "hsl(349.0,88%,54%)"
+              "hue": 10.130904615384566,
+              "color": "hsl(10.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 301.9821428571429,
-          "color": "hsl(302.0,88%,54%)"
+          "hue": 323.13090461538457,
+          "color": "hsl(323.1,88%,54%)"
         },
         {
           "name": "03 - Engrenages",
@@ -2360,8 +1590,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 329.9821428571429,
-              "color": "hsl(330.0,88%,54%)"
+              "hue": 351.13090461538457,
+              "color": "hsl(351.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2372,16 +1602,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 16.98214285714289,
-              "color": "hsl(17.0,88%,54%)"
+              "hue": 38.130904615384566,
+              "color": "hsl(38.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 329.9821428571429,
-          "color": "hsl(330.0,88%,54%)"
+          "hue": 351.13090461538457,
+          "color": "hsl(351.1,88%,54%)"
         },
         {
           "name": "04 - Asservissement",
@@ -2397,8 +1627,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 74.98214285714289,
-              "color": "hsl(75.0,88%,46%)"
+              "hue": 96.13090461538457,
+              "color": "hsl(96.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2409,16 +1639,16 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 121.98214285714289,
-              "color": "hsl(122.0,88%,54%)"
+              "hue": 143.13090461538457,
+              "color": "hsl(143.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 74.98214285714289,
-          "color": "hsl(75.0,88%,46%)"
+          "hue": 96.13090461538457,
+          "color": "hsl(96.1,88%,54%)"
         },
         {
           "name": "05 - Concours",
@@ -2434,8 +1664,8 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 301.9821428571429,
-              "color": "hsl(302.0,88%,54%)"
+              "hue": 323.13090461538457,
+              "color": "hsl(323.1,88%,54%)"
             },
             {
               "name": "TD",
@@ -2446,41 +1676,30 @@
               "questions": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 348.9821428571429,
-              "color": "hsl(349.0,88%,54%)"
+              "hue": 10.130904615384566,
+              "color": "hsl(10.1,88%,54%)"
             }
           ],
           "files": [],
           "questions": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 301.9821428571429,
-          "color": "hsl(302.0,88%,54%)"
+          "hue": 323.13090461538457,
+          "color": "hsl(323.1,88%,54%)"
         }
       ],
       "files": [],
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 268.9821428571429,
-      "color": "hsl(269.0,88%,54%)"
+      "hue": 290.13090461538457,
+      "color": "hsl(290.1,88%,54%)"
     }
   ],
-  "files": [
-    {
-      "name": "manifest.json",
-      "path": "manifest.json",
-      "corrige": false
-    },
-    {
-      "name": "Optique_DM_Matrcies de dioptres corrigé.pdf",
-      "path": "Optique_DM_Matrcies%20de%20dioptres%20corrig%C3%A9.pdf",
-      "corrige": true
-    }
-  ],
+  "files": [],
   "questions": [],
   "hasQuestions": false,
   "isAvantDernier": false,
-  "hue": 235.98214285714286,
-  "color": "hsl(236.0,88%,58%)"
+  "hue": 257.13090461538457,
+  "color": "hsl(257.1,88%,58%)"
 }

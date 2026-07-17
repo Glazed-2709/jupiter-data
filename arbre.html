@@ -86,7 +86,9 @@
   #detail .dempty{padding:18px 20px;font-size:10px;color:var(--txt-dim);letter-spacing:.4px}
   #detail ::-webkit-scrollbar{width:8px}#detail ::-webkit-scrollbar-thumb{background:var(--line)}
 
-  #labels{position:fixed;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+  /* étiquettes flottantes désactivées : redondantes avec la petite fenêtre colorée
+     (#tip) déjà affichée au survol d'un nœud — celle-ci suffit. */
+  #labels{display:none}
   #labels .lab{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;
     font-size:10px;letter-spacing:.2px;color:#fff;text-shadow:0 0 5px #000,0 1px 2px #000;
     padding:0;opacity:0;transition:opacity .2s}
@@ -104,7 +106,7 @@
 
   #loader{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;
     flex-direction:column;gap:14px;background:#000;transition:opacity .5s}
-  #loader .ring{width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+  #loader .ring{width:28px;height:28px;border:2px solid var(--line);border-top-color:var(--accent);animation:spin 1s linear infinite}
   #loader p{font-size:10px;color:var(--txt-dim);letter-spacing:2px;text-transform:uppercase}
   @keyframes spin{to{transform:rotate(360deg)}}
 
@@ -127,7 +129,7 @@
   .gatetree b{color:var(--accent)}.gatetree .c{color:var(--txt-dim2)}
   #gateLoading{display:none}
   #gateLoading .ring{width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--accent);
-    border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 14px}
+    animation:spin 1s linear infinite;margin:0 auto 14px}
   #gateLoading p{font-size:10px;color:var(--txt-dim);letter-spacing:2px;text-transform:uppercase}
 
   /* chip dossier dans la bottombar */
@@ -340,12 +342,6 @@ function hashHue(str){
   const a=HUE_OFFSETS[i2], b=HUE_OFFSETS[Math.min(i2+1,HUE_OFFSETS.length-1)];
   return (baseHue+a+(b-a)*f+360)%360;
 }
-/* teinte par défaut d'une section (classe 1) : angle d'or depuis son index dans
-   schema.json (même ordre alphabétique que index.html/editeur.html), pour un
-   écartement maximal entre sections voisines — identique aux autres pages. */
-const GOLDEN_ANGLE=137.50776;
-function spacedHue(i){ return ((baseHue+i*GOLDEN_ANGLE)%360+360)%360; }
-let sectionIndex=0;
 /* dégradé du GRAPHE : lié à la PROFONDEUR, ancré sur graphHue — la couleur choisie
    dans l'éditeur pour CETTE section (_meta.json/color) si elle existe, sinon une
    teinte déterministe dérivée du nom (jamais l'accent global seul). Recalculé par
@@ -363,7 +359,7 @@ function therm(hue){ return `hsl(${hue.toFixed(1)},88%,${lFor(hue)}%)`; }
 function thermBright(hue){ return `hsl(${hue.toFixed(1)},95%,68%)`; }
 function thermDark(hue){ return `hsl(${hue.toFixed(1)},55%,13%)`; }
 function assignHues(){
-  graphHue = (root && root.metaColor) ? hexToHue(root.metaColor) : spacedHue(sectionIndex);
+  graphHue = (root && root.metaColor) ? hexToHue(root.metaColor) : hashHue(getSection());
   nodes.forEach(n=>{ n.t=n.depth/DEPTH_SCALE; n.hue=lerpStopsHue(n.t); });
   updateGradSwatch();
 }
@@ -442,10 +438,6 @@ function layout(){
 const elem=document.getElementById('graph'); const tip=document.getElementById('tip');
 let hlSet=new Set(), srchSet=null, clickSet=null, clickDepths=null;
 function nodeCol(n){
-  /* le sommet de classe 1 (racine de CETTE section) n'est plus traité à part : il
-     affiche sa vraie teinte comme n'importe quel nœud, et rejoint normalement le
-     surlignage bright quand il fait partie de l'ascendance du nœud sélectionné —
-     seule l'ultra-racine dans editeur.html reste noire. */
   const f=srchSet||clickSet;
   if(f) return f.has(n.id)?thermBright(n.hue):thermDark(n.hue);
   if(hlSet.size) return hlSet.has(n.id)?thermBright(n.hue):therm(n.hue);
@@ -515,15 +507,12 @@ function iconTexture(type){
   const tex=new TCanvasTexture(cv); if('colorSpace'in tex){try{tex.colorSpace='srgb';}catch(e){}}
   tex.needsUpdate=true; _iconTex.set(key,tex); return tex;
 }
-/* la racine (sommet de la section affichée, classe 1) affiche désormais sa vraie
-   couleur comme tout autre nœud — seule l'ultra-racine dans editeur.html reste
-   noire. On lui garde juste une icône légèrement plus grande pour la repérer. */
 function makeNodeObj(n){
   if(!iconsReady) return false;            /* secours : sphère par défaut */
   const mat=new TSpriteMaterial({map:iconTexture(n.type), transparent:true, depthWrite:false});
   mat.color.set(therm(n.hue));               /* teinte l'icône blanche à la couleur du nœud */
   const s=new TSprite(mat);
-  const r=baseR(n)*(n.type==='root'?2.4:2.2); /* icône ≈ taille du nœud, racine un peu plus grande */
+  const r=baseR(n)*2.2;                     /* icône ≈ taille du nœud */
   s.scale.set(r,r,1); s._baseR=r; s._mat=mat;
   return s;
 }
@@ -612,11 +601,11 @@ ctrl.addEventListener('start',()=>{dragging=true;}); ctrl.addEventListener('end'
         let dim=1;
         if(srchSet){ dim=srchSet.has(n.id)?1:0.08; }
         else if(clickDepths){
-          /* pas de fondu par profondeur à l'intérieur du sous-arbre sélectionné :
-             seuls les nœuds hors du sous-arbre/lignée sont assombris, le reste
-             garde sa couleur pleine et inchangée, quelle que soit sa profondeur. */
           const d=clickDepths.get(n.id);
-          dim = d===undefined ? 0.08 : 1;
+          if(d===undefined) dim=0.08;          /* hors sous-arbre */
+          else if(d<0||d<=1) dim=1;            /* ancêtres, nœud cliqué, enfants directs */
+          else if(d===2) dim=0.45;             /* petits-enfants */
+          else dim=0.25;                       /* plus profond */
         }
         if(mat.opacity!==dim) mat.opacity=dim;
       }
@@ -854,7 +843,6 @@ function focusNode(n){
   /* explose la branche : on écarte les nœuds DANS le sous-arbre (les arêtes internes s'allongent) */
   collapseAll();
   if(n.id!==root.id){ sub.forEach(id=>{ if(id!==n.id) byId[id]._ext=EXPAND; }); }
-  buildLabels(sub);
   /* cadrer toute la branche sur son étendue APRÈS dilatation */
   const ids=[...sub];
   let cx=0,cy=0,cz=0;
@@ -869,7 +857,7 @@ function focusNode(n){
   G.cameraPosition({x:cx+dx*dist, y:cy+dy*dist, z:cz+dz*dist}, {x:cx,y:cy,z:cz}, 1200);
 }
 G.onNodeClick(activate);
-G.onBackgroundClick(()=>{ if(clickSet){clickSet=null; clickDepths=null; refresh();} focusedNodeId=null; collapseAll(); closeDetail(); defaultLabels(); });
+G.onBackgroundClick(()=>{ if(clickSet){clickSet=null; clickDepths=null; refresh();} focusedNodeId=null; collapseAll(); closeDetail(); });
 
 /* ---- panneau de détail (jupiter) ---- */
 const detail=document.getElementById('detail');
@@ -902,7 +890,7 @@ function openDetail(n){
   detail.classList.add('on');
 }
 function closeDetail(){ detail.classList.remove('on'); }
-document.getElementById('dclose').onclick=()=>{ closeDetail(); clickSet=null; clickDepths=null; focusedNodeId=null; collapseAll(); refresh(); defaultLabels(); };
+document.getElementById('dclose').onclick=()=>{ closeDetail(); clickSet=null; clickDepths=null; focusedNodeId=null; collapseAll(); refresh(); };
 
 /* ---- recherche (discrète) ---- */
 const searchwrap=document.getElementById('searchwrap'), search=document.getElementById('search');
@@ -927,7 +915,7 @@ document.getElementById('resetBtn').addEventListener('click',()=>{
     focusNode(branchRoot);
     return;
   }
-  closeDetail(); collapseAll(); clickSet=null; clickDepths=null; hlSet.clear(); focusedNodeId=null; refresh(); defaultView(700); defaultLabels(); });
+  closeDetail(); collapseAll(); clickSet=null; clickDepths=null; hlSet.clear(); focusedNodeId=null; refresh(); defaultView(700); });
 
 function onResize(){G.width(innerWidth).height(innerHeight);}
 addEventListener('resize',onResize); onResize();
@@ -978,20 +966,17 @@ async function reconnectFolder(){
 }
 async function resolveSectionAndScan(){
   const sectionId=getSection();
-  /* charger le schema pour valider la section, et retrouver son index parmi ses
-     frères (même ordre que index.html/editeur.html) pour la teinte par défaut */
+  /* charger le schema pour valider la section */
   try{
     const sfh=await xRootHandle.getFileHandle('schema.json');
     const sf=await sfh.getFile();
     const schema=JSON.parse(await sf.text());
     /* vérifier que la section existe dans le schema */
-    const secs=schema?.sections||[];
-    const idx=secs.findIndex(s=>s.id===sectionId);
-    sectionIndex=idx<0?0:idx;
-    if(idx<0 && sectionId){
+    const sec=schema?.sections?.find(s=>s.id===sectionId);
+    if(!sec && sectionId){
       /* section inconnue du schema mais on tente quand même */
     }
-  }catch(e){ sectionIndex=0; /* pas de schema — on continue */ }
+  }catch(e){ /* pas de schema — on continue */ }
   if(!sectionId){ setGate('connect'); return; }
   try{ rootHandle=await xRootHandle.getDirectoryHandle(sectionId); }
   catch(e){
@@ -1021,7 +1006,7 @@ async function scanAndBuild(section){
   setTimeout(()=>{
     tuneLights();
     const restored=tryRestoreLastPath();
-    if(!restored){ defaultView(1400); defaultLabels(); }
+    if(!restored) defaultView(1400);
   }, 200);
   /* boutons d'en-tête */
   const ft=document.getElementById('folderTools');

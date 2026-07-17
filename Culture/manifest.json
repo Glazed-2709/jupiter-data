@@ -12,8 +12,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 60.923076923076906,
-      "color": "hsl(60.9,88%,46%)"
+      "hue": 342.1153846153845,
+      "color": "hsl(342.1,88%,54%)"
     },
     {
       "name": "Bonheur",
@@ -24,8 +24,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 77.20879120879124,
-      "color": "hsl(77.2,88%,46%)"
+      "hue": 358.40109890109875,
+      "color": "hsl(358.4,88%,54%)"
     },
     {
       "name": "Conscience",
@@ -36,8 +36,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
+      "hue": 21.115384615384528,
+      "color": "hsl(21.1,88%,54%)"
     },
     {
       "name": "Devoir",
@@ -48,8 +48,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
+      "hue": 37.11538461538453,
+      "color": "hsl(37.1,88%,54%)"
     },
     {
       "name": "Etat",
@@ -60,8 +60,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 77.20879120879124,
-      "color": "hsl(77.2,88%,46%)"
+      "hue": 358.40109890109875,
+      "color": "hsl(358.4,88%,54%)"
     },
     {
       "name": "Inconscient",
@@ -72,8 +72,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
+      "hue": 21.115384615384528,
+      "color": "hsl(21.1,88%,54%)"
     },
     {
       "name": "Justice",
@@ -84,8 +84,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
+      "hue": 37.11538461538453,
+      "color": "hsl(37.1,88%,54%)"
     },
     {
       "name": "Langage",
@@ -96,8 +96,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
+      "hue": 71.40109890109875,
+      "color": "hsl(71.4,88%,46%)"
     },
     {
       "name": "Liberte",
@@ -108,8 +108,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
+      "hue": 21.115384615384528,
+      "color": "hsl(21.1,88%,54%)"
     },
     {
       "name": "Nature",
@@ -120,8 +120,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
+      "hue": 37.11538461538453,
+      "color": "hsl(37.1,88%,54%)"
     },
     {
       "name": "Pouvoir",
@@ -132,8 +132,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
+      "hue": 71.40109890109875,
+      "color": "hsl(71.4,88%,46%)"
     },
     {
       "name": "Raison",
@@ -144,8 +144,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
+      "hue": 131.40109890109875,
+      "color": "hsl(131.4,88%,54%)"
     },
     {
       "name": "Religion",
@@ -156,8 +156,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
+      "hue": 37.11538461538453,
+      "color": "hsl(37.1,88%,54%)"
     },
     {
       "name": "Science",
@@ -168,8 +168,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
+      "hue": 71.40109890109875,
+      "color": "hsl(71.4,88%,46%)"
     },
     {
       "name": "Technique",
@@ -180,8 +180,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
+      "hue": 131.40109890109875,
+      "color": "hsl(131.4,88%,54%)"
     },
     {
       "name": "Temps",
@@ -192,8 +192,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 270.7802197802198,
-      "color": "hsl(270.8,88%,54%)"
+      "hue": 191.97252747252742,
+      "color": "hsl(192.0,88%,58%)"
     },
     {
       "name": "Travail",
@@ -204,8 +204,8 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
+      "hue": 71.40109890109875,
+      "color": "hsl(71.4,88%,46%)"
     },
     {
       "name": "Verite",
@@ -216,25 +216,14 @@
       "questions": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
+      "hue": 131.40109890109875,
+      "color": "hsl(131.4,88%,54%)"
     }
   ],
-  "files": [
-    {
-      "name": "files.zip",
-      "path": "files.zip",
-      "corrige": false
-    },
-    {
-      "name": "manifest.json",
-      "path": "manifest.json",
-      "corrige": false
-    }
-  ],
+  "files": [],
   "questions": [],
   "hasQuestions": false,
   "isAvantDernier": true,
-  "hue": 60.92307692307692,
-  "color": "hsl(60.9,88%,46%)"
+  "hue": 342.1153846153845,
+  "color": "hsl(342.1,88%,54%)"
 }

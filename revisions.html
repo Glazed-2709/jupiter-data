@@ -198,7 +198,7 @@
     background:rgba(12,13,17,.95);border:1px solid var(--accent);color:#eff2f8;
     font-family:var(--mono);font-size:10px;letter-spacing:.5px;padding:11px 16px;backdrop-filter:blur(8px)}
 
-  .spin{width:24px;height:24px;border:2px solid var(--line);border-top-color:var(--accent);
+  .spin{width:26px;height:26px;border:2px solid var(--line);border-top-color:var(--accent);
     border-radius:50%;animation:rot 1s linear infinite;margin:40px auto}
   @keyframes rot{to{transform:rotate(360deg)}}
 
@@ -479,12 +479,6 @@ function hashHue(str){
   for(let i=0;i<str.length;i++){ h=(h*31+str.charCodeAt(i))>>>0; }
   return lerpStopsHue((h%1000)/1000);
 }
-/* teinte par défaut d'une section (classe 1) : angle d'or depuis son index dans
-   schema.json (même ordre que index.html/editeur.html/arbre.html), pour un
-   écartement maximal entre sections voisines. */
-const GOLDEN_ANGLE=137.50776;
-function spacedHue(i){ return ((baseHue+i*GOLDEN_ANGLE)%360+360)%360; }
-let sectionIndex=0;
 /* la grille de tuiles (.branchgrid) est en 4 colonnes (cf CSS) : un dégradé basé
    sur le seul index à plat "saute" visuellement quand on repasse à la ligne (la
    tuile en bas à gauche prend une teinte très éloignée de celle du haut à droite,
@@ -592,15 +586,6 @@ async function resolveSectionAndScan(){
   const sectionId=getSection();
   if(!sectionId){ show('missing'); return; }
   ACTIVE_SEC={id:sectionId,label:sectionId};
-  /* index de cette section parmi ses frères (même ordre que index.html/editeur.html)
-     pour la teinte par défaut — écartement maximal via angle d'or */
-  try{
-    const sfh=await xRootHandle.getFileHandle('schema.json');
-    const sf=await sfh.getFile();
-    const schema=JSON.parse(await sf.text());
-    const idx=(schema?.sections||[]).findIndex(s=>s.id===sectionId);
-    sectionIndex=idx<0?0:idx;
-  }catch(e){ sectionIndex=0; /* pas de schema — on continue */ }
   try{ rootHandle=await xRootHandle.getDirectoryHandle(sectionId); }
   catch(e){
     $('#msSec').textContent=(xRootHandle.name||'X')+' / '+sectionId;
@@ -663,8 +648,8 @@ async function buildTree(dirHandle){
 }
 function indexNodes(node){ nodesByPath[node.path]=node; node.children.forEach(indexNodes); }
 /* le dégradé des tuiles est amorcé par la couleur de la section (_meta.json/color,
-   choisie dans l'éditeur) ou à défaut par spacedHue(sectionIndex) — jamais par
-   l'accent global du graphe 3D, donc rien à refaire ici quand celui-ci change. */
+   choisie dans l'éditeur) ou à défaut par hashHue(nom) — jamais par l'accent global
+   du graphe 3D, donc rien à refaire ici quand celui-ci change. */
 
 async function scanAndRender(){
   show('loading');
@@ -676,7 +661,7 @@ async function scanAndRender(){
   /* couleur de départ de la section : celle choisie dans l'éditeur (_meta.json/color)
      si elle existe, sinon une teinte déterministe dérivée du nom (jamais figée en dur) —
      c'est cette teinte qui amorce tout le dégradé des sous-branches. */
-  root.hue = root.metaColor ? hexToHue(root.metaColor) : spacedHue(sectionIndex);
+  root.hue = root.metaColor ? hexToHue(root.metaColor) : hashHue(ACTIVE_SEC?.label||getSection());
   assignColors(root);
   renderBranch(findLastPathNode()||root);
   show('branch');
