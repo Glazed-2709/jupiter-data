@@ -1,0 +1,113 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la somme et le produit des éléments d'une famille $(a_i)_{i \\in I}$ indexée par un ensemble fini $I$, ainsi que la convention pour l'ensemble vide.",
+    "reponse": "Hypothèses : $I$ un ensemble fini et $(a_i)_{i \\in I}$ une famille de nombres réels ou complexes. Relations :\n- La somme se note :\n$$\\sum_{i \\in I} a_i$$\n- Le produit se note :\n$$\\prod_{i \\in I} a_i$$\nConvention pour l'ensemble vide : si $I = \\emptyset$, alors $\\sum_{i \\in \\emptyset} a_i = 0$ et $\\prod_{i \\in \\emptyset} a_i = 1$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés fondamentales des sommes et produits concernant la décomposition, la linéarité et la distribution de la puissance.",
+    "reponse": "Hypothèses : $m, n, p \\in \\mathbb{Z}$ tels que $m \\le n < p$, $\\lambda, \\mu, \\alpha \\in \\mathbb{C}$, et $q \\in \\mathbb{N}$. Relations :\n- Relation de Chasles pour les sommes :\n$$\\sum_{k=m}^n a_k + \\sum_{k=n+1}^p a_k = \\sum_{k=m}^p a_k$$\n- Décomposition pour les produits :\n$$\\left(\\prod_{k=m}^n a_k\\right) \\times \\left(\\prod_{k=n+1}^p a_k\\right) = \\prod_{k=m}^p a_k$$\n- Linéarité de la somme :\n$$\\sum_{k=m}^n (\\lambda a_k + \\mu b_k) = \\lambda \\sum_{k=m}^n a_k + \\mu \\sum_{k=m}^n b_k$$\n- Sortie d'une constante dans un produit :\n$$\\prod_{k=m}^n (\\alpha a_k) = \\alpha^{n-m+1} \\prod_{k=m}^n a_k$$\n- Produit de deux produits :\n$$\\prod_{k=m}^n a_k b_k = \\left(\\prod_{k=m}^n a_k\\right) \\left(\\prod_{k=m}^n b_k\\right)$$\n- Puissance d'un produit :\n$$\\prod_{k=m}^n a_k^q = \\left(\\prod_{k=m}^n a_k\\right)^q$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la valeur de la somme de la constante 1 indexée de $m$ à $n$.",
+    "reponse": "Hypothèses : $m$ et $n$ deux entiers tels que $m \\le n$. Relation :\n$$\\sum_{k=m}^n 1 = n - m + 1$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la factorielle d'un entier naturel $n$ et préciser sa convention pour $n=0$.",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}$. Relations :\n- Pour $n \\in \\mathbb{N}^*$ :\n$$n! = \\prod_{k=1}^n k = 1 \\times 2 \\times \\dots \\times n$$\n- Convention pour $n = 0$ :\n$$0! = 1$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la formule d'identité remarquable générale (parfois appelée formule de Bernoulli) pour $a^{n+1} - b^{n+1}$.",
+    "reponse": "Hypothèses : Pour tout $a, b \\in \\mathbb{C}$ et $n \\in \\mathbb{N}$. Relation :\n$$a^{n+1} - b^{n+1} = (a - b) \\sum_{k=0}^n a^{n-k} b^k$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer le principe du retournement d'une somme algébrique de 0 à $n$.",
+    "reponse": "Hypothèses : Une somme de $0$ à $n$.\nLe retournement consiste à changer l'indice de sommation pour numéroter les termes de la droite vers la gauche (du dernier au premier terme) en posant le changement d'indice $k = n - i$. Relation :\n$$\\sum_{i=0}^n a_i = \\sum_{k=0}^n a_{n-k}$$"
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Retrouver la formule générale de simplification d'une somme télescopique $\\sum_{k=m}^n (b_{k+1} - b_k)$.",
+    "reponse": "Hypothèses : Famille $(b_k)$, entiers $m \\le n$. Relation à connaître :\n$$\\sum_{k=m}^n (b_{k+1} - b_k) = b_{n+1} - b_m$$",
+    "calcul": "Par linéarité de la somme :\n$$\\sum_{k=m}^n (b_{k+1} - b_k) = \\sum_{k=m}^n b_{k+1} - \\sum_{k=m}^n b_k$$\nEn effectuant le changement d'indice $j = k+1$ dans la première somme :\n$$\\sum_{j=m+1}^{n+1} b_j - \\sum_{k=m}^n b_k = \\left(\\sum_{j=m+1}^n b_j + b_{n+1}\\right) - \\left(b_m + \\sum_{k=m+1}^n b_k\\right) = b_{n+1} - b_m$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les expressions des sommes usuelles des premiers entiers $\\sum_{k=1}^n k$, des carrés $\\sum_{k=1}^n k^2$ et des cubes $\\sum_{k=1}^n k^3$.",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}^*$. Relations à retenir par cœur :\n- Somme des entiers :\n$$\\sum_{k=1}^n k = \\dfrac{n(n+1)}{2}$$\n- Somme des carrés :\n$$\\sum_{k=1}^n k^2 = \\dfrac{n(n+1)(2n+1)}{6}$$\n- Somme des cubes :\n$$\\sum_{k=1}^n k^3 = \\dfrac{n^2(n+1)^2}{4} = \\left(\\sum_{k=1}^n k\\right)^2$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la formule de la somme des termes d'une suite arithmétique de raison $r$ et de premier terme $u_0=a$.",
+    "reponse": "Hypothèses : Suite arithmétique de raison $r \\in \\mathbb{C}$ et de premier terme $u_0 = a$. Relation pour la somme de $m$ à $n$ ($m \\le n$) :\n$$\\sum_{k=m}^n u_k = (n - m + 1) \\dfrac{u_m + u_n}{2} = (n - m + 1)a + r \\dfrac{(n - m + 1)(n + m)}{2}$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la formule de la somme des termes d'une suite géométrique de raison $r$ et de premier terme $u_0=a$.",
+    "reponse": "Hypothèses : Suite géométrique de raison $r \\in \\mathbb{C}$ et de premier terme $u_0 = a$. Relation pour la somme de $m$ à $n$ ($m \\le n$) :\n- Si $r \\neq 1$ :\n$$\\sum_{k=m}^n u_k = a r^m \\dfrac{1 - r^{n-m+1}}{1 - r}$$\n- Si $r = 1$ :\n$$\\sum_{k=m}^n u_k = (n - m + 1)a$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les règles d'interversion de l'ordre de sommation pour une somme double rectangulaire et pour une somme double triangulaire.",
+    "reponse": "Hypothèses : Famille de complexes $a_{i,j}$. Relations :\n- **Somme rectangulaire** sur $\\llbracket 1, n \\rrbracket \\times \\llbracket 1, p \\rrbracket$ :\n$$\\sum_{i=1}^n \\left( \\sum_{j=1}^p a_{i,j} \\right) = \\sum_{j=1}^p \\left( \\sum_{i=1}^n a_{i,j} \\right)$$\n- **Somme triangulaire** sur $1 \\le i \\le j \\le n$ :\n$$\\sum_{1 \\le i \\le j \\le n} a_{i,j} = \\sum_{i=1}^n \\left( \\sum_{j=i}^n a_{i,j} \\right) = \\sum_{j=1}^n \\left( \\sum_{i=1}^j a_{i,j} \\right)$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la formule du produit de deux sommes indépendantes.",
+    "reponse": "Hypothèses : Deux familles de nombres complexes $(a_i)_{i \\in I}$ et $(b_j)_{j \\in J}$ indexées par deux ensembles finis indépendants $I$ et $J$. Relation :\n$$\\left( \\sum_{i \\in I} a_i \\right) \\left( \\sum_{j \\in J} b_j \\right) = \\sum_{(i,j) \\in I \\times J} a_i b_j$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir algébriquement le coefficient binomial $\\binom{n}{k}$ (« $k$ parmi $n$ ») et préciser sa valeur hors des bornes.",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\llbracket 0, n \\rrbracket$. Relation :\n$$\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$$\nSi $k < 0$ ou si $k > n$, on pose conventionnellement $\\binom{n}{k} = 0$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la propriété de symétrie des coefficients binomiaux.",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$\\binom{n}{k} = \\binom{n}{n-k}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la formule du pion (ou formule du chef).",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$k \\binom{n}{k} = n \\binom{n-1}{k-1}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la formule de Pascal pour les coefficients binomiaux.",
+    "reponse": "Hypothèses : $n \\in \\mathbb{N}$ et $k \\in \\mathbb{Z}$. Relation :\n$$\\binom{n}{k} + \\binom{n}{k+1} = \\binom{n+1}{k+1}$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule itérée de Pascal pour la sommation de coefficients binomiaux.",
+    "reponse": "Hypothèses : $n, p \\in \\mathbb{N}$ deux entiers naturels tels que $p \\le n$. Relation :\n$$\\sum_{k=p}^n \\binom{k}{p} = \\binom{n+1}{p+1}$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule du binôme de Newton et son corollaire pour la somme des coefficients d'une ligne.",
+    "reponse": "Hypothèses : Deux nombres complexes $a, b \\in \\mathbb{C}$ et un entier naturel $n \\in \\mathbb{N}$. Relations :\n- Binôme de Newton :\n$$(a+b)^n = \\sum_{k=0}^n \\binom{n}{k} a^k b^{n-k} = \\sum_{k=0}^n \\binom{n}{k} a^{n-k} b^k$$\n- Corollaire (Somme de la ligne) :\n$$\\forall n \\in \\mathbb{N}, \\quad \\sum_{k=0}^n \\binom{n}{k} = 2^n$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule de Vandermonde sous ses deux formes d'écriture.",
+    "reponse": "Hypothèses : $a, b \\in \\mathbb{N}$ et $n \\in \\llbracket 0, a+b \\rrbracket$. Relations :\n- Formule de Vandermonde :\n$$\\sum_{k=0}^n \\binom{a}{k} \\binom{b}{n-k} = \\binom{a+b}{n}$$\n- Écriture alternative profitant de la nullité des coefficients binomiaux :\n$$\\sum_{k=0}^{a+b} \\binom{a}{k} \\binom{b}{n-k} = \\binom{a+b}{n}$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Énoncer les formules de base de trigonométrie (relation fondamentale, formules d'addition et de duplication pour le cosinus et le sinus).",
+    "reponse": "Hypothèses : Pour tous réels $a, b$. Relations :\n- Relation fondamentale : $\\cos^2(a) + \\sin^2(a) = 1$\n- Formules d'addition :\n$$\\cos(a+b) = \\cos(a)\\cos(b) - \\sin(a)\\sin(b)$$\n$$\\cos(a-b) = \\cos(a)\\cos(b) + \\sin(a)\\sin(b)$$\n$$\\sin(a+b) = \\sin(a)\\cos(b) + \\cos(a)\\sin(b)$$\n$$\\sin(a-b) = \\sin(a)\\cos(b) - \\cos(a)\\sin(b)$$\n- Formules de duplication :\n$$\\cos(2a) = \\cos^2(a) - \\sin^2(a) = 2\\cos^2(a) - 1 = 1 - 2\\sin^2(a)$$\n$$\\sin(2a) = 2\\sin(a)\\cos(a)$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les formules d'Euler pour le cosinus et le sinus.",
+    "reponse": "Hypothèses : Pour tout réel ou complexe $\\theta$. Relations :\n$$\\cos(\\theta) = \\dfrac{e^{i\\theta} + e^{-i\\theta}}{2}$$\n$$\\sin(\\theta) = \\dfrac{e^{i\\theta} - e^{-i\\theta}}{2i}$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule de Moivre pour les puissances complexes.",
+    "reponse": "Hypothèses : Pour tout réel $\\theta$ et tout entier relatif $n \\in \\mathbb{Z}$. Relation :\n$$(\\cos(\\theta) + i\\sin(\\theta))^n = \\cos(n\\theta) + i\\sin(n\\theta)$$\nCe qui s'écrit de manière exponentielle : $\\left(e^{i\\theta}\\right)^n = e^{in\\theta}$."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir ce qu'est une primitive d'une fonction continue $f$ sur un intervalle $I$.",
+    "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ (où $\\mathbb{K} = \\mathbb{R}$ ou $\\mathbb{C}$) une fonction continue sur un intervalle $I$.\nUne fonction $F:I \\rightarrow \\mathbb{K}$ est appelée une primitive de $f$ sur $I$ si $F$ est dérivable sur $I$ et si sa dérivée est égale à $f$ :\n$$\\forall x \\in I, \\ F'(x) = f(x)$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'unicité des primitives à une constante additive près.",
+    "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ une fonction continue sur un intervalle $I$, admettant une primitive $F$ sur $I$.\nToutes les primitives de $f$ sur $I$ sont les fonctions de la forme :\n$$x \\mapsto F(x) + C$$\noù $C \\in \\mathbb{K}$ est une constante."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'intégrale d'une fonction continue $f$ entre deux bornes $a$ et $b$ à l'aide de ses primitives.",
+    "reponse": "Hypothèses : Soit $f:I \\rightarrow \\mathbb{K}$ une fonction continue sur un intervalle $I$, et $(a, b) \\in I^2$.\nSi $F$ est une primitive quelconque de $f$ sur $I$, l'intégrale de $f$ de $a$ à $b$ est le scalaire défini par :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t = [F(t)]_a^b = F(b) - F(a)$$\nCette valeur est indépendante du choix de la primitive $F$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés fondamentales de l'intégrale liées aux bornes (relation de Chasles, inversion des bornes).",
+    "reponse": "Hypothèses : Soit $f$ une fonction continue sur un intervalle $I$ et $a, b, c \\in I$. Relations :\n- Inversion des bornes :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t = -\\int_{b}^{a} f(t) \\,\\mathrm{d}t$$\n- Intégrale sur un point : $\\int_{a}^{a} f(t) \\,\\mathrm{d}t = 0$\n- Relation de Chasles :\n$$\\int_{a}^{b} f(t) \\,\\mathrm{d}t + \\int_{b}^{c} f(t) \\,\\mathrm{d}t = \\int_{a}^{c} f(t) \\,\\mathrm{d}t$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la propriété de linéarité de l'intégrale.",
+    "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions continues sur $I$, $a, b \\in I$ et $\\lambda, \\mu \\in \\mathbb{K}$. Relation :\n$$\\int_{a}^{b} (\\lambda f(t) + \\mu g(t)) \\,\\mathrm{d}t = \\lambda \\int_{a}^{b} f(t) \\,\\mathrm{d}t + \\mu \\int_{a}^{b} g(t) \\,\\mathrm{d}t$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les propriétés de positivité et de croissance de l'intégrale pour des fonctions à valeurs réelles.",
+    "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions continues sur $I$ à valeurs réelles, et $a, b \\in I$ avec $a \\le b$. Relations :\n- **Positivité** : Si $\\forall t \\in [a, b], \\ f(t) \\ge 0$, alors $\\int_{a}^{b} f(t) \\,\\mathrm{d}t \\ge 0$\n- **Croissance** : Si $\\forall t \\in [a, b], \\ f(t) \\le g(t)$, alors $\\int_{a}^{b} f(t) \\,\\mathrm{d}t \\le \\int_{a}^{b} g(t) \\,\\mathrm{d}t$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer l'inégalité triangulaire pour les intégrales (majororation du module ou de la valeur absolue).",
+    "reponse": "Hypothèses : Soit $f$ une fonction continue sur $I$ et $a, b \\in I$ avec $a \\le b$. Relation :\n$$\\left| \\int_{a}^{b} f(t) \\,\\mathrm{d}t \\right| \\le \\int_{a}^{b} |f(t)| \\,\\mathrm{d}t$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule d'intégration par parties (IPP) pour les intégrales définies.",
+    "reponse": "Hypothèses : Soient $u$ et $v$ deux fonctions de classe $\\mathcal{C}^1$ sur un intervalle $I$, et $a, b \\in I$. Relation :\n$$\\int_{a}^{b} u'(t)v(t) \\,\\mathrm{d}t = [u(t)v(t)]_a^b - \\int_{a}^{b} u(t)v'(t) \\,\\mathrm{d}t$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de changement de variable pour une intégrale définie.",
+    "reponse": "Hypothèses : Soit $f$ une fonction continue sur un intervalle $I$. Soit $\\varphi:[\\alpha, \\beta] \\rightarrow I$ une fonction de classe $\\mathcal{C}^1$. Relation :\n$$\\int_{\\alpha}^{\\beta} f(\\varphi(t)) \\varphi'(t) \\,\\mathrm{d}t = \\int_{\\varphi(\\alpha)}^{\\varphi(\\beta)} f(x) \\,\\mathrm{d}x$$\n*(On pose le changement de variable $x = \\varphi(t)$, ce qui donne $\\mathrm{d}x = \\varphi'(t)\\,\\mathrm{d}t$ avec modification des bornes).*"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les primitives usuelles des fonctions de la forme $x \\mapsto x^n$ (pour $n \\in \\mathbb{Z}$, $n \\neq -1$) et $x \\mapsto \\dfrac{1}{x}$.",
+    "reponse": "- Pour $n \\in \\mathbb{Z} \\setminus \\{-1\\}$, les primitives de $x \\mapsto x^n$ sur tout intervalle inclus dans son domaine sont de la forme :\n$$x \\mapsto \\dfrac{x^{n+1}}{n+1} + C$$\n- Les primitives de $x \\mapsto \\dfrac{1}{x}$ sur $]0, +\\infty[$ ou $]-\\infty, 0[$ sont de la forme :\n$$x \\mapsto \\ln(|x|) + C$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les primitives usuelles des fonctions trigonométriques directes $\\cos$, $\\sin$ ainsi que de $x \\mapsto \\dfrac{1}{1+x^2}$.",
+    "reponse": "- Les primitives de $x \\mapsto \\cos(x)$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto \\sin(x) + C$\n- Les primitives de $x \\mapsto \\sin(x)$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto -\\cos(x) + C$\n- Les primitives de $x \\mapsto \\dfrac{1}{1+x^2}$ sur $\\mathbb{R}$ sont de la forme : $x \\mapsto \\arctan(x) + C$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer comment calculer les primitives d'une fonction à valeurs réelles de la forme $x \\mapsto e^{ax}\\cos(bx)$ en passant par les complexes.",
+    "reponse": "Hypothèses : $a, b \\in \\mathbb{R}$ avec $b \\neq 0$.\nLa méthode consiste à introduire la fonction à valeurs complexes $f: x \\mapsto e^{ax} e^{ibx} = e^{(a+ib)x}$.\n1. On cherche une primitive complexe de $f$, donnée par $F(x) = \\dfrac{e^{(a+ib)x}}{a+ib}$.\n2. On transforme l'expression en multipliant par la quantité conjuguée du dénominateur :\n$$F(x) = \\dfrac{a-ib}{a^2+b^2} e^{ax}(\\cos(bx) + i\\sin(bx))$$\n3. La fonction initiale $e^{ax}\\cos(bx)$ étant la partie réelle de $f(x)$, ses primitives réelles s'obtiennent en prenant la partie réelle de $F(x)$ :\n$$\\int e^{ax}\\cos(bx) \\,\\mathrm{d}x = \\dfrac{e^{ax}}{a^2+b^2} \\big( a\\cos(bx) + b\\sin(bx) \\big) + C$$"
+  }
+]

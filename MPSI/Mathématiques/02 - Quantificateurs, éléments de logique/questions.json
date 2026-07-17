@@ -1,0 +1,97 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir ce qu'est un énoncé ou une proposition mathématique en logique classique et préciser ses valeurs de vérité possibles.",
+    "reponse": "Un énoncé ou une proposition (mathématique) est une phrase qui est soit vraie, soit fausse, mais pas les deux.\nEn logique classique, une proposition peut prendre uniquement deux valeurs logiques : le vrai (V ou 1) ou le faux (F ou 0)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion de prédicat (ou assertion) et expliquer ce qui le différencie d'une proposition.",
+    "reponse": "Un prédicat (ou assertion) est un énoncé contenant une ou plusieurs variables libres, et dont la valeur de vérité dépend des valeurs attribuées à ces variables. \nTant que les variables ne sont pas fixées ou quantifiées, un prédicat n'est pas une proposition car il n'a pas de valeur logique définie (ni vraie, ni fausse)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le quantificateur universel $\\forall$, donner sa signification en français et la structure d'une proposition l'utilisant.",
+    "reponse": "Le symbole $\\forall$ est le quantificateur universel. Il se lit « pour tout », « quel que soit » ou « pour chaque ».\nLa proposition « $\\forall x \\in E, P(x)$ » signifie que le prédicat $P(x)$ est vrai pour absolument tous les éléments $x$ appartenant à l'ensemble $E$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le quantificateur existentiel $\\exists$, donner sa signification en français et préciser le sens du symbole $\\exists!$.",
+    "reponse": "Le symbole $\\exists$ est le quantificateur existentiel. Il se lit « il existe (au moins un) ».\nLa proposition « $\\exists x \\in E, P(x)$ » signifie qu'il y a au moins un élément $x$ dans $E$ pour lequel le prédicat $P(x)$ est vrai.\nLe symbole $\\exists!$ renforce cette condition en signifiant « il existe un unique »."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer pourquoi l'ordre de quantificateurs différents (comme $\\forall$ et $\\exists$) ne peut pas être interverti, en illustrant par un exemple.",
+    "reponse": "L'ordre des quantificateurs de natures différentes modifie profondément le sens logique d'une proposition.\n- Dans « $\\forall x \\in E, \\exists y \\in F, P(x, y)$ », l'élément $y$ est choisi *après* $x$ et peut donc dépendre de $x$.\n- Dans « $\\exists y \\in F, \\forall x \\in E, P(x, y)$ », le même élément $y$ doit convenir de manière universelle pour *tous* les $x$.\n\n*Exemple classique :*\n- $\\forall x \\in \\mathbb{R}, \\exists y \\in \\mathbb{R}, x < y$ est vraie (il suffit de prendre $y = x + 1$).\n- $\\exists y \\in \\mathbb{R}, \\forall x \\in \\mathbb{R}, x < y$ est fausse (il n'existe pas de nombre réel strictement plus grand que tous les autres)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la négation d'une proposition $P$ (notée $\\neg P$ ou $\\text{non } P$) et donner sa table de vérité.",
+    "reponse": "La négation d'une proposition $P$ est la proposition qui est vraie lorsque $P$ est fausse, et fausse lorsque $P$ est vraie.\nTable de vérité :\n| $P$ | $\\neg P$ |\n| :---: | :---: |\n| V | F |\n| F | V |"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le connecteur logique de la conjonction (« $P \\text{ et } Q$ ») et donner sa table de vérité.",
+    "reponse": "La conjonction de deux propositions $P$ et $Q$, notée $P \\land Q$ ou « $P \\text{ et } Q$ », est la proposition qui est vraie si et seulement si $P$ et $Q$ sont simultanément vraies.\nTable de vérité :\n| $P$ | $Q$ | $P \\text{ et } Q$ |\n| :---: | :---: | :---: |\n| V | V | V |\n| V | F | F |\n| F | V | F |\n| F | F | F |"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le connecteur logique de la disjonction (« $P \\text{ ou } Q$ ») et préciser s'il s'agit d'un « ou » exclusif ou inclusif.",
+    "reponse": "La disjonction de deux propositions $P$ et $Q$, notée $P \\lor Q$ ou « $P \\text{ ou } Q$ », est la proposition qui est vraie lorsqu'au moins l'une des deux propositions est vraie. En mathématiques, il s'agit toujours d'un **« ou » inclusif** (l'énoncé reste vrai si $P$ et $Q$ sont vraies en même temps).\nTable de vérité :\n| $P$ | $Q$ | $P \\text{ ou } Q$ |\n| :---: | :---: | :---: |\n| V | V | V |\n| V | F | V |\n| F | V | V |\n| F | F | F |"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'implication logique (« $P \\Rightarrow Q$ »), préciser le vocabulaire associé ($P$ et $Q$) et donner sa table de vérité complète.",
+    "reponse": "L'implication « $P \\Rightarrow Q$ » (se lit « $P$ implique $Q$ » ou « si $P$, alors $Q$ ») est définie comme étant fausse uniquement lorsque la prémisse $P$ est vraie et la conclusion $Q$ est fausse. Si $P$ est fausse, l'implication est toujours considérée comme vraie.\n- $P$ est appelée la **condition suffisante**.\n- $Q$ est appelée la **condition nécessaire**.\n\nTable de vérité :\n| $P$ | $Q$ | $P \\Rightarrow Q$ |\n| :---: | :---: | :---: |\n| V | V | V |\n| V | F | F |\n| F | V | V |\n| F | F | V |"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la réciproque et la contraposée d'une implication « $P \\Rightarrow Q$ », puis préciser leurs valeurs de vérité par rapport à l'énoncé initial.",
+    "reponse": "Pour une implication donnée $P \\Rightarrow Q$ :\n- **La réciproque** est l'énoncé $Q \\Rightarrow P$. Sa valeur de vérité est indépendante de l'implication initiale (si $P \\Rightarrow Q$ est vraie, sa réciproque peut être vraie ou fausse).\n- **La contraposée** est l'énoncé $\\neg Q \\Rightarrow \\neg P$. Un énoncé et sa contraposée sont logiquement **équivalents** (ils ont exactement la même valeur de vérité)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'équivalence logique (« $P \\Leftrightarrow Q$ ») et donner sa table de vérité.",
+    "reponse": "L'équivalence entre deux énoncés $P$ et $Q$, notée $P \\Leftrightarrow Q$ (se lit « $P$ si et seulement si $Q$ »), est vraie lorsque $P$ et $Q$ ont la même valeur de vérité (soit toutes les deux vraies, soit toutes les deux fausses).\nOn dit aussi que $P$ est une **condition nécessaire et suffisante** pour $Q$.\nTable de vérité :\n| $P$ | $Q$ | $P \\Leftrightarrow Q$ |\n| :---: | :---: | :---: |\n| V | V | V |\n| V | F | F |\n| F | V | F |\n| F | F | V |"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les règles logiques pour nier un énoncé quantifié avec $\\forall$ ou $\\exists$.",
+    "reponse": "Pour nier un énoncé quantifié, on remplace le quantificateur universel par le quantificateur existentiel (et réciproquement), puis on prend la négation du prédicat qui suit. Relations :\n- $\\neg \\left( \\forall x \\in E, P(x) \\right) \\iff \\exists x \\in E, (\\neg P(x))$\n- $\\neg \\left( \\exists x \\in E, P(x) \\right) \\iff \\forall x \\in E, (\\neg P(x))$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les lois de De Morgan pour la négation d'une conjonction (« et ») et d'une disjonction (« ou »).",
+    "reponse": "Relations logiques de négation des connecteurs :\n- Négation du « et » :\n$$\\neg (E \\text{ et } F) \\iff (\\neg E) \\text{ ou } (\\neg F)$$\n- Négation du « ou » :\n$$\\neg (E \\text{ ou } F) \\iff (\\neg E) \\text{ et } (\\neg F)$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner l'expression de la négation d'une implication « $E \\Rightarrow F$ » sans utiliser le symbole implicatif.",
+    "reponse": "La négation d'une implication n'est pas une implication. Un contre-exemple à « si $E$ alors $F$ » consiste à réaliser la prémisse $E$ sans obtenir la conclusion $F$. Relation :\n$$\\neg (E \\Rightarrow F) \\iff E \\text{ et } (\\neg F)$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire le principe d'un raisonnement par contraposition.",
+    "reponse": "Pour démontrer qu'une implication $P \\Rightarrow Q$ est vraie, le raisonnement par contraposition consiste à prouver l'énoncé équivalent $\\neg Q \\Rightarrow \\neg P$.\nOn suppose donc que la conclusion $Q$ est fausse ($\\neg Q$ est vraie) et on démontre, par des étapes logiques directes, que la prémisse $P$ est nécessairement fausse ($\\neg P$ est vraie)."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire le principe d'un raisonnement par l'absurde.",
+    "reponse": "Pour démontrer qu'une proposition $P$ est vraie, le raisonnement par l'absurde consiste à :\n1. Supposer que la proposition $P$ est fausse (c'est-à-dire supposer que $\\neg P$ est vraie).\n2. En déduire une suite d'implications logiques jusqu'à aboutir à une contradiction flagrante (par exemple un énoncé du type $0=1$ ou une contradiction avec les hypothèses de base).\n3. Conclure que la supposition initiale était impossible, et donc que $P$ est obligatoirement vraie."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode de raisonnement par contre-exemple et préciser quel type d'énoncé elle permet d'infirmer.",
+    "reponse": "Le raisonnement par contre-exemple sert à prouver qu'une proposition universelle de la forme « $\\forall x \\in E, P(x)$ » est **fausse**.\nPour cela, il suffit de trouver et d'exhiber **un seul** élément particulier $x_0 \\in E$ pour lequel le prédicat $P(x_0)$ est faux (ce qui revient à prouver la proposition existentielle de négation : $\\exists x \\in E, \\neg P(x)$)."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode de raisonnement par disjonction de cas.",
+    "reponse": "Le raisonnement par disjonction de cas s'utilise lorsque la preuve d'une assertion dépend de plusieurs situations distinctes qui s'excluent ou se complètent.\nPour montrer que $P(x)$ est vrai pour tout $x \\in E$, on sépare l'ensemble $E$ en plusieurs sous-ensembles (par exemple, étudier le cas où un entier $n$ est pair, puis le cas où $n$ est impair). Si l'énoncé est démontré séparément pour chaque cas, il est alors prouvé pour tout l'ensemble."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire le principe du raisonnement par récurrence simple (Initialisation et Hérédité).",
+    "reponse": "Pour démontrer qu'une propriété $P(n)$ est vraie pour tout entier $n \\ge n_0$, le raisonnement par récurrence se déroule en deux étapes obligatoires :\n1. **Initialisation** : On vérifie que la propriété est vraie pour le premier indice, c'est-à-dire que $P(n_0)$ est vraie.\n2. **Hérédité** : On suppose qu'il existe un entier $n \\ge n_0$ tel que $P(n)$ soit vraie (c'est l'hypothèse de récurrence), et sous cette hypothèse, on démontre que $P(n+1)$ est également vraie.\n\nUne fois ces deux étapes validées, on conclut par le principe de récurrence que $\\forall n \\ge n_0, P(n)$ est vraie."
+  }
+]

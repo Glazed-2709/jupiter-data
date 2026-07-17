@@ -1,0 +1,42 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir ce qu'est une équation différentielle linéaire du premier ordre et préciser ce que signifie la normaliser.",
+    "reponse": "Hypothèses : Soient $a$, $b$ et $c$ trois fonctions continues sur un intervalle $I$ à valeurs dans $\\mathbb{K}$ ($\\mathbb{R}$ ou $\\mathbb{C}$).\nUne équation différentielle linéaire du premier ordre est une équation de la forme :\n$$a(t)y'(t) + b(t)y(t) = c(t)$$\nd'inconnue la fonction $y: I \\rightarrow \\mathbb{K}$ supposée dérivable.\nSi la fonction $a$ ne s'annule pas sur $I$, **normaliser** l'équation consiste à diviser par $a(t)$ pour la ramener à la forme :\n$$y'(t) + A(t)y(t) = B(t)$$\noù $A = \\dfrac{b}{a}$ et $B = \\dfrac{c}{a}$ sont des fonctions continues sur $I$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Donner l'expression générale des solutions de l'équation différentielle homogène (ou sans second membre) $y'(t) + A(t)y(t) = 0$.",
+    "reponse": "Hypothèses : Soit $A$ une fonction continue sur un intervalle $I$ à valeurs dans $\\mathbb{K}$, et $W$ une primitive de $A$ sur $I$.\nLes solutions sur $I$ de l'équation homogène $y'(t) + A(t)y(t) = 0$ sont les fonctions de la forme :\n$$y_H(t) = \\lambda e^{-W(t)}$$\noù $\\lambda \\in \\mathbb{K}$ est une constante scalaire arbitraire."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la structure générale des solutions d'une équation différentielle linéaire du premier ordre avec second membre.",
+    "reponse": "L'ensemble des solutions d'une équation linéaire avec second membre s'obtient en additionnant les solutions de l'équation homogène associée et une solution particulière unique de l'équation complète :\n$$y(t) = y_H(t) + y_0(t)$$\noù $y_H$ est la forme générale des solutions de l'équation homogène et $y_0$ est **une** solution particulière de l'équation avec second membre."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer le principe de la méthode de variation de la constante pour trouver une solution particulière de $y'(t) + A(t)y(t) = B(t)$.",
+    "reponse": "Hypothèses : Soit $W$ une primitive de $A$ sur $I$. La solution générale de l'équation homogène est $\\lambda e^{-W(t)}$.\nLa méthode consiste à chercher une solution particulière sous la forme :\n$$y_0(t) = \\lambda(t) e^{-W(t)}$$\noù $\\lambda$ est désormais une fonction dérivable à déterminer.\nEn injectant $y_0$ dans l'équation complète $y' + Ay = B$, les termes en $\\lambda(t)$ se simplifient et on obtient l'équation simplifiée sur la dérivée :\n$$\\lambda'(t) e^{-W(t)} = B(t) \\iff \\lambda'(t) = B(t) e^{W(t)}$$\nIl suffit ensuite d'intégrer (trouver une primitive de) $\\lambda'$ pour obtenir $\\lambda(t)$, ce qui fournit la solution particulière $y_0(t)$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer le principe de superposition pour les équations différentielles linéaires.",
+    "reponse": "Hypothèses : Soit une équation dont le second membre est la somme de deux fonctions : $y' + Ay = B_1 + B_2$.\nSi $y_1$ est une solution particulière de l'équation $y' + Ay = B_1$ et $y_2$ est une solution particulière de l'équation $y' + Ay = B_2$, alors la fonction :\n$$y_0 = y_1 + y_2$$\nest une solution particulière de l'équation complète initiale."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Donner la forme de la solution particulière pour l'équation à coefficients constants $y' + ay = P(t)e^{\\alpha t}$ où $P$ est un polynôme et $a, \\alpha \\in \\mathbb{K}$.",
+    "reponse": "Pour chercher une solution particulière de $y' + ay = P(t)e^{\\alpha t}$ :\n- Si $\\alpha \\neq -a$ (c'est-à-dire que $\\alpha$ n'est pas solution de l'équation caractéristique associée), on cherche une solution de la forme :\n$$y_0(t) = Q(t)e^{\\alpha t}$$\noù $Q$ est un polynôme de **même degré** que $P$.\n- Si $\\alpha = -a$, on cherche une solution de la forme :\n$$y_0(t) = t Q(t)e^{\\alpha t}$$\noù $Q$ est un polynôme de **même degré** que $P$ (le degré global de la partie polynomiale augmente de 1)."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Donner la méthode pour chercher une solution particulière de $y' + ay = \\beta_1 \\cos(\\omega t) + \\beta_2 \\sin(\\omega t)$ lorsque $a \\in \\mathbb{K}$ et $\\omega \\in \\mathbb{R}$.",
+    "reponse": "Une telle équation linéaire à coefficients constants avec un second membre sinusoïdal admet toujours une solution particulière de la même forme résonnante (sauf cas complexes particuliers), c'est-à-dire :\n$$y_0(t) = \\mu_1 \\cos(\\omega t) + \\mu_2 \\sin(\\omega t)$$\noù $\\mu_1$ et $\\mu_2$ sont deux constantes scalaires à déterminer en injectant l'expression dans l'équation différentielle et en identifiant les coefficients devant $\\cos(\\omega t)$ et $\\sin(\\omega t)$.\n*(Alternative : passer par les complexes en écrivant le second membre sous la forme $\\mathrm{Re}(\\gamma e^{i\\omega t})$).*"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Définir ce qu'est un problème de Cauchy pour une équation différentielle linéaire d'ordre 1 et énoncer son théorème d'existence et d'unicité.",
+    "reponse": "Un **problème de Cauchy** est la donnée conjointe d'une équation différentielle linéaire et d'une condition initiale fixée en un point :\n$$\\begin{cases} a(t)y'(t) + b(t)y(t) = c(t) \\\\ y(t_0) = y_0 \\end{cases}$$\noù $t_0 \\in I$ et $y_0 \\in \\mathbb{K}$.\n\n**Théorème d'existence et d'unicité** :\nSi les fonctions $a$, $b$ et $c$ sont continues sur $I$ et si la fonction $a$ **ne s'annule pas** sur $I$, alors pour tout choix de $(t_0, y_0) \\in I \\times \\mathbb{K}$, le problème de Cauchy possède **une unique solution** définie sur l'intervalle $I$ tout entier."
+  }
+]

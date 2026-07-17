@@ -1,0 +1,102 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir formellement une fonction (ou application) de $A$ dans $B$, son domaine de définition, son ensemble de départ et son ensemble d'arrivée.",
+    "reponse": "Hypothèses : Soient $A$ et $B$ deux sous-ensembles de $\\mathbb{R}$ (ou de $\\mathbb{C}$).\nUne fonction $f$ de $A$ dans $B$ est un procédé qui à chaque élément $x \\in A$ associe au plus un élément de $B$, noté $f(x)$.\n- $A$ est l'ensemble de départ.\n- $B$ est l'ensemble d'arrivée.\n- Le domaine de définition $\\mathcal{D}_f$ est l'ensemble des éléments de $A$ qui possèdent une image par $f$ :\n$$\\mathcal{D}_f = \\{x \\in A \\mid f(x) \\text{ existe}\\}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'égalité de deux fonctions $f$ et $g$.",
+    "reponse": "Deux fonctions $f$ et $g$ sont égales si et seulement si elles ont le même domaine de définition et la même valeur en tout point :\n$$\\mathcal{D}_f = \\mathcal{D}_g \\quad \\text{et} \\quad \\forall x \\in \\mathcal{D}_f, \\ f(x) = g(x)$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les opérations algébriques de base (somme, produit, produit par un scalaire) sur les fonctions à valeurs réelles.",
+    "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions définies sur $\\mathcal{D}_f$ et $\\mathcal{D}_g$ à valeurs dans $\\mathbb{R}$ (ou $\\mathbb{C}$), et $\\lambda \\in \\mathbb{R}$.\n- **Somme ($f+g$)** : définie sur $\\mathcal{D}_f \\cap \\mathcal{D}_g$ par $\\forall x \\in \\mathcal{D}_f \\cap \\mathcal{D}_g, \\ (f+g)(x) = f(x) + g(x)$\n- **Produit ($f \\times g$)** : définie sur $\\mathcal{D}_f \\cap \\mathcal{D}_g$ par $\\forall x \\in \\mathcal{D}_f \\cap \\mathcal{D}_g, \\ (f \\times g)(x) = f(x) \\times g(x)$\n- **Multiplication par un scalaire ($\\lambda f$)** : définie sur $\\mathcal{D}_f$ par $\\forall x \\in \\mathcal{D}_f, \\ (\\lambda f)(x) = \\lambda f(x)$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la composition de deux fonctions $f$ et $g$, et préciser son domaine de définition.",
+    "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions.\nLa fonction composée $g \\circ f$ (« $g$ rondo $f$ ») est définie par $(g \\circ f)(x) = g(f(x))$.\nSon domaine de définition est :\n$$\\mathcal{D}_{g \\circ f} = \\{x \\in \\mathcal{D}_f \\mid f(x) \\in \\mathcal{D}_g\\}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la monotonie (croissance, décroissance, stricte croissance, stricte décroissance) d'une fonction $f$ sur un intervalle $I \\subset \\mathcal{D}_f$.",
+    "reponse": "Hypothèses : Soit $f$ une fonction réelle définie sur un intervalle $I$. Pour tout $(x, y) \\in I^2$ tel que $x < y$ :\n- **Croissante** : $f(x) \\le f(y)$\n- **Décroissante** : $f(x) \\ge f(y)$\n- **Strictement croissante** : $f(x) < f(y)$\n- **Strictement décroissante** : $f(x) > f(y)$\nUne fonction est dite monotone (resp. strictement monotone) si elle est croissante ou décroissante (resp. strictement croissante ou strictement décroissante)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une fonction majorée, minorée et bornée sur une partie $I$.",
+    "reponse": "Hypothèses : Soit $f$ une fonction réelle définie sur une partie $I$.\n- **Majorée** : $\\exists M \\in \\mathbb{R}, \\ \\forall x \\in I, \\ f(x) \\le M$\n- **Minorée** : $\\exists m \\in \\mathbb{R}, \\ \\forall x \\in I, \\ f(x) \\ge m$\n- **Bornée** : si elle est à la fois majorée et minorée, soit $\\exists K \\in \\mathbb{R}^+, \\ \\forall x \\in I, \\ |f(x)| \\le K$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la parité (fonction paire ou impaire) d'une fonction $f$ et donner l'interprétation géométrique de sa courbe représentative $\\mathcal{C}_f$.",
+    "reponse": "Hypothèses : Soit $f$ une fonction définie sur $\\mathcal{D}_f$.\nLe domaine $\\mathcal{D}_f$ doit être symétrique par rapport à 0 ($\\forall x \\in \\mathcal{D}_f, -x \\in \\mathcal{D}_f$).\n- **Paire** : $\\forall x \\in \\mathcal{D}_f, \\ f(-x) = f(x)$. Géométriquement, $\\mathcal{C}_f$ est symétrique par rapport à l'axe des ordonnées $(Oy)$.\n- **Impaire** : $\\forall x \\in \\mathcal{D}_f, \\ f(-x) = -f(x)$. Géométriquement, $\\mathcal{C}_f$ est symétrique par rapport à l'origine du repère $O$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la périodicité d'une fonction $f$.",
+    "reponse": "Hypothèses : Soit $f$ une fonction définie sur $\\mathcal{D}_f$ et $T \\in \\mathbb{R}^*$.\nLa fonction $f$ est dite $T$-périodique si :\n$$\\forall x \\in \\mathcal{D}_f, \\ (x+T) \\in \\mathcal{D}_f \\quad \\text{et} \\quad f(x+T) = f(x)$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner l'équation de la tangente à la courbe d'une fonction $f$ en un point $a$ où elle est dérivable.",
+    "reponse": "Hypothèses : Soit $f$ une fonction dérivable en $a \\in \\mathcal{D}_f$.\nL'équation de la tangente $\\mathcal{T}_a$ à la courbe $\\mathcal{C}_f$ au point d'abscisse $a$ est :\n$$y = f'(a)(x - a) + f(a)$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les formules de dérivation d'une somme, d'un produit, d'un quotient et de la composée $g \\circ f$ de deux fonctions.",
+    "reponse": "Hypothèses : Soient $f$ et $g$ deux fonctions dérivables sur un intervalle $I$, et $\\lambda \\in \\mathbb{R}$.\n- **Somme** : $(f+g)' = f' + g'$\n- **Multiplication par un scalaire** : $(\\lambda f)' = \\lambda f'$\n- **Produit** : $(fg)' = f'g + fg'$\n- **Inverse** : $\\left(\\dfrac{1}{g}\\right)' = -\\dfrac{g'}{g^2}$ (en tout point où $g(x) \\neq 0$)\n- **Quotient** : $\\left(\\dfrac{f}{g}\\right)' = \\dfrac{f'g - fg'}{g^2}$ (en tout point où $g(x) \\neq 0$)\n- **Composée** : Soit $x \\in \\mathcal{D}_{g \\circ f}$. Si $f$ est dérivable en $x$ et $g$ est dérivable en $f(x)$, alors $g \\circ f$ est dérivable en $x$ et :\n$$(g \\circ f)'(x) = f'(x) \\times g'(f(x)) \\quad \\text{soit} \\quad (g \\circ f)' = f' \\times (g' \\circ f)$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le lien entre le signe de la dérivée première d'une fonction et ses variations sur un intervalle $I$.",
+    "reponse": "Hypothèses : Soit $f$ une fonction continue sur un intervalle $I$ et dérivable sur l'intérieur de $I$.\n- Si $\\forall x \\in I, f'(x) \\ge 0$, alors $f$ est croissante sur $I$.\n- Si $\\forall x \\in I, f'(x) \\le 0$, alors $f$ est décroissante sur $I$.\n- Si $\\forall x \\in I, f'(x) > 0$ (sauf éventuellement en un nombre fini de points isolés), alors $f$ est strictement croissante sur $I$.\n- Si $\\forall x \\in I, f'(x) < 0$ (sauf éventuellement en un nombre fini de points isolés), alors $f$ est strictement décroissante sur $I$.\n- Si $\\forall x \\in I, f'(x) = 0$, alors $f$ est constante sur $I$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction logarithme népérien $\\ln$, donner son domaine de définition, sa valeur en 1, sa dérivée et ses limites aux bornes.",
+    "reponse": "La fonction logarithme népérien, notée $\\ln$, est l'unique primitive de la fonction $x \\mapsto \\dfrac{1}{x}$ sur $]0, +\\infty[$ qui s'annule en 1.\n- Domaine : $\\mathcal{D}_{\\ln} = ]0, +\\infty[$\n- Valeur remarquable : $\\ln(1) = 0$ (et $\\ln(e) = 1$)\n- Dérivée : $\\forall x > 0, \\ \\ln'(x) = \\dfrac{1}{x}$\n- Limites aux bornes :\n$$\\lim_{x \\to 0^+} \\ln(x) = -\\infty \\quad \\text{et} \\quad \\lim_{x \\to +\\infty} \\ln(x) = +\\infty$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés algébriques fondamentales de la fonction logarithme népérien (logarithme d'un produit, d'un inverse, d'un quotient et d'une puissance).",
+    "reponse": "Hypothèses : Pour tous réels $a > 0$, $b > 0$ et $n \\in \\mathbb{Z}$. Relations :\n- Produit : $\\ln(ab) = \\ln(a) + \\ln(b)$\n- Inverse : $\\ln\\left(\\dfrac{1}{a}\\right) = -\\ln(a)$\n- Quotient : $\\ln\\left(\\dfrac{a}{b}\\right) = \\ln(a) - \\ln(b)$\n- Puissance : $\\ln(a^n) = n\\ln(a)$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction exponentielle $\\exp$, donner son domaine de définition, sa dérivée, ses valeurs remarquables et ses limites aux bornes.",
+    "reponse": "La fonction exponentielle, notée $\\exp$ ou $x \\mapsto e^x$, est la bijection réciproque de la fonction $\\ln$.\n- Domaine : $\\mathcal{D}_{\\exp} = \\mathbb{R}$\n- Dérivée : $\\forall x \\in \\mathbb{R}, \\ \\exp'(x) = \\exp(x)$\n- Valeurs remarquables : $e^0 = 1$ et $e^1 = e$\n- Limites aux bornes :\n$$\\lim_{x \\to -\\infty} e^x = 0 \\quad \\text{et} \\quad \\lim_{x \\to +\\infty} e^x = +\\infty$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés algébriques fondamentales de la fonction exponentielle (exponentielle d'une somme, d'un opposé, d'une différence et d'une puissance).",
+    "reponse": "Hypothèses : Pour tous réels $a, b$ et $n \\in \\mathbb{Z}$. Relations :\n- Somme : $e^{a+b} = e^a \\times e^b$\n- Opposé : $e^{-a} = \\dfrac{1}{e^a}$\n- Différence : $e^{a-b} = \\dfrac{e^a}{e^b}$\n- Puissance : $(e^a)^n = e^{na}$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction puissance générale $x \\mapsto x^\\alpha$ pour un exposant réel $\\alpha$ quelconque, et préciser son domaine de définition.",
+    "reponse": "Hypothèses : Soit $\\alpha \\in \\mathbb{R}$.\nPour tout $x > 0$, la fonction puissance $\\alpha$ est définie par l'intermédiaire des fonctions $\\ln$ et $\\exp$ :\n$$x^\\alpha = e^{\\alpha \\ln(x)}$$\nSon domaine de définition général est $]0, +\\infty[$ (il peut être étendu selon les valeurs de $\\alpha$)."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la formule de la dérivée de la fonction puissance générale $x \\mapsto x^\\alpha$ sur $]0, +\\infty[$.",
+    "reponse": "Hypothèses : $\\alpha \\in \\mathbb{R}$ et $x \\in ]0, +\\infty[$. Relation :\n$$(x^\\alpha)' = \\alpha x^{\\alpha - 1}$$\n*(Démonstration par dérivation de composée : $(e^{\\alpha \\ln(x)})' = \\dfrac{\\alpha}{x} e^{\\alpha \\ln(x)} = \\alpha x^{-1} x^\\alpha = \\alpha x^{\\alpha - 1}$)*"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les limites de croissances comparées à l'infini et en 0 entre les fonctions $\\ln$, $\\exp$ et les puissances.",
+    "reponse": "Hypothèses : Soient $\\alpha > 0$ et $\\beta > 0$. Relations :\n- En $+\\infty$ :\n$$\\lim_{x \\to +\\infty} \\dfrac{\\ln(x)^\\alpha}{x^\\beta} = 0 \\quad \\text{et} \\quad \\lim_{x \\to +\\infty} \\dfrac{e^{\\alpha x}}{x^\\beta} = +\\infty$$\n- En $0^+$ :\n$$\\lim_{x \\to 0^+} x^\\beta |\\ln(x)|^\\alpha = 0$$\n- En $-\\infty$ :\n$$\\lim_{x \\to -\\infty} e^{\\alpha x} |x|^\\beta = 0$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les fonctions cosinus hyperbolique $\\mathrm{ch}$ et sinus hyperbolique $\\mathrm{sh}$, et préciser leur parité.",
+    "reponse": "Pour tout réel $x \\in \\mathbb{R}$ :\n- Cosinus hyperbolique :\n$$\\mathrm{ch}(x) = \\dfrac{e^x + e^{-x}}{2}$$\nLa fonction $\\mathrm{ch}$ est paire ($\\mathrm{ch}(-x) = \\mathrm{ch}(x)$).\n- Sinus hyperbolique :\n$$\\mathrm{sh}(x) = \\dfrac{e^x - e^{-x}}{2}$$\nLa fonction $\\mathrm{sh}$ est impaire ($\\mathrm{sh}(-x) = -\\mathrm{sh}(x)$)."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les expressions des dérivées des fonctions $\\mathrm{ch}$ et $\\mathrm{sh}$, ainsi que la relation fondamentale de la trigonométrie hyperbolique.",
+    "reponse": "Hypothèses : Pour tout $x \\in \\mathbb{R}$. Relations :\n- Dérivées :\n$$\\mathrm{ch}'(x) = \\mathrm{sh}(x) \\quad \\text{et} \\quad \\mathrm{sh}'(x) = \\mathrm{ch}(x)$$\n- Relation fondamentale :\n$$\\mathrm{ch}^2(x) - \\mathrm{sh}^2(x) = 1$$\n- Somme et différence :\n$$\\mathrm{ch}(x) + \\mathrm{sh}(x) = e^x \\quad \\text{et} \\quad \\mathrm{ch}(x) - \\mathrm{sh}(x) = e^{-x}$$"
+  }
+]

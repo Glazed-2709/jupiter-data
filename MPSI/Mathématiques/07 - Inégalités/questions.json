@@ -1,0 +1,72 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la relation d'ordre $\\le$ sur $\\mathbb{R}$ et rappeler ses trois propriétés fondamentales (réflexivité, antisymétrie, transitivité) ainsi que sa nature totale.",
+    "reponse": "L'ensemble $\\mathbb{R}$ est muni d'une relation d'ordre notée $\\le$, qui est une relation binaire vérifiant :\n- **Réflexivité** : $\\forall x \\in \\mathbb{R}, \\ x \\le x$\n- **Antisymétrie** : $\\forall(x, y) \\in \\mathbb{R}^2, \\ (x \\le y \\text{ et } y \\le x) \\implies x = y$\n- **Transitivité** : $\\forall(x, y, z) \\in \\mathbb{R}^3, \\ (x \\le y \\text{ et } y \\le z) \\implies x \\le z$\nCette relation est un **ordre total**, ce qui signifie que deux éléments quelconques sont toujours comparables : $\\forall(x, y) \\in \\mathbb{R}^2, \\ x \\le y \\text{ ou } y \\le x$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer les propriétés de compatibilité de la relation d'ordre $\\le$ sur $\\mathbb{R}$ avec l'addition et la multiplication.",
+    "reponse": "Hypothèses : Pour tout $(x, y, z, t) \\in \\mathbb{R}^4$. Relations :\n- **Compatibilité avec l'addition** : $x \\le y \\implies x + z \\le y + z$\n- **Somme d'inégalités** : $(x \\le y \\text{ et } z \\le t) \\implies x + z \\le y + t$\n- **Compatibilité avec la multiplication** :\n  - Si $z \\ge 0$ : $x \\le y \\implies x \\times z \\le y \\times z$\n  - Si $z \\le 0$ : $x \\le y \\implies x \\times z \\ge y \\times z$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la règle de multiplication de deux inégalités à termes positifs.",
+    "reponse": "Hypothèses : Soient $x, y, z, t$ quatre nombres réels positifs ou nuls ($0 \\le x \\le y$ et $0 \\le z \\le t$). Relation :\n$$x \\times z \\le y \\times t$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la règle d'inversion pour le passage à l'inverse de deux réels non nuls de même signe.",
+    "reponse": "Hypothèses : Soient $x$ et $y$ deux réels non nuls de **même signe** (c'est-à-dire $0 < x \\le y$ ou $x \\le y < 0$). Relation :\n$$\\dfrac{1}{y} \\le \\dfrac{1}{x}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les notions de majorant, minorant, maximum (plus grand élément) et minimum (plus petit élément) d'une partie non vide $A \\subset \\mathbb{R}$.",
+    "reponse": "Hypothèses : Soit $A$ une partie non vide de $\\mathbb{R}$.\n- **Majorant** : Un réel $M$ majore $A$ si $\\forall x \\in A, \\ x \\le M$.\n- **Minorant** : Un réel $m$ minore $A$ si $\\forall x \\in A, \\ x \\ge m$.\n- **Maximum (plus grand élément)** : Un réel $M$ est le maximum de $A$ si $M \\in A$ et $M$ majore $A$. On le note $\\max(A)$ (il n'existe pas toujours, mais s'il existe, il est unique).\n- **Minimum (plus petit élément)** : Un réel $m$ est le minimum de $A$ si $m \\in A$ et $m$ minore $A$. On le note $\\min(A)$ (il n'existe pas toujours, mais s'il existe, il est unique)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la borne supérieure et la borne inférieure d'une partie non vide $A \\subset \\mathbb{R}$.",
+    "reponse": "Hypothèses : Soit $A$ une partie non vide de $\\mathbb{R}$.\n- **Borne supérieure** : Si $A$ est majorée, sa borne supérieure est le plus petit de ses majorants, notée $\\sup(A)$.\n- **Borne inférieure** : Si $A$ est minorée, sa borne inférieure est le plus grand de ses minorants, notée $\\inf(A)$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer l'axiome de la borne supérieure (propriété fondamentale de $\\mathbb{R}$).",
+    "reponse": "Toute partie non vide de $\\mathbb{R}$ qui est majorée admet une borne supérieure dans $\\mathbb{R}$.\n*(Par symétrie, toute partie non vide de $\\mathbb{R}$ qui est minorée admet une borne inférieure dans $\\mathbb{R}$.)*"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la valeur absolue $|x|$ d'un nombre réel $x$ et donner sa propriété de séparation.",
+    "reponse": "La valeur absolue d'un réel $x$, notée $|x|$, est le réel positif ou nul défini par :\n$$|x| = \\begin{cases} x & \\text{si } x \\ge 0 \\\\ -x & \\text{si } x \\le 0 \\end{cases}$$\nPropriété de séparation : $|x| = 0 \\iff x = 0$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner l'équivalence fondamentale liant la valeur absolue $|x-y|$ et un encadrement par un réel $r \\ge 0$, ainsi que son interprétation géométrique.",
+    "reponse": "Hypothèses : Soient $x, y \\in \\mathbb{R}$ et $r \\in \\mathbb{R}^+$. Relation :\n$$|x - y| \\le r \\iff y - r \\le x \\le y + r$$\n**Interprétation géométrique** : $|x - y|$ mesure la distance entre les points d'abscisses $x$ et $y$ sur la droite réelle. Ainsi, $|x - y| \\le r$ signifie que $x$ appartient à l'intervalle fermé de centre $y$ et de rayon $r$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer l'inégalité triangulaire classique pour les réels, son cas d'égalité, ainsi que l'inégalité triangulaire renversée.",
+    "reponse": "Hypothèses : Soient $x, y \\in \\mathbb{R}$.\n- **Inégalité triangulaire** :\n$$|x + y| \\le |x| + |y|$$\n*Cas d'égalité* : $|x + y| = |x| + |y| \\iff xy \\ge 0$ (c'est-à-dire que $x$ et $y$ sont de même signe).\n- **Inégalité triangulaire renversée** :\n$$| |x| - |y| | \\le |x - y|$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la partie entière $\\lfloor x \\rfloor$ (ou $E(x)$) d'un nombre réel $x$.",
+    "reponse": "Pour tout réel $x \\in \\mathbb{R}$, il existe un unique entier relatif $p \\in \\mathbb{Z}$ tel que :\n$$p \\le x < p + 1$$\nCet entier unique $p$ est appelé la **partie entière** de $x$ et est noté $\\lfloor x \\rfloor$ ou $E(x)$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner l'encadrement fondamental de $x$ par sa partie entière, ainsi que l'encadrement de $\\lfloor x \\rfloor$ par $x$.",
+    "reponse": "Hypothèses : Pour tout réel $x \\in \\mathbb{R}$. Relations :\n- Encadrement direct par définition :\n$$\\lfloor x \\rfloor \\le x < \\lfloor x \\rfloor + 1$$\n- Encadrement déduit (très utile pour les calculs de limites) :\n$$x - 1 < \\lfloor x \\rfloor \\le x$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la propriété d'additivité de la partie entière vis-à-vis d'un entier relatif $n \\in \\mathbb{Z}$.",
+    "reponse": "Hypothèses : Soit $x \\in \\mathbb{R}$ et $n \\in \\mathbb{Z}$. Relation :\n$$\\lfloor x + n \\rfloor = \\lfloor x \\rfloor + n$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer l'inégalité de Bernoulli pour un réel $x \\ge -1$.",
+    "reponse": "Hypothèses : Soit $x \\in \\mathbb{R}$ tel que $x \\ge -1$ et un entier naturel $n \\in \\mathbb{N}$. Relation :\n$$(1 + x)^n \\ge 1 + nx$$"
+  }
+]

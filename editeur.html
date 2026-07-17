@@ -105,15 +105,19 @@ html,body{overflow:hidden}
 #panel .pmeta{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:22px;flex:0 0 auto}
 #panel .pmeta div b{font-size:17px;font-weight:700;display:block;line-height:1}
 #panel .pmeta div small{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:1.2px}
-#panel .pbody{flex:1;min-height:0;overflow-y:auto}
-#panel .psection{border-bottom:1px solid var(--line);transition:.15s}
+/* deux sections de taille FIXE (proportions, pas de croissance selon le contenu) :
+   1/3 sous-dossiers, 2/3 fichiers — chacune avec son propre scroll indépendant,
+   plutôt qu'un unique scroll partagé sur toute la colonne .pbody. */
+#panel .pbody{flex:1;min-height:0;display:flex;flex-direction:column;overflow:hidden}
+#panel .psection{border-bottom:1px solid var(--line);transition:.15s;
+  display:flex;flex-direction:column;min-height:0;flex:1}
 #panel .psection:last-child{border-bottom:none}
 #panel .psection.drag{background:rgba(255,47,109,.07);box-shadow:inset 0 0 0 1px var(--accent)}
-#panel .psection#pfilesSection{min-height:110px}
+#panel .psection#pfilesSection{flex:2}
 #panel .pchildren .ch.nolink{cursor:default}
 #panel .pchildren .ch.nolink:hover{border-left-color:transparent}
-#panel .slabel{padding:11px 20px 5px;font-size:8.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim2)}
-#panel .pchildren{padding:4px 0 8px}
+#panel .slabel{padding:11px 20px 5px;font-size:8.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--dim2);flex:0 0 auto}
+#panel .pchildren{padding:4px 0 8px;flex:1;min-height:0;overflow-y:auto}
 #panel .pchildren .ch{display:flex;align-items:center;gap:10px;padding:9px 20px;cursor:pointer;
   font-size:11.5px;transition:background .12s;border-left:2px solid transparent}
 #panel .pchildren .ch:hover{background:rgba(255,255,255,.04);border-left-color:var(--accent)}
@@ -139,8 +143,35 @@ html,body{overflow:hidden}
 .huerow .hcap{display:block;font-family:var(--mono);font-size:9px;text-transform:uppercase;
   letter-spacing:1.4px;color:var(--dim);margin-bottom:7px}
 .huerange{-webkit-appearance:none;appearance:none;width:100%;height:10px;border-radius:2px;cursor:pointer;
-  background:linear-gradient(90deg,hsl(0,85%,55%),hsl(60,85%,55%),hsl(120,85%,55%),hsl(180,85%,55%),
-    hsl(240,85%,55%),hsl(300,85%,55%),hsl(360,85%,55%));outline:none}
+  background:linear-gradient(90deg,hsl(0,100%,54.0%),hsl(3,100%,54.0%),hsl(6,100%,54.0%),
+    hsl(9,100%,54.0%),hsl(12,100%,54.0%),hsl(15,100%,54.0%),hsl(18,100%,54.0%),hsl(21,100%,54.0%),
+    hsl(24,100%,54.0%),hsl(27,100%,54.0%),hsl(30,100%,54.0%),hsl(33,100%,54.0%),hsl(36,100%,54.0%),
+    hsl(39,100%,54.0%),hsl(42,100%,54.0%),hsl(45,100%,54.0%),hsl(48,100%,54.0%),hsl(51,100%,54.0%),
+    hsl(54,100%,54.0%),hsl(57,100%,54.0%),hsl(60,100%,54.0%),hsl(63,100%,53.6%),hsl(66,100%,53.2%),
+    hsl(69,100%,52.8%),hsl(72,100%,52.4%),hsl(75,100%,52.0%),hsl(78,100%,51.6%),hsl(81,100%,51.2%),
+    hsl(84,100%,50.8%),hsl(87,100%,50.4%),hsl(90,100%,50.0%),hsl(93,100%,49.6%),hsl(96,100%,49.2%),
+    hsl(99,100%,48.8%),hsl(102,100%,48.4%),hsl(105,100%,48.0%),hsl(108,100%,47.6%),
+    hsl(111,100%,47.2%),hsl(114,100%,46.8%),hsl(117,100%,46.4%),hsl(120,100%,46.0%),
+    hsl(123,100%,46.0%),hsl(126,100%,46.0%),hsl(129,100%,46.0%),hsl(132,100%,46.0%),
+    hsl(135,100%,46.0%),hsl(138,100%,46.0%),hsl(141,100%,46.0%),hsl(144,100%,46.0%),
+    hsl(147,100%,46.0%),hsl(150,100%,46.0%),hsl(153,100%,46.2%),hsl(156,100%,46.4%),
+    hsl(159,100%,46.6%),hsl(162,100%,46.8%),hsl(165,100%,47.0%),hsl(168,100%,47.2%),
+    hsl(171,100%,47.4%),hsl(174,100%,47.6%),hsl(177,100%,47.8%),hsl(180,100%,48.0%),
+    hsl(183,100%,48.6%),hsl(186,100%,49.2%),hsl(189,100%,49.8%),hsl(192,100%,50.4%),
+    hsl(195,100%,51.0%),hsl(198,100%,51.6%),hsl(201,100%,52.2%),hsl(204,100%,52.8%),
+    hsl(207,100%,53.4%),hsl(210,100%,54.0%),hsl(213,100%,54.6%),hsl(216,100%,55.2%),
+    hsl(219,100%,55.8%),hsl(222,100%,56.4%),hsl(225,100%,57.0%),hsl(228,100%,57.6%),
+    hsl(231,100%,58.2%),hsl(234,100%,58.8%),hsl(237,100%,59.4%),hsl(240,100%,60.0%),
+    hsl(243,100%,60.0%),hsl(246,100%,60.0%),hsl(249,100%,60.0%),hsl(252,100%,60.0%),
+    hsl(255,100%,60.0%),hsl(258,100%,60.0%),hsl(261,100%,60.0%),hsl(264,100%,60.0%),
+    hsl(267,100%,60.0%),hsl(270,100%,60.0%),hsl(273,100%,59.6%),hsl(276,100%,59.2%),
+    hsl(279,100%,58.8%),hsl(282,100%,58.4%),hsl(285,100%,58.0%),hsl(288,100%,57.6%),
+    hsl(291,100%,57.2%),hsl(294,100%,56.8%),hsl(297,100%,56.4%),hsl(300,100%,56.0%),
+    hsl(303,100%,55.8%),hsl(306,100%,55.6%),hsl(309,100%,55.4%),hsl(312,100%,55.2%),
+    hsl(315,100%,55.0%),hsl(318,100%,54.8%),hsl(321,100%,54.6%),hsl(324,100%,54.4%),
+    hsl(327,100%,54.2%),hsl(330,100%,54.0%),hsl(333,100%,54.0%),hsl(336,100%,54.0%),
+    hsl(339,100%,54.0%),hsl(342,100%,54.0%),hsl(345,100%,54.0%),hsl(348,100%,54.0%),
+    hsl(351,100%,54.0%),hsl(354,100%,54.0%),hsl(357,100%,54.0%),hsl(360,100%,54.0%));outline:none}
 .huerange::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;
   background:#fff;border:2px solid #0a0a0c;cursor:pointer;box-shadow:0 0 6px rgba(0,0,0,.5)}
 .huerange::-moz-range-thumb{width:15px;height:15px;border-radius:50%;background:#fff;
@@ -169,6 +200,18 @@ html,body{overflow:hidden}
   ::-webkit-scrollbar-track{background:transparent}
   ::-webkit-scrollbar-thumb{background:#1a1c24;border-radius:3px}
   ::-webkit-scrollbar-thumb:hover{background:#252830}
+
+/* ---- overlay de chargement : cercle simple, comme le loader déjà utilisé ailleurs
+   dans Jupiter. Bloque tout clic derrière (z-index au-dessus du panneau) et floute
+   la scène pour empêcher toute manipulation pendant le chargement. ---- */
+#loadOverlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  flex-direction:column;gap:22px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  background:rgba(4,4,6,.6)}
+#loadOverlay.on{display:flex}
+.loadRing{width:24px;height:24px;border:2px solid var(--line2);border-top-color:var(--accent);
+  border-radius:50%;animation:loadSpin 1s linear infinite}
+@keyframes loadSpin{to{transform:rotate(360deg)}}
+.goo-label{font-family:var(--mono);font-size:10px;letter-spacing:2.4px;text-transform:uppercase;color:var(--dim)}
 </style>
 </head>
 <body>
@@ -196,6 +239,10 @@ html,body{overflow:hidden}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg>
   </button>
   <button class="btn" id="resetBtn">Réinit.</button>
+  <div class="sep"></div>
+  <a class="iconbtn" href="publier.html" title="Publier sur GitHub">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+  </a>
 </div>
 
 <div id="g3Stats"><span><b id="g3sf">—</b> dossiers</span><span><b id="g3sd">—</b> profondeur</span></div>
@@ -215,6 +262,16 @@ html,body{overflow:hidden}
 
 <div class="toast" id="toast"></div>
 
+<!-- overlay de chargement : simple cercle qui tourne, comme le loader déjà utilisé
+     ailleurs dans Jupiter (arbre.html/index.html). Flou + capture tous les
+     clics/pointeurs derrière tant qu'il est affiché, pour empêcher toute
+     manipulation pendant un scan ou un chargement de schéma. -->
+<div id="loadOverlay">
+  <div class="loadRing"></div>
+  <div class="goo-label" id="loadLabel">Chargement…</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three-spritetext@1.8.2/dist/three-spritetext.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/3d-force-graph/dist/3d-force-graph.min.js"></script>
 <script>
 /* =====================================================================
@@ -231,6 +288,23 @@ let rootHandle=null;
 let toastT;
 function toast(msg){const el=$('#toast');el.textContent=msg;el.classList.add('on');
   clearTimeout(toastT);toastT=setTimeout(()=>el.classList.remove('on'),2200);}
+
+/* ---- overlay de chargement (gouttes d'huile) : compteur de profondeur pour que des
+   appels imbriqués (ex. g3LoadSchema qui déclenche lui-même un scan) gardent l'overlay
+   affiché en continu jusqu'à ce que l'opération la plus extérieure se termine, sans
+   clignotement entre les deux. ---- */
+let _loadDepth=0;
+function showLoadOverlay(label){
+  _loadDepth++;
+  const el=document.getElementById('loadOverlay'); if(!el) return;
+  const lbl=document.getElementById('loadLabel'); if(lbl && label) lbl.textContent=label;
+  el.classList.add('on');
+}
+function hideLoadOverlay(){
+  _loadDepth=Math.max(0,_loadDepth-1);
+  if(_loadDepth>0) return;
+  const el=document.getElementById('loadOverlay'); if(el) el.classList.remove('on');
+}
 
 function ignored(n){return n.startsWith('_')||n.startsWith('.');}
 
@@ -256,7 +330,9 @@ async function editorInit(){
       }
       if(perm==='granted'){
         rootHandle=h;
-        await scanAndRenderGraph3D();
+        /* ouverture de l'éditeur : toujours cadrer sur l'ultra-racine, jamais sur un
+           dernier chemin mémorisé (potentiellement hérité d'arbre.html) */
+        await scanAndRenderGraph3D(true);
       } else {
         toast('Permission refusée pour '+(h.name||'le dossier')+' — reconnecte-le depuis l\'accueil.');
       }
@@ -319,6 +395,54 @@ function g3Subtree(id){const set=new Set([id]);const st=[id];
   while(st.length){const x=st.pop();(g3Cmap[x]||[]).forEach(c=>{set.add(c);st.push(c);});}return set;}
 function g3Ancestry(id){const a=[];let cur=g3ById[id];while(cur.parent!=null){a.push(cur.parent);cur=g3ById[cur.parent];}return a;}
 function g3BaseR(n){return 6.5*Math.cbrt(n.val||2.2);}
+
+/* ---- l'ultra-sommet (la racine X elle-même) : noir semi-transparent, pour rester
+   discret dans la scène tout en restant repérable — distinct du dégradé de teinte
+   utilisé pour toutes les autres branches. Un sprite (disque texturé, alpha baké
+   dans le canvas) plutôt qu'une sphère standard : le module 3d-force-graph n'expose
+   pas de réglage d'opacité par nœud (nodeOpacity est global), donc on passe par un
+   nodeThreeObject dédié. Les classes ThreeJS nécessaires (Sprite/SpriteMaterial/
+   Texture) sont récupérées via la même technique que dans arbre.html : on instancie
+   un SpriteText (déjà chargé) et on remonte sa chaîne de prototypes, plutôt que de
+   charger une seconde copie indépendante de three.js. */
+let G3TSprite=null, G3TSpriteMaterial=null, G3TCanvasTexture=null, g3IconsReady=false;
+(function g3InitThree(){
+  try{
+    const probe=new SpriteText('A');
+    if(typeof probe.update==='function'){ try{probe.update();}catch(e){} }
+    const stProto=Object.getPrototypeOf(probe);
+    G3TSprite=Object.getPrototypeOf(stProto).constructor;
+    G3TSpriteMaterial=probe.material && probe.material.constructor;
+    const tex=probe.material && probe.material.map;
+    if(tex && tex.constructor) G3TCanvasTexture=tex.constructor;
+    g3IconsReady=!!(G3TSprite && G3TSpriteMaterial && G3TCanvasTexture);
+  }catch(e){ g3IconsReady=false; }
+})();
+let g3RootTex=null;
+function g3RootTexture(){
+  if(g3RootTex) return g3RootTex;
+  const S=256, cv=document.createElement('canvas'); cv.width=cv.height=S;
+  const c=cv.getContext('2d');
+  const r=S/2-6;
+  c.beginPath(); c.arc(S/2,S/2,r,0,Math.PI*2);
+  /* remplissage OPAQUE (alpha=1) : un remplissage semi-transparent laisse les liens
+     colorés du graphe "transparaître" derrière selon l'ordre de rendu (sprites
+     transparents + depthWrite:false), ce qui donnait l'impression que le sommet
+     changeait de couleur en grossissant. Le cercle reste "discret" simplement parce
+     que sa teinte est très proche du fond noir, pas parce qu'il est translucide. */
+  c.fillStyle='#0a0b0e'; c.fill();
+  c.lineWidth=5; c.strokeStyle='rgba(255,255,255,0.22)'; c.stroke();
+  const tex=new G3TCanvasTexture(cv); if('colorSpace'in tex){try{tex.colorSpace='srgb';}catch(e){}}
+  tex.needsUpdate=true; g3RootTex=tex; return tex;
+}
+function g3MakeRootObj(n){
+  if(!g3IconsReady) return false; /* repli : sphère par défaut si les classes ThreeJS sont indisponibles */
+  const mat=new G3TSpriteMaterial({map:g3RootTexture(), transparent:true, depthWrite:false});
+  const s=new G3TSprite(mat);
+  const r=g3BaseR(n)*2.4;
+  s.scale.set(r,r,1); s._baseR=r;
+  return s;
+}
 
 /* ---- croissance directionnelle (même principe qu'arbre.html) ---- */
 const G3_SEG=520, G3_SPREAD=0.55, G3_FAN=0.10;
@@ -401,15 +525,21 @@ function g3HashHue(str){
   let h=0; for(let i=0;i<str.length;i++){ h=(h*31+str.charCodeAt(i))>>>0; }
   return g3LerpStopsHue((h%1000)/1000);
 }
+/* teinte par défaut d'une section (classe 1) : angle d'or depuis son index parmi
+   ses frères triés alphabétiquement, pour un écartement maximal entre sections
+   voisines, ancré sur l'accent courant. */
+const G3_GOLDEN_ANGLE=137.50776;
+function g3SpacedHue(i){ return ((g3BaseHue+i*G3_GOLDEN_ANGLE)%360+360)%360; }
+function g3SectionIndex(id){ return (g3Cmap[g3Root.id]||[]).indexOf(id); }
 function g3LFor(hue){ return hue>=40&&hue<=80?46:(hue>=160&&hue<=260?58:54); }
 /* chaque section (dossier de classe 1, enfant direct de la racine) ancre son PROPRE
    dégradé sur sa couleur choisie dans l'éditeur (_meta.json/color, chargée par
-   g3LoadSectionColors) ou à défaut sur g3HashHue(nom) — jamais uniquement sur
+   g3LoadSectionColors) ou à défaut sur g3SpacedHue(index) — jamais uniquement sur
    l'accent global, qui ne sert plus que pour la racine elle-même. */
 function g3AssignHues(){
-  (g3Cmap[g3Root.id]||[]).forEach(id=>{
+  (g3Cmap[g3Root.id]||[]).forEach((id,i)=>{
     const sec=g3ById[id];
-    sec._anchorHue = sec.metaColor ? g3HexToHsl(sec.metaColor)[0] : g3HashHue(sec.name);
+    sec._anchorHue = sec.metaColor ? g3HexToHsl(sec.metaColor)[0] : g3SpacedHue(i);
   });
   g3ById[g3Root.id]._anchorHue=g3BaseHue;
   g3Nodes.forEach(n=>{
@@ -422,8 +552,9 @@ function g3AssignHues(){
   });
 }
 function g3Hsl(n){
+  if(n.type==='root') return '#0a0b0e'; /* ultra-sommet : noir discret, cohérent avec g3MakeRootObj — hex plutôt que rgba() pour rester sans ambiguïté dans tous les pipelines de couleur (y compris le repli sphère par défaut si les icônes ne chargent pas) */
   const hue=n.hue||0;
-  return `hsl(${hue.toFixed(1)},88%,${n.type==='root'?68:g3LFor(hue)}%)`;
+  return `hsl(${hue.toFixed(1)},88%,${g3LFor(hue)}%)`;
 }
 function g3HslBright(n){ const hue=n.hue||0; return `hsl(${hue.toFixed(1)},95%,68%)`; }
 function g3HslDim(n){ const hue=n.hue||0; return `hsl(${hue.toFixed(1)},55%,13%)`; }
@@ -431,6 +562,12 @@ function g3HslDim(n){ const hue=n.hue||0; return `hsl(${hue.toFixed(1)},55%,13%)
 let g3SearchSet=null, g3ClickSet=null, g3FocusedId=null;
 let g3HlSet=new Set(), g3Hovered=null;
 function g3NodeColor(n){
+  /* le root est TOUJOURS dans la lignée (ancêtre) de n'importe quel nœud cliqué/survolé
+     (g3Ancestry remonte jusqu'à lui), donc sans ce garde-fou il ressortait en couleur
+     vive (g3HslBright, à la teinte de l'accent = rouge/rose) dès qu'on interagissait
+     avec presque n'importe quel nœud du graphe — il doit rester noir en toutes
+     circonstances, jamais surligné. */
+  if(n.type==='root') return g3Hsl(n);
   const f=g3SearchSet||g3ClickSet;
   if(f) return f.has(n.id)?g3HslBright(n):g3HslDim(n);
   if(g3HlSet.size) return g3HlSet.has(n.id)?g3HslBright(n):g3Hsl(n);
@@ -476,6 +613,7 @@ function ensureGraph3D(){
   G3=ForceGraph3D({controlType:'orbit'})(el)
     .backgroundColor('#000000').showNavInfo(false).enableNodeDrag(false)
     .nodeColor(g3NodeColor).nodeVal('val').nodeRelSize(6.5).nodeResolution(12).nodeOpacity(0.92)
+    .nodeThreeObject(n=>n.type==='root'?g3MakeRootObj(n):false).nodeThreeObjectExtend(false)
     .linkColor(g3LinkColor).linkOpacity(0.85).linkWidth(0.6)
     .onNodeClick(n=>focusNode(n))
     .onBackgroundClick(()=>clearFocus())
@@ -572,7 +710,10 @@ function g3StartLoop(){
       if(animS) n._s+=(n._st-n._s)*0.28;
       n._cr=g3BaseR(n)*(1+(n._s-1)*7.5);
       const obj=n.__threeObj;
-      if(obj && animS) obj.scale.setScalar(n._s);
+      if(obj && animS){
+        if(obj._baseR){ const rr=obj._baseR*n._s; obj.scale.set(rr,rr,1); }
+        else obj.scale.setScalar(n._s);
+      }
     }
     for(const n of g3Nodes) g3AdaptNodeResolution(n,cam);
     if(G3 && g3LabelEls.length){
@@ -616,16 +757,18 @@ function g3DefaultView(ms){
   const dir=g3Norm([0.35,0.28,1]);
   G3.cameraPosition({x:dir[0]*dist,y:dir[1]*dist,z:dir[2]*dist},{x:0,y:0,z:0},ms);
 }
-function g3ApplyData(){
+function g3ApplyData(skipRestore){
   document.getElementById('g3sf').textContent=g3Nodes.length;
   document.getElementById('g3sd').textContent=g3MaxDepth;
   document.getElementById('g3Empty').classList.remove('on');
   if(G3){
     G3.graphData({nodes:g3Nodes,links:g3Links});
-    /* rouvre directement le dernier dossier visité (mémorisé entre toutes les pages Jupiter) ;
-       sinon recadre la caméra sur l'arbre entier, quelle que soit sa taille */
+    /* à l'ouverture de l'éditeur (skipRestore) : toujours cadrer sur l'ultra-racine,
+       jamais sur un dernier chemin mémorisé (qui peut venir d'arbre.html et n'a rien
+       à voir avec la vue d'ensemble attendue ici). En dehors de l'ouverture (rescan
+       manuel, etc.) on continue de rouvrir le dernier dossier visité si possible. */
     setTimeout(()=>{
-      if(!g3TryRestoreLastPath()){
+      if(skipRestore || !g3TryRestoreLastPath()){
         try{ g3DefaultView(900); }catch(e){ console.error('defaultView',e); }
       }
     },250);
@@ -634,8 +777,9 @@ function g3ApplyData(){
   if(!g3ClickSet) renderPanelIntro();
 }
 
-async function scanAndRenderGraph3D(){
+async function scanAndRenderGraph3D(skipRestore){
   if(!rootHandle) return;
+  showLoadOverlay('Lecture du dossier…');
   try{
     g3Id=0; g3Nodes=[]; g3Links=[];
     g3Root=g3AddNode(rootHandle.name||'racine','root',null,rootHandle);
@@ -646,11 +790,13 @@ async function scanAndRenderGraph3D(){
     g3Layout();
     g3DataReady=true;
     if(!G3) ensureGraph3D();
-    g3ApplyData();
+    g3ApplyData(skipRestore);
     toast(g3Nodes.length+' dossier(s) chargé(s) depuis '+rootHandle.name);
   }catch(e){
     console.error('scanAndRenderGraph3D : ',e);
     toast('Erreur scan : '+e.message);
+  }finally{
+    hideLoadOverlay();
   }
 }
 
@@ -726,11 +872,18 @@ function renderPanelIntro(){
   if(btnGit) btnGit.onclick=()=>toast('Update git : bientôt disponible.');
   if(btnLoad){
     btnLoad.onclick=g3LoadSchema;
-    /* le chargement d'un schéma n'a de sens QUE sur un dossier racine vide
-       (sinon on risquerait d'entrer en collision avec des dossiers existants) */
+    /* le chargement d'un schéma n'a de sens QUE sur un dossier racine sans arborescence
+       existante — on redemande l'état via une requête DOM FRAÎCHE (par id, pas la
+       référence capturée ici) au moment où la promesse se résout, pour ne jamais agir
+       sur un bouton déjà détaché si le panneau a été re-rendu entre-temps (c'était la
+       cause du bug où il restait grisé à tort). */
     g3IsRootEmpty().then(empty=>{
-      btnLoad.disabled=!empty;
-      btnLoad.title=empty?'':'Le dossier racine doit être vide pour charger un schéma.';
+      const b=document.getElementById('btnLoadSchema');
+      if(!b) return;
+      b.disabled=!empty;
+      b.title=empty
+        ? 'Crée les dossiers manquants à partir d\'un schéma existant'
+        : 'Indisponible : une arborescence existe déjà dans ce dossier.';
     });
   }
 }
@@ -802,8 +955,8 @@ function renderPanelNode(n){
   const hueInp=panelEl.querySelector('#secHueInput');
   if(hueInp){
     /* position de départ du slider = teinte déjà choisie, sinon celle qui serait
-       utilisée par défaut (hashHue du nom) — jamais une valeur figée en dur */
-    hueInp.value=Math.round(n.metaColor?g3HexToHsl(n.metaColor)[0]:g3HashHue(n.name));
+       utilisée par défaut (angle d'or selon l'index parmi les frères) — jamais une valeur figée en dur */
+    hueInp.value=Math.round(n.metaColor?g3HexToHsl(n.metaColor)[0]:g3SpacedHue(g3SectionIndex(n.id)));
     g3ReadMetaColor(n).then(c=>{ if(c) hueInp.value=Math.round(g3HexToHsl(c)[0]); });
     let hueSaveT=null;
     hueInp.oninput=()=>{
@@ -815,6 +968,10 @@ function renderPanelNode(n){
       clearTimeout(hueSaveT);
       hueSaveT=setTimeout(async()=>{
         await g3SaveMetaColor(n,hex);
+        /* schema.json (lu par index.html pour la couleur des cartes) doit rester
+           synchronisé à chaque changement, sinon l'accueil affiche une couleur
+           périmée jusqu'au prochain "Sauvegarder schéma" manuel. */
+        await g3SaveSchema(true);
         toast('Couleur de section enregistrée.');
       },400);
     };
@@ -838,10 +995,18 @@ async function g3RescanAndRefocus(path){
 }
 
 /* ---- schéma (architecture des sous-dossiers, sans les fichiers) ---- */
+/* le dossier racine est considéré "vide" (chargeable) tant qu'il ne contient AUCUN
+   dossier de contenu — les fichiers qu'il contient déjà (pages HTML, scripts, schema.json…
+   quand la racine choisie est aussi celle de l'appli elle-même) n'y changent rien : seuls
+   des sous-dossiers signalent une architecture déjà présente. */
 async function g3IsRootEmpty(){
   if(!g3Root||!g3Root.handle) return false;
-  try{ for await(const _ of g3Root.handle.entries()){ return false; } return true; }
-  catch(e){ return false; }
+  try{
+    for await(const [name,h] of g3Root.handle.entries()){
+      if(h.kind==='directory' && !ignored(name)) return false;
+    }
+    return true;
+  }catch(e){ return false; }
 }
 function g3BuildSchemaNode(n){
   return { name:n.name, children:(g3Cmap[n.id]||[]).map(id=>g3BuildSchemaNode(g3ById[id])) };
@@ -875,7 +1040,7 @@ async function g3SaveMetaColor(n,color){
     await w.close();
   }catch(e){ console.error('saveMetaColor',e); toast('Erreur enregistrement couleur : '+e.message); }
 }
-async function g3SaveSchema(){
+async function g3SaveSchema(silent){
   if(!g3Root) return;
   try{
     const tree=g3BuildSchemaNode(g3Root);
@@ -884,11 +1049,11 @@ async function g3SaveSchema(){
        couleur (choisie dans l'éditeur, _meta.json/color) — dérivé ici de
        l'arborescence complète, sans rien y coder en dur. */
     const secNodes=(g3Cmap[g3Root.id]||[]).map(id=>g3ById[id]);
-    /* jamais gris par défaut : la couleur choisie si elle existe, sinon la même
-       teinte déterministe par nom qu'utilisent revisions.html/arbre.html/l'éditeur. */
-    const sections=await Promise.all(secNodes.map(async sec=>{
+    /* jamais gris par défaut : la couleur choisie si elle existe, sinon un écartement
+       maximal (angle d'or) selon l'index de la section parmi ses frères. */
+    const sections=await Promise.all(secNodes.map(async (sec,i)=>{
       const chosen=await g3ReadMetaColor(sec);
-      const hue=chosen?g3HexToHsl(chosen)[0]:g3HashHue(sec.name);
+      const hue=chosen?g3HexToHsl(chosen)[0]:g3SpacedHue(i);
       return {
         id:sec.name, label:sec.name,
         color:chosen||`hsl(${hue.toFixed(1)},88%,${g3LFor(hue)}%)`,
@@ -900,7 +1065,7 @@ async function g3SaveSchema(){
     const w=await fh.createWritable();
     await w.write(JSON.stringify(schema,null,2));
     await w.close();
-    toast('schema.json enregistré dans '+g3Root.name+'.');
+    if(!silent) toast('schema.json enregistré dans '+g3Root.name+'.');
   }catch(e){ console.error('saveSchema',e); toast('Erreur enregistrement schéma : '+e.message); }
 }
 async function g3CreateFromSchema(dirHandle,node){
@@ -912,18 +1077,31 @@ async function g3CreateFromSchema(dirHandle,node){
 }
 async function g3LoadSchema(){
   if(!g3Root) return;
-  if(!(await g3IsRootEmpty())){ toast('Le dossier racine doit être vide pour charger un schéma.'); return; }
+  /* double vérification au clic (le bouton est censé être désactivé sinon, mais on ne
+     fait jamais confiance uniquement à l'état visuel d'un bouton) : bloque net, pas de
+     confirmation à contourner, une arborescence existante ne doit pas être touchée ici. */
+  if(!(await g3IsRootEmpty())){ toast('Une arborescence existe déjà dans ce dossier — impossible de charger un schéma.'); return; }
   if(!window.showOpenFilePicker){ toast('Ce navigateur ne permet pas de choisir un fichier ici.'); return; }
   try{
     const [fh]=await window.showOpenFilePicker({types:[{description:'Schéma Jupiter',accept:{'application/json':['.json']}}]});
     const f=await fh.getFile();
     const schema=JSON.parse(await f.text());
+    /* flou + blocage total des interactions pendant la création des dossiers +
+       relecture, l'une des rares opérations pouvant prendre un temps notable. */
+    showLoadOverlay('Création de l\'arborescence…');
     await g3CreateFromSchema(g3Root.handle,schema);
     toast('Schéma chargé — relecture du dossier…');
     await g3RescanAndRefocus();
+    /* le fichier importé n'est qu'un PLAN pour créer les dossiers : une fois ceux-ci
+       réellement créés sur le disque, schema.json est régénéré à partir de cette
+       arborescence réelle (couleurs incluses) — les dossiers ont valeur de vérité,
+       jamais le fichier importé tel quel. */
+    await g3SaveSchema(true);
   }catch(e){
     if(e&&e.name==='AbortError') return;
     console.error('loadSchema',e); toast('Erreur chargement schéma : '+e.message);
+  }finally{
+    hideLoadOverlay();
   }
 }
 

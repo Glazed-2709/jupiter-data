@@ -1,0 +1,37 @@
+[
+  {
+    "type": "Formule",
+    "enonce": "Énoncer les relations fondamentales de la trigonométrie circulaire pour le cosinus, le sinus et la tangente.",
+    "reponse": "Hypothèses : Pour tout réel $x$ (et $x \\neq \\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}$ pour la tangente). Relations :\n- Relation fondamentale :\n$$\\cos^2(x) + \\sin^2(x) = 1$$\n- Expression de la tangente :\n$$\\tan(x) = \\dfrac{\\sin(x)}{\\cos(x)}$$\n- Lien dérivée/tangente :\n$$1 + \\tan^2(x) = \\dfrac{1}{\\cos^2(x)}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les formules de symétrie, de déphasage et de complémentarité pour les fonctions cosinus, sinus et tangente.",
+    "reponse": "Hypothèses : Pour tout réel $x$. Relations (valables sous réserve de définition) :\n- **Parité / Symétries** :\n$$\\cos(-x) = \\cos(x), \\quad \\sin(-x) = -\\sin(x), \\quad \\tan(-x) = -\\tan(x)$$\n$$\\cos(\\pi - x) = -\\cos(x), \\quad \\sin(\\pi - x) = \\sin(x), \\quad \\tan(\\pi - x) = -\\tan(x)$$\n- **Périodicité / Déphasage** :\n$$\\cos(x + \\pi) = -\\cos(x), \\quad \\sin(x + \\pi) = -\\sin(x), \\quad \\tan(x + \\pi) = \\tan(x)$$\n$$\\cos(x + 2\\pi) = \\cos(x), \\quad \\sin(x + 2\\pi) = \\sin(x)$$\n- **Complémentarité (quart de tour)** :\n$$\\cos\\left(\\dfrac{\\pi}{2} - x\\right) = \\sin(x), \\quad \\sin\\left(\\dfrac{\\pi}{2} - x\\right) = \\cos(x)$$\n$$\\cos\\left(x + \\dfrac{\\pi}{2}\\right) = -\\sin(x), \\quad \\sin\\left(x + \\dfrac{\\pi}{2}\\right) = \\cos(x)$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Énoncer les formules d'addition pour le cosinus, le sinus et la tangente.",
+    "reponse": "Hypothèses : Pour tous réels $a$ et $b$ (tels que les tangentes soient définies). Relations :\n- Cosinus :\n$$\\cos(a+b) = \\cos(a)\\cos(b) - \\sin(a)\\sin(b)$$\n$$\\cos(a-b) = \\cos(a)\\cos(b) + \\sin(a)\\sin(b)$$\n- Sinus :\n$$\\sin(a+b) = \\sin(a)\\cos(b) + \\cos(a)\\sin(b)$$\n$$\\sin(a-b) = \\sin(a)\\cos(b) - \\cos(a)\\sin(b)$$\n- Tangente :\n$$\\tan(a+b) = \\dfrac{\\tan(a) + \\tan(b)}{1 - \\tan(a)\\tan(b)}, \\quad \\tan(a-b) = \\dfrac{\\tan(a) - \\tan(b)}{1 + \\tan(a)\\tan(b)}$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Énoncer les formules de duplication pour le cosinus, le sinus et la tangente.",
+    "reponse": "Hypothèses : Pour tout réel $x$. Relations :\n- Cosinus :\n$$\\cos(2x) = \\cos^2(x) - \\sin^2(x) = 2\\cos^2(x) - 1 = 1 - 2\\sin^2(x)$$\n- Sinus :\n$$\\sin(2x) = 2\\sin(x)\\cos(x)$$\n- Tangente :\n$$\\tan(2x) = \\dfrac{2\\tan(x)}{1 - \\tan^2(x)}$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les formules d'Euler pour le cosinus et le sinus.",
+    "reponse": "Hypothèses : Pour tout nombre réel (ou complexe) $\\theta$. Relations :\n$$\\cos(\\theta) = \\dfrac{e^{i\\theta} + e^{-i\\theta}}{2}$$\n$$\\sin(\\theta) = \\dfrac{e^{i\\theta} - e^{-i\\theta}}{2i}$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule de Moivre pour les puissances d'expressions trigonométriques.",
+    "reponse": "Hypothèses : Pour tout réel $\\theta$ et tout entier relatif $n \\in \\mathbb{Z}$. Relation :\n$$(\\cos(\\theta) + i\\sin(\\theta))^n = \\cos(n\\theta) + i\\sin(n\\theta)$$\nCe qui s'écrit de manière exponentielle : $\\left(e^{i\\theta}\\right)^n = e^{in\\theta}$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner l'expression des dérivées des fonctions cosinus, sinus et tangente sur leurs domaines respectifs.",
+    "reponse": "- La fonction $\\cos$ est dérivable sur $\\mathbb{R}$ et : $\\forall x \\in \\mathbb{R}, \\ \\cos'(x) = -\\sin(x)$\n- La fonction $\\sin$ est dérivable sur $\\mathbb{R}$ et : $\\forall x \\in \\mathbb{R}, \\ \\sin'(x) = \\cos(x)$\n- La fonction $\\tan$ est dérivable sur chaque intervalle de son domaine $\\mathbb{R} \\setminus \\{\\frac{\\pi}{2} + k\\pi, k \\in \\mathbb{Z}\\}$ et :\n$$\\forall x \\in \\mathcal{D}_{\\tan}, \\ \\tan'(x) = 1 + \\tan^2(x) = \\dfrac{1}{\\cos^2(x)}$$"
+  }
+]

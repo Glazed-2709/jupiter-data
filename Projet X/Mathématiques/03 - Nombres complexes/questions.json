@@ -1,0 +1,107 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir l'ensemble $\\mathbb{C}$ des nombres complexes, sa forme algébrique, sa partie réelle et sa partie imaginaire.",
+    "reponse": "L'ensemble $\\mathbb{C}$ est une extension de $\\mathbb{R}$ contenant un élément particulier noté $i$ tel que $i^2 = -1$.\nTout élément $z \\in \\mathbb{C}$ s'écrit de manière unique sous sa forme algébrique :\n$$z = x + iy$$\noù $(x, y) \\in \\mathbb{R}^2$.\n- $x$ est la **partie réelle** de $z$, notée $\\mathrm{Re}(z)$.\n- $y$ est la **partie imaginaire** de $z$, notée $\\mathrm{Im}(z)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'ensemble $\\mathbb{U}$ des nombres complexes de module 1.",
+    "reponse": "L'ensemble $\\mathbb{U}$ est le sous-ensemble de $\\mathbb{C}$ défini par :\n$$\\mathbb{U} = \\{z \\in \\mathbb{C} \\mid |z| = 1\\} = \\{e^{i\\theta} \\mid \\theta \\in \\mathbb{R}\\}$$\nGéométriquement, il correspond au cercle trigonométrique (cercle de centre l'origine et de rayon 1 dans le plan complexe)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le conjugué $\\bar{z}$ d'un nombre complexe $z = x + iy$, et donner ses interprétations algébriques pour $\\mathrm{Re}(z)$ et $\\mathrm{Im}(z)$.",
+    "reponse": "Hypothèses : Soit $z = x + iy$ avec $(x, y) \\in \\mathbb{R}^2$.\nLe conjugué de $z$, noté $\\bar{z}$, est le nombre complexe :\n$$\\bar{z} = x - iy$$\nOn a les relations fondamentales :\n$$\\mathrm{Re}(z) = \\dfrac{z + \\bar{z}}{2} \\quad \\text{et} \\quad \\mathrm{Im}(z) = \\dfrac{z - \\bar{z}}{2i}$$\nDe plus, $z$ est réel si et seulement si $z = \\bar{z}$, et $z$ est imaginaire pur si et seulement si $z = -\\bar{z}$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés algébriques du conjugué vis-à-vis de la somme, du produit, de l'inverse et de la puissance.",
+    "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$ et $n \\in \\mathbb{Z}$. Relations :\n- Somme : $\\overline{z + z'} = \\bar{z} + \\overline{z'}$\n- Produit : $\\overline{z \\times z'} = \\bar{z} \\times \\overline{z'}$\n- Inverse : $\\overline{\\left(\\dfrac{1}{z}\\right)} = \\dfrac{1}{\\bar{z}}$ (pour $z \\neq 0$)\n- Puissance : $\\overline{z^n} = (\\bar{z})^n$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le module $|z|$ d'un nombre complexe $z = x + iy$ et donner sa relation avec $z\\bar{z}$.",
+    "reponse": "Hypothèses : Soit $z = x + iy$ avec $(x, y) \\in \\mathbb{R}^2$.\nLe module de $z$ est le nombre réel positif ou nul défini par :\n$$|z| = \\sqrt{x^2 + y^2}$$\nOn a la relation fondamentale : $z\\bar{z} = |z|^2$, ce qui permet d'écrire l'inverse de $z$ non nul sous la forme : $\\dfrac{1}{z} = \\dfrac{\\bar{z}}{|z|^2}$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés du module vis-à-vis du produit, de l'inverse, de la puissance et du conjugué.",
+    "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$ et $n \\in \\mathbb{Z}$. Relations :\n- Positivité et séparation : $|z| \\ge 0$, et $|z| = 0 \\iff z = 0$\n- Conjugué : $|\\bar{z}| = |z| = |-z|$\n- Produit : $|z \\times z'| = |z| \\times |z'|$\n- Inverse : $\\left|\\dfrac{1}{z}\\right| = \\dfrac{1}{|z|}$ (pour $z \\neq 0$)\n- Puissance : $|z^n| = |z|^n$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer l'inégalité triangulaire classique ainsi que son cas d'égalité, puis l'inégalité triangulaire renversée.",
+    "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}$.\n- **Inégalité triangulaire** :\n$$|z + z'| \\le |z| + |z'|$$\n*Cas d'égalité* : $|z + z'| = |z| + |z'|$ si et seulement si $z$ et $z'$ sont positivement colinéaires (c'est-à-dire $\\exists \\lambda \\in \\mathbb{R}^+, z' = \\lambda z$ ou $z = 0$).\n- **Inégalité triangulaire renversée** :\n$$| |z| - |z'| | \\le |z - z'|$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'exponentielle complexe $e^{i\\theta}$ pour un réel $\\theta$, et énoncer la formule d'Euler associée.",
+    "reponse": "Pour tout $\\theta \\in \\mathbb{R}$, on définit l'élément $e^{i\\theta} \\in \\mathbb{U}$ par :\n$$e^{i\\theta} = \\cos(\\theta) + i\\sin(\\theta)$$\nLes formules d'Euler permettent d'exprimer les fonctions trigonométriques à l'aide de cette exponentielle :\n$$\\cos(\\theta) = \\dfrac{e^{i\\theta} + e^{-i\\theta}}{2} \\quad \\text{et} \\quad \\sin(\\theta) = \\dfrac{e^{i\\theta} - e^{-i\\theta}}{2i}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés algébriques fondamentales de l'exponentielle imaginaire $e^{i\\theta}$.",
+    "reponse": "Hypothèses : Soient $\\theta, \\theta' \\in \\mathbb{R}$ et $n \\in \\mathbb{Z}$. Relations :\n- Produit : $e^{i\\theta} \\times e^{i\\theta'} = e^{i(\\theta + \\theta')}$\n- Inverse et conjugué : $\\dfrac{1}{e^{i\\theta}} = \\overline{e^{i\\theta}} = e^{-i\\theta}$\n- Quotient : \\dfrac{e^{i\\theta}}{e^{i\\theta'}} = e^{i(\\theta - \\theta')}\n- Formule de Moivre : $\\left(e^{i\\theta}\\right)^n = e^{in\\theta}$, soit $(\\cos(\\theta) + i\\sin(\\theta))^n = \\cos(n\\theta) + i\\sin(n\\theta)$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode de factorisation par l'angle moitié pour simplifier $e^{i\\alpha} + e^{i\\beta}$ et $e^{i\\alpha} - e^{i\\beta}$.",
+    "reponse": "Hypothèses : Soient $\\alpha, \\beta \\in \\mathbb{R}$.\nLa méthode consiste à mettre en facteur l'exponentielle de la demi-somme des angles, $e^{i\\frac{\\alpha+\\beta}{2}}$, afin de faire apparaître des formules d'Euler :\n- Pour la somme :\n$$e^{i\\alpha} + e^{i\\beta} = e^{i\\frac{\\alpha+\\beta}{2}} \\left( e^{i\\frac{\\alpha-\\beta}{2}} + e^{-i\\frac{\\alpha-\\beta}{2}} \\right) = 2\\cos\\left(\\dfrac{\\alpha-\\beta}{2}\\right)e^{i\\frac{\\alpha+\\beta}{2}}$$\n- Pour la différence :\n$$e^{i\\alpha} - e^{i\\beta} = e^{i\\frac{\\alpha+\\beta}{2}} \\left( e^{i\\frac{\\alpha-\\beta}{2}} - e^{-i\\frac{\\alpha-\\beta}{2}} \\right) = 2i\\sin\\left(\\dfrac{\\alpha-\\beta}{2}\\right)e^{i\\frac{\\alpha+\\beta}{2}}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la forme trigonométrique (ou exponentielle) d'un nombre complexe non nul $z$, et définir ses arguments.",
+    "reponse": "Hypothèses : Soit $z \\in \\mathbb{C}^*$.\nTout nombre complexe non nul $z$ peut s'écrire sous la forme :\n$$z = r e^{i\\theta} = r(\\cos(\\theta) + i\\sin(\\theta))$$\noù $r = |z| \\in ]0, +\\infty[$ est unique, et $\\theta \\in \\mathbb{R}$ est un argument de $z$, noté $\\arg(z)$.\nL'argument n'est pas unique, il est défini à un multiple de $2\\pi$ près : si $\\theta_0$ est un argument, l'ensemble des arguments de $z$ est $\\{\\theta_0 + 2k\\pi \\mid k \\in \\mathbb{Z}\\}$. L'unique argument appartenant à $]-\\pi, \\pi]$ est appelé l'**argument principal**."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés de l'argument d'un nombre complexe vis-à-vis du produit, de l'inverse, du quotient et du conjugué (modulo $2\\pi$).",
+    "reponse": "Hypothèses : Soient $z, z' \\in \\mathbb{C}^*$ et $n \\in \\mathbb{Z}$. Relations (valables modulo $2\\pi$) :\n- Produit : $\\arg(z \\times z') \\equiv \\arg(z) + \\arg(z') \\ [2\\pi]$\n- Inverse : $\\arg\\left(\\dfrac{1}{z}\\right) \\equiv -\\arg(z) \\ [2\\pi]$\n- Quotient : $\\arg\\left(\\dfrac{z}{z'}\\right) \\equiv \\arg(z) - \\arg(z') \\ [2\\pi]$\n- Conjugué : $\\arg(\\bar{z}) \\equiv -\\arg(z) \\ [2\\pi]$\n- Puissance : $\\arg(z^n) \\equiv n\\arg(z) \\ [2\\pi]$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode pour déterminer les racines carrées complexes d'un nombre complexe donné $Z = a + ib$.",
+    "reponse": "Hypothèses : Un complexe $Z = a + ib$.\nOn cherche $z = x + iy$ tel que $z^2 = Z$. On résout le système à trois équations (dont l'une est redondante mais simplificatrice grâce au module) :\n$$\\begin{cases} x^2 - y^2 = a & \\text{(Identification des parties réelles)} \\\\ 2xy = b & \\text{(Identification des parties imaginaires)} \\\\ x^2 + y^2 = |Z| = \\sqrt{a^2+b^2} & \\text{(Identification des modules)} \\end{cases}$$\nEn additionnant et soustrayant la première et la troisième équation, on trouve $x^2$ et $y^2$, puis le signe du produit $2xy$ (donné par le signe de $b$) permet d'associer correctement les signes de $x$ et $y$. On obtient exactement deux solutions opposées."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Donner la formule de résolution d'une équation du second degré $az^2 + bz + c = 0$ à coefficients complexes ($a \\neq 0$).",
+    "reponse": "Hypothèses : $a, b, c \\in \\mathbb{C}$ avec $a \\neq 0$.\nOn calcule le discriminant complexe $\\Delta = b^2 - 4ac$.\nSoit $\\delta \\in \\mathbb{C}$ une racine carrée complexe de $\\Delta$ (telle que $\\delta^2 = \\Delta$).\nL'équation admet deux solutions (confondues si $\\Delta = 0$) données par :\n$$z_1 = \\dfrac{-b - \\delta}{2a} \\quad \\text{et} \\quad z_2 = \\dfrac{-b + \\delta}{2a}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les racines $n$-ièmes de l'unité, donner leur notation $\\mathbb{U}_n$ et leur expression explicite.",
+    "reponse": "Hypothèses : Soit $n \\in \\mathbb{N}^*$.\nLes racines $n$-ièmes de l'unité sont les solutions complexes de l'équation $z^n = 1$.\nL'ensemble de ces solutions est noté $\\mathbb{U}_n$ et contient exactement $n$ éléments distincts donnés par :\n$$\\mathbb{U}_n = \\left\\{ e^{i\\frac{2k\\pi}{n}} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\}$$\nSi on note $\\omega = e^{i\\frac{2\\pi}{n}}$, alors $\\mathbb{U}_n = \\{1, \\omega, \\omega^2, \\dots, \\omega^{n-1}\\}$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la valeur de la somme des racines $n$-ièmes de l'unité pour $n \\ge 2$.",
+    "reponse": "Hypothèses : Un entier $n \\ge 2$ et $\\omega = e^{i\\frac{2\\pi}{n}}$.\nLa somme de toutes les racines $n$-ièmes de l'unité est nulle :\n$$\\sum_{k=0}^{n-1} e^{i\\frac{2k\\pi}{n}} = \\sum_{k=0}^{n-1} \\omega^k = 0$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Décrire la méthode de résolution et donner l'expression des solutions de l'équation $z^n = a$ pour $a \\in \\mathbb{C}^*$.",
+    "reponse": "Hypothèses : Un entier $n \\in \\mathbb{N}^*$ et un complexe non nul $a = R e^{i\\phi}$.\nPour résoudre $z^n = a$, on cherche une solution particulière $z_0 = \\sqrt[n]{R} e^{i\\frac{\\phi}{n}}$.\nLes solutions de l'équation sont obtenues en multipliant cette solution particulière par les racines $n$-ièmes de l'unité :\n$$S = \\left\\{ z_0 \\times e^{i\\frac{2k\\pi}{n}} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\} = \\left\\{ \\sqrt[n]{R} e^{i\\left(\\frac{\\phi}{n} + \\frac{2k\\pi}{n}\\right)} \\mid k \\in \\llbracket 0, n-1 \\rrbracket \\right\\}$$\nCes $n$ solutions forment les sommets d'un polygone régulier à $n$ côtés centré en l'origine."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner l'interprétation complexe de la distance entre deux points et de l'angle formé par trois points.",
+    "reponse": "Hypothèses : Soient $A, B, C$ trois points du plan complexe d'affixes respectives $z_A, z_B, z_C$ (avec $A \\neq B$ et $A \\neq C$).\n- **Distance** : La distance géométrique $AB$ est égale au module de la différence des affixes :\n$$AB = |z_B - z_A|$$\n- **Angle orienté** : L'angle orienté de vecteurs $(\\overrightarrow{AB}, \\overrightarrow{AC})$ est donné par l'argument du quotient des affixes :\n$$(\\overrightarrow{AB}, \\overrightarrow{AC}) \\equiv \\arg\\left(\\dfrac{z_C - z_A}{z_B - z_A}\\right) \\ [2\\pi]$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner l'expression analytique complexe d'une translation de vecteur $\\vec{u}$ et d'une homothétie de centre $\\Omega$ et de rapport $k$.",
+    "reponse": "- **Translation** de vecteur $\\vec{u}$ d'affixe $b$ : La transformation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que :\n$$z' = z + b$$\n- **Homothétie** de centre $\\Omega(\\omega)$ et de rapport $k \\in \\mathbb{R}^*$ : La transformation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que $z' - \\omega = k(z - \\omega)$, soit :\n$$z' = kz + (1 - k)\\omega$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner l'expression analytique complexe d'une rotation de centre $\\Omega$ et d'angle $\\alpha$.",
+    "reponse": "Hypothèses : Centre $\\Omega$ d'affixe $\\omega$ et angle $\\alpha \\in \\mathbb{R}$.\nLa rotation associe à tout point d'affixe $z$ le point d'affixe $z'$ tel que $z' - \\omega = e^{i\\alpha}(z - \\omega)$, soit :\n$$z' = e^{i\\alpha}z + (1 - e^{i\\alpha})\\omega$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une similitude directe plane, donner sa forme générale $z' = az + b$ et interpréter ses éléments caractéristiques selon les valeurs de $a$.",
+    "reponse": "Une similitude directe est une transformation du plan complexe dont l'expression analytique est de la forme :\n$$z' = az + b$$\noù $a \\in \\mathbb{C}^*$ et $b \\in \\mathbb{C}$.\n- Si $a = 1$ : C'est une translation de vecteur d'affixe $b$.\n- Si $a \\neq 1$ : La similitude possède un unique point fixe (centre de la similitude) d'affixe $\\omega = \\dfrac{b}{1-a}$. C'est la composée commutative d'une homothétie de centre $\\omega$ et de rapport $|a|$, et d'une rotation de même centre $\\omega$ et d'angle $\\arg(a)$."
+  }
+]

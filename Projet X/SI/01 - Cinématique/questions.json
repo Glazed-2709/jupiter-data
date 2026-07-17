@@ -1,0 +1,62 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir formellement un solide indéformable $S$ et préciser le nombre de degrés de liberté associé dans l'espace 3D.",
+    "reponse": "Un solide indéformable $S$ est un ensemble continu de points matériels caractérisé par le fait que la distance entre deux points quelconques du solide reste constante à chaque instant au cours de son mouvement :\n$$\\forall A \\in S, \\ \\forall B \\in S, \\quad ||\\vec{AB}|| = \\text{constante}$$\nLa connaissance de la position d'un point unique de $S$ et de l'orientation de $S$ dans l'espace suffit à déterminer la position de tous les autres points. Un solide libre dans l'espace possède ainsi exactement **6 degrés de liberté (ddl)** : 3 translations et 3 rotations."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Expliquer la différence fondamentale en Sciences Industrielles entre un repère et un référentiel.",
+    "reponse": "- Un **référentiel** (noté $\\mathcal{R}$) est un objet physique réel, un solide de référence (ex: le bâti d'une machine, le sol, le châssis d'un véhicule) par rapport auquel on observe et on mesure un mouvement. On dit : « le mouvement de $S$ dans le référentiel $\\mathcal{R}$ ».\n- Un **repère** (noté $R$) est un outil de calcul purement mathématique défini par une origine $O$ et une base géométrique de trois vecteurs unitaires orthonormés directs $(\\vec{x}, \\vec{y}, \\vec{z})$. Il sert uniquement à projeter des vecteurs et à réaliser des calculs de coordonnées.\n*Ancrage :* On attache généralement un repère mathématique à un référentiel physique pour pouvoir quantifier le mouvement."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer et démontrer la propriété d'équiprojectivité des vitesses pour deux points d'un même solide.",
+    "reponse": "**Énoncé :** Soient $A$ et $B$ deux points appartenant à un même solide indéformable $S$ en mouvement par rapport à un référentiel $\\mathcal{R}_0$. Les projections sous forme de produit scalaire de leurs vecteurs vitesse sur la droite $(AB)$ sont égales :\n$$\\vec{V}(A \\in S/\\mathcal{R}_0) \\cdot \\vec{AB} = \\vec{V}(B \\in S/\\mathcal{R}_0) \\cdot \\vec{AB}$$\n\n**Démonstration :** \nPar définition du solide indéformable, la distance $AB$ est constante, donc $||\\vec{AB}||^2 = \\vec{AB} \\cdot \\vec{AB} = \\text{Cste}$. Dérivons cette constante par rapport au temps dans le référentiel d'observation $\\mathcal{R}_0$ :\n$$\\left.\\frac{d}{dt}(\\vec{AB} \\cdot \\vec{AB})\\right|_{\\mathcal{R}_0} = 0 \\implies 2\\vec{AB} \\cdot \\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = 0$$\nEn utilisant la relation de Chasles avec une origine fixe $O$ de $\\mathcal{R}_0$, on a $\\vec{AB} = \\vec{OB} - \\vec{OA}$. Par définition de la vitesse d'un point, $\\left.\\frac{d\\vec{OB}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(B \\in S/\\mathcal{R}_0)$ et $\\left.\\frac{d\\vec{OA}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(A \\in S/\\mathcal{R}_0)$. On injecte :\n$$\\vec{AB} \\cdot \\big(\\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0)\\big) = 0 \\implies \\vec{V}(A \\in S/\\mathcal{R}_0) \\cdot \\vec{AB} = \\vec{V}(B \\in S/\\mathcal{R}_0) \\cdot \\vec{AB}$$"
+  },
+  {
+    "type": "Piège",
+    "enonce": "Quelle est l'erreur d'interprétation fréquente concernant la propriété d'équiprojectivité ?",
+    "reponse": "L'équiprojectivité traduit uniquement l'égalité des *projections* des vitesses sur l'axe $(AB)$. Un piège classique est de croire ou d'écrire que les vecteurs vitesse sont égaux ($\\vec{V}(A) = \\vec{V}(B)$). C'est faux dès lors que le solide est en rotation : les composants perpendiculaires à la droite $(AB)$ peuvent être totalement différents."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir mathématiquement le vecteur rotation instantanée d'un solide $S$ par rapport à un référentiel $\\mathcal{R}_0$.",
+    "reponse": "Le vecteur rotation instantanée, noté $\\vec{\\Omega}_{S/\\mathcal{R}_0}$, est l'unique vecteur structurel lié au mouvement de $S$ dans $\\mathcal{R}_0$ tel que, pour tout vecteur $\\vec{u}$ rigidement lié (fixe) au solide $S$, sa dérivée temporelle calculée dans $\\mathcal{R}_0$ s'obtient par le produit vectoriel :\n$$\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{u}$$\nSa direction définit l'axe instantané de rotation du solide et sa norme correspond à la vitesse angulaire instantanée (en rad/s)."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les formules de dérivation temporelle des vecteurs de la base polaire/cylindrique $(\\vec{e}_r, \\vec{e}_\\theta)$ tournant autour d'un axe fixe $\\vec{z}$ à la vitesse $\\dot{\\theta}$.",
+    "reponse": "Soit la base mobile $\\mathcal{R}_1$ tournant à la vitesse angulaire $\\dot{\\theta}$ par rapport à la base fixe $\\mathcal{R}_0$ autour de l'axe commun $\\vec{z}$ (donc $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} = \\dot{\\theta}\\vec{z}$).\n- Dérivée de $\\vec{e}_r$ : \n$$\\left.\\frac{d\\vec{e}_r}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{e}_r = (\\dot{\\theta}\\vec{z}) \\wedge \\vec{e}_r = \\dot{\\theta}\\vec{e}_\\theta$$\n- Dérivée de $\\vec{e}_\\theta$ : \n$$\\left.\\frac{d\\vec{e}_\\theta}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{e}_\\theta = (\\dot{\\theta}\\vec{z}) \\wedge \\vec{e}_\\theta = -\\dot{\\theta}\\vec{e}_r$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la formule de la base mobile (formule de Bour) permettant de changer de référentiel de dérivation pour un vecteur quelconque.",
+    "reponse": "Pour un vecteur quelconque $\\vec{u}$ (qu'il soit fixe ou mobile dans ses repères) et deux référentiels distincts $\\mathcal{R}_0$ (référentiel de calcul global) et $\\mathcal{R}_1$ (référentiel local mobile), la formule de Bour s'énonce :\n$$\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1} + \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$$\n*Interprétation :* La variation totale d'un vecteur est la somme de sa variation interne dans le repère local (dérivée de ses composantes) et d'un terme correctif de rotation entraîné par le mouvement de la base locale par rapport à la base globale."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Détailler la méthode systématique pour dériver un vecteur à l'aide de la formule de Bour sans risquer d'erreur de projection.",
+    "reponse": "Pour dériver un vecteur $\\vec{u}$ exprimé dans une base mobile $\\mathcal{R}_1$ par rapport à un référentiel $\\mathcal{R}_0$ :\n1. Écrire explicitement la formule de Bour : $\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1} + \\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$.\n2. Calculer le premier terme $\\left.\\frac{d\\vec{u}}{dt}\\right|_{\\mathcal{R}_1}$ en dérivant directement les composantes scalaires de $\\vec{u}$ comme si la base $\\mathcal{R}_1$ était parfaitement fixe.\n3. Déterminer le vecteur rotation $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0}$.\n4. Effectuer le produit vectoriel $\\vec{\\Omega}_{\\mathcal{R}_1/\\mathcal{R}_0} \\wedge \\vec{u}$ en conservant de préférence les vecteurs exprimés dans la même base mobile $\\mathcal{R}_1$.\n5. Sommer les deux résultats. Cela évite d'avoir à projeter prématurément le vecteur dans la base fixe."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les règles d'antisymétrie et de composition (relation de Chasles) s'appliquant aux vecteurs rotation.",
+    "reponse": "- **Propriété d'antisymétrie :** Le vecteur rotation change de signe direct lorsque l'on intervertit le solide observé et le référentiel d'observation :\n$$\\vec{\\Omega}_{S_2/S_1} = -\\vec{\\Omega}_{S_1/S_2}$$\n- **Loi de composition des mouvements :** Pour une chaîne cinématique de plusieurs solides intermédiaires (ex: $S_0, S_1, S_2$), les vecteurs rotation instantanée s'additionnent vectoriellement (structure de type Chasles) :\n$$\\vec{\\Omega}_{S_2/S_0} = \\vec{\\Omega}_{S_2/S_1} + \\vec{\\Omega}_{S_1/S_0}$$\n*Attention :* Cette linéarité ne s'applique qu'aux vecteurs complets, pas directement aux amplitudes scalaires si les axes de rotation changent d'orientation."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer et démontrer la formule fondamentale du champ des vitesses d'un solide indéformable (formule de Babinet / transport des vitesses).",
+    "reponse": "**Énoncé :** Pour deux points quelconques $A$ et $B$ appartenant à un même solide $S$ en mouvement par rapport à un référentiel $\\mathcal{R}_0$, la relation de transport de la vitesse (relation du « bras de levier ») s'écrit :\n$$\\vec{V}(B \\in S/\\mathcal{R}_0) = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{BA} \\wedge \\vec{\\Omega}_{S/\\mathcal{R}_0} = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$$\n\n**Démonstration :** \nPar définition du vecteur rotation, pour le vecteur $\\vec{AB}$ qui est rigidement lié au solide $S$, on a : $\\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$.\nExprimons ce même vecteur par la relation de Chasles à l'aide d'un point fixe $O$ de $\\mathcal{R}_0$ : $\\vec{AB} = \\vec{OB} - \\vec{OA}$. Dérivons cette expression par rapport au temps dans $\\mathcal{R}_0$ :\n$$\\left.\\frac{d\\vec{AB}}{dt}\\right|_{\\mathcal{R}_0} = \\left.\\frac{d\\vec{OB}}{dt}\\right|_{\\mathcal{R}_0} - \\left.\\frac{d\\vec{OA}}{dt}\\right|_{\\mathcal{R}_0} = \\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0)$$\nEn égalisant les deux expressions de la dérivée de $\\vec{AB}$, on obtient immédiatement :\n$$\\vec{V}(B \\in S/\\mathcal{R}_0) - \\vec{V}(A \\in S/\\mathcal{R}_0) = \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB} \\implies \\vec{V}(B \\in S/\\mathcal{R}_0) = \\vec{V}(A \\in S/\\mathcal{R}_0) + \\vec{\\Omega}_{S/\\mathcal{R}_0} \\wedge \\vec{AB}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion cinématique de torseur et présenter la structure du torseur cinématique d'un solide.",
+    "reponse": "Un torseur est un outil mathématique modélisant un champ de vecteurs équiprojectif. Il est entièrement déterminé par deux vecteurs appelés ses **éléments de réduction** en un point donné $A$ :\n- Sa **résultante** (qui est indépendante du point de calcul).\n- Son **moment** (qui dépend du point de calcul selon la loi de transport des moments).\n\nPour un solide $S$ en mouvement par rapport à $\\mathcal{R}_0$, le **torseur cinématique** noté $\\{\\mathcal{V}_{S/\\mathcal{R}_0}\\}$ regroupe ces éléments au point $A$ :\n$$\\{\\mathcal{V}_{S/\\mathcal{R}_0}\\} = \\begin{matrix} \\\\\\ \\end{matrix} \\begin{Bmatrix} \\vec{\\Omega}_{S/\\mathcal{R}_0} \\\\ \\vec{V}(A \\in S/\\mathcal{R}_0) \\end{Bmatrix}_A$$\nLa résultante est le vecteur rotation $\\vec{\\Omega}_{S/\\mathcal{R}_0}$ et le moment est le vecteur vitesse au point $A$, $\\vec{V}(A \\in S/\\mathcal{R}_0)$."
+  },
+  {
+    "type": "Piège",
+    "enonce": "Quel est le piège classique à éviter lors de l'écriture ou de la somme de deux torseurs complexes ?",
+    "reponse": "Le piège majeur est d'effectuer des opérations (somme, identification) sur des torseurs dont les éléments de réduction ne sont pas exprimés **au même point**. Le vecteur vitesse (moment du torseur) changeant de valeur d'un point à un autre du solide, il est impératif d'utiliser la formule de transport des vitesses pour exprimer tous les torseurs au même point physique de réduction avant toute manipulation algébrique."
+  }
+]
