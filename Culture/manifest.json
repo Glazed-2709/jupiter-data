@@ -1,240 +1,118 @@
 {
-  "name": "Culture",
-  "path": "",
-  "description": "",
-  "children": [
-    {
-      "name": "Art",
-      "path": "Art",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 60.923076923076906,
-      "color": "hsl(60.9,88%,46%)"
-    },
-    {
-      "name": "Bonheur",
-      "path": "Bonheur",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 77.20879120879124,
-      "color": "hsl(77.2,88%,46%)"
-    },
-    {
-      "name": "Conscience",
-      "path": "Conscience",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
-    },
-    {
-      "name": "Devoir",
-      "path": "Devoir",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
-    },
-    {
-      "name": "Etat",
-      "path": "Etat",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 77.20879120879124,
-      "color": "hsl(77.2,88%,46%)"
-    },
-    {
-      "name": "Inconscient",
-      "path": "Inconscient",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
-    },
-    {
-      "name": "Justice",
-      "path": "Justice",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
-    },
-    {
-      "name": "Langage",
-      "path": "Langage",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
-    },
-    {
-      "name": "Liberte",
-      "path": "Liberte",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 99.9230769230769,
-      "color": "hsl(99.9,88%,54%)"
-    },
-    {
-      "name": "Nature",
-      "path": "Nature",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
-    },
-    {
-      "name": "Pouvoir",
-      "path": "Pouvoir",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
-    },
-    {
-      "name": "Raison",
-      "path": "Raison",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
-    },
-    {
-      "name": "Religion",
-      "path": "Religion",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 115.9230769230769,
-      "color": "hsl(115.9,88%,54%)"
-    },
-    {
-      "name": "Science",
-      "path": "Science",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
-    },
-    {
-      "name": "Technique",
-      "path": "Technique",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
-    },
-    {
-      "name": "Temps",
-      "path": "Temps",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 270.7802197802198,
-      "color": "hsl(270.8,88%,54%)"
-    },
-    {
-      "name": "Travail",
-      "path": "Travail",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 150.20879120879118,
-      "color": "hsl(150.2,88%,54%)"
-    },
-    {
-      "name": "Verite",
-      "path": "Verite",
-      "description": "",
-      "children": [],
-      "files": [],
-      "questions": [],
-      "hasQuestions": false,
-      "isAvantDernier": false,
-      "hue": 210.20879120879113,
-      "color": "hsl(210.2,88%,58%)"
-    }
-  ],
-  "files": [
-    {
-      "name": "files.zip",
-      "path": "files.zip",
-      "corrige": false
-    },
-    {
-      "name": "manifest.json",
-      "path": "manifest.json",
-      "corrige": false
-    }
-  ],
-  "questions": [],
-  "hasQuestions": false,
-  "isAvantDernier": true,
-  "hue": 60.92307692307692,
-  "color": "hsl(60.9,88%,46%)"
+ "generated": "2026-06-29T17:15:31.068Z",
+ "section": "Culture",
+ "kind": "standard",
+ "data": {
+  "type": "standard",
+  "subjects": [
+   {
+    "id": "Art",
+    "nom": "Art",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Bonheur",
+    "nom": "Bonheur",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Conscience",
+    "nom": "Conscience",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Devoir",
+    "nom": "Devoir",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Etat",
+    "nom": "État",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Inconscient",
+    "nom": "Inconscient",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Justice",
+    "nom": "Justice",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Langage",
+    "nom": "Langage",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Liberte",
+    "nom": "Liberté",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Nature",
+    "nom": "Nature",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Pouvoir",
+    "nom": "Pouvoir",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Raison",
+    "nom": "Raison",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Religion",
+    "nom": "Religion",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Science",
+    "nom": "Science",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Technique",
+    "nom": "Technique",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Temps",
+    "nom": "Temps",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Travail",
+    "nom": "Travail",
+    "ordre": null,
+    "chapters": []
+   },
+   {
+    "id": "Verite",
+    "nom": "Vérité",
+    "ordre": null,
+    "chapters": []
+   }
+  ]
+ }
 }
