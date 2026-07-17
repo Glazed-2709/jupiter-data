@@ -1,0 +1,372 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une expérience aléatoire et de l'univers associé.",
+    "reponse": "Une expérience aléatoire est une expérience dont on ne peut pas prédire avec certitude le résultat. L'ensemble des issues (ou résultats possibles ou réalisations) d'une expérience aléatoire est appelé univers et souvent noté $\\Omega$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'un événement, de l'événement certain, de l'événement impossible et d'un événement élémentaire.",
+    "reponse": "Soit $\\Omega$ un univers fini. Toute partie de $\\Omega$ est appelée événement. L'ensemble des événements est $\\mathcal{P}(\\Omega)$.\n• $\\Omega$ est appelé événement certain.\n• $\\emptyset$ est appelé événement impossible.\n• Un singleton $\\{\\omega\\}$, où $\\omega \\in \\Omega$, est appelé événement élémentaire."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition des opérations sur les événements : événement contraire, réunion, intersection.",
+    "reponse": "Soit $\\Omega$ un univers fini, $A$ et $B$ deux événements de $\\Omega$.\n• Le complémentaire de $A$ dans $\\Omega$ est noté $\\bar{A}$, appelé événement contraire de $A$.\n• La réunion $A \\cup B$ est appelée événement « $A$ ou $B$ ».\n• L'intersection $A \\cap B$ est appelée événement « $A$ et $B$ »."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'événements incompatibles et de la relation d'implication entre événements.",
+    "reponse": "Soit $\\Omega$ un univers, $A$ et $B$ deux événements.\n• $A$ et $B$ sont dits incompatibles si $A \\cap B = \\emptyset$.\n• On dit que $A$ implique $B$ si $A \\subset B$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'un système complet d'événements.",
+    "reponse": "Soit $\\Omega$ un univers fini. On appelle système complet d'événements de $\\Omega$ toute famille $(A_i)_{i \\in \\{1,\\ldots,n\\}}$ ($n \\in \\mathbb{N}^*$) telle que :\n• pour tout couple $(i,j)$ d'indices distincts : $A_i \\cap A_j = \\emptyset$,\n• $\\displaystyle\\bigcup_{i=1}^{n} A_i = \\Omega$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition donnant deux exemples canoniques de systèmes complets d'événements.",
+    "reponse": "Soit $\\Omega$ un univers fini.\n• Pour tout événement $A \\subset \\Omega$, la famille $(A, \\bar{A})$ est un système complet d'événements.\n• La famille $(\\{\\omega\\})_{\\omega \\in \\Omega}$ des événements élémentaires est un système complet d'événements."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une probabilité sur un univers fini et d'un espace probabilisé fini.",
+    "reponse": "Soit $\\Omega$ un univers fini. On appelle probabilité sur $\\Omega$ toute application $P : \\mathcal{P}(\\Omega) \\to [0,1]$ vérifiant :\n• $P(\\Omega) = 1$,\n• pour tous événements $A$ et $B$ incompatibles : $P(A \\cup B) = P(A) + P(B)$.\nOn appelle espace probabilisé fini un couple $(\\Omega, P)$ où $\\Omega$ est un univers fini et $P$ une probabilité sur $\\Omega$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème donnant les propriétés fondamentales d'une probabilité (complémentaire, événement impossible, croissance, formule de l'union).",
+    "reponse": "Soient $(\\Omega, P)$ un espace probabilisé fini, $A$ et $B$ deux événements. On a :\n• $P(\\bar{A}) = 1 - P(A)$,\n• $P(\\emptyset) = 0$,\n• si $A \\subset B$ alors $P(A) \\leq P(B)$ et $P(B \\setminus A) = P(B) - P(A)$,\n• $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de σ-additivité finie : probabilité d'une union finie d'événements deux à deux incompatibles.",
+    "reponse": "Soient $(\\Omega, P)$ un espace probabilisé fini et $(A_i)_{i \\in \\{1,\\ldots,n\\}}$ une famille d'événements deux à deux incompatibles. Alors :\n$$P\\left(\\bigcup_{i=1}^{n} A_i\\right) = \\sum_{i=1}^{n} P(A_i).$$\nPreuve : ce résultat se prouve par récurrence."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition d'existence et d'unicité d'une probabilité définie par les probabilités des événements élémentaires.",
+    "reponse": "Soit $\\Omega$ un univers fini et $(p_\\omega)_{\\omega \\in \\Omega}$ une famille de réels positifs tels que $\\displaystyle\\sum_{\\omega \\in \\Omega} p_\\omega = 1$. Il existe une unique probabilité $P$ sur $\\Omega$ telle que $\\forall\\,\\omega \\in \\Omega,\\ P(\\{\\omega\\}) = p_\\omega$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème définissant la probabilité uniforme sur un univers fini.",
+    "reponse": "Soit $\\Omega$ un univers fini. Il existe une unique probabilité $P$ telle que $\\forall\\,\\omega \\in \\Omega,\\ P(\\{\\omega\\}) = \\dfrac{1}{\\mathrm{Card}(\\Omega)}$. Cette probabilité est appelée probabilité uniforme sur $\\Omega$. Pour tout événement $A$ :\n$$P(A) = \\frac{\\mathrm{Card}(A)}{\\mathrm{Card}(\\Omega)}.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la probabilité conditionnelle de $A$ sachant $B$.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini et $A$, $B$ deux événements avec $P(B) > 0$. On appelle probabilité conditionnelle de $A$ sachant $B$ le réel, noté $P_B(A)$ ou $P(A|B)$, défini par :\n$$P_B(A) = P(A|B) = \\frac{P(A \\cap B)}{P(B)}.$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition affirmant que la probabilité conditionnelle $P_B$ est une probabilité sur $\\Omega$.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini et $B$ un événement avec $P(B) > 0$. L'application\n$$P_B : \\mathcal{P}(\\Omega) \\to [0,1],\\quad A \\mapsto P_B(A)$$\nest une probabilité sur $\\Omega$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule des probabilités composées dans le cas de deux événements.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini et $A$, $B$ deux événements avec $P(B) \\neq 0$. Alors :\n$$P(A \\cap B) = P(B) \\cdot P_B(A).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule des probabilités composées dans le cas général de $n$ événements.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini, $n \\geq 2$, et $A_1, \\ldots, A_n$ des événements tels que $P(A_1 \\cap \\cdots \\cap A_{n-1}) > 0$. Alors :\n$$P(A_1 \\cap \\cdots \\cap A_n) = P(A_1)\\cdot P(A_2|A_1)\\cdot P(A_3|A_1 \\cap A_2) \\cdots P(A_n|A_1 \\cap \\cdots \\cap A_{n-1}).$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode d'utilisation de la formule des probabilités composées.",
+    "reponse": "La formule des probabilités composées est utilisée quand les événements $A_1, \\ldots, A_n$ suivent un ordre chronologique."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule des probabilités totales.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini et $(A_1, \\ldots, A_n)$ un système complet d'événements. Alors :\n• pour tout événement $B$ : $\\displaystyle P(B) = \\sum_{i=1}^{n} P(B \\cap A_i)$,\n• si de plus $P(A_i) \\neq 0$ pour tout $i$ : $\\displaystyle P(B) = \\sum_{i=1}^{n} P_{A_i}(B)\\cdot P(A_i)$."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode d'utilisation de la formule des probabilités totales.",
+    "reponse": "La formule des probabilités totales est utile lorsqu'on cherche à calculer la probabilité d'un événement en faisant une distinction de cas, les $A_i$ représentant les différents cas possibles."
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le corollaire de la formule des probabilités totales avec le système complet $(A, \\bar{A})$.",
+    "reponse": "Soient $(\\Omega, P)$ un espace probabilisé fini et $A$, $B$ deux événements. On a :\n$$P(B) = P(B \\cap A) + P(B \\cap \\bar{A}).$$\nSi de plus $P(A) \\neq 0$ et $P(\\bar{A}) \\neq 0$ :\n$$P(B) = P_A(B)\\cdot P(A) + P_{\\bar{A}}(B)\\cdot P(\\bar{A}).$$\nPreuve : conséquence de la formule des probabilités totales avec le système complet $(A, \\bar{A})$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule de Bayes dans le cas de deux événements et dans le cas général.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini.\n• Soient $A$ et $B$ deux événements avec $P(A) > 0$ et $P(B) > 0$ :\n$$P(A|B) = \\frac{P(B|A)\\cdot P(A)}{P(B)}.$$\n• Soit $(A_i)_{1 \\leq i \\leq n}$ un système complet d'événements avec $P(A_i) \\neq 0$ pour tout $i$. Pour tout événement $B$ avec $P(B) \\neq 0$ :\n$$\\forall\\,j \\in \\{1,\\ldots,n\\},\\quad P(A_j|B) = \\frac{P(B|A_j)\\cdot P(A_j)}{\\displaystyle\\sum_{i=1}^{n} P(B|A_i)\\cdot P(A_i)}.$$"
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le corollaire de la formule de Bayes avec le système complet $(A, \\bar{A})$.",
+    "reponse": "Soit $(\\Omega, P)$ un espace probabilisé fini et $A$, $B$ deux événements avec $0 < P(A) < 1$ et $P(B) > 0$. Alors :\n$$P(A|B) = \\frac{P(B|A)\\cdot P(A)}{P(B|A)\\cdot P(A) + P(B|\\bar{A})\\cdot P(\\bar{A})}.$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode d'utilisation de la formule de Bayes.",
+    "reponse": "La formule de Bayes permet de « remonter le temps ». Si $B$ se produit après $A$, elle permet de déduire de $P_A(B)$ (qui respecte la chronologie) la probabilité $P_B(A)$ (qui remonte cette chronologie)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de deux événements indépendants.",
+    "reponse": "Deux événements $A$ et $B$ de l'espace probabilisé $(\\Omega, P)$ sont dits indépendants si :\n$$P(A \\cap B) = P(A)\\cdot P(B).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la stabilité de l'indépendance par passage au complémentaire.",
+    "reponse": "Soient $A$, $B$ deux événements de $(\\Omega, P)$. Si $A$ et $B$ sont indépendants, alors $\\bar{A}$ et $B$ sont indépendants. Il en est de même pour $A$ et $\\bar{B}$, et pour $\\bar{A}$ et $\\bar{B}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'indépendance mutuelle et de l'indépendance deux à deux d'une famille d'événements.",
+    "reponse": "Soient $A_1, \\ldots, A_n$ des événements de $(\\Omega, P)$. On dit qu'ils sont :\n• mutuellement indépendants si et seulement si pour tout sous-ensemble $I \\subset \\{1,\\ldots,n\\}$ :\n$$P\\left(\\bigcap_{i \\in I} A_i\\right) = \\prod_{i \\in I} P(A_i),$$\n• indépendants deux à deux si et seulement si pour tout couple $(i,j)$ d'indices distincts :\n$$P(A_i \\cap A_j) = P(A_i)\\cdot P(A_j).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la stabilité de l'indépendance mutuelle (ou deux à deux) par passage au complémentaire.",
+    "reponse": "Soient $A_1, \\ldots, A_n$ des événements mutuellement (resp. deux à deux) indépendants. Pour tout $i$, posons $B_i = A_i$ ou $B_i = \\bar{A_i}$. Alors $B_1, \\ldots, B_n$ sont mutuellement (resp. deux à deux) indépendants."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une variable aléatoire sur un univers $\\Omega$.",
+    "reponse": "Une variable aléatoire sur $\\Omega$ est une application $X : \\Omega \\to E$. L'ensemble des valeurs prises est $X(\\Omega) = \\{X(\\omega) \\mid \\omega \\in \\Omega\\}$. Lorsque $E \\subset \\mathbb{R}$, la variable aléatoire est dite réelle."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition des notations événementielles associées à une variable aléatoire : $\\{X \\in A\\}$, $\\{X = x\\}$, $\\{X \\leq x\\}$.",
+    "reponse": "• Pour $X : \\Omega \\to E$ et $A \\in \\mathcal{P}(E)$ : $\\{X \\in A\\} = X^{-1}(A) = \\{\\omega \\in \\Omega \\mid X(\\omega) \\in A\\}$. Pour $x \\in E$ : $\\{X = x\\} = \\{\\omega \\in \\Omega \\mid X(\\omega) = x\\}$.\n• Pour $X : \\Omega \\to \\mathbb{R}$ réelle et $x \\in \\mathbb{R}$ : $\\{X \\leq x\\} = \\{\\omega \\in \\Omega \\mid X(\\omega) \\leq x\\}$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la famille $(\\{X = x\\})_{x \\in X(\\Omega)}$ comme système complet d'événements.",
+    "reponse": "Soit $X : \\Omega \\to E$ une variable aléatoire.\n• La famille $(\\{X = x\\})_{x \\in X(\\Omega)}$ est un système complet d'événements, donc $\\displaystyle\\sum_{x \\in X(\\Omega)} P(X = x) = 1$.\n• Pour tout $A \\in \\mathcal{P}(X(\\Omega))$ : $\\{X \\in A\\} = \\displaystyle\\bigcup_{x \\in A}\\{X = x\\}$, donc $P(X \\in A) = \\displaystyle\\sum_{x \\in A} P(X = x)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition-proposition de la loi d'une variable aléatoire.",
+    "reponse": "Soit $X : \\Omega \\to E$ une variable aléatoire. L'application\n$$P_X : \\mathcal{P}(X(\\Omega)) \\to [0,1],\\quad A \\mapsto P(X \\in A)$$\nest une probabilité sur $X(\\Omega)$, appelée loi de $X$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition affirmant que la loi de $X$ est entièrement déterminée par les $P(X = x)$.",
+    "reponse": "Soit $X$ une variable aléatoire. La loi $P_X$ est déterminée de manière unique par la donnée des $P(X = x)$ pour tout $x \\in X(\\Omega)$. On a :\n$$\\forall\\, A \\subset X(\\Omega),\\quad P(X \\in A) = \\sum_{x \\in A} P(X = x).$$\nPreuve : une probabilité sur un espace fini est définie uniquement par les probabilités des événements élémentaires."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode pour déterminer la loi d'une variable aléatoire.",
+    "reponse": "Déterminer la loi de $X$ revient à :\n• déterminer $X(\\Omega)$,\n• préciser $P(X = x)$ pour tout $x \\in X(\\Omega)$.\nSi $X(\\Omega) = \\{x_1, \\ldots, x_n\\}$, on représente la loi par un tableau à deux lignes : valeurs $x_i$ en première ligne, probabilités $P(X = x_i)$ en deuxième ligne."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'image d'une variable aléatoire par une fonction.",
+    "reponse": "Soit $X : \\Omega \\to E$ une variable aléatoire et $f : E \\to F$. Alors $f \\circ X$ est une variable aléatoire sur $\\Omega$, notée $f(X)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition donnant la loi de $Y = f(X)$.",
+    "reponse": "Soit $X : \\Omega \\to E$, $f : E \\to F$, et $Y = f(X)$. Alors $Y(\\Omega) = \\{f(x) \\mid x \\in X(\\Omega)\\}$ et\n$$\\forall\\, y \\in Y(\\Omega),\\quad P(Y = y) = \\sum_{\\substack{x \\in X(\\Omega)\\\\f(x)=y}} P(X = x).$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la loi uniforme sur un ensemble fini $F$.",
+    "reponse": "Soit $F = \\{x_1, \\ldots, x_n\\}$ de cardinal $n$. On dit que $X$ suit la loi uniforme sur $F$, noté $X \\hookrightarrow U(F)$, lorsque :\n$$X(\\Omega) = F\\quad\\text{et}\\quad \\forall\\,k \\in \\{1,\\ldots,n\\},\\ P(X = x_k) = \\frac{1}{n}.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la loi de Bernoulli de paramètre $p$.",
+    "reponse": "On dit que $X$ suit la loi de Bernoulli de paramètre $p \\in [0,1]$, noté $X \\sim B(p)$, si :\n$$X(\\Omega) = \\{0,1\\},\\quad P(X = 1) = p,\\quad P(X = 0) = 1-p.$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la variable indicatrice $\\mathbf{1}_A$ et sa loi.",
+    "reponse": "Soit $A \\in \\mathcal{P}(\\Omega)$. L'application\n$$\\mathbf{1}_A : \\Omega \\to \\{0,1\\},\\quad \\omega \\mapsto \\begin{cases}1 & \\text{si }\\omega \\in A \\\\ 0 & \\text{si }\\omega \\notin A\\end{cases}$$\nest une variable aléatoire suivant la loi $B(P(A))$.\nPreuve : $\\mathbf{1}_A(\\Omega) = \\{0,1\\}$ et $P(\\mathbf{1}_A = 1) = P(A)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la loi binomiale de paramètres $n$ et $p$.",
+    "reponse": "On dit que $X$ suit la loi binomiale de paramètres $n \\in \\mathbb{N}^*$ et $p \\in [0,1]$, noté $X \\hookrightarrow B(n,p)$, si :\n$$X(\\Omega) = \\{0, 1, \\ldots, n\\}\\quad\\text{et}\\quad \\forall\\,k \\in \\{0,\\ldots,n\\},\\ P(X = k) = \\binom{n}{k}p^k(1-p)^{n-k}.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition du couple de variables aléatoires $(X,Y)$.",
+    "reponse": "Soit $X : \\Omega \\to E$ et $Y : \\Omega \\to F$. On appelle couple de $X$ et $Y$, noté $Z = (X,Y)$, l'application\n$$Z : \\Omega \\to E \\times F,\\quad \\omega \\mapsto (X(\\omega), Y(\\omega)).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition affirmant que la famille $(\\{X=x\\} \\cap \\{Y=y\\})$ est un système complet d'événements.",
+    "reponse": "Soit $(X,Y)$ un couple de variables aléatoires. La famille $(\\{X=x\\} \\cap \\{Y=y\\})_{(x,y) \\in X(\\Omega)\\times Y(\\Omega)}$ est un système complet d'événements de $\\Omega$. En particulier :\n$$\\sum_{(x,y) \\in X(\\Omega)\\times Y(\\Omega)} P(\\{X=x\\} \\cap \\{Y=y\\}) = 1.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la loi conjointe d'un couple $(X,Y)$.",
+    "reponse": "On appelle loi conjointe de $X$ et $Y$ la loi du couple $(X,Y)$, c'est-à-dire l'application\n$$\\mathcal{P}((X,Y)(\\Omega)) \\to [0,1],\\quad A \\mapsto P((X,Y) \\in A).$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode pour déterminer et représenter la loi conjointe de $(X,Y)$.",
+    "reponse": "Déterminer la loi conjointe de $X$ et $Y$ revient à :\n• déterminer $X(\\Omega) = \\{x_1,\\ldots,x_n\\}$ et $Y(\\Omega) = \\{y_1,\\ldots,y_p\\}$,\n• calculer $P(\\{X=x_i\\} \\cap \\{Y=y_j\\})$ pour tout $(i,j)$.\nOn la représente par un tableau à double entrée (lignes : valeurs de $X$, colonnes : valeurs de $Y$)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition des lois marginales d'un couple $(X,Y)$.",
+    "reponse": "On appelle lois marginales du couple $(X,Y)$ les lois de $X$ et de $Y$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition donnant les lois marginales à partir de la loi conjointe.",
+    "reponse": "Soient $X(\\Omega) = \\{x_1,\\ldots,x_n\\}$ et $Y(\\Omega) = \\{y_1,\\ldots,y_p\\}$. Alors :\n$$\\forall\\,i,\\quad P(X = x_i) = \\sum_{j=1}^{p} P(\\{X=x_i\\} \\cap \\{Y=y_j\\}),$$\n$$\\forall\\,j,\\quad P(Y = y_j) = \\sum_{i=1}^{n} P(\\{X=x_i\\} \\cap \\{Y=y_j\\}).$$"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode pour lire les lois marginales dans le tableau de la loi conjointe.",
+    "reponse": "On obtient la loi marginale de $X$ en sommant chaque ligne du tableau, et la loi marginale de $Y$ en sommant chaque colonne."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la loi conditionnelle de $Y$ sachant $\\{X = x\\}$.",
+    "reponse": "La loi de $Y$ sachant $(X = x)$ est la loi de $Y$ pour la probabilité conditionnelle $P_{(X=x)}$. Elle est déterminée par :\n$$P(Y = y \\mid X = x) = \\frac{P(\\{X=x\\} \\cap \\{Y=y\\})}{P(X=x)},\\quad \\forall\\,y \\in Y(\\Omega).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition liant loi conjointe, lois marginales et lois conditionnelles.",
+    "reponse": "Soient $X$, $Y$ deux variables aléatoires avec $P(X=x) \\neq 0$ et $P(Y=y) \\neq 0$ pour tout $(x,y)$. Alors :\n$$P(\\{X=x\\}\\cap\\{Y=y\\}) = P(Y=y)\\cdot P(X=x|Y=y) = P(X=x)\\cdot P(Y=y|X=x),$$\n$$P(X=x) = \\sum_{y \\in Y(\\Omega)} P(Y=y)\\cdot P(X=x|Y=y),$$\n$$P(Y=y) = \\sum_{x \\in X(\\Omega)} P(X=x)\\cdot P(Y=y|X=x).$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'indépendance de deux variables aléatoires $X$ et $Y$.",
+    "reponse": "$X$ et $Y$ sont dites indépendantes si et seulement si :\n$$\\forall\\,(x,y) \\in X(\\Omega)\\times Y(\\Omega),\\quad P(\\{X=x\\}\\cap\\{Y=y\\}) = P(X=x)\\cdot P(Y=y).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition caractérisant l'indépendance de $X$ et $Y$ via les événements $(X \\in A)$ et $(Y \\in B)$.",
+    "reponse": "Si $X$ et $Y$ sont indépendantes, alors :\n$$\\forall\\,A \\in \\mathcal{P}(X(\\Omega)),\\ \\forall\\,B \\in \\mathcal{P}(Y(\\Omega)),\\quad P((X,Y) \\in A\\times B) = P(X \\in A)\\cdot P(Y \\in B).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur l'image de variables aléatoires indépendantes par des fonctions.",
+    "reponse": "Soient $X : \\Omega \\to E$ et $Y : \\Omega \\to F$ deux variables aléatoires indépendantes, $f : E \\to F'$ et $g : F \\to G$ deux fonctions. Alors $f(X)$ et $g(Y)$ sont indépendantes."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'indépendance mutuelle de variables aléatoires $X_1, \\ldots, X_n$.",
+    "reponse": "$X_1, \\ldots, X_n$ sont dites mutuellement indépendantes si et seulement si :\n$$\\forall\\,(x_1,\\ldots,x_n) \\in X_1(\\Omega)\\times\\cdots\\times X_n(\\Omega),\\quad P\\left(\\bigcap_{i=1}^{n}\\{X_i=x_i\\}\\right) = \\prod_{i=1}^{n} P(X_i=x_i).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer les caractérisations équivalentes de l'indépendance mutuelle de $X_1, \\ldots, X_n$.",
+    "reponse": "Soient $X_1, \\ldots, X_n$ des variables aléatoires.\n• $X_1, \\ldots, X_n$ sont mutuellement indépendantes $\\Leftrightarrow$ $\\forall\\,(A_1,\\ldots,A_n) \\in \\prod_i \\mathcal{P}(X_i(\\Omega))$ : $P\\left(\\bigcap_i\\{X_i \\in A_i\\}\\right) = \\prod_i P(X_i \\in A_i)$.\n• Toute sous-famille d'une famille mutuellement indépendante est mutuellement indépendante.\n• $X_1, \\ldots, X_n$ sont mutuellement indépendantes $\\Leftrightarrow$ pour tout $(x_1,\\ldots,x_n)$, les événements $\\{X_1=x_1\\},\\ldots,\\{X_n=x_n\\}$ sont mutuellement indépendants.\n• $X_1, \\ldots, X_n$ sont mutuellement indépendantes $\\Leftrightarrow$ pour tout $(A_1,\\ldots,A_n)$, les événements $\\{X_1 \\in A_1\\},\\ldots,\\{X_n \\in A_n\\}$ sont mutuellement indépendants."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème : somme de variables de Bernoulli mutuellement indépendantes.",
+    "reponse": "Soient $X_1, \\ldots, X_n$ des variables de Bernoulli mutuellement indépendantes de même paramètre $p \\in [0,1]$. Alors $X_1 + \\cdots + X_n$ suit la loi $B(n,p)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'espérance d'une variable aléatoire réelle.",
+    "reponse": "Soit $X$ une variable aléatoire réelle. On appelle espérance de $X$, notée $E(X)$, le réel :\n$$E(X) = \\sum_{x \\in X(\\Omega)} x \\cdot P(X=x).$$"
+  },
+  {
+    "type": "Lemme",
+    "enonce": "Énoncer le lemme donnant l'espérance comme somme sur $\\Omega$.",
+    "reponse": "Soit $X$ une variable aléatoire sur $(\\Omega, P)$. Alors :\n$$E(X) = \\sum_{\\omega \\in \\Omega} X(\\omega)\\cdot P(\\{\\omega\\}).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer les propriétés de linéarité et de croissance de l'espérance.",
+    "reponse": "• Linéarité : pour tous $(\\lambda,\\mu) \\in \\mathbb{R}^2$ et toutes variables réelles $X$, $Y$ :\n$$E(\\lambda X + \\mu Y) = \\lambda E(X) + \\mu E(Y).$$\n• Croissance : si $X \\leq Y$ (i.e. $\\forall\\,\\omega,\\ X(\\omega) \\leq Y(\\omega)$), alors $E(X) \\leq E(Y)$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème du transfert.",
+    "reponse": "Soit $X : \\Omega \\to E$ une variable aléatoire et $f : E \\to \\mathbb{R}$. Alors :\n$$E(f(X)) = \\sum_{x \\in X(\\Omega)} f(x)\\cdot P(X=x).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur l'espérance du produit de deux variables aléatoires indépendantes.",
+    "reponse": "Soient $X$ et $Y$ deux variables aléatoires réelles indépendantes. Alors :\n$$E(XY) = E(X)\\cdot E(Y).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur l'espérance du produit de $n$ variables mutuellement indépendantes.",
+    "reponse": "Si $X_1, \\ldots, X_n$ sont des variables réelles mutuellement indépendantes, alors :\n$$E(X_1 \\cdots X_n) = E(X_1)\\cdots E(X_n).$$\nPreuve : par récurrence."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner l'espérance d'une variable aléatoire constante.",
+    "reponse": "Soient $a \\in \\mathbb{R}$ et $X$ la variable constante égale à $a$. Alors $E(X) = a$.\nPreuve : $E(X) = \\displaystyle\\sum_{\\omega \\in \\Omega} a\\cdot P(\\{\\omega\\}) = a\\cdot P(\\Omega) = a$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner l'espérance de la variable indicatrice $\\mathbf{1}_A$.",
+    "reponse": "Soit $A$ un événement. Alors $E(\\mathbf{1}_A) = P(A)$.\nPreuve : $E(\\mathbf{1}_A) = 0\\cdot P(\\bar{A}) + 1\\cdot P(A) = P(A)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner l'espérance d'une variable suivant la loi uniforme sur $\\{1,\\ldots,n\\}$.",
+    "reponse": "Si $X \\hookrightarrow U(\\{1,\\ldots,n\\})$, alors $E(X) = \\dfrac{n+1}{2}$.\nPreuve : $E(X) = \\displaystyle\\sum_{k=1}^{n} \\frac{k}{n} = \\frac{1}{n}\\cdot\\frac{n(n+1)}{2} = \\frac{n+1}{2}$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner l'espérance d'une variable suivant la loi de Bernoulli $B(p)$.",
+    "reponse": "Si $X \\sim B(p)$, alors $E(X) = p$.\nPreuve : $E(X) = 0\\cdot(1-p) + 1\\cdot p = p$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner l'espérance d'une variable suivant la loi binomiale $B(n,p)$.",
+    "reponse": "Si $X \\hookrightarrow B(n,p)$, alors $E(X) = np$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la variance et de l'écart-type d'une variable aléatoire réelle.",
+    "reponse": "Soit $X$ une variable aléatoire réelle. On appelle variance de $X$, notée $V(X)$, le réel :\n$$V(X) = E\\bigl((X-E(X))^2\\bigr).$$\nOn appelle écart-type de $X$ le réel $\\sigma(X) = \\sqrt{V(X)}$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule de Kœnig-Huygens et la propriété de la variance par transformation affine.",
+    "reponse": "Soit $X$ une variable aléatoire réelle.\n• Formule de Kœnig-Huygens : $V(X) = E(X^2) - E(X)^2$.\n• Pour tout $(a,b) \\in \\mathbb{R}^2$ : $V(aX+b) = a^2 V(X)$."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode générale pour calculer une variance.",
+    "reponse": "On utilisera généralement la formule de Kœnig-Huygens :\n$$V(X) = E(X^2) - E(X)^2.$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer l'inégalité de Bienaymé-Tchebychev.",
+    "reponse": "Soit $X$ une variable aléatoire réelle et $\\varepsilon > 0$. Alors :\n$$P(|X - E(X)| \\geq \\varepsilon) \\leq \\frac{V(X)}{\\varepsilon^2}.$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la variance d'une somme de deux variables aléatoires indépendantes.",
+    "reponse": "Si $X$ et $Y$ sont deux variables aléatoires indépendantes, alors $V(X+Y) = V(X) + V(Y)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la variance d'une somme de $n$ variables mutuellement indépendantes.",
+    "reponse": "Si $X_1, \\ldots, X_n$ sont $n$ variables mutuellement indépendantes, alors :\n$$V(X_1+\\cdots+X_n) = V(X_1)+\\cdots+V(X_n).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner la variance d'une variable suivant la loi de Bernoulli $B(p)$.",
+    "reponse": "Si $X \\sim B(p)$, alors $V(X) = p(1-p)$.\nPreuve : par le théorème de transfert, $E(X^2) = 1^2\\cdot P(X=1) + 0^2\\cdot P(X=0) = p$. Donc $V(X) = p - p^2 = p(1-p)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner la variance d'une variable suivant la loi binomiale $B(n,p)$.",
+    "reponse": "Si $X \\hookrightarrow B(n,p)$, alors $V(X) = np(1-p)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la covariance de deux variables aléatoires réelles et de la décorrélation.",
+    "reponse": "Soient $X$ et $Y$ deux variables aléatoires réelles. On appelle covariance de $X$ et $Y$ le réel :\n$$\\mathrm{cov}(X,Y) = E\\bigl((X-E(X))(Y-E(Y))\\bigr).$$\nOn dit que $X$ et $Y$ sont décorrélées si $\\mathrm{cov}(X,Y) = 0$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer les propriétés de la covariance : expression développée, lien avec l'indépendance, variance d'une somme.",
+    "reponse": "Soient $X$ et $Y$ deux variables aléatoires réelles. On a :\n• Expression développée : $\\mathrm{cov}(X,Y) = E(XY) - E(X)\\cdot E(Y)$.\n• Lien avec l'indépendance : si $X$ et $Y$ sont indépendantes, elles sont décorrélées.\n• Variance d'une somme : $V(X+Y) = V(X) + 2\\,\\mathrm{cov}(X,Y) + V(Y)$.\nPlus généralement, pour $X_1,\\ldots,X_n$ :\n$$V\\left(\\sum_{i=1}^{n} X_i\\right) = \\sum_{i=1}^{n} V(X_i) + 2\\sum_{1\\leq i < j\\leq n} \\mathrm{cov}(X_i,X_j).$$\nEn particulier, si les $X_i$ sont indépendantes (ou deux à deux décorrélées) :\n$$V\\left(\\sum_{i=1}^{n} X_i\\right) = \\sum_{i=1}^{n} V(X_i).$$"
+  }
+]

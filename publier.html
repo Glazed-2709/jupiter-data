@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Jupiter — Publier sur GitHub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#000;--surface:#15171e;--surface2:#1b1e27;
+  --line:rgba(255,255,255,.08);--line2:rgba(255,255,255,.14);
+  --txt:#eef1f6;--dim:#8a93a6;--dim2:#576074;
+  --accent:#ff2f6d;--blue:#5b8cff;--ok:#3fb98a;--warn:#ffb454;
+  --sans:"Inter",system-ui,sans-serif;--mono:"JetBrains Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{height:100%;overflow-y:scroll;scrollbar-width:thin;scrollbar-color:#1a1c24 transparent}
+body{min-height:100%;background:var(--bg);color:var(--txt);font-family:var(--sans);
+  -webkit-font-smoothing:antialiased;padding:0;display:flex;flex-direction:column}
+.wrap{max-width:780px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px}
+h1{font-size:22px;font-weight:700;margin-bottom:6px}
+h2{font-size:14px;font-weight:700;margin-bottom:4px}
+.sub{font-size:13px;color:var(--dim);line-height:1.55;margin-bottom:0;max-width:600px}
+.divider{height:1px;background:var(--line);margin:24px 0}
+
+.card{background:var(--surface);border:1px solid var(--line);padding:18px;margin-bottom:16px}
+.card-label{font-family:var(--mono);font-size:9.5px;letter-spacing:1.8px;
+  text-transform:uppercase;color:var(--dim2);margin-bottom:10px}
+.card.done{border-color:rgba(63,185,138,.35)}
+.card.warn{border-color:rgba(255,180,84,.4)}
+
+.btn{display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 14px;
+  border:1px solid var(--line2);background:transparent;color:var(--dim);
+  font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:.13s}
+.btn svg{width:14px;height:14px}
+.btn:hover{border-color:var(--accent);color:var(--txt);background:rgba(255,47,109,.08)}
+.btn.primary{border-color:var(--accent);background:rgba(255,47,109,.14);color:var(--txt)}
+.btn.primary:hover{background:rgba(255,47,109,.26)}
+.btn.ok{border-color:var(--ok);color:var(--txt);background:rgba(63,185,138,.12)}
+.btn.ok:hover{background:rgba(63,185,138,.24)}
+.btn:disabled{opacity:.35;cursor:not-allowed;pointer-events:none}
+
+.field{margin-bottom:12px}
+.field label{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:1.4px;
+  text-transform:uppercase;color:var(--dim2);margin-bottom:6px}
+.field input{width:100%;background:var(--surface2);border:1px solid var(--line2);color:var(--txt);
+  font-family:var(--mono);font-size:12.5px;padding:9px 11px;outline:none;transition:.13s}
+.field input:focus{border-color:var(--accent)}
+.field .hint{font-size:11px;color:var(--dim2);margin-top:5px;line-height:1.5}
+.field .hint a{color:var(--blue)}
+.row2{display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+
+.statusline{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--dim);margin-top:2px}
+.statusline .gdot{width:7px;height:7px;border-radius:50%;background:var(--dim2);flex:0 0 auto}
+.statusline.ok .gdot{background:var(--ok);box-shadow:0 0 6px var(--ok)}
+.statusline.err .gdot{background:var(--accent);box-shadow:0 0 6px var(--accent)}
+
+/* ---- diff summary ---- */
+.diffbar{display:flex;gap:10px;margin:14px 0;flex-wrap:wrap}
+.diffchip{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.3px;padding:6px 11px;border:1px solid var(--line2);background:var(--surface2)}
+.diffchip b{font-size:13px}
+.diffchip.add{border-color:rgba(63,185,138,.4);color:var(--ok)}
+.diffchip.mod{border-color:rgba(255,180,84,.4);color:var(--warn)}
+.diffchip.del{border-color:rgba(255,47,109,.4);color:var(--accent)}
+.diffchip.warn{border-color:rgba(255,180,84,.5);color:var(--warn)}
+
+.filelist{max-height:280px;overflow-y:auto;border:1px solid var(--line);margin-top:6px}
+.filerow{display:flex;align-items:center;gap:10px;padding:7px 11px;font-family:var(--mono);
+  font-size:11px;border-bottom:1px solid var(--line)}
+.filerow:last-child{border-bottom:none}
+.filerow .tag{flex:0 0 auto;width:16px;text-align:center;font-weight:700}
+.filerow.add .tag{color:var(--ok)}
+.filerow.mod .tag{color:var(--warn)}
+.filerow.del .tag{color:var(--accent)}
+.filerow .fp{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--dim)}
+.filerow .fsz{flex:0 0 auto;color:var(--dim2);font-size:10px}
+
+/* ---- progression / log ---- */
+#pubOverlay{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  flex-direction:column;gap:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  background:rgba(4,4,6,.72)}
+#pubOverlay.on{display:flex}
+.pubRing{width:24px;height:24px;border:2px solid var(--line2);border-top-color:var(--accent);
+  border-radius:50%;animation:pubSpin 1s linear infinite}
+@keyframes pubSpin{to{transform:rotate(360deg)}}
+.publabel{font-family:var(--mono);font-size:10px;letter-spacing:2.2px;text-transform:uppercase;color:var(--dim)}
+.pubbar{width:280px;height:3px;background:var(--surface2);overflow:hidden}
+.pubbar-fill{height:100%;width:0%;background:var(--accent);transition:width .2s}
+.publog{width:340px;max-height:120px;overflow-y:auto;font-family:var(--mono);font-size:10px;
+  color:var(--dim2);text-align:left;line-height:1.7}
+
+.successbox{border:1px solid rgba(63,185,138,.4);background:rgba(63,185,138,.08);padding:16px;margin-top:14px}
+.successbox b{color:var(--ok)}
+
+/* scrollbar discrète */
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#1a1c24;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#252830}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);z-index:80;
+  background:rgba(20,22,28,.96);border:1px solid var(--line2);color:var(--txt);
+  font-size:12.5px;padding:11px 18px;pointer-events:none;
+  opacity:0;transition:opacity .25s;font-family:var(--mono);max-width:90vw;text-align:center}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+<div class="wrap" style="padding:44px 24px 60px;overflow-y:auto;flex:1;height:100%">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px">
+    <a href="index.html" class="btn" style="margin-top:0;text-decoration:none">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      Accueil
+    </a>
+    <span style="width:1px;height:22px;background:var(--line);flex:0 0 auto"></span>
+    <span style="font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--dim)"><b style="color:var(--txt)">Jupiter</b> — Publier sur GitHub</span>
+  </div>
+  <div style="margin-bottom:24px">
+    <h1>Publier sur GitHub</h1>
+    <p class="sub">Envoie ton arbre local (schema.json, dossiers, fichiers) vers un dépôt GitHub dédié, avec un manifest.json généré automatiquement par section. La version mobile lit ensuite ce dépôt via GitHub Pages.</p>
+  </div>
+
+  <!-- ====== dossier local ====== -->
+  <div class="card" id="rootCard">
+    <div class="card-label">Dossier local connecté</div>
+    <div class="statusline" id="rootStatus"><span class="gdot"></span><span id="rootStatusTxt">Non connecté</span></div>
+    <button class="btn" id="connectBtn" style="margin-top:12px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Connecter / reconnecter
+    </button>
+  </div>
+
+  <!-- ====== config dépôt ====== -->
+  <div class="card" id="repoCard">
+    <div class="card-label">Dépôt GitHub cible</div>
+    <div class="row3">
+      <div class="field"><label>Propriétaire (owner)</label><input id="ghOwner" placeholder="ex. glazed-2709" autocomplete="off"></div>
+      <div class="field"><label>Dépôt</label><input id="ghRepo" placeholder="ex. jupiter-data" autocomplete="off"></div>
+      <div class="field"><label>Branche</label><input id="ghBranch" placeholder="main" autocomplete="off"></div>
+    </div>
+    <div class="field">
+      <label>Token personnel (fine-grained)</label>
+      <input id="ghToken" type="password" placeholder="github_pat_…" autocomplete="off">
+      <div class="hint">Génère un token sur <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com/settings/personal-access-tokens</a>, avec les permissions <b>Contents: Read and write</b> et <b>Pages: Read and write</b>. Il reste stocké uniquement dans ce navigateur.
+        Si le dépôt n'existe pas encore et que tu veux le laisser créer automatiquement, choisis « All repositories » (pas « Only select repositories ») et ajoute <b>Administration: Read and write</b> — sinon crée-le toi-même en 10s sur <a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a> et reviens avec un token limité à ce seul dépôt.</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <button class="btn" id="saveConfigBtn">Enregistrer</button>
+      <button class="btn" id="clearTokenBtn">Oublier le token</button>
+      <span class="statusline" id="repoStatus" style="margin-top:0"><span class="gdot"></span><span id="repoStatusTxt">Non vérifié</span></span>
+    </div>
+    <div class="field" id="pagesUrlBox" style="margin-top:14px;margin-bottom:0;display:none">
+      <label>URL lue par la version mobile</label>
+      <input id="pagesUrlPreview" readonly style="color:var(--dim)">
+    </div>
+  </div>
+
+  <!-- ====== analyse / diff ====== -->
+  <div class="card" id="diffCard" style="display:none">
+    <div class="card-label">Analyse</div>
+    <div id="diffSummary"></div>
+  </div>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+    <button class="btn primary" id="analyzeBtn" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      Analyser
+    </button>
+    <button class="btn ok" id="publishBtn" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      Publier
+    </button>
+  </div>
+
+  <div id="successArea"></div>
+
+</div>
+
+<div id="pubOverlay">
+  <div class="pubRing"></div>
+  <div class="publabel" id="pubLabel">Publication…</div>
+  <div class="pubbar"><div class="pubbar-fill" id="pubBarFill"></div></div>
+  <div class="publog" id="pubLog"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================================================================
+   JUPITER — Publier sur GitHub
+   Synchronise le dossier local (racine partagée avec les autres pages
+   Jupiter) vers un dépôt GitHub dédié, en ne touchant que les fichiers
+   nouveaux/modifiés/supprimés (sync incrémentale via l'API Git bas
+   niveau : blobs + tree + commit, un seul commit par publication).
+   Génère aussi un manifest.json par section (classe 1), puisque rien
+   d'autre ne le fait aujourd'hui et que mobile.html en a besoin en
+   plus de schema.json pour afficher matières/chapitres/fichiers.
+   ================================================================ */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('on');
+  clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('on'),3200);}
+function ignored(name){return name.startsWith('_')||name.startsWith('.');}
+function isCorrige(name){
+  const n=name.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  return /(^|[^a-z])(corrige|corr|correction|solution|sol|corrige?s)([^a-z]|$)/.test(n) || /corrig/.test(n);
+}
+
+/* ---- dossier racine partagé (même IndexedDB que les autres pages) ---- */
+const XROOT_DB='jupiter-xroot', XROOT_STORE='h';
+function xidb(){return new Promise((res,rej)=>{const r=indexedDB.open(XROOT_DB,1);
+  r.onupgradeneeded=()=>r.result.createObjectStore(XROOT_STORE);
+  r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);});}
+async function xGet(){const db=await xidb();return new Promise((res,rej)=>{
+  const t=db.transaction(XROOT_STORE,'readonly');const rq=t.objectStore(XROOT_STORE).get('root');
+  rq.onsuccess=()=>res(rq.result);rq.onerror=()=>rej(rq.error);});}
+let xRootHandle=null;
+async function connectRoot(){
+  if(!window.showDirectoryPicker){ toast('Chrome ou Edge requis.'); return; }
+  try{
+    xRootHandle=await window.showDirectoryPicker({mode:'readwrite',id:'jupiter-root'});
+    setRootStatus(true, xRootHandle.name);
+    checkReady();
+  }catch(e){}
+}
+async function tryRestoreRoot(){
+  let h=null; try{ h=await xGet(); }catch(e){}
+  if(!h){ setRootStatus(false,'Aucun dossier mémorisé — connecte-le depuis l\'accueil (index.html) ou ici.'); return; }
+  let perm='prompt'; try{ perm=await h.queryPermission({mode:'readwrite'}); }catch(e){}
+  if(perm!=='granted'){ try{ perm=await h.requestPermission({mode:'readwrite'}); }catch(e){} }
+  if(perm==='granted'){ xRootHandle=h; setRootStatus(true,h.name); checkReady(); }
+  else setRootStatus(false,'Permission refusée pour '+(h.name||'le dossier')+' — clique pour reconnecter.');
+}
+function setRootStatus(ok,label){
+  const el=$('#rootStatus'); el.classList.toggle('ok',ok); el.classList.toggle('err',!ok);
+  $('#rootStatusTxt').textContent=label;
+  $('#rootCard').classList.toggle('done',ok);
+}
+$('#connectBtn').onclick=connectRoot;
+tryRestoreRoot();
+
+/* ================================================================
+   CONFIG GITHUB (clés partagées avec mobile.html)
+   ================================================================ */
+const GH_CONFIG_KEY='jupiter-gh-config', GH_TOKEN_KEY='jupiter-gh-token';
+function loadGhConfig(){ try{return JSON.parse(localStorage.getItem(GH_CONFIG_KEY)||'{}');}catch(e){return{};} }
+function saveGhConfig(cfg){ localStorage.setItem(GH_CONFIG_KEY, JSON.stringify(cfg)); }
+function loadGhToken(){ return localStorage.getItem(GH_TOKEN_KEY)||''; }
+function saveGhToken(t){ localStorage.setItem(GH_TOKEN_KEY, t); }
+
+(function initConfigFields(){
+  const cfg=loadGhConfig();
+  $('#ghOwner').value=cfg.owner||'';
+  $('#ghRepo').value=cfg.repo||'';
+  $('#ghBranch').value=cfg.branch||'main';
+  $('#ghToken').value=loadGhToken();
+})();
+
+function setRepoStatus(state,label){
+  const el=$('#repoStatus'); el.classList.remove('ok','err'); if(state) el.classList.add(state);
+  $('#repoStatusTxt').textContent=label;
+}
+/* le bouton de config devient contextuel : "Enregistrer" tant que le dépôt
+   n'a pas été vérifié, "Créer le dépôt sur GitHub" dès qu'une vérification
+   a échoué parce qu'il n'existe pas encore (404) — jamais bloqué, gris,
+   sans action possible. */
+function setConfigBtnMode(mode){
+  const b=$('#saveConfigBtn');
+  if(mode==='create'){ b.textContent='Créer le dépôt sur GitHub'; b.classList.add('primary'); }
+  else { b.textContent='Enregistrer'; b.classList.remove('primary'); }
+}
+
+let repoInfo=null;   // {owner,repo,branch,defaultBranch,private}
+let repoMissing=false;
+async function saveAndValidateConfig(){
+  const owner=$('#ghOwner').value.trim(), repo=$('#ghRepo').value.trim();
+  const branch=$('#ghBranch').value.trim()||'main';
+  const token=$('#ghToken').value.trim();
+  if(!owner||!repo){ toast('Renseigne au moins le propriétaire et le dépôt.'); return; }
+  if(!token){ setRepoStatus('err','Aucun token — impossible de vérifier l\'accès.'); toast('Renseigne ton token.'); return; }
+  saveGhConfig({owner,repo,branch}); saveGhToken(token);
+  $('#pagesUrlPreview').value=`https://${owner}.github.io/${repo}/`;
+  $('#pagesUrlBox').style.display='block';
+
+  let justCreated=false;
+  if(repoMissing){
+    setRepoStatus(null,'Création du dépôt…');
+    try{
+      await createRepo(owner,repo,token);
+      toast('Dépôt créé.');
+      repoMissing=false; justCreated=true;
+    }catch(e){
+      setRepoStatus('err','Création impossible : '+e.message+' — sinon crée-le en 10s sur github.com/new puis reviens valider.');
+      setConfigBtnMode('create');
+      checkReady();
+      return;
+    }
+  }
+
+  setRepoStatus(null,'Vérification…');
+  try{
+    /* juste après une création, l'API met parfois une seconde ou deux à
+       propager le nouveau dépôt : on retente quelques fois plutôt que de
+       remontrer "introuvable" et faire croire que la création a échoué. */
+    const info=justCreated
+      ? await ghFetchRetry(`/repos/${owner}/${repo}`,4,900)
+      : await ghFetch(`/repos/${owner}/${repo}`);
+    repoInfo={owner,repo,branch:branch||info.default_branch,defaultBranch:info.default_branch,private:info.private};
+    setRepoStatus('ok', (info.private?'Dépôt privé':'Dépôt public')+' — branche par défaut : '+info.default_branch);
+    $('#repoCard').classList.add('done');
+    setConfigBtnMode('normal');
+    toast('Dépôt vérifié.');
+    checkReady();
+    /* si le dossier local est déjà connecté, enchaîne directement sur
+       l'analyse : pas besoin d'un clic supplémentaire pour que "Publier"
+       devienne accessible. */
+    if(xRootHandle) runAnalysis();
+    return;
+  }catch(e){
+    repoInfo=null;
+    $('#repoCard').classList.remove('done');
+    if(String(e.message).startsWith('404')){
+      repoMissing=true;
+      setRepoStatus('err','Dépôt introuvable — clique sur « Créer le dépôt sur GitHub ».');
+      setConfigBtnMode('create');
+    } else {
+      setRepoStatus('err','Accès impossible : '+e.message);
+      setConfigBtnMode('normal');
+    }
+  }
+  checkReady();
+}
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+async function ghFetchRetry(path,attempts,delayMs){
+  let lastErr;
+  for(let i=0;i<attempts;i++){
+    try{ return await ghFetch(path); }
+    catch(e){ lastErr=e; if(!String(e.message).startsWith('404')) throw e; await sleep(delayMs); }
+  }
+  throw lastErr;
+}
+/* crée le dépôt sous le compte du token, ou sous une organisation si
+   `owner` ne correspond pas au compte authentifié du token. */
+async function createRepo(owner,repo,token){
+  const me=await ghFetch('/user');
+  const isOrg = me.login.toLowerCase()!==owner.toLowerCase();
+  const path = isOrg ? `/orgs/${owner}/repos` : '/user/repos';
+  await ghFetch(path,{method:'POST',body:JSON.stringify({name:repo,private:true,auto_init:true})});
+}
+$('#saveConfigBtn').onclick=saveAndValidateConfig;
+$('#clearTokenBtn').onclick=()=>{ localStorage.removeItem(GH_TOKEN_KEY); $('#ghToken').value=''; toast('Token oublié.'); };
+
+function checkReady(){
+  $('#analyzeBtn').disabled = !(xRootHandle && repoInfo);
+}
+
+/* ================================================================
+   APPEL API GITHUB (REST + Git Data API, CORS supporté nativement)
+   ================================================================ */
+const GH_API='https://api.github.com';
+async function ghFetch(path, opts={}){
+  const token=loadGhToken();
+  const headers={
+    'Accept':'application/vnd.github+json',
+    'X-GitHub-Api-Version':'2022-11-28',
+    ...(opts.body?{'Content-Type':'application/json'}:{}),
+    ...(opts.headers||{})
+  };
+  if(token) headers['Authorization']='Bearer '+token;
+  const res=await fetch(GH_API+path,{...opts,headers});
+  if(!res.ok){
+    let msg=res.status+' '+res.statusText;
+    try{ const j=await res.json(); if(j.message) msg+=' — '+j.message; }catch(e){}
+    throw new Error(msg);
+  }
+  if(res.status===204) return null;
+  return res.json();
+}
+
+/* ================================================================
+   TEINTES PAR DÉFAUT DES SECTIONS — identique à index.html/editeur.html
+   (angle d'or depuis l'index du frère, écartement maximal)
+   ================================================================ */
+const HUE_OFFSETS=[0,19,47,61,127,205,239];
+const G3_COLOR_KEY='jupiter-graph-basecolor';
+function hexToHue(hex){
+  const r=parseInt(hex.slice(1,3),16)/255, g=parseInt(hex.slice(3,5),16)/255, b=parseInt(hex.slice(5,7),16)/255;
+  const max=Math.max(r,g,b), min=Math.min(r,g,b), d=max-min; let h=0;
+  if(d!==0){ switch(max){ case r: h=((g-b)/d+(g<b?6:0)); break; case g: h=(b-r)/d+2; break; default: h=(r-g)/d+4; } h*=60; }
+  return h;
+}
+const baseHue=hexToHue(localStorage.getItem(G3_COLOR_KEY)||'#ff2f6d');
+function lFor(hue){ return hue>=40&&hue<=80?46:(hue>=160&&hue<=260?58:54); }
+function hueToColor(hue){ return `hsl(${hue.toFixed(1)},88%,${lFor(hue)}%)`; }
+const GOLDEN_ANGLE=137.50776;
+function spacedHue(i){ return ((baseHue+i*GOLDEN_ANGLE)%360+360)%360; }
+/* dégradé interne à une section (branches et sous-branches), identique à
+   revisions.html : lerp non-linéaire à 7 arrêts depuis la teinte de la section. */
+function lerpStopsHueFrom(base,t){
+  t=Math.max(0,Math.min(1,t));
+  const s=t*(HUE_OFFSETS.length-1), i=Math.floor(s), f=s-i;
+  const a=HUE_OFFSETS[i], b=HUE_OFFSETS[Math.min(i+1,HUE_OFFSETS.length-1)];
+  return (base+a+(b-a)*f+360)%360;
+}
+const GRID_COLS=4;
+function assignColors(node){
+  const kids=node.children, total=kids.length;
+  const rows=Math.ceil(total/GRID_COLS);
+  const maxDiag=(GRID_COLS-1)+(Math.max(1,rows)-1);
+  kids.forEach((c,i)=>{
+    const col=i%GRID_COLS, row=Math.floor(i/GRID_COLS);
+    const t=maxDiag<=0?0:(row+col)/maxDiag;
+    c.hue=lerpStopsHueFrom(node.hue,t);
+    c.color=hueToColor(c.hue);
+    assignColors(c);
+  });
+}
+
+async function readMetaColor(dirHandle){
+  try{
+    const fh=await dirHandle.getFileHandle('_meta.json');
+    const f=await fh.getFile();
+    const meta=JSON.parse(await f.text());
+    return (meta&&meta.color)||null;
+  }catch(e){ return null; }
+}
+async function readMeta(dirHandle){
+  try{
+    const fh=await dirHandle.getFileHandle('_meta.json');
+    const f=await fh.getFile();
+    return JSON.parse(await f.text())||{};
+  }catch(e){ return {}; }
+}
+
+/* ---- reconstruit schema.json depuis le disque, comme index.html/editeur.html
+   ("les dossiers ont valeur de vérité") — pour être sûr de publier un schéma
+   à jour même si l'index/l'éditeur n'ont pas été rouverts depuis. ---- */
+async function buildTreeNode(handle){
+  const children=[];
+  for await(const [name,h] of handle.entries()){
+    if(h.kind!=='directory'||ignored(name)) continue;
+    children.push(await buildTreeNode(h));
+  }
+  children.sort((a,b)=>a.name.localeCompare(b.name,'fr',{numeric:true}));
+  return {name:handle.name, handle, children};
+}
+function stripHandles(node){ return {name:node.name, children:node.children.map(stripHandles)}; }
+async function buildFreshSchema(){
+  const tree=await buildTreeNode(xRootHandle);
+  const sectionHues=new Map();
+  const sections=await Promise.all(tree.children.map(async (sec,i)=>{
+    const chosen=await readMetaColor(sec.handle);
+    const hue=chosen?hexToHue(chosen):spacedHue(i);
+    sectionHues.set(sec.name,hue);
+    return {
+      id:sec.name, label:sec.name,
+      color:chosen||hueToColor(hue),
+      manifest:sec.name+'/manifest.json',
+      subjects:sec.children.map(c=>({id:c.name,label:c.name}))
+    };
+  }));
+  return {tree, schema:{...stripHandles(tree), sections}, sectionHues};
+}
+
+/* ================================================================
+   MANIFEST PAR SECTION — modèle uniforme "branches" (identique à
+   revisions.html : plus de distinction matière/chapitre/notion, une
+   branche peut contenir d'autres branches à profondeur libre, et/ou
+   des fichiers directement). isAvantDernier signale qu'une branche
+   n'a que des enfants "feuilles" (aucun n'a lui-même d'enfants) :
+   mobile.html s'en sert pour savoir s'il doit afficher une grille de
+   sous-branches ou directement la liste de ressources, comme sur PC.
+   ================================================================ */
+async function buildBranchManifest(handle, name, parts){
+  const meta=await readMeta(handle);
+  const dirs=[], entryFiles=[];
+  for await(const [n,h] of handle.entries()){
+    if(ignored(n)) continue;
+    (h.kind==='directory'?dirs:entryFiles).push([n,h]);
+  }
+  dirs.sort((a,b)=>a[0].localeCompare(b[0],'fr',{numeric:true}));
+  entryFiles.sort((a,b)=>a[0].localeCompare(b[0],'fr',{numeric:true}));
+  const files=[], questions=[];
+  for(const [n,h] of entryFiles){
+    if(/^questions.*\.json$/i.test(n)){
+      try{
+        const f=await h.getFile();
+        const parsed=JSON.parse(await f.text());
+        const arr=Array.isArray(parsed)?parsed:(Array.isArray(parsed?.questions)?parsed.questions:[]);
+        arr.forEach(q=>questions.push(q));
+      }catch(e){}
+      continue;
+    }
+    files.push({name:n, path:[...parts,n].map(encodeURIComponent).join('/'), corrige:isCorrige(n)});
+  }
+  const children=[];
+  for(const [n,h] of dirs){ children.push(await buildBranchManifest(h,n,[...parts,n])); }
+  const isAvantDernier=children.length>0 && children.every(c=>c.children.length===0);
+  return {
+    name, path:parts.join('/'), description:meta.description||'',
+    children, files, questions, hasQuestions:questions.length>0, isAvantDernier
+  };
+}
+async function buildSectionManifest(secHandle, secName, secHue){
+  const root=await buildBranchManifest(secHandle, secName, []);
+  root.hue=secHue; root.color=hueToColor(secHue);
+  assignColors(root);
+  return root;
+}
+
+/* ================================================================
+   SCAN BRUT — tous les fichiers réels sous la racine (hors entrées
+   cachées/_préfixées), pour le miroir 1:1 sur le dépôt.
+   ================================================================ */
+async function walkAllFiles(handle, prefix, out){
+  for await(const [name,h] of handle.entries()){
+    if(ignored(name)) continue;
+    const rel=prefix?prefix+'/'+name:name;
+    if(h.kind==='directory') await walkAllFiles(h,rel,out);
+    else out.push({path:rel, handle:h});
+  }
+}
+
+/* ================================================================
+   HACHAGE GIT (identique à `git hash-object`) — pour ne pousser que
+   ce qui a réellement changé, sans dépendre d'un état local mis en
+   cache (comparaison directe au contenu du dépôt à chaque analyse).
+   ================================================================ */
+async function gitBlobSha(bytes){
+  const header=new TextEncoder().encode('blob '+bytes.byteLength+'\0');
+  const full=new Uint8Array(header.byteLength+bytes.byteLength);
+  full.set(header,0); full.set(new Uint8Array(bytes),header.byteLength);
+  const digest=await crypto.subtle.digest('SHA-1',full);
+  return [...new Uint8Array(digest)].map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+function arrayBufferToBase64(buf){
+  let binary=''; const bytes=new Uint8Array(buf); const chunk=0x8000;
+  for(let i=0;i<bytes.length;i+=chunk){ binary+=String.fromCharCode(...bytes.subarray(i,i+chunk)); }
+  return btoa(binary);
+}
+async function pMapLimit(items, limit, fn){
+  const results=new Array(items.length); let idx=0;
+  async function worker(){ while(idx<items.length){ const cur=idx++; results[cur]=await fn(items[cur],cur); } }
+  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));
+  return results;
+}
+
+const MAX_FILE_BYTES=90*1024*1024; // repli prudent sous la limite GitHub (100 Mo/fichier)
+
+/* ================================================================
+   ANALYSE — construit la liste locale complète (fichiers réels +
+   schema.json + manifest.json générés), la compare à l'état distant.
+   ================================================================ */
+let ANALYSIS=null; // {toUpload:[{path,bytes,localSha}], toDelete:[path], warnings:[], baseCommitSha, baseTreeSha, exists, branch}
+
+async function runAnalysis(){
+  if(!xRootHandle||!repoInfo){ toast('Connecte le dossier et vérifie le dépôt d\'abord.'); return; }
+  $('#analyzeBtn').disabled=true;
+  showPub('Analyse en cours…');
+  const log=(m)=>pubLog(m);
+  try{
+    log('Relecture de l\'arborescence locale…');
+    const {tree, schema, sectionHues}=await buildFreshSchema();
+    /* on réécrit aussi schema.json localement, pour rester cohérent avec
+       index.html/editeur.html (le dépôt ne doit jamais publier un schéma
+       plus périmé que ce que verrait quelqu'un ouvrant l'app en local) */
+    try{
+      const fh=await xRootHandle.getFileHandle('schema.json',{create:true});
+      const w=await fh.createWritable(); await w.write(JSON.stringify(schema,null,2)); await w.close();
+    }catch(e){ console.warn('écriture schema.json locale',e); }
+
+    log('Scan des fichiers réels…');
+    const rawFiles=[]; await walkAllFiles(xRootHandle,'',rawFiles);
+
+    log('Génération des manifest.json par section…');
+    const manifestEntries=[];
+    for(const sec of tree.children){
+      const man=await buildSectionManifest(sec.handle, sec.name, sectionHues.get(sec.name)||baseHue);
+      manifestEntries.push({path:sec.name+'/manifest.json', text:JSON.stringify(man,null,2)});
+    }
+    const schemaEntry={path:'schema.json', text:JSON.stringify(schema,null,2)};
+
+    /* --- construit la liste locale complète (path -> bytes) --- */
+    const warnings=[];
+    log('Lecture du contenu local ('+rawFiles.length+' fichier(s))…');
+    const localList=await pMapLimit(rawFiles, 6, async (f)=>{
+      const file=await f.handle.getFile();
+      if(file.size>MAX_FILE_BYTES){ warnings.push(f.path+' ('+(file.size/1048576).toFixed(1)+' Mo, ignoré : > 90 Mo)'); return null; }
+      const bytes=await file.arrayBuffer();
+      const sha=await gitBlobSha(bytes);
+      return {path:f.path, bytes, sha};
+    });
+    const localFiles=localList.filter(Boolean);
+    for(const gen of [schemaEntry, ...manifestEntries]){
+      const bytes=new TextEncoder().encode(gen.text).buffer;
+      const sha=await gitBlobSha(bytes);
+      localFiles.push({path:gen.path, bytes, sha});
+    }
+
+    log('Lecture de l\'état actuel du dépôt…');
+    const remote=await fetchRemoteState(repoInfo);
+
+    const localMap=new Map(localFiles.map(f=>[f.path,f]));
+    const toUpload=[], toDelete=[];
+    for(const f of localFiles){
+      const remoteSha=remote.files.get(f.path);
+      if(remoteSha!==f.sha) toUpload.push({...f, isNew:!remote.files.has(f.path)});
+    }
+    for(const path of remote.files.keys()){
+      if(!localMap.has(path)) toDelete.push(path);
+    }
+
+    /* décompte par section (classe 1) pour repérer tout de suite un scan
+       incomplet — ex. une section entière à 0 fichier alors qu'elle ne
+       devrait pas l'être. */
+    const perSection=new Map();
+    rawFiles.forEach(f=>{
+      const sec=f.path.split('/')[0];
+      perSection.set(sec,(perSection.get(sec)||0)+1);
+    });
+
+    ANALYSIS={toUpload,toDelete,warnings,baseCommitSha:remote.baseCommitSha,baseTreeSha:remote.baseTreeSha,exists:remote.exists,branch:repoInfo.branch,scanCount:rawFiles.length,perSection};
+    renderDiff();
+    toast('Analyse terminée.');
+  }catch(e){
+    console.error('analyse',e);
+    toast('Erreur d\'analyse : '+e.message);
+    /* une analyse ratée invalide toute analyse précédente : jamais laisser
+       "Publier" actionnable sur un diff potentiellement périmé */
+    ANALYSIS=null;
+    $('#publishBtn').disabled=true;
+  }finally{
+    hidePub();
+    $('#analyzeBtn').disabled=false;
+    checkReady();
+  }
+}
+$('#analyzeBtn').onclick=runAnalysis;
+
+async function fetchRemoteState(cfg){
+  let exists=true, baseCommitSha=null, baseTreeSha=null;
+  const files=new Map();
+  try{
+    const ref=await ghFetch(`/repos/${cfg.owner}/${cfg.repo}/git/ref/heads/${cfg.branch}`);
+    baseCommitSha=ref.object.sha;
+    const commit=await ghFetch(`/repos/${cfg.owner}/${cfg.repo}/git/commits/${baseCommitSha}`);
+    baseTreeSha=commit.tree.sha;
+    const tree=await ghFetch(`/repos/${cfg.owner}/${cfg.repo}/git/trees/${baseTreeSha}?recursive=1`);
+    (tree.tree||[]).forEach(e=>{ if(e.type==='blob') files.set(e.path,e.sha); });
+  }catch(e){ exists=false; }
+  return {exists,baseCommitSha,baseTreeSha,files};
+}
+
+function renderDiff(){
+  const {toUpload,toDelete,warnings,scanCount,perSection}=ANALYSIS;
+  const added=toUpload.filter(f=>f.isNew), modified=toUpload.filter(f=>!f.isNew);
+  $('#diffCard').style.display='block';
+  const rows=[
+    ...added.map(f=>`<div class="filerow add"><span class="tag">+</span><span class="fp">${esc(f.path)}</span><span class="fsz">${(f.bytes.byteLength/1024).toFixed(1)} Ko</span></div>`),
+    ...modified.map(f=>`<div class="filerow mod"><span class="tag">±</span><span class="fp">${esc(f.path)}</span><span class="fsz">${(f.bytes.byteLength/1024).toFixed(1)} Ko</span></div>`),
+    ...toDelete.map(p=>`<div class="filerow del"><span class="tag">−</span><span class="fp">${esc(p)}</span><span class="fsz"></span></div>`)
+  ].join('');
+  /* décompte visible par section : le premier endroit à regarder si le
+     scan local semblait incomplet (une section à 0 alors qu'elle a du
+     contenu localement doit sauter aux yeux immédiatement). */
+  const secRows=[...(perSection||new Map()).entries()]
+    .sort((a,b)=>a[0].localeCompare(b[0],'fr'))
+    .map(([sec,n])=>`<span style="margin-right:14px">${esc(sec)} : <b>${n}</b></span>`).join('');
+  $('#diffSummary').innerHTML=`
+    <div style="font-size:11.5px;color:var(--dim);margin-bottom:10px">
+      <b style="color:var(--txt)">${scanCount}</b> fichier(s) trouvé(s) localement — ${secRows||'aucune section'}
+    </div>
+    <div class="diffbar">
+      <span class="diffchip add"><b>${added.length}</b> nouveau(x)</span>
+      <span class="diffchip mod"><b>${modified.length}</b> modifié(s)</span>
+      <span class="diffchip del"><b>${toDelete.length}</b> à supprimer</span>
+      ${warnings.length?`<span class="diffchip warn"><b>${warnings.length}</b> ignoré(s) (trop volumineux)</span>`:''}
+    </div>
+    ${(toUpload.length+toDelete.length)?`<div class="filelist">${rows}</div>`:'<div style="font-size:12.5px;color:var(--dim)">Rien à publier — le dépôt est déjà à jour.</div>'}
+    ${warnings.length?`<div style="margin-top:10px;font-size:11px;color:var(--warn);font-family:var(--mono)">${warnings.map(w=>esc(w)).join('<br>')}</div>`:''}
+  `;
+  $('#publishBtn').disabled = (toUpload.length+toDelete.length)===0;
+}
+
+/* ================================================================
+   PUBLICATION — crée les blobs modifiés, un arbre delta (base_tree),
+   un commit, puis avance la branche. Un seul commit par publication.
+   ================================================================ */
+/* création d'un blob avec réessais : GitHub applique des limites de débit
+   secondaires (403/429) quand on envoie beaucoup de fichiers d'affilée —
+   sans ça, UN SEUL fichier en échec faisait avorter toute la publication
+   (aucun commit créé), ce qui pouvait donner l'impression que seuls les
+   tout premiers dossiers avaient été envoyés alors qu'en réalité RIEN
+   n'avait été commité au-delà d'un éventuel essai précédent. Ici, un échec
+   persistant sur un fichier est simplement ignoré (il sera retenté au
+   prochain Analyser) plutôt que de bloquer tous les autres. */
+async function createBlobResilient(f){
+  for(let attempt=0; attempt<4; attempt++){
+    try{
+      const b64=arrayBufferToBase64(f.bytes);
+      const res=await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/git/blobs`,{method:'POST',body:JSON.stringify({content:b64,encoding:'base64'})});
+      return {path:f.path, sha:res.sha, ok:true};
+    }catch(e){
+      const transient=/^(403|429|5\d\d)/.test(String(e.message));
+      if(transient && attempt<3){ await sleep(1000*(attempt+1)); continue; }
+      return {path:f.path, ok:false, err:String(e.message)};
+    }
+  }
+}
+async function runPublish(){
+  if(!ANALYSIS){ toast('Lance d\'abord une analyse.'); return; }
+  const {toUpload,toDelete,baseCommitSha,baseTreeSha,exists,branch}=ANALYSIS;
+  $('#publishBtn').disabled=true;
+  showPub('Publication en cours…');
+  try{
+    const total=toUpload.length;
+    let done=0;
+    const blobResults=await pMapLimit(toUpload,3, async (f)=>{
+      const r=await createBlobResilient(f);
+      done++; pubProgress(done,total);
+      pubLog((r.ok?'Envoyé : ':'Échec (retenté au prochain Analyser) : ')+f.path);
+      return r;
+    });
+    const blobShas=blobResults.filter(b=>b.ok);
+    const failed=blobResults.filter(b=>!b.ok);
+    if(!blobShas.length && !toDelete.length){
+      throw new Error('Aucun fichier n\'a pu être envoyé (voir le journal ci-dessus) — rien à commiter.');
+    }
+
+    pubLog('Construction de l\'arbre ('+blobShas.length+'/'+total+' fichier(s) prêts)…');
+    const treeEntries=[
+      ...blobShas.map(b=>({path:b.path, mode:'100644', type:'blob', sha:b.sha})),
+      ...toDelete.map(p=>({path:p, mode:'100644', type:'blob', sha:null}))
+    ];
+    const treeBody={tree:treeEntries}; if(exists) treeBody.base_tree=baseTreeSha;
+    const newTree=await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/git/trees`,{method:'POST',body:JSON.stringify(treeBody)});
+
+    pubLog('Création du commit…');
+    const when=new Date();
+    const message='Sync Jupiter — '+when.toLocaleString('fr-FR');
+    const commitBody={message, tree:newTree.sha, parents: exists?[baseCommitSha]:[]};
+    const newCommit=await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/git/commits`,{method:'POST',body:JSON.stringify(commitBody)});
+
+    pubLog('Mise à jour de la branche « '+branch+' »…');
+    if(exists){
+      await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/git/refs/heads/${branch}`,{method:'PATCH',body:JSON.stringify({sha:newCommit.sha})});
+    }else{
+      await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/git/refs`,{method:'POST',body:JSON.stringify({ref:'refs/heads/'+branch,sha:newCommit.sha})});
+    }
+
+    pubLog('Vérification de GitHub Pages…');
+    await ensurePages(branch);
+
+    localStorage.setItem('jupiter-gh-lastpublish', JSON.stringify({when:when.toISOString(),commit:newCommit.sha,files:blobShas.length,deleted:toDelete.length,failed:failed.length}));
+    renderSuccess(newCommit.sha, blobShas.length, toDelete.length, failed);
+    toast(failed.length?'Publication terminée (avec '+failed.length+' échec(s)).':'Publication terminée.');
+    ANALYSIS=null; $('#publishBtn').disabled=true;
+    $('#diffCard').style.display='none';
+  }catch(e){
+    console.error('publication',e);
+    toast('Erreur de publication : '+e.message);
+    $('#publishBtn').disabled=false;
+  }finally{
+    hidePub();
+  }
+}
+$('#publishBtn').onclick=runPublish;
+
+async function ensurePages(branch){
+  try{
+    await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/pages`);
+    /* déjà activé */
+  }catch(e){
+    try{
+      await ghFetch(`/repos/${repoInfo.owner}/${repoInfo.repo}/pages`,{method:'POST',body:JSON.stringify({source:{branch,path:'/'}})});
+      pubLog('GitHub Pages activé sur « '+branch+' ».');
+    }catch(e2){
+      pubLog('GitHub Pages non activé automatiquement (permission « Pages » manquante sur le token, ou déjà en cours de configuration) — active-le manuellement dans Settings → Pages si besoin.');
+    }
+  }
+}
+
+function renderSuccess(sha, nUp, nDel, failed){
+  const url=`https://github.com/${repoInfo.owner}/${repoInfo.repo}/commit/${sha}`;
+  const pagesUrl=`https://${repoInfo.owner}.github.io/${repoInfo.repo}/`;
+  const failList=(failed&&failed.length)
+    ? `<div style="margin-top:10px;font-size:11px;color:var(--warn);font-family:var(--mono)">
+        ${failed.length} fichier(s) non envoyé(s) (relance « Analyser » pour réessayer) :<br>
+        ${failed.map(f=>esc(f.path)+' — '+esc(f.err||'')).join('<br>')}
+      </div>` : '';
+  $('#successArea').innerHTML=`
+    <div class="successbox">
+      <b>Publié.</b> ${nUp} fichier(s) envoyé(s), ${nDel} supprimé(s).<br>
+      <a href="${url}" target="_blank" rel="noopener" style="color:var(--blue)">Voir le commit sur GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="${pagesUrl}" target="_blank" rel="noopener" style="color:var(--blue)">Ouvrir le site (mobile)</a>
+      <div style="margin-top:8px;font-size:11px;color:var(--dim)">Le déploiement GitHub Pages peut prendre une minute avant que le mobile voie les nouveaux fichiers.</div>
+      ${failList}
+    </div>`;
+}
+
+/* ================================================================
+   OVERLAY DE CHARGEMENT — même cercle simple que le reste de Jupiter
+   ================================================================ */
+function showPub(label){ $('#pubOverlay').classList.add('on'); $('#pubLabel').textContent=label; $('#pubBarFill').style.width='0%'; $('#pubLog').innerHTML=''; }
+function hidePub(){ $('#pubOverlay').classList.remove('on'); }
+function pubProgress(done,total){ $('#pubBarFill').style.width=(total?Math.round(done/total*100):100)+'%'; }
+function pubLog(msg){ const el=$('#pubLog'); const line=document.createElement('div'); line.textContent=msg; el.appendChild(line); el.scrollTop=el.scrollHeight; }
+</script>
+</body>
+</html>

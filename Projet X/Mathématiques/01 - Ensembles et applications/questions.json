@@ -1,0 +1,102 @@
+[
+  {
+    "type": "Méthode",
+    "enonce": "Décrire la méthode de la double inclusion pour montrer l'égalité de deux ensembles.",
+    "reponse": "Hypothèses : Deux ensembles $E$ et $F$.\nPour montrer que $E = F$, la méthode de la double inclusion consiste à prouver successivement :\n1. L'inclusion directe : $E \\subset F$ (soit $\\forall x \\in E, x \\in F$)\n2. L'inclusion réciproque : $F \\subset E$ (soit $\\forall x \\in F, x \\in E$)"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le produit cartésien de deux ensembles $E$ et $F$, puis sa généralisation à $n$ ensembles.",
+    "reponse": "Hypothèses : Ensembles $E, F$ et $E_1, E_2, \\dots, E_n$ (avec $n \\ge 2$). Relations :\n- Produit cartésien de $E$ et $F$ :\n$$E \\times F = \\{(x, y) \\mid x \\in E, y \\in F\\}$$\n- Produit cartésien de $n$ ensembles :\n$$E_1 \\times E_2 \\times \\dots \\times E_n = \\{(x_1, x_2, \\dots, x_n) \\mid \\forall i \\in \\llbracket 1, n \\rrbracket, x_i \\in E_i\\}$$\nSi tous les ensembles $E_i$ sont égaux à $E$, cet ensemble produit est noté $E^n$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le complémentaire, la réunion, l'intersection et la différence de deux parties $A$ et $B$ d'un ensemble $E$.",
+    "reponse": "Hypothèses : $A$ et $B$ sont deux parties d'un ensemble $E$. Définitions :\n- Complémentaire de $A$ (noté $\\overline{A}$, $E \\setminus A$ ou $A^c$) :\n$$\\overline{A} = \\{x \\in E \\mid x \\notin A\\}$$\n- Réunion $A \\cup B$ :\n$$A \\cup B = \\{x \\in E \\mid x \\in A \\text{ ou } x \\in B\\}$$\n- Intersection $A \\cap B$ :\n$$A \\cap B = \\{x \\in E \\mid x \\in A \\text{ et } x \\in B\\}$$\n- Différence $A \\setminus B$ :\n$$A \\setminus B = A \\cap \\overline{B} = \\{x \\in A \\mid x \\notin B\\}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer les deux lois de Morgan pour les opérations ensemblistes de deux parties $A$ et $B$.",
+    "reponse": "Hypothèses : $A$ et $B$ deux parties d'un ensemble $E$. Relations :\n$$\\overline{A \\cap B} = \\overline{A} \\cup \\overline{B}$$\n$$\\overline{A \\cup B} = \\overline{A} \\cap \\overline{B}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir un recouvrement disjoint et une partition d'un ensemble $E$.",
+    "reponse": "Hypothèses : Soit $E$ un ensemble, $n \\in \\mathbb{N}^*$ et une famille de parties $\\mathcal{A} = (A_1, \\dots, A_n) \\in (\\mathcal{P}(E))^n$.\n- **Recouvrement disjoint** : $\\mathcal{A}$ est un recouvrement disjoint si les parties sont deux à deux disjointes et que leur réunion forme $E$ :\n$$\\forall(i, j) \\in \\llbracket 1, n \\rrbracket, i \\neq j \\implies A_i \\cap A_j = \\emptyset \\quad \\text{et} \\quad \\bigcup_{i=1}^n A_i = E$$\n- **Partition** : $\\mathcal{A}$ est une partition de $E$ si c'est un recouvrement disjoint et qu'aucune de ses parties n'est vide ($\\forall i \\in \\llbracket 1, n \\rrbracket, A_i \\neq \\emptyset$)."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les expressions des fonctions indicatrices du complémentaire $\\mathbf{1}_{\\overline{A}}$, de l'intersection $\\mathbf{1}_{A \\cap B}$ et de la réunion $\\mathbf{1}_{A \\cup B}$.",
+    "reponse": "Hypothèses : $A$ et $B$ deux parties d'un ensemble $E$. Les relations à connaître pour tout $x \\in E$ sont :\n- Complémentaire : $\\mathbf{1}_{\\overline{A}} = 1 - \\mathbf{1}_A$\n- Intersection : $\\mathbf{1}_{A \\cap B} = \\mathbf{1}_A \\cdot \\mathbf{1}_B = \\min(\\mathbf{1}_A, \\mathbf{1}_B)$\n- Réunion : $\\mathbf{1}_{A \\cup B} = \\mathbf{1}_A + \\mathbf{1}_B - \\mathbf{1}_A \\cdot \\mathbf{1}_B = \\max(\\mathbf{1}_A, \\mathbf{1}_B)$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la restriction d'une application, un prolongement et une application induite.",
+    "reponse": "Hypothèses : Soient $E, F$ deux ensembles, $A \\subset E$, $B \\subset F$ et $f : E \\to F$.\n- **Restriction** : La restriction de $f$ à $A$, notée $f_{|A}$, est l'application :\n$$f_{|A} : A \\longrightarrow F, \\quad x \\mapsto f(x)$$\n- **Prolongement** : On dit que $f$ est un prolongement de $g$ si $g$ est une restriction de $f$.\n- **Application induite** : Si $\\forall x \\in A, f(x) \\in B$, l'application induite par $f$ de $A$ dans $B$ est l'application $\\tilde{f} : A \\to B$ définie par $\\forall x \\in A, \\tilde{f}(x) = f(x)$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Énoncer la définition formelle d'une application injective et la formulation logique pour la démontrer.",
+    "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Définition** : Tout élément de $F$ admet au plus un antécédent dans $E$ par $f$.\n- **Formulation logique** :\n$$\\forall(x, x') \\in E^2, \\quad f(x) = f(x') \\implies x = x'$$\nou par contraposée : $\\forall(x, x') \\in E^2, \\quad x \\neq x' \\implies f(x) \\neq f(x')$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Énoncer la définition formelle d'une application surjective et sa formulation logique.",
+    "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Définition** : Tout élément de $F$ admet au moins un antécédent dans $E$ par $f$.\n- **Formulation logique** :\n$$\\forall y \\in F, \\quad \\exists x \\in E \\mid y = f(x)$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une application bijective et sa bijection réciproque $f^{-1}$.",
+    "reponse": "Hypothèses : Une application $f : E \\to F$.\n- **Bijective** : $f$ est bijective si elle est à la fois injective et surjective (chaque élément de $F$ possède un unique antécédent dans $E$).\n- **Bijection réciproque** : L'application $f^{-1} : F \\to E$ qui associe à tout $y \\in F$ son unique antécédent $x \\in E$ par $f$. On a l'équivalence :\n$$\\forall x \\in E, \\forall y \\in F, \\quad y = f(x) \\iff x = f^{-1}(y)$$\nDe plus, $f \\circ f^{-1} = \\mathrm{id}_F$ et $f^{-1} \\circ f = \\mathrm{id}_E$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés de la composition $g \\circ f$ de deux applications injectives, surjectives et bipectives.",
+    "reponse": "Hypothèses : Deux applications composables $f : E \\to F$ et $g : F \\to G$.\n1. Si $f$ et $g$ sont injectives, alors $g \\circ f$ est injective.\n2. Si $f$ et $g$ sont surjectives, alors $g \\circ f$ est surjective.\n3. Si $f$ et $g$ sont bijectives, alors $g \\circ f$ est bijective, et sa bijection réciproque vérifie :\n$$(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'image directe d'une partie $A \\subset E$ et l'image réciproque d'une partie $B \\subset F$ par une application $f : E \\to F$.",
+    "reponse": "Hypothèses : $f : E \\to F$, $A \\subset E$ et $B \\subset F$.\n- **Image directe** de $A$ par $f$ :\n$$f(A) = \\{f(x) \\mid x \\in A\\} = \\{y \\in F \\mid \\exists x \\in A, y = f(x)\\}$$\n- **Image réciproque** de $B$ par $f$ :\n$$f^{-1}(B) = \\{x \\in E \\mid f(x) \\in B\\}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les relations de l'image directe et de l'image réciproque d'une application $f : E \\to F$ vis-à-vis de la réunion et de l'intersection de deux parties.",
+    "reponse": "Hypothèses : Soit $f : E \\to F$, $(A, B) \\in (\\mathcal{P}(E))^2$ et $(X, Y) \\in (\\mathcal{P}(F))^2$. Relations :\n- Réunion : $f(A \\cup B) = f(A) \\cup f(B)$ et $f^{-1}(X \\cup Y) = f^{-1}(X) \\cup f^{-1}(Y)$\n- Intersection : $f(A \\cap B) \\subset f(A) \\cap f(B)$ (l'inclusion peut être stricte) et $f^{-1}(X \\cap Y) = f^{-1}(X) \\cap f^{-1}(Y)$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de dénombrement par bijection et le principe d'addition pour les ensembles finis.",
+    "reponse": "Théorèmes :\n- **Théorème de dénombrement** : Si $E$ est un ensemble fini non vide et s'il existe une bijection entre $E$ et $F$, alors $F$ est de cardinal fini et $\\mathrm{card}(F) = \\mathrm{card}(E)$.\n- **Principe d'addition** : Si $E$ et $F$ sont deux ensembles finis disjoints ($E \\cap F = \\emptyset$), alors $E \\cup F$ est fini et :\n$$\\mathrm{card}(E \\cup F) = \\mathrm{card}(E) + \\mathrm{card}(F)$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer l'équivalence entre l'injectivité, la surjectivité et la bijectivité pour une application entre deux ensembles finis de même cardinal.",
+    "reponse": "Hypothèses : Soient $E$ et $F$ deux ensembles finis de **même cardinal** $n$, et $f : E \\to F$.\nLes trois conditions suivantes sont équivalentes :\ni) $f$ est bijective ;\nii) $f$ est surjective ;\niii) $f$ est injective."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une relation binaire $\\mathcal{R}$ sur un ensemble $E$ et ses quatre propriétés caractéristiques fondamentales (réflexivité, symétrie, antisymétrie, transitivité).",
+    "reponse": "Hypothèses : Une relation binaire $\\mathcal{R}$ sur un ensemble $E$ (sous-ensemble du produit cartésien $E \\times E$). Propriétés :\n- **Réflexive** : $\\forall x \\in E, \\quad x\\mathcal{R}x$\n- **Symétrique** : $\\forall(x, y) \\in E^2, \\quad x\\mathcal{R}y \\iff y\\mathcal{R}x$\n- **Antisymétrique** : $\\forall(x, y) \\in E^2, \\quad (x\\mathcal{R}y \\text{ et } y\\mathcal{R}x) \\implies x = y$\n- **Transitive** : $\\forall(x, y, z) \\in E^3, \\quad (x\\mathcal{R}y \\text{ et } y\\mathcal{R}z) \\implies x\\mathcal{R}z$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une relation d'ordre (partiel ou total) et une relation d'équivalence.",
+    "reponse": "Définitions :\n- **Relation d'ordre** : Une relation binaire qui est **réflexive**, **antisymétrique** et **transitive**. L'ordre est dit **total** si $\\forall(x, y) \\in E^2$, on a $x\\mathcal{R}y$ ou $y\\mathcal{R}x$ ; sinon il est dit **partiel**.\n- **Relation d'équivalence** : Une relation binaire qui est **réflexive**, **symétrique** et **transitive**."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les notions de majorant, minorant, plus grand élément (maximum) et plus petit élément (minimum) d'une partie $A$ d'un ensemble ordonné $(E, \\le)$.",
+    "reponse": "Hypothèses : $A$ une partie d'un ensemble ordonné $(E, \\le)$, $m \\in E$ et $M \\in E$.\n- **Majorant** : $M$ majore $A$ si $\\forall a \\in A, a \\le M$.\n- **Minorant** : $m$ minore $A$ si $\\forall a \\in A, a \\ge m$.\n- **Plus grand élément (maximum)** : $M$ est le maximum de $A$ si $M \\in A$ et $M$ majore $A$ (il est unique et noté $\\max(A)$).\n- **Plus petit élément (minimum)** : $m$ est le minimum de $A$ si $m \\in A$ et $m$ minore $A$ (il est unique et noté $\\min(A)$)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la croissance et la stricte croissance d'une application $f$ entre deux ensembles ordonnés $(A, \\mathcal{R})$ et $(B, \\mathcal{S})$.",
+    "reponse": "Hypothèses : $f : A \\to B$ où $(A, \\mathcal{R})$ et $(B, \\mathcal{S})$ sont deux ensembles ordonnés.\n- **Croissante** : si $\\forall(a, a') \\in A^2, \\quad a\\mathcal{R}a' \\implies f(a)\\mathcal{S}f(a')$.\n- **Strictement croissante** : si elle est croissante et injective."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la classe d'équivalence $[x]$ d'un élément $x$ pour une relation d'équivalence $\\mathcal{R}$ sur un ensemble $E$.",
+    "reponse": "Hypothèses : Un ensemble $E$ muni d'une relation d'équivalence $\\mathcal{R}$.\nLa classe d'équivalence de $x \\in E$ est l'ensemble des éléments de $E$ en relation avec $x$ :\n$$[x] = \\{y \\in E \\mid x\\mathcal{R}y\\}$$"
+  }
+]

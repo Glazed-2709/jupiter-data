@@ -1,0 +1,113 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir l'indice de réfraction $n$ d'un milieu transparent et donner sa condition de validité numérique.",
+    "reponse": "Hypothèses : Milieu transparent quelconque. Relation à connaître :\n$$n = \\dfrac{c}{v}$$\noù $c$ est la célérité de la lumière dans le vide ($c = 299\\,792\\,458\\,\\mathrm{m\\cdot s^{-1}}$) et $v$ la vitesse de propagation dans le milieu. Condition numérique : $n \\ge 1$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la relation entre la longueur d'onde dans le vide $\\lambda_0$, la longueur d'onde dans un milieu $\\lambda$ et l'indice de réfraction $n$.",
+    "reponse": "Hypothèses : Lumière monochromatique de fréquence $f$ déterminée par l'émetteur se propageant dans un milieu d'indice $n$. Relations :\n$$\\lambda = \\dfrac{v}{f} \\quad \\text{et} \\quad \\lambda_0 = \\dfrac{c}{f} \\implies \\lambda = \\dfrac{\\lambda_0}{n}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les ordres de grandeur des longueurs d'onde dans le vide $\\lambda_0$ pour les limites du spectre visible ainsi que pour les couleurs violette et rouge.",
+    "reponse": "L'intervalle de la lumière visible correspond environ aux fréquences $4\\cdot10^{14}\\,\\mathrm{Hz} < f < 8\\cdot10^{14}\\,\\mathrm{Hz}$.\nSur l'échelle des couleurs, les longueurs d'onde dans le vide $\\lambda_0$ remarquables sont :\n- Limite violet / début du visible : $\\lambda_0 \\approx 400\\,\\mathrm{nm}$\n- Transition bleu / vert : $\\lambda_0 \\approx 500\\,\\mathrm{nm}$\n- Transition jaune-orange / rouge : $\\lambda_0 \\approx 650\\,\\mathrm{nm}$\n- Limite rouge / fin du visible : $\\lambda_0 \\approx 800\\,\\mathrm{nm}$"
+  },
+  {
+    "type": "Principe",
+    "enonce": "Énoncer les hypothèses de l'approximation de l'optique géométrique.",
+    "reponse": "Hypothèses :\n1. La lumière est modélisée par un ensemble de **rayons lumineux** indépendants les uns des autres (ce qui suppose l'absence d'interférences).\n2. Dans un milieu transparent homogène et isotrope, les rayons lumineux sont **rectilignes** (ce qui suppose d'éviter la diffraction, avec des systèmes suffisamment larges devant la longueur d'onde)."
+  },
+  {
+    "type": "Loi",
+    "enonce": "Énoncer les trois lois de Snell-Descartes pour la réflexion et la réfraction.",
+    "reponse": "Hypothèses : Un rayon lumineux incident arrive sur un dioptre séparant deux milieux transparents d'indices $n_1$ et $n_2$. Lois :\n1. Les rayons réfléchi et réfracté sont dans le **plan d'incidence** (défini par le rayon incident et la normale au dioptre).\n2. L'angle de réflexion $i'_1$ vérifie : $i'_1 = -i_1$ (angles orientés) ou $i'_1 = i_1$ (angles non orientés).\n3. L'angle de réfraction $i_2$ est lié à l'angle d'incidence $i_1$ par : $$n_1 \\sin i_1 = n_2 \\sin i_2$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la loi du retour inverse de la lumière.",
+    "reponse": "Hypothèses : Propagation de la lumière entre deux points à travers un système optique quelconque. Propriété : Le trajet suivi par la lumière pour aller d'un point $A$ à un point $B$ est le même que celui suivi pour aller de $B$ à $A$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Déterminer l'expression de l'angle limite d'incidence $i_{\\mathrm{lim}}$ et définir la condition de réflexion totale.",
+    "reponse": "Hypothèses : Passage d'un milieu d'indice $n_1$ à un milieu moins réfringent d'indice $n_2$ tel que $n_2 < n_1$. Relation à connaître : $$i_{\\mathrm{lim}} = \\arcsin\\left(\\dfrac{n_2}{n_1}\\right)$$ Si l'angle d'incidence vérifie $i_1 > i_{\\mathrm{lim}}$, il n'y a pas de rayon réfracté : c'est le phénomène de **réflexion totale**.",
+    "calcul": "D'après la loi de Snell-Descartes : $n_1 \\sin i_1 = n_2 \\sin i_2 \\implies \\sin i_2 = \\dfrac{n_1}{n_2} \\sin i_1$.\nLa réfraction limite correspond à l'angle de réfraction maximal possible dans le second milieu, soit $i_2 = \\dfrac{\\pi}{2}$ (rayon rasant).\nOn a alors : $n_1 \\sin i_{\\mathrm{lim}} = n_2 \\sin\\left(\\dfrac{\\pi}{2}\\right) = n_2 \\implies \\sin i_{\\mathrm{lim}} = \\dfrac{n_2}{n_1}$.\nD'où : $i_{\\mathrm{lim}} = \\arcsin\\left(\\dfrac{n_2}{n_1}\\right)$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les expressions de l'ouverture numérique $o_n$ et du cône d'acceptance $\\theta_a$ d'une fibre optique à saut d'indice.",
+    "reponse": "Hypothèses : Fibre optique constituée d'un cœur d'indice $n_c$ entouré d'une gaine d'indice $n_g < n_c$, plongée dans un milieu extérieur d'indice $n_0$. Relations à connaître :\n- Angle maximal du cône d'acceptance : $$\\theta_a = \\arcsin\\left(\\dfrac{\\sqrt{n_c^2 - n_g^2}}{n_0}\\right)$$\n- Ouverture numérique : $$o_n = n_0 \\sin \\theta_a = \\sqrt{n_c^2 - n_g^2}$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner l'expression de la dispersion intermodale $\\Delta t$ dans une fibre optique à saut d'indice.",
+    "reponse": "Hypothèses : Guidage d'un faisceau lumineux dans une fibre optique rectiligne à saut d'indice de longueur $L$. $\\Delta t$ représente la différence de temps de trajet entre le rayon le plus lent et le rayon le plus rapide. Relation à connaître :\n$$\\Delta t = \\dfrac{L n_c (n_c - n_g)}{c n_g}$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le stigmatisme d'un système optique ainsi que les notions de point objet et point image.",
+    "reponse": "Hypothèses : Système optique $S$ formé de dioptres ou miroirs.\n- **Point objet** : Point d'intersection des rayons incidents (réel si les rayons en sont issus directement, virtuel si ce sont leurs prolongements).\n- **Stigmatisme** : Un système est dit stigmatique si tous les rayons émergents correspondant aux rayons issus d'un unique point objet $A$ convergent en un unique point $A'$ ou semblent en provenir.\n- **Point image** : Ce point de convergence ou de provenance $A'$ des rayons émergents (réelle si les rayons y convergent vraiment, virtuelle si ce sont leurs prolongements)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir un système optique centré et la propriété d'aplanétisme.",
+    "reponse": "Définitions :\n- **Système centré** : Système optique possédant un axe de symétrie de révolution, appelé **axe optique**.\n- **Aplanétisme** : Propriété d'un système centré pour lequel l'image d'un objet plan orthogonal à l'axe optique est également un plan orthogonal à l'axe optique."
+  },
+  {
+    "type": "Principe",
+    "enonce": "Énoncer les conditions de Gauss permettant d'obtenir un stigmatisme approché.",
+    "reponse": "Hypothèses : Système optique centré utilisé avec des rayons dits **paraxiaux**. Conditions de Gauss :\n1. Les rayons doivent rencontrer le système près de l'axe optique.\n2. Les rayons doivent être peu inclinés par rapport à cet axe.\nEn pratique, ces conditions sont réalisées à l'aide d'un diaphragme empêchant les rayons trop éloignés ou trop inclinés de traverser le système."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les foyers principaux objet $F$ et image $F'$ ainsi que les plans focaux associés.",
+    "reponse": "Hypothèses : Système optique centré utilisé dans les conditions de Gauss.\n- **Foyer principal objet $F$** : Point de l'axe optique dont l'image par le système est située à l'infini sur l'axe.\n- **Foyer principal image $F'$** : Point de l'axe optique qui est l'image d'un point objet situé à l'infini sur l'axe.\n- **Plan focal objet (resp. image)** : Plan passant par $F$ (resp. $F'$) et orthogonal à l'axe optique."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la distance focale objet $f$, la distance focale image $f'$ et la vergence $V$ d'une lentille mince.",
+    "reponse": "Hypothèses : Lentille mince de centre optique $O$ utilisée dans les conditions de Gauss. Relations à connaître :\n- Distances focales algébriques : $f = \\overline{OF}$ et $f' = \\overline{OF'}$. Par symétrie, $f = -f'$.\n- Vergence : $$V = \\dfrac{1}{f'} = -\\dfrac{1}{f}$$\nL'unité de vergence est le mètre inverse ($\\mathrm{m^{-1}}$), également appelé **dioptrie** ($\\delta$). $V$ et $f'$ sont positives pour une lentille convergente, négatives pour une lentille divergente."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les formules de conjugaison et de grandissement d'une lentille mince dites de Descartes.",
+    "reponse": "Hypothèses : Lentille mince de centre optique $O$, conditions de Gauss. Objet $AB$ orthogonal à l'axe avec $A$ sur l'axe, image $A'B'$. Relations de Descartes :\n- Conjugaison : $$\\dfrac{1}{\\overline{OA'}} - \\dfrac{1}{\\overline{OA}} = \\dfrac{1}{f'}$$\n- Grandissement transversal $\\gamma$ : $$\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{OA'}}{\\overline{OA}}$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les formules de conjugaison et de grandissement d'une lentille mince dites de Newton.",
+    "reponse": "Hypothèses : Lentille mince de foyers $F$ et $F'$, conditions de Gauss. Objet $AB$ orthogonal à l'axe avec $A$ sur l'axe, image $A'B'$. Relations de Newton :\n- Conjugaison : $$\\overline{FA} \\cdot \\overline{F'A'} = -{f'}^2 = -\\overline{OF'}^2$$\n- Grandissement transversal $\\gamma$ : $$\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = -\\dfrac{\\overline{FO}}{\\overline{FA}} = -\\dfrac{\\overline{F'A'}}{\\overline{F'O}}$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la condition sur la distance $D$ entre un objet réel et un écran pour former une image réelle à l'aide d'une lentille convergente.",
+    "reponse": "Hypothèses : Lentille convergente de focale image $f' > 0$, objet réel et écran réel. Relation à connaître :\n$$D \\ge 4f'$$"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la valeur de l'écart angulaire minimum $\\alpha_{\\mathrm{min}}$ permettant à l'œil humain de distinguer deux points.",
+    "reponse": "Valeur remarquable du pouvoir de résolution de l'œil (pouvoir séparateur) : \n$$\\alpha_{\\mathrm{min}} = 3\\cdot10^{-4}\\,\\mathrm{rad}$$\nSi l'écart angulaire est inférieur à cette valeur, les images des deux points se forment sur une seule et même cellule réceptrice de la rétine et ne sont pas distinguées."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le punctum remotum (PR), le punctum proximum (PP) et la plage d'accommodation pour un œil emmétrope.",
+    "reponse": "Hypothèses : Œil emmétrope (sans défaut au repos).\n- **Punctum remotum (PR)** : Point le plus éloigné vu nettement par l'œil sans accommoder. Pour un œil emmétrope, le PR est situé à l'**infini** ($d = f'_0$).\n- **Punctum proximum (PP)** : Point le plus proche vu nettement par l'œil en accommodant au maximum. La distance minimale œil-PP est notée $d_{\\mathrm{m}}$ et vaut conventionnellement $0{,}25\\,\\mathrm{m}$.\n- **Plage d'accommodation** : Intervalle de distance entre le PP et le PR."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème des vergences pour deux lentilles minces accolées (théorème de Gullstrand).",
+    "reponse": "Hypothèses : Deux lentilles minces de vergences respectives $V_1$ et $V_2$ accolées (espace entre elles négligeable). Relation à connaître : Le système est équivalent à une seule lentille mince de vergence $V$ telle que :\n$$V = V_1 + V_2$$"
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la relation du grandissement global $\\gamma$ pour une association de deux lentilles successives.",
+    "reponse": "Hypothèses : Système optique constitué de deux lentilles successives $L_1$ et $L_2$ de grandissements respectifs $\\gamma_1$ et $\\gamma_2$. Relation à connaître :\n$$\\gamma = \\gamma_1 \\times \\gamma_2$$\nPar définition, avec un objet $AB$, une image intermédiaire $A_1B_1$ et une image finale $A'B'$ : $\\gamma = \\dfrac{\\overline{A'B'}}{\\overline{AB}} = \\dfrac{\\overline{A'B'}}{\\overline{A_1B_1}} \\times \\dfrac{\\overline{A_1B_1}}{\\overline{AB}}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la condition d'afocalité d'un instrument d'optique, comme la lunette astronomique.",
+    "reponse": "Hypothèses : Lunette astronomique constituée d'un objectif de foyer image $F'_1$ et d'un oculaire de foyer objet $F_2$. Définition : Un instrument est dit **afocal** si le foyer principal image de l'objectif coïncide avec le foyer principal objet de l'oculaire :\n$$F'_1 = F_2$$\nAinsi, un objet situé à l'infini donne une image intermédiaire dans le plan focal commun, et l'image finale renvoyée par l'oculaire se trouve également à l'infini, permettant une observation par l'œil sans accommoder."
+  }
+]

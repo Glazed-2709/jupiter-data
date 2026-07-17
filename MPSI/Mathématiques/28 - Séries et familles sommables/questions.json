@@ -1,0 +1,227 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une série de terme général $u_n$, de ses sommes partielles, de sa convergence et de sa somme.",
+    "reponse": "À toute suite $(u_n)_{n \\in \\mathbb{N}} \\in \\mathbb{K}^{\\mathbb{N}}$ on associe la suite $(S_n)_{n \\in \\mathbb{N}}$ définie par $\\forall n \\in \\mathbb{N},\\ S_n = \\displaystyle\\sum_{k=0}^{n} u_k$.\n• Cette suite $(S_n)$ est appelée série de terme général $u_n$, notée $\\sum u_n$ ou $\\sum_{n \\geq 0} u_n$.\n• Le terme $S_n$ s'appelle la somme partielle d'ordre $n$.\n• On dit que la série $\\sum u_n$ converge si $(S_n)$ converge. La limite est alors appelée somme de la série et notée $\\displaystyle\\sum_{n=0}^{+\\infty} u_n$. Dans le cas contraire, la série diverge.\n• La nature d'une série est sa convergence ou sa divergence."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition du reste d'ordre $n$ d'une série convergente et énoncer la relation le liant à la somme partielle.",
+    "reponse": "Soit $\\sum_{n \\geq 0} u_n$ une série convergente. Pour tout $n \\in \\mathbb{N}$, la série $\\sum_{k \\geq n+1} u_k$ converge. Sa somme $R_n = \\displaystyle\\sum_{k=n+1}^{+\\infty} u_k$ est appelée reste d'ordre $n$ de la série $\\sum u_n$. On a :\n$$S_n + R_n = \\sum_{k=0}^{+\\infty} u_k.$$\nDe plus $R_n \\xrightarrow[n \\to +\\infty]{} 0$.\n\nPreuve : Pour $N \\geq n$, $\\displaystyle\\sum_{k=n+1}^{N} u_k = S_N - S_n \\xrightarrow[N\\to+\\infty]{} \\sum_{k=0}^{+\\infty} u_k - S_n$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur les séries de même nature à partir d'un certain rang.",
+    "reponse": "Deux séries dont les termes généraux sont égaux à partir d'un certain rang ont même nature.\n\nPreuve : Soient $(u_n)$ et $(v_n)$ égales à partir du rang $N$. On note $S_n = \\sum_{k=0}^n u_k$ et $S'_n = \\sum_{k=0}^n v_k$. Alors pour tout $n \\geq N$, $S_n = S'_n + (S_N - S'_N)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition donnant le lien entre suites et séries (automorphisme d'espaces vectoriels).",
+    "reponse": "L'application\n$$\\varphi : \\mathbb{K}^{\\mathbb{N}} \\to \\mathbb{K}^{\\mathbb{N}},\\quad u \\mapsto S = \\left(\\sum_{k=0}^n u_k\\right)_{n \\in \\mathbb{N}}$$\nest un automorphisme d'espaces vectoriels. Sa réciproque $\\varphi^{-1}$ est définie par $u_0 = S_0$ et $\\forall n \\in \\mathbb{N}^*,\\ u_n = S_n - S_{n-1}$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur les séries télescopiques.",
+    "reponse": "La suite $(u_n)$ et la série $\\sum (u_{n+1} - u_n)$ ont même nature. Dans le cas de convergence :\n$$u_n - u_0 \\xrightarrow[n \\to +\\infty]{} \\sum_{n=0}^{+\\infty} (u_{n+1} - u_n).$$\n\nPreuve : La somme partielle d'indice $n$ de $\\sum(u_{n+1}-u_n)$ vaut $u_{n+1} - u_0$ par télescopage, et a donc même nature que $(u_{n+1})$, puis $(u_n)$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition de stabilité des séries convergentes par combinaison linéaire.",
+    "reponse": "L'ensemble des suites dont la série est convergente, muni des lois $+$ et $\\cdot$, forme un $\\mathbb{K}$-espace vectoriel. L'application qui à une telle suite associe la somme de sa série est linéaire."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de divergence grossière.",
+    "reponse": "(i) Si la série $\\sum u_n$ converge, alors $u_n \\xrightarrow[n \\to +\\infty]{} 0$.\n(ii) Si la suite $(u_n)$ ne tend pas vers $0$, on dit que la série $\\sum u_n$ diverge grossièrement.\n\nPreuve : Si $\\sum u_n$ converge, alors pour $n > 0$, $u_n = S_n - S_{n-1}$, différence de deux suites de même limite, donc $u_n \\to 0$. (ii) est la contraposée."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur la série exponentielle.",
+    "reponse": "Pour tout $z \\in \\mathbb{C}$, la série $\\displaystyle\\sum_{n \\geq 0} \\frac{z^n}{n!}$ converge et\n$$e^z = \\sum_{n=0}^{+\\infty} \\frac{z^n}{n!}.$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la propriété fondamentale des séries à termes positifs : monotonie des sommes partielles.",
+    "reponse": "Soit $(u_n)$ une suite à valeurs positives et $S_n = \\displaystyle\\sum_{k=0}^n u_k$. Alors la suite $(S_n)$ est croissante.\n\nPreuve : $S_{n+1} - S_n = u_{n+1} \\geq 0$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer le critère de convergence des séries à termes positifs.",
+    "reponse": "Une série à termes positifs converge si et seulement si la suite de ses sommes partielles est majorée.\n\nPreuve : La suite des sommes partielles est croissante, donc converge si et seulement si elle est majorée (théorème de la limite monotone)."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition de comparaison de séries à termes positifs.",
+    "reponse": "Soient $(u_n)$ et $(v_n)$ deux suites réelles telles que $\\forall n \\in \\mathbb{N},\\ 0 \\leq u_n \\leq v_n$.\n(i) Si $\\sum v_n$ converge, alors $\\sum u_n$ converge et $0 \\leq \\displaystyle\\sum_{n=0}^{+\\infty} u_n \\leq \\sum_{n=0}^{+\\infty} v_n$.\n(ii) Si $\\sum u_n$ diverge, alors $\\sum v_n$ diverge."
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le corollaire de comparaison des séries à termes positifs via $O$, $o$, équivalence.",
+    "reponse": "Soient $(u_n)$ et $(v_n)$ deux suites réelles positives, $(v_n)$ ne s'annulant pas à partir d'un certain rang.\n(i) Si $u_n = O(v_n)$, alors la convergence de $\\sum v_n$ entraîne celle de $\\sum u_n$.\n(ii) Si $u_n = o(v_n)$, alors la convergence de $\\sum v_n$ entraîne celle de $\\sum u_n$.\n(iii) Si $u_n \\sim v_n$, alors $\\sum u_n$ et $\\sum v_n$ sont de même nature."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème des séries de Riemann.",
+    "reponse": "Soit $\\alpha \\in \\mathbb{R}$. La série $\\displaystyle\\sum_{n \\geq 1} \\frac{1}{n^\\alpha}$ converge si et seulement si $\\alpha > 1$."
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer la règle $n^\\alpha u_n$ pour les séries à termes positifs.",
+    "reponse": "Soient $(u_n)$ une suite réelle positive et $\\alpha \\in \\mathbb{R}$.\n(i) S'il existe $\\alpha > 1$ tel que $n^\\alpha u_n \\xrightarrow[n\\to+\\infty]{} 0$, alors $\\sum u_n$ converge.\n(ii) S'il existe $\\alpha \\leq 1$ tel que $n^\\alpha u_n \\xrightarrow[n\\to+\\infty]{} +\\infty$, alors $\\sum u_n$ diverge.\n(iii) Si $n^\\alpha u_n \\to \\ell \\in \\mathbb{R}^*_+$, alors $\\sum u_n$ converge si et seulement si $\\alpha > 1$.\n\nPreuve : (i) $u_n = o(1/n^\\alpha)$ et $\\sum 1/n^\\alpha$ converge. (ii) $1/n^\\alpha = o(u_n)$ et $\\sum 1/n^\\alpha$ diverge. (iii) $u_n \\sim \\ell/n^\\alpha$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition de comparaison série-intégrale.",
+    "reponse": "Soit $f : \\mathbb{R}_+ \\to \\mathbb{R}_+$ une fonction continue par morceaux et décroissante. Alors la série $\\sum f(n)$ converge si et seulement si la suite $\\left(\\displaystyle\\int_0^n f(t)\\,dt\\right)$ converge. De plus, la suite définie par $u_n = \\displaystyle\\sum_{k=0}^n f(k) - \\int_0^n f(t)\\,dt$ converge."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer le test de comparaison logarithmique.",
+    "reponse": "Soient $(u_n)$ et $(v_n)$ deux suites à termes réels strictement positifs telles que $\\forall n \\in \\mathbb{N},\\ \\dfrac{u_{n+1}}{u_n} \\leq \\dfrac{v_{n+1}}{v_n}$. Alors :\n(i) si $\\sum v_n$ converge, il en est de même de $\\sum u_n$,\n(ii) si $\\sum u_n$ diverge, il en est de même de $\\sum v_n$.\n\nPreuve : On a $\\dfrac{u_{n+1}}{v_{n+1}} \\leq \\dfrac{u_n}{v_n}$, donc par récurrence $u_n \\leq \\dfrac{u_0}{v_0} v_n$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la règle de D'Alembert.",
+    "reponse": "Soit $(u_n)$ une suite à termes réels strictement positifs.\n(i) S'il existe $q \\in ]0,1[$ tel que $\\forall n \\in \\mathbb{N},\\ \\dfrac{u_{n+1}}{u_n} \\leq q$, alors $\\sum u_n$ converge.\n(ii) S'il existe $q \\geq 1$ tel que $\\forall n \\in \\mathbb{N},\\ \\dfrac{u_{n+1}}{u_n} \\geq q$, alors $\\sum u_n$ diverge.\n(iii) Si $\\dfrac{u_{n+1}}{u_n} \\to \\ell \\in \\mathbb{R}$ :\n• si $\\ell \\in [0,1[$, la série $\\sum u_n$ converge,\n• si $\\ell > 1$, la série $\\sum u_n$ diverge,\n• si $\\ell = 1$, on ne peut rien conclure en général."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une série absolument convergente.",
+    "reponse": "On dit que la série $\\sum u_n$ est absolument convergente si la série à termes positifs $\\sum |u_n|$ converge."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition : toute série absolument convergente est convergente.",
+    "reponse": "Toute série absolument convergente est convergente.\n\nRemarque : La réciproque est fausse. Une série convergente mais non absolument convergente est dite semi-convergente."
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le corollaire de convergence absolue par comparaison.",
+    "reponse": "Soit $(u_n)$ une suite complexe et $(v_n)$ une suite à termes positifs telles que $|u_n| = O(v_n)$. Alors si $\\sum v_n$ converge, $\\sum u_n$ converge également (absolument)."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur l'ensemble des séries absolument convergentes.",
+    "reponse": "L'ensemble des séries absolument convergentes est un sous-espace vectoriel de l'ensemble des séries convergentes."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition donnant une majoration de la valeur absolue de la somme d'une série absolument convergente.",
+    "reponse": "Soit $\\sum u_n$ une série absolument convergente. Alors :\n$$\\left|\\sum_{n=0}^{+\\infty} u_n\\right| \\leq \\sum_{n=0}^{+\\infty} |u_n|.$$\n\nPreuve : par inégalité triangulaire, $\\left|\\displaystyle\\sum_{n=0}^N u_n\\right| \\leq \\displaystyle\\sum_{n=0}^N |u_n| \\leq \\sum_{n=0}^{+\\infty} |u_n|$, puis passage à la limite."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème sur la convergence absolue de la série exponentielle.",
+    "reponse": "Pour tout $z \\in \\mathbb{C}$, la série $\\displaystyle\\sum_{n \\geq 0} \\frac{z^n}{n!}$ converge absolument.\n\nPreuve : $\\displaystyle\\sum_{n \\geq 0} \\left|\\frac{z^n}{n!}\\right| = \\sum_{n \\geq 0} \\frac{|z|^n}{n!}$, qui est une série exponentielle convergente."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le critère spécial des séries alternées (CSSA).",
+    "reponse": "Soit $(u_n)$ une suite de réels positifs, décroissante et convergeant vers $0$. Alors $\\displaystyle\\sum_{n \\geq 0} (-1)^n u_n$ converge. De plus, en notant $R_n$ le reste et $S_n$ la somme partielle d'ordre $n$ :\n1. $S_{2n+1} \\leq \\displaystyle\\sum_{n=0}^{+\\infty} (-1)^n u_n \\leq S_{2n}$,\n2. $R_n \\leq 0$ si $n$ est pair,\n3. $R_n \\geq 0$ si $n$ est impair,\n4. $|R_n| \\leq u_{n+1}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la somme d'une famille $(u_i)_{i \\in I}$ de réels positifs indicée par un ensemble quelconque $I$.",
+    "reponse": "La somme des $(u_i)_{i \\in I} \\in (\\overline{\\mathbb{R}_+})^I$ est définie par :\n$$\\sum_{i \\in I} u_i = \\sup\\left\\{\\sum_{i \\in F} u_i \\;\\ \\middle|\\ F \\subset I,\\ F \\text{ fini}\\right\\}.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une famille sommable de réels positifs.",
+    "reponse": "Une famille $(u_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$ est dite sommable si l'ensemble des $\\displaystyle\\sum_{i \\in F} u_i$, pour $F$ parcourant les parties finies de $I$, est majoré, i.e. si $\\displaystyle\\sum_{i \\in I} u_i < +\\infty$."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'invariance de la somme d'une famille de réels positifs par permutation.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$ et $\\sigma \\in \\mathfrak{S}_I$ une permutation de $I$. Alors :\n$$\\sum_{i \\in I} u_i = \\sum_{i \\in I} u_{\\sigma(i)}.$$\nEn particulier, les familles $(u_i)_{i \\in I}$ et $(u_{\\sigma(i)})_{i \\in I}$ ont même nature.\n\nPreuve : si $F$ parcourt les parties finies de $I$, alors $\\sigma(F)$ aussi."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur les opérations (addition et multiplication scalaire) sur les familles de réels positifs.",
+    "reponse": "Soient $(u_i)_{i \\in I},\\, (v_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$ et $\\lambda \\in \\mathbb{R}_+^*$. Alors :\n1. $\\displaystyle\\sum_{i \\in I} (u_i + v_i) = \\sum_{i \\in I} u_i + \\sum_{i \\in I} v_i$,\n2. $\\displaystyle\\sum_{i \\in I} \\lambda u_i = \\lambda \\sum_{i \\in I} u_i$."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition de comparaison pour les familles de réels positifs.",
+    "reponse": "Soient $(u_i)_{i \\in I},\\, (v_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$. Si $\\forall i \\in I,\\ u_i \\leq v_i$, alors $\\displaystyle\\sum_{i \\in I} u_i \\leq \\sum_{i \\in I} v_i$. En particulier, si $(v_i)$ est sommable, $(u_i)$ l'est aussi."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition sur les sous-familles de familles de réels positifs sommables.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$ et $J \\subset I$. Alors $\\displaystyle\\sum_{j \\in J} u_j \\leq \\sum_{i \\in I} u_i$. En particulier, si $(u_i)_{i \\in I}$ est sommable, alors $(u_j)_{j \\in J}$ l'est aussi."
+  },
+  {
+    "type": "Lemme",
+    "enonce": "Énoncer le lemme de sommation sur une réunion disjointe de deux parties (familles de réels positifs).",
+    "reponse": "Soient $A$, $B$ deux parties disjointes de $I$ et $(u_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$. Alors :\n$$\\sum_{i \\in A \\sqcup B} u_i = \\sum_{i \\in A} u_i + \\sum_{i \\in B} u_i.$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de sommation par paquets pour les familles de réels positifs.",
+    "reponse": "Soit $J$ un ensemble, et pour chaque $j \\in J$, soit $I_j \\subset I$ tels que $I = \\displaystyle\\bigsqcup_{j \\in J} I_j$. Soit $(u_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$. Alors :\n$$\\sum_{i \\in I} u_i = \\sum_{j \\in J} \\left(\\sum_{i \\in I_j} u_i\\right).$$"
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le théorème de Fubini positif.",
+    "reponse": "Soient $I$, $J$ deux ensembles et $(u_{i,j})_{(i,j) \\in I \\times J} \\in (\\mathbb{R}_+)^{I \\times J}$. Alors :\n$$\\sum_{(i,j) \\in I \\times J} u_{i,j} = \\sum_{i \\in I}\\left(\\sum_{j \\in J} u_{i,j}\\right) = \\sum_{j \\in J}\\left(\\sum_{i \\in I} u_{i,j}\\right).$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition d'une famille sommable de nombres complexes.",
+    "reponse": "Une famille $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ est sommable si $\\displaystyle\\sum_{i \\in I} |u_i| < +\\infty$, i.e. si la famille positive $(|u_i|)_{i \\in I}$ est sommable. On note $\\ell^1(I)$ l'ensemble des familles sommables de nombres complexes indicées par $I$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la somme d'une famille réelle sommable.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{R}^I$ sommable. On pose $u_i^+ = \\max(0, u_i)$ et $u_i^- = \\max(0, -u_i)$. Les familles $(u_i^+)_{i \\in I}$ et $(u_i^-)_{i \\in I}$ sont sommables et l'on définit :\n$$\\sum_{i \\in I} u_i = \\sum_{i \\in I} u_i^+ - \\sum_{i \\in I} u_i^-.$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de la somme d'une famille complexe sommable.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ sommable. Les familles $\\bigl(\\mathrm{Re}(u_i)\\bigr)_{i \\in I}$ et $\\bigl(\\mathrm{Im}(u_i)\\bigr)_{i \\in I}$ sont sommables et l'on définit :\n$$\\sum_{i \\in I} u_i = \\sum_{i \\in I} \\mathrm{Re}(u_i) + i\\sum_{i \\in I} \\mathrm{Im}(u_i).$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition d'approximation d'une famille sommable complexe par une somme finie.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ une famille sommable. Pour tout $\\varepsilon > 0$, il existe $F \\subset I$ finie telle que :\n$$\\left|\\sum_{i \\in I} u_i - \\sum_{i \\in F} u_i\\right| \\leq \\varepsilon.$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'invariance de la somme d'une famille complexe sommable par permutation.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ sommable et $\\sigma \\in \\mathfrak{S}_I$ une permutation de $I$. Alors :\n$$\\sum_{i \\in I} u_i = \\sum_{i \\in I} u_{\\sigma(i)}.$$\nEn particulier, les familles $(u_i)_{i \\in I}$ et $(u_{\\sigma(i)})_{i \\in I}$ ont même nature."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'argument de comparaison pour les familles complexes.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ et $(v_i)_{i \\in I} \\in (\\mathbb{R}_+)^I$ tels que $\\forall i \\in I,\\ |u_i| \\leq v_i$. Alors, si la famille $(v_i)_{i \\in I}$ est sommable, la famille $(u_i)_{i \\in I}$ l'est aussi."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la proposition de linéarité de la somme pour les familles complexes sommables.",
+    "reponse": "Soient $(u_i)_{i \\in I},\\, (v_i)_{i \\in I} \\in \\mathbb{C}^I$ deux familles sommables, et $\\lambda, \\mu \\in \\mathbb{C}$. Alors la famille $(\\lambda u_i + \\mu v_i)_{i \\in I}$ est sommable et :\n$$\\sum_{i \\in I} (\\lambda u_i + \\mu v_i) = \\lambda \\sum_{i \\in I} u_i + \\mu \\sum_{i \\in I} v_i.$$"
+  },
+  {
+    "type": "Lemme",
+    "enonce": "Énoncer le lemme : toute sous-famille d'une famille complexe sommable est sommable.",
+    "reponse": "Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ une famille sommable et $J \\subset I$. Alors $(u_j)_{j \\in J}$ est sommable."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de sommation par paquets pour les familles complexes sommables.",
+    "reponse": "Soit $J$ un ensemble, et pour chaque $j \\in J$, soit $I_j \\subset I$ tels que $I = \\displaystyle\\bigsqcup_{j \\in J} I_j$. Soit $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ une famille sommable. Alors :\n$$\\sum_{i \\in I} u_i = \\sum_{j \\in J}\\left(\\sum_{i \\in I_j} u_i\\right).$$\nRemarque : ce théorème ne s'applique qu'après avoir établi la sommabilité de la famille."
+  },
+  {
+    "type": "Corollaire",
+    "enonce": "Énoncer le théorème de Fubini pour les familles complexes sommables.",
+    "reponse": "Soient $I$, $J$ deux ensembles et $(u_{i,j})_{(i,j) \\in I \\times J} \\in \\mathbb{C}^{I \\times J}$ une famille sommable. Alors :\n$$\\sum_{(i,j) \\in I \\times J} u_{i,j} = \\sum_{i \\in I}\\sum_{j \\in J} u_{i,j} = \\sum_{j \\in J}\\sum_{i \\in I} u_{i,j}.$$\nRemarque : la sommabilité doit être établie au préalable (en étudiant la famille des $|u_{i,j}|$)."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème sur les sommes doubles factorisées (produit de deux familles sommables).",
+    "reponse": "Soient $I$, $J$ deux ensembles, $(u_i)_{i \\in I} \\in \\mathbb{C}^I$ et $(v_j)_{j \\in J} \\in \\mathbb{C}^J$ deux familles sommables. Alors la famille $(u_i v_j)_{(i,j) \\in I \\times J}$ est sommable et :\n$$\\sum_{(i,j) \\in I \\times J} u_i v_j = \\left(\\sum_{i \\in I} u_i\\right)\\left(\\sum_{j \\in J} v_j\\right).$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition du produit de Cauchy de deux suites absolument convergentes et énoncer sa propriété.",
+    "reponse": "Soient $(u_n)_{n \\in \\mathbb{N}},\\, (v_n)_{n \\in \\mathbb{N}} \\in \\ell^1(\\mathbb{N}, \\mathbb{C})$. On appelle produit de Cauchy de $(u_n)$ et $(v_n)$ la suite $(p_n)_{n \\in \\mathbb{N}}$ définie par $p_n = \\displaystyle\\sum_{k=0}^n u_k v_{n-k}$. La famille $(p_n)$ est sommable et :\n$$\\sum_{n=0}^{+\\infty} p_n = \\left(\\sum_{n=0}^{+\\infty} u_n\\right)\\left(\\sum_{n=0}^{+\\infty} v_n\\right).$$"
+  }
+]
