@@ -1941,7 +1941,7 @@
     {
       "id": "MPSI",
       "label": "MPSI",
-      "color": "#ee2b2b",
+      "color": "#6fee2b",
       "manifest": "MPSI/manifest.json",
       "subjects": [
         {
