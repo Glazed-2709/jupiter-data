@@ -529,7 +529,7 @@ function makeNodeObj(n){
 }
 const G=ForceGraph3D({controlType:'orbit', rendererConfig:{antialias:true}})(elem)
   .backgroundColor('#000000').showNavInfo(false).enableNodeDrag(false)
-  .nodeColor(nodeCol).nodeVal('val').nodeRelSize(NODE_REL).nodeResolution(12).nodeOpacity(0.92)
+  .nodeColor(nodeCol).nodeVal('val').nodeRelSize(NODE_REL).nodeResolution(12).nodeOpacity(1)
   .nodeThreeObject(makeNodeObj).nodeThreeObjectExtend(false)
   .linkColor(linkCol).linkOpacity(0.85).linkWidth(0.6)
   .graphData({nodes,links})

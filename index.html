@@ -450,7 +450,7 @@ async function openSection(secId){
     }catch(e2){toast(`Crée le dossier « ${secId} » dans ${xRootHandle.name||'X'}/, puis réessaie.`);plunging=false;return;}
   }
   localStorage.setItem(SECTION_KEY,secId);
-  location.href='arbre.html';
+  location.href='revisions.html';
 }
 
 /* ---- bindings ---- */

@@ -1316,10 +1316,6 @@
           ]
         },
         {
-          "name": "egzqergzerge",
-          "children": []
-        },
-        {
           "name": "Mathématiques",
           "children": [
             {
@@ -1861,7 +1857,7 @@
     {
       "id": "Culture",
       "label": "Culture",
-      "color": "#ee8c2b",
+      "color": "#eeee2b",
       "manifest": "Culture/manifest.json",
       "subjects": [
         {
@@ -1941,7 +1937,7 @@
     {
       "id": "MPSI",
       "label": "MPSI",
-      "color": "#6fee2b",
+      "color": "#ee2b2b",
       "manifest": "MPSI/manifest.json",
       "subjects": [
         {
@@ -1979,10 +1975,6 @@
         {
           "id": "Chimie",
           "label": "Chimie"
-        },
-        {
-          "id": "egzqergzerge",
-          "label": "egzqergzerge"
         },
         {
           "id": "Mathématiques",

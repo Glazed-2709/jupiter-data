@@ -32,7 +32,7 @@ html,body{overflow:hidden}
 
 /* ---- graphe : plein écran, centré sur toute la page ; le panneau latéral
    passe PAR-DESSUS en profondeur (z-index) plutôt que de réduire sa largeur ---- */
-:root{--panelw:340px}
+:root{--panelw:350px}
 #g3Container{position:fixed;top:0;left:0;right:0;bottom:0;background:#000;z-index:1}
 #g3Container canvas{display:block}
 #g3Labels{position:fixed;top:0;left:0;right:0;bottom:0;z-index:4;pointer-events:none;overflow:hidden}
@@ -891,9 +891,6 @@ function renderPanelIntro(){
       <button class="btn" id="btnLoadSchema" disabled>Charger schéma</button>
       <button class="btn" id="btnSaveSchema">Sauvegarder schéma</button>
     </div>
-    <div class="erow" style="margin-top:8px">
-      <button class="btn" id="btnUpdateGit" disabled title="Bientôt disponible">Update git</button>
-    </div>
   </div>`;
   const btnLoad=panelEl.querySelector('#btnLoadSchema');
   const btnSave=panelEl.querySelector('#btnSaveSchema');
@@ -926,8 +923,8 @@ function renderPanelNode(n){
         `<span class="cn">📁 ${esc(c.name)}</span><span class="cc">${c.childCount} él.</span></div>`).join('')
     : `<div class="pempty">Aucun sous-dossier.</div>`;
   const editRow=n.type==='root'
-    ? `<div class="erow"><button class="btn" id="btnAddSub">+ Sous-dossier</button></div>`
-    : `<div class="erow"><button class="btn" id="btnAddSub">+ Sous-dossier</button>`+
+    ? `<div class="erow"><button accesskey="n" class="btn" id="btnAddSub">+ Sous-dossier</button></div>`
+    : `<div class="erow"><button accesskey="n" class="btn" id="btnAddSub">+ Sous-dossier</button>`+
       `<button class="trashsq" id="btnTrash" title="Supprimer ce dossier">`+
       `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">`+
       `<path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>`+
