@@ -1861,7 +1861,7 @@
     {
       "id": "Culture",
       "label": "Culture",
-      "color": "#ebee2b",
+      "color": "#ee8c2b",
       "manifest": "Culture/manifest.json",
       "subjects": [
         {
@@ -1973,7 +1973,7 @@
     {
       "id": "Projet X",
       "label": "Projet X",
-      "color": "#1f2eff",
+      "color": "#2b8cee",
       "manifest": "Projet X/manifest.json",
       "subjects": [
         {
