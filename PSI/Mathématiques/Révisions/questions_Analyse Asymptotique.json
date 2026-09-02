@@ -52,7 +52,7 @@
   {
     "type": "Propriété",
     "enonce": "Donner les propriétés structurelles de la relation d'équivalence ($\\sim$) et son impact sur le signe.",
-    "reponse": "- La relation $\\sim$ est une relation d'équivalence (réflexive, symétrique, transitive)[cite: 9].\n- **Signe** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$, alors $f(x)$ et $g(x)$ ont strictement le même signe au voisinage de $a$[cite: 9]."
+    "reponse": "- La relation $\\sim$ est une relation d'équivalence (réflexive, symétrique, transitive)[cite: 9].\n- **Signe** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$, alors $f(x)$ et $g(x)$ ont strictly le même signe au voisinage de $a$[cite: 9]."
   },
   {
     "type": "Propriété",
@@ -83,5 +83,40 @@
     "type": "Propriété",
     "enonce": "Lister tous les équivalents usuels de référence au voisinage de 0.",
     "reponse": "Au voisinage de $0$ ($x \\to 0$)[cite: 9] :\n- $(1+x)^\\alpha - 1 \\sim \\alpha x$[cite: 9]\n- $\\frac{1}{1+x} - 1 \\sim -x$[cite: 9]\n- $\\sqrt{1+x} - 1 \\sim \\frac{x}{2}$[cite: 9]\n- $\\frac{1}{\\sqrt{1+x}} - 1 \\sim -\\frac{x}{2}$[cite: 9]\n- $\\sqrt[3]{1+x} - 1 \\sim \\frac{x}{3}$[cite: 9]\n- $\\ln(1+x) \\sim x$[cite: 9]\n- $e^x - 1 \\sim x$[cite: 9]\n- $\\sin x \\sim x$[cite: 9]\n- $\\arcsin x \\sim x$[cite: 9]\n- $\\tan x \\sim x$[cite: 9]\n- $\\arctan x \\sim x$[cite: 9]\n- $\\sinh x \\sim x$[cite: 9]\n- $1 - \\cos x \\sim \\frac{x^2}{2}$[cite: 9]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir formellement un développement limité d'ordre $n$ en $a$ ($DL_n(a)$) et sa forme normalisée.",
+    "reponse": "Soit $f$ définie au voisinage de $a \\in \\mathbb{R}$ et $n \\in \\mathbb{N}$[cite: 9].\n- **Définition** : $f$ admet un $DL_n(a)$ s'il existe $n+1$ réels $a_0, a_1, \\dots, a_n$ tels que[cite: 9] :\n$$f(x) \\underset{x \\to a}{=} a_0 + a_1(x-a) + \\dots + a_n(x-a)^n + o((x-a)^n)$$[cite: 9]\n- **Forme normalisée** : En factorisant par le terme non nul de plus bas degré $a_p \\neq 0$[cite: 9] :\n$$f(x) = (x-a)^p \\left( a_p + a_{p+1}(x-a) + \\dots + a_n(x-a)^{n-p} + o((x-a)^{n-p}) \\right)$$"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Donner le théorème d'unicité d'un développement limité et son corollaire pour la parité.",
+    "reponse": "- **Unicité** : S'il existe, le $DL_n(a)$ d'une fonction $f$ en $a$ est unique[cite: 9].\n- **Corollaire (Parité)** : Si $f$ est une fonction paire, les coefficients de degré impair de son $DL_n(0)$ sont nuls[cite: 9]. Si $f$ est impaire, les coefficients de degré pair de son $DL_n(0)$ sont nuls[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de Taylor-Young.",
+    "reponse": "Soient $a \\in \\mathbb{R}$, $n \\in \\mathbb{N}$ et $f$ définie sur un voisinage de $a$[cite: 9].\nSi $f$ est $n$ fois dérivable en $a$ (existence de $f^{(n)}(a)$), alors $f$ admet un $DL_n(a)$ donné par[cite: 9] :\n$$f(x) \\underset{x \\to a}{=} \\sum_{k=0}^n \\frac{f^{(k)}(a)}{k!}(x-a)^k + o((x-a)^n)$$[cite: 9]\nLes coefficients du $DL$ sont explicitement : $a_k = \\frac{f^{(k)}(a)}{k!}$[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer les règles d'intégration et de dérivation d'un $DL_n(a)$.",
+    "reponse": "- **Intégration** : Si $f$ est continue au voisinage de $a$ et admet un $DL_n(a) : f(x) = \\sum_{k=0}^n a_k(x-a)^k + o((x-a)^n)$, alors $F: x \\mapsto \\int_a^x f(t)dt$ admet un $DL_{n+1}(a)$ obtenu par intégration terme à terme[cite: 9] :\n$$F(x) \\underset{x \\to a}{=} \\sum_{k=0}^n \\frac{a_k}{k+1}(x-a)^{k+1} + o((x-a)^{n+1})$$[cite: 9]\n- **Dérivation** : Si $f$ est de classe $\\mathcal{C}^n$ ($n \\ge 1$) au voisinage de $a$, alors $f'$ admet un $DL_{n-1}(a)$ obtenu en dérivant terme à terme[cite: 9] :\n$$f'(x) \\underset{x \\to a}{=} \\sum_{k=1}^n k a_k (x-a)^{k-1} + o((x-a)^{n-1})$$[cite: 9]\n*Attention :* L'hypothèse $\\mathcal{C}^n$ est primordiale pour la dérivation[cite: 9]. (Contre-exemple : $f(x)=x^2\\sin(1/x)$ admet un $DL_1(0)$ mais $f'$ n'admet aucun $DL$)[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les règles d'algèbre de manipulation des petits $o(x^n)$ au voisinage de 0.",
+    "reponse": "Au voisinage de $0$[cite: 9] :\n- $x^p = o(x^n) \\iff p > n$[cite: 9]\n- Pour $n \\le p$ : $o(x^n) + o(x^p) = o(x^n)$ (conservation de l'ordre le plus grossier)[cite: 9]\n- $x^p \\cdot o(x^n) = o(x^{n+p})$[cite: 9]\n- $o(x^n) \\cdot o(x^p) = o(x^{n+p})$[cite: 9]\n- $(o(x^n))^p = o(x^{np})$[cite: 9]\n- $\\int_0^x o(t^n) dt = o(x^{n+1})$[cite: 9]"
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliciter la méthodologie des opérations algébriques sur les DL (Combinaison linéaire, Produit, Composition, Quotient).",
+    "reponse": "Soient $f$ et $g$ admettant des $DL_n(0)$[cite: 9] :\n- **Combinaison linéaire** : Effectuer la combinaison linéaire des parties régulières[cite: 9].\n- **Produit** : Utiliser la forme normalisée $f(x)=x^p(a_p+\\dots+o(x^{n-p}))$, multiplier les parties régulières et tronquer au degré $n$[cite: 9].\n- **Composition ($g \\circ f$ avec $f(0)=0$)** : Poser $u = f(x) = Q_n(x) + o(x^n)$ et substituer $u$ dans le $DL_n(0)$ de $g(u)$, puis tronquer le polynôme résultant à l'ordre $n$[cite: 9].\n- **Quotient ($f/g$)** : Écrire sous forme normalisée $\\frac{f(x)}{g(x)} = \\frac{x^p(a_p+\\dots)}{x^q(b_q+\\dots)} = \\frac{a_p}{b_q}x^{p-q} \\frac{1+\\dots}{1+\\dots}$, développer $\\frac{1}{1+u}$ par composition puis effectuer le produit tronqué[cite: 9]."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer l'application des DL/DA pour l'étude de la tangente et de l'asymptote à une courbe.",
+    "reponse": "- **Tangente en $x_0$** : Si $f(x) \\underset{x_0}{=} a + b(x-x_0) + c(x-x_0)^p + o((x-x_0)^p)$ avec $p > 1$ et $c \\neq 0$[cite: 9]. La tangente a pour équation $y = a + b(x-x_0)$[cite: 9]. La position relative de la courbe est donnée par le signe local de $c(x-x_0)^p$[cite: 9].\n- **Asymptote en $\\pm\\infty$** : Si $f(x) \\underset{\\pm\\infty}{=} ax + b + \\frac{c}{x^p} + o\\left(\\frac{1}{x^p}\\right)$ avec $p > 0$ et $c \\neq 0$[cite: 9]. L'asymptote a pour équation $y = ax + b$[cite: 9]. La position relative est donnée par le signe local de $\\frac{c}{x^p}$[cite: 9]."
   }
 ]
