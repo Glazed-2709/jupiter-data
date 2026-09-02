@@ -1,0 +1,104 @@
+{
+  "name": "20262027",
+  "children": [
+    {
+      "name": "Culture",
+      "children": []
+    },
+    {
+      "name": "MPSI",
+      "children": []
+    },
+    {
+      "name": "PSI",
+      "children": [
+        {
+          "name": "Chimie",
+          "children": []
+        },
+        {
+          "name": "Français",
+          "children": []
+        },
+        {
+          "name": "Info",
+          "children": []
+        },
+        {
+          "name": "Mathématiques",
+          "children": [
+            {
+              "name": "Révisions",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Physique",
+          "children": []
+        },
+        {
+          "name": "SI",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "Culture",
+      "label": "Culture",
+      "color": "hsl(342.1,100%,56%)",
+      "manifest": "Culture/manifest.json",
+      "subjects": []
+    },
+    {
+      "id": "MPSI",
+      "label": "MPSI",
+      "color": "#ee8c2b",
+      "manifest": "MPSI/manifest.json",
+      "subjects": []
+    },
+    {
+      "id": "PSI",
+      "label": "PSI",
+      "color": "#ee2b2b",
+      "manifest": "PSI/manifest.json",
+      "subjects": [
+        {
+          "id": "Chimie",
+          "label": "Chimie"
+        },
+        {
+          "id": "Français",
+          "label": "Français"
+        },
+        {
+          "id": "Info",
+          "label": "Info"
+        },
+        {
+          "id": "Mathématiques",
+          "label": "Mathématiques"
+        },
+        {
+          "id": "Physique",
+          "label": "Physique"
+        },
+        {
+          "id": "SI",
+          "label": "SI"
+        }
+      ]
+    }
+  ]
+}

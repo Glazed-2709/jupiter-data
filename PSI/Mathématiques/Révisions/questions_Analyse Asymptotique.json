@@ -1,0 +1,87 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion de limite pour une fonction en un point/voisinage et pour une suite numérique.",
+    "reponse": "Soient $f$ une fonction et $a, b \\in \\overline{\\mathbb{R}}$[cite: 9] :\n- **Limite d'une fonction** : $\\lim_{x \\to a} f(x) = b$ si pour tout voisinage $V$ de $b$, il existe un voisinage $U$ de $a$ tel que $\\forall x \\in U \\cap \\mathcal{D}_f, \\ f(x) \\in V$[cite: 9].\n- **Limite d'une suite** : $\\lim_{n \\to +\\infty} u_n = b$ si pour tout voisinage $V$ de $b$, il existe $n_0 \\in \\mathbb{N}$ tel que $\\forall n \\ge n_0, \\ u_n \\in V$[cite: 9].\nLa suite $(u_n)$ converge si elle admet une limite finie, elle diverge sinon[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Lister l'ensemble des formes indéterminées en calcul de limites.",
+    "reponse": "Les formes indéterminées algébriques et exponentielles sont[cite: 9] :\n$$\\frac{0}{0}, \\quad \\frac{\\pm\\infty}{\\pm\\infty}, \\quad +\\infty - \\infty, \\quad 0 \\times (\\pm\\infty), \\quad 1^{\\pm\\infty}, \\quad 0^0, \\quad (+\\infty)^0$$[cite: 9]"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème des croissances comparées pour les fonctions (au voisinage de $+\\infty$, $0^+$ et $-\\infty$).",
+    "reponse": "Pour tout $\\alpha > 0$[cite: 9] :\n- Au voisinage de $+\\infty$ : $\\lim_{x \\to +\\infty} \\frac{\\ln x}{x^\\alpha} = 0$ et $\\lim_{x \\to +\\infty} \\frac{e^x}{x^\\alpha} = +\\infty$[cite: 9].\n- Au voisinage de $0^+$ : $\\lim_{x \\to 0^+} x^\\alpha \\ln x = 0$[cite: 9].\n- Au voisinage de $-\\infty$ : $\\lim_{x \\to -\\infty} |x|^\\alpha e^x = 0$[cite: 9].\n*Remarque :* L'application rigoureuse exige que les arguments des puissances, du logarithme et de l'exponentielle soient rigoureusement identiques[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème des croissances comparées pour les suites (incluant la factorielle).",
+    "reponse": "Pour tout $q > 1$ et tout $\\alpha > 0$[cite: 9] :\n$$\\lim_{n \\to +\\infty} \\frac{\\ln n}{n^\\alpha} = \\lim_{n \\to +\\infty} \\frac{n^\\alpha}{q^n} = \\lim_{n \\to +\\infty} \\frac{q^n}{n!} = 0$$[cite: 9]"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner la propriété de bornitude locale d'une fonction admettant une limite finie.",
+    "reponse": "Si $\\lim_{x \\to a} f(x)$ existe et est finie ($l \\in \\mathbb{R}$), alors $f$ est bornée au voisinage du point $a$[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de passage à la limite dans les inégalités.",
+    "reponse": "Soient $f$ et $g$ définies au voisinage de $a$ telles que[cite: 9] :\n1. $\\lim_{x \\to a} f(x) = l \\in \\mathbb{R}$[cite: 9]\n2. $\\lim_{x \\to a} g(x) = l' \\in \\mathbb{R}$[cite: 9]\n3. $f(x) \\le g(x)$ au voisinage de $a$[cite: 9]\nAlors : $l \\le l'$[cite: 9].\n*Remarque :* Le passage à la limite transforme toujours une inégalité stricte en une inégalité large[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème des gendarmes (versions finie et infinie).",
+    "reponse": "- **Version finie** : Si $g(x) \\le f(x) \\le h(x)$ au voisinage de $a$ et $\\lim_{x \\to a} g(x) = \\lim_{x \\to a} h(x) = l \\in \\mathbb{R}$, alors $\\lim_{x \\to a} f(x) = l$[cite: 9].\n*(Formulation équivalente)* : Si $|f(x) - l| \\le g(x)$ avec $\\lim_{x \\to a} g(x) = 0$, alors $\\lim_{x \\to a} f(x) = l$[cite: 9].\n- **Version infinie** : Si $f(x) \\ge g(x)$ au voisinage de $a$ et $\\lim_{x \\to a} g(x) = +\\infty$, alors $\\lim_{x \\to a} f(x) = +\\infty$[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème de la limite monotone pour les fonctions et les suites.",
+    "reponse": "Soit $f$ une fonction monotone sur un intervalle $I$[cite: 9]. Alors $f$ admet en tout point de $I$ une limite à gauche et une limite à droite (du côté intérieur à l'intervalle si le point est une borne fermée)[cite: 9]. Ce résultat s'applique de façon analogue aux suites monotones[cite: 9]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les relations de comparaison locale : négligeabilité ($o$), domination ($O$) et équivalence ($\\sim$).",
+    "reponse": "Soient $f$ et $g$ définies au voisinage de $a$[cite: 9] :\n- **Négligeabilité** : $f = o_{x \\to a}(g) \\iff f \\underset{x \\to a}{\\ll} g \\iff \\lim_{x \\to a} \\frac{f(x)}{g(x)} = 0$[cite: 9].\n- **Domination** : $f = O_{x \\to a}(g) \\iff \\frac{f(x)}{g(x)}$ est bornée au voisinage de $a$[cite: 9].\n- **Équivalence** : $f(x) \\underset{x \\to a}{\\sim} g(x) \\iff \\lim_{x \\to a} \\frac{f(x)}{g(x)} = 1$[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Traduire le théorème des croissances comparées en termes de hiérarchie de négligeabilité ($\\ll$) aux voisinages de $+\\infty$, $0$ et pour les suites.",
+    "reponse": "- **Au voisinage de $+\\infty$** (avec $0 < \\alpha < \\beta$) : $\\ln x \\ll x^\\alpha \\ll x^\\beta \\ll e^x$[cite: 9].\n- **Au voisinage de $0$** (avec $\\alpha < \\beta < 0$) : $\\ln x \\ll x^\\beta \\ll x^\\alpha$[cite: 9].\n- **Pour les suites** (avec $\\alpha > 0$ et $q > 1$) : $\\ln n \\ll n^\\alpha \\ll q^n \\ll n!$[cite: 9]"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés structurelles de la relation d'équivalence ($\\sim$) et son impact sur le signe.",
+    "reponse": "- La relation $\\sim$ est une relation d'équivalence (réflexive, symétrique, transitive)[cite: 9].\n- **Signe** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$, alors $f(x)$ et $g(x)$ ont strictement le même signe au voisinage de $a$[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les propriétés opératoires de la négligeabilité (somme, produit, composition, intégration).",
+    "reponse": "- **Somme** : Si $f_1 = o_a(g)$ et $f_2 = o_a(g)$, alors $f_1 + f_2 = o_a(g)$[cite: 9].\n- **Produit** : Si $f = o_a(g)$, alors $f \\cdot h = o_a(g \\cdot h)$[cite: 9]. Si $f = o_a(g)$ et $h$ est bornée au voisinage de $a$, alors $f \\cdot h = o_a(g)$[cite: 9].\n- **Composition à droite** : Si $f = o_a(g)$ et $\\lim_{y \\to b} h(y) = a$, alors $f \\circ h = o_b(g \\circ h)$[cite: 9].\n- **Intégration** : Si $f$ et $g$ sont continues au voisinage de $a$ et $f = o_a(g)$, alors $F(x) = o_a(G(x))$ où $F(x) = \\int_a^x f(t)dt$ et $G(x) = \\int_a^x g(t)dt$[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Donner les règles d'opérations sur les équivalents (produit, quotient, composition à droite, intégrations algébriques).",
+    "reponse": "- **Produit/Quotient** : Si $f_1 \\underset{a}{\\sim} g_1$ et $f_2 \\underset{a}{\\sim} g_2$, alors $f_1 f_2 \\underset{a}{\\sim} g_1 g_2$ et $\\frac{f_1}{f_2} \\underset{a}{\\sim} \\frac{g_1}{g_2}$[cite: 9].\n- **Composition à droite** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$ et $\\lim_{y \\to b} h(y) = a$, alors $f(h(y)) \\underset{y \\to b}{\\sim} g(h(y))$[cite: 9].\n- **Interaction $o$ et $\\sim$** : Si $f_1 = o_a(g)$ et $f_1 \\underset{a}{\\sim} f_2$, alors $f_2 = o_a(g)$[cite: 9]. Si $f = o_a(g_1)$ et $g_1 \\underset{a}{\\sim} g_2$, alors $f = o_a(g_2)$[cite: 9]."
+  },
+  {
+    "type": "Piège",
+    "enonce": "Lister l'ensemble des règles d'interdiction formelle sur l'utilisation des équivalents.",
+    "reponse": "1. **Somme d'équivalents INTERDITE** : On ne somme JAMAIS d'équivalents ($f_1 \\sim g_1$ et $f_2 \\sim g_2 \\nRightarrow f_1+f_2 \\sim g_1+g_2$)[cite: 9]. Il faut recourir aux développements limités[cite: 9].\n2. **Pas de somme à droite** : Ne jamais écrire de somme à droite du symbole $\\sim$[cite: 9].\n3. **Équivalent à zéro** : La seule fonction équivalente à $0$ est la fonction nulle elle-même. Obtenir $f(x) \\sim 0$ traduit une erreur de calcul[cite: 9].\n4. **Composition à gauche par l'exponentielle INTERDITE** : $f(x) \\underset{a}{\\sim} g(x) \\nRightarrow e^{f(x)} \\underset{a}{\\sim} e^{g(x)}$[cite: 9]. (Exemple : $x^2 + x \\underset{+\\infty}{\\sim} x^2$ mais $\\frac{e^{x^2+x}}{e^{x^2}} = e^x \\to +\\infty$)[cite: 9]."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer les conditions autorisées de composition à gauche pour un équivalent (Puissance et Logarithme).",
+    "reponse": "- **Passage à la puissance** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$, alors $(f(x))^\\alpha \\underset{x \\to a}{\\sim} (g(x))^\\alpha$ pour tout $\\alpha \\in \\mathbb{R}$[cite: 9].\n- **Passage au logarithme** : Si $f(x) \\underset{x \\to a}{\\sim} g(x)$ ET si $f, g$ tendent vers $0$ ou $\\pm\\infty$ (infiniment petits ou infiniment grands), alors $\\ln(f(x)) \\underset{x \\to a}{\\sim} \\ln(g(x))$[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Lier l'équivalent au voisinage d'un point au nombre dérivé d'une fonction.",
+    "reponse": "Soit $f$ définie au voisinage de $a$, dérivable en $a$ telle que $f'(a) \\neq 0$[cite: 9]. Alors :\n$$f(x) - f(a) \\underset{x \\to a}{\\sim} f'(a) \\cdot (x-a)$$[cite: 9]"
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Lister tous les équivalents usuels de référence au voisinage de 0.",
+    "reponse": "Au voisinage de $0$ ($x \\to 0$)[cite: 9] :\n- $(1+x)^\\alpha - 1 \\sim \\alpha x$[cite: 9]\n- $\\frac{1}{1+x} - 1 \\sim -x$[cite: 9]\n- $\\sqrt{1+x} - 1 \\sim \\frac{x}{2}$[cite: 9]\n- $\\frac{1}{\\sqrt{1+x}} - 1 \\sim -\\frac{x}{2}$[cite: 9]\n- $\\sqrt[3]{1+x} - 1 \\sim \\frac{x}{3}$[cite: 9]\n- $\\ln(1+x) \\sim x$[cite: 9]\n- $e^x - 1 \\sim x$[cite: 9]\n- $\\sin x \\sim x$[cite: 9]\n- $\\arcsin x \\sim x$[cite: 9]\n- $\\tan x \\sim x$[cite: 9]\n- $\\arctan x \\sim x$[cite: 9]\n- $\\sinh x \\sim x$[cite: 9]\n- $1 - \\cos x \\sim \\frac{x^2}{2}$[cite: 9]"
+  }
+]
