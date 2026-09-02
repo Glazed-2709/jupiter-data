@@ -1,0 +1,87 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Qu'est-ce qu'un système physique linéaire ? Énoncer la condition mathématique reliant les entrées et les sorties.",
+    "reponse": "Un système $\\mathcal{S}$ est linéaire si, pour tous signaux d'entrée $e_1(t)$ et $e_2(t)$ de sorties respectives $s_1(t)$ et $s_2(t)$, il associe à l'entrée combinée $\\lambda e_1(t) + \\mu e_2(t)$ la sortie combinée $\\lambda s_1(t) + \\mu s_2(t)$ pour tout $(\\lambda, \\mu) \\in \\mathbb{R}^2$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir un système invariant dans le temps.",
+    "reponse": "Un système est invariant dans le temps si ses propriétés physiques ne changent pas au cours du temps."
+  },
+  {
+    "type": "Formule",
+    "enonce": "À un signal sinusoïdal réel $s(t) = s_m \\cos(\\omega t + \\phi)$, quel signal complexe $\\underline{s}(t)$ associe-t-on ? Préciser l'expression de l'amplitude complexe $\\underline{s}_m$.",
+    "reponse": "On lui associe le signal complexe $\\underline{s}(t) = s_m e^{j(\\omega t + \\phi)} = \\underline{s}_m e^{j\\omega t}$, où l'amplitude complexe est $\\underline{s}_m = s_m e^{j\\phi}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction de transfert harmonique $H(j\\omega)$ d'un système linéaire.",
+    "reponse": "Soient $e$ et $s$ les signaux complexes associés à l'entrée et à la sortie, toutes deux harmoniques, d'un système linéaire. La fonction de transfert est le rapport : $H(j\\omega) = \\frac{s}{e}$. On l'écrit aussi $H(p) = \\frac{S(p)}{E(p)}$ avec la variable complexe $p = j\\omega$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Quelle est l'opération dans le domaine complexe (avec la variable $p$) qui correspond à la dérivation temporelle $\\frac{ds}{dt}$ d'un signal réel ?",
+    "reponse": "Multiplier le signal complexe $S(p)$ par la variable $p$ équivaut à dériver le signal réel : $p S(p) \\Leftrightarrow \\frac{ds}{dt}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Quelle est la définition d'un système stable ?",
+    "reponse": "Un système est stable s'il associe à toute entrée bornée une sortie bornée."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la condition de stabilité d'un système linéaire du premier ordre à partir de sa fonction de transfert $H(p) = \\frac{\\gamma + \\delta p}{\\alpha + \\beta p}$.",
+    "reponse": "Le système du premier ordre est stable si et seulement si les coefficients du dénominateur $\\alpha$ et $\\beta$ sont de même signe (c'est-à-dire si le temps caractéristique $\\tau = \\frac{\\beta}{\\alpha} \\ge 0$)."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer la condition de stabilité d'un système du premier ordre d'équation différentielle homogène $\\frac{ds_h}{dt} + \\frac{s_h}{\\tau} = 0$.",
+    "reponse": "La solution de l'équation homogène est $s_h(t) = K \\exp\\left(-\\frac{t}{\\tau}\\right)$ avec $K$ une constante. Pour qu'une entrée bornée produise une sortie bornée $s(t) = s_h(t) + s_p(t)$, il faut que le terme homogène $s_h(t)$ ne diverge pas quand $t \\to +\\infty$. L'exponentielle est décroissante (ou constante) si et seulement si $\\tau \\ge 0$, ce qui impose $\\frac{\\beta}{\\alpha} \\ge 0$, donc $\\alpha$ et $\\beta$ doivent être de même signe."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la condition générale de stabilité portant sur les racines du polynôme caractéristique d'un système linéaire.",
+    "reponse": "Le système est stable si et seulement si les parties réelles de toutes les racines du polynôme caractéristique de son équation différentielle homogène sont négatives."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Pour un système du premier ou du deuxième ordre, énoncer la règle pratique sur les coefficients de l'équation différentielle homogène qui garantit la stabilité.",
+    "reponse": "Un système du premier ou du deuxième ordre est stable si et seulement si tous les coefficients au dénominateur de sa fonction de transfert (ou de son équation différentielle homogène) sont de même signe."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Pour un système du second ordre d'équation homogène $\\alpha \\frac{d^2s_h}{dt^2} + \\beta \\frac{ds_h}{dt} + \\gamma s_h = 0$, montrer que si le discriminant $\\Delta = \\beta^2 - 4\\alpha\\gamma$ est strictement négatif, le système est stable si et seulement si $\\alpha$, $\\beta$ et $\\gamma$ sont de même signe.",
+    "reponse": "Si $\\Delta < 0$, les racines du polynôme caractéristique sont complexes conjuguées : $r_{1,2} = \\frac{-\\beta \\pm j\\sqrt{- \\Delta}}{2\\alpha}$. Leurs parties réelles sont $\\text{Re}(r_{1,2}) = -\\frac{\\beta}{2\\alpha}$. Pour la stabilité, il faut $\\text{Re}(r_{1,2}) \\le 0 \\implies \\frac{\\beta}{2\\alpha} \\ge 0$, donc $\\alpha$ et $\\beta$ doivent être de même signe. De plus, $\\Delta = \\beta^2 - 4\\alpha\\gamma < 0 \\implies 4\\alpha\\gamma > \\beta^2 \\ge 0 \\implies \\alpha\\gamma > 0$, donc $\\alpha$ et $\\gamma$ doivent aussi être de même signe. Ainsi, $\\alpha$, $\\beta$ et $\\gamma$ sont tous de même signe."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Soit la fonction de transfert $H(p) = \\frac{1}{1 - ap}$ avec $a > 0$. Ce système est-il stable ? Justifier.",
+    "reponse": "Le dénominateur est $1 - ap$. Les coefficients de $p^0$ (valant $1$) et de $p^1$ (valant $-a$) sont de signes opposés car $a > 0$. Il s'agit d'un système du premier ordre, il est donc instable."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Déterminer si le système de fonction de transfert $H(p) = \\frac{1-bp}{ap^2 + bp + c}$ avec $a, b, c > 0$ est stable.",
+    "reponse": "Le dénominateur est $ap^2+bp+c$. C'est un système du second ordre. Comme les coefficients $a$, $b$ et $c$ sont tous strictement positifs, ils sont de même signe. Le système est donc stable."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Déterminer si le système de fonction de transfert $H(p) = \\frac{1}{ap^2 - bp - c}$ avec $a, b, c > 0$ est stable.",
+    "reponse": "Le dénominateur est $ap^2-bp-c$. Les coefficients sont $a > 0$, $-b < 0$ et $-c < 0$. Ils ne sont pas tous de même signe, donc ce système du second ordre est instable."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la définition et la formule du décrément logarithmique $\\delta$ pour un signal pseudo-périodique $u(t)$ de pseudo-période $T$ convergeant vers $u(\\infty)$.",
+    "reponse": "Le décrément logarithmique $\\delta$ mesure la décroissance d'un signal oscillant amorti sur une période. Il est défini par : $\\delta = \\frac{1}{n} \\ln\\left( \\frac{u(t) - u(\\infty)}{u(t + nT) - u(\\infty)} \\right)$ pour $n \\in \\mathbb{N}^*$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Pour le circuit de la figure 9 (TD 1, page 4), donner l'équation différentielle vérifiée par la tension $u(t)$ en posant $\\tau = RC$.",
+    "reponse": "L'équation différentielle vérifiée par la tension $u(t)$ est : $4\\tau^2 \\frac{d^2u}{dt^2} + 5\\tau \\frac{du}{dt} + u = e(t)$."
+  },
+  {
+    "type": "Exercice",
+    "enonce": "Dans un système linéaire d'ordre supérieur à 2, est-il toujours possible de conclure sur la stabilité uniquement en vérifiant que les coefficients du dénominateur de la fonction de transfert sont de même signe ?",
+    "reponse": "Non, pour un ordre supérieur à deux, le fait que les coefficients soient de même signe est une condition nécessaire mais non suffisante. Il n'est pas possible de conclure simplement par cette seule analyse rapide de la fonction de transfert."
+  }
+]
