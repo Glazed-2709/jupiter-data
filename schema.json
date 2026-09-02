@@ -44,7 +44,21 @@
         },
         {
           "name": "Physique",
-          "children": []
+          "children": [
+            {
+              "name": "révisions",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "SI",
