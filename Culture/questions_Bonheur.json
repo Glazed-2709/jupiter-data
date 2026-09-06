@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer la dernière phrase de Voltaire, *Candide*, qui clôt le roman.",
+    "reponse": "« Cela est bien dit, répondit Candide, mais il faut cultiver notre jardin. »\nContexte : dernière phrase du roman (chapitre XXX), réponse à l'optimisme de Pangloss (« tout est pour le mieux dans le meilleur des mondes possibles ») ; formule définissant un bonheur modeste, concret, fondé sur l'action plutôt que sur la spéculation métaphysique."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le passage de Rousseau, *Les Rêveries du promeneur solitaire* (cinquième promenade), sur le « sentiment de l'existence ».",
+    "reponse": "« Tant que cet état dure, on se suffit à soi-même, comme Dieu. »\nContexte : cinquième promenade, évocation de l'expérience vécue sur l'île Saint-Pierre (lac de Bienne) ; description du « sentiment de l'existence », bonheur pur ne dépendant de rien d'extérieur à soi."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la devise de l'État mondial dans *Le Meilleur des mondes* d'Aldous Huxley.",
+    "reponse": "« Communauté, Identité, Stabilité. »\nContexte : devise officielle de l'État mondial, énoncée dès l'ouverture du roman (1932) ; fondement d'une société organisée autour d'un bonheur collectif standardisé, obtenu au prix de la liberté et de la vérité (formule de référence ; la traduction exacte peut varier selon l'édition)."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le refrain de Charles Baudelaire, « L'Invitation au voyage » (*Les Fleurs du Mal*), décrivant le pays rêvé.",
+    "reponse": "« Là, tout n'est qu'ordre et beauté,\nLuxe, calme et volupté. »\nContexte : refrain répété à la fin de chaque strophe de « L'Invitation au voyage » (*Les Fleurs du Mal*, 1857) ; le pays décrit, modelé sur l'être aimé, incarne un bonheur projeté dans un ailleurs idéal, jamais atteint."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain d'Arthur Rimbaud, « Sensation », sur le bonheur sensoriel de la marche dans la nature.",
+    "reponse": "« Par les soirs bleus d'été, j'irai dans les sentiers,\nPicoté par les blés, fouler l'herbe menue :\nRêveur, j'en sentirai la fraîcheur à mes pieds.\nJe laisserai le vent baigner ma tête nue. »\nContexte : premier quatrain de « Sensation » (1870), poème de jeunesse ; anticipation d'un bonheur immédiat, sensoriel, pré-réflexif, lié à l'immersion solitaire dans la nature."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le passage d'Alphonse de Lamartine, « Le Lac » (*Méditations poétiques*), où le poète s'adresse au temps pour retenir un bonheur passé.",
+    "reponse": "« Ô temps, suspends ton vol ! et vous, heures propices,\nSuspendez votre cours !\nLaissez-nous savourer les rapides délices\nDes plus beaux de nos jours ! »\nContexte : « Le Lac » (*Méditations poétiques*, 1820) ; apostrophe célèbre au temps, qui souligne d'emblée son impuissance — le bonheur évoqué a déjà disparu au moment où le poète l'invoque."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule d'Épicure, *Lettre à Ménécée*, définissant le plaisir comme principe et fin de la vie heureuse.",
+    "reponse": "« Le plaisir est le principe et la fin de la vie heureuse. »\nContexte : *Lettre à Ménécée* — fondement de l'éthique épicurienne ; le plaisir y est entendu non comme jouissance illimitée mais comme absence de trouble (ataraxie), ce qui suppose de distinguer les désirs naturels et nécessaires des désirs vains."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la définition du bonheur par Aristote dans l'*Éthique à Nicomaque*.",
+    "reponse": "« Le bonheur est une activité de l'âme en accord avec la vertu parfaite. »\nContexte : *Éthique à Nicomaque*, Livre I — définition de l'eudaimonia comme fin ultime de l'action humaine, atteinte par l'exercice habituel de la vertu (formule de référence, traductions variables selon les éditions)."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le fragment de Pascal, *Pensées*, sur le divertissement comme fuite de la condition humaine.",
+    "reponse": "« Les hommes n'ayant pu guérir la mort, la misère, l'ignorance, ils se sont avisés, pour se rendre heureux, de ne point y penser. »\nContexte : *Pensées* (posthume, 1670), fragment sur le divertissement ; ce que les hommes appellent bonheur n'est, pour Pascal, qu'une fuite devant la misère et la mortalité de la condition humaine."
+  }
+]

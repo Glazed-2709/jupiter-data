@@ -1,0 +1,77 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la tension différentielle d'entrée $\\varepsilon$ d'un Amplificateur Linéaire Intégré (ALI).",
+    "reponse": "La tension différentielle d'entrée est définie par la différence de potentiel entre l'entrée non-inverseuse et l'entrée inverseuse : $\\varepsilon = V_+ - V_-$, avec $V_+$ et $V_-$ les potentiels électriques respectifs de ces bornes."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Quelle approximation fondamentale fait-on sur les courants de polarisation $i_+$ et $i_-$ d'un ALI ?",
+    "reponse": "Les courants de polarisation sont considérés comme nuls : $i_+ \\approx i_- \\approx 0$, ce qui équivaut à modéliser l'ALI avec une impédance d'entrée infinie."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Quels sont les deux modes (ou zones) de fonctionnement d'un ALI réel et quelles sont les expressions correspondantes de la tension de sortie $u_s$ ?",
+    "reponse": "1. Zone de fonctionnement linéaire : la tension de sortie est proportionnelle à l'entrée différentielle, $u_s = A_0\\varepsilon$ (avec $A_0 \\approx 10^5$ le gain différentiel statique). 2. Zone de fonctionnement saturé : la tension de sortie atteint ses limites d'alimentation, soit $u_s = \\pm V_{sat}$ (généralement $V_{sat} \\approx 14-15\\text{ V}$)."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner l'expression de la fonction de transfert (le gain différentiel complexe $A_d(j\\omega)$) d'un ALI dans le modèle linéaire du premier ordre.",
+    "reponse": "$A_d(j\\omega) = \\frac{u_s}{\\varepsilon} = \\frac{A_0}{1 + j\\omega\\tau}$, avec $A_0 \\approx 2 \\times 10^5$ le gain statique en boucle ouverte et $\\tau \\approx 1 \\times 10^{-2}\\text{ s}$ le temps caractéristique de l'ALI."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Qu'est-ce que le 'slew-rate' d'un ALI ? Donner sa formulation mathématique et sa valeur typique.",
+    "reponse": "Le slew-rate est la limitation physique de la vitesse de balayage de la tension de sortie de l'ALI : $-\\sigma \\le \\frac{du_s}{dt} \\le +\\sigma$, avec une valeur typique de $\\sigma \\approx 0,5\\text{ V}\\cdot\\mu\\text{s}^{-1}$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Expliquer comment identifier une rétroaction négative et une rétroaction positive, et préciser leur impact sur la stabilité du montage.",
+    "reponse": "Rétroaction négative : la borne de sortie est connectée à la borne inverseuse $(-)$, ce qui a un effet stabilisateur sur le montage. Rétroaction positive : la borne de sortie est connectée à la borne non inverseuse $(+)$, ce qui rend généralement le montage instable."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les propriétés d'un ALI idéal de gain infini et ses relations de fonctionnement en régimes linéaire et saturé.",
+    "reponse": "Un ALI idéal possède une impédance d'entrée infinie ($i_+ = i_- = 0$) et une impédance de sortie nulle ($Z_s = 0$). En régime linéaire, $\\varepsilon = V_+ - V_- = 0 \\implies V_+ = V_-$. En régime saturé, $u_s = +V_{sat}$ si $\\varepsilon > 0$, et $u_s = -V_{sat}$ si $\\varepsilon < 0$."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer l'expression de la fonction de transfert $H = \\frac{u_s}{u_e}$ du montage amplificateur non inverseur en supposant l'ALI idéal de gain infini.",
+    "reponse": "Par un diviseur de tension appliqué sur la borne inverseuse : $V_- = \\frac{R_1}{R_1 + R_2} u_s$. L'ALI fonctionnant en régime linéaire, on a $V_+ = V_-$. Comme l'entrée est connectée sur la borne non inverseuse ($V_+ = u_e$), on obtient par substitution : $u_e = \\frac{R_1}{R_1 + R_2} u_s$, d'où $H = \\frac{u_s}{u_e} = 1 + \\frac{R_2}{R_1}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le produit gain-bande (GBP) et expliquer le principe de sa conservation pour le montage non inverseur.",
+    "reponse": "Le produit gain-bande est défini par $GBP = H_0 \\times \\omega_c$, où $H_0 = 1 + \\frac{R_2}{R_1}$ est le gain statique et $\\omega_c = \\frac{A_0}{\\tau(1 + R_2/R_1)}$ est la pulsation de coupure. On obtient $GBP = \\frac{A_0}{\\tau}$, qui est une constante caractéristique de l'ALI seul indépendante des résistances choisies. Cela traduit le fait qu'augmenter le gain diminue proportionnellement la bande passante."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Rappeler la méthode générale de calcul de l'impédance d'entrée $Z_e$ d'un montage et donner sa valeur pour l'amplificateur non inverseur.",
+    "reponse": "$Z_e = \\frac{\\text{tension d'entrée complexe}}{\\text{courant d'entrée complexe}} = \\frac{u_e}{i_+}$. Pour le montage non inverseur, le courant d'entrée est le courant de polarisation $i_+ = 0$, donc l'impédance d'entrée tend vers l'infini ($Z_e \\to \\infty$)."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Établir la fonction de transfert $H = \\frac{u_s}{u_e}$ et l'impédance d'entrée $Z_e$ de l'amplificateur inverseur (ALI idéal).",
+    "reponse": "La loi des nœuds à la borne inverseuse donne : $\\frac{u_e - V_-}{R_1} + \\frac{u_s - V_-}{R_2} = i_- = 0$. En régime linéaire, la masse virtuelle impose $V_- = V_+ = 0$. Ainsi, $\\frac{u_e}{R_1} + \\frac{u_s}{R_2} = 0 \\implies H = -\\frac{R_2}{R_1}$. L'impédance d'entrée est définie par $Z_e = \\frac{u_e}{i_1} = \\frac{u_e}{(u_e - V_-)/R_1} = R_1$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Quelle est la fonction de transfert du montage suiveur et quel est son intérêt principal ?",
+    "reponse": "$H = \\frac{u_s}{u_e} = 1$. Son intérêt est l'adaptation d'impédance entre deux quadripôles : son impédance d'entrée infinie évite de prélever du courant sur le premier quadripôle (qui fonctionne ainsi virtuellement à vide), tandis que son impédance de sortie nulle permet d'alimenter correctement le second quadripôle."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Donner la fonction de transfert complexe $H(j\\omega)$ et l'équation différentielle temporelle reliant $u_s(t)$ et $u_e(t)$ du montage intégrateur idéal.",
+    "reponse": "La fonction de transfert est $H(j\\omega) = -\\frac{1}{jRC\\omega}$. Dans le domaine temporel, l'équation s'écrit : $u_s(t) = -\\frac{1}{RC} \\int u_e(t) dt$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Établir la fonction de transfert complexe $H(j\\omega)$ et l'équation temporelle du montage dérivateur idéal (condensateur $C$ en entrée sur $(-)$, résistance $R$ en rétroaction).",
+    "reponse": "La loi des nœuds en $(-)$ avec $V_- = 0$ donne $i_C = i_R \\implies C \\frac{du_e(t)}{dt} = -\\frac{u_s(t)}{R}$. D'où l'équation temporelle $u_s(t) = -RC \\frac{du_e(t)}{dt}$, et en notation complexe $H(j\\omega) = \\frac{u_s}{u_e} = -jRC\\omega$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Justifier pourquoi l'ALI fonctionne en régime linéaire dans le montage sommateur non-inverseur (TD, Figure 2).",
+    "reponse": "L'ALI fonctionne en régime linéaire car il présente une rétroaction négative : sa sortie est connectée via une résistance $R$ à sa borne d'entrée inverseuse $(-)$, ce qui a un effet stabilisateur et empêche le système de diverger vers la saturation."
+  }
+]

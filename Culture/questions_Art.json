@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer le passage de Oscar Wilde, préface de *Le Portrait de Dorian Gray*, sur la nature de l'art (« art pour l'art »).",
+    "reponse": "« Il n'y a pas de livre moral ou immoral. Les livres sont bien écrits, ou mal écrits. C'est tout. [...] Tout art est parfaitement inutile. »\nContexte : ouverture et dernière phrase de la préface de *Le Portrait de Dorian Gray* (1891), manifeste de l'esthétisme et de la doctrine de l'« art pour l'art »."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Stendhal, *Le Rouge et le Noir*, sur le roman comme « miroir » du réel.",
+    "reponse": "« Un roman est un miroir qui se promène sur une grande route. »\nContexte : épigraphe d'un chapitre du *Rouge et le Noir* (1830), attribuée par Stendhal à un auteur fictif (« Saint-Réal ») ; formule définissant le roman réaliste comme reflet fidèle de la société, y compris ses aspects les moins reluisants."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Marcel Proust, *Le Temps retrouvé*, sur le rapport entre l'art et la « vraie vie ».",
+    "reponse": "« La vraie vie, la vie enfin découverte et éclaircie, la seule vie par conséquent réellement vécue, c'est la littérature. »\nContexte : *Le Temps retrouvé* (1927), dernier tome de *À la recherche du temps perdu* ; formule centrale de la conception proustienne de l'art comme révélation d'une vérité intérieure que la vie ordinaire laisse inaperçue."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la dernière strophe de Théophile Gautier, « L'Art » (*Émaux et Camées*), sur l'art et le temps.",
+    "reponse": "« Tout passe. — L'art robuste\nSeul a l'éternité.\nLe buste\nSurvit à la cité. »\nContexte : dernière strophe du poème « L'Art », placé en clôture du recueil *Émaux et Camées* (1857) ; manifeste de l'art pour l'art, selon lequel seule la forme travaillée résiste au temps."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de Charles Baudelaire, « Correspondances » (*Les Fleurs du Mal*), sur la nature comme langage de symboles.",
+    "reponse": "« La Nature est un temple où de vivants piliers\nLaissent parfois sortir de confuses paroles ;\nL'homme y passe à travers des forêts de symboles\nQui l'observent avec des regards familiers. »\nContexte : premier quatrain de « Correspondances » (*Les Fleurs du Mal*, 1857) ; théorie symboliste selon laquelle le monde sensible est un langage de symboles que le poète a pour tâche de déchiffrer."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de Paul Verlaine, « Art poétique » (*Jadis et Naguère*), sur la primauté de la musique.",
+    "reponse": "« De la musique avant toute chose,\nEt pour cela préfère l'Impair\nPlus vague et plus soluble dans l'air,\nSans rien en lui qui pèse ou qui pose. »\nContexte : premier quatrain d'« Art poétique » (*Jadis et Naguère*, 1884) ; manifeste symboliste qui prône la musicalité et la suggestion contre la rhétorique et la clarté descriptive."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Platon, *La République* (Livre X), sur l'art comme « imitation d'imitation ».",
+    "reponse": "« Le peintre, disons-nous, ne sera lui aussi qu'un imitateur [...], situé à une troisième distance de la vérité. »\nContexte : *La République*, Livre X — formule de référence (la traduction exacte varie sensiblement selon les éditions, à reformuler le cas échéant) résumant la critique platonicienne de l'art comme « imitation d'imitation », c'est-à-dire copie d'une chose sensible elle-même copie imparfaite d'une Idée."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la définition de la tragédie par Aristote dans la *Poétique*, fondatrice du concept de catharsis.",
+    "reponse": "« La tragédie est l'imitation d'une action [...] qui, par le moyen de la pitié et de la crainte, produit la purification propre à de telles émotions. »\nContexte : *Poétique*, chapitre VI — formule de référence (traductions variables selon les éditions) ; définition fondatrice de la tragédie et du concept de catharsis."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Walter Benjamin, *L'Œuvre d'art à l'époque de sa reproductibilité technique*, sur la notion d'« aura ».",
+    "reponse": "« Même la reproduction la plus parfaite d'une œuvre d'art y manque un élément : son ici et son maintenant — son aura. »\nContexte : *L'Œuvre d'art à l'époque de sa reproductibilité technique* (1935-1939) — formule centrale définissant l'« aura » de l'œuvre originale ; traduction usuelle, à vérifier selon l'édition (le terme « aura » lui-même peut varier selon les traducteurs)."
+  }
+]

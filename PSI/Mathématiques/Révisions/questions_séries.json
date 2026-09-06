@@ -1,0 +1,112 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion de série numérique, de terme général et de somme partielle.",
+    "reponse": "Soit $(u_n)_{n \\in \\mathbb{N}}$ une suite d'éléments de $\\mathbb{K}$ (où $\\mathbb{K} = \\mathbb{R}$ ou $\\mathbb{C}$)[cite: 8]. On appelle **série de terme général $u_n$** (notée $\\sum u_n$) la suite $(S_n)_{n \\in \\mathbb{N}}$ définie par[cite: 8] :\n$$\\forall n \\in \\mathbb{N}, \\quad S_n = \\sum_{k=0}^n u_k$$\n- $u_n$ est le **terme d'indice $n$** (ou terme général)[cite: 8].\n- $S_n$ est la **somme partielle d'indice $n$**[cite: 8].\n\n*Remarques structurelles* :\n- $u_0 = S_0$ et $\\forall n \\in \\mathbb{N}^*, \\ u_n = S_n - S_{n-1}$[cite: 8].\n- Cela définit un **isomorphisme d'espace vectoriel** entre l'espace des suites et l'espace des séries[cite: 8].\n- Deux séries qui ne diffèrent que par un nombre fini de termes sont de même nature[cite: 8]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la convergence d'une série numérique et la notion de somme.",
+    "reponse": "La série $\\sum_{n \\ge 0} u_n$ **converge** si la suite de ses sommes partielles $(S_n)_{n \\in \\mathbb{N}}$ converge dans $\\mathbb{K}$[cite: 8].\nDans ce cas, la **somme** de la série, notée $\\sum_{n=0}^{+\\infty} u_n$, est la limite de ses sommes partielles[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\lim_{n \\to +\\infty} \\sum_{k=0}^n u_k$$\nSi la suite $(S_n)$ ne converge pas, la série est dite **divergente**[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la propriété de linéarité de la convergence (combinaisons linéaires).",
+    "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux séries et $\\lambda \\in \\mathbb{K}$[cite: 8] :\n- Si $\\sum u_n$ et $\\sum v_n$ convergent, alors $\\sum (u_n + \\lambda v_n)$ converge et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_n + \\lambda v_n) = \\sum_{n=0}^{+\\infty} u_n + \\lambda \\sum_{n=0}^{+\\infty} v_n$$\n- Si l'une converge et l'autre diverge, alors la série $\\sum (u_n + v_n)$ **diverge**[cite: 8]. (Plus généralement, si une seule série diverge au sein d'une somme, la série somme diverge)[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Définir une série télescopique et donner sa condition nécessaire et suffisante de convergence.",
+    "reponse": "La suite $(u_n)_{n \\in \\mathbb{N}}$ est convergente si et seulement si la série télescopique $\\sum (u_{n+1} - u_n)$ est convergente[cite: 8].\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_{n+1} - u_n) = \\lim_{n \\to +\\infty} u_n - u_0$$"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la condition nécessaire de convergence (CNC) et la notion de divergence grossière.",
+    "reponse": "Si la série $\\sum_{n \\ge 0} u_n$ converge, alors la suite $(u_n)_{n \\in \\mathbb{N}}$ converge vers $0$.\n- **Divergence grossière** : Si $\\lim_{n \\to +\\infty} u_n \\neq 0$ (ou si $(u_n)$ n'admet pas de limite), alors la série $\\sum u_n$ diverge grossièrement[cite: 8].\n- **Réciproque fausse** : $\\lim_{n \\to +\\infty} u_n = 0 \\nRightarrow \\sum u_n$ converge (exemples : $\\sum \\frac{1}{n}$ et $\\sum \\ln(1 + \\frac{1}{n})$ divergent malgré $\\lim u_n = 0$)[cite: 8]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le reste d'ordre $n$ d'une série convergente et donner sa limite.",
+    "reponse": "Pour une série convergente $S = \\sum_{n=0}^{+\\infty} u_n$, on appelle **reste d'ordre $n$** le scalaire[cite: 8] :\n$$R_n = \\sum_{k=n+1}^{+\\infty} u_k$$\nOn a $S = S_n + R_n$ et $\\lim_{n \\to +\\infty} R_n = 0$[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer le critère de convergence pour une série à termes complexes.",
+    "reponse": "Soit $\\sum u_n$ une série à termes complexes ($u_n \\in \\mathbb{C}$)[cite: 8].\n$$\\sum u_n \\text{ converge} \\iff \\sum \\text{Re}(u_n) \\text{ et } \\sum \\text{Im}(u_n) \\text{ convergent}$$[cite: 8]\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\sum_{n=0}^{+\\infty} \\text{Re}(u_n) + i \\sum_{n=0}^{+\\infty} \\text{Im}(u_n)$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une série à termes positifs (SATP) et énoncer le théorème fondamental de majoration.",
+    "reponse": "Une **SATP** est une série réelle dont le terme général vérifie $u_n \\ge 0$ pour tout $n$[cite: 8].\n- La suite de ses sommes partielles $(S_n)$ est **croissante**[cite: 8].\n- **Théorème de majoration** : Une SATP converge si et seulement si la suite de ses sommes partielles $(S_n)$ est **majorée**[cite: 8].\n- Toute SATP divergente a pour limite $+\\infty$ ($\\lim S_n = +\\infty$)[cite: 8]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer les théoremes de comparaison des SATP par inégalité, domination ($O$) et négligeabilité ($o$).",
+    "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP[cite: 8] :\n1. **Inégalité** : Si $u_n \\le v_n$ à partir d'un certain rang[cite: 8] :\n   - Si $\\sum v_n$ converge, alors $\\sum u_n$ converge[cite: 8].\n   - Si $\\sum u_n$ diverge, alors $\\sum v_n$ diverge[cite: 8].\n2. **Domination ($O$)** : Si $v_n = O(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8].\n3. **Négligeabilité ($o$)** : Si $v_n = o(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'équivalence pour les SATP.",
+    "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP telles que $u_n \\sim v_n$ au voisinage de $+\\infty$[cite: 8].\nAlors les séries $\\sum u_n$ et $\\sum v_n$ sont de **même nature** (elles convergent ou diverget simultanément)[cite: 8]."
+  },
+  {
+    "type": "Méthode",
+    "enonce": "Expliquer le principe de comparaison d'une SATP à une intégrale.",
+    "reponse": "Soit $f$ une fonction continue par morceaux, positive et **décroissante** sur $[0, +\\infty[$[cite: 8].\nPour $v_n = \\int_n^{n+1} f(t) dt$, on a l'encadrement[cite: 8] :\n$$v_{n+1} \\le f(n) \\le v_{n-1}$$\nLa série $\\sum f(n)$ et l'intégrale impropre $\\int_0^{+\\infty} f(t) dt$ sont de même nature[cite: 8]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Donner les conditions de convergence des séries géométriques et des séries de Riemann.",
+    "reponse": "- **Série géométrique** : $\\sum_{n \\ge 0} q^n$ converge $\\iff |q| < 1$[cite: 8].\n- **Série de Riemann** : $\\sum_{n \\ge 1} \\frac{1}{n^\\alpha}$ converge $\\iff \\alpha > 1$[cite: 8]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la règle de d'Alembert pour les séries à termes strictement positifs.",
+    "reponse": "Soit $\\sum u_n$ avec $u_n > 0$ telle que $\\lim_{n \\to +\\infty} \\frac{u_{n+1}}{u_n} = l$[cite: 8] :\n- Si $l < 1$, la série $\\sum u_n$ **converge**[cite: 8].\n- Si $l > 1$, la série $\\sum u_n$ **diverge grossièrement**[cite: 8].\n- Si $l = 1$, on ne peut pas conclure (cas douteux)[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la règle du $n^\\alpha$ (comparaison à l'exemple de Riemann).",
+    "reponse": "Soit $\\sum u_n$ une SATP[cite: 8] :\n- S'il existe $\\alpha > 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = 0$, alors $\\sum u_n$ **converge** (car $u_n = o(1/n^\\alpha)$)[cite: 8].\n- S'il existe $\\alpha \\le 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = +\\infty$, alors $\\sum u_n$ **diverge**[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer les propriétés du développement décimal d'un réel positif.",
+    "reponse": "- **Approximation** : Pour tout $x \\in \\mathbb{R}$, $u_n = \\frac{E(10^n x)}{10^n}$ converge vers $x$ avec $u_n \\le x \\le u_n + 10^{-n}$[cite: 8].\n- **Décomposition** : Tout $x \\in [0, 1]$ s'écrit de façon unique $x = \\sum_{n=1}^{+\\infty} \\frac{d_n}{10^n}$ où $d_n \\in \\{0, \\dots, 9\\}$ est non stationnaire à 9, avec $d_n = E(10^n x) - 10 E(10^{n-1} x)$[cite: 8]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la convergence absolue (CVA) d'une série numérique.",
+    "reponse": "La série réelle ou complexe $\\sum u_n$ **converge absolument** si la série à termes positifs $\\sum |u_n|$ converge[cite: 8]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème fondamental liant convergence absolue et convergence simple.",
+    "reponse": "**L'absolue convergence implique la convergence**[cite: 8] :\n$$\\sum |u_n| \\text{ converge} \\implies \\sum u_n \\text{ converge}$$\nUne série qui converge sans converger absolument est dite **semi-convergente**[cite: 8]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le produit de Cauchy de deux séries et énoncer son théorème de convergence.",
+    "reponse": "- **Définition** : Le **produit de Cauchy** de $\\sum u_n$ et $\\sum v_n$ est la série $\\sum w_n$ où[cite: 8] :\n$$w_n = \\sum_{p+q=n} u_p v_q = \\sum_{k=0}^n u_k v_{n-k}$$\n- **Théorème** : Si $\\sum u_n$ et $\\sum v_n$ **convergent absolument**, alors $\\sum w_n$ **converge absolument** et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} w_n = \\left( \\sum_{n=0}^{+\\infty} u_n \\right) \\cdot \\left( \\sum_{n=0}^{+\\infty} v_n \\right)$$"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une série alternée et énoncer le Critère Spécial des Séries Alternées (CSSA).",
+    "reponse": "- **Définition** : $\\sum u_n$ est **alternée** si $(-1)^n u_n$ est de signe constant[cite: 8].\n- **CSSA** : Soit $\\sum u_n$ une série alternée telle que la suite des modules $(|u_n|)$ est **décroissante** et **converge vers 0**[cite: 8]. Alors :\n  1. La série $\\sum u_n$ **converge**[cite: 8].\n  2. Sa somme $S$ est encadrée par deux sommes partielles consécutives ($S_{2n+1} \\le S \\le S_{2n}$)[cite: 8].\n  3. Son reste $R_n$ est du signe de $u_{n+1}$ et vérifie $|R_n| \\le |u_{n+1}|$[cite: 8]."
+  },
+  {
+    "type": "Piège",
+    "enonce": "Lister le piège fondamental sur l'utilisation des équivalents pour les séries à termes quelconques ou alternées.",
+    "reponse": "**INTERDICTION FORMELLE** : On ne peut PAS utiliser le critère d'équivalence sur des séries qui ne sont pas de signe constant[cite: 8] !\n- *Contre-exemple* : $u_n = \\frac{(-1)^n}{\\sqrt{n}} + \\frac{1}{n} \\sim \\frac{(-1)^n}{\\sqrt{n}}$[cite: 8]. La série $\\sum \\frac{(-1)^n}{\\sqrt{n}}$ converge (CSSA)[cite: 8], mais $\\sum u_n$ diverge (somme d'une série convergente et d'une série divergente)[cite: 8].\n- *Méthode alternative* : Effectuer un **développement asymptotique** à la précision d'un terme absolument convergent (ex: $O(1/n^\\alpha)$ avec $\\alpha > 1$)[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Définir la série exponentielle complexe et donner sa somme.",
+    "reponse": "Pour tout $z \\in \\mathbb{C}$, la série $\\sum_{n \\ge 0} \\frac{z^n}{n!}$ converge absolument[cite: 8]. Sa somme est définie par[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!} = \\exp(z)$$\nDe plus, par produit de Cauchy, $\\exp(z + z') = \\exp(z) \\cdot \\exp(z')$ pour tous $z, z' \\in \\mathbb{C}$[cite: 8]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la formule d'équivalence de Stirling pour la factorielle.",
+    "reponse": "Au voisinage de $+\\infty$[cite: 8] :\n$$n! \\underset{n \\to +\\infty}{\\sim} \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n$$"
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer la phrase qui marque le surgissement du souvenir dans l'épisode de la madeleine, Marcel Proust, *Du côté de chez Swann* (*À la recherche du temps perdu*).",
+    "reponse": "« Et tout d'un coup le souvenir m'est apparu. »\nContexte : Le narrateur vient de goûter une madeleine trempée dans une infusion de thé ; cette sensation fait soudain resurgir un souvenir intact de son enfance à Combray, point de départ de toute la *Recherche*."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la réplique et la didascalie de clôture de *En attendant Godot* de Samuel Beckett (acte II).",
+    "reponse": "« Vladimir : Alors, on y va ?\nEstragon : Allons-y.\n[Ils ne bougent pas.]\nRideau. »\nContexte : Réplique finale de la pièce (une variante clôt déjà l'acte I) : malgré la décision verbale de partir, aucun mouvement n'a lieu, image d'un temps qui ne débouche sur rien."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la dernière phrase des *Mémoires d'Hadrien* de Marguerite Yourcenar.",
+    "reponse": "« Tâchons d'entrer dans la mort les yeux ouverts... »\nContexte : Dernière phrase du roman ; ultime pensée de l'empereur Hadrien mourant, qui clôt sa longue méditation rétrospective sur sa vie, son pouvoir et sa fin prochaine."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le dernier tercet du sonnet « Quand vous serez bien vieille » de Pierre de Ronsard (*Sonnets pour Hélène*, Livre II, sonnet 24, vers 12-14).",
+    "reponse": "« Regrettant mon amour et votre fier dédain.\nVivez, si m'en croyez, n'attendez à demain :\nCueillez dès aujourd'hui les roses de la vie. »\nContexte : Dernier tercet du sonnet ; après avoir imaginé Hélène vieille et pleine de regrets, le poète l'exhorte à profiter du présent (carpe diem)."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de « L'Horloge » de Charles Baudelaire (*Les Fleurs du Mal*, section « Spleen et Idéal », poème LXXXV).",
+    "reponse": "« Horloge ! dieu sinistre, effrayant, impassible,\nDont le doigt nous menace et nous dit : « Souviens-toi !\nLes vibrantes Douleurs dans ton cœur plein d'effroi\nSe planteront bientôt comme dans une cible ; »\nContexte : Premier quatrain du poème ; l'Horloge y est personnifiée en divinité menaçante qui rappelle sans cesse à l'homme la fuite du temps vers la mort."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le refrain du poème « Le Pont Mirabeau » de Guillaume Apollinaire (*Alcools*, 1913).",
+    "reponse": "« Vienne la nuit sonne l'heure\nLes jours s'en vont je demeure »\nContexte : Refrain répété quatre fois dans le poème ; il scande la méditation du poète sur la Seine, image du temps et de l'amour qui passent, face à la permanence du sujet qui regarde."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer (traduction usuelle) la formule par laquelle Saint Augustin pose le paradoxe du temps au début du Livre XI des *Confessions*.",
+    "reponse": "« Qu'est-ce donc que le temps ? Si personne ne me le demande, je le sais ; si je veux l'expliquer à quelqu'un qui le demande, je ne le sais plus. »\nContexte : Formulation initiale du paradoxe du présent insaisissable, point de départ de l'analyse augustinienne du temps comme distension de l'âme (memoria, attentio, expectatio)."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la définition de la « durée pure » donnée par Henri Bergson dans l'*Essai sur les données immédiates de la conscience* (chapitre II, 1889).",
+    "reponse": "« La durée toute pure est la forme que prend la succession de nos états de conscience quand notre moi se laisse vivre, quand il s'abstient d'établir une séparation entre l'état présent et les états antérieurs. »\nContexte : Définition de la durée comme continuité hétérogène et vécue, opposée au temps spatialisé et homogène mesuré par les horloges."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule centrale de Heidegger définissant l'« être-pour-la-mort » du Dasein (*Être et Temps*, 1927).",
+    "reponse": "« L'être-pour-la-mort est la possibilité la plus propre, inconditionnée, indépassable et certaine du Dasein. »\nContexte : Formule centrale définissant la structure de la temporalité du Dasein comme être-vers-sa-fin (Sein-zum-Tode) ; à reformuler avec ses propres mots à l'oral, les traductions françaises variant légèrement selon les éditions (Martineau, Vezin, Boehm/de Waelhens)."
+  }
+]

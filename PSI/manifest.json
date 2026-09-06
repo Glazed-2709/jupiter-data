@@ -38,11 +38,6 @@
               "corrige": false
             },
             {
-              "name": "question_Citations.json",
-              "path": "Fran%C3%A7ais/L'Oeuvre/question_Citations.json",
-              "corrige": false
-            },
-            {
               "name": "zola_oeuvre_gf.pdf",
               "path": "Fran%C3%A7ais/L'Oeuvre/zola_oeuvre_gf.pdf",
               "corrige": false
@@ -57,9 +52,357 @@
         }
       ],
       "files": [],
-      "questions": [],
-      "questionSets": [],
-      "hasQuestions": false,
+      "questions": [
+        {
+          "type": "Citation",
+          "enonce": "Chapitre II — Claude, dans son atelier, s'emporte contre son apprentissage académique et le travail de copie au Louvre.",
+          "reponse": "« il se serait, disait-il, coupé le poignet, plutôt que d'y retourner gâter son œil à une de ces copies, qui encrassent pour toujours la vision du monde où l'on vit. » (93)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre II — Claude, dans la même tirade, ramène toute la peinture à la sensation personnelle devant le motif.",
+          "reponse": "« Est-ce que, en art, il y avait autre chose que de donner ce qu'on avait dans le ventre ? est-ce que tout ne se réduisait pas à planter une bonne femme devant soi, puis à la rendre comme on la sentait ? » (93)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre III — Le narrateur, alors que Claude erre sur les quais après avoir jugé son tableau mauvais, nomme l'origine de son mal.",
+          "reponse": "« c'était son mal peut-être, l'idée fausse dont il se sentait parfois la barre en travers du crâne. » (124)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre III — Claude, renversé sur le lit chez Mahoudeau, après la dispute sur l'École, proclame son credo esthétique.",
+          "reponse": "« Ah ! la vie, la vie ! la sentir et la rendre dans sa réalité, l'aimer pour elle, y voir la seule beauté vraie, éternelle et changeante, ne pas avoir l'idée bête de l'anoblir en la châtrant, comprendre que les prétendues laideurs ne sont que les saillies des caractères, et faire vivre, et faire des hommes, la seule façon d'être Dieu ! » (150)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VI — Claude, à Bennecourt, rentre seul de l'auberge après avoir cherché en vain des camarades.",
+          "reponse": "« malade de n'avoir personne pour crier ce dont éclatait son crâne. » (250)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VI — Sandoz, à Bennecourt, expose à Claude le programme de la série de romans qu'il veut écrire.",
+          "reponse": "« étudier l'homme tel qu'il est, non plus leur pantin métaphysique, mais l'homme physiologique, déterminé par le milieu, agissant sous le jeu de tous ses organes... » (257)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VI — Sandoz, dans la même conversation, récuse la primauté du cerveau sur le corps.",
+          "reponse": "« la pensée est le produit du corps entier. Faites donc penser un cerveau tout seul, voyez donc ce que devient la noblesse du cerveau, quand le ventre est malade !... » (257)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VI — Sandoz, concluant sa charge contre l'analyse psychologique classique.",
+          "reponse": "« Qui dit psychologue dit traître à la vérité. » (257)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Bongrand, surpris par les jeunes peintres devant sa toile en cours, laisse voir son état physique.",
+          "reponse": "« Ses mains tremblaient, tout son grand corps était dans le tressaillement douloureux de la création. » (284)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Bongrand, artiste vieilli au milieu du succès, avoue aux jeunes son angoisse devant chaque nouveau tableau.",
+          "reponse": "« Ça vous étonne, mais il y a des jours où je me demande si je vais savoir dessiner un nez... Oui, à chacun de mes tableaux, j'ai encore une grosse émotion de débutant, le cœur qui bat, une angoisse qui sèche la bouche, enfin un trac abominable. » (284)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Bongrand, s'adressant à lui-même comme à un homme célèbre condamné à se surpasser sans cesse.",
+          "reponse": "« Va donc, homme célèbre, grand artiste, mange-toi la cervelle, brûle ton sang, pour monter encore, toujours plus haut, toujours plus haut ; et, si tu piétines sur place, au sommet, estime-toi heureux, use tes pieds à piétiner le plus longtemps possible » (284)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Bongrand, poursuivant, oppose la montée au sommet atteint.",
+          "reponse": "« Je vous l'ai dit vingt fois qu'on débutait toujours, que la joie n'était pas d'être arrivé là-haut, mais de monter, d'en être encore aux gaietés de l'escalade. » (285)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Bongrand, à la fin de sa confession, sur l'artiste qui a épuisé sa gloire et s'entête encore.",
+          "reponse": "« Et pourtant on se cramponne, on ne veut pas être fini, on s'entête à la création comme les vieillards à l'amour, péniblement, honteusement... Ah ! l'on devrait avoir le courage et la fierté de s'étrangler, devant son dernier chef-d'œuvre ! » (285)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VII — Gagnière, au café, définit Berlioz par analogie avec la peinture.",
+          "reponse": "« le Delacroix de la musique, qui a fait flamber les sons, dans des oppositions fulgurantes de couleurs. » (311)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Le narrateur, après le deuxième refus du jury du Salon, désigne le parti pris de l'institution.",
+          "reponse": "« il s'agissait de l'étranglement systématique d'un artiste original. » (318)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Claude, ayant retourné sa colère contre sa propre toile refusée, quand celle-ci lui est renvoyée.",
+          "reponse": "« Quand la toile lui revint, il prit un couteau et la fendit. » (318)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Le narrateur décrit ce qui rend terrible le tableau de la place du Carrousel.",
+          "reponse": "« c'était l'étude nouvelle de la lumière, cette décomposition, d'une observation très exacte, et qui contrecarrait toutes les habitudes de l'œil, en accentuant des bleus, des jaunes, des rouges, où personne n'était accoutumé d'en voir. » (319)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Claude, dans une minute de lucidité, quand le jury lui a de nouveau fermé le Salon.",
+          "reponse": "« Allons ! c'est entendu... j'en crèverai ! » (319)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Claude, retombant à ses anciens doutes malgré l'obstination grandissante.",
+          "reponse": "« Tout ravagé par la lutte qu'il soutenait contre la nature. » (319)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Claude devant l'écart entre son génie et ce que la toile laisse passer.",
+          "reponse": "« Quelle souffrance de ne jamais se donner entier, dans le chef-d'œuvre dont il ne pouvait accoucher son génie ! » (320)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre VIII — Le narrateur, sur la réception publique des toiles de Claude.",
+          "reponse": "« l'aveuglement du public qui laissait une fois de plus le génie mourir de faim. » (325)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Christine, épuisée par les séances de pose, comprend qui est sa véritable rivale.",
+          "reponse": "« Elle n'avait qu'une rivale, cette peinture préférée, qui lui volait son amant. Il la tuait à la pose pour embellir l'autre. » (365)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz, voyant Claude sombrer, nomme d'une formule le paradoxe du personnage.",
+          "reponse": "« sa fraternité d'artiste augmentait, depuis qu'il voyait Claude perdre pied, sombrer au fond de la folie héroïque de l'art. » (389)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz, ému par tous les artistes que l'ambition détruit.",
+          "reponse": "« Est-ce qu'on savait jamais, en art, où était le fou ? » (389)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz, désignant les artistes que leur œuvre a anéantis.",
+          "reponse": "« ces foudroyés de l'œuvre. » (389)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz, au crépuscule, met en doute la gloire artistique comme substitut de l'au-delà.",
+          "reponse": "« Quelle duperie, si cette gloire de l'artiste n'existait pas plus que le paradis du catéchisme, dont les enfants eux-mêmes se moquent désormais ! Nous qui ne croyons plus à Dieu, nous croyons à notre immortalité... Ah ! misère ! » (395)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz confesse à Claude ce que le travail a fait de sa propre vie.",
+          "reponse": "« Écoute, le travail a pris mon existence. Peu à peu, il m'a volé ma mère, ma femme, tout ce que j'aime. C'est le germe apporté dans le crâne, qui mange la cervelle, qui envahit le tronc, les membres, qui ronge le corps entier. » (395)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre IX — Sandoz, décrivant l'emprise quotidienne et sans répit de l'œuvre en cours.",
+          "reponse": "« Dès que je saute du lit, le matin, le travail m'empoigne, me cloue à ma table, sans me laisser respirer une bouffée de grand air ; puis, il me suit au déjeuner, je remâche sourdement mes phrases avec mon pain ; puis, il m'accompagne quand je sors, rentre dîner dans mon assiette, se couche le soir sur mon oreiller, si impitoyable, que jamais je n'ai le pouvoir d'arrêter l'œuvre en train. » (395)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre X — Une visiteuse du Salon, devant la petite toile de Claude intitulée L'Enfant mort.",
+          "reponse": "« Oh ! l'horreur ! est-ce que la police devrait permettre une horreur pareille ! » (440)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre X — Sandoz, devant L'Enfant mort perdu dans le Salon, mesure ce qu'ont donné vingt années de lutte.",
+          "reponse": "« Tant d'espoirs, de tortures, une vie usée au dur labeur de l'enfantement, et ça, et ça, mon Dieu ! » (440)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre XII — Claude, à Christine qui le supplie de partir avec elle et de renoncer à la peinture.",
+          "reponse": "« Non, ce n'est point assez... Je ne veux pas m'en aller avec toi, je ne veux pas être heureux, je veux peindre. » (508)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre XII — Christine, dans la même scène, désigne l'art comme la puissance qui les écrase tous les deux.",
+          "reponse": "« Il n'y a que l'art, c'est le Tout-Puissant, le Dieu farouche qui nous foudroie et que tu honores. Il peut nous anéantir, il est le maître, tu diras merci. » (508)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre XII — Claude accepte cette domination et récuse toute liberté de sa part.",
+          "reponse": "« Oui, je lui appartiens, qu'il fasse de moi ce qu'il voudra... Je mourrais de ne plus peindre, je préfère peindre et en mourir... Et puis, ma volonté n'y est pour rien. C'est ainsi, rien n'existe en dehors, que le monde crève ! » (508)"
+        },
+        {
+          "type": "Citation",
+          "enonce": "Chapitre XII — Christine, dans une nouvelle poussée de colère, oppose sa chair vivante aux figures peintes.",
+          "reponse": "« Mais je suis vivante, moi ! et elles sont mortes, les femmes que tu aimes... Oh ! ne dis pas non, je sais bien que ce sont tes maîtresses, toutes ces femmes peintes. » (508)"
+        }
+      ],
+      "questionSets": [
+        {
+          "file": "questions_L'Oeuvre.json",
+          "label": "L'Oeuvre",
+          "items": [
+            {
+              "type": "Citation",
+              "enonce": "Chapitre II — Claude, dans son atelier, s'emporte contre son apprentissage académique et le travail de copie au Louvre.",
+              "reponse": "« il se serait, disait-il, coupé le poignet, plutôt que d'y retourner gâter son œil à une de ces copies, qui encrassent pour toujours la vision du monde où l'on vit. » (93)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre II — Claude, dans la même tirade, ramène toute la peinture à la sensation personnelle devant le motif.",
+              "reponse": "« Est-ce que, en art, il y avait autre chose que de donner ce qu'on avait dans le ventre ? est-ce que tout ne se réduisait pas à planter une bonne femme devant soi, puis à la rendre comme on la sentait ? » (93)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre III — Le narrateur, alors que Claude erre sur les quais après avoir jugé son tableau mauvais, nomme l'origine de son mal.",
+              "reponse": "« c'était son mal peut-être, l'idée fausse dont il se sentait parfois la barre en travers du crâne. » (124)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre III — Claude, renversé sur le lit chez Mahoudeau, après la dispute sur l'École, proclame son credo esthétique.",
+              "reponse": "« Ah ! la vie, la vie ! la sentir et la rendre dans sa réalité, l'aimer pour elle, y voir la seule beauté vraie, éternelle et changeante, ne pas avoir l'idée bête de l'anoblir en la châtrant, comprendre que les prétendues laideurs ne sont que les saillies des caractères, et faire vivre, et faire des hommes, la seule façon d'être Dieu ! » (150)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VI — Claude, à Bennecourt, rentre seul de l'auberge après avoir cherché en vain des camarades.",
+              "reponse": "« malade de n'avoir personne pour crier ce dont éclatait son crâne. » (250)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VI — Sandoz, à Bennecourt, expose à Claude le programme de la série de romans qu'il veut écrire.",
+              "reponse": "« étudier l'homme tel qu'il est, non plus leur pantin métaphysique, mais l'homme physiologique, déterminé par le milieu, agissant sous le jeu de tous ses organes... » (257)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VI — Sandoz, dans la même conversation, récuse la primauté du cerveau sur le corps.",
+              "reponse": "« la pensée est le produit du corps entier. Faites donc penser un cerveau tout seul, voyez donc ce que devient la noblesse du cerveau, quand le ventre est malade !... » (257)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VI — Sandoz, concluant sa charge contre l'analyse psychologique classique.",
+              "reponse": "« Qui dit psychologue dit traître à la vérité. » (257)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Bongrand, surpris par les jeunes peintres devant sa toile en cours, laisse voir son état physique.",
+              "reponse": "« Ses mains tremblaient, tout son grand corps était dans le tressaillement douloureux de la création. » (284)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Bongrand, artiste vieilli au milieu du succès, avoue aux jeunes son angoisse devant chaque nouveau tableau.",
+              "reponse": "« Ça vous étonne, mais il y a des jours où je me demande si je vais savoir dessiner un nez... Oui, à chacun de mes tableaux, j'ai encore une grosse émotion de débutant, le cœur qui bat, une angoisse qui sèche la bouche, enfin un trac abominable. » (284)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Bongrand, s'adressant à lui-même comme à un homme célèbre condamné à se surpasser sans cesse.",
+              "reponse": "« Va donc, homme célèbre, grand artiste, mange-toi la cervelle, brûle ton sang, pour monter encore, toujours plus haut, toujours plus haut ; et, si tu piétines sur place, au sommet, estime-toi heureux, use tes pieds à piétiner le plus longtemps possible » (284)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Bongrand, poursuivant, oppose la montée au sommet atteint.",
+              "reponse": "« Je vous l'ai dit vingt fois qu'on débutait toujours, que la joie n'était pas d'être arrivé là-haut, mais de monter, d'en être encore aux gaietés de l'escalade. » (285)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Bongrand, à la fin de sa confession, sur l'artiste qui a épuisé sa gloire et s'entête encore.",
+              "reponse": "« Et pourtant on se cramponne, on ne veut pas être fini, on s'entête à la création comme les vieillards à l'amour, péniblement, honteusement... Ah ! l'on devrait avoir le courage et la fierté de s'étrangler, devant son dernier chef-d'œuvre ! » (285)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VII — Gagnière, au café, définit Berlioz par analogie avec la peinture.",
+              "reponse": "« le Delacroix de la musique, qui a fait flamber les sons, dans des oppositions fulgurantes de couleurs. » (311)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Le narrateur, après le deuxième refus du jury du Salon, désigne le parti pris de l'institution.",
+              "reponse": "« il s'agissait de l'étranglement systématique d'un artiste original. » (318)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Claude, ayant retourné sa colère contre sa propre toile refusée, quand celle-ci lui est renvoyée.",
+              "reponse": "« Quand la toile lui revint, il prit un couteau et la fendit. » (318)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Le narrateur décrit ce qui rend terrible le tableau de la place du Carrousel.",
+              "reponse": "« c'était l'étude nouvelle de la lumière, cette décomposition, d'une observation très exacte, et qui contrecarrait toutes les habitudes de l'œil, en accentuant des bleus, des jaunes, des rouges, où personne n'était accoutumé d'en voir. » (319)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Claude, dans une minute de lucidité, quand le jury lui a de nouveau fermé le Salon.",
+              "reponse": "« Allons ! c'est entendu... j'en crèverai ! » (319)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Claude, retombant à ses anciens doutes malgré l'obstination grandissante.",
+              "reponse": "« Tout ravagé par la lutte qu'il soutenait contre la nature. » (319)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Claude devant l'écart entre son génie et ce que la toile laisse passer.",
+              "reponse": "« Quelle souffrance de ne jamais se donner entier, dans le chef-d'œuvre dont il ne pouvait accoucher son génie ! » (320)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre VIII — Le narrateur, sur la réception publique des toiles de Claude.",
+              "reponse": "« l'aveuglement du public qui laissait une fois de plus le génie mourir de faim. » (325)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Christine, épuisée par les séances de pose, comprend qui est sa véritable rivale.",
+              "reponse": "« Elle n'avait qu'une rivale, cette peinture préférée, qui lui volait son amant. Il la tuait à la pose pour embellir l'autre. » (365)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz, voyant Claude sombrer, nomme d'une formule le paradoxe du personnage.",
+              "reponse": "« sa fraternité d'artiste augmentait, depuis qu'il voyait Claude perdre pied, sombrer au fond de la folie héroïque de l'art. » (389)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz, ému par tous les artistes que l'ambition détruit.",
+              "reponse": "« Est-ce qu'on savait jamais, en art, où était le fou ? » (389)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz, désignant les artistes que leur œuvre a anéantis.",
+              "reponse": "« ces foudroyés de l'œuvre. » (389)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz, au crépuscule, met en doute la gloire artistique comme substitut de l'au-delà.",
+              "reponse": "« Quelle duperie, si cette gloire de l'artiste n'existait pas plus que le paradis du catéchisme, dont les enfants eux-mêmes se moquent désormais ! Nous qui ne croyons plus à Dieu, nous croyons à notre immortalité... Ah ! misère ! » (395)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz confesse à Claude ce que le travail a fait de sa propre vie.",
+              "reponse": "« Écoute, le travail a pris mon existence. Peu à peu, il m'a volé ma mère, ma femme, tout ce que j'aime. C'est le germe apporté dans le crâne, qui mange la cervelle, qui envahit le tronc, les membres, qui ronge le corps entier. » (395)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre IX — Sandoz, décrivant l'emprise quotidienne et sans répit de l'œuvre en cours.",
+              "reponse": "« Dès que je saute du lit, le matin, le travail m'empoigne, me cloue à ma table, sans me laisser respirer une bouffée de grand air ; puis, il me suit au déjeuner, je remâche sourdement mes phrases avec mon pain ; puis, il m'accompagne quand je sors, rentre dîner dans mon assiette, se couche le soir sur mon oreiller, si impitoyable, que jamais je n'ai le pouvoir d'arrêter l'œuvre en train. » (395)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre X — Une visiteuse du Salon, devant la petite toile de Claude intitulée L'Enfant mort.",
+              "reponse": "« Oh ! l'horreur ! est-ce que la police devrait permettre une horreur pareille ! » (440)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre X — Sandoz, devant L'Enfant mort perdu dans le Salon, mesure ce qu'ont donné vingt années de lutte.",
+              "reponse": "« Tant d'espoirs, de tortures, une vie usée au dur labeur de l'enfantement, et ça, et ça, mon Dieu ! » (440)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre XII — Claude, à Christine qui le supplie de partir avec elle et de renoncer à la peinture.",
+              "reponse": "« Non, ce n'est point assez... Je ne veux pas m'en aller avec toi, je ne veux pas être heureux, je veux peindre. » (508)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre XII — Christine, dans la même scène, désigne l'art comme la puissance qui les écrase tous les deux.",
+              "reponse": "« Il n'y a que l'art, c'est le Tout-Puissant, le Dieu farouche qui nous foudroie et que tu honores. Il peut nous anéantir, il est le maître, tu diras merci. » (508)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre XII — Claude accepte cette domination et récuse toute liberté de sa part.",
+              "reponse": "« Oui, je lui appartiens, qu'il fasse de moi ce qu'il voudra... Je mourrais de ne plus peindre, je préfère peindre et en mourir... Et puis, ma volonté n'y est pour rien. C'est ainsi, rien n'existe en dehors, que le monde crève ! » (508)"
+            },
+            {
+              "type": "Citation",
+              "enonce": "Chapitre XII — Christine, dans une nouvelle poussée de colère, oppose sa chair vivante aux figures peintes.",
+              "reponse": "« Mais je suis vivante, moi ! et elles sont mortes, les femmes que tu aimes... Oh ! ne dis pas non, je sais bien que ce sont tes maîtresses, toutes ces femmes peintes. » (508)"
+            }
+          ]
+        }
+      ],
+      "hasQuestions": true,
       "isAvantDernier": true,
       "hue": 19.115384615384528,
       "color": "hsl(19.1,100%,56%)"
@@ -366,6 +709,116 @@
               "type": "DL usuel",
               "enonce": "Donner le développement limité en 0 à l'ordre 4 de $\\tan x$.",
               "reponse": "$$\\tan x \\underset{x \\to 0}{=} x + \\frac{x^3}{3} + o(x^4)$$[cite: 9]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la notion de série numérique, de terme général et de somme partielle.",
+              "reponse": "Soit $(u_n)_{n \\in \\mathbb{N}}$ une suite d'éléments de $\\mathbb{K}$ (où $\\mathbb{K} = \\mathbb{R}$ ou $\\mathbb{C}$)[cite: 8]. On appelle **série de terme général $u_n$** (notée $\\sum u_n$) la suite $(S_n)_{n \\in \\mathbb{N}}$ définie par[cite: 8] :\n$$\\forall n \\in \\mathbb{N}, \\quad S_n = \\sum_{k=0}^n u_k$$\n- $u_n$ est le **terme d'indice $n$** (ou terme général)[cite: 8].\n- $S_n$ est la **somme partielle d'indice $n$**[cite: 8].\n\n*Remarques structurelles* :\n- $u_0 = S_0$ et $\\forall n \\in \\mathbb{N}^*, \\ u_n = S_n - S_{n-1}$[cite: 8].\n- Cela définit un **isomorphisme d'espace vectoriel** entre l'espace des suites et l'espace des séries[cite: 8].\n- Deux séries qui ne diffèrent que par un nombre fini de termes sont de même nature[cite: 8]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la convergence d'une série numérique et la notion de somme.",
+              "reponse": "La série $\\sum_{n \\ge 0} u_n$ **converge** si la suite de ses sommes partielles $(S_n)_{n \\in \\mathbb{N}}$ converge dans $\\mathbb{K}$[cite: 8].\nDans ce cas, la **somme** de la série, notée $\\sum_{n=0}^{+\\infty} u_n$, est la limite de ses sommes partielles[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\lim_{n \\to +\\infty} \\sum_{k=0}^n u_k$$\nSi la suite $(S_n)$ ne converge pas, la série est dite **divergente**[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer la propriété de linéarité de la convergence (combinaisons linéaires).",
+              "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux séries et $\\lambda \\in \\mathbb{K}$[cite: 8] :\n- Si $\\sum u_n$ et $\\sum v_n$ convergent, alors $\\sum (u_n + \\lambda v_n)$ converge et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_n + \\lambda v_n) = \\sum_{n=0}^{+\\infty} u_n + \\lambda \\sum_{n=0}^{+\\infty} v_n$$\n- Si l'une converge et l'autre diverge, alors la série $\\sum (u_n + v_n)$ **diverge**[cite: 8]. (Plus généralement, si une seule série diverge au sein d'une somme, la série somme diverge)[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Définir une série télescopique et donner sa condition nécessaire et suffisante de convergence.",
+              "reponse": "La suite $(u_n)_{n \\in \\mathbb{N}}$ est convergente si et seulement si la série télescopique $\\sum (u_{n+1} - u_n)$ est convergente[cite: 8].\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_{n+1} - u_n) = \\lim_{n \\to +\\infty} u_n - u_0$$"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer la condition nécessaire de convergence (CNC) et la notion de divergence grossière.",
+              "reponse": "Si la série $\\sum_{n \\ge 0} u_n$ converge, alors la suite $(u_n)_{n \\in \\mathbb{N}}$ converge vers $0$.\n- **Divergence grossière** : Si $\\lim_{n \\to +\\infty} u_n \\neq 0$ (ou si $(u_n)$ n'admet pas de limite), alors la série $\\sum u_n$ diverge grossièrement[cite: 8].\n- **Réciproque fausse** : $\\lim_{n \\to +\\infty} u_n = 0 \\nRightarrow \\sum u_n$ converge (exemples : $\\sum \\frac{1}{n}$ et $\\sum \\ln(1 + \\frac{1}{n})$ divergent malgré $\\lim u_n = 0$)[cite: 8]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir le reste d'ordre $n$ d'une série convergente et donner sa limite.",
+              "reponse": "Pour une série convergente $S = \\sum_{n=0}^{+\\infty} u_n$, on appelle **reste d'ordre $n$** le scalaire[cite: 8] :\n$$R_n = \\sum_{k=n+1}^{+\\infty} u_k$$\nOn a $S = S_n + R_n$ et $\\lim_{n \\to +\\infty} R_n = 0$[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer le critère de convergence pour une série à termes complexes.",
+              "reponse": "Soit $\\sum u_n$ une série à termes complexes ($u_n \\in \\mathbb{C}$)[cite: 8].\n$$\\sum u_n \\text{ converge} \\iff \\sum \\text{Re}(u_n) \\text{ et } \\sum \\text{Im}(u_n) \\text{ convergent}$$[cite: 8]\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\sum_{n=0}^{+\\infty} \\text{Re}(u_n) + i \\sum_{n=0}^{+\\infty} \\text{Im}(u_n)$$"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir une série à termes positifs (SATP) et énoncer le théorème fondamental de majoration.",
+              "reponse": "Une **SATP** est une série réelle dont le terme général vérifie $u_n \\ge 0$ pour tout $n$[cite: 8].\n- La suite de ses sommes partielles $(S_n)$ est **croissante**[cite: 8].\n- **Théorème de majoration** : Une SATP converge si et seulement si la suite de ses sommes partielles $(S_n)$ est **majorée**[cite: 8].\n- Toute SATP divergente a pour limite $+\\infty$ ($\\lim S_n = +\\infty$)[cite: 8]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer les théoremes de comparaison des SATP par inégalité, domination ($O$) et négligeabilité ($o$).",
+              "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP[cite: 8] :\n1. **Inégalité** : Si $u_n \\le v_n$ à partir d'un certain rang[cite: 8] :\n   - Si $\\sum v_n$ converge, alors $\\sum u_n$ converge[cite: 8].\n   - Si $\\sum u_n$ diverge, alors $\\sum v_n$ diverge[cite: 8].\n2. **Domination ($O$)** : Si $v_n = O(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8].\n3. **Négligeabilité ($o$)** : Si $v_n = o(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le théorème d'équivalence pour les SATP.",
+              "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP telles que $u_n \\sim v_n$ au voisinage de $+\\infty$[cite: 8].\nAlors les séries $\\sum u_n$ et $\\sum v_n$ sont de **même nature** (elles convergent ou diverget simultanément)[cite: 8]."
+            },
+            {
+              "type": "Méthode",
+              "enonce": "Expliquer le principe de comparaison d'une SATP à une intégrale.",
+              "reponse": "Soit $f$ une fonction continue par morceaux, positive et **décroissante** sur $[0, +\\infty[$[cite: 8].\nPour $v_n = \\int_n^{n+1} f(t) dt$, on a l'encadrement[cite: 8] :\n$$v_{n+1} \\le f(n) \\le v_{n-1}$$\nLa série $\\sum f(n)$ et l'intégrale impropre $\\int_0^{+\\infty} f(t) dt$ sont de même nature[cite: 8]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Donner les conditions de convergence des séries géométriques et des séries de Riemann.",
+              "reponse": "- **Série géométrique** : $\\sum_{n \\ge 0} q^n$ converge $\\iff |q| < 1$[cite: 8].\n- **Série de Riemann** : $\\sum_{n \\ge 1} \\frac{1}{n^\\alpha}$ converge $\\iff \\alpha > 1$[cite: 8]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer la règle de d'Alembert pour les séries à termes strictement positifs.",
+              "reponse": "Soit $\\sum u_n$ avec $u_n > 0$ telle que $\\lim_{n \\to +\\infty} \\frac{u_{n+1}}{u_n} = l$[cite: 8] :\n- Si $l < 1$, la série $\\sum u_n$ **converge**[cite: 8].\n- Si $l > 1$, la série $\\sum u_n$ **diverge grossièrement**[cite: 8].\n- Si $l = 1$, on ne peut pas conclure (cas douteux)[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer la règle du $n^\\alpha$ (comparaison à l'exemple de Riemann).",
+              "reponse": "Soit $\\sum u_n$ une SATP[cite: 8] :\n- S'il existe $\\alpha > 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = 0$, alors $\\sum u_n$ **converge** (car $u_n = o(1/n^\\alpha)$)[cite: 8].\n- S'il existe $\\alpha \\le 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = +\\infty$, alors $\\sum u_n$ **diverge**[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer les propriétés du développement décimal d'un réel positif.",
+              "reponse": "- **Approximation** : Pour tout $x \\in \\mathbb{R}$, $u_n = \\frac{E(10^n x)}{10^n}$ converge vers $x$ avec $u_n \\le x \\le u_n + 10^{-n}$[cite: 8].\n- **Décomposition** : Tout $x \\in [0, 1]$ s'écrit de façon unique $x = \\sum_{n=1}^{+\\infty} \\frac{d_n}{10^n}$ où $d_n \\in \\{0, \\dots, 9\\}$ est non stationnaire à 9, avec $d_n = E(10^n x) - 10 E(10^{n-1} x)$[cite: 8]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la convergence absolue (CVA) d'une série numérique.",
+              "reponse": "La série réelle ou complexe $\\sum u_n$ **converge absolument** si la série à termes positifs $\\sum |u_n|$ converge[cite: 8]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le théorème fondamental liant convergence absolue et convergence simple.",
+              "reponse": "**L'absolue convergence implique la convergence**[cite: 8] :\n$$\\sum |u_n| \\text{ converge} \\implies \\sum u_n \\text{ converge}$$\nUne série qui converge sans converger absolument est dite **semi-convergente**[cite: 8]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir le produit de Cauchy de deux séries et énoncer son théorème de convergence.",
+              "reponse": "- **Définition** : Le **produit de Cauchy** de $\\sum u_n$ et $\\sum v_n$ est la série $\\sum w_n$ où[cite: 8] :\n$$w_n = \\sum_{p+q=n} u_p v_q = \\sum_{k=0}^n u_k v_{n-k}$$\n- **Théorème** : Si $\\sum u_n$ et $\\sum v_n$ **convergent absolument**, alors $\\sum w_n$ **converge absolument** et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} w_n = \\left( \\sum_{n=0}^{+\\infty} u_n \\right) \\cdot \\left( \\sum_{n=0}^{+\\infty} v_n \\right)$$"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir une série alternée et énoncer le Critère Spécial des Séries Alternées (CSSA).",
+              "reponse": "- **Définition** : $\\sum u_n$ est **alternée** si $(-1)^n u_n$ est de signe constant[cite: 8].\n- **CSSA** : Soit $\\sum u_n$ une série alternée telle que la suite des modules $(|u_n|)$ est **décroissante** et **converge vers 0**[cite: 8]. Alors :\n  1. La série $\\sum u_n$ **converge**[cite: 8].\n  2. Sa somme $S$ est encadrée par deux sommes partielles consécutives ($S_{2n+1} \\le S \\le S_{2n}$)[cite: 8].\n  3. Son reste $R_n$ est du signe de $u_{n+1}$ et vérifie $|R_n| \\le |u_{n+1}|$[cite: 8]."
+            },
+            {
+              "type": "Piège",
+              "enonce": "Lister le piège fondamental sur l'utilisation des équivalents pour les séries à termes quelconques ou alternées.",
+              "reponse": "**INTERDICTION FORMELLE** : On ne peut PAS utiliser le critère d'équivalence sur des séries qui ne sont pas de signe constant[cite: 8] !\n- *Contre-exemple* : $u_n = \\frac{(-1)^n}{\\sqrt{n}} + \\frac{1}{n} \\sim \\frac{(-1)^n}{\\sqrt{n}}$[cite: 8]. La série $\\sum \\frac{(-1)^n}{\\sqrt{n}}$ converge (CSSA)[cite: 8], mais $\\sum u_n$ diverge (somme d'une série convergente et d'une série divergente)[cite: 8].\n- *Méthode alternative* : Effectuer un **développement asymptotique** à la précision d'un terme absolument convergent (ex: $O(1/n^\\alpha)$ avec $\\alpha > 1$)[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Définir la série exponentielle complexe et donner sa somme.",
+              "reponse": "Pour tout $z \\in \\mathbb{C}$, la série $\\sum_{n \\ge 0} \\frac{z^n}{n!}$ converge absolument[cite: 8]. Sa somme est définie par[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!} = \\exp(z)$$\nDe plus, par produit de Cauchy, $\\exp(z + z') = \\exp(z) \\cdot \\exp(z')$ pour tous $z, z' \\in \\mathbb{C}$[cite: 8]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer la formule d'équivalence de Stirling pour la factorielle.",
+              "reponse": "Au voisinage de $+\\infty$[cite: 8] :\n$$n! \\underset{n \\to +\\infty}{\\sim} \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n$$"
             }
           ],
           "questionSets": [
@@ -570,6 +1023,122 @@
                   "reponse": "$$\\tan x \\underset{x \\to 0}{=} x + \\frac{x^3}{3} + o(x^4)$$[cite: 9]"
                 }
               ]
+            },
+            {
+              "file": "questions_séries.json",
+              "label": "séries",
+              "items": [
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la notion de série numérique, de terme général et de somme partielle.",
+                  "reponse": "Soit $(u_n)_{n \\in \\mathbb{N}}$ une suite d'éléments de $\\mathbb{K}$ (où $\\mathbb{K} = \\mathbb{R}$ ou $\\mathbb{C}$)[cite: 8]. On appelle **série de terme général $u_n$** (notée $\\sum u_n$) la suite $(S_n)_{n \\in \\mathbb{N}}$ définie par[cite: 8] :\n$$\\forall n \\in \\mathbb{N}, \\quad S_n = \\sum_{k=0}^n u_k$$\n- $u_n$ est le **terme d'indice $n$** (ou terme général)[cite: 8].\n- $S_n$ est la **somme partielle d'indice $n$**[cite: 8].\n\n*Remarques structurelles* :\n- $u_0 = S_0$ et $\\forall n \\in \\mathbb{N}^*, \\ u_n = S_n - S_{n-1}$[cite: 8].\n- Cela définit un **isomorphisme d'espace vectoriel** entre l'espace des suites et l'espace des séries[cite: 8].\n- Deux séries qui ne diffèrent que par un nombre fini de termes sont de même nature[cite: 8]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la convergence d'une série numérique et la notion de somme.",
+                  "reponse": "La série $\\sum_{n \\ge 0} u_n$ **converge** si la suite de ses sommes partielles $(S_n)_{n \\in \\mathbb{N}}$ converge dans $\\mathbb{K}$[cite: 8].\nDans ce cas, la **somme** de la série, notée $\\sum_{n=0}^{+\\infty} u_n$, est la limite de ses sommes partielles[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\lim_{n \\to +\\infty} \\sum_{k=0}^n u_k$$\nSi la suite $(S_n)$ ne converge pas, la série est dite **divergente**[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer la propriété de linéarité de la convergence (combinaisons linéaires).",
+                  "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux séries et $\\lambda \\in \\mathbb{K}$[cite: 8] :\n- Si $\\sum u_n$ et $\\sum v_n$ convergent, alors $\\sum (u_n + \\lambda v_n)$ converge et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_n + \\lambda v_n) = \\sum_{n=0}^{+\\infty} u_n + \\lambda \\sum_{n=0}^{+\\infty} v_n$$\n- Si l'une converge et l'autre diverge, alors la série $\\sum (u_n + v_n)$ **diverge**[cite: 8]. (Plus généralement, si une seule série diverge au sein d'une somme, la série somme diverge)[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Définir une série télescopique et donner sa condition nécessaire et suffisante de convergence.",
+                  "reponse": "La suite $(u_n)_{n \\in \\mathbb{N}}$ est convergente si et seulement si la série télescopique $\\sum (u_{n+1} - u_n)$ est convergente[cite: 8].\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} (u_{n+1} - u_n) = \\lim_{n \\to +\\infty} u_n - u_0$$"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer la condition nécessaire de convergence (CNC) et la notion de divergence grossière.",
+                  "reponse": "Si la série $\\sum_{n \\ge 0} u_n$ converge, alors la suite $(u_n)_{n \\in \\mathbb{N}}$ converge vers $0$.\n- **Divergence grossière** : Si $\\lim_{n \\to +\\infty} u_n \\neq 0$ (ou si $(u_n)$ n'admet pas de limite), alors la série $\\sum u_n$ diverge grossièrement[cite: 8].\n- **Réciproque fausse** : $\\lim_{n \\to +\\infty} u_n = 0 \\nRightarrow \\sum u_n$ converge (exemples : $\\sum \\frac{1}{n}$ et $\\sum \\ln(1 + \\frac{1}{n})$ divergent malgré $\\lim u_n = 0$)[cite: 8]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir le reste d'ordre $n$ d'une série convergente et donner sa limite.",
+                  "reponse": "Pour une série convergente $S = \\sum_{n=0}^{+\\infty} u_n$, on appelle **reste d'ordre $n$** le scalaire[cite: 8] :\n$$R_n = \\sum_{k=n+1}^{+\\infty} u_k$$\nOn a $S = S_n + R_n$ et $\\lim_{n \\to +\\infty} R_n = 0$[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer le critère de convergence pour une série à termes complexes.",
+                  "reponse": "Soit $\\sum u_n$ une série à termes complexes ($u_n \\in \\mathbb{C}$)[cite: 8].\n$$\\sum u_n \\text{ converge} \\iff \\sum \\text{Re}(u_n) \\text{ et } \\sum \\text{Im}(u_n) \\text{ convergent}$$[cite: 8]\nEn cas de convergence[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} u_n = \\sum_{n=0}^{+\\infty} \\text{Re}(u_n) + i \\sum_{n=0}^{+\\infty} \\text{Im}(u_n)$$"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir une série à termes positifs (SATP) et énoncer le théorème fondamental de majoration.",
+                  "reponse": "Une **SATP** est une série réelle dont le terme général vérifie $u_n \\ge 0$ pour tout $n$[cite: 8].\n- La suite de ses sommes partielles $(S_n)$ est **croissante**[cite: 8].\n- **Théorème de majoration** : Une SATP converge si et seulement si la suite de ses sommes partielles $(S_n)$ est **majorée**[cite: 8].\n- Toute SATP divergente a pour limite $+\\infty$ ($\\lim S_n = +\\infty$)[cite: 8]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer les théoremes de comparaison des SATP par inégalité, domination ($O$) et négligeabilité ($o$).",
+                  "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP[cite: 8] :\n1. **Inégalité** : Si $u_n \\le v_n$ à partir d'un certain rang[cite: 8] :\n   - Si $\\sum v_n$ converge, alors $\\sum u_n$ converge[cite: 8].\n   - Si $\\sum u_n$ diverge, alors $\\sum v_n$ diverge[cite: 8].\n2. **Domination ($O$)** : Si $v_n = O(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8].\n3. **Négligeabilité ($o$)** : Si $v_n = o(u_n)$, alors la convergence de $\\sum u_n$ implique celle de $\\sum v_n$[cite: 8]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le théorème d'équivalence pour les SATP.",
+                  "reponse": "Soient $\\sum u_n$ et $\\sum v_n$ deux SATP telles que $u_n \\sim v_n$ au voisinage de $+\\infty$[cite: 8].\nAlors les séries $\\sum u_n$ et $\\sum v_n$ sont de **même nature** (elles convergent ou diverget simultanément)[cite: 8]."
+                },
+                {
+                  "type": "Méthode",
+                  "enonce": "Expliquer le principe de comparaison d'une SATP à une intégrale.",
+                  "reponse": "Soit $f$ une fonction continue par morceaux, positive et **décroissante** sur $[0, +\\infty[$[cite: 8].\nPour $v_n = \\int_n^{n+1} f(t) dt$, on a l'encadrement[cite: 8] :\n$$v_{n+1} \\le f(n) \\le v_{n-1}$$\nLa série $\\sum f(n)$ et l'intégrale impropre $\\int_0^{+\\infty} f(t) dt$ sont de même nature[cite: 8]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Donner les conditions de convergence des séries géométriques et des séries de Riemann.",
+                  "reponse": "- **Série géométrique** : $\\sum_{n \\ge 0} q^n$ converge $\\iff |q| < 1$[cite: 8].\n- **Série de Riemann** : $\\sum_{n \\ge 1} \\frac{1}{n^\\alpha}$ converge $\\iff \\alpha > 1$[cite: 8]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer la règle de d'Alembert pour les séries à termes strictement positifs.",
+                  "reponse": "Soit $\\sum u_n$ avec $u_n > 0$ telle que $\\lim_{n \\to +\\infty} \\frac{u_{n+1}}{u_n} = l$[cite: 8] :\n- Si $l < 1$, la série $\\sum u_n$ **converge**[cite: 8].\n- Si $l > 1$, la série $\\sum u_n$ **diverge grossièrement**[cite: 8].\n- Si $l = 1$, on ne peut pas conclure (cas douteux)[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer la règle du $n^\\alpha$ (comparaison à l'exemple de Riemann).",
+                  "reponse": "Soit $\\sum u_n$ une SATP[cite: 8] :\n- S'il existe $\\alpha > 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = 0$, alors $\\sum u_n$ **converge** (car $u_n = o(1/n^\\alpha)$)[cite: 8].\n- S'il existe $\\alpha \\le 1$ tel que $\\lim_{n \\to +\\infty} n^\\alpha u_n = +\\infty$, alors $\\sum u_n$ **diverge**[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer les propriétés du développement décimal d'un réel positif.",
+                  "reponse": "- **Approximation** : Pour tout $x \\in \\mathbb{R}$, $u_n = \\frac{E(10^n x)}{10^n}$ converge vers $x$ avec $u_n \\le x \\le u_n + 10^{-n}$[cite: 8].\n- **Décomposition** : Tout $x \\in [0, 1]$ s'écrit de façon unique $x = \\sum_{n=1}^{+\\infty} \\frac{d_n}{10^n}$ où $d_n \\in \\{0, \\dots, 9\\}$ est non stationnaire à 9, avec $d_n = E(10^n x) - 10 E(10^{n-1} x)$[cite: 8]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la convergence absolue (CVA) d'une série numérique.",
+                  "reponse": "La série réelle ou complexe $\\sum u_n$ **converge absolument** si la série à termes positifs $\\sum |u_n|$ converge[cite: 8]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le théorème fondamental liant convergence absolue et convergence simple.",
+                  "reponse": "**L'absolue convergence implique la convergence**[cite: 8] :\n$$\\sum |u_n| \\text{ converge} \\implies \\sum u_n \\text{ converge}$$\nUne série qui converge sans converger absolument est dite **semi-convergente**[cite: 8]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir le produit de Cauchy de deux séries et énoncer son théorème de convergence.",
+                  "reponse": "- **Définition** : Le **produit de Cauchy** de $\\sum u_n$ et $\\sum v_n$ est la série $\\sum w_n$ où[cite: 8] :\n$$w_n = \\sum_{p+q=n} u_p v_q = \\sum_{k=0}^n u_k v_{n-k}$$\n- **Théorème** : Si $\\sum u_n$ et $\\sum v_n$ **convergent absolument**, alors $\\sum w_n$ **converge absolument** et[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} w_n = \\left( \\sum_{n=0}^{+\\infty} u_n \\right) \\cdot \\left( \\sum_{n=0}^{+\\infty} v_n \\right)$$"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir une série alternée et énoncer le Critère Spécial des Séries Alternées (CSSA).",
+                  "reponse": "- **Définition** : $\\sum u_n$ est **alternée** si $(-1)^n u_n$ est de signe constant[cite: 8].\n- **CSSA** : Soit $\\sum u_n$ une série alternée telle que la suite des modules $(|u_n|)$ est **décroissante** et **converge vers 0**[cite: 8]. Alors :\n  1. La série $\\sum u_n$ **converge**[cite: 8].\n  2. Sa somme $S$ est encadrée par deux sommes partielles consécutives ($S_{2n+1} \\le S \\le S_{2n}$)[cite: 8].\n  3. Son reste $R_n$ est du signe de $u_{n+1}$ et vérifie $|R_n| \\le |u_{n+1}|$[cite: 8]."
+                },
+                {
+                  "type": "Piège",
+                  "enonce": "Lister le piège fondamental sur l'utilisation des équivalents pour les séries à termes quelconques ou alternées.",
+                  "reponse": "**INTERDICTION FORMELLE** : On ne peut PAS utiliser le critère d'équivalence sur des séries qui ne sont pas de signe constant[cite: 8] !\n- *Contre-exemple* : $u_n = \\frac{(-1)^n}{\\sqrt{n}} + \\frac{1}{n} \\sim \\frac{(-1)^n}{\\sqrt{n}}$[cite: 8]. La série $\\sum \\frac{(-1)^n}{\\sqrt{n}}$ converge (CSSA)[cite: 8], mais $\\sum u_n$ diverge (somme d'une série convergente et d'une série divergente)[cite: 8].\n- *Méthode alternative* : Effectuer un **développement asymptotique** à la précision d'un terme absolument convergent (ex: $O(1/n^\\alpha)$ avec $\\alpha > 1$)[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Définir la série exponentielle complexe et donner sa somme.",
+                  "reponse": "Pour tout $z \\in \\mathbb{C}$, la série $\\sum_{n \\ge 0} \\frac{z^n}{n!}$ converge absolument[cite: 8]. Sa somme est définie par[cite: 8] :\n$$\\sum_{n=0}^{+\\infty} \\frac{z^n}{n!} = \\exp(z)$$\nDe plus, par produit de Cauchy, $\\exp(z + z') = \\exp(z) \\cdot \\exp(z')$ pour tous $z, z' \\in \\mathbb{C}$[cite: 8]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer la formule d'équivalence de Stirling pour la factorielle.",
+                  "reponse": "Au voisinage de $+\\infty$[cite: 8] :\n$$n! \\underset{n \\to +\\infty}{\\sim} \\sqrt{2\\pi n} \\left(\\frac{n}{e}\\right)^n$$"
+                }
+              ]
             }
           ],
           "hasQuestions": true,
@@ -636,9 +1205,167 @@
             }
           ],
           "files": [],
-          "questions": [],
-          "questionSets": [],
-          "hasQuestions": false,
+          "questions": [
+            {
+              "type": "Définition",
+              "enonce": "Définir la tension différentielle d'entrée $\\varepsilon$ d'un Amplificateur Linéaire Intégré (ALI).",
+              "reponse": "La tension différentielle d'entrée est définie par la différence de potentiel entre l'entrée non-inverseuse et l'entrée inverseuse : $\\varepsilon = V_+ - V_-$, avec $V_+$ et $V_-$ les potentiels électriques respectifs de ces bornes."
+            },
+            {
+              "type": "Propriété",
+              "enonce": "Quelle approximation fondamentale fait-on sur les courants de polarisation $i_+$ et $i_-$ d'un ALI ?",
+              "reponse": "Les courants de polarisation sont considérés comme nuls : $i_+ \\approx i_- \\approx 0$, ce qui équivaut à modéliser l'ALI avec une impédance d'entrée infinie."
+            },
+            {
+              "type": "Propriété",
+              "enonce": "Quels sont les deux modes (ou zones) de fonctionnement d'un ALI réel et quelles sont les expressions correspondantes de la tension de sortie $u_s$ ?",
+              "reponse": "1. Zone de fonctionnement linéaire : la tension de sortie est proportionnelle à l'entrée différentielle, $u_s = A_0\\varepsilon$ (avec $A_0 \\approx 10^5$ le gain différentiel statique). 2. Zone de fonctionnement saturé : la tension de sortie atteint ses limites d'alimentation, soit $u_s = \\pm V_{sat}$ (généralement $V_{sat} \\approx 14-15\\text{ V}$)."
+            },
+            {
+              "type": "Formule",
+              "enonce": "Donner l'expression de la fonction de transfert (le gain différentiel complexe $A_d(j\\omega)$) d'un ALI dans le modèle linéaire du premier ordre.",
+              "reponse": "$A_d(j\\omega) = \\frac{u_s}{\\varepsilon} = \\frac{A_0}{1 + j\\omega\\tau}$, avec $A_0 \\approx 2 \\times 10^5$ le gain statique en boucle ouverte et $\\tau \\approx 1 \\times 10^{-2}\\text{ s}$ le temps caractéristique de l'ALI."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Qu'est-ce que le 'slew-rate' d'un ALI ? Donner sa formulation mathématique et sa valeur typique.",
+              "reponse": "Le slew-rate est la limitation physique de la vitesse de balayage de la tension de sortie de l'ALI : $-\\sigma \\le \\frac{du_s}{dt} \\le +\\sigma$, avec une valeur typique de $\\sigma \\approx 0,5\\text{ V}\\cdot\\mu\\text{s}^{-1}$."
+            },
+            {
+              "type": "Propriété",
+              "enonce": "Expliquer comment identifier une rétroaction négative et une rétroaction positive, et préciser leur impact sur la stabilité du montage.",
+              "reponse": "Rétroaction négative : la borne de sortie est connectée à la borne inverseuse $(-)$, ce qui a un effet stabilisateur sur le montage. Rétroaction positive : la borne de sortie est connectée à la borne non inverseuse $(+)$, ce qui rend généralement le montage instable."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer les propriétés d'un ALI idéal de gain infini et ses relations de fonctionnement en régimes linéaire et saturé.",
+              "reponse": "Un ALI idéal possède une impédance d'entrée infinie ($i_+ = i_- = 0$) et une impédance de sortie nulle ($Z_s = 0$). En régime linéaire, $\\varepsilon = V_+ - V_- = 0 \\implies V_+ = V_-$. En régime saturé, $u_s = +V_{sat}$ si $\\varepsilon > 0$, et $u_s = -V_{sat}$ si $\\varepsilon < 0$."
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Démontrer l'expression de la fonction de transfert $H = \\frac{u_s}{u_e}$ du montage amplificateur non inverseur en supposant l'ALI idéal de gain infini.",
+              "reponse": "Par un diviseur de tension appliqué sur la borne inverseuse : $V_- = \\frac{R_1}{R_1 + R_2} u_s$. L'ALI fonctionnant en régime linéaire, on a $V_+ = V_-$. Comme l'entrée est connectée sur la borne non inverseuse ($V_+ = u_e$), on obtient par substitution : $u_e = \\frac{R_1}{R_1 + R_2} u_s$, d'où $H = \\frac{u_s}{u_e} = 1 + \\frac{R_2}{R_1}$."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir le produit gain-bande (GBP) et expliquer le principe de sa conservation pour le montage non inverseur.",
+              "reponse": "Le produit gain-bande est défini par $GBP = H_0 \\times \\omega_c$, où $H_0 = 1 + \\frac{R_2}{R_1}$ est le gain statique et $\\omega_c = \\frac{A_0}{\\tau(1 + R_2/R_1)}$ est la pulsation de coupure. On obtient $GBP = \\frac{A_0}{\\tau}$, qui est une constante caractéristique de l'ALI seul indépendante des résistances choisies. Cela traduit le fait qu'augmenter le gain diminue proportionnellement la bande passante."
+            },
+            {
+              "type": "Formule",
+              "enonce": "Rappeler la méthode générale de calcul de l'impédance d'entrée $Z_e$ d'un montage et donner sa valeur pour l'amplificateur non inverseur.",
+              "reponse": "$Z_e = \\frac{\\text{tension d'entrée complexe}}{\\text{courant d'entrée complexe}} = \\frac{u_e}{i_+}$. Pour le montage non inverseur, le courant d'entrée est le courant de polarisation $i_+ = 0$, donc l'impédance d'entrée tend vers l'infini ($Z_e \\to \\infty$)."
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Établir la fonction de transfert $H = \\frac{u_s}{u_e}$ et l'impédance d'entrée $Z_e$ de l'amplificateur inverseur (ALI idéal).",
+              "reponse": "La loi des nœuds à la borne inverseuse donne : $\\frac{u_e - V_-}{R_1} + \\frac{u_s - V_-}{R_2} = i_- = 0$. En régime linéaire, la masse virtuelle impose $V_- = V_+ = 0$. Ainsi, $\\frac{u_e}{R_1} + \\frac{u_s}{R_2} = 0 \\implies H = -\\frac{R_2}{R_1}$. L'impédance d'entrée est définie par $Z_e = \\frac{u_e}{i_1} = \\frac{u_e}{(u_e - V_-)/R_1} = R_1$."
+            },
+            {
+              "type": "Propriété",
+              "enonce": "Quelle est la fonction de transfert du montage suiveur et quel est son intérêt principal ?",
+              "reponse": "$H = \\frac{u_s}{u_e} = 1$. Son intérêt est l'adaptation d'impédance entre deux quadripôles : son impédance d'entrée infinie évite de prélever du courant sur le premier quadripôle (qui fonctionne ainsi virtuellement à vide), tandis que son impédance de sortie nulle permet d'alimenter correctement le second quadripôle."
+            },
+            {
+              "type": "Calcul",
+              "enonce": "Donner la fonction de transfert complexe $H(j\\omega)$ et l'équation différentielle temporelle reliant $u_s(t)$ et $u_e(t)$ du montage intégrateur idéal.",
+              "reponse": "La fonction de transfert est $H(j\\omega) = -\\frac{1}{jRC\\omega}$. Dans le domaine temporel, l'équation s'écrit : $u_s(t) = -\\frac{1}{RC} \\int u_e(t) dt$."
+            },
+            {
+              "type": "Calcul",
+              "enonce": "Établir la fonction de transfert complexe $H(j\\omega)$ et l'équation temporelle du montage dérivateur idéal (condensateur $C$ en entrée sur $(-)$, résistance $R$ en rétroaction).",
+              "reponse": "La loi des nœuds en $(-)$ avec $V_- = 0$ donne $i_C = i_R \\implies C \\frac{du_e(t)}{dt} = -\\frac{u_s(t)}{R}$. D'où l'équation temporelle $u_s(t) = -RC \\frac{du_e(t)}{dt}$, et en notation complexe $H(j\\omega) = \\frac{u_s}{u_e} = -jRC\\omega$."
+            },
+            {
+              "type": "Calcul",
+              "enonce": "Justifier pourquoi l'ALI fonctionne en régime linéaire dans le montage sommateur non-inverseur (TD, Figure 2).",
+              "reponse": "L'ALI fonctionne en régime linéaire car il présente une rétroaction négative : sa sortie est connectée via une résistance $R$ à sa borne d'entrée inverseuse $(-)$, ce qui a un effet stabilisateur et empêche le système de diverger vers la saturation."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions.json",
+              "label": "Cours",
+              "items": [
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la tension différentielle d'entrée $\\varepsilon$ d'un Amplificateur Linéaire Intégré (ALI).",
+                  "reponse": "La tension différentielle d'entrée est définie par la différence de potentiel entre l'entrée non-inverseuse et l'entrée inverseuse : $\\varepsilon = V_+ - V_-$, avec $V_+$ et $V_-$ les potentiels électriques respectifs de ces bornes."
+                },
+                {
+                  "type": "Propriété",
+                  "enonce": "Quelle approximation fondamentale fait-on sur les courants de polarisation $i_+$ et $i_-$ d'un ALI ?",
+                  "reponse": "Les courants de polarisation sont considérés comme nuls : $i_+ \\approx i_- \\approx 0$, ce qui équivaut à modéliser l'ALI avec une impédance d'entrée infinie."
+                },
+                {
+                  "type": "Propriété",
+                  "enonce": "Quels sont les deux modes (ou zones) de fonctionnement d'un ALI réel et quelles sont les expressions correspondantes de la tension de sortie $u_s$ ?",
+                  "reponse": "1. Zone de fonctionnement linéaire : la tension de sortie est proportionnelle à l'entrée différentielle, $u_s = A_0\\varepsilon$ (avec $A_0 \\approx 10^5$ le gain différentiel statique). 2. Zone de fonctionnement saturé : la tension de sortie atteint ses limites d'alimentation, soit $u_s = \\pm V_{sat}$ (généralement $V_{sat} \\approx 14-15\\text{ V}$)."
+                },
+                {
+                  "type": "Formule",
+                  "enonce": "Donner l'expression de la fonction de transfert (le gain différentiel complexe $A_d(j\\omega)$) d'un ALI dans le modèle linéaire du premier ordre.",
+                  "reponse": "$A_d(j\\omega) = \\frac{u_s}{\\varepsilon} = \\frac{A_0}{1 + j\\omega\\tau}$, avec $A_0 \\approx 2 \\times 10^5$ le gain statique en boucle ouverte et $\\tau \\approx 1 \\times 10^{-2}\\text{ s}$ le temps caractéristique de l'ALI."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Qu'est-ce que le 'slew-rate' d'un ALI ? Donner sa formulation mathématique et sa valeur typique.",
+                  "reponse": "Le slew-rate est la limitation physique de la vitesse de balayage de la tension de sortie de l'ALI : $-\\sigma \\le \\frac{du_s}{dt} \\le +\\sigma$, avec une valeur typique de $\\sigma \\approx 0,5\\text{ V}\\cdot\\mu\\text{s}^{-1}$."
+                },
+                {
+                  "type": "Propriété",
+                  "enonce": "Expliquer comment identifier une rétroaction négative et une rétroaction positive, et préciser leur impact sur la stabilité du montage.",
+                  "reponse": "Rétroaction négative : la borne de sortie est connectée à la borne inverseuse $(-)$, ce qui a un effet stabilisateur sur le montage. Rétroaction positive : la borne de sortie est connectée à la borne non inverseuse $(+)$, ce qui rend généralement le montage instable."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer les propriétés d'un ALI idéal de gain infini et ses relations de fonctionnement en régimes linéaire et saturé.",
+                  "reponse": "Un ALI idéal possède une impédance d'entrée infinie ($i_+ = i_- = 0$) et une impédance de sortie nulle ($Z_s = 0$). En régime linéaire, $\\varepsilon = V_+ - V_- = 0 \\implies V_+ = V_-$. En régime saturé, $u_s = +V_{sat}$ si $\\varepsilon > 0$, et $u_s = -V_{sat}$ si $\\varepsilon < 0$."
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Démontrer l'expression de la fonction de transfert $H = \\frac{u_s}{u_e}$ du montage amplificateur non inverseur en supposant l'ALI idéal de gain infini.",
+                  "reponse": "Par un diviseur de tension appliqué sur la borne inverseuse : $V_- = \\frac{R_1}{R_1 + R_2} u_s$. L'ALI fonctionnant en régime linéaire, on a $V_+ = V_-$. Comme l'entrée est connectée sur la borne non inverseuse ($V_+ = u_e$), on obtient par substitution : $u_e = \\frac{R_1}{R_1 + R_2} u_s$, d'où $H = \\frac{u_s}{u_e} = 1 + \\frac{R_2}{R_1}$."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir le produit gain-bande (GBP) et expliquer le principe de sa conservation pour le montage non inverseur.",
+                  "reponse": "Le produit gain-bande est défini par $GBP = H_0 \\times \\omega_c$, où $H_0 = 1 + \\frac{R_2}{R_1}$ est le gain statique et $\\omega_c = \\frac{A_0}{\\tau(1 + R_2/R_1)}$ est la pulsation de coupure. On obtient $GBP = \\frac{A_0}{\\tau}$, qui est une constante caractéristique de l'ALI seul indépendante des résistances choisies. Cela traduit le fait qu'augmenter le gain diminue proportionnellement la bande passante."
+                },
+                {
+                  "type": "Formule",
+                  "enonce": "Rappeler la méthode générale de calcul de l'impédance d'entrée $Z_e$ d'un montage et donner sa valeur pour l'amplificateur non inverseur.",
+                  "reponse": "$Z_e = \\frac{\\text{tension d'entrée complexe}}{\\text{courant d'entrée complexe}} = \\frac{u_e}{i_+}$. Pour le montage non inverseur, le courant d'entrée est le courant de polarisation $i_+ = 0$, donc l'impédance d'entrée tend vers l'infini ($Z_e \\to \\infty$)."
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Établir la fonction de transfert $H = \\frac{u_s}{u_e}$ et l'impédance d'entrée $Z_e$ de l'amplificateur inverseur (ALI idéal).",
+                  "reponse": "La loi des nœuds à la borne inverseuse donne : $\\frac{u_e - V_-}{R_1} + \\frac{u_s - V_-}{R_2} = i_- = 0$. En régime linéaire, la masse virtuelle impose $V_- = V_+ = 0$. Ainsi, $\\frac{u_e}{R_1} + \\frac{u_s}{R_2} = 0 \\implies H = -\\frac{R_2}{R_1}$. L'impédance d'entrée est définie par $Z_e = \\frac{u_e}{i_1} = \\frac{u_e}{(u_e - V_-)/R_1} = R_1$."
+                },
+                {
+                  "type": "Propriété",
+                  "enonce": "Quelle est la fonction de transfert du montage suiveur et quel est son intérêt principal ?",
+                  "reponse": "$H = \\frac{u_s}{u_e} = 1$. Son intérêt est l'adaptation d'impédance entre deux quadripôles : son impédance d'entrée infinie évite de prélever du courant sur le premier quadripôle (qui fonctionne ainsi virtuellement à vide), tandis que son impédance de sortie nulle permet d'alimenter correctement le second quadripôle."
+                },
+                {
+                  "type": "Calcul",
+                  "enonce": "Donner la fonction de transfert complexe $H(j\\omega)$ et l'équation différentielle temporelle reliant $u_s(t)$ et $u_e(t)$ du montage intégrateur idéal.",
+                  "reponse": "La fonction de transfert est $H(j\\omega) = -\\frac{1}{jRC\\omega}$. Dans le domaine temporel, l'équation s'écrit : $u_s(t) = -\\frac{1}{RC} \\int u_e(t) dt$."
+                },
+                {
+                  "type": "Calcul",
+                  "enonce": "Établir la fonction de transfert complexe $H(j\\omega)$ et l'équation temporelle du montage dérivateur idéal (condensateur $C$ en entrée sur $(-)$, résistance $R$ en rétroaction).",
+                  "reponse": "La loi des nœuds en $(-)$ avec $V_- = 0$ donne $i_C = i_R \\implies C \\frac{du_e(t)}{dt} = -\\frac{u_s(t)}{R}$. D'où l'équation temporelle $u_s(t) = -RC \\frac{du_e(t)}{dt}$, et en notation complexe $H(j\\omega) = \\frac{u_s}{u_e} = -jRC\\omega$."
+                },
+                {
+                  "type": "Calcul",
+                  "enonce": "Justifier pourquoi l'ALI fonctionne en régime linéaire dans le montage sommateur non-inverseur (TD, Figure 2).",
+                  "reponse": "L'ALI fonctionne en régime linéaire car il présente une rétroaction négative : sa sortie est connectée via une résistance $R$ à sa borne d'entrée inverseuse $(-)$, ce qui a un effet stabilisateur et empêche le système de diverger vers la saturation."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
           "isAvantDernier": true,
           "hue": 19.115384615384528,
           "color": "hsl(19.1,100%,56%)"
