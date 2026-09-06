@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer la dernière strophe de Théophile Gautier, « L'Art » (*Émaux et Camées*), sur l'art et le temps.",
+    "reponse": "« Tout passe. — L'art robuste\nSeul a l'éternité.\nLe buste\nSurvit à la cité. »\nContexte : dernière strophe du poème « L'Art », placé en clôture du recueil *Émaux et Camées* (1857) ; manifeste de l'art pour l'art, selon lequel seule la forme travaillée résiste au temps."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de Charles Baudelaire, « Correspondances » (*Les Fleurs du Mal*), sur la nature comme langage de symboles.",
+    "reponse": "« La Nature est un temple où de vivants piliers\nLaissent parfois sortir de confuses paroles ;\nL'homme y passe à travers des forêts de symboles\nQui l'observent avec des regards familiers. »\nContexte : premier quatrain de « Correspondances » (*Les Fleurs du Mal*, 1857) ; théorie symboliste selon laquelle le monde sensible est un langage de symboles que le poète a pour tâche de déchiffrer."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de Paul Verlaine, « Art poétique » (*Jadis et Naguère*), sur la primauté de la musique.",
+    "reponse": "« De la musique avant toute chose,\nEt pour cela préfère l'Impair\nPlus vague et plus soluble dans l'air,\nSans rien en lui qui pèse ou qui pose. »\nContexte : premier quatrain d'« Art poétique » (*Jadis et Naguère*, 1884) ; manifeste symboliste qui prône la musicalité et la suggestion contre la rhétorique et la clarté descriptive."
+  }
+]

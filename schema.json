@@ -1,9 +1,22 @@
 {
-  "name": "20262027",
+  "name": "Objectif X",
   "children": [
     {
       "name": "Culture",
-      "children": []
+      "children": [
+        {
+          "name": "Art",
+          "children": []
+        },
+        {
+          "name": "Bonheur",
+          "children": []
+        },
+        {
+          "name": "Temps",
+          "children": []
+        }
+      ]
     },
     {
       "name": "MPSI",
@@ -18,15 +31,29 @@
         },
         {
           "name": "Français",
-          "children": []
+          "children": [
+            {
+              "name": "L'Oeuvre",
+              "children": []
+            }
+          ]
         },
         {
           "name": "Info",
-          "children": []
+          "children": [
+            {
+              "name": "SQL",
+              "children": []
+            }
+          ]
         },
         {
           "name": "Mathématiques",
           "children": [
+            {
+              "name": "DM",
+              "children": []
+            },
             {
               "name": "Révisions",
               "children": [
@@ -46,6 +73,19 @@
           "name": "Physique",
           "children": [
             {
+              "name": "ALI",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "révisions",
               "children": [
                 {
@@ -62,6 +102,24 @@
         },
         {
           "name": "SI",
+          "children": [
+            {
+              "name": "SLCI",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "X SUP",
           "children": []
         }
       ]
@@ -73,7 +131,20 @@
       "label": "Culture",
       "color": "hsl(342.1,100%,56%)",
       "manifest": "Culture/manifest.json",
-      "subjects": []
+      "subjects": [
+        {
+          "id": "Art",
+          "label": "Art"
+        },
+        {
+          "id": "Bonheur",
+          "label": "Bonheur"
+        },
+        {
+          "id": "Temps",
+          "label": "Temps"
+        }
+      ]
     },
     {
       "id": "MPSI",
@@ -111,6 +182,10 @@
         {
           "id": "SI",
           "label": "SI"
+        },
+        {
+          "id": "X SUP",
+          "label": "X SUP"
         }
       ]
     }

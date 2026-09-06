@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer le dernier tercet du sonnet « Quand vous serez bien vieille » de Pierre de Ronsard (*Sonnets pour Hélène*, Livre II, sonnet 24, vers 12-14).",
+    "reponse": "« Regrettant mon amour et votre fier dédain.\nVivez, si m'en croyez, n'attendez à demain :\nCueillez dès aujourd'hui les roses de la vie. »\nContexte : Dernier tercet du sonnet ; après avoir imaginé Hélène vieille et pleine de regrets, le poète l'exhorte à profiter du présent (carpe diem)."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le premier quatrain de « L'Horloge » de Charles Baudelaire (*Les Fleurs du Mal*, section « Spleen et Idéal », poème LXXXV).",
+    "reponse": "« Horloge ! dieu sinistre, effrayant, impassible,\nDont le doigt nous menace et nous dit : « Souviens-toi !\nLes vibrantes Douleurs dans ton cœur plein d'effroi\nSe planteront bientôt comme dans une cible ; »\nContexte : Premier quatrain du poème ; l'Horloge y est personnifiée en divinité menaçante qui rappelle sans cesse à l'homme la fuite du temps vers la mort."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer le refrain du poème « Le Pont Mirabeau » de Guillaume Apollinaire (*Alcools*, 1913).",
+    "reponse": "« Vienne la nuit sonne l'heure\nLes jours s'en vont je demeure »\nContexte : Refrain répété quatre fois dans le poème ; il scande la méditation du poète sur la Seine, image du temps et de l'amour qui passent, face à la permanence du sujet qui regarde."
+  }
+]

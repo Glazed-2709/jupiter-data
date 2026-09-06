@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer la phrase qui marque le surgissement du souvenir dans l'épisode de la madeleine, Marcel Proust, *Du côté de chez Swann* (*À la recherche du temps perdu*).",
+    "reponse": "« Et tout d'un coup le souvenir m'est apparu. »\nContexte : Le narrateur vient de goûter une madeleine trempée dans une infusion de thé ; cette sensation fait soudain resurgir un souvenir intact de son enfance à Combray, point de départ de toute la *Recherche*."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la réplique et la didascalie de clôture de *En attendant Godot* de Samuel Beckett (acte II).",
+    "reponse": "« Vladimir : Alors, on y va ?\nEstragon : Allons-y.\n[Ils ne bougent pas.]\nRideau. »\nContexte : Réplique finale de la pièce (une variante clôt déjà l'acte I) : malgré la décision verbale de partir, aucun mouvement n'a lieu, image d'un temps qui ne débouche sur rien."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la dernière phrase des *Mémoires d'Hadrien* de Marguerite Yourcenar.",
+    "reponse": "« Tâchons d'entrer dans la mort les yeux ouverts... »\nContexte : Dernière phrase du roman ; ultime pensée de l'empereur Hadrien mourant, qui clôt sa longue méditation rétrospective sur sa vie, son pouvoir et sa fin prochaine."
+  }
+]

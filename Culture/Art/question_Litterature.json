@@ -1,0 +1,17 @@
+[
+  {
+    "type": "Citation",
+    "enonce": "Citer le passage de Oscar Wilde, préface de *Le Portrait de Dorian Gray*, sur la nature de l'art (« art pour l'art »).",
+    "reponse": "« Il n'y a pas de livre moral ou immoral. Les livres sont bien écrits, ou mal écrits. C'est tout. [...] Tout art est parfaitement inutile. »\nContexte : ouverture et dernière phrase de la préface de *Le Portrait de Dorian Gray* (1891), manifeste de l'esthétisme et de la doctrine de l'« art pour l'art »."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Stendhal, *Le Rouge et le Noir*, sur le roman comme « miroir » du réel.",
+    "reponse": "« Un roman est un miroir qui se promène sur une grande route. »\nContexte : épigraphe d'un chapitre du *Rouge et le Noir* (1830), attribuée par Stendhal à un auteur fictif (« Saint-Réal ») ; formule définissant le roman réaliste comme reflet fidèle de la société, y compris ses aspects les moins reluisants."
+  },
+  {
+    "type": "Citation",
+    "enonce": "Citer la formule de Marcel Proust, *Le Temps retrouvé*, sur le rapport entre l'art et la « vraie vie ».",
+    "reponse": "« La vraie vie, la vie enfin découverte et éclaircie, la seule vie par conséquent réellement vécue, c'est la littérature. »\nContexte : *Le Temps retrouvé* (1927), dernier tome de *À la recherche du temps perdu* ; formule centrale de la conception proustienne de l'art comme révélation d'une vérité intérieure que la vie ordinaire laisse inaperçue."
+  }
+]

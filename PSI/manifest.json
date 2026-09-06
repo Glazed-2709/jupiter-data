@@ -20,12 +20,47 @@
       "name": "Français",
       "path": "Français",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "L'Oeuvre",
+          "path": "Français/L'Oeuvre",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "monet_fiche.pdf",
+              "path": "Fran%C3%A7ais/L'Oeuvre/monet_fiche.pdf",
+              "corrige": false
+            },
+            {
+              "name": "peintres_oeuvre_fiche.pdf",
+              "path": "Fran%C3%A7ais/L'Oeuvre/peintres_oeuvre_fiche.pdf",
+              "corrige": false
+            },
+            {
+              "name": "question_Citations.json",
+              "path": "Fran%C3%A7ais/L'Oeuvre/question_Citations.json",
+              "corrige": false
+            },
+            {
+              "name": "zola_oeuvre_gf.pdf",
+              "path": "Fran%C3%A7ais/L'Oeuvre/zola_oeuvre_gf.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 19.115384615384528,
+          "color": "hsl(19.1,100%,56%)"
+        }
+      ],
       "files": [],
       "questions": [],
       "questionSets": [],
       "hasQuestions": false,
-      "isAvantDernier": false,
+      "isAvantDernier": true,
       "hue": 19.115384615384528,
       "color": "hsl(19.1,100%,56%)"
     },
@@ -33,12 +68,32 @@
       "name": "Info",
       "path": "Info",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "SQL",
+          "path": "Info/SQL",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "Cours SQL.pdf",
+              "path": "Info/SQL/Cours%20SQL.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 74.11538461538453,
+          "color": "hsl(74.1,100%,50%)"
+        }
+      ],
       "files": [],
       "questions": [],
       "questionSets": [],
       "hasQuestions": false,
-      "isAvantDernier": false,
+      "isAvantDernier": true,
       "hue": 74.11538461538453,
       "color": "hsl(74.1,100%,50%)"
     },
@@ -47,6 +102,25 @@
       "path": "Mathématiques",
       "description": "",
       "children": [
+        {
+          "name": "DM",
+          "path": "Mathématiques/DM",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "DM01.pdf",
+              "path": "Math%C3%A9matiques/DM/DM01.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 159.11538461538453,
+          "color": "hsl(159.1,100%,56%)"
+        },
         {
           "name": "Révisions",
           "path": "Mathématiques/Révisions",
@@ -62,14 +136,19 @@
                   "name": "Analyse Asymptotique.pdf",
                   "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Analyse%20Asymptotique.pdf",
                   "corrige": false
+                },
+                {
+                  "name": "Cours – Séries numériques.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Cours%20%E2%80%93%20S%C3%A9ries%20num%C3%A9riques.pdf",
+                  "corrige": false
                 }
               ],
               "questions": [],
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 159.11538461538453,
-              "color": "hsl(159.1,100%,56%)"
+              "hue": 211.11538461538453,
+              "color": "hsl(211.1,100%,60%)"
             },
             {
               "name": "TD",
@@ -77,6 +156,11 @@
               "description": "",
               "children": [],
               "files": [
+                {
+                  "name": "Exercices – Séries numériques.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/TD/Exercices%20%E2%80%93%20S%C3%A9ries%20num%C3%A9riques.pdf",
+                  "corrige": false
+                },
                 {
                   "name": "Exercices – Suites et fonctions.pdf",
                   "path": "Math%C3%A9matiques/R%C3%A9visions/TD/Exercices%20%E2%80%93%20Suites%20et%20fonctions.pdf",
@@ -87,8 +171,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 211.11538461538453,
-              "color": "hsl(211.1,100%,60%)"
+              "hue": 263.1153846153845,
+              "color": "hsl(263.1,100%,60%)"
             }
           ],
           "files": [],
@@ -490,8 +574,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 159.11538461538453,
-          "color": "hsl(159.1,100%,56%)"
+          "hue": 211.11538461538453,
+          "color": "hsl(211.1,100%,60%)"
         }
       ],
       "files": [],
@@ -507,6 +591,58 @@
       "path": "Physique",
       "description": "",
       "children": [
+        {
+          "name": "ALI",
+          "path": "Physique/ALI",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/ALI/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "ALI.pdf",
+                  "path": "Physique/ALI/Cours/ALI.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 19.115384615384528,
+              "color": "hsl(19.1,100%,56%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/ALI/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD_ALI.pdf",
+                  "path": "Physique/ALI/TD/TD_ALI.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 71.11538461538453,
+              "color": "hsl(71.1,100%,50%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 19.115384615384528,
+          "color": "hsl(19.1,100%,56%)"
+        },
         {
           "name": "révisions",
           "path": "Physique/révisions",
@@ -528,8 +664,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 19.115384615384528,
-              "color": "hsl(19.1,100%,56%)"
+              "hue": 71.11538461538453,
+              "color": "hsl(71.1,100%,50%)"
             },
             {
               "name": "TD",
@@ -547,8 +683,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 71.11538461538453,
-              "color": "hsl(71.1,100%,50%)"
+              "hue": 123.11538461538453,
+              "color": "hsl(123.1,100%,56%)"
             }
           ],
           "files": [],
@@ -734,8 +870,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 19.115384615384528,
-          "color": "hsl(19.1,100%,56%)"
+          "hue": 71.11538461538453,
+          "color": "hsl(71.1,100%,50%)"
         }
       ],
       "files": [],
@@ -750,7 +886,60 @@
       "name": "SI",
       "path": "SI",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "SLCI",
+          "path": "SI/SLCI",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "SI/SLCI/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Resume_cours-temporel.pdf",
+                  "path": "SI/SLCI/Cours/Resume_cours-temporel.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 74.11538461538453,
+              "color": "hsl(74.1,100%,50%)"
+            },
+            {
+              "name": "TD",
+              "path": "SI/SLCI/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD00_Revisions_SLCI.pdf",
+                  "path": "SI/SLCI/TD/TD00_Revisions_SLCI.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 126.11538461538453,
+              "color": "hsl(126.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 74.11538461538453,
+          "color": "hsl(74.1,100%,50%)"
+        }
+      ],
       "files": [],
       "questions": [],
       "questionSets": [],
@@ -758,6 +947,25 @@
       "isAvantDernier": false,
       "hue": 74.11538461538453,
       "color": "hsl(74.1,100%,50%)"
+    },
+    {
+      "name": "X SUP",
+      "path": "X SUP",
+      "description": "",
+      "children": [],
+      "files": [
+        {
+          "name": "outils_hors_programme_PSI.md",
+          "path": "X%20SUP/outils_hors_programme_PSI.md",
+          "corrige": false
+        }
+      ],
+      "questions": [],
+      "questionSets": [],
+      "hasQuestions": false,
+      "isAvantDernier": false,
+      "hue": 159.11538461538453,
+      "color": "hsl(159.1,100%,56%)"
     }
   ],
   "files": [],
