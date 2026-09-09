@@ -1,0 +1,37 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction de transfert et l'équation différentielle d'un système du premier ordre standard.",
+    "reponse": "Un système du premier ordre est régi par l'équation différentielle[cite: 9] :\n$$s(t) + \\tau \\frac{ds(t)}{dt} = K e(t) \\quad \\text{avec } s(0) = 0$$[cite: 9]\nSa fonction de transfert s'écrit[cite: 9] :\n$$H(p) = \\frac{S(p)}{E(p)} = \\frac{K}{1 + \\tau p}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\tau$ : constante de temps (en s)[cite: 9]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner la réponse temporelle $s(t)$ d'un système du premier ordre à un échelon d'amplitude $E_0$, ainsi que les valeurs remarquables à $t = \\tau$, $t = 3\\tau$ et $t = 5\\tau$.",
+    "reponse": "Pour $e(t) = E_0 \\mathcal{H}(t)$, la réponse temporelle est[cite: 9] :\n$$s(t) = K E_0 \\left(1 - e^{-\\frac{t}{\\tau}}\\right) \\mathcal{H}(t)$$[cite: 9]\nValeurs remarquables :\n- $s(\\tau) = 0{,}63 K E_0$ (63 % de la valeur finale)[cite: 9]\n- $s(3\\tau) = 0{,}95 K E_0$ (entrée dans la bande à $\\pm 5\\%$, soit $t_{r5\\%} = 3\\tau$)[cite: 9]\n- $s(5\\tau) = 0{,}99 K E_0$ (99 % de la valeur finale)[cite: 9]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Exprimer l'erreur de traînage d'un système du premier ordre de gain $K=1$ soumis à une entrée en rampe $e(t) = V_0 t \\mathcal{H}(t)$.",
+    "reponse": "Pour $K = 1$, la réponse à une rampe tend asymptotiquement vers $s_{\\infty}(t) = V_0(t - \\tau)$[cite: 9]. L'erreur de traînage en régime permanent est[cite: 9] :\n$$\\varepsilon_t = \\lim_{t \\to +\\infty} (e(t) - s(t)) = V_0 \\tau$$[cite: 9]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la fonction de transfert standard d'un système du second ordre et préciser la signification de ses paramètres.",
+    "reponse": "La fonction de transfert d'un système du second ordre s'écrit[cite: 9] :\n$$H(p) = \\frac{K}{1 + \\frac{2\\xi}{\\omega_0}p + \\frac{1}{\\omega_0^2}p^2}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\omega_0$ : pulsation propre non amortie (en $\\text{rad}\\cdot\\text{s}^{-1}$)[cite: 9]\n- $\\xi$ : facteur (ou coefficient) d'amortissement (sans unité)[cite: 9]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Décrire les trois régimes de fonctionnement d'un système du second ordre selon la valeur du facteur d'amortissement $\\xi$.",
+    "reponse": "- **$\\xi > 1$ (Régime apériodique)** : Pôles réels distincts, pas d'oscillation[cite: 9].\n- **$\\xi = 1$ (Régime apériodique critique)** : Pôle double réel ($p_1 = p_2 = -\\omega_0$), réponse la plus rapide sans dépassement[cite: 9].\n- **$\\xi < 1$ (Régime pseudo-périodique)** : Pôles complexes conjugués, présence d'oscillations amorties[cite: 9]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Pour un système du second ordre en régime pseudo-périodique ($\\xi < 1$), donner les expressions de la pseudo-période $T_p$, du temps de pic $t_{\\text{pic}}$ et du dépassement relatif $D_1\\%$.",
+    "reponse": "- **Pseudo-période** : $T_p = \\frac{2\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Temps de pic** : $t_{\\text{pic}} = \\frac{T_p}{2} = \\frac{\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Dépassement en %** : $D_1\\% = 100 \\cdot e^{-\\frac{\\pi \\xi}{\\sqrt{1 - \\xi^2}}}$[cite: 9]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Quelle est la particularité géométrique commune à l'origine ($t = 0$) des réponses indicielles de tous les systèmes du second ordre ?",
+    "reponse": "Toutes les réponses indicielles d'un système du second ordre présentent une **tangente nulle à l'origine**[cite: 9] (${\\frac{ds(0)}{dt} = 0}$), contrairement au premier ordre dont la pente à l'origine est non nulle[cite: 9]."
+  }
+]

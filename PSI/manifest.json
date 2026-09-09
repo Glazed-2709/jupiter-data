@@ -7,7 +7,238 @@
       "name": "Chimie",
       "path": "Chimie",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "révisions",
+          "path": "Chimie/révisions",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Chimie/révisions/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Chimie_Revisions.pdf",
+                  "path": "Chimie/r%C3%A9visions/Cours/Chimie_Revisions.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 342.1153846153845,
+              "color": "hsl(342.1,100%,56%)"
+            },
+            {
+              "name": "TD",
+              "path": "Chimie/révisions/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Revisions_Chimie.pdf",
+                  "path": "Chimie/r%C3%A9visions/TD/Revisions_Chimie.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 34.11538461538453,
+              "color": "hsl(34.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [
+            {
+              "type": "Définition",
+              "enonce": "Définir la notion de transformation chimique et préciser l'écriture générale d'une équation-bilan.",
+              "reponse": "Une **transformation chimique** est la réorganisation des atomes d'une ou plusieurs substances par rupture et formation de liaisons inter-atomiques[cite: 11].\nToute réaction chimique faisant intervenir des espèces $A_i$ s'écrit sous la forme générale[cite: 11] :\n$$0 = \\sum_{i} \\nu_i A_i$$\noù les $\\nu_i$ sont les **coefficients stœchiométriques** (positifs pour les produits, négatifs pour les réactifs)[cite: 11]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir l'avancement d'une réaction chimique ainsi que l'avancement volumique.",
+              "reponse": "Soit une espèce $A_i$ de coefficient stœchiométrique $\\nu_i$[cite: 11]. L'**avancement** $\\xi$ (en mol) est défini par[cite: 11] :\n$$\\xi = \\frac{n_i - n_{i,0}}{\\nu_i} \\iff n_i = n_{i,0} + \\nu_i \\xi$$\noù $n_{i,0}$ est la quantité de matière initiale et $n_i$ la quantité à l'instant $t$[cite: 11].\nEn chimie des solutions à volume $V$ constant, l'**avancement volumique** $x$ (en $\\text{mol}\\cdot\\text{L}^{-1}$) vaut[cite: 11] :\n$$x = \\frac{\\xi}{V}$$[cite: 11]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir le rendement d'une réaction et le taux de dissociation d'un réactif.",
+              "reponse": "- **Rendement $\\eta$** : Rapport de l'avancement à l'état d'équilibre final $\\xi_f$ sur l'avancement maximal $\\xi_{\\text{max}}$[cite: 11] :\n$$\\eta = \\frac{\\xi_f}{\\xi_{\\text{max}}}$$[cite: 11]\n- **Taux de dissociation $\\alpha$** (pour une réaction à réactif unique) : Proportion de réactif transformé par rapport à la quantité initiale $n_0$[cite: 11] :\n$$\\alpha = \\frac{n_0 - n}{n_0} = -\\nu_i \\frac{\\xi}{n_0}$$[cite: 11]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Donner les règles de calcul de l'activité d'un corps pur, d'un gaz dans un mélange et d'un soluté en solution.",
+              "reponse": "- **Corps pur** : $a = 1$ pour un solide ou un liquide pur[cite: 11] ; $a = \\frac{P}{P^\\circ}$ pour un gaz pur ($P^\\circ = 1\\text{ bar}$)[cite: 11].\n- **Mélange gazeux parfait** : $a_i = \\frac{P_i}{P^\\circ}$, où $P_i$ est la pression partielle du gaz $A_i$[cite: 11].\n- **Solution aqueuse diluée** : $a_{\\text{solvant}} = 1$ pour l'eau[cite: 11] ; $a_i = \\frac{c_i}{c^\\circ}$ pour un soluté $A_i$ ($c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$)[cite: 11]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la constante d'équilibre $K^\\circ(T)$ et le quotient réactionnel $Q_r$, puis expliciter le critère d'évolution spontanée.",
+              "reponse": "Pour une réaction $0 = \\sum_{i=1}^N \\nu_i A_i$ à la température $T$[cite: 11] :\n- **Constante d'équilibre** : $K^\\circ(T) = \\prod_{i=1}^N (a_{i,\\text{éq}})^{\\nu_i}$[cite: 11].\n- **Quotient réactionnel** : $Q_r = \\prod_{i=1}^N (a_i)^{\\nu_i}$ (hors équilibre)[cite: 11].\n- **Sens d'évolution**[cite: 11] :\n  - Si $Q_r = K^\\circ$ : Système à l'équilibre[cite: 11].\n  - Si $Q_r < K^\\circ$ : Évolution dans le **sens direct** (formation de produits)[cite: 11].\n  - Si $Q_r > K^\\circ$ : Évolution dans le **sens indirect** (formation de réactifs)[cite: 11]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la vitesse de réaction et la notion d'ordre de réaction.",
+              "reponse": "- **Vitesse de réaction $v$** : $v = \\frac{1}{V}\\frac{d\\xi}{dt} = \\frac{1}{\\nu_i}\\frac{d[A_i]}{dt}$[cite: 11].\n- **Ordre de réaction** : Si la réaction $aA + bB = cC + dD$ admet des ordres partiels $\\alpha$ et $\\beta$, sa vitesse s'écrit $v = k [A]^\\alpha [B]^\\beta$, où $k$ est la constante de vitesse et $\\alpha + \\beta$ l'ordre total[cite: 11]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Présenter les lois d'évolution de $[A](t)$, l'unité de $k$ et le temps de demi-réaction $t_{1/2}$ pour des réactions d'ordre 0, 1 et 2 par rapport à un unique réactif ($aA = \\text{produits}$).",
+              "reponse": "- **Ordre 0** : $[A](t) = [A]_0 - a k t$[cite: 11] | Unité de $k$ : $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{[A]_0}{2ak}$[cite: 11].\n- **Ordre 1** : $[A](t) = [A]_0 e^{-a k t}$[cite: 11] | Unité de $k$ : $\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{\\ln 2}{ak}$[cite: 11].\n- **Ordre 2** : $\\frac{1}{[A](t)} - \\frac{1}{[A]_0} = a k t$[cite: 11] | Unité de $k$ : $\\text{L}\\cdot\\text{mol}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{1}{a k [A]_0}$[cite: 11]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Expliquer le principe de la méthode de dégénérescence de l'ordre.",
+              "reponse": "Pour une réaction de vitesse $v = k [A]^\\alpha [B]^\\beta$, si l'on introduit le réactif $B$ en **large excès**, sa concentration reste quasi constante : $[B](t) \\approx [B]_0$[cite: 11].\nLa vitesse devient $v \\approx k_{\\text{app}} [A]^\\alpha$ avec $k_{\\text{app}} = k [B]_0^\\beta$[cite: 11]. La réaction se comporte comme s'il n'y avait qu'un seul réactif $A$, simplifiant la détermination expérimentale de l'ordre partiel $\\alpha$[cite: 11]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer la loi d'Arrhénius pour la constante de vitesse d'une réaction.",
+              "reponse": "La constante de vitesse $k$ varie avec la température $T$ selon la **loi d'Arrhénius**[cite: 11] :\n$$k = A \\exp\\left(-\\frac{E_A}{RT}\\right)$$\noù $R$ est la constante des gaz parfaits et $E_A$ l'énergie d'activation molaire (en $\\text{J}\\cdot\\text{mol}^{-1}$)[cite: 11]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir un acide, une base (au sens de Brønsted), ainsi que le produit ionique de l'eau $K_e$ et la constante d'acidité $K_a$.",
+              "reponse": "- **Acide / Base** : Un acide $AH$ cède un proton $H^+$ ($AH + H_2O \\rightleftharpoons A^- + H_3O^+$) ; une base $B$ capte un proton ($B + H_2O \\rightleftharpoons BH^+ + HO^-$)[cite: 11]. Réaction totale = fort(e) ; limitée = faible[cite: 11].\n- **Produit ionique de l'eau $K_e$** : Constante de l'auto-protolyse de l'eau ($2H_2O \\rightleftharpoons H_3O^+ + HO^-$)[cite: 11] :\n$$K_e = [H_3O^+]_{\\text{éq}} [HO^-]_{\\text{éq}} = 10^{-14} \\quad (\\text{à } 25^\\circ\\text{C}, pK_e = 14)$$[cite: 11]\n- **Constante d'acidité $K_a$** : Constante de la réaction d'un acide $HA$ avec l'eau[cite: 11] :\n$$K_a = \\frac{[H_3O^+]_{\\text{éq}} [A^-]_{\\text{éq}}}{[HA]_{\\text{éq}}} \\quad (pK_a = -\\log K_a)$$[cite: 11]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Démontrer la règle des domaines de prédominance d'un couple acide-base $AH/A^-$.",
+              "reponse": "Par définition, $K_a = \\frac{[H_3O^+][A^-]}{[HA]} \\iff \\frac{[HA]}{[A^-]} = \\frac{[H_3O^+]}{K_a}$[cite: 11].\n1. L'espèce **acide $AH$ prédomine** si $[HA] \\ge 10 [A^-]$[cite: 11] :\n$$\\frac{[H_3O^+]}{K_a} \\ge 10 \\implies -\\log[H_3O^+] + \\log K_a \\le -1 \\implies pH \\le pK_a - 1$$[cite: 11]\n2. L'espèce **basique $A^-$ prédomine** si $[A^-] \\ge 10 [HA]$[cite: 11] :\n$$pH \\ge pK_a + 1$$[cite: 11]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la constante de solubilité $K_s$ et la solubilité $s$ d'un précipité $A_p B_q(s)$.",
+              "reponse": "Pour l'équilibre de dissolution $A_p B_q(s) \\rightleftharpoons p A^{n+}(aq) + q B^{m-}(aq)$[cite: 11] :\n- **Constante de solubilité $K_s$**[cite: 11] :\n$$K_s = [A^{n+}]_{\\text{éq}}^p [B^{m-}]_{\\text{éq}}^q \\quad (pK_s = -\\log K_s)$$[cite: 11]\n- **Solubilité $s$** : Quantité maximale de solide (en $\\text{mol}\\cdot\\text{L}^{-1}$ ou $\\text{g}\\cdot\\text{L}^{-1}$) que l'on peut dissoudre dans 1 L de solution[cite: 11]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Énoncer la condition d'existence d'un précipité $A_p B_q(s)$ à partir du quotient réactionnel $Q_r$.",
+              "reponse": "- **$Q_r < K_s$** : Pas de précipitation (solution non saturée)[cite: 11]. Si du solide est présent, il se dissout[cite: 11].\n- **$Q_r = K_s$** : Équilibre de solubilité ; la solution est saturée en présence de solide[cite: 11].\n- **$Q_r > K_s$** : Précipitation du solide dans le sens indirect jusqu'à atteindre $Q_r = K_s$[cite: 11]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la notion d'équivalence dans un titrage chimique.",
+              "reponse": "L'**équivalence** est atteinte lorsque le réactif titrant $A_2$ et le réactif titré $A_1$ de la réaction $|\\nu_1|A_1 + |\\nu_2|A_2 = \\text{Produits}$ ont été introduits dans les **proportions stœchiométriques**[cite: 11] :\n$$\\frac{n(A_1)_0}{|\\nu_1|} = \\frac{n(A_2)_{\\text{équivalence}}}{|\\nu_2|}$$[cite: 11]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la population $Z$, la coordinence et la compacité $C$ d'une maille cristalline.",
+              "reponse": "- **Population $Z$** : Nombre d'atomes, d'ions ou de molécules contenus en propre dans la maille[cite: 11].\n- **Coordinence** : Nombre des plus proches voisins d'une entité dans le cristal[cite: 11].\n- **Compacité $C$**[cite: 11] :\n$$C = \\frac{\\text{Volume occupé par les atomes de la maille}}{\\text{Volume de la maille}}$$[cite: 11]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Présenter les caractéristiques (population, relation de tangence, compacité, masse volumique) des mailles cubique simple, cubique centré (CC) et cubique à faces centrées (CFC).",
+              "reponse": "- **Cubique simple** : $Z = 8 \\times \\frac{1}{8} = 1$[cite: 11] | Tangence sur l'arête : $a = 2R$[cite: 11] | $C = \\frac{\\pi}{6} \\approx 0{,}52$[cite: 11] | $\\rho = \\frac{M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique centré (CC)** : $Z = 8 \\times \\frac{1}{8} + 1 = 2$[cite: 11] | Tangence sur la grande diagonale : $4R = a\\sqrt{3}$[cite: 11] | $C = \\frac{\\pi\\sqrt{3}}{8} \\approx 0{,}68$[cite: 11] | $\\rho = \\frac{2M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique à faces centrées (CFC)** : $Z = 8 \\times \\frac{1}{8} + 6 \\times \\frac{1}{2} = 4$[cite: 11] | Tangence sur la diagonale d'une face : $4R = a\\sqrt{2}$[cite: 11] | $C = \\frac{\\pi\\sqrt{2}}{6} \\approx 0{,}74$[cite: 11] | $\\rho = \\frac{4M}{\\mathcal{N}_a a^3}$[cite: 11]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Déterminer le nombre et l'habitabilité des sites octaédriques et tétraédriques d'une structure CFC.",
+              "reponse": "- **Sites octaédriques** : 4 sites par maille (1 au centre + 12 sur les arêtes)[cite: 11]. Habitabilité : $r = R(\\sqrt{2} - 1) \\approx 0{,}41 R$[cite: 11].\n- **Sites tétraédriques** : 8 sites par maille (au centre des 8 sous-cubes de côté $a/2$)[cite: 11]. Habitabilité : $r = R\\left(\\frac{\\sqrt{3}}{\\sqrt{2}} - 1\\right) \\approx 0{,}22 R$[cite: 11]."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_Chimie.json",
+              "label": "Chimie",
+              "items": [
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la notion de transformation chimique et préciser l'écriture générale d'une équation-bilan.",
+                  "reponse": "Une **transformation chimique** est la réorganisation des atomes d'une ou plusieurs substances par rupture et formation de liaisons inter-atomiques[cite: 11].\nToute réaction chimique faisant intervenir des espèces $A_i$ s'écrit sous la forme générale[cite: 11] :\n$$0 = \\sum_{i} \\nu_i A_i$$\noù les $\\nu_i$ sont les **coefficients stœchiométriques** (positifs pour les produits, négatifs pour les réactifs)[cite: 11]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir l'avancement d'une réaction chimique ainsi que l'avancement volumique.",
+                  "reponse": "Soit une espèce $A_i$ de coefficient stœchiométrique $\\nu_i$[cite: 11]. L'**avancement** $\\xi$ (en mol) est défini par[cite: 11] :\n$$\\xi = \\frac{n_i - n_{i,0}}{\\nu_i} \\iff n_i = n_{i,0} + \\nu_i \\xi$$\noù $n_{i,0}$ est la quantité de matière initiale et $n_i$ la quantité à l'instant $t$[cite: 11].\nEn chimie des solutions à volume $V$ constant, l'**avancement volumique** $x$ (en $\\text{mol}\\cdot\\text{L}^{-1}$) vaut[cite: 11] :\n$$x = \\frac{\\xi}{V}$$[cite: 11]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir le rendement d'une réaction et le taux de dissociation d'un réactif.",
+                  "reponse": "- **Rendement $\\eta$** : Rapport de l'avancement à l'état d'équilibre final $\\xi_f$ sur l'avancement maximal $\\xi_{\\text{max}}$[cite: 11] :\n$$\\eta = \\frac{\\xi_f}{\\xi_{\\text{max}}}$$[cite: 11]\n- **Taux de dissociation $\\alpha$** (pour une réaction à réactif unique) : Proportion de réactif transformé par rapport à la quantité initiale $n_0$[cite: 11] :\n$$\\alpha = \\frac{n_0 - n}{n_0} = -\\nu_i \\frac{\\xi}{n_0}$$[cite: 11]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Donner les règles de calcul de l'activité d'un corps pur, d'un gaz dans un mélange et d'un soluté en solution.",
+                  "reponse": "- **Corps pur** : $a = 1$ pour un solide ou un liquide pur[cite: 11] ; $a = \\frac{P}{P^\\circ}$ pour un gaz pur ($P^\\circ = 1\\text{ bar}$)[cite: 11].\n- **Mélange gazeux parfait** : $a_i = \\frac{P_i}{P^\\circ}$, où $P_i$ est la pression partielle du gaz $A_i$[cite: 11].\n- **Solution aqueuse diluée** : $a_{\\text{solvant}} = 1$ pour l'eau[cite: 11] ; $a_i = \\frac{c_i}{c^\\circ}$ pour un soluté $A_i$ ($c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$)[cite: 11]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la constante d'équilibre $K^\\circ(T)$ et le quotient réactionnel $Q_r$, puis expliciter le critère d'évolution spontanée.",
+                  "reponse": "Pour une réaction $0 = \\sum_{i=1}^N \\nu_i A_i$ à la température $T$[cite: 11] :\n- **Constante d'équilibre** : $K^\\circ(T) = \\prod_{i=1}^N (a_{i,\\text{éq}})^{\\nu_i}$[cite: 11].\n- **Quotient réactionnel** : $Q_r = \\prod_{i=1}^N (a_i)^{\\nu_i}$ (hors équilibre)[cite: 11].\n- **Sens d'évolution**[cite: 11] :\n  - Si $Q_r = K^\\circ$ : Système à l'équilibre[cite: 11].\n  - Si $Q_r < K^\\circ$ : Évolution dans le **sens direct** (formation de produits)[cite: 11].\n  - Si $Q_r > K^\\circ$ : Évolution dans le **sens indirect** (formation de réactifs)[cite: 11]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la vitesse de réaction et la notion d'ordre de réaction.",
+                  "reponse": "- **Vitesse de réaction $v$** : $v = \\frac{1}{V}\\frac{d\\xi}{dt} = \\frac{1}{\\nu_i}\\frac{d[A_i]}{dt}$[cite: 11].\n- **Ordre de réaction** : Si la réaction $aA + bB = cC + dD$ admet des ordres partiels $\\alpha$ et $\\beta$, sa vitesse s'écrit $v = k [A]^\\alpha [B]^\\beta$, où $k$ est la constante de vitesse et $\\alpha + \\beta$ l'ordre total[cite: 11]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Présenter les lois d'évolution de $[A](t)$, l'unité de $k$ et le temps de demi-réaction $t_{1/2}$ pour des réactions d'ordre 0, 1 et 2 par rapport à un unique réactif ($aA = \\text{produits}$).",
+                  "reponse": "- **Ordre 0** : $[A](t) = [A]_0 - a k t$[cite: 11] | Unité de $k$ : $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{[A]_0}{2ak}$[cite: 11].\n- **Ordre 1** : $[A](t) = [A]_0 e^{-a k t}$[cite: 11] | Unité de $k$ : $\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{\\ln 2}{ak}$[cite: 11].\n- **Ordre 2** : $\\frac{1}{[A](t)} - \\frac{1}{[A]_0} = a k t$[cite: 11] | Unité de $k$ : $\\text{L}\\cdot\\text{mol}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{1}{a k [A]_0}$[cite: 11]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Expliquer le principe de la méthode de dégénérescence de l'ordre.",
+                  "reponse": "Pour une réaction de vitesse $v = k [A]^\\alpha [B]^\\beta$, si l'on introduit le réactif $B$ en **large excès**, sa concentration reste quasi constante : $[B](t) \\approx [B]_0$[cite: 11].\nLa vitesse devient $v \\approx k_{\\text{app}} [A]^\\alpha$ avec $k_{\\text{app}} = k [B]_0^\\beta$[cite: 11]. La réaction se comporte comme s'il n'y avait qu'un seul réactif $A$, simplifiant la détermination expérimentale de l'ordre partiel $\\alpha$[cite: 11]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer la loi d'Arrhénius pour la constante de vitesse d'une réaction.",
+                  "reponse": "La constante de vitesse $k$ varie avec la température $T$ selon la **loi d'Arrhénius**[cite: 11] :\n$$k = A \\exp\\left(-\\frac{E_A}{RT}\\right)$$\noù $R$ est la constante des gaz parfaits et $E_A$ l'énergie d'activation molaire (en $\\text{J}\\cdot\\text{mol}^{-1}$)[cite: 11]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir un acide, une base (au sens de Brønsted), ainsi que le produit ionique de l'eau $K_e$ et la constante d'acidité $K_a$.",
+                  "reponse": "- **Acide / Base** : Un acide $AH$ cède un proton $H^+$ ($AH + H_2O \\rightleftharpoons A^- + H_3O^+$) ; une base $B$ capte un proton ($B + H_2O \\rightleftharpoons BH^+ + HO^-$)[cite: 11]. Réaction totale = fort(e) ; limitée = faible[cite: 11].\n- **Produit ionique de l'eau $K_e$** : Constante de l'auto-protolyse de l'eau ($2H_2O \\rightleftharpoons H_3O^+ + HO^-$)[cite: 11] :\n$$K_e = [H_3O^+]_{\\text{éq}} [HO^-]_{\\text{éq}} = 10^{-14} \\quad (\\text{à } 25^\\circ\\text{C}, pK_e = 14)$$[cite: 11]\n- **Constante d'acidité $K_a$** : Constante de la réaction d'un acide $HA$ avec l'eau[cite: 11] :\n$$K_a = \\frac{[H_3O^+]_{\\text{éq}} [A^-]_{\\text{éq}}}{[HA]_{\\text{éq}}} \\quad (pK_a = -\\log K_a)$$[cite: 11]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Démontrer la règle des domaines de prédominance d'un couple acide-base $AH/A^-$.",
+                  "reponse": "Par définition, $K_a = \\frac{[H_3O^+][A^-]}{[HA]} \\iff \\frac{[HA]}{[A^-]} = \\frac{[H_3O^+]}{K_a}$[cite: 11].\n1. L'espèce **acide $AH$ prédomine** si $[HA] \\ge 10 [A^-]$[cite: 11] :\n$$\\frac{[H_3O^+]}{K_a} \\ge 10 \\implies -\\log[H_3O^+] + \\log K_a \\le -1 \\implies pH \\le pK_a - 1$$[cite: 11]\n2. L'espèce **basique $A^-$ prédomine** si $[A^-] \\ge 10 [HA]$[cite: 11] :\n$$pH \\ge pK_a + 1$$[cite: 11]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la constante de solubilité $K_s$ et la solubilité $s$ d'un précipité $A_p B_q(s)$.",
+                  "reponse": "Pour l'équilibre de dissolution $A_p B_q(s) \\rightleftharpoons p A^{n+}(aq) + q B^{m-}(aq)$[cite: 11] :\n- **Constante de solubilité $K_s$**[cite: 11] :\n$$K_s = [A^{n+}]_{\\text{éq}}^p [B^{m-}]_{\\text{éq}}^q \\quad (pK_s = -\\log K_s)$$[cite: 11]\n- **Solubilité $s$** : Quantité maximale de solide (en $\\text{mol}\\cdot\\text{L}^{-1}$ ou $\\text{g}\\cdot\\text{L}^{-1}$) que l'on peut dissoudre dans 1 L de solution[cite: 11]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Énoncer la condition d'existence d'un précipité $A_p B_q(s)$ à partir du quotient réactionnel $Q_r$.",
+                  "reponse": "- **$Q_r < K_s$** : Pas de précipitation (solution non saturée)[cite: 11]. Si du solide est présent, il se dissout[cite: 11].\n- **$Q_r = K_s$** : Équilibre de solubilité ; la solution est saturée en présence de solide[cite: 11].\n- **$Q_r > K_s$** : Précipitation du solide dans le sens indirect jusqu'à atteindre $Q_r = K_s$[cite: 11]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la notion d'équivalence dans un titrage chimique.",
+                  "reponse": "L'**équivalence** est atteinte lorsque le réactif titrant $A_2$ et le réactif titré $A_1$ de la réaction $|\\nu_1|A_1 + |\\nu_2|A_2 = \\text{Produits}$ ont été introduits dans les **proportions stœchiométriques**[cite: 11] :\n$$\\frac{n(A_1)_0}{|\\nu_1|} = \\frac{n(A_2)_{\\text{équivalence}}}{|\\nu_2|}$$[cite: 11]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la population $Z$, la coordinence et la compacité $C$ d'une maille cristalline.",
+                  "reponse": "- **Population $Z$** : Nombre d'atomes, d'ions ou de molécules contenus en propre dans la maille[cite: 11].\n- **Coordinence** : Nombre des plus proches voisins d'une entité dans le cristal[cite: 11].\n- **Compacité $C$**[cite: 11] :\n$$C = \\frac{\\text{Volume occupé par les atomes de la maille}}{\\text{Volume de la maille}}$$[cite: 11]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Présenter les caractéristiques (population, relation de tangence, compacité, masse volumique) des mailles cubique simple, cubique centré (CC) et cubique à faces centrées (CFC).",
+                  "reponse": "- **Cubique simple** : $Z = 8 \\times \\frac{1}{8} = 1$[cite: 11] | Tangence sur l'arête : $a = 2R$[cite: 11] | $C = \\frac{\\pi}{6} \\approx 0{,}52$[cite: 11] | $\\rho = \\frac{M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique centré (CC)** : $Z = 8 \\times \\frac{1}{8} + 1 = 2$[cite: 11] | Tangence sur la grande diagonale : $4R = a\\sqrt{3}$[cite: 11] | $C = \\frac{\\pi\\sqrt{3}}{8} \\approx 0{,}68$[cite: 11] | $\\rho = \\frac{2M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique à faces centrées (CFC)** : $Z = 8 \\times \\frac{1}{8} + 6 \\times \\frac{1}{2} = 4$[cite: 11] | Tangence sur la diagonale d'une face : $4R = a\\sqrt{2}$[cite: 11] | $C = \\frac{\\pi\\sqrt{2}}{6} \\approx 0{,}74$[cite: 11] | $\\rho = \\frac{4M}{\\mathcal{N}_a a^3}$[cite: 11]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Déterminer le nombre et l'habitabilité des sites octaédriques et tétraédriques d'une structure CFC.",
+                  "reponse": "- **Sites octaédriques** : 4 sites par maille (1 au centre + 12 sur les arêtes)[cite: 11]. Habitabilité : $r = R(\\sqrt{2} - 1) \\approx 0{,}41 R$[cite: 11].\n- **Sites tétraédriques** : 8 sites par maille (au centre des 8 sous-cubes de côté $a/2$)[cite: 11]. Habitabilité : $r = R\\left(\\frac{\\sqrt{3}}{\\sqrt{2}} - 1\\right) \\approx 0{,}22 R$[cite: 11]."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
+          "isAvantDernier": true,
+          "hue": 342.1153846153845,
+          "color": "hsl(342.1,100%,56%)"
+        }
+      ],
       "files": [],
       "questions": [],
       "questionSets": [],
@@ -1382,8 +1613,18 @@
               "children": [],
               "files": [
                 {
+                  "name": "Formulation_infinitesimale_principes_thermodynamique.pdf",
+                  "path": "Physique/r%C3%A9visions/Cours/Formulation_infinitesimale_principes_thermodynamique.pdf",
+                  "corrige": false
+                },
+                {
                   "name": "Stabilite_des_systemes_lineaires.pdf",
                   "path": "Physique/r%C3%A9visions/Cours/Stabilite_des_systemes_lineaires.pdf",
+                  "corrige": false
+                },
+                {
+                  "name": "Thermodynamique_Revisions.pdf",
+                  "path": "Physique/r%C3%A9visions/Cours/Thermodynamique_Revisions.pdf",
                   "corrige": false
                 }
               ],
@@ -1403,6 +1644,11 @@
                 {
                   "name": "Electronique_Stabilite_systemes_lineaires.pdf",
                   "path": "Physique/r%C3%A9visions/TD/Electronique_Stabilite_systemes_lineaires.pdf",
+                  "corrige": false
+                },
+                {
+                  "name": "Revisions_Thermo.pdf",
+                  "path": "Physique/r%C3%A9visions/TD/Revisions_Thermo.pdf",
                   "corrige": false
                 }
               ],
@@ -1500,12 +1746,102 @@
               "type": "Exercice",
               "enonce": "Dans un système linéaire d'ordre supérieur à 2, est-il toujours possible de conclure sur la stabilité uniquement en vérifiant que les coefficients du dénominateur de la fonction de transfert sont de même signe ?",
               "reponse": "Non, pour un ordre supérieur à deux, le fait que les coefficients soient de même signe est une condition nécessaire mais non suffisante. Il n'est pas possible de conclure simplement par cette seule analyse rapide de la fonction de transfert."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la différentielle d'une fonction de trois variables et préciser son sens physique.",
+              "reponse": "Soit $f(x,y,z)$ une fonction de trois variables[cite: 9]. Sa **différentielle** $df$ s'écrit[cite: 9] :\n$$df = \\frac{\\partial f}{\\partial x} dx + \\frac{\\partial f}{\\partial y} dy + \\frac{\\partial f}{\\partial z} dz$$\n- $dx, dy, dz$ sont les variations infinitésimales des variables $x, y, z$[cite: 9].\n- $\\frac{\\partial f}{\\partial x}$ est la dérivée partielle de $f$ par rapport à $x$[cite: 9].\n- **Sens physique** : $df$ représente la variation de la fonction $f$ lorsque $x$ varie de $dx$, $y$ de $dy$ et $z$ de $dz$[cite: 9]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Distinguer une différentielle d'une forme différentielle en physique et donner la convention de notation.",
+              "reponse": "Soit une grandeur s'exprimant sous la forme $A(x,y,z)dx + B(x,y,z)dy + C(x,y,z)dz$[cite: 9] :\n- **Différentielle ($d droit$)** : S'il existe une fonction $f$ telle que $A = \\frac{\\partial f}{\\partial x}$, $B = \\frac{\\partial f}{\\partial y}$ et $C = \\frac{\\partial f}{\\partial z}$, alors la grandeur est la différentielle $df$ d'une fonction d'état[cite: 9].\n- **Forme différentielle ($\\delta delta$)** : S'il n'existe pas de telle fonction $f$, la grandeur n'est pas une variation d'une fonction[cite: 9]. C'est une forme différentielle notée $\\delta w = A dx + B dy + C dz$[cite: 9].\n- **Notations** : $dX$ = variation infinitésimale d'une grandeur d'état $X$ ; $\\delta X$ = quantité infinitésimale d'une grandeur $X$ non fonction d'état ; $\\partial f$ = opérateur de dérivée partielle[cite: 9]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Comparer le comportement d'une différentielle et d'une forme différentielle lors d'une intégration le long d'un chemin $\\mathcal{C}$ entre l'état A et l'état B.",
+              "reponse": "- **Cas d'une différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} df = \\int_A^B df = f(B) - f(A) = \\Delta f$$\nL'intégrale ne dépend que des états initial $A$ et final $B$, indépendamment du chemin suivi[cite: 9].\n- **Cas d'une forme différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} \\delta w = w$$\nL'intégrale dépend a priori du chemin $\\mathcal{C}$ suivi entre $A$ et $B$[cite: 9]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le premier principe de la thermodynamique sous forme infinitésimale.",
+              "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dU + d\\mathcal{E}_m = \\delta W + \\delta Q$$\n- $dU$ : variation infinitésimale d'énergie interne[cite: 9].\n- $d\\mathcal{E}_m$ : variation infinitésimale d'énergie mécanique[cite: 9].\n- $\\delta W$ : travail infinitésimal échangé[cite: 9].\n- $\\delta Q$ : transfert thermique infinitésimal échangé[cite: 9].\n\n*Cas particuliers* :\n- Système au repos ($d\\mathcal{E}_m = 0$) : $dU = \\delta W + \\delta Q$[cite: 9].\n- Transformation monobare au repos : $dH = \\delta W_{\\text{autres}} + \\delta Q$[cite: 9]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le deuxième principe de la thermodynamique sous forme infinitésimale.",
+              "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dS = \\delta S_e + \\delta S_c$$\n- $dS$ : variation d'entropie du système[cite: 9].\n- $\\delta S_e = \\frac{\\delta Q}{T_0(t)}$ : entropie échangée ($T_0(t)$ étant la température du milieu extérieur)[cite: 9].\n- $\\delta S_c$ : entropie créée au sein du système, avec $\\delta S_c \\ge 0$ (égal à 0 pour une transformation réversible)[cite: 9]."
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Démontrer la formule de la variation d'entropie d'un gaz parfait $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$ à partir des principes sous forme infinitésimale.",
+              "reponse": "1. Premier principe : $dU = \\delta W + \\delta Q \\implies C_v dT = -P_{\\text{ext}} dV + \\delta Q$[cite: 9].\n2. Deuxième principe : $\\delta Q = T_0 (dS - \\delta S_c)$[cite: 9].\n3. On choisit un chemin fictif réversible entre $A$ et $B$ ($P_{\\text{ext}} = P$, $T_0 = T$, $\\delta S_c = 0$)[cite: 9] :\n$$C_v dT = -P dV + T dS \\implies dS = C_v \\frac{dT}{T} + \\frac{P}{T} dV$$\n4. Comme le gaz est parfait, $\\frac{P}{T} = \\frac{nR}{V}$, d'où $dS = C_v \\frac{dT}{T} + nR \\frac{dV}{V}$[cite: 9].\n5. En intégrant entre $A$ et $B$[cite: 9] :\n$$\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$$[cite: 9]"
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Déterminer la variation d'entropie $\\Delta S$ d'une phase condensée indilatable et incompressible.",
+              "reponse": "Pour une phase condensée indilatable et incompressible[cite: 9] :\n1. Comme le système est indéformable ($dV = 0$), $dU = \\delta Q$[cite: 9].\n2. On a $dU = C dT$ ($C$ étant la capacité thermique)[cite: 9].\n3. Sur un chemin réversible ($T_0 = T$), $\\delta Q = T dS$, d'où $C dT = T dS \\implies dS = C \\frac{dT}{T}$[cite: 9].\n4. Par intégration entre $T_A$ et $T_B$[cite: 9] :\n$$\\Delta S = C \\ln\\left(\\frac{T_B}{T_A}\\right)$$[cite: 9]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir les notions de système (ouvert, fermé, isolé), milieu extérieur et univers.",
+              "reponse": "- **Univers** : Ensemble de l'espace et de la matière accessible[cite: 10].\n- **Système** : Partie privilégiée de l'Univers délimitée par une frontière[cite: 10].\n- **Milieu extérieur** : Partie de l'Univers hors du système[cite: 10].\n- **Système ouvert** : Échange de la matière et de l'énergie[cite: 10].\n- **Système fermé** : Échange de l'énergie, mais pas de matière[cite: 10].\n- **Système isolé** : Aucun échange ni de matière ni d'énergie[cite: 10].\n- **Parois** : *Diathermanes* (perméables aux transferts thermiques) vs *Athermanes / Calorifugées* (imperméables aux transferts thermiques)[cite: 10]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Distinguer une grandeur extensive d'une grandeur intensive.",
+              "reponse": "- **Grandeur extensive** : Varie proportionnellement à la taille du système ; elle s'ajoute lors de la réunion de deux sous-systèmes[cite: 10] :\n$$X(A \\cup B) = X(A) + X(B)$$\n*(Ex : Volume $V$, masse $m$, quantité de matière $n$, énergie interne $U$, entropie $S$)*[cite: 10].\n- **Grandeur intensive** : Indépendante de la taille du système ; reste inchangée lors de la réunion de sous-systèmes identiques[cite: 10] :\n$$X(A \\cup B) = X(A) = X(B) \\quad \\text{si } X(A)=X(B)$$\n*(Ex : Pression $P$, température $T$)*[cite: 10]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Présenter le modèle du gaz parfait et le modèle de la phase condensée indilatable et incompressible.",
+              "reponse": "- **Gaz parfait** : Modèle valable pour des gaz peu denses (interactions interparticulaires négligées)[cite: 10]. Équation d'état[cite: 10] :\n$$PV = nRT \\quad \\text{avec } R = 8{,}314 \\text{ J}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1}$$\n- **Phase condensée indilatable et incompressible** : Modèle pour solides et liquides dont le volume ne varie ni avec la température (indilatable), ni avec la pression (incompressible)[cite: 10]. Le volume molaire y est strictement constant[cite: 10]."
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir les principaux types de transformations thermodynamiques.",
+              "reponse": "- **Isochore** : Volume constant ($V = cste$)[cite: 10].\n- **Isotherme** : Température du système définie et constante ($T = cste$)[cite: 10].\n- **Isobare** : Pression du système définie et constante ($P = cste$)[cite: 10].\n- **Monotherme** : Température du milieu extérieur constante ($T_0 = cste$)[cite: 10].\n- **Monobare** : Pression du milieu extérieur constante ($P_0 = cste$)[cite: 10].\n- **Adiabatique** : Sans aucun échange thermique avec l'extérieur ($Q = 0$)[cite: 10].\n- **Quasi-statique** : Transformation infiniment lente (succession d'états d'équilibre)[cite: 10].\n- **Réversible** : Quasi-statique et pouvant être inversée en repassant par les mêmes états[cite: 10]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le premier principe sous sa forme intégrale et expliciter l'énergie interne et l'enthalpie.",
+              "reponse": "- **Premier principe** : $\\Delta (U + \\mathcal{E}_m) = W + Q$ (pour un système au repos : $\\Delta U = W + Q$)[cite: 10].\n- **Énergie interne $U$** : $U = E_{c,\\text{micro}} + E_{p,\\text{micro}}$ (somme des énergies cinétiques microscopiques et potentielles d'interaction)[cite: 10].\n- **Travail des forces de pression** : $W_p = -\\int P_{\\text{ext}} dV$[cite: 10].\n- **Enthalpie $H$** : Fonction d'état extensive définie par $H = U + PV$[cite: 10]. Pour une transformation monobare : $\\Delta H = W_{\\text{autre}} + Q$[cite: 10]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Rappeler les lois de Joule et les capacités thermiques des gaz parfaits et des phases condensées.",
+              "reponse": "- **Gaz parfait** :\n  - $1^{\\text{re}}$ loi de Joule : $U$ ne dépend que de $T \\implies dU = C_v dT \\implies \\Delta U = C_v \\Delta T$[cite: 10].\n  - $2^{\\text{e}}$ loi de Joule : $H$ ne dépend que de $T \\implies dH = C_p dT \\implies \\Delta H = C_p \\Delta T$[cite: 10].\n  - *Gaz monoatomique* : $C_v = \\frac{3}{2}nR$, $C_p = \\frac{5}{2}nR$[cite: 10].\n  - *Gaz diatomique (température ambiante)* : $C_v = \\frac{5}{2}nR$, $C_p = \\frac{7}{2}nR$[cite: 10].\n- **Phase condensée indilatable et incompressible** :\n  - Obéit aux deux lois de Joule avec $C_v \\approx C_p = C$[cite: 10].\n  - $\\Delta U \\approx \\Delta H \\approx C \\Delta T$[cite: 10]."
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer le deuxième principe sous sa forme intégrale et rappeler les trois expressions de $\\Delta S$ pour un gaz parfait.",
+              "reponse": "- **Deuxième principe** : $\\Delta S = S_e + S_c$ avec $S_e = \\frac{Q}{T_0}$ et $S_c \\ge 0$ ($S_c = 0$ si réversible)[cite: 10].\n- **Expressions de $\\Delta S_{AB}$ pour un gaz parfait**[cite: 10] :\n  1. $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]\n  2. $\\Delta S = C_p \\ln\\left(\\frac{T_B}{T_A}\\right) - nR \\ln\\left(\\frac{P_B}{P_A}\\right)$[cite: 10]\n  3. $\\Delta S = C_v \\ln\\left(\\frac{P_B}{P_A}\\right) + C_p \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]"
+            },
+            {
+              "type": "Théorème",
+              "enonce": "Énoncer la loi de Laplace pour un gaz parfait.",
+              "reponse": "Pour une transformation **adiabatique et réversible** (isentropique) d'un gaz parfait[cite: 10] :\n$$PV^\\gamma = cste$$\nOu sous d'autres formes[cite: 10] :\n$$P^{1-\\gamma} T^\\gamma = cste \\quad \\text{et} \\quad T V^{\\gamma-1} = cste$$\n*(avec $\\gamma = \\frac{C_p}{C_v}$)*[cite: 10]."
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Démontrer l'inégalité de Clausius pour une machine thermique ditherme sur un cycle.",
+              "reponse": "1. Deuxième principe sur un cycle : $\\Delta S = S_e + S_c = 0$ (car $S$ est une fonction d'état)[cite: 10].\n2. D'où $S_e = -S_c$[cite: 10].\n3. Pour une machine ditherme échangeant $Q_C$ avec la source chaude à $T_C$ et $Q_F$ avec la source froide à $T_F$[cite: 10] :\n$$S_e = \\frac{Q_C}{T_C} + \\frac{Q_F}{T_F}$$[cite: 10]\n4. Comme $S_c \\ge 0$, on a $S_e = -S_c \\le 0$, ce qui donne **l'inégalité de Clausius**[cite: 10] :\n$$\\frac{Q_C}{T_C} + \\frac{Q_F}{T_F} \\le 0$$[cite: 10]"
+            },
+            {
+              "type": "Démonstration",
+              "enonce": "Démontrer l'expression du rendement de Carnot $\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$ pour un moteur ditherme.",
+              "reponse": "1. Rendement par définition : $\\eta = \\left| \\frac{\\text{Énergie utile}}{\\text{Énergie coûteuse}} \\right| = -\\frac{W}{Q_C}$ ($W < 0$, $Q_C > 0$)[cite: 10].\n2. Sur un cycle, $\\Delta U = W + Q_C + Q_F = 0 \\implies -W = Q_C + Q_F$[cite: 10].\n3. Le rendement s'écrit $\\eta = \\frac{Q_C + Q_F}{Q_C} = 1 + \\frac{Q_F}{Q_C}$[cite: 10].\n4. D'après l'inégalité de Clausius : $\\frac{Q_F}{T_F} \\le -\\frac{Q_C}{T_C} \\implies \\frac{Q_F}{Q_C} \\le -\\frac{T_F}{T_C}$[cite: 10].\n5. On en déduit $\\eta \\le 1 - \\frac{T_F}{T_C}$[cite: 10]. Le maximum est atteint en régime réversible (égalité)[cite: 10] :\n$$\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$$[cite: 10]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Donner les expressions des efficacités de Carnot pour une machine frigorifique et une pompe à chaleur dithermes.",
+              "reponse": "- **Machine frigorifique**[cite: 10] :\n  - Efficacité : $e = \\frac{Q_F}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_F}{T_C - T_F}$$[cite: 10]\n- **Pompe à chaleur (PAC)**[cite: 10] :\n  - Efficacité : $e = -\\frac{Q_C}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_C}{T_C - T_F}$$[cite: 10]"
             }
           ],
           "questionSets": [
             {
-              "file": "questions.json",
-              "label": "Cours",
+              "file": "questions_SSL.json",
+              "label": "SSL",
               "items": [
                 {
                   "type": "Définition",
@@ -1593,6 +1929,102 @@
                   "reponse": "Non, pour un ordre supérieur à deux, le fait que les coefficients soient de même signe est une condition nécessaire mais non suffisante. Il n'est pas possible de conclure simplement par cette seule analyse rapide de la fonction de transfert."
                 }
               ]
+            },
+            {
+              "file": "questions_Thermo.json",
+              "label": "Thermo",
+              "items": [
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la différentielle d'une fonction de trois variables et préciser son sens physique.",
+                  "reponse": "Soit $f(x,y,z)$ une fonction de trois variables[cite: 9]. Sa **différentielle** $df$ s'écrit[cite: 9] :\n$$df = \\frac{\\partial f}{\\partial x} dx + \\frac{\\partial f}{\\partial y} dy + \\frac{\\partial f}{\\partial z} dz$$\n- $dx, dy, dz$ sont les variations infinitésimales des variables $x, y, z$[cite: 9].\n- $\\frac{\\partial f}{\\partial x}$ est la dérivée partielle de $f$ par rapport à $x$[cite: 9].\n- **Sens physique** : $df$ représente la variation de la fonction $f$ lorsque $x$ varie de $dx$, $y$ de $dy$ et $z$ de $dz$[cite: 9]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Distinguer une différentielle d'une forme différentielle en physique et donner la convention de notation.",
+                  "reponse": "Soit une grandeur s'exprimant sous la forme $A(x,y,z)dx + B(x,y,z)dy + C(x,y,z)dz$[cite: 9] :\n- **Différentielle ($d droit$)** : S'il existe une fonction $f$ telle que $A = \\frac{\\partial f}{\\partial x}$, $B = \\frac{\\partial f}{\\partial y}$ et $C = \\frac{\\partial f}{\\partial z}$, alors la grandeur est la différentielle $df$ d'une fonction d'état[cite: 9].\n- **Forme différentielle ($\\delta delta$)** : S'il n'existe pas de telle fonction $f$, la grandeur n'est pas une variation d'une fonction[cite: 9]. C'est une forme différentielle notée $\\delta w = A dx + B dy + C dz$[cite: 9].\n- **Notations** : $dX$ = variation infinitésimale d'une grandeur d'état $X$ ; $\\delta X$ = quantité infinitésimale d'une grandeur $X$ non fonction d'état ; $\\partial f$ = opérateur de dérivée partielle[cite: 9]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Comparer le comportement d'une différentielle et d'une forme différentielle lors d'une intégration le long d'un chemin $\\mathcal{C}$ entre l'état A et l'état B.",
+                  "reponse": "- **Cas d'une différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} df = \\int_A^B df = f(B) - f(A) = \\Delta f$$\nL'intégrale ne dépend que des états initial $A$ et final $B$, indépendamment du chemin suivi[cite: 9].\n- **Cas d'une forme différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} \\delta w = w$$\nL'intégrale dépend a priori du chemin $\\mathcal{C}$ suivi entre $A$ et $B$[cite: 9]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le premier principe de la thermodynamique sous forme infinitésimale.",
+                  "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dU + d\\mathcal{E}_m = \\delta W + \\delta Q$$\n- $dU$ : variation infinitésimale d'énergie interne[cite: 9].\n- $d\\mathcal{E}_m$ : variation infinitésimale d'énergie mécanique[cite: 9].\n- $\\delta W$ : travail infinitésimal échangé[cite: 9].\n- $\\delta Q$ : transfert thermique infinitésimal échangé[cite: 9].\n\n*Cas particuliers* :\n- Système au repos ($d\\mathcal{E}_m = 0$) : $dU = \\delta W + \\delta Q$[cite: 9].\n- Transformation monobare au repos : $dH = \\delta W_{\\text{autres}} + \\delta Q$[cite: 9]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le deuxième principe de la thermodynamique sous forme infinitésimale.",
+                  "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dS = \\delta S_e + \\delta S_c$$\n- $dS$ : variation d'entropie du système[cite: 9].\n- $\\delta S_e = \\frac{\\delta Q}{T_0(t)}$ : entropie échangée ($T_0(t)$ étant la température du milieu extérieur)[cite: 9].\n- $\\delta S_c$ : entropie créée au sein du système, avec $\\delta S_c \\ge 0$ (égal à 0 pour une transformation réversible)[cite: 9]."
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Démontrer la formule de la variation d'entropie d'un gaz parfait $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$ à partir des principes sous forme infinitésimale.",
+                  "reponse": "1. Premier principe : $dU = \\delta W + \\delta Q \\implies C_v dT = -P_{\\text{ext}} dV + \\delta Q$[cite: 9].\n2. Deuxième principe : $\\delta Q = T_0 (dS - \\delta S_c)$[cite: 9].\n3. On choisit un chemin fictif réversible entre $A$ et $B$ ($P_{\\text{ext}} = P$, $T_0 = T$, $\\delta S_c = 0$)[cite: 9] :\n$$C_v dT = -P dV + T dS \\implies dS = C_v \\frac{dT}{T} + \\frac{P}{T} dV$$\n4. Comme le gaz est parfait, $\\frac{P}{T} = \\frac{nR}{V}$, d'où $dS = C_v \\frac{dT}{T} + nR \\frac{dV}{V}$[cite: 9].\n5. En intégrant entre $A$ et $B$[cite: 9] :\n$$\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$$[cite: 9]"
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Déterminer la variation d'entropie $\\Delta S$ d'une phase condensée indilatable et incompressible.",
+                  "reponse": "Pour une phase condensée indilatable et incompressible[cite: 9] :\n1. Comme le système est indéformable ($dV = 0$), $dU = \\delta Q$[cite: 9].\n2. On a $dU = C dT$ ($C$ étant la capacité thermique)[cite: 9].\n3. Sur un chemin réversible ($T_0 = T$), $\\delta Q = T dS$, d'où $C dT = T dS \\implies dS = C \\frac{dT}{T}$[cite: 9].\n4. Par intégration entre $T_A$ et $T_B$[cite: 9] :\n$$\\Delta S = C \\ln\\left(\\frac{T_B}{T_A}\\right)$$[cite: 9]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir les notions de système (ouvert, fermé, isolé), milieu extérieur et univers.",
+                  "reponse": "- **Univers** : Ensemble de l'espace et de la matière accessible[cite: 10].\n- **Système** : Partie privilégiée de l'Univers délimitée par une frontière[cite: 10].\n- **Milieu extérieur** : Partie de l'Univers hors du système[cite: 10].\n- **Système ouvert** : Échange de la matière et de l'énergie[cite: 10].\n- **Système fermé** : Échange de l'énergie, mais pas de matière[cite: 10].\n- **Système isolé** : Aucun échange ni de matière ni d'énergie[cite: 10].\n- **Parois** : *Diathermanes* (perméables aux transferts thermiques) vs *Athermanes / Calorifugées* (imperméables aux transferts thermiques)[cite: 10]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Distinguer une grandeur extensive d'une grandeur intensive.",
+                  "reponse": "- **Grandeur extensive** : Varie proportionnellement à la taille du système ; elle s'ajoute lors de la réunion de deux sous-systèmes[cite: 10] :\n$$X(A \\cup B) = X(A) + X(B)$$\n*(Ex : Volume $V$, masse $m$, quantité de matière $n$, énergie interne $U$, entropie $S$)*[cite: 10].\n- **Grandeur intensive** : Indépendante de la taille du système ; reste inchangée lors de la réunion de sous-systèmes identiques[cite: 10] :\n$$X(A \\cup B) = X(A) = X(B) \\quad \\text{si } X(A)=X(B)$$\n*(Ex : Pression $P$, température $T$)*[cite: 10]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Présenter le modèle du gaz parfait et le modèle de la phase condensée indilatable et incompressible.",
+                  "reponse": "- **Gaz parfait** : Modèle valable pour des gaz peu denses (interactions interparticulaires négligées)[cite: 10]. Équation d'état[cite: 10] :\n$$PV = nRT \\quad \\text{avec } R = 8{,}314 \\text{ J}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1}$$\n- **Phase condensée indilatable et incompressible** : Modèle pour solides et liquides dont le volume ne varie ni avec la température (indilatable), ni avec la pression (incompressible)[cite: 10]. Le volume molaire y est strictement constant[cite: 10]."
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir les principaux types de transformations thermodynamiques.",
+                  "reponse": "- **Isochore** : Volume constant ($V = cste$)[cite: 10].\n- **Isotherme** : Température du système définie et constante ($T = cste$)[cite: 10].\n- **Isobare** : Pression du système définie et constante ($P = cste$)[cite: 10].\n- **Monotherme** : Température du milieu extérieur constante ($T_0 = cste$)[cite: 10].\n- **Monobare** : Pression du milieu extérieur constante ($P_0 = cste$)[cite: 10].\n- **Adiabatique** : Sans aucun échange thermique avec l'extérieur ($Q = 0$)[cite: 10].\n- **Quasi-statique** : Transformation infiniment lente (succession d'états d'équilibre)[cite: 10].\n- **Réversible** : Quasi-statique et pouvant être inversée en repassant par les mêmes états[cite: 10]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le premier principe sous sa forme intégrale et expliciter l'énergie interne et l'enthalpie.",
+                  "reponse": "- **Premier principe** : $\\Delta (U + \\mathcal{E}_m) = W + Q$ (pour un système au repos : $\\Delta U = W + Q$)[cite: 10].\n- **Énergie interne $U$** : $U = E_{c,\\text{micro}} + E_{p,\\text{micro}}$ (somme des énergies cinétiques microscopiques et potentielles d'interaction)[cite: 10].\n- **Travail des forces de pression** : $W_p = -\\int P_{\\text{ext}} dV$[cite: 10].\n- **Enthalpie $H$** : Fonction d'état extensive définie par $H = U + PV$[cite: 10]. Pour une transformation monobare : $\\Delta H = W_{\\text{autre}} + Q$[cite: 10]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Rappeler les lois de Joule et les capacités thermiques des gaz parfaits et des phases condensées.",
+                  "reponse": "- **Gaz parfait** :\n  - $1^{\\text{re}}$ loi de Joule : $U$ ne dépend que de $T \\implies dU = C_v dT \\implies \\Delta U = C_v \\Delta T$[cite: 10].\n  - $2^{\\text{e}}$ loi de Joule : $H$ ne dépend que de $T \\implies dH = C_p dT \\implies \\Delta H = C_p \\Delta T$[cite: 10].\n  - *Gaz monoatomique* : $C_v = \\frac{3}{2}nR$, $C_p = \\frac{5}{2}nR$[cite: 10].\n  - *Gaz diatomique (température ambiante)* : $C_v = \\frac{5}{2}nR$, $C_p = \\frac{7}{2}nR$[cite: 10].\n- **Phase condensée indilatable et incompressible** :\n  - Obéit aux deux lois de Joule avec $C_v \\approx C_p = C$[cite: 10].\n  - $\\Delta U \\approx \\Delta H \\approx C \\Delta T$[cite: 10]."
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer le deuxième principe sous sa forme intégrale et rappeler les trois expressions de $\\Delta S$ pour un gaz parfait.",
+                  "reponse": "- **Deuxième principe** : $\\Delta S = S_e + S_c$ avec $S_e = \\frac{Q}{T_0}$ et $S_c \\ge 0$ ($S_c = 0$ si réversible)[cite: 10].\n- **Expressions de $\\Delta S_{AB}$ pour un gaz parfait**[cite: 10] :\n  1. $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]\n  2. $\\Delta S = C_p \\ln\\left(\\frac{T_B}{T_A}\\right) - nR \\ln\\left(\\frac{P_B}{P_A}\\right)$[cite: 10]\n  3. $\\Delta S = C_v \\ln\\left(\\frac{P_B}{P_A}\\right) + C_p \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]"
+                },
+                {
+                  "type": "Théorème",
+                  "enonce": "Énoncer la loi de Laplace pour un gaz parfait.",
+                  "reponse": "Pour une transformation **adiabatique et réversible** (isentropique) d'un gaz parfait[cite: 10] :\n$$PV^\\gamma = cste$$\nOu sous d'autres formes[cite: 10] :\n$$P^{1-\\gamma} T^\\gamma = cste \\quad \\text{et} \\quad T V^{\\gamma-1} = cste$$\n*(avec $\\gamma = \\frac{C_p}{C_v}$)*[cite: 10]."
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Démontrer l'inégalité de Clausius pour une machine thermique ditherme sur un cycle.",
+                  "reponse": "1. Deuxième principe sur un cycle : $\\Delta S = S_e + S_c = 0$ (car $S$ est une fonction d'état)[cite: 10].\n2. D'où $S_e = -S_c$[cite: 10].\n3. Pour une machine ditherme échangeant $Q_C$ avec la source chaude à $T_C$ et $Q_F$ avec la source froide à $T_F$[cite: 10] :\n$$S_e = \\frac{Q_C}{T_C} + \\frac{Q_F}{T_F}$$[cite: 10]\n4. Comme $S_c \\ge 0$, on a $S_e = -S_c \\le 0$, ce qui donne **l'inégalité de Clausius**[cite: 10] :\n$$\\frac{Q_C}{T_C} + \\frac{Q_F}{T_F} \\le 0$$[cite: 10]"
+                },
+                {
+                  "type": "Démonstration",
+                  "enonce": "Démontrer l'expression du rendement de Carnot $\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$ pour un moteur ditherme.",
+                  "reponse": "1. Rendement par définition : $\\eta = \\left| \\frac{\\text{Énergie utile}}{\\text{Énergie coûteuse}} \\right| = -\\frac{W}{Q_C}$ ($W < 0$, $Q_C > 0$)[cite: 10].\n2. Sur un cycle, $\\Delta U = W + Q_C + Q_F = 0 \\implies -W = Q_C + Q_F$[cite: 10].\n3. Le rendement s'écrit $\\eta = \\frac{Q_C + Q_F}{Q_C} = 1 + \\frac{Q_F}{Q_C}$[cite: 10].\n4. D'après l'inégalité de Clausius : $\\frac{Q_F}{T_F} \\le -\\frac{Q_C}{T_C} \\implies \\frac{Q_F}{Q_C} \\le -\\frac{T_F}{T_C}$[cite: 10].\n5. On en déduit $\\eta \\le 1 - \\frac{T_F}{T_C}$[cite: 10]. Le maximum est atteint en régime réversible (égalité)[cite: 10] :\n$$\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$$[cite: 10]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Donner les expressions des efficacités de Carnot pour une machine frigorifique et une pompe à chaleur dithermes.",
+                  "reponse": "- **Machine frigorifique**[cite: 10] :\n  - Efficacité : $e = \\frac{Q_F}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_F}{T_C - T_F}$$[cite: 10]\n- **Pompe à chaleur (PAC)**[cite: 10] :\n  - Efficacité : $e = -\\frac{Q_C}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_C}{T_C - T_F}$$[cite: 10]"
+                }
+              ]
             }
           ],
           "hasQuestions": true,
@@ -1659,9 +2091,87 @@
             }
           ],
           "files": [],
-          "questions": [],
-          "questionSets": [],
-          "hasQuestions": false,
+          "questions": [
+            {
+              "type": "Définition",
+              "enonce": "Définir la fonction de transfert et l'équation différentielle d'un système du premier ordre standard.",
+              "reponse": "Un système du premier ordre est régi par l'équation différentielle[cite: 9] :\n$$s(t) + \\tau \\frac{ds(t)}{dt} = K e(t) \\quad \\text{avec } s(0) = 0$$[cite: 9]\nSa fonction de transfert s'écrit[cite: 9] :\n$$H(p) = \\frac{S(p)}{E(p)} = \\frac{K}{1 + \\tau p}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\tau$ : constante de temps (en s)[cite: 9]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Donner la réponse temporelle $s(t)$ d'un système du premier ordre à un échelon d'amplitude $E_0$, ainsi que les valeurs remarquables à $t = \\tau$, $t = 3\\tau$ et $t = 5\\tau$.",
+              "reponse": "Pour $e(t) = E_0 \\mathcal{H}(t)$, la réponse temporelle est[cite: 9] :\n$$s(t) = K E_0 \\left(1 - e^{-\\frac{t}{\\tau}}\\right) \\mathcal{H}(t)$$[cite: 9]\nValeurs remarquables :\n- $s(\\tau) = 0{,}63 K E_0$ (63 % de la valeur finale)[cite: 9]\n- $s(3\\tau) = 0{,}95 K E_0$ (entrée dans la bande à $\\pm 5\\%$, soit $t_{r5\\%} = 3\\tau$)[cite: 9]\n- $s(5\\tau) = 0{,}99 K E_0$ (99 % de la valeur finale)[cite: 9]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Exprimer l'erreur de traînage d'un système du premier ordre de gain $K=1$ soumis à une entrée en rampe $e(t) = V_0 t \\mathcal{H}(t)$.",
+              "reponse": "Pour $K = 1$, la réponse à une rampe tend asymptotiquement vers $s_{\\infty}(t) = V_0(t - \\tau)$[cite: 9]. L'erreur de traînage en régime permanent est[cite: 9] :\n$$\\varepsilon_t = \\lim_{t \\to +\\infty} (e(t) - s(t)) = V_0 \\tau$$[cite: 9]"
+            },
+            {
+              "type": "Définition",
+              "enonce": "Définir la fonction de transfert standard d'un système du second ordre et préciser la signification de ses paramètres.",
+              "reponse": "La fonction de transfert d'un système du second ordre s'écrit[cite: 9] :\n$$H(p) = \\frac{K}{1 + \\frac{2\\xi}{\\omega_0}p + \\frac{1}{\\omega_0^2}p^2}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\omega_0$ : pulsation propre non amortie (en $\\text{rad}\\cdot\\text{s}^{-1}$)[cite: 9]\n- $\\xi$ : facteur (ou coefficient) d'amortissement (sans unité)[cite: 9]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Décrire les trois régimes de fonctionnement d'un système du second ordre selon la valeur du facteur d'amortissement $\\xi$.",
+              "reponse": "- **$\\xi > 1$ (Régime apériodique)** : Pôles réels distincts, pas d'oscillation[cite: 9].\n- **$\\xi = 1$ (Régime apériodique critique)** : Pôle double réel ($p_1 = p_2 = -\\omega_0$), réponse la plus rapide sans dépassement[cite: 9].\n- **$\\xi < 1$ (Régime pseudo-périodique)** : Pôles complexes conjugués, présence d'oscillations amorties[cite: 9]."
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Pour un système du second ordre en régime pseudo-périodique ($\\xi < 1$), donner les expressions de la pseudo-période $T_p$, du temps de pic $t_{\\text{pic}}$ et du dépassement relatif $D_1\\%$.",
+              "reponse": "- **Pseudo-période** : $T_p = \\frac{2\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Temps de pic** : $t_{\\text{pic}} = \\frac{T_p}{2} = \\frac{\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Dépassement en %** : $D_1\\% = 100 \\cdot e^{-\\frac{\\pi \\xi}{\\sqrt{1 - \\xi^2}}}$[cite: 9]"
+            },
+            {
+              "type": "Proposition",
+              "enonce": "Quelle est la particularité géométrique commune à l'origine ($t = 0$) des réponses indicielles de tous les systèmes du second ordre ?",
+              "reponse": "Toutes les réponses indicielles d'un système du second ordre présentent une **tangente nulle à l'origine**[cite: 9] (${\\frac{ds(0)}{dt} = 0}$), contrairement au premier ordre dont la pente à l'origine est non nulle[cite: 9]."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_Temporel.json",
+              "label": "Temporel",
+              "items": [
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la fonction de transfert et l'équation différentielle d'un système du premier ordre standard.",
+                  "reponse": "Un système du premier ordre est régi par l'équation différentielle[cite: 9] :\n$$s(t) + \\tau \\frac{ds(t)}{dt} = K e(t) \\quad \\text{avec } s(0) = 0$$[cite: 9]\nSa fonction de transfert s'écrit[cite: 9] :\n$$H(p) = \\frac{S(p)}{E(p)} = \\frac{K}{1 + \\tau p}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\tau$ : constante de temps (en s)[cite: 9]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Donner la réponse temporelle $s(t)$ d'un système du premier ordre à un échelon d'amplitude $E_0$, ainsi que les valeurs remarquables à $t = \\tau$, $t = 3\\tau$ et $t = 5\\tau$.",
+                  "reponse": "Pour $e(t) = E_0 \\mathcal{H}(t)$, la réponse temporelle est[cite: 9] :\n$$s(t) = K E_0 \\left(1 - e^{-\\frac{t}{\\tau}}\\right) \\mathcal{H}(t)$$[cite: 9]\nValeurs remarquables :\n- $s(\\tau) = 0{,}63 K E_0$ (63 % de la valeur finale)[cite: 9]\n- $s(3\\tau) = 0{,}95 K E_0$ (entrée dans la bande à $\\pm 5\\%$, soit $t_{r5\\%} = 3\\tau$)[cite: 9]\n- $s(5\\tau) = 0{,}99 K E_0$ (99 % de la valeur finale)[cite: 9]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Exprimer l'erreur de traînage d'un système du premier ordre de gain $K=1$ soumis à une entrée en rampe $e(t) = V_0 t \\mathcal{H}(t)$.",
+                  "reponse": "Pour $K = 1$, la réponse à une rampe tend asymptotiquement vers $s_{\\infty}(t) = V_0(t - \\tau)$[cite: 9]. L'erreur de traînage en régime permanent est[cite: 9] :\n$$\\varepsilon_t = \\lim_{t \\to +\\infty} (e(t) - s(t)) = V_0 \\tau$$[cite: 9]"
+                },
+                {
+                  "type": "Définition",
+                  "enonce": "Définir la fonction de transfert standard d'un système du second ordre et préciser la signification de ses paramètres.",
+                  "reponse": "La fonction de transfert d'un système du second ordre s'écrit[cite: 9] :\n$$H(p) = \\frac{K}{1 + \\frac{2\\xi}{\\omega_0}p + \\frac{1}{\\omega_0^2}p^2}$$[cite: 9]\n- $K$ : gain statique[cite: 9]\n- $\\omega_0$ : pulsation propre non amortie (en $\\text{rad}\\cdot\\text{s}^{-1}$)[cite: 9]\n- $\\xi$ : facteur (ou coefficient) d'amortissement (sans unité)[cite: 9]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Décrire les trois régimes de fonctionnement d'un système du second ordre selon la valeur du facteur d'amortissement $\\xi$.",
+                  "reponse": "- **$\\xi > 1$ (Régime apériodique)** : Pôles réels distincts, pas d'oscillation[cite: 9].\n- **$\\xi = 1$ (Régime apériodique critique)** : Pôle double réel ($p_1 = p_2 = -\\omega_0$), réponse la plus rapide sans dépassement[cite: 9].\n- **$\\xi < 1$ (Régime pseudo-périodique)** : Pôles complexes conjugués, présence d'oscillations amorties[cite: 9]."
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Pour un système du second ordre en régime pseudo-périodique ($\\xi < 1$), donner les expressions de la pseudo-période $T_p$, du temps de pic $t_{\\text{pic}}$ et du dépassement relatif $D_1\\%$.",
+                  "reponse": "- **Pseudo-période** : $T_p = \\frac{2\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Temps de pic** : $t_{\\text{pic}} = \\frac{T_p}{2} = \\frac{\\pi}{\\omega_0 \\sqrt{1 - \\xi^2}}$[cite: 9]\n- **Dépassement en %** : $D_1\\% = 100 \\cdot e^{-\\frac{\\pi \\xi}{\\sqrt{1 - \\xi^2}}}$[cite: 9]"
+                },
+                {
+                  "type": "Proposition",
+                  "enonce": "Quelle est la particularité géométrique commune à l'origine ($t = 0$) des réponses indicielles de tous les systèmes du second ordre ?",
+                  "reponse": "Toutes les réponses indicielles d'un système du second ordre présentent une **tangente nulle à l'origine**[cite: 9] (${\\frac{ds(0)}{dt} = 0}$), contrairement au premier ordre dont la pente à l'origine est non nulle[cite: 9]."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
           "isAvantDernier": true,
           "hue": 74.11538461538453,
           "color": "hsl(74.1,100%,50%)"

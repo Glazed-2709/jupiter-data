@@ -1,0 +1,92 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la différentielle d'une fonction de trois variables et préciser son sens physique.",
+    "reponse": "Soit $f(x,y,z)$ une fonction de trois variables[cite: 9]. Sa **différentielle** $df$ s'écrit[cite: 9] :\n$$df = \\frac{\\partial f}{\\partial x} dx + \\frac{\\partial f}{\\partial y} dy + \\frac{\\partial f}{\\partial z} dz$$\n- $dx, dy, dz$ sont les variations infinitésimales des variables $x, y, z$[cite: 9].\n- $\\frac{\\partial f}{\\partial x}$ est la dérivée partielle de $f$ par rapport à $x$[cite: 9].\n- **Sens physique** : $df$ représente la variation de la fonction $f$ lorsque $x$ varie de $dx$, $y$ de $dy$ et $z$ de $dz$[cite: 9]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Distinguer une différentielle d'une forme différentielle en physique et donner la convention de notation.",
+    "reponse": "Soit une grandeur s'exprimant sous la forme $A(x,y,z)dx + B(x,y,z)dy + C(x,y,z)dz$[cite: 9] :\n- **Différentielle ($d droit$)** : S'il existe une fonction $f$ telle que $A = \\frac{\\partial f}{\\partial x}$, $B = \\frac{\\partial f}{\\partial y}$ et $C = \\frac{\\partial f}{\\partial z}$, alors la grandeur est la différentielle $df$ d'une fonction d'état[cite: 9].\n- **Forme différentielle ($\\delta delta$)** : S'il n'existe pas de telle fonction $f$, la grandeur n'est pas une variation d'une fonction[cite: 9]. C'est une forme différentielle notée $\\delta w = A dx + B dy + C dz$[cite: 9].\n- **Notations** : $dX$ = variation infinitésimale d'une grandeur d'état $X$ ; $\\delta X$ = quantité infinitésimale d'une grandeur $X$ non fonction d'état ; $\\partial f$ = opérateur de dérivée partielle[cite: 9]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Comparer le comportement d'une différentielle et d'une forme différentielle lors d'une intégration le long d'un chemin $\\mathcal{C}$ entre l'état A et l'état B.",
+    "reponse": "- **Cas d'une différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} df = \\int_A^B df = f(B) - f(A) = \\Delta f$$\nL'intégrale ne dépend que des états initial $A$ et final $B$, indépendamment du chemin suivi[cite: 9].\n- **Cas d'une forme différentielle**[cite: 9] :\n$$\\int_{\\mathcal{C}} \\delta w = w$$\nL'intégrale dépend a priori du chemin $\\mathcal{C}$ suivi entre $A$ et $B$[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le premier principe de la thermodynamique sous forme infinitésimale.",
+    "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dU + d\\mathcal{E}_m = \\delta W + \\delta Q$$\n- $dU$ : variation infinitésimale d'énergie interne[cite: 9].\n- $d\\mathcal{E}_m$ : variation infinitésimale d'énergie mécanique[cite: 9].\n- $\\delta W$ : travail infinitésimal échangé[cite: 9].\n- $\\delta Q$ : transfert thermique infinitésimal échangé[cite: 9].\n\n*Cas particuliers* :\n- Système au repos ($d\\mathcal{E}_m = 0$) : $dU = \\delta W + \\delta Q$[cite: 9].\n- Transformation monobare au repos : $dH = \\delta W_{\\text{autres}} + \\delta Q$[cite: 9]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le deuxième principe de la thermodynamique sous forme infinitésimale.",
+    "reponse": "Pour un système thermodynamique entre $t$ et $t+dt$[cite: 9] :\n$$dS = \\delta S_e + \\delta S_c$$\n- $dS$ : variation d'entropie du système[cite: 9].\n- $\\delta S_e = \\frac{\\delta Q}{T_0(t)}$ : entropie échangée ($T_0(t)$ étant la température du milieu extérieur)[cite: 9].\n- $\\delta S_c$ : entropie créée au sein du système, avec $\\delta S_c \\ge 0$ (égal à 0 pour une transformation réversible)[cite: 9]."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer la formule de la variation d'entropie d'un gaz parfait $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$ à partir des principes sous forme infinitésimale.",
+    "reponse": "1. Premier principe : $dU = \\delta W + \\delta Q \\implies C_v dT = -P_{\\text{ext}} dV + \\delta Q$[cite: 9].\n2. Deuxième principe : $\\delta Q = T_0 (dS - \\delta S_c)$[cite: 9].\n3. On choisit un chemin fictif réversible entre $A$ et $B$ ($P_{\\text{ext}} = P$, $T_0 = T$, $\\delta S_c = 0$)[cite: 9] :\n$$C_v dT = -P dV + T dS \\implies dS = C_v \\frac{dT}{T} + \\frac{P}{T} dV$$\n4. Comme le gaz est parfait, $\\frac{P}{T} = \\frac{nR}{V}$, d'où $dS = C_v \\frac{dT}{T} + nR \\frac{dV}{V}$[cite: 9].\n5. En intégrant entre $A$ et $B$[cite: 9] :\n$$\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$$[cite: 9]"
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Déterminer la variation d'entropie $\\Delta S$ d'une phase condensée indilatable et incompressible.",
+    "reponse": "Pour une phase condensée indilatable et incompressible[cite: 9] :\n1. Comme le système est indéformable ($dV = 0$), $dU = \\delta Q$[cite: 9].\n2. On a $dU = C dT$ ($C$ étant la capacité thermique)[cite: 9].\n3. Sur un chemin réversible ($T_0 = T$), $\\delta Q = T dS$, d'où $C dT = T dS \\implies dS = C \\frac{dT}{T}$[cite: 9].\n4. Par intégration entre $T_A$ et $T_B$[cite: 9] :\n$$\\Delta S = C \\ln\\left(\\frac{T_B}{T_A}\\right)$$[cite: 9]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les notions de système (ouvert, fermé, isolé), milieu extérieur et univers.",
+    "reponse": "- **Univers** : Ensemble de l'espace et de la matière accessible[cite: 10].\n- **Système** : Partie privilégiée de l'Univers délimitée par une frontière[cite: 10].\n- **Milieu extérieur** : Partie de l'Univers hors du système[cite: 10].\n- **Système ouvert** : Échange de la matière et de l'énergie[cite: 10].\n- **Système fermé** : Échange de l'énergie, mais pas de matière[cite: 10].\n- **Système isolé** : Aucun échange ni de matière ni d'énergie[cite: 10].\n- **Parois** : *Diathermanes* (perméables aux transferts thermiques) vs *Athermanes / Calorifugées* (imperméables aux transferts thermiques)[cite: 10]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Distinguer une grandeur extensive d'une grandeur intensive.",
+    "reponse": "- **Grandeur extensive** : Varie proportionnellement à la taille du système ; elle s'ajoute lors de la réunion de deux sous-systèmes[cite: 10] :\n$$X(A \\cup B) = X(A) + X(B)$$\n*(Ex : Volume $V$, masse $m$, quantité de matière $n$, énergie interne $U$, entropie $S$)*[cite: 10].\n- **Grandeur intensive** : Indépendante de la taille du système ; reste inchangée lors de la réunion de sous-systèmes identiques[cite: 10] :\n$$X(A \\cup B) = X(A) = X(B) \\quad \\text{si } X(A)=X(B)$$\n*(Ex : Pression $P$, température $T$)*[cite: 10]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Présenter le modèle du gaz parfait et le modèle de la phase condensée indilatable et incompressible.",
+    "reponse": "- **Gaz parfait** : Modèle valable pour des gaz peu denses (interactions interparticulaires négligées)[cite: 10]. Équation d'état[cite: 10] :\n$$PV = nRT \\quad \\text{avec } R = 8{,}314 \\text{ J}\\cdot\\text{K}^{-1}\\cdot\\text{mol}^{-1}$$\n- **Phase condensée indilatable et incompressible** : Modèle pour solides et liquides dont le volume ne varie ni avec la température (indilatable), ni avec la pression (incompressible)[cite: 10]. Le volume molaire y est strictement constant[cite: 10]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir les principaux types de transformations thermodynamiques.",
+    "reponse": "- **Isochore** : Volume constant ($V = cste$)[cite: 10].\n- **Isotherme** : Température du système définie et constante ($T = cste$)[cite: 10].\n- **Isobare** : Pression du système définie et constante ($P = cste$)[cite: 10].\n- **Monotherme** : Température du milieu extérieur constante ($T_0 = cste$)[cite: 10].\n- **Monobare** : Pression du milieu extérieur constante ($P_0 = cste$)[cite: 10].\n- **Adiabatique** : Sans aucun échange thermique avec l'extérieur ($Q = 0$)[cite: 10].\n- **Quasi-statique** : Transformation infiniment lente (succession d'états d'équilibre)[cite: 10].\n- **Réversible** : Quasi-statique et pouvant être inversée en repassant par les mêmes états[cite: 10]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le premier principe sous sa forme intégrale et expliciter l'énergie interne et l'enthalpie.",
+    "reponse": "- **Premier principe** : $\\Delta (U + \\mathcal{E}_m) = W + Q$ (pour un système au repos : $\\Delta U = W + Q$)[cite: 10].\n- **Énergie interne $U$** : $U = E_{c,\\text{micro}} + E_{p,\\text{micro}}$ (somme des énergies cinétiques microscopiques et potentielles d'interaction)[cite: 10].\n- **Travail des forces de pression** : $W_p = -\\int P_{\\text{ext}} dV$[cite: 10].\n- **Enthalpie $H$** : Fonction d'état extensive définie par $H = U + PV$[cite: 10]. Pour une transformation monobare : $\\Delta H = W_{\\text{autre}} + Q$[cite: 10]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Rappeler les lois de Joule et les capacités thermiques des gaz parfaits et des phases condensées.",
+    "reponse": "- **Gaz parfait** :\n  - $1^{\\text{re}}$ loi de Joule : $U$ ne dépend que de $T \\implies dU = C_v dT \\implies \\Delta U = C_v \\Delta T$[cite: 10].\n  - $2^{\\text{e}}$ loi de Joule : $H$ ne dépend que de $T \\implies dH = C_p dT \\implies \\Delta H = C_p \\Delta T$[cite: 10].\n  - *Gaz monoatomique* : $C_v = \\frac{3}{2}nR$, $C_p = \\frac{5}{2}nR$[cite: 10].\n  - *Gaz diatomique (température ambiante)* : $C_v = \\frac{5}{2}nR$, $C_p = \\frac{7}{2}nR$[cite: 10].\n- **Phase condensée indilatable et incompressible** :\n  - Obéit aux deux lois de Joule avec $C_v \\approx C_p = C$[cite: 10].\n  - $\\Delta U \\approx \\Delta H \\approx C \\Delta T$[cite: 10]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le deuxième principe sous sa forme intégrale et rappeler les trois expressions de $\\Delta S$ pour un gaz parfait.",
+    "reponse": "- **Deuxième principe** : $\\Delta S = S_e + S_c$ avec $S_e = \\frac{Q}{T_0}$ et $S_c \\ge 0$ ($S_c = 0$ si réversible)[cite: 10].\n- **Expressions de $\\Delta S_{AB}$ pour un gaz parfait**[cite: 10] :\n  1. $\\Delta S = C_v \\ln\\left(\\frac{T_B}{T_A}\\right) + nR \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]\n  2. $\\Delta S = C_p \\ln\\left(\\frac{T_B}{T_A}\\right) - nR \\ln\\left(\\frac{P_B}{P_A}\\right)$[cite: 10]\n  3. $\\Delta S = C_v \\ln\\left(\\frac{P_B}{P_A}\\right) + C_p \\ln\\left(\\frac{V_B}{V_A}\\right)$[cite: 10]"
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la loi de Laplace pour un gaz parfait.",
+    "reponse": "Pour une transformation **adiabatique et réversible** (isentropique) d'un gaz parfait[cite: 10] :\n$$PV^\\gamma = cste$$\nOu sous d'autres formes[cite: 10] :\n$$P^{1-\\gamma} T^\\gamma = cste \\quad \\text{et} \\quad T V^{\\gamma-1} = cste$$\n*(avec $\\gamma = \\frac{C_p}{C_v}$)*[cite: 10]."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer l'inégalité de Clausius pour une machine thermique ditherme sur un cycle.",
+    "reponse": "1. Deuxième principe sur un cycle : $\\Delta S = S_e + S_c = 0$ (car $S$ est une fonction d'état)[cite: 10].\n2. D'où $S_e = -S_c$[cite: 10].\n3. Pour une machine ditherme échangeant $Q_C$ avec la source chaude à $T_C$ et $Q_F$ avec la source froide à $T_F$[cite: 10] :\n$$S_e = \\frac{Q_C}{T_C} + \\frac{Q_F}{T_F}$$[cite: 10]\n4. Comme $S_c \\ge 0$, on a $S_e = -S_c \\le 0$, ce qui donne **l'inégalité de Clausius**[cite: 10] :\n$$\\frac{Q_C}{T_C} + \\frac{Q_F}{T_F} \\le 0$$[cite: 10]"
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer l'expression du rendement de Carnot $\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$ pour un moteur ditherme.",
+    "reponse": "1. Rendement par définition : $\\eta = \\left| \\frac{\\text{Énergie utile}}{\\text{Énergie coûteuse}} \\right| = -\\frac{W}{Q_C}$ ($W < 0$, $Q_C > 0$)[cite: 10].\n2. Sur un cycle, $\\Delta U = W + Q_C + Q_F = 0 \\implies -W = Q_C + Q_F$[cite: 10].\n3. Le rendement s'écrit $\\eta = \\frac{Q_C + Q_F}{Q_C} = 1 + \\frac{Q_F}{Q_C}$[cite: 10].\n4. D'après l'inégalité de Clausius : $\\frac{Q_F}{T_F} \\le -\\frac{Q_C}{T_C} \\implies \\frac{Q_F}{Q_C} \\le -\\frac{T_F}{T_C}$[cite: 10].\n5. On en déduit $\\eta \\le 1 - \\frac{T_F}{T_C}$[cite: 10]. Le maximum est atteint en régime réversible (égalité)[cite: 10] :\n$$\\eta_{\\text{rev}} = 1 - \\frac{T_F}{T_C}$$[cite: 10]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Donner les expressions des efficacités de Carnot pour une machine frigorifique et une pompe à chaleur dithermes.",
+    "reponse": "- **Machine frigorifique**[cite: 10] :\n  - Efficacité : $e = \\frac{Q_F}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_F}{T_C - T_F}$$[cite: 10]\n- **Pompe à chaleur (PAC)**[cite: 10] :\n  - Efficacité : $e = -\\frac{Q_C}{W}$[cite: 10]\n  - Efficacité maximale (Carnot) : $$e_{\\text{rev}} = \\frac{T_C}{T_C - T_F}$$[cite: 10]"
+  }
+]

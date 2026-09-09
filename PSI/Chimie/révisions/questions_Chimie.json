@@ -1,0 +1,87 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion de transformation chimique et préciser l'écriture générale d'une équation-bilan.",
+    "reponse": "Une **transformation chimique** est la réorganisation des atomes d'une ou plusieurs substances par rupture et formation de liaisons inter-atomiques[cite: 11].\nToute réaction chimique faisant intervenir des espèces $A_i$ s'écrit sous la forme générale[cite: 11] :\n$$0 = \\sum_{i} \\nu_i A_i$$\noù les $\\nu_i$ sont les **coefficients stœchiométriques** (positifs pour les produits, négatifs pour les réactifs)[cite: 11]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'avancement d'une réaction chimique ainsi que l'avancement volumique.",
+    "reponse": "Soit une espèce $A_i$ de coefficient stœchiométrique $\\nu_i$[cite: 11]. L'**avancement** $\\xi$ (en mol) est défini par[cite: 11] :\n$$\\xi = \\frac{n_i - n_{i,0}}{\\nu_i} \\iff n_i = n_{i,0} + \\nu_i \\xi$$\noù $n_{i,0}$ est la quantité de matière initiale et $n_i$ la quantité à l'instant $t$[cite: 11].\nEn chimie des solutions à volume $V$ constant, l'**avancement volumique** $x$ (en $\\text{mol}\\cdot\\text{L}^{-1}$) vaut[cite: 11] :\n$$x = \\frac{\\xi}{V}$$[cite: 11]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir le rendement d'une réaction et le taux de dissociation d'un réactif.",
+    "reponse": "- **Rendement $\\eta$** : Rapport de l'avancement à l'état d'équilibre final $\\xi_f$ sur l'avancement maximal $\\xi_{\\text{max}}$[cite: 11] :\n$$\\eta = \\frac{\\xi_f}{\\xi_{\\text{max}}}$$[cite: 11]\n- **Taux de dissociation $\\alpha$** (pour une réaction à réactif unique) : Proportion de réactif transformé par rapport à la quantité initiale $n_0$[cite: 11] :\n$$\\alpha = \\frac{n_0 - n}{n_0} = -\\nu_i \\frac{\\xi}{n_0}$$[cite: 11]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner les règles de calcul de l'activité d'un corps pur, d'un gaz dans un mélange et d'un soluté en solution.",
+    "reponse": "- **Corps pur** : $a = 1$ pour un solide ou un liquide pur[cite: 11] ; $a = \\frac{P}{P^\\circ}$ pour un gaz pur ($P^\\circ = 1\\text{ bar}$)[cite: 11].\n- **Mélange gazeux parfait** : $a_i = \\frac{P_i}{P^\\circ}$, où $P_i$ est la pression partielle du gaz $A_i$[cite: 11].\n- **Solution aqueuse diluée** : $a_{\\text{solvant}} = 1$ pour l'eau[cite: 11] ; $a_i = \\frac{c_i}{c^\\circ}$ pour un soluté $A_i$ ($c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$)[cite: 11]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la constante d'équilibre $K^\\circ(T)$ et le quotient réactionnel $Q_r$, puis expliciter le critère d'évolution spontanée.",
+    "reponse": "Pour une réaction $0 = \\sum_{i=1}^N \\nu_i A_i$ à la température $T$[cite: 11] :\n- **Constante d'équilibre** : $K^\\circ(T) = \\prod_{i=1}^N (a_{i,\\text{éq}})^{\\nu_i}$[cite: 11].\n- **Quotient réactionnel** : $Q_r = \\prod_{i=1}^N (a_i)^{\\nu_i}$ (hors équilibre)[cite: 11].\n- **Sens d'évolution**[cite: 11] :\n  - Si $Q_r = K^\\circ$ : Système à l'équilibre[cite: 11].\n  - Si $Q_r < K^\\circ$ : Évolution dans le **sens direct** (formation de produits)[cite: 11].\n  - Si $Q_r > K^\\circ$ : Évolution dans le **sens indirect** (formation de réactifs)[cite: 11]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la vitesse de réaction et la notion d'ordre de réaction.",
+    "reponse": "- **Vitesse de réaction $v$** : $v = \\frac{1}{V}\\frac{d\\xi}{dt} = \\frac{1}{\\nu_i}\\frac{d[A_i]}{dt}$[cite: 11].\n- **Ordre de réaction** : Si la réaction $aA + bB = cC + dD$ admet des ordres partiels $\\alpha$ et $\\beta$, sa vitesse s'écrit $v = k [A]^\\alpha [B]^\\beta$, où $k$ est la constante de vitesse et $\\alpha + \\beta$ l'ordre total[cite: 11]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Présenter les lois d'évolution de $[A](t)$, l'unité de $k$ et le temps de demi-réaction $t_{1/2}$ pour des réactions d'ordre 0, 1 et 2 par rapport à un unique réactif ($aA = \\text{produits}$).",
+    "reponse": "- **Ordre 0** : $[A](t) = [A]_0 - a k t$[cite: 11] | Unité de $k$ : $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{[A]_0}{2ak}$[cite: 11].\n- **Ordre 1** : $[A](t) = [A]_0 e^{-a k t}$[cite: 11] | Unité de $k$ : $\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{\\ln 2}{ak}$[cite: 11].\n- **Ordre 2** : $\\frac{1}{[A](t)} - \\frac{1}{[A]_0} = a k t$[cite: 11] | Unité de $k$ : $\\text{L}\\cdot\\text{mol}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{1}{a k [A]_0}$[cite: 11]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Expliquer le principe de la méthode de dégénérescence de l'ordre.",
+    "reponse": "Pour une réaction de vitesse $v = k [A]^\\alpha [B]^\\beta$, si l'on introduit le réactif $B$ en **large excès**, sa concentration reste quasi constante : $[B](t) \\approx [B]_0$[cite: 11].\nLa vitesse devient $v \\approx k_{\\text{app}} [A]^\\alpha$ avec $k_{\\text{app}} = k [B]_0^\\beta$[cite: 11]. La réaction se comporte comme s'il n'y avait qu'un seul réactif $A$, simplifiant la détermination expérimentale de l'ordre partiel $\\alpha$[cite: 11]."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer la loi d'Arrhénius pour la constante de vitesse d'une réaction.",
+    "reponse": "La constante de vitesse $k$ varie avec la température $T$ selon la **loi d'Arrhénius**[cite: 11] :\n$$k = A \\exp\\left(-\\frac{E_A}{RT}\\right)$$\noù $R$ est la constante des gaz parfaits et $E_A$ l'énergie d'activation molaire (en $\\text{J}\\cdot\\text{mol}^{-1}$)[cite: 11]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir un acide, une base (au sens de Brønsted), ainsi que le produit ionique de l'eau $K_e$ et la constante d'acidité $K_a$.",
+    "reponse": "- **Acide / Base** : Un acide $AH$ cède un proton $H^+$ ($AH + H_2O \\rightleftharpoons A^- + H_3O^+$) ; une base $B$ capte un proton ($B + H_2O \\rightleftharpoons BH^+ + HO^-$)[cite: 11]. Réaction totale = fort(e) ; limitée = faible[cite: 11].\n- **Produit ionique de l'eau $K_e$** : Constante de l'auto-protolyse de l'eau ($2H_2O \\rightleftharpoons H_3O^+ + HO^-$)[cite: 11] :\n$$K_e = [H_3O^+]_{\\text{éq}} [HO^-]_{\\text{éq}} = 10^{-14} \\quad (\\text{à } 25^\\circ\\text{C}, pK_e = 14)$$[cite: 11]\n- **Constante d'acidité $K_a$** : Constante de la réaction d'un acide $HA$ avec l'eau[cite: 11] :\n$$K_a = \\frac{[H_3O^+]_{\\text{éq}} [A^-]_{\\text{éq}}}{[HA]_{\\text{éq}}} \\quad (pK_a = -\\log K_a)$$[cite: 11]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Démontrer la règle des domaines de prédominance d'un couple acide-base $AH/A^-$.",
+    "reponse": "Par définition, $K_a = \\frac{[H_3O^+][A^-]}{[HA]} \\iff \\frac{[HA]}{[A^-]} = \\frac{[H_3O^+]}{K_a}$[cite: 11].\n1. L'espèce **acide $AH$ prédomine** si $[HA] \\ge 10 [A^-]$[cite: 11] :\n$$\\frac{[H_3O^+]}{K_a} \\ge 10 \\implies -\\log[H_3O^+] + \\log K_a \\le -1 \\implies pH \\le pK_a - 1$$[cite: 11]\n2. L'espèce **basique $A^-$ prédomine** si $[A^-] \\ge 10 [HA]$[cite: 11] :\n$$pH \\ge pK_a + 1$$[cite: 11]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la constante de solubilité $K_s$ et la solubilité $s$ d'un précipité $A_p B_q(s)$.",
+    "reponse": "Pour l'équilibre de dissolution $A_p B_q(s) \\rightleftharpoons p A^{n+}(aq) + q B^{m-}(aq)$[cite: 11] :\n- **Constante de solubilité $K_s$**[cite: 11] :\n$$K_s = [A^{n+}]_{\\text{éq}}^p [B^{m-}]_{\\text{éq}}^q \\quad (pK_s = -\\log K_s)$$[cite: 11]\n- **Solubilité $s$** : Quantité maximale de solide (en $\\text{mol}\\cdot\\text{L}^{-1}$ ou $\\text{g}\\cdot\\text{L}^{-1}$) que l'on peut dissoudre dans 1 L de solution[cite: 11]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Énoncer la condition d'existence d'un précipité $A_p B_q(s)$ à partir du quotient réactionnel $Q_r$.",
+    "reponse": "- **$Q_r < K_s$** : Pas de précipitation (solution non saturée)[cite: 11]. Si du solide est présent, il se dissout[cite: 11].\n- **$Q_r = K_s$** : Équilibre de solubilité ; la solution est saturée en présence de solide[cite: 11].\n- **$Q_r > K_s$** : Précipitation du solide dans le sens indirect jusqu'à atteindre $Q_r = K_s$[cite: 11]."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la notion d'équivalence dans un titrage chimique.",
+    "reponse": "L'**équivalence** est atteinte lorsque le réactif titrant $A_2$ et le réactif titré $A_1$ de la réaction $|\\nu_1|A_1 + |\\nu_2|A_2 = \\text{Produits}$ ont été introduits dans les **proportions stœchiométriques**[cite: 11] :\n$$\\frac{n(A_1)_0}{|\\nu_1|} = \\frac{n(A_2)_{\\text{équivalence}}}{|\\nu_2|}$$[cite: 11]"
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la population $Z$, la coordinence et la compacité $C$ d'une maille cristalline.",
+    "reponse": "- **Population $Z$** : Nombre d'atomes, d'ions ou de molécules contenus en propre dans la maille[cite: 11].\n- **Coordinence** : Nombre des plus proches voisins d'une entité dans le cristal[cite: 11].\n- **Compacité $C$**[cite: 11] :\n$$C = \\frac{\\text{Volume occupé par les atomes de la maille}}{\\text{Volume de la maille}}$$[cite: 11]"
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Présenter les caractéristiques (population, relation de tangence, compacité, masse volumique) des mailles cubique simple, cubique centré (CC) et cubique à faces centrées (CFC).",
+    "reponse": "- **Cubique simple** : $Z = 8 \\times \\frac{1}{8} = 1$[cite: 11] | Tangence sur l'arête : $a = 2R$[cite: 11] | $C = \\frac{\\pi}{6} \\approx 0{,}52$[cite: 11] | $\\rho = \\frac{M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique centré (CC)** : $Z = 8 \\times \\frac{1}{8} + 1 = 2$[cite: 11] | Tangence sur la grande diagonale : $4R = a\\sqrt{3}$[cite: 11] | $C = \\frac{\\pi\\sqrt{3}}{8} \\approx 0{,}68$[cite: 11] | $\\rho = \\frac{2M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique à faces centrées (CFC)** : $Z = 8 \\times \\frac{1}{8} + 6 \\times \\frac{1}{2} = 4$[cite: 11] | Tangence sur la diagonale d'une face : $4R = a\\sqrt{2}$[cite: 11] | $C = \\frac{\\pi\\sqrt{2}}{6} \\approx 0{,}74$[cite: 11] | $\\rho = \\frac{4M}{\\mathcal{N}_a a^3}$[cite: 11]."
+  },
+  {
+    "type": "Proposition",
+    "enonce": "Déterminer le nombre et l'habitabilité des sites octaédriques et tétraédriques d'une structure CFC.",
+    "reponse": "- **Sites octaédriques** : 4 sites par maille (1 au centre + 12 sur les arêtes)[cite: 11]. Habitabilité : $r = R(\\sqrt{2} - 1) \\approx 0{,}41 R$[cite: 11].\n- **Sites tétraédriques** : 8 sites par maille (au centre des 8 sous-cubes de côté $a/2$)[cite: 11]. Habitabilité : $r = R\\left(\\frac{\\sqrt{3}}{\\sqrt{2}} - 1\\right) \\approx 0{,}22 R$[cite: 11]."
+  }
+]
