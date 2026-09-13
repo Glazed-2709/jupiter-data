@@ -1,0 +1,102 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Étymologie 1/5 — Que signifient les mots grecs poïesis et praxis, et quelle distinction fondamentale posent-ils pour penser la création ?",
+    "reponse": "Poïesis (du verbe poiein, « faire, fabriquer ») désigne l'action de produire quelque chose qui n'existait pas et qui subsiste après l'acte : une œuvre, un objet séparé de son auteur. Praxis désigne l'action qui a sa fin en elle-même et ne laisse aucune œuvre séparée d'elle (agir moralement, discuter, gouverner). La distinction, formulée par Aristote, oppose donc l'activité qui produit un résultat extérieur durable à l'activité qui s'épuise dans son propre exercice."
+  },
+  {
+    "type": "Question",
+    "enonce": "Étymologie 2/5 — Que signifie le mot grec technè, et en quoi diffère-t-il de la notion moderne d'art ?",
+    "reponse": "Technè signifie « art, métier, savoir-faire » : c'est une compétence rationnelle, transmissible par apprentissage, qui permet de produire selon des règles connues (d'où « technique »). Chez les Grecs, technè ne distingue pas l'artiste du simple artisan : sculpteur, médecin et charpentier relèvent également de la technè. La séparation moderne entre « art » (création singulière, génie) et « technique » (application de règles) est donc une invention postérieure, largement héritée de l'esthétique du XVIIIe siècle (Kant)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Étymologie 3/5 — D'où vient le mot « arcane », et que désigne-t-il précisément ?",
+    "reponse": "« Arcane » vient du latin arcanus, « secret, caché », lui-même dérivé de arca, « le coffre, la caisse fermée ». L'arcane est donc ce qui est enfermé, tenu à l'abri des regards, et qui ne se laisse pas immédiatement élucider. Appliqué à la création, le mot désigne ce que le processus créateur a d'obscur et de non totalement explicable, même pour le créateur lui-même."
+  },
+  {
+    "type": "Question",
+    "enonce": "Étymologie 4/5 — Pourquoi rapproche-t-on souvent, dans une réflexion sur l'art, le mot « arcane » du mot latin arca ?",
+    "reponse": "Parce que arca (le coffre) est la racine commune : l'arcane est littéralement ce qui reste enfermé dans le coffre, non exposé. Cette parenté étymologique éclaire l'idée que le mystère de la création n'est pas une absence de sens, mais un sens gardé, réservé, qu'il faut un effort particulier (initiation, analyse, création elle-même) pour ouvrir."
+  },
+  {
+    "type": "Question",
+    "enonce": "Étymologie 5/5 — En résumé, comment ces quatre notions (poïesis, praxis, technè, arcane/arca) s'articulent-elles pour poser le problème du programme ?",
+    "reponse": "Poïesis et praxis distinguent l'acte qui produit une œuvre de l'acte qui s'épuise en lui-même ; technè indique que produire suppose un savoir-faire réglé, ce qui interroge la part de règle et la part d'inexplicable dans la création ; arcane/arca nomme précisément cette part inexplicable, ce noyau caché que ni l'artisan ni le philosophe ne peuvent entièrement mettre au jour. Le programme (Platon, Zola, Woolf) explore chacun à sa manière ce reste opaque."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : début du cours, présentation de la conception antique de la création — Quelle est la position de Platon sur qui peut véritablement « créer », et quel statut cela donne-t-il à l'artiste ?",
+    "reponse": "Pour Platon, seul un dieu peut créer véritablement, au sens fort de faire exister ce qui n'existait pas (dans le Timée, le Démiurge façonne le monde). L'artiste humain n'est jamais qu'un artisan : il imite des choses sensibles elles-mêmes déjà copies imparfaites des Idées (République, Livre X), ou bien il est possédé par une puissance divine qui parle à travers lui, sans qu'il en ait la maîtrise (Ion). Dans les deux cas, l'homme ne « crée » pas au sens plein : il imite, ou il est le canal d'une force qui le dépasse."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : suite immédiate — En quoi la conception contemporaine de la création s'oppose-t-elle à celle de Platon, notamment à propos de qui est « l'artiste » d'une œuvre ?",
+    "reponse": "Aujourd'hui, la création n'est plus réservée à une élite inspirée par le divin : le langage courant fait de chacun un « créateur » (créer un compte, une entreprise, un contenu). Le vocabulaire de la création s'est démocratisé et désacralisé. Par ailleurs, l'identité même de « l'artiste » s'est déplacée : au cinéma, le réalisateur est reconnu comme auteur de l'œuvre alors qu'il ne manie ni caméra ni pinceau lui-même — il conçoit, dirige et fait exécuter par d'autres (chef opérateur, acteurs, monteur). L'artiste n'est donc plus nécessairement celui qui réalise matériellement l'œuvre, mais celui qui en porte la vision et l'unité."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur Hegel et l'esthétique — Comment Hegel caractérise-t-il le rapport de la conscience moderne à l'art, et pourquoi parle-t-on chez lui d'une forme de nostalgie ?",
+    "reponse": "Hegel soutient, dans ses Leçons d'esthétique, que l'art a été pour les civilisations anciennes (notamment grecque) la forme suprême par laquelle l'Esprit se manifestait à lui-même, mais que ce temps est révolu : la pensée réflexive (philosophie, religion) a pris le relais comme mode supérieur de manifestation de l'Esprit. C'est la thèse dite de la « fin » ou du dépassement de l'art. La conscience moderne, en célébrant et étudiant l'art du passé (musées, histoire de l'art), entretient donc un rapport nostalgique à un âge où l'art suffisait à dire le vrai — âge qu'elle sait révolu."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : même partie — Selon Hegel, comment l'art peut-il malgré tout continuer d'évoluer, et quel rôle joue l'aliénation dans le processus créateur ?",
+    "reponse": "Pour Hegel, l'art ne se contente pas de répéter des formes figées : il progresse dialectiquement en se retournant sur son propre passé, en le niant et en l'intégrant à un stade supérieur (aufhebung). Créer suppose donc un chemin où l'esprit doit d'abord se perdre, se rendre étranger à lui-même dans la matière qu'il travaille — c'est l'aliénation (se rendre autre) — avant de se retrouver, enrichi, dans l'œuvre achevée. La création n'est donc pas un jaillissement immédiat mais un processus où le créateur se dépossède de lui-même pour se reconnaître ensuite dans ce qu'il a produit."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur Nietzsche — Comment Nietzsche conçoit-il l'acte de création, à l'opposé de la patience dialectique hégélienne ?",
+    "reponse": "Nietzsche pense la création comme une éruption, un jaillissement soudain, un « coup » de force plutôt qu'un travail méthodique : le génie est celui qui déborde les cadres établis, qui transgresse les règles reçues au lieu de les respecter. Dans La Naissance de la tragédie, il oppose le principe apollinien (forme, mesure, clarté) au principe dionysiaque (excès, ivresse, fusion, perte de soi) : c'est de la tension et du débordement dionysiaque que naît la grande création artistique, non de la seule maîtrise formelle."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : même partie — Quels sont, chez Nietzsche, les deux termes ou dispositions qui accompagnent cette création par jaillissement ?",
+    "reponse": "Nietzsche associe la création à une discipline paradoxale de la souffrance (il faut avoir souffert, avoir été mis à l'épreuve, pour produire une œuvre de grandeur) et à l'ivresse (Rausch), état de dépassement de soi proche de la transe dionysiaque, où le créateur perd la maîtrise consciente et laisse s'exprimer une force qui le dépasse. Souffrance et ivresse sont donc les deux faces d'une même sortie hors du cadre ordinaire, condition du « coup de génie »."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur Kant — En quoi la position de Kant sur l'art et le génie se distingue-t-elle à la fois de l'utilitaire et de la nécessité rationnelle stricte ?",
+    "reponse": "Kant définit le beau par le « plaisir désintéressé », c'est-à-dire un plaisir qui ne dépend d'aucune utilité, d'aucun intérêt pratique ou sensible : l'œuvre d'art n'est belle que si elle n'est pas jugée pour ce qu'elle rapporte. L'art s'oppose ainsi à l'utilitaire, qui vise toujours une fin extérieure. Par ailleurs, dans la Critique de la faculté de juger (§46), Kant montre que le génie produit sans pouvoir donner de règle déterminée à sa production : « le génie est le talent (don naturel) qui donne les règles à l'art » — l'artiste échappe donc aussi à la contrainte d'une raison purement calculante, la création devenant une expression de liberté, un free play des facultés."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : synthèse après Platon/Hegel/Nietzsche/Kant — Quels sont les trois grands modèles philosophiques de la création évoqués en cours, et en quoi consiste le modèle numineux ?",
+    "reponse": "Le cours distingue trois modèles : le modèle numineux, le modèle artisanal, le modèle expressif. Le modèle numineux (du latin numen, la puissance divine) fait de la création un geste divin, une création ex nihilo (à partir de rien) : Dieu seul possède le geste créateur absolu, l'homme ne fait qu'imiter ou recevoir. C'est le modèle biblique de la Genèse et, chez Platon, celui du Démiurge et de l'inspiration divine du poète (Ion)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : suite de la synthèse — En quoi consiste le modèle artisanal, et pourquoi le dialogue Gorgias de Platon l'illustre-t-il ?",
+    "reponse": "Le modèle artisanal conçoit la création comme un travail d'assemblage et de composition : produire une œuvre, c'est combiner des matériaux et des techniques selon des règles apprises, à la manière d'un artisan qui façonne un objet utile. Dans le Gorgias, Platon traite la rhétorique et les arts comme des « productions » réglées, comparables à des savoir-faire techniques (cuisine, médecine) plutôt qu'à des inspirations mystérieuses : ce texte illustre la conception de l'art comme technè, maîtrisable et transmissible, par opposition à l'inspiration incontrôlable de l'Ion."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : suite de la synthèse — En quoi consiste le modèle expressif défendu par Plotin, et qu'entend-on par « émanation » ?",
+    "reponse": "Chez Plotin (Ennéades), la création n'est ni un geste divin ex nihilo ni un simple assemblage technique : c'est une émanation, c'est-à-dire un débordement naturel et nécessaire de l'Un (le principe suprême) qui, par surabondance, produit les degrés inférieurs de réalité sans rien perdre de sa plénitude — comme une lumière rayonne sans s'épuiser. Appliqué à l'art, ce modèle fait de l'œuvre le passage de l'homme vers le transcendant : créer, c'est laisser transparaître, comme une lumière, quelque chose qui dépasse l'artiste lui-même et le relie à un principe supérieur."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur les figures mythologiques de la création — Pourquoi les figures de la création sont-elles souvent féminines dans la mythologie grecque, et que faut-il savoir des Muses ?",
+    "reponse": "Dans la mythologie grecque, ce sont les neuf Muses, filles de Zeus et de Mnémosyne (la Mémoire), qui président à l'inspiration des différents arts : la création n'est pas conçue comme un pur geste de volonté de l'artiste (homme), mais comme un don reçu d'une puissance féminine extérieure à lui, ce qui rejoint la conception platonicienne de la possession divine (Ion). Il faut retenir en particulier Calliope, muse de la poésie épique (associée à Homère), Euterpe, muse de la musique (et de la poésie lyrique), et Melpomène, muse de la tragédie — trois figures à mobiliser selon le domaine artistique concerné dans une copie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur les théoriciens modernes du processus créateur — Que soutient Stefan Zweig sur la nature du processus créateur, et dans quel texte formule-t-il cette thèse ?",
+    "reponse": "Dans une conférence donnée à New York en 1939, publiée sous le titre Le Mystère de la création artistique, Zweig affirme : « La création est un perpétuel combat entre l'inconscient et la conscience. » Il précise que le processus créateur ne se réduit ni à la seule inspiration ni au seul travail, mais à leur somme : « inspiration plus travail ». L'artiste, absorbé dans son acte créateur comme le croyant dans la prière, perd la conscience claire de lui-même et du monde extérieur, ce qui explique qu'il soit souvent incapable d'expliquer après coup comment il a créé."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : partie sur Jean Genet et l'origine de la beauté — Que soutient Jean Genet sur l'origine de la beauté, et dans quel texte formule-t-il cette idée ?",
+    "reponse": "Dans L'Atelier d'Alberto Giacometti (1957), texte consacré au sculpteur, Genet écrit : « Il n'est pas à la beauté d'autre origine que la blessure, singulière, différente pour chacun, cachée ou visible, que tout homme garde en soi. » Pour Genet, la beauté ne vient donc pas d'un don extérieur (Muse, divinité) ni d'une simple technique, mais d'une plaie intime et propre à chaque individu, que l'œuvre d'art donne à voir ou révèle sans nécessairement l'exposer directement."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : étude de cas littéraire sur l'échec créateur — Que raconte Le Chef-d'œuvre inconnu de Balzac (1831), et pourquoi le personnage de Frenhofer illustre-t-il les arcanes de la création ?",
+    "reponse": "Dans cette nouvelle, le vieux peintre Frenhofer travaille depuis dix ans, en secret, à un tableau censé représenter la femme parfaite, la Belle Noiseuse, qu'il juge sans cesse inachevé et qu'il ne montre à personne. Quand il consent enfin à le dévoiler à Poussin et Porbus, ceux-ci ne distinguent qu'un amas confus de couleurs, dont seul émerge, dans un coin, un pied féminin d'une beauté parfaite. Frenhofer, incapable de comprendre que son génie a sombré dans l'excès de retouches et l'obsession de l'absolu, brûle ses toiles et meurt dans la nuit. Le personnage illustre exactement l'arcane de la création : la vision intérieure de l'artiste (parfaite pour lui) et sa réalisation matérielle (illisible pour autrui) ne coïncident plus, et nul, pas même Frenhofer, ne peut dire où s'est perdu le chef-d'œuvre."
+  },
+  {
+    "type": "Question",
+    "enonce": "Situation approximative : conclusion du cours sur le rôle du lieu — En quoi le lieu de la création (atelier, cabinet, bureau) est-il lui-même un objet d'étude du programme, et quel exemple tiré de L'Œuvre de Zola illustre ce rôle ?",
+    "reponse": "Le lieu de travail n'est pas un simple décor : il conditionne matériellement l'acte de création (lumière, espace, isolement) et devient souvent, dans les œuvres du programme, un personnage à part entière — ce que Woolf formalise directement avec la nécessité d'« une chambre à soi ». Dans L'Œuvre de Zola, l'atelier de Claude Lantier est le lieu où se joue tout le drame : atelier flottant sur la Seine pour saisir la lumière de Paris, puis hangar où il s'enferme avec sa toile géante au point de s'y couper de Christine et du monde — le lieu épouse et aggrave la dérive du personnage jusqu'à devenir, à la fin, le lieu même de sa mort."
+  }
+]
