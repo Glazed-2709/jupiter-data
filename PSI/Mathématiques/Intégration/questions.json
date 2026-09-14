@@ -1,0 +1,87 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition précise d'une fonction $f : [a,b] \\to \\mathbb{K}$ continue par morceaux sur un segment $[a,b]$.",
+    "reponse": "Une fonction $f$ de $[a,b]$ dans $\\mathbb{K}$ est continue par morceaux s'il existe une subdivision $a = a_0 < a_1 < \\dots < a_n = b$ telle que :\n1) pour chaque $i \\in \\{0, \\dots, n-1\\}$, la restriction de $f$ à l'ouvert $]a_i, a_{i+1}[$ est continue ;\n2) $f$ admet une limite finie à droite et à gauche en chaque $a_i$ (chaque fois que cela a un sens)."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Une fonction continue par morceaux sur un segment $[a,b]$ est-elle nécessairement bornée ?",
+    "reponse": "Oui, d'après la Proposition 2 du cours, toute fonction continue par morceaux sur un segment est bornée."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer la propriété de positivité stricte pour l'intégrale d'une fonction continue.",
+    "reponse": "Soit $f$ une fonction continue sur $[a,b]$ (avec $a < b$). Si $f \\ge 0$ sur $[a,b]$ et $f \\neq 0$, alors $\\int_a^b f(t) dt > 0$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Énoncer la formule de changement de variable pour l'intégrale d'une fonction continue sur un segment $[a,b]$ en précisant les hypothèses.",
+    "reponse": "Si $\\varphi$ est de classe $\\mathcal{C}^1$ sur $[a,b]$ et $f$ est continue sur un intervalle $[c,d]$ contenant l'image de $[a,b]$ par $\\varphi$, alors :\n$\\int_a^b f(\\varphi(t)) \\cdot \\varphi'(t) dt = \\int_{\\varphi(a)}^{\\varphi(b)} f(u) du$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la convergence de l'intégrale impropre $\\int_a^b f(t) dt$ pour une fonction $f$ continue par morceaux sur l'intervalle $[a,b[$ (avec $b \\in \\mathbb{R}$ ou $b = +\\infty$).",
+    "reponse": "L'intégrale impropre $\\int_a^b f(t) dt$ converge si la limite $\\lim_{x \\to b} \\int_a^x f(t) dt$ existe et est finie."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Énoncer le théorème d'intégration par parties pour les intégrales impropres de fonctions de classe $\\mathcal{C}^1$ sur $I = ]a,b[$.",
+    "reponse": "Soient $u$ et $v$ de classe $\\mathcal{C}^1$ sur $]a,b[$. Si le crochet $[uv]_a^b$ est fini (admet des limites finies en $a$ et $b$),\nalors les intégrales $\\int_a^b u(t)v'(t) dt$ et $\\int_a^b u'(t)v(t) dt$ sont de même nature. En cas de convergence :\n$\\int_a^b u(t)v'(t) dt = [uv]_a^b - \\int_a^b u'(t)v(t) dt$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Donner la définition de l'intégrabilité d'une fonction $f$ continue par morceaux sur un intervalle $I = ]a,b[$.",
+    "reponse": "La fonction $f$ est intégrable sur l'intervalle $I$ si l'intégrale $\\int_a^b |f(t)| dt$ converge."
+  },
+  {
+    "type": "Théorème",
+    "enonce": "Quel est le lien entre la convergence d'une intégrale impropre et l'intégrabilité de la fonction ? La réciproque est-elle vraie ?",
+    "reponse": "Si $f$ est intégrable sur $[a,b[$, alors l'intégrale impropre $\\int_a^b f(t) dt$ converge (Théorème 3). La réciproque est fausse : il existe des fonctions dont l'intégrale converge mais qui ne sont pas intégrables (on parle d'intégrales semi-convergentes)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir une intégrale impropre semi-convergente et donner l'exemple de référence du cours.",
+    "reponse": "L'intégrale impropre $\\int_a^b f$ est dite semi-convergente si elle converge sans que la fonction $f$ soit intégrable sur $[a,b[$. Un exemple classique est $\\int_0^{+\\infty} \\frac{\\sin t}{t} dt$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Énoncer le critère de comparaison série-intégrale.",
+    "reponse": "Soit $f$ continue par morceaux, décroissante et positive sur $[a, +\\infty[$. $f$ est intégrable sur $[a, +\\infty[$ si et seulement si la série $\\sum f(n)$ converge."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner les critères d'intégrabilité de Riemann (bornes critiques $0$ et $+\\infty$) pour les fonctions du type $t \\mapsto \\frac{1}{t^\\alpha}$.",
+    "reponse": "- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $]0,1]$ si et seulement si $\\alpha < 1$.\n- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $[1, +\\infty[$ si et seulement si $\\alpha > 1$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Définir la norme de la convergence en moyenne quadratique $N_2(f)$ pour une fonction continue $f$ sur $I$ appartenant à $L_2$.",
+    "reponse": "$N_2(f) = \\sqrt{\\int_I |f(t)|^2 dt}$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Donner une primitive de la fonction $x \\mapsto \\frac{1}{x^2+a^2}$ pour $a > 0$.",
+    "reponse": "$\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a} \\arctan\\left(\\frac{x}{a}\\right) + C$ sur $\\mathbb{R}$."
+  },
+  {
+    "type": "Exercice",
+    "enonce": "Soit $P$ un polynôme réel tel que $\\int_0^1 P^2(x) e^x dx = 0$. Montrer que $P = 0$.",
+    "reponse": "La fonction $x \\mapsto P^2(x) e^x$ est continue et positive sur $[0,1]$. Son intégrale sur $[0,1]$ étant nulle, cette fonction est identiquement nulle sur $[0,1]$. Comme $\\forall x \\in [0,1], e^x > 0$, on en déduit que $P^2(x) = 0$, donc $P(x) = 0$ pour tout $x \\in [0,1]$. Le polynôme $P$ admet une infinité de racines, il est donc nul."
+  },
+  {
+    "type": "Exercice",
+    "enonce": "Pour $n \\in \\mathbb{N}$, on considère les intégrales de Wallis $I_n = \\int_0^{\\pi/2} (\\sin\\theta)^n d\\theta$. Donner la relation de récurrence liant $I_{n+2}$ et $I_n$.",
+    "reponse": "$I_{n+2} = \\frac{n+1}{n+2} I_n$"
+  },
+  {
+    "type": "Exercice",
+    "enonce": "Énoncer le lemme de Riemann-Lebesgue pour une fonction $f$ de classe $\\mathcal{C}^1$ sur un segment $[a,b]$.",
+    "reponse": "Si $f$ est de classe $\\mathcal{C}^1$ sur le segment $[a,b]$, alors :\n$\\lim_{n \\to +\\infty} \\int_a^b f(t)\\cos(nt) dt = 0$."
+  },
+  {
+    "type": "Exercice",
+    "enonce": "Déterminer la limite de la suite définie pour $n \\ge 1$ par $S_n = \\frac{1}{n} \\sum_{k=0}^{n-1} \\tan\\left(\\frac{k\\pi}{4n}\\right)$ à l'aide des sommes de Riemann.",
+    "reponse": "On reconnaît une somme de Riemann pour la fonction $f: t \\mapsto \\tan\\left(\\frac{\\pi}{4}t\\right)$ sur $[0,1]$. La limite vaut :\n$\\int_0^1 \\tan\\left(\\frac{\\pi}{4}t\\right) dt = \\left[ -\\frac{4}{\\pi} \\ln\\left|\\cos\\left(\\frac{\\pi}{4}t\\right)\\right| \\right]_0^1 = -\\frac{4}{\\pi} \\ln\\left(\\frac{\\sqrt{2}}{2}\\right) = \\frac{2\\ln(2)}{\\pi}$."
+  }
+]

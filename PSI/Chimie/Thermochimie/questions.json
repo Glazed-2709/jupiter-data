@@ -1,0 +1,87 @@
+[
+  {
+    "type": "Définition",
+    "enonce": "Définir l'enthalpie molaire partielle $H_{m,i}$ du constituant $A_i$ d'un mélange.",
+    "reponse": "L'enthalpie molaire partielle est définie par la relation : $H_{m,i} = \\left(\\frac{\\partial H}{\\partial n_i}\\right)_{T,P,n_{j\\neq i}}$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir l'enthalpie de réaction $\\Delta_r H(T,P,\\xi)$ d'un système physicochimique.",
+    "reponse": "L'enthalpie de réaction est définie par : $\\Delta_r H(T,P,\\xi) = \\left(\\frac{\\partial H}{\\partial \\xi}\\right)_{T,P}$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la relation liant l'enthalpie de réaction $\\Delta_r H$ aux enthalpies molaires partielles $H_{m,i}$ des constituants d'un système chimique.",
+    "reponse": "La relation est : $\\Delta_r H = \\sum_{i=1}^N \\nu_i H_{m,i}$, où $\\nu_i$ désigne le coefficient stœchiométrique algébrique du constituant $A_i$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Décrire l'état standard d'un constituant gazeux et d'un soluté à la température $T$.",
+    "reponse": "- Pour un constituant gazeux : correspond à l'état de ce gaz pur se comportant comme un gaz parfait, à la même température $T$ et à la pression standard $P^\\circ = 1\\text{ bar}$.\n- Pour un soluté en solution : correspond à l'état hypothétique de ce constituant à la concentration $c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$, à la même température $T$ et à la pression standard $P^\\circ = 1\\text{ bar}$, avec des interactions nulles (dilution infinie)."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Donner la relation liant l'enthalpie de réaction $\\Delta_r H$ à l'enthalpie standard de réaction $\\Delta_r H^\\circ$ pour des phases condensées ou des gaz parfaits.",
+    "reponse": "Dans le cas de phases condensées (considérées indilatables et incompressibles) ou de gaz parfaits (obéissant à la deuxième loi de Joule), l'enthalpie ne dépend pas de la pression. On a donc : $\\Delta_r H = \\Delta_r H^\\circ$ pour toute pression $P$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Qu'est-ce que l'état standard de référence d'un élément chimique à la température $T$ ?",
+    "reponse": "C'est l'état standard du corps simple associé à cet élément dans l'état physique le plus stable à la température $T$ (exemples : $C(graphite)$ ou $O_2(g)$ à $P^\\circ = 1\\text{ bar}$ et $T$)."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la réaction standard de formation d'une espèce chimique à une température $T$.",
+    "reponse": "C'est la réaction chimique ayant pour produit une mole de l'espèce considérée dans son état standard, et pour réactifs les corps simples pris dans leur état standard de référence à la température $T$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Quelle est la valeur de l'enthalpie standard de formation $\\Delta_f H^\\circ$ d'un corps simple pris dans son état standard de référence ?",
+    "reponse": "Elle est nulle par définition : $\\Delta_f H^\\circ = 0$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Énoncer la loi de Hess exprimant l'enthalpie standard de réaction $\\Delta_r H^\\circ$ d'une réaction d'équation $0 = \\sum_{i=1}^N \\nu_i A_i$ à l'aide des enthalpies standard de formation.",
+    "reponse": "La loi de Hess s'écrit : $\\Delta_r H^\\circ = \\sum_{i=1}^N \\nu_i \\Delta_f H^\\circ(A_i)$."
+  },
+  {
+    "type": "Démonstration",
+    "enonce": "Démontrer que pour une transformation chimique monotherme et monobare sans travail utile, la variation d'enthalpie est égale au transfert thermique et s'exprime par $\\Delta H = Q = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$.",
+    "reponse": "À partir de la différentielle $dH = \\left(\\frac{\\partial H}{\\partial T}\\right)_{P,\\xi} dT + \\left(\\frac{\\partial H}{\\partial P}\\right)_{T,\\xi} dP + \\Delta_r H d\\xi$, on utilise un chemin fictif isobare ($dP = 0$) et isotherme ($dT = 0$). L'intégration donne $\\Delta H = \\int_{\\xi_i}^{\\xi_f} \\Delta_r H d\\xi$. En assimilant $\\Delta_r H$ à $\\Delta_r H^\\circ$ (indépendant de $P$), on obtient $\\Delta H = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$. Pour une transformation monobare sans travail utile, le premier principe s'écrit $\\Delta H = Q$, d'où $Q = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Distinguer les termes endothermique, exothermique et athermique pour une réaction se déroulant dans le sens direct ($\\xi_f - \\xi_i > 0$).",
+    "reponse": "- Endothermique si $\\Delta_r H^\\circ > 0$, impliquant un transfert thermique reçu $Q > 0$.\n- Exothermique si $\\Delta_r H^\\circ < 0$, impliquant un transfert thermique fourni $Q < 0$.\n- Athermique si $\\Delta_r H^\\circ = 0$, impliquant un transfert thermique nul $Q = 0$."
+  },
+  {
+    "type": "Formule",
+    "enonce": "Exprimer la variation d'enthalpie $\\Delta H$ lors de l'échauffement monobare d'un système sans transformation chimique constitué de $N$ constituants de quantités $n_i$ et de capacités thermiques molaires $C_{p,m,i}$ constantes.",
+    "reponse": "La variation d'enthalpie est : $\\Delta H = \\sum_{i=1}^N n_i C_{p,m,i} \\Delta T$."
+  },
+  {
+    "type": "Définition",
+    "enonce": "Définir la température de flamme d'un réacteur chimique.",
+    "reponse": "C'est la température maximale atteignable par un système dans le cas d'une transformation adiabatique et monobare."
+  },
+  {
+    "type": "Propriété",
+    "enonce": "Décrire les deux étapes du chemin fictif utilisé pour calculer une température de flamme à partir d'un état initial à la température $T_i$.",
+    "reponse": "1. Une réaction chimique isotherme menée à la température initiale $T_i$ conduisant à la composition finale du système (avec $\\Delta H_1 = (\\xi_f - \\xi_i)\\Delta_r H^\\circ(T_i)$).\n2. Un échauffement monobare de tous les constituants finaux (produits, réactifs non consommés, espèces inertes) de la température $T_i$ à la température finale de flamme $T_f$ (avec $\\Delta H_2 = \\sum n_{i,\\text{final}} C_{p,m,i} (T_f - T_i)$)."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "La réaction $CO(g) + \\frac{1}{2} O_2(g) = CO_2(g)$ correspond-elle à la réaction standard de formation de $CO_2(g)$ ? Justifier.",
+    "reponse": "Non, car le monoxyde de carbone $CO(g)$ n'est pas un corps simple."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "Calculer l'enthalpie standard de la réaction $2\\text{Mg}(s) + \\text{CO}_2(g) \\rightarrow 2\\text{MgO}(s) + \\text{C}(graphite)$ à 298 K, sachant que $\\Delta_f H^\\circ(CO_2(g)) = -393,51\\text{ kJ}\\cdot\\text{mol}^{-1}$ et $\\Delta_f H^\\circ(MgO(s)) = -601,6\\text{ kJ}\\cdot\\text{mol}^{-1}$.",
+    "reponse": "En appliquant la loi de Hess :\n$\\Delta_r H^\\circ = 2\\Delta_f H^\\circ(MgO(s)) + \\Delta_f H^\\circ(C(graphite)) - 2\\Delta_f H^\\circ(Mg(s)) - \\Delta_f H^\\circ(CO_2(g))$\nPuisque $Mg(s)$ et $C(graphite)$ sont des corps simples dans leur état standard de référence, leurs enthalpies standard de formation sont nulles.\n$\\Delta_r H^\\circ = 2\\times(-601,6) - (-393,51) = -809,69\\text{ kJ}\\cdot\\text{mol}^{-1}$."
+  },
+  {
+    "type": "Calcul",
+    "enonce": "On fait réagir de façon totale, monobare et monotherme à 298 K, un mélange de $2,0\\text{ mmol}$ de $Mg(s)$ et $2,0\\text{ mmol}$ de $CO_2(g)$ selon la réaction $2\\text{Mg}(s) + \\text{CO}_2(g) \\rightarrow 2\\text{MgO}(s) + \\text{C}(graphite)$. Déterminer la variation d'enthalpie $\\Delta H$ du système (on donne $\\Delta_r H^\\circ = -809,69\\text{ kJ}\\cdot\\text{mol}^{-1}$).",
+    "reponse": "Le réactif limitant est $Mg(s)$ car son coefficient stœchiométrique est 2. L'avancement maximal de cette réaction totale est :\n$\\xi_f = \\frac{n_0(Mg)}{2} = 1,0\\text{ mmol} = 1,0 \\times 10^{-3}\\text{ mol}$.\nLa variation d'enthalpie vaut :\n$\\Delta H = \\xi_f \\Delta_r H^\\circ = 1,0\\times 10^{-3} \\times (-809,69\\times 10^3) = -809,7\\text{ J}$."
+  }
+]

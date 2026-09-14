@@ -40,6 +40,19 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Thermochimie",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -69,6 +82,19 @@
               "children": []
             },
             {
+              "name": "Intégration",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Révisions",
               "children": [
                 {
@@ -95,6 +121,15 @@
                 },
                 {
                   "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Corde Vibrante",
+              "children": [
+                {
+                  "name": "Cours",
                   "children": []
                 }
               ]
