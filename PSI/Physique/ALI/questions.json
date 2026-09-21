@@ -1,77 +1,227 @@
 [
   {
-    "type": "Définition",
-    "enonce": "Définir la tension différentielle d'entrée $\\varepsilon$ d'un Amplificateur Linéaire Intégré (ALI).",
-    "reponse": "La tension différentielle d'entrée est définie par la différence de potentiel entre l'entrée non-inverseuse et l'entrée inverseuse : $\\varepsilon = V_+ - V_-$, avec $V_+$ et $V_-$ les potentiels électriques respectifs de ces bornes."
+    "type": "Question",
+    "enonce": "Présentation 1/3 — Qu'est-ce qu'un ALI, et pourquoi dit-on que c'est un composant ACTIF ?",
+    "reponse": "Un ALI (amplificateur linéaire intégré, ou amplificateur opérationnel) est un circuit intégré réalisé à partir de transistors, initialement conçu pour les calculateurs analogiques. C'est un composant ACTIF : il a besoin d'une alimentation extérieure au circuit (typiquement $\\pm15\\,\\text{V}$) pour fonctionner — alimentation qui n'est JAMAIS représentée sur les schémas de circuits, mais qu'il ne faut jamais oublier de brancher en pratique."
   },
   {
-    "type": "Propriété",
-    "enonce": "Quelle approximation fondamentale fait-on sur les courants de polarisation $i_+$ et $i_-$ d'un ALI ?",
-    "reponse": "Les courants de polarisation sont considérés comme nuls : $i_+ \\approx i_- \\approx 0$, ce qui équivaut à modéliser l'ALI avec une impédance d'entrée infinie."
+    "type": "Question",
+    "enonce": "Présentation 2/3 — Identifier le rôle de chacune des bornes 2, 3, 6, 4 et 7, 8 d'un ALI en boîtier 8 broches.",
+    "reponse": "Broche 2 : entrée inverseuse (repérée « $-$ »). Broche 3 : entrée non inverseuse (repérée « $+$ »). Broche 6 : sortie de l'ALI. Broches 4 et 7 : alimentation en $\\pm15\\,\\text{V}$. Broche 8 : aucun branchement. (Broches 1 et 5 : réglage de l'offset, non étudié.)"
   },
   {
-    "type": "Propriété",
-    "enonce": "Quels sont les deux modes (ou zones) de fonctionnement d'un ALI réel et quelles sont les expressions correspondantes de la tension de sortie $u_s$ ?",
-    "reponse": "1. Zone de fonctionnement linéaire : la tension de sortie est proportionnelle à l'entrée différentielle, $u_s = A_0\\varepsilon$ (avec $A_0 \\approx 10^5$ le gain différentiel statique). 2. Zone de fonctionnement saturé : la tension de sortie atteint ses limites d'alimentation, soit $u_s = \\pm V_{sat}$ (généralement $V_{sat} \\approx 14-15\\text{ V}$)."
+    "type": "Question",
+    "enonce": "Présentation 3/3 — Définir les grandeurs $u_+$, $u_-$, $u_s$, $i_+$, $i_-$, $i_s$, et donner leur ordre de grandeur usuel pour les courants de polarisation.",
+    "reponse": "$u_+=V_+-0$ : tension entre l'entrée non-inverseuse et la masse. $u_-=V_--0$ : tension entre l'entrée inverseuse et la masse. $u_s=V_s-0$ : tension entre la sortie et la masse. $i_+$, $i_-$ : courants ENTRANTS dans les bornes non-inverseuse/inverseuse, appelés courants de polarisation, de l'ordre du $\\mu\\text{A}$ — presque toujours considérés nuls ($i_+\\approx i_-\\approx0$). $i_s$ : courant de sortie."
   },
   {
-    "type": "Formule",
-    "enonce": "Donner l'expression de la fonction de transfert (le gain différentiel complexe $A_d(j\\omega)$) d'un ALI dans le modèle linéaire du premier ordre.",
-    "reponse": "$A_d(j\\omega) = \\frac{u_s}{\\varepsilon} = \\frac{A_0}{1 + j\\omega\\tau}$, avec $A_0 \\approx 2 \\times 10^5$ le gain statique en boucle ouverte et $\\tau \\approx 1 \\times 10^{-2}\\text{ s}$ le temps caractéristique de l'ALI."
+    "type": "Question",
+    "enonce": "Caractéristique statique 1/3 — Définir la tension différentielle d'entrée $\\varepsilon$, et pourquoi l'appelle-t-on « statique » ?",
+    "reponse": "$\\varepsilon = V_+ - V_-$, la différence entre les potentiels des bornes non-inverseuse et inverseuse. On parle de caractéristique STATIQUE car, lors du tracé $u_s=f(\\varepsilon)$, l'entrée différentielle $\\varepsilon$ ne dépend pas du temps (régime continu, point par point)."
   },
   {
-    "type": "Définition",
-    "enonce": "Qu'est-ce que le 'slew-rate' d'un ALI ? Donner sa formulation mathématique et sa valeur typique.",
-    "reponse": "Le slew-rate est la limitation physique de la vitesse de balayage de la tension de sortie de l'ALI : $-\\sigma \\le \\frac{du_s}{dt} \\le +\\sigma$, avec une valeur typique de $\\sigma \\approx 0,5\\text{ V}\\cdot\\mu\\text{s}^{-1}$."
+    "type": "Question",
+    "enonce": "Caractéristique statique 2/3 — Décrire les deux zones de fonctionnement de l'ALI et les relations associées.",
+    "reponse": "Zone LINÉAIRE : la tension de sortie est proportionnelle à l'entrée différentielle, $u_s = A_0\\varepsilon$, avec $A_0\\simeq1\\times10^5$ le gain différentiel statique. Zone SATURÉE : dès que $u_s$ deviendrait trop grande, l'ALI sature et $u_s=\\pm V_{sat}$ (indépendant de $\\varepsilon$ au-delà du seuil), $V_{sat}$ étant proche des tensions d'alimentation."
   },
   {
-    "type": "Propriété",
-    "enonce": "Expliquer comment identifier une rétroaction négative et une rétroaction positive, et préciser leur impact sur la stabilité du montage.",
-    "reponse": "Rétroaction négative : la borne de sortie est connectée à la borne inverseuse $(-)$, ce qui a un effet stabilisateur sur le montage. Rétroaction positive : la borne de sortie est connectée à la borne non inverseuse $(+)$, ce qui rend généralement le montage instable."
+    "type": "Question",
+    "enonce": "Caractéristique statique 3/3 — Sur quel intervalle de $\\varepsilon$ se situe la zone linéaire, en ordre de grandeur, et comment le voit-on sur la caractéristique statique ?",
+    "reponse": "La zone linéaire correspond à un intervalle TRÈS ÉTROIT autour de $\\varepsilon=0$ (compte tenu du gain énorme $A_0\\sim10^5$ et de $V_{sat}\\sim15\\,\\text{V}$, la largeur de la zone linéaire est de l'ordre de $V_{sat}/A_0\\sim10^{-4}\\,\\text{V}$). Sur la caractéristique, cela se traduit par une pente très raide (quasi verticale) au voisinage de l'origine, entourée de deux paliers horizontaux à $\\pm V_{sat}$."
   },
   {
-    "type": "Théorème",
-    "enonce": "Énoncer les propriétés d'un ALI idéal de gain infini et ses relations de fonctionnement en régimes linéaire et saturé.",
-    "reponse": "Un ALI idéal possède une impédance d'entrée infinie ($i_+ = i_- = 0$) et une impédance de sortie nulle ($Z_s = 0$). En régime linéaire, $\\varepsilon = V_+ - V_- = 0 \\implies V_+ = V_-$. En régime saturé, $u_s = +V_{sat}$ si $\\varepsilon > 0$, et $u_s = -V_{sat}$ si $\\varepsilon < 0$."
+    "type": "Question",
+    "enonce": "Défauts linéaires 1/3 — Comment modélise-t-on le comportement en fréquence du gain différentiel de l'ALI ? Donner les ordres de grandeur de $A_0$ et $\\tau$.",
+    "reponse": "Le gain différentiel décroît avec la fréquence, modélisé comme un filtre passe-bas du premier ordre : $A_d(j\\omega) = \\dfrac{u_s}{\\varepsilon} = \\dfrac{A_0}{1+j\\omega\\tau}$, avec $A_0\\approx2\\times10^5$ et $\\tau\\approx1\\times10^{-2}\\,\\text{s}$."
   },
   {
-    "type": "Démonstration",
-    "enonce": "Démontrer l'expression de la fonction de transfert $H = \\frac{u_s}{u_e}$ du montage amplificateur non inverseur en supposant l'ALI idéal de gain infini.",
-    "reponse": "Par un diviseur de tension appliqué sur la borne inverseuse : $V_- = \\frac{R_1}{R_1 + R_2} u_s$. L'ALI fonctionnant en régime linéaire, on a $V_+ = V_-$. Comme l'entrée est connectée sur la borne non inverseuse ($V_+ = u_e$), on obtient par substitution : $u_e = \\frac{R_1}{R_1 + R_2} u_s$, d'où $H = \\frac{u_s}{u_e} = 1 + \\frac{R_2}{R_1}$."
+    "type": "Question",
+    "enonce": "Défauts linéaires 2/3 — Qu'est-ce que la tension d'offset $V_d$, et quel autre défaut d'offset affecte la sortie ?",
+    "reponse": "La caractéristique statique réelle de l'ALI ne passe généralement pas par l'origine : on a $u_s\\neq0$ même pour $\\varepsilon=0$. La tension $V_d$ pour laquelle on obtient $u_s=0$ est appelée tension d'offset. De même, en sortie, les tensions de saturation haute et basse sont légèrement différentes en pratique ($V_{sat,+}\\neq V_{sat,-}$)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir le produit gain-bande (GBP) et expliquer le principe de sa conservation pour le montage non inverseur.",
-    "reponse": "Le produit gain-bande est défini par $GBP = H_0 \\times \\omega_c$, où $H_0 = 1 + \\frac{R_2}{R_1}$ est le gain statique et $\\omega_c = \\frac{A_0}{\\tau(1 + R_2/R_1)}$ est la pulsation de coupure. On obtient $GBP = \\frac{A_0}{\\tau}$, qui est une constante caractéristique de l'ALI seul indépendante des résistances choisies. Cela traduit le fait qu'augmenter le gain diminue proportionnellement la bande passante."
+    "type": "Question",
+    "enonce": "Défauts linéaires 3/3 — Les courants de polarisation sont-ils rigoureusement nuls ? Préciser leur ordre de grandeur réel et pourquoi ils sont considérés négligeables en TP.",
+    "reponse": "Non, ils ne sont pas rigoureusement nuls : compris entre le nA et le $\\mu$A, ils restent très faibles devant les courants usuellement manipulés en TP (de l'ordre du mA), d'où l'approximation $i_+\\approx i_-\\approx0$. Ils peuvent néanmoins être sources de problèmes dans certains montages sensibles."
   },
   {
-    "type": "Formule",
-    "enonce": "Rappeler la méthode générale de calcul de l'impédance d'entrée $Z_e$ d'un montage et donner sa valeur pour l'amplificateur non inverseur.",
-    "reponse": "$Z_e = \\frac{\\text{tension d'entrée complexe}}{\\text{courant d'entrée complexe}} = \\frac{u_e}{i_+}$. Pour le montage non inverseur, le courant d'entrée est le courant de polarisation $i_+ = 0$, donc l'impédance d'entrée tend vers l'infini ($Z_e \\to \\infty$)."
+    "type": "Question",
+    "enonce": "Défauts non linéaires 1/3 — Rappeler la contrainte de saturation en TENSION et en COURANT, avec les ordres de grandeur typiques.",
+    "reponse": "Saturation en tension : $-V_{sat}\\le u_s\\le+V_{sat}$, avec $V_{sat}$ généralement de l'ordre de $14\\,\\text{V}$. Saturation en courant : $-I_{sat}\\le i_s\\le+I_{sat}$, avec $I_{sat}\\approx25\\,\\text{mA}$ — il faut donc que la résistance de charge en sortie soit suffisamment grande pour éviter d'atteindre cette limite."
   },
   {
-    "type": "Démonstration",
-    "enonce": "Établir la fonction de transfert $H = \\frac{u_s}{u_e}$ et l'impédance d'entrée $Z_e$ de l'amplificateur inverseur (ALI idéal).",
-    "reponse": "La loi des nœuds à la borne inverseuse donne : $\\frac{u_e - V_-}{R_1} + \\frac{u_s - V_-}{R_2} = i_- = 0$. En régime linéaire, la masse virtuelle impose $V_- = V_+ = 0$. Ainsi, $\\frac{u_e}{R_1} + \\frac{u_s}{R_2} = 0 \\implies H = -\\frac{R_2}{R_1}$. L'impédance d'entrée est définie par $Z_e = \\frac{u_e}{i_1} = \\frac{u_e}{(u_e - V_-)/R_1} = R_1$."
+    "type": "Question",
+    "enonce": "Défauts non linéaires 2/3 — Définir le slew-rate $\\sigma$, donner son ordre de grandeur, et dans quel contexte il pose problème.",
+    "reponse": "Le slew-rate limite la vitesse de balayage de la tension de sortie : $-\\sigma\\le\\dfrac{\\mathrm{d}u_s}{\\mathrm{d}t}\\le+\\sigma$, avec $\\sigma\\approx0{,}5\\,\\text{V}\\cdot\\mu\\text{s}^{-1}$. Il pose problème lorsqu'on cherche à faire commuter très rapidement l'ALI d'une saturation basse à une saturation haute (signaux à fronts raides ou hautes fréquences/amplitudes)."
   },
   {
-    "type": "Propriété",
-    "enonce": "Quelle est la fonction de transfert du montage suiveur et quel est son intérêt principal ?",
-    "reponse": "$H = \\frac{u_s}{u_e} = 1$. Son intérêt est l'adaptation d'impédance entre deux quadripôles : son impédance d'entrée infinie évite de prélever du courant sur le premier quadripôle (qui fonctionne ainsi virtuellement à vide), tandis que son impédance de sortie nulle permet d'alimenter correctement le second quadripôle."
+    "type": "Question",
+    "enonce": "Défauts non linéaires 3/3 — Distinguer un défaut LINÉAIRE d'un défaut NON LINÉAIRE de l'ALI, et classer les défauts vus dans chaque catégorie.",
+    "reponse": "Défauts linéaires (modélisables par une fonction de transfert linéaire) : comportement en fréquence du gain (passe-bas), courants de polarisation, tensions d'offset. Défauts non linéaires (bornes/seuils, non représentables par une simple fonction de transfert) : saturation en tension, saturation en courant, slew-rate."
   },
   {
-    "type": "Calcul",
-    "enonce": "Donner la fonction de transfert complexe $H(j\\omega)$ et l'équation différentielle temporelle reliant $u_s(t)$ et $u_e(t)$ du montage intégrateur idéal.",
-    "reponse": "La fonction de transfert est $H(j\\omega) = -\\frac{1}{jRC\\omega}$. Dans le domaine temporel, l'équation s'écrit : $u_s(t) = -\\frac{1}{RC} \\int u_e(t) dt$."
+    "type": "Question",
+    "enonce": "Modèle du 1er ordre 1/2 — Lister les trois caractéristiques du modèle de l'ALI linéaire du premier ordre, avec les valeurs numériques associées.",
+    "reponse": "(1) Impédance d'entrée infinie ($R_e\\approx1\\times10^{12}\\,\\Omega$, courants de polarisation nuls $i_+=i_-=0$). (2) Impédance de sortie nulle ($R_s\\approx0\\,\\Omega$, valable dès que l'ALI est utilisé dans un montage avec rétroaction). (3) En zone linéaire, fonction de transfert $A_d(j\\omega)=\\dfrac{A_0}{1+j\\omega\\tau}$, avec $\\tau\\approx1\\times10^{-2}\\,\\text{s}$."
   },
   {
-    "type": "Calcul",
-    "enonce": "Établir la fonction de transfert complexe $H(j\\omega)$ et l'équation temporelle du montage dérivateur idéal (condensateur $C$ en entrée sur $(-)$, résistance $R$ en rétroaction).",
-    "reponse": "La loi des nœuds en $(-)$ avec $V_- = 0$ donne $i_C = i_R \\implies C \\frac{du_e(t)}{dt} = -\\frac{u_s(t)}{R}$. D'où l'équation temporelle $u_s(t) = -RC \\frac{du_e(t)}{dt}$, et en notation complexe $H(j\\omega) = \\frac{u_s}{u_e} = -jRC\\omega$."
+    "type": "Question",
+    "enonce": "Modèle du 1er ordre 2/2 — Cette fonction de transfert du 1er ordre est-elle valable en tout point de fonctionnement de l'ALI ? Quels sont l'intérêt et l'inconvénient de ce modèle ?",
+    "reponse": "Non : la fonction de transfert $A_d(j\\omega)=A_0/(1+j\\omega\\tau)$ n'est utilisable QUE dans la zone de fonctionnement LINÉAIRE de l'ALI, c'est-à-dire tant que $|u_s|\\le V_{sat}$. Intérêt du modèle : il permet d'étudier la stabilité et le comportement en fréquence des montages comportant un ALI. Inconvénient : il conduit à des calculs plus lourds que le modèle idéal."
   },
   {
-    "type": "Calcul",
-    "enonce": "Justifier pourquoi l'ALI fonctionne en régime linéaire dans le montage sommateur non-inverseur (TD, Figure 2).",
-    "reponse": "L'ALI fonctionne en régime linéaire car il présente une rétroaction négative : sa sortie est connectée via une résistance $R$ à sa borne d'entrée inverseuse $(-)$, ce qui a un effet stabilisateur et empêche le système de diverger vers la saturation."
+    "type": "Question",
+    "enonce": "Modèle idéal de gain infini 1/2 — Comment obtient-on ce modèle à partir de la caractéristique statique réelle ? Calculer $\\varepsilon_{max}$, la valeur limite de $\\varepsilon$ en régime linéaire.",
+    "reponse": "On fait tendre le gain $A_0$ vers l'infini dans le modèle statique : la zone linéaire, initialement de pente $A_0$ finie, devient une pente VERTICALE (largeur nulle) sur la caractéristique. Numériquement : $\\varepsilon_{max}=\\dfrac{V_{sat}}{A_0}=\\dfrac{15}{2\\times10^5}=7{,}5\\times10^{-5}\\,\\text{V}$, valeur très petite devant les tensions usuelles de TP, ce qui justifie $\\varepsilon\\approx0$ en régime linéaire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Modèle idéal de gain infini 2/2 — Résumer les caractéristiques de ce modèle (impédances, régime linéaire, régime saturé), et donner son intérêt et son inconvénient.",
+    "reponse": "Impédance d'entrée infinie, impédance de sortie nulle. En régime LINÉAIRE : $\\varepsilon = V_+-V_- = 0$ (gain infini). En régime SATURÉ : $u_s=+V_{sat}$ si $\\varepsilon>0$, $u_s=-V_{sat}$ si $\\varepsilon<0$. Intérêt : très simple à manipuler (calculs allégés). Inconvénient : aucune information sur la stabilité ni le comportement en fréquence du montage (puisque $\\tau$ n'apparaît plus)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Rétroaction — Définir la rétroaction négative et la rétroaction positive, et énoncer leur effet respectif sur la stabilité du montage.",
+    "reponse": "Rétroaction négative : la borne de SORTIE est reconnectée à la borne INVERSEUSE ($-$). Rétroaction positive : la borne de sortie est reconnectée à la borne NON INVERSEUSE ($+$). Effet : une rétroaction négative a un effet STABILISATEUR sur le montage (fonctionnement en régime linéaire) ; une rétroaction positive SEULE rend le montage INSTABLE (bascule vers la saturation)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode générale — Quelle est la méthode systématique pour établir la fonction de transfert d'un montage comportant un ALI ?",
+    "reponse": "On applique la loi des nœuds aux bornes d'ENTRÉE de l'ALI (bornes $+$ et $-$), en exploitant le fait que les courants de polarisation y sont nuls ($i_+=i_-=0$, impédance d'entrée infinie). Cela donne une relation entre $V_+$ (ou $V_-$) et les autres tensions du montage, que l'on combine ensuite avec la loi de fonctionnement de l'ALI (modèle 1er ordre ou modèle idéal) pour obtenir la fonction de transfert complète."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur (1er ordre) 1/4 — Pour le montage amplificateur non inverseur, établir la relation donnée par la loi des nœuds à la borne inverseuse.",
+    "reponse": "Avec $i_-=0$ (impédance d'entrée infinie), la loi des nœuds à la borne inverseuse ($i_1=i_2$) donne : $\\dfrac{0-V_-}{R_1}=\\dfrac{V_--V_s}{R_2}$, d'où $V_-(R_1+R_2)=R_1V_s$, soit $V_- = \\dfrac{R_1}{R_1+R_2}V_s$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur (1er ordre) 2/4 — En combinant cette relation avec la loi de fonctionnement de l'ALI $A_d=\\frac{V_s}{V_+-V_-}=\\frac{A_0}{1+j\\omega\\tau}$ et $V_+=V_e$, obtenir la fonction de transfert sous forme canonique.",
+    "reponse": "On obtient $V_s\\left(1+j\\omega\\tau+\\dfrac{A_0R_1}{R_1+R_2}\\right)=A_0V_e$. Comme $A_0\\approx2\\times10^5$, on a $\\dfrac{A_0R_1}{R_1+R_2}\\gg1$ devant $1$ (on le NÉGLIGE devant le terme dominant), d'où $H(j\\omega)=\\dfrac{A_0}{\\frac{A_0R_1}{R_1+R_2}+j\\omega\\tau}$, qui se met sous forme canonique : $H(j\\omega) = \\dfrac{1+\\frac{R_2}{R_1}}{1+\\frac{1}{A_0}\\left(1+\\frac{R_2}{R_1}\\right)j\\omega\\tau}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur (1er ordre) 3/4 — Comment conclut-on à la stabilité de ce montage à partir de sa fonction de transfert ? Quel est le gain statique $H_0$ et la pulsation de coupure $\\omega_c$ ?",
+    "reponse": "Tous les coefficients au dénominateur de $H(j\\omega)$ sont de même signe (positifs) : le système est donc STABLE. On identifie $H_0=1+\\dfrac{R_2}{R_1}$ (gain statique) et $\\omega_c=\\dfrac{A_0}{\\tau\\left(1+\\frac{R_2}{R_1}\\right)}$ (pulsation de coupure) — c'est un filtre passe-bas du premier ordre."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur (1er ordre) 4/4 — Définir le produit gain-bande (GBP), le calculer pour ce montage, et énoncer la propriété de conservation.",
+    "reponse": "$\\text{GBP}=H_0\\times\\omega_c$ (avec $\\omega_c$ la pulsation de coupure du passe-bas, ici bande passante $=[0,\\omega_c]$). Pour ce montage : $\\text{GBP}=\\left(1+\\frac{R_2}{R_1}\\right)\\times\\dfrac{A_0}{\\tau\\left(1+\\frac{R_2}{R_1}\\right)}=\\dfrac{A_0}{\\tau}$ : le terme $A_0/\\tau$ ne dépend QUE de l'ALI (pas de $R_1,R_2$) — on parle de CONSERVATION du produit gain-bande. Il faut donc trouver un compromis gain/bande passante en choisissant $R_1,R_2$. Cette conservation reste vraie pour tout système du premier ordre bouclé par un retour constant."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur (idéal) — Justifier pourquoi l'observation d'une rétroaction négative seule suffit à affirmer que l'ALI fonctionne en régime linéaire, puis retrouver $H=1+\\frac{R_2}{R_1}$.",
+    "reponse": "Une rétroaction négative garantit la stabilité du montage, donc un fonctionnement en régime linéaire (et non saturé). On a alors $\\varepsilon=V_+-V_-=0$, avec (loi des nœuds identique) $V_-=\\dfrac{R_1}{R_1+R_2}V_s$ et $V_+=V_e$. D'où $V_e=\\dfrac{R_1}{R_1+R_2}V_s$, soit $H=\\dfrac{V_s}{V_e}=1+\\dfrac{R_2}{R_1}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli non inverseur — Rappeler la méthode générale de calcul de l'impédance d'entrée, et l'appliquer à ce montage.",
+    "reponse": "Méthode générale : $Z_e = \\dfrac{\\text{tension d'entrée complexe}}{\\text{courant d'entrée complexe}}$. Pour l'amplificateur non inverseur, la tension d'entrée est $u_e$ et le courant d'entrée est $i_+=0$ : d'où $Z_e\\to\\infty$. L'impédance de sortie, elle, est celle de l'ALI (sortie prélevée directement à sa sortie) : $Z_s=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Comparateur à hystérésis (rétroaction positive) — Établir la loi des nœuds à la borne non inverseuse, puis montrer que le montage est instable.",
+    "reponse": "Avec $i_+=0$ : $-\\dfrac{V_+}{R_1}=\\dfrac{V_+-V_s}{R_2}$, d'où $V_+=\\dfrac{R_1}{R_1+R_2}V_s$. En combinant avec $V_s=\\dfrac{A_0}{1+j\\omega/\\omega_{c,0}}(V_+-V_-)$ et $V_-=V_e$, puis en négligeant $1$ devant $A_0R_1/(R_1+R_2)\\gg1$, on obtient $H(j\\omega)=\\dfrac{-A_0}{-\\frac{A_0R_1}{R_1+R_2}+j\\omega\\tau}$ : les coefficients du dénominateur n'ont PAS le même signe (l'un est négatif) — le système est donc INSTABLE."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli inverseur 1/3 — Établir la fonction de transfert du montage amplificateur inverseur (ALI idéal de gain infini).",
+    "reponse": "Loi des nœuds à la borne inverseuse ($i_-=0$) : $i_1=i_2$, soit $\\dfrac{V_e-V_-}{R_1}=\\dfrac{V_--V_s}{R_2}$. Loi de fonctionnement de l'ALI idéal : $V_-=V_+=0$ (le $+$ étant à la masse). D'où $\\dfrac{V_e}{R_1}=-\\dfrac{V_s}{R_2}$, soit $H=-\\dfrac{R_2}{R_1}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli inverseur 2/3 — Qu'appelle-t-on « masse virtuelle » dans ce montage, et pourquoi ce terme est-il approprié ?",
+    "reponse": "On a $V_-=V_+=0$ alors même que la borne inverseuse n'est PAS reliée physiquement à la masse — elle se retrouve « comme » à la masse (potentiel nul) uniquement du fait de la loi de fonctionnement de l'ALI idéal ($\\varepsilon=0$) combinée à $V_+=0$. D'où le nom de masse VIRTUELLE : c'est un potentiel imposé électriquement, non par une connexion physique directe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ampli inverseur 3/3 — Donner les impédances d'entrée et de sortie de ce montage. En quoi ce résultat contraste-t-il avec le montage non inverseur ?",
+    "reponse": "Impédance d'entrée : $Z_e=\\dfrac{u_e}{i_1}=\\dfrac{V_e-V_-}{i_1}=R_1$ (car $V_-=0$). Impédance de sortie : $Z_s=0$ (sortie directement prélevée à l'ALI). CONTRASTE important : contrairement au montage NON inverseur (dont l'impédance d'entrée est infinie), le montage INVERSEUR n'a PAS une impédance d'entrée infinie — elle vaut $R_1$, une valeur finie qui charge la source d'entrée."
+  },
+  {
+    "type": "Question",
+    "enonce": "Montage suiveur 1/2 — Établir la fonction de transfert du montage suiveur, et donner ses impédances d'entrée et de sortie.",
+    "reponse": "ALI idéal en régime linéaire : $\\varepsilon=V_+-V_-=0\\Rightarrow V_+=V_-$. Or $V_+=u_e$ et $V_-=u_s$ (sortie directement reliée à l'entrée inverseuse) : d'où $H=\\dfrac{u_s}{u_e}=1$. Impédances : ce sont celles de l'ALI lui-même, $Z_e\\to\\infty$ et $Z_s=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Montage suiveur 2/2 — Quel est l'intérêt principal du montage suiveur lorsqu'on chaîne deux quadripôles ?",
+    "reponse": "Si l'on connecte directement la sortie d'un quadripôle de fonction de transfert à vide $H_1$ à l'entrée d'un second de fonction de transfert à vide $H_2$, la fonction de transfert de l'ensemble n'est en général PAS $H_1\\times H_2$ (le second quadripôle prélève du courant, modifiant le comportement du premier qui n'est plus « à vide »). En intercalant un suiveur (impédance d'entrée infinie, donc ne prélève aucun courant au premier quadripôle ; impédance de sortie nulle, donc impose sa tension sans être perturbé par le second) entre les deux, le premier quadripôle se comporte comme s'il était toujours à vide : on retrouve $H=H_1\\times H_2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Montage intégrateur 1/2 — Par quelle analogie structurelle obtient-on directement la fonction de transfert du montage intégrateur, et quelle est cette fonction de transfert ?",
+    "reponse": "On reconnaît la structure d'un amplificateur inverseur en remplaçant $R_2$ par l'impédance du condensateur $Z_C=\\dfrac{1}{jC\\omega}$ et en gardant $R_1\\to R$. On en déduit directement (par analogie avec $H=-R_2/R_1$) : $H=-\\dfrac{Z_C}{R}=-\\dfrac{1}{jRC\\omega}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Montage intégrateur 2/2 — Traduire la fonction de transfert dans le domaine temporel, et donner les impédances d'entrée et de sortie.",
+    "reponse": "De $\\dfrac{u_s}{u_e}=-\\dfrac{1}{jRC\\omega}$, soit $u_s = -\\dfrac{1}{RC}\\dfrac{u_e}{j\\omega}$, on obtient dans le domaine temporel : $u_s(t) = -\\dfrac{1}{RC}\\displaystyle\\int u_e(t)\\,\\mathrm{d}t$ — c'est bien un montage intégrateur. Impédances : $Z_e=R$ (comme pour l'inverseur, car $R_1\\to R$) et $Z_s=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Synthèse — Dresser un tableau comparatif rapide des impédances d'entrée $Z_e$ et de sortie $Z_s$ des quatre montages incontournables (non inverseur, inverseur, suiveur, intégrateur).",
+    "reponse": "Non inverseur : $Z_e\\to\\infty$, $Z_s=0$. Inverseur : $Z_e=R_1$ (finie !), $Z_s=0$. Suiveur : $Z_e\\to\\infty$, $Z_s=0$. Intégrateur (structure d'inverseur) : $Z_e=R$ (finie), $Z_s=0$. Règle générale : $Z_s=0$ dans TOUS les montages en régime linéaire (sortie prélevée directement à l'ALI) ; $Z_e$ est infinie uniquement quand l'entrée est directement reliée à une borne $+$ ou $-$ sans résistance série (non inverseur, suiveur), et finie dès qu'une résistance d'entrée $R_1$ est présente en série avant la masse virtuelle (inverseur, intégrateur)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 1/3 (TD — montage dérivateur) — Sans faire le calcul complet, par quelle analogie structurelle obtient-on la fonction de transfert d'un montage dérivateur (C en entrée, R en rétroaction) ?",
+    "reponse": "C'est la structure « miroir » de l'intégrateur : dans l'amplificateur inverseur $H=-R_2/R_1$, on remplace ici $R_1\\to Z_C=1/(jC\\omega)$ (impédance d'entrée) et $R_2\\to R$ (impédance de rétroaction). On obtient $H=-\\dfrac{R}{Z_C}=-jRC\\omega$, soit dans le domaine temporel $u_s(t)=-RC\\dfrac{\\mathrm{d}u_e}{\\mathrm{d}t}(t)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 2/3 (TD — montage sommateur non inverseur) — Pourquoi peut-on affirmer, avant tout calcul, que l'ALI de ce montage fonctionne en régime linéaire ?",
+    "reponse": "Il suffit d'observer la présence d'une rétroaction NÉGATIVE (sortie reliée à la borne inverseuse via un pont diviseur) : comme vu dans le cours, l'observation d'une rétroaction négative seule garantit un fonctionnement en régime linéaire (effet stabilisateur), sans même avoir besoin d'écrire les équations du montage."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 3/3 (TD — étude de stabilité) — Dans un montage bouclé par un gain $k$ réglable, quelle est la méthode pour déterminer les valeurs de $k$ assurant la stabilité ?",
+    "reponse": "On établit la fonction de transfert (ou l'équation caractéristique) du montage à l'aide du modèle de l'ALI linéaire du premier ordre, en gardant $k$ comme paramètre littéral. Le montage est stable si et seulement si TOUS les coefficients du dénominateur de la fonction de transfert sont de MÊME SIGNE ; on en déduit une condition sur $k$ délimitant le domaine de stabilité, et on étudie ce qui se passe à la limite (changement de signe d'un coefficient, correspondant à un pôle traversant l'axe imaginaire)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — Les courants de polarisation $i_+$ et $i_-$ d'un ALI sont rigoureusement nuls.",
+    "reponse": "FAUX. Ce ne sont que des valeurs TRÈS FAIBLES (entre le nA et le $\\mu$A), considérées comme négligeables ($i_+\\approx i_-\\approx0$) devant les courants usuels de TP (de l'ordre du mA), mais ce n'est qu'une approximation — un défaut linéaire de l'ALI réel."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — Dans tout montage comportant un ALI, on a toujours $\\varepsilon=V_+-V_-=0$ en régime linéaire.",
+    "reponse": "VRAI, mais UNIQUEMENT dans le cadre du modèle de l'ALI IDÉAL de gain infini (où $A_0\\to\\infty$ rend cette relation exacte), ET à condition que le montage soit effectivement stabilisé par une rétroaction NÉGATIVE. Avec le modèle du premier ordre (gain fini $A_0$), on a $\\varepsilon=u_s/A_0\\neq0$ (très petit mais non nul)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Une rétroaction, qu'elle soit positive ou négative, garantit toujours un fonctionnement en régime linéaire de l'ALI.",
+    "reponse": "FAUX. Seule une rétroaction NÉGATIVE (sortie vers la borne inverseuse) a un effet stabilisateur et garantit le régime linéaire. Une rétroaction POSITIVE seule (sortie vers la borne non inverseuse) rend au contraire le montage INSTABLE, qui bascule vers l'un des deux états de saturation (comparateur à hystérésis)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Le gain différentiel $A_0$ de l'ALI est constant, quelle que soit la fréquence du signal.",
+    "reponse": "FAUX. C'est un défaut linéaire de l'ALI réel : le gain différentiel décroît avec la fréquence selon un modèle de filtre passe-bas du premier ordre, $A_d(j\\omega)=\\dfrac{A_0}{1+j\\omega\\tau}$ ; $A_0$ n'est le gain qu'en régime statique (basse fréquence)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — L'impédance de sortie de tout montage à ALI en régime linéaire (avec rétroaction) est nulle.",
+    "reponse": "VRAI, dans tous les montages incontournables étudiés (non inverseur, inverseur, suiveur, intégrateur) : la sortie du montage est directement prélevée en sortie de l'ALI, dont l'impédance de sortie $R_s\\approx0\\,\\Omega$ dès qu'il y a rétroaction — ce résultat se retrouve donc systématiquement, quel que soit le montage."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — L'impédance d'entrée de tout montage à ALI est infinie, puisque l'ALI lui-même a une impédance d'entrée infinie.",
+    "reponse": "FAUX. C'est vrai uniquement lorsque l'entrée du montage est reliée directement à une borne de l'ALI sans résistance série (montage non inverseur, montage suiveur). Dès qu'une résistance $R_1$ est placée entre l'entrée et la masse virtuelle (montage inverseur, intégrateur), l'impédance d'entrée du MONTAGE devient finie et égale à $R_1$ (ou $R$), bien que l'ALI lui-même conserve une impédance d'entrée infinie."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — Le produit gain-bande dépend du choix des résistances $R_1$ et $R_2$ dans le montage amplificateur non inverseur.",
+    "reponse": "FAUX. C'est précisément la propriété de conservation du produit gain-bande : $\\text{GBP}=H_0\\times\\omega_c=\\dfrac{A_0}{\\tau}$, une quantité qui ne dépend QUE des caractéristiques intrinsèques de l'ALI ($A_0$, $\\tau$), pas de $R_1,R_2$. En pratique, augmenter le gain statique $H_0$ (via $R_2/R_1$) diminue nécessairement la bande passante $\\omega_c$ dans la même proportion."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — Dans le montage amplificateur inverseur, la borne inverseuse est reliée physiquement à la masse.",
+    "reponse": "FAUX. La borne inverseuse n'est PAS connectée physiquement à la masse ; elle se trouve seulement au potentiel de la masse ($V_-=0$) par un effet de « masse virtuelle », conséquence de la loi de fonctionnement de l'ALI idéal ($\\varepsilon=V_+-V_-=0$) combinée au fait que $V_+=0$ (la borne non inverseuse, elle, étant physiquement reliée à la masse dans ce montage)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 9 — La saturation en tension et la saturation en courant sont deux manifestations du même phénomène physique et ont la même origine dans l'ALI.",
+    "reponse": "FAUX (nuance). Ce sont deux limitations DISTINCTES, indépendantes l'une de l'autre : la saturation en tension ($|u_s|\\le V_{sat}\\approx14\\,\\text{V}$) provient des tensions d'alimentation qui bornent la tension de sortie maximale atteignable ; la saturation en courant ($|i_s|\\le I_{sat}\\approx25\\,\\text{mA}$) provient de la capacité limitée du circuit de sortie à fournir du courant, indépendamment de la tension. Un montage peut atteindre l'une sans l'autre."
   }
 ]
