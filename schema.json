@@ -169,7 +169,16 @@
         },
         {
           "name": "X SUP",
-          "children": []
+          "children": [
+            {
+              "name": "Automatismes",
+              "children": []
+            },
+            {
+              "name": "DM - Claude",
+              "children": []
+            }
+          ]
         }
       ]
     }

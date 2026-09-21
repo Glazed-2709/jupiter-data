@@ -1,0 +1,72 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Dénombrement de base 1/2 — Quelle est la différence entre une $p$-liste, un arrangement et une combinaison, et quelle formule leur correspond ?",
+    "reponse": "Une $p$-liste (choix ordonné, avec remise) compte $n^p$ possibilités. Un arrangement $A_n^p = \\dfrac{n!}{(n-p)!}$ est un choix ordonné de $p$ éléments distincts parmi $n$ (sans remise). Une combinaison $\\dbinom{n}{p} = \\dfrac{n!}{p!(n-p)!}$ est un sous-ensemble non ordonné à $p$ éléments parmi $n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dénombrement de base 2/2 — Que compte une permutation, et que compte une permutation avec répétitions ?",
+    "reponse": "Une permutation ($n!=A_n^n$) est une bijection d'un ensemble à $n$ éléments dans lui-même. Une permutation avec répétitions $\\dfrac{n!}{n_1!\\,n_2!\\cdots n_k!}$ compte les répartitions de $n$ objets en $k$ classes de tailles $n_1,\\dots,n_k$ (avec $\\sum n_i = n$), par exemple les anagrammes d'un mot comportant des lettres répétées."
+  },
+  {
+    "type": "Question",
+    "enonce": "Valeurs de base — Rappeler $\\binom{n}{0}$, $\\binom{n}{1}$ et la propriété de symétrie des coefficients binomiaux.",
+    "reponse": "$\\binom{n}{0}=\\binom{n}{n}=1$, $\\binom{n}{1}=\\binom{n}{n-1}=n$, et la symétrie $\\binom{n}{k}=\\binom{n}{n-k}$ pour $0\\le k\\le n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Triangle de Pascal — Énoncer la relation de Pascal et expliquer son interprétation combinatoire.",
+    "reponse": "$\\binom{n}{k} = \\binom{n-1}{k-1}+\\binom{n-1}{k}$ pour $1\\le k\\le n$. Interprétation : pour choisir $k$ éléments parmi $n$, on distingue si un élément fixé est choisi ($\\binom{n-1}{k-1}$ façons de compléter) ou non ($\\binom{n-1}{k}$ façons)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formule d'absorption — Énoncer la formule d'absorption de base, puis sa version itérée à $p$ crans.",
+    "reponse": "Forme de base : $k\\binom{n}{k} = n\\binom{n-1}{k-1}$ pour $1\\le k\\le n$. En itérant $p$ fois : $\\binom{n}{k} = \\dfrac{n}{k}\\dfrac{n-1}{k-1}\\cdots\\dfrac{n-p+1}{k-p+1}\\,\\binom{n-p}{k-p} = \\dfrac{n(n-1)\\cdots(n-p+1)}{k(k-1)\\cdots(k-p+1)}\\binom{n-p}{k-p}$, ce qui équivaut aussi à $\\binom{n}{p}/\\binom{k}{p}$ comme facteur devant $\\binom{n-p}{k-p}$ (les deux écritures coïncident)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Binôme de Newton — Énoncer la formule du binôme, puis donner la valeur de $\\sum_{k=0}^n \\binom{n}{k}$ et son interprétation ensembliste.",
+    "reponse": "$\\forall(x,y)\\in\\mathbb{C}^2,\\ (x+y)^n = \\sum_{k=0}^n \\binom{n}{k}x^ky^{n-k}$. En prenant $x=y=1$ : $\\sum_{k=0}^n \\binom{n}{k}=2^n$, qui est le nombre total de parties d'un ensemble à $n$ éléments."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sommes alternée et parité — Que valent $\\sum_{k=0}^n(-1)^k\\binom{n}{k}$, et les deux sommes restreintes aux $k$ pairs / $k$ impairs ?",
+    "reponse": "$\\sum_{k=0}^n (-1)^k\\binom{n}{k}=0$ pour $n\\ge1$ (en prenant $x=1,y=-1$ dans le binôme). La somme sur les $k$ pairs et la somme sur les $k$ impairs valent chacune $2^{n-1}$ (elles se déduisent en combinant la somme totale $2^n$ et la somme alternée nulle)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formule du pion — Énoncer la formule du pion (« crosse de hockey ») et préciser sa condition de validité.",
+    "reponse": "$\\sum_{k=m}^n \\binom{k}{m} = \\binom{n+1}{m+1}$ pour $0\\le m\\le n$. Elle somme des coefficients binomiaux à indice inférieur fixé $m$ et indice supérieur variable."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vandermonde — Énoncer la formule de Vandermonde, puis son cas particulier donnant $\\sum_{k=0}^n \\binom{n}{k}^2$.",
+    "reponse": "$\\sum_{k=0}^r \\binom{n}{k}\\binom{m}{r-k} = \\binom{n+m}{r}$ pour $n,m,r\\in\\mathbb{N}$. Cas particulier ($m=n$, $r=n$) : $\\sum_{k=0}^n \\binom{n}{k}^2 = \\binom{2n}{n}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sommes pondérées — Donner les formules de $\\sum_{k=0}^n k\\binom{n}{k}$ et $\\sum_{k=0}^n k^2\\binom{n}{k}$, et indiquer la méthode de démonstration de la seconde.",
+    "reponse": "$\\sum_{k=0}^n k\\binom{n}{k} = n\\,2^{n-1}$ et $\\sum_{k=0}^n k^2\\binom{n}{k} = n(n+1)\\,2^{n-2}$ (valable pour tout $n\\ge0$). Pour la seconde, on écrit $k^2=k(k-1)+k$, on traite chaque terme séparément avec la formule d'absorption itérée, puis on additionne les deux sommes obtenues."
+  },
+  {
+    "type": "Question",
+    "enonce": "Crible de Poincaré — Énoncer la formule d'inclusion-exclusion pour $n$ ensembles finis, puis sa version pour 2 et pour 3 ensembles.",
+    "reponse": "$\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{k=1}^n (-1)^{k-1}\\sum_{1\\le i_1<\\cdots<i_k\\le n}|A_{i_1}\\cap\\cdots\\cap A_{i_k}|$. Pour 2 ensembles : $|A\\cup B|=|A|+|B|-|A\\cap B|$. Pour 3 ensembles : $|A\\cup B\\cup C|=|A|+|B|+|C|-|A\\cap B|-|A\\cap C|-|B\\cap C|+|A\\cap B\\cap C|$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérangements — Qu'est-ce qu'un dérangement, donner la formule exacte de $D_n$ et son équivalent asymptotique.",
+    "reponse": "Un dérangement est une permutation de $S_n$ sans point fixe. Formule exacte : $D_n = n!\\sum_{k=0}^n \\dfrac{(-1)^k}{k!}$. Équivalent asymptotique : $D_n \\underset{+\\infty}{\\sim} \\dfrac{n!}{e}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Surjections — Donner la formule du nombre de surjections d'un ensemble à $n$ éléments dans un ensemble à $p$ éléments.",
+    "reponse": "Pour $n\\ge p$ : $S(n,p) = \\sum_{k=0}^p (-1)^{p-k}\\binom{p}{k}k^n$, obtenue par inclusion-exclusion sur les applications qui évitent chacune des $p$ valeurs cibles."
+  },
+  {
+    "type": "Question",
+    "enonce": "Complément algébrique — Rappeler la factorisation de $a^n-b^n$.",
+    "reponse": "$a^n-b^n = (a-b)\\displaystyle\\sum_{k=0}^{n-1} a^{n-1-k}b^k = (a-b)\\left(a^{n-1}+a^{n-2}b+a^{n-3}b^2+\\dots+ab^{n-2}+b^{n-1}\\right)$."
+  }
+]

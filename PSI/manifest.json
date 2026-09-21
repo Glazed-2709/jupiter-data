@@ -2888,7 +2888,637 @@
       "name": "X SUP",
       "path": "X SUP",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "Automatismes",
+          "path": "X SUP/Automatismes",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [
+            {
+              "type": "Question",
+              "enonce": "Racine carrée d'un complexe — Comment détermine-t-on algébriquement une racine carrée $x+iy$ de $z=a+ib$, et quel système faut-il résoudre ?",
+              "reponse": "On pose $x+iy$ une racine carrée cherchée de $z=a+ib$ et on résout le système : $x^2-y^2=a$ (identification de la partie réelle de $(x+iy)^2$), $2xy=b$ (identification de la partie imaginaire, qui donne le signe du produit $xy$), et $x^2+y^2=\\sqrt{a^2+b^2}$ (égalité des modules, $|x+iy|^2=|z|$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Module au carré — Pourquoi préfère-t-on travailler avec $|z|^2$ plutôt qu'avec $|z|$, et comment le calcule-t-on ?",
+              "reponse": "Travailler avec $|z|$ introduit des racines carrées inutiles dans les calculs. Le réflexe est d'utiliser $|z|^2 = z\\cdot\\bar z$, qui s'exprime uniquement à l'aide de produits et permet de développer facilement des expressions comme $|z_1+z_2|^2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Développement d'un module de somme — Donner le développement de $|z_1+z_2|^2$ en fonction de $|z_1|^2$, $|z_2|^2$ et de $\\operatorname{Re}(z_1\\bar z_2)$.",
+              "reponse": "$|z_1+z_2|^2 = (z_1+z_2)(\\bar z_1+\\bar z_2) = |z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Identité du parallélogramme — Énoncer l'identité du parallélogramme pour deux complexes $z_1,z_2$.",
+              "reponse": "$|z_1+z_2|^2 + |z_1-z_2|^2 = 2\\left(|z_1|^2+|z_2|^2\\right)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Cercle unité — Si $|z|=1$, que peut-on dire de $\\bar z$ par rapport à $\\frac{1}{z}$ ?",
+              "reponse": "Si $|z|=1$ (élément du cercle unité $\\mathbb{U}$), alors $\\bar z = \\dfrac{1}{z}$. Cela vient de $z\\bar z = |z|^2 = 1$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dérivées usuelles 1/4 — Donner les dérivées de $x^n$ ($n\\in\\mathbb{N}^*$), $x^\\alpha$, $\\frac{1}{x}$ et $\\sqrt{x}$, avec leurs domaines de dérivabilité.",
+              "reponse": "$(x^n)' = nx^{n-1}$ sur $\\mathbb{R}$ ; $(x^\\alpha)' = \\alpha x^{\\alpha-1}$ sur $]0,+\\infty[$ ; $\\left(\\frac{1}{x}\\right)' = -\\frac{1}{x^2}$ sur $\\mathbb{R}^*$ ; $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ sur $]0,+\\infty[$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dérivées usuelles 2/4 — Donner les dérivées de $e^x$, $a^x$, $\\ln|x|$ et $\\log_a(x)$.",
+              "reponse": "$(e^x)'=e^x$ sur $\\mathbb{R}$ ; $(a^x)' = \\ln(a)\\,a^x$ sur $\\mathbb{R}$ ($a>0$) ; $(\\ln|x|)' = \\frac{1}{x}$ sur $\\mathbb{R}^*$ ; $(\\log_a(x))' = \\frac{1}{x\\ln(a)}$ sur $]0,+\\infty[$ ($a>0,\\ a\\neq1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dérivées usuelles 3/4 — Donner les dérivées de $\\sin(x)$, $\\cos(x)$, $\\tan(x)$, $\\arcsin(x)$, $\\arccos(x)$ et $\\arctan(x)$.",
+              "reponse": "$(\\sin(x))'=\\cos(x)$ et $(\\cos(x))'=-\\sin(x)$ sur $\\mathbb{R}$ ; $(\\tan(x))' = 1+\\tan^2(x) = \\frac{1}{\\cos^2(x)}$ sur $\\mathbb{R}\\setminus\\{\\frac{\\pi}{2}+k\\pi\\}$ ; $(\\arcsin(x))' = \\frac{1}{\\sqrt{1-x^2}}$ et $(\\arccos(x))' = -\\frac{1}{\\sqrt{1-x^2}}$ sur $]-1,1[$ ; $(\\arctan(x))' = \\frac{1}{1+x^2}$ sur $\\mathbb{R}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dérivées usuelles 4/4 — Donner les dérivées de $\\sinh(x)$, $\\cosh(x)$, $\\tanh(x)$, $\\operatorname{argsh}(x)$, $\\operatorname{argch}(x)$ et $\\operatorname{argth}(x)$.",
+              "reponse": "$(\\sinh(x))'=\\cosh(x)$ et $(\\cosh(x))'=\\sinh(x)$ sur $\\mathbb{R}$ ; $(\\tanh(x))' = 1-\\tanh^2(x) = \\frac{1}{\\cosh^2(x)}$ sur $\\mathbb{R}$ ; $(\\operatorname{argsh}(x))' = \\frac{1}{\\sqrt{x^2+1}}$ sur $\\mathbb{R}$ ; $(\\operatorname{argch}(x))' = \\frac{1}{\\sqrt{x^2-1}}$ sur $]1,+\\infty[$ ; $(\\operatorname{argth}(x))' = \\frac{1}{1-x^2}$ sur $]-1,1[$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dénombrement de base 1/2 — Quelle est la différence entre une $p$-liste, un arrangement et une combinaison, et quelle formule leur correspond ?",
+              "reponse": "Une $p$-liste (choix ordonné, avec remise) compte $n^p$ possibilités. Un arrangement $A_n^p = \\dfrac{n!}{(n-p)!}$ est un choix ordonné de $p$ éléments distincts parmi $n$ (sans remise). Une combinaison $\\dbinom{n}{p} = \\dfrac{n!}{p!(n-p)!}$ est un sous-ensemble non ordonné à $p$ éléments parmi $n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dénombrement de base 2/2 — Que compte une permutation, et que compte une permutation avec répétitions ?",
+              "reponse": "Une permutation ($n!=A_n^n$) est une bijection d'un ensemble à $n$ éléments dans lui-même. Une permutation avec répétitions $\\dfrac{n!}{n_1!\\,n_2!\\cdots n_k!}$ compte les répartitions de $n$ objets en $k$ classes de tailles $n_1,\\dots,n_k$ (avec $\\sum n_i = n$), par exemple les anagrammes d'un mot comportant des lettres répétées."
+            },
+            {
+              "type": "Question",
+              "enonce": "Valeurs de base — Rappeler $\\binom{n}{0}$, $\\binom{n}{1}$ et la propriété de symétrie des coefficients binomiaux.",
+              "reponse": "$\\binom{n}{0}=\\binom{n}{n}=1$, $\\binom{n}{1}=\\binom{n}{n-1}=n$, et la symétrie $\\binom{n}{k}=\\binom{n}{n-k}$ pour $0\\le k\\le n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Triangle de Pascal — Énoncer la relation de Pascal et expliquer son interprétation combinatoire.",
+              "reponse": "$\\binom{n}{k} = \\binom{n-1}{k-1}+\\binom{n-1}{k}$ pour $1\\le k\\le n$. Interprétation : pour choisir $k$ éléments parmi $n$, on distingue si un élément fixé est choisi ($\\binom{n-1}{k-1}$ façons de compléter) ou non ($\\binom{n-1}{k}$ façons)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formule d'absorption — Énoncer la formule d'absorption de base, puis sa version itérée à $p$ crans.",
+              "reponse": "Forme de base : $k\\binom{n}{k} = n\\binom{n-1}{k-1}$ pour $1\\le k\\le n$. En itérant $p$ fois : $\\binom{n}{k} = \\dfrac{n}{k}\\dfrac{n-1}{k-1}\\cdots\\dfrac{n-p+1}{k-p+1}\\,\\binom{n-p}{k-p} = \\dfrac{n(n-1)\\cdots(n-p+1)}{k(k-1)\\cdots(k-p+1)}\\binom{n-p}{k-p}$, ce qui équivaut aussi à $\\binom{n}{p}/\\binom{k}{p}$ comme facteur devant $\\binom{n-p}{k-p}$ (les deux écritures coïncident)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Binôme de Newton — Énoncer la formule du binôme, puis donner la valeur de $\\sum_{k=0}^n \\binom{n}{k}$ et son interprétation ensembliste.",
+              "reponse": "$\\forall(x,y)\\in\\mathbb{C}^2,\\ (x+y)^n = \\sum_{k=0}^n \\binom{n}{k}x^ky^{n-k}$. En prenant $x=y=1$ : $\\sum_{k=0}^n \\binom{n}{k}=2^n$, qui est le nombre total de parties d'un ensemble à $n$ éléments."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sommes alternée et parité — Que valent $\\sum_{k=0}^n(-1)^k\\binom{n}{k}$, et les deux sommes restreintes aux $k$ pairs / $k$ impairs ?",
+              "reponse": "$\\sum_{k=0}^n (-1)^k\\binom{n}{k}=0$ pour $n\\ge1$ (en prenant $x=1,y=-1$ dans le binôme). La somme sur les $k$ pairs et la somme sur les $k$ impairs valent chacune $2^{n-1}$ (elles se déduisent en combinant la somme totale $2^n$ et la somme alternée nulle)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formule du pion — Énoncer la formule du pion (« crosse de hockey ») et préciser sa condition de validité.",
+              "reponse": "$\\sum_{k=m}^n \\binom{k}{m} = \\binom{n+1}{m+1}$ pour $0\\le m\\le n$. Elle somme des coefficients binomiaux à indice inférieur fixé $m$ et indice supérieur variable."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vandermonde — Énoncer la formule de Vandermonde, puis son cas particulier donnant $\\sum_{k=0}^n \\binom{n}{k}^2$.",
+              "reponse": "$\\sum_{k=0}^r \\binom{n}{k}\\binom{m}{r-k} = \\binom{n+m}{r}$ pour $n,m,r\\in\\mathbb{N}$. Cas particulier ($m=n$, $r=n$) : $\\sum_{k=0}^n \\binom{n}{k}^2 = \\binom{2n}{n}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sommes pondérées — Donner les formules de $\\sum_{k=0}^n k\\binom{n}{k}$ et $\\sum_{k=0}^n k^2\\binom{n}{k}$, et indiquer la méthode de démonstration de la seconde.",
+              "reponse": "$\\sum_{k=0}^n k\\binom{n}{k} = n\\,2^{n-1}$ et $\\sum_{k=0}^n k^2\\binom{n}{k} = n(n+1)\\,2^{n-2}$ (valable pour tout $n\\ge0$). Pour la seconde, on écrit $k^2=k(k-1)+k$, on traite chaque terme séparément avec la formule d'absorption itérée, puis on additionne les deux sommes obtenues."
+            },
+            {
+              "type": "Question",
+              "enonce": "Crible de Poincaré — Énoncer la formule d'inclusion-exclusion pour $n$ ensembles finis, puis sa version pour 2 et pour 3 ensembles.",
+              "reponse": "$\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{k=1}^n (-1)^{k-1}\\sum_{1\\le i_1<\\cdots<i_k\\le n}|A_{i_1}\\cap\\cdots\\cap A_{i_k}|$. Pour 2 ensembles : $|A\\cup B|=|A|+|B|-|A\\cap B|$. Pour 3 ensembles : $|A\\cup B\\cup C|=|A|+|B|+|C|-|A\\cap B|-|A\\cap C|-|B\\cap C|+|A\\cap B\\cap C|$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dérangements — Qu'est-ce qu'un dérangement, donner la formule exacte de $D_n$ et son équivalent asymptotique.",
+              "reponse": "Un dérangement est une permutation de $S_n$ sans point fixe. Formule exacte : $D_n = n!\\sum_{k=0}^n \\dfrac{(-1)^k}{k!}$. Équivalent asymptotique : $D_n \\underset{+\\infty}{\\sim} \\dfrac{n!}{e}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Surjections — Donner la formule du nombre de surjections d'un ensemble à $n$ éléments dans un ensemble à $p$ éléments.",
+              "reponse": "Pour $n\\ge p$ : $S(n,p) = \\sum_{k=0}^p (-1)^{p-k}\\binom{p}{k}k^n$, obtenue par inclusion-exclusion sur les applications qui évitent chacune des $p$ valeurs cibles."
+            },
+            {
+              "type": "Question",
+              "enonce": "Complément algébrique — Rappeler la factorisation de $a^n-b^n$.",
+              "reponse": "$a^n-b^n = (a-b)\\displaystyle\\sum_{k=0}^{n-1} a^{n-1-k}b^k = (a-b)\\left(a^{n-1}+a^{n-2}b+a^{n-3}b^2+\\dots+ab^{n-2}+b^{n-1}\\right)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Convexité 1/2 — Rappeler les inégalités classiques liées au logarithme et à l'exponentielle au voisinage de 0, avec leur cas d'égalité.",
+              "reponse": "Logarithme : $\\forall x>-1,\\ \\ln(1+x)\\le x$ (égalité ssi $x=0$). Exponentielle : $\\forall x\\in\\mathbb{R},\\ e^x \\ge 1+x$ (égalité ssi $x=0$). Ces deux inégalités traduisent la position de la courbe par rapport à sa tangente en 0 (convexité de l'exponentielle, concavité du logarithme)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Convexité 2/2 — Énoncer l'inégalité de Jordan complète sur $\\left[0,\\frac{\\pi}{2}\\right[$, et préciser ce qu'apporte chacun de ses quatre membres.",
+              "reponse": "$\\forall x \\in \\left[0,\\frac{\\pi}{2}\\right[,\\ \\dfrac{2}{\\pi}x \\le \\sin(x) \\le x \\le \\tan(x)$. Le membre $\\frac{2}{\\pi}x \\le \\sin(x)$ est l'inégalité de Jordan proprement dite (issue de la concavité de $\\sin$ sur $[0,\\pi/2]$) ; $\\sin(x)\\le x$ vient de la même concavité comparée à la tangente en 0 ; $x \\le \\tan(x)$ traduit que $\\tan$ croît plus vite que l'identité, jusqu'à diverger en $\\pi/2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Bernoulli — Énoncer l'inégalité de Bernoulli et préciser son domaine de validité en $x$ et $n$.",
+              "reponse": "$\\forall x \\ge -1,\\ \\forall n \\in \\mathbb{N},\\ (1+x)^n \\ge 1+nx$. Elle se démontre par récurrence sur $n$ et est un cas particulier de la convexité de $x \\mapsto (1+x)^n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Inégalité triangulaire — Écrire le double encadrement de $|x+y|$ par rapport à $|x|$ et $|y|$.",
+              "reponse": "$\\big||x|-|y|\\big| \\le |x+y| \\le |x|+|y|$, valable pour des réels, des complexes (modules) ou des vecteurs (normes)."
+            },
+            {
+              "type": "Question",
+              "enonce": "AM-GM — Énoncer l'inégalité arithmético-géométrique et son cas d'égalité.",
+              "reponse": "Pour tous $x_1,\\dots,x_n \\ge 0$ : $\\sqrt[n]{x_1x_2\\cdots x_n} \\le \\dfrac{x_1+x_2+\\cdots+x_n}{n}$ (la moyenne géométrique est majorée par la moyenne arithmétique), avec égalité si et seulement si $x_1=x_2=\\cdots=x_n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Inégalité de Young — Énoncer l'inégalité de Young et préciser les conditions sur $p$ et $q$.",
+              "reponse": "Pour $a,b\\ge0$ et $p,q>1$ tels que $\\frac{1}{p}+\\frac{1}{q}=1$ (exposants conjugués) : $ab \\le \\dfrac{a^p}{p}+\\dfrac{b^q}{q}$. C'est l'outil clé pour démontrer l'inégalité de Hölder."
+            },
+            {
+              "type": "Question",
+              "enonce": "Cauchy-Schwarz — Donner la forme abstraite (préhilbertienne), la forme discrète et la forme intégrale de l'inégalité de Cauchy-Schwarz.",
+              "reponse": "Forme abstraite : $|\\langle x,y\\rangle| \\le \\|x\\|\\,\\|y\\|$. Forme discrète : $\\left(\\sum_{k=1}^n a_kb_k\\right)^2 \\le \\left(\\sum_{k=1}^n a_k^2\\right)\\left(\\sum_{k=1}^n b_k^2\\right)$. Forme intégrale : $\\left(\\int_I f(t)g(t)\\,\\mathrm{d}t\\right)^2 \\le \\left(\\int_I f(t)^2\\,\\mathrm{d}t\\right)\\left(\\int_I g(t)^2\\,\\mathrm{d}t\\right)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Hölder — Énoncer l'inégalité de Hölder sous sa forme intégrale et préciser la condition sur les exposants.",
+              "reponse": "Pour $p,q \\in\\ ]1,+\\infty[$ avec $\\frac{1}{p}+\\frac{1}{q}=1$ : $\\int_I |f(t)g(t)|\\,\\mathrm{d}t \\le \\|f\\|_p\\,\\|g\\|_q = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}\\left(\\int_I |g(t)|^q\\,\\mathrm{d}t\\right)^{1/q}$. Elle généralise Cauchy-Schwarz (cas $p=q=2$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Minkowski — Que dit l'inégalité de Minkowski, et pourquoi est-elle qualifiée d'inégalité triangulaire dans $L^p$ ?",
+              "reponse": "Pour $p\\ge1$ : $\\|f+g\\|_p \\le \\|f\\|_p + \\|g\\|_p$. Elle est l'analogue exact de l'inégalité triangulaire usuelle, mais pour la norme $\\|\\cdot\\|_p$ définie par $\\|f\\|_p = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Inégalité de la moyenne — Énoncer l'inégalité de la moyenne pour une fonction continue $f$ sur $[a,b]$.",
+              "reponse": "Si $f$ est continue sur $[a,b]$ ($a\\le b$) : $\\left|\\int_a^b f(t)\\,\\mathrm{d}t\\right| \\le \\int_a^b |f(t)|\\,\\mathrm{d}t \\le (b-a)\\sup_{t\\in[a,b]}|f(t)|$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Inégalité des accroissements finis (IAF) — Sous quelles hypothèses peut-on écrire $|f(b)-f(a)| \\le M|b-a|$ ?",
+              "reponse": "Si $f:[a,b]\\to\\mathbb{R}$ est continue sur $[a,b]$, dérivable sur $]a,b[$, et si $\\forall x\\in\\ ]a,b[,\\ |f'(x)|\\le M$, alors $|f(b)-f(a)| \\le M\\,|b-a|$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Taylor-Lagrange — Énoncer l'inégalité de Taylor-Lagrange et préciser l'hypothèse de régularité requise sur $f$.",
+              "reponse": "Si $f \\in \\mathcal{C}^{n+1}(I,\\mathbb{R})$ avec $\\sup_{t\\in I}|f^{(n+1)}(t)| \\le M_{n+1}$, alors $\\forall a,x\\in I$ : $\\left|f(x) - \\sum_{k=0}^n \\dfrac{f^{(k)}(a)}{k!}(x-a)^k\\right| \\le \\dfrac{M_{n+1}}{(n+1)!}|x-a|^{n+1}$. Elle majore l'erreur commise en approchant $f$ par son polynôme de Taylor d'ordre $n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Puissances 1/2 — Quelle est la primitive de $x^\\alpha$ et comment son domaine de validité dépend-il de la nature de $\\alpha$ ?",
+              "reponse": "$\\int x^\\alpha\\,\\mathrm{d}x = \\dfrac{x^{\\alpha+1}}{\\alpha+1} + C$ pour $\\alpha \\neq -1$. Le domaine dépend de $\\alpha$ : $\\mathbb{R}$ si $\\alpha \\in \\mathbb{N}$ (la fonction est un polynôme) ; $]-\\infty,0[$ ou $]0,+\\infty[$ si $\\alpha \\in \\mathbb{Z}_-\\setminus\\{-1\\}$ (puissance négative entière, non définie en 0) ; $]0,+\\infty[$ si $\\alpha \\in \\mathbb{R}\\setminus\\mathbb{Z}$ (puissance non entière, définie seulement pour $x>0$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Puissances 2/2 — Donner les primitives associées aux trois formes usuelles $\\frac{1}{x^2+1}$, $\\frac{1}{x^2+a^2}$ et $\\frac{1}{1-x^2}$, avec leurs domaines.",
+              "reponse": "$\\int \\frac{\\mathrm{d}x}{x^2+1} = \\arctan(x)+C$ sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{x^2+a^2} = \\frac{1}{a}\\arctan\\!\\left(\\frac{x}{a}\\right)+C$ ($a>0$) sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{1-x^2} = \\frac{1}{2}\\ln\\left|\\frac{1+x}{1-x}\\right|+C$ sur $]-1,1[$ ou $]-\\infty,-1[$ ou $]1,+\\infty[$ (la fonction n'est pas définie en $x=\\pm1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Trinôme du second degré — Comment intègre-t-on $\\frac{1}{ax^2+bx+c}$ lorsque $\\Delta = b^2-4ac < 0$, et pourquoi cette condition est-elle nécessaire ?",
+              "reponse": "$\\int \\frac{\\mathrm{d}x}{ax^2+bx+c} = \\frac{2}{\\sqrt{-\\Delta}}\\arctan\\!\\left(\\frac{2ax+b}{\\sqrt{-\\Delta}}\\right)+C$ sur $\\mathbb{R}$. La condition $\\Delta<0$ garantit que le trinôme ne s'annule jamais (pas de racine réelle) : il est donc de signe constant et la fonction $\\frac{1}{ax^2+bx+c}$ est bien définie et continue sur $\\mathbb{R}$ tout entier."
+            },
+            {
+              "type": "Question",
+              "enonce": "Logarithme et exponentielle — Rappeler les primitives de $e^x$ et de $\\ln|x|$, avec leurs domaines.",
+              "reponse": "$\\int e^x\\,\\mathrm{d}x = e^x+C$ sur $\\mathbb{R}$. $\\int \\ln|x|\\,\\mathrm{d}x = x\\ln|x| - x + C$ sur $]-\\infty,0[$ ou $]0,+\\infty[$ (le logarithme n'est pas défini en 0)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Trigonométrie circulaire 1/3 — Quelles sont les primitives de $\\sin(x)$, $\\cos(x)$ et de $\\tan(x)$ ?",
+              "reponse": "$\\int \\sin(x)\\,\\mathrm{d}x = -\\cos(x)+C$ et $\\int \\cos(x)\\,\\mathrm{d}x = \\sin(x)+C$, toutes deux sur $\\mathbb{R}$. $\\int \\tan(x)\\,\\mathrm{d}x = -\\ln|\\cos(x)|+C_k$ sur chaque intervalle $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$ (le cosinus s'annule en dehors)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Trigonométrie circulaire 2/3 — Donner les primitives de $\\frac{1}{\\cos^2(x)}$ et de $\\frac{1}{\\sin^2(x)}$, avec leurs domaines respectifs.",
+              "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos^2(x)} = \\tan(x)+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$. $\\int \\frac{\\mathrm{d}x}{\\sin^2(x)} = -\\cot(x)+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$, $k\\in\\mathbb{Z}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Trigonométrie circulaire 3/3 — Comment obtient-on les primitives de $\\frac{1}{\\cos(x)}$ et $\\frac{1}{\\sin(x)}$, et quelle méthode de changement de variable est en jeu ?",
+              "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}+\\frac{\\pi}{4}\\right)\\right|+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$ ; $\\int \\frac{\\mathrm{d}x}{\\sin(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}\\right)\\right|+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$. Ces deux primitives résultent du changement de variable de Bioche $t=\\tan(x/2)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Fonctions hyperboliques — Quelles sont les primitives de $\\sinh(x)$ et $\\cosh(x)$ ?",
+              "reponse": "$\\int \\sinh(x)\\,\\mathrm{d}x = \\cosh(x)+C$ et $\\int \\cosh(x)\\,\\mathrm{d}x = \\sinh(x)+C$, toutes deux sur $\\mathbb{R}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Fonctions radicielles — Donner les primitives de $\\frac{1}{\\sqrt{1-x^2}}$ et de $\\frac{1}{\\sqrt{a^2-x^2}}$, en précisant les domaines exacts.",
+              "reponse": "$\\int \\frac{\\mathrm{d}x}{\\sqrt{1-x^2}} = \\arcsin(x)+C$ sur l'intervalle ouvert $]-1,1[$ (non défini en $\\pm1$, division par zéro). $\\int \\frac{\\mathrm{d}x}{\\sqrt{a^2-x^2}} = \\arcsin\\!\\left(\\frac{x}{a}\\right)+C$ pour $a>0$, sur l'intervalle ouvert $]-a,a[$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Relations fondamentales — Rappeler les deux identités fondamentales reliant $\\cos$, $\\sin$ et $\\tan$.",
+              "reponse": "$\\cos^2(x)+\\sin^2(x)=1$ (identité de Pythagore trigonométrique) et $1+\\tan^2(x)=\\dfrac{1}{\\cos^2(x)}$ (obtenue en divisant la première par $\\cos^2(x)$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Symétries 1/2 — Que valent $\\cos(-x)$, $\\sin(-x)$, $\\cos(\\pi-x)$ et $\\sin(\\pi-x)$ ?",
+              "reponse": "$\\cos(-x)=\\cos(x)$ (parité), $\\sin(-x)=-\\sin(x)$ (imparité), $\\cos(\\pi-x)=-\\cos(x)$, $\\sin(\\pi-x)=\\sin(x)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Symétries 2/2 — Que valent $\\cos(\\pi+x)$, $\\sin(\\pi+x)$, ainsi que les formules de l'angle complémentaire $\\cos\\left(\\frac{\\pi}{2}\\pm x\\right)$ et $\\sin\\left(\\frac{\\pi}{2}\\pm x\\right)$ ?",
+              "reponse": "$\\cos(\\pi+x)=-\\cos(x)$, $\\sin(\\pi+x)=-\\sin(x)$. Pour l'angle complémentaire : $\\cos\\left(\\frac{\\pi}{2}-x\\right)=\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}-x\\right)=\\cos(x)$, $\\cos\\left(\\frac{\\pi}{2}+x\\right)=-\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}+x\\right)=\\cos(x)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formules d'addition — Écrire les développements de $\\cos(a+b)$, $\\cos(a-b)$, $\\sin(a+b)$ et $\\sin(a-b)$.",
+              "reponse": "$\\cos(a+b)=\\cos(a)\\cos(b)-\\sin(a)\\sin(b)$ ; $\\cos(a-b)=\\cos(a)\\cos(b)+\\sin(a)\\sin(b)$ ; $\\sin(a+b)=\\sin(a)\\cos(b)+\\cos(a)\\sin(b)$ ; $\\sin(a-b)=\\sin(a)\\cos(b)-\\cos(a)\\sin(b)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formules d'addition pour la tangente — Donner les formules de $\\tan(a+b)$ et $\\tan(a-b)$.",
+              "reponse": "$\\tan(a+b) = \\dfrac{\\tan(a)+\\tan(b)}{1-\\tan(a)\\tan(b)}$ et $\\tan(a-b) = \\dfrac{\\tan(a)-\\tan(b)}{1+\\tan(a)\\tan(b)}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Duplication — Donner les trois écritures équivalentes de $\\cos(2x)$ et la formule de $\\sin(2x)$.",
+              "reponse": "$\\sin(2x)=2\\sin(x)\\cos(x)$. $\\cos(2x)=\\cos^2(x)-\\sin^2(x)=2\\cos^2(x)-1=1-2\\sin^2(x)$ (les trois formes se déduisent l'une de l'autre via $\\cos^2+\\sin^2=1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Linéarisation — Comment exprime-t-on $\\cos^2(x)$ et $\\sin^2(x)$ en fonction de $\\cos(2x)$, et à quoi sert cette technique ?",
+              "reponse": "$\\cos^2(x)=\\dfrac{1+\\cos(2x)}{2}$ et $\\sin^2(x)=\\dfrac{1-\\cos(2x)}{2}$. Ce sont les formules de linéarisation : elles permettent de remplacer un carré (produit) par une somme d'expressions en angle double, utile notamment pour intégrer $\\cos^2$ ou $\\sin^2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Produits en sommes — Rappeler les trois formules de factorisation transformant $\\cos(a)\\cos(b)$, $\\sin(a)\\sin(b)$ et $\\sin(a)\\cos(b)$ en sommes.",
+              "reponse": "$\\cos(a)\\cos(b)=\\frac{1}{2}[\\cos(a+b)+\\cos(a-b)]$ ; $\\sin(a)\\sin(b)=\\frac{1}{2}[\\cos(a-b)-\\cos(a+b)]$ ; $\\sin(a)\\cos(b)=\\frac{1}{2}[\\sin(a+b)+\\sin(a-b)]$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sommes en produits (Simpson) — Donner les formules transformant $\\cos(p)+\\cos(q)$ et $\\sin(p)+\\sin(q)$ en produits.",
+              "reponse": "$\\cos(p)+\\cos(q) = 2\\cos\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$ et $\\sin(p)+\\sin(q) = 2\\sin\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$. (Les versions avec différence introduisent un signe $-$ et un $\\sin$ à la place du $\\cos$ extérieur pour $\\cos(p)-\\cos(q)$.)"
+            },
+            {
+              "type": "Question",
+              "enonce": "Arc moitié — En posant $t=\\tan(x/2)$, comment exprime-t-on $\\cos(x)$, $\\sin(x)$ et $\\tan(x)$ en fonction de $t$ ?",
+              "reponse": "Pour $x \\not\\equiv \\pi \\pmod{2\\pi}$ : $\\cos(x)=\\dfrac{1-t^2}{1+t^2}$, $\\sin(x)=\\dfrac{2t}{1+t^2}$, $\\tan(x)=\\dfrac{2t}{1-t^2}$. Ce paramétrage rationalise les intégrales trigonométriques (changement de variable de Bioche)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formules d'Euler — Comment exprime-t-on $\\cos(x)$ et $\\sin(x)$ à l'aide de l'exponentielle complexe ?",
+              "reponse": "$\\cos(x) = \\dfrac{e^{ix}+e^{-ix}}{2}$ et $\\sin(x) = \\dfrac{e^{ix}-e^{-ix}}{2i}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Formule de Moivre — Énoncer la formule de Moivre et donner la factorisation de l'angle moitié de $e^{ix}+1$ et $e^{ix}-1$.",
+              "reponse": "Formule de Moivre : $(\\cos(x)+i\\sin(x))^n = \\cos(nx)+i\\sin(nx)$. Factorisation de l'angle moitié : $e^{ix}+1 = 2\\cos\\left(\\frac{x}{2}\\right)e^{ix/2}$ et $e^{ix}-1 = 2i\\sin\\left(\\frac{x}{2}\\right)e^{ix/2}$."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_complexes.json",
+              "label": "complexes",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Racine carrée d'un complexe — Comment détermine-t-on algébriquement une racine carrée $x+iy$ de $z=a+ib$, et quel système faut-il résoudre ?",
+                  "reponse": "On pose $x+iy$ une racine carrée cherchée de $z=a+ib$ et on résout le système : $x^2-y^2=a$ (identification de la partie réelle de $(x+iy)^2$), $2xy=b$ (identification de la partie imaginaire, qui donne le signe du produit $xy$), et $x^2+y^2=\\sqrt{a^2+b^2}$ (égalité des modules, $|x+iy|^2=|z|$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Module au carré — Pourquoi préfère-t-on travailler avec $|z|^2$ plutôt qu'avec $|z|$, et comment le calcule-t-on ?",
+                  "reponse": "Travailler avec $|z|$ introduit des racines carrées inutiles dans les calculs. Le réflexe est d'utiliser $|z|^2 = z\\cdot\\bar z$, qui s'exprime uniquement à l'aide de produits et permet de développer facilement des expressions comme $|z_1+z_2|^2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Développement d'un module de somme — Donner le développement de $|z_1+z_2|^2$ en fonction de $|z_1|^2$, $|z_2|^2$ et de $\\operatorname{Re}(z_1\\bar z_2)$.",
+                  "reponse": "$|z_1+z_2|^2 = (z_1+z_2)(\\bar z_1+\\bar z_2) = |z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Identité du parallélogramme — Énoncer l'identité du parallélogramme pour deux complexes $z_1,z_2$.",
+                  "reponse": "$|z_1+z_2|^2 + |z_1-z_2|^2 = 2\\left(|z_1|^2+|z_2|^2\\right)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Cercle unité — Si $|z|=1$, que peut-on dire de $\\bar z$ par rapport à $\\frac{1}{z}$ ?",
+                  "reponse": "Si $|z|=1$ (élément du cercle unité $\\mathbb{U}$), alors $\\bar z = \\dfrac{1}{z}$. Cela vient de $z\\bar z = |z|^2 = 1$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dérivées usuelles 1/4 — Donner les dérivées de $x^n$ ($n\\in\\mathbb{N}^*$), $x^\\alpha$, $\\frac{1}{x}$ et $\\sqrt{x}$, avec leurs domaines de dérivabilité.",
+                  "reponse": "$(x^n)' = nx^{n-1}$ sur $\\mathbb{R}$ ; $(x^\\alpha)' = \\alpha x^{\\alpha-1}$ sur $]0,+\\infty[$ ; $\\left(\\frac{1}{x}\\right)' = -\\frac{1}{x^2}$ sur $\\mathbb{R}^*$ ; $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ sur $]0,+\\infty[$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dérivées usuelles 2/4 — Donner les dérivées de $e^x$, $a^x$, $\\ln|x|$ et $\\log_a(x)$.",
+                  "reponse": "$(e^x)'=e^x$ sur $\\mathbb{R}$ ; $(a^x)' = \\ln(a)\\,a^x$ sur $\\mathbb{R}$ ($a>0$) ; $(\\ln|x|)' = \\frac{1}{x}$ sur $\\mathbb{R}^*$ ; $(\\log_a(x))' = \\frac{1}{x\\ln(a)}$ sur $]0,+\\infty[$ ($a>0,\\ a\\neq1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dérivées usuelles 3/4 — Donner les dérivées de $\\sin(x)$, $\\cos(x)$, $\\tan(x)$, $\\arcsin(x)$, $\\arccos(x)$ et $\\arctan(x)$.",
+                  "reponse": "$(\\sin(x))'=\\cos(x)$ et $(\\cos(x))'=-\\sin(x)$ sur $\\mathbb{R}$ ; $(\\tan(x))' = 1+\\tan^2(x) = \\frac{1}{\\cos^2(x)}$ sur $\\mathbb{R}\\setminus\\{\\frac{\\pi}{2}+k\\pi\\}$ ; $(\\arcsin(x))' = \\frac{1}{\\sqrt{1-x^2}}$ et $(\\arccos(x))' = -\\frac{1}{\\sqrt{1-x^2}}$ sur $]-1,1[$ ; $(\\arctan(x))' = \\frac{1}{1+x^2}$ sur $\\mathbb{R}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dérivées usuelles 4/4 — Donner les dérivées de $\\sinh(x)$, $\\cosh(x)$, $\\tanh(x)$, $\\operatorname{argsh}(x)$, $\\operatorname{argch}(x)$ et $\\operatorname{argth}(x)$.",
+                  "reponse": "$(\\sinh(x))'=\\cosh(x)$ et $(\\cosh(x))'=\\sinh(x)$ sur $\\mathbb{R}$ ; $(\\tanh(x))' = 1-\\tanh^2(x) = \\frac{1}{\\cosh^2(x)}$ sur $\\mathbb{R}$ ; $(\\operatorname{argsh}(x))' = \\frac{1}{\\sqrt{x^2+1}}$ sur $\\mathbb{R}$ ; $(\\operatorname{argch}(x))' = \\frac{1}{\\sqrt{x^2-1}}$ sur $]1,+\\infty[$ ; $(\\operatorname{argth}(x))' = \\frac{1}{1-x^2}$ sur $]-1,1[$."
+                }
+              ]
+            },
+            {
+              "file": "questions_denombrement.json",
+              "label": "denombrement",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Dénombrement de base 1/2 — Quelle est la différence entre une $p$-liste, un arrangement et une combinaison, et quelle formule leur correspond ?",
+                  "reponse": "Une $p$-liste (choix ordonné, avec remise) compte $n^p$ possibilités. Un arrangement $A_n^p = \\dfrac{n!}{(n-p)!}$ est un choix ordonné de $p$ éléments distincts parmi $n$ (sans remise). Une combinaison $\\dbinom{n}{p} = \\dfrac{n!}{p!(n-p)!}$ est un sous-ensemble non ordonné à $p$ éléments parmi $n$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dénombrement de base 2/2 — Que compte une permutation, et que compte une permutation avec répétitions ?",
+                  "reponse": "Une permutation ($n!=A_n^n$) est une bijection d'un ensemble à $n$ éléments dans lui-même. Une permutation avec répétitions $\\dfrac{n!}{n_1!\\,n_2!\\cdots n_k!}$ compte les répartitions de $n$ objets en $k$ classes de tailles $n_1,\\dots,n_k$ (avec $\\sum n_i = n$), par exemple les anagrammes d'un mot comportant des lettres répétées."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Valeurs de base — Rappeler $\\binom{n}{0}$, $\\binom{n}{1}$ et la propriété de symétrie des coefficients binomiaux.",
+                  "reponse": "$\\binom{n}{0}=\\binom{n}{n}=1$, $\\binom{n}{1}=\\binom{n}{n-1}=n$, et la symétrie $\\binom{n}{k}=\\binom{n}{n-k}$ pour $0\\le k\\le n$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Triangle de Pascal — Énoncer la relation de Pascal et expliquer son interprétation combinatoire.",
+                  "reponse": "$\\binom{n}{k} = \\binom{n-1}{k-1}+\\binom{n-1}{k}$ pour $1\\le k\\le n$. Interprétation : pour choisir $k$ éléments parmi $n$, on distingue si un élément fixé est choisi ($\\binom{n-1}{k-1}$ façons de compléter) ou non ($\\binom{n-1}{k}$ façons)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formule d'absorption — Énoncer la formule d'absorption de base, puis sa version itérée à $p$ crans.",
+                  "reponse": "Forme de base : $k\\binom{n}{k} = n\\binom{n-1}{k-1}$ pour $1\\le k\\le n$. En itérant $p$ fois : $\\binom{n}{k} = \\dfrac{n}{k}\\dfrac{n-1}{k-1}\\cdots\\dfrac{n-p+1}{k-p+1}\\,\\binom{n-p}{k-p} = \\dfrac{n(n-1)\\cdots(n-p+1)}{k(k-1)\\cdots(k-p+1)}\\binom{n-p}{k-p}$, ce qui équivaut aussi à $\\binom{n}{p}/\\binom{k}{p}$ comme facteur devant $\\binom{n-p}{k-p}$ (les deux écritures coïncident)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Binôme de Newton — Énoncer la formule du binôme, puis donner la valeur de $\\sum_{k=0}^n \\binom{n}{k}$ et son interprétation ensembliste.",
+                  "reponse": "$\\forall(x,y)\\in\\mathbb{C}^2,\\ (x+y)^n = \\sum_{k=0}^n \\binom{n}{k}x^ky^{n-k}$. En prenant $x=y=1$ : $\\sum_{k=0}^n \\binom{n}{k}=2^n$, qui est le nombre total de parties d'un ensemble à $n$ éléments."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sommes alternée et parité — Que valent $\\sum_{k=0}^n(-1)^k\\binom{n}{k}$, et les deux sommes restreintes aux $k$ pairs / $k$ impairs ?",
+                  "reponse": "$\\sum_{k=0}^n (-1)^k\\binom{n}{k}=0$ pour $n\\ge1$ (en prenant $x=1,y=-1$ dans le binôme). La somme sur les $k$ pairs et la somme sur les $k$ impairs valent chacune $2^{n-1}$ (elles se déduisent en combinant la somme totale $2^n$ et la somme alternée nulle)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formule du pion — Énoncer la formule du pion (« crosse de hockey ») et préciser sa condition de validité.",
+                  "reponse": "$\\sum_{k=m}^n \\binom{k}{m} = \\binom{n+1}{m+1}$ pour $0\\le m\\le n$. Elle somme des coefficients binomiaux à indice inférieur fixé $m$ et indice supérieur variable."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vandermonde — Énoncer la formule de Vandermonde, puis son cas particulier donnant $\\sum_{k=0}^n \\binom{n}{k}^2$.",
+                  "reponse": "$\\sum_{k=0}^r \\binom{n}{k}\\binom{m}{r-k} = \\binom{n+m}{r}$ pour $n,m,r\\in\\mathbb{N}$. Cas particulier ($m=n$, $r=n$) : $\\sum_{k=0}^n \\binom{n}{k}^2 = \\binom{2n}{n}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sommes pondérées — Donner les formules de $\\sum_{k=0}^n k\\binom{n}{k}$ et $\\sum_{k=0}^n k^2\\binom{n}{k}$, et indiquer la méthode de démonstration de la seconde.",
+                  "reponse": "$\\sum_{k=0}^n k\\binom{n}{k} = n\\,2^{n-1}$ et $\\sum_{k=0}^n k^2\\binom{n}{k} = n(n+1)\\,2^{n-2}$ (valable pour tout $n\\ge0$). Pour la seconde, on écrit $k^2=k(k-1)+k$, on traite chaque terme séparément avec la formule d'absorption itérée, puis on additionne les deux sommes obtenues."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Crible de Poincaré — Énoncer la formule d'inclusion-exclusion pour $n$ ensembles finis, puis sa version pour 2 et pour 3 ensembles.",
+                  "reponse": "$\\left|\\bigcup_{i=1}^n A_i\\right| = \\sum_{k=1}^n (-1)^{k-1}\\sum_{1\\le i_1<\\cdots<i_k\\le n}|A_{i_1}\\cap\\cdots\\cap A_{i_k}|$. Pour 2 ensembles : $|A\\cup B|=|A|+|B|-|A\\cap B|$. Pour 3 ensembles : $|A\\cup B\\cup C|=|A|+|B|+|C|-|A\\cap B|-|A\\cap C|-|B\\cap C|+|A\\cap B\\cap C|$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dérangements — Qu'est-ce qu'un dérangement, donner la formule exacte de $D_n$ et son équivalent asymptotique.",
+                  "reponse": "Un dérangement est une permutation de $S_n$ sans point fixe. Formule exacte : $D_n = n!\\sum_{k=0}^n \\dfrac{(-1)^k}{k!}$. Équivalent asymptotique : $D_n \\underset{+\\infty}{\\sim} \\dfrac{n!}{e}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Surjections — Donner la formule du nombre de surjections d'un ensemble à $n$ éléments dans un ensemble à $p$ éléments.",
+                  "reponse": "Pour $n\\ge p$ : $S(n,p) = \\sum_{k=0}^p (-1)^{p-k}\\binom{p}{k}k^n$, obtenue par inclusion-exclusion sur les applications qui évitent chacune des $p$ valeurs cibles."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Complément algébrique — Rappeler la factorisation de $a^n-b^n$.",
+                  "reponse": "$a^n-b^n = (a-b)\\displaystyle\\sum_{k=0}^{n-1} a^{n-1-k}b^k = (a-b)\\left(a^{n-1}+a^{n-2}b+a^{n-3}b^2+\\dots+ab^{n-2}+b^{n-1}\\right)$."
+                }
+              ]
+            },
+            {
+              "file": "questions_inegalites.json",
+              "label": "inegalites",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Convexité 1/2 — Rappeler les inégalités classiques liées au logarithme et à l'exponentielle au voisinage de 0, avec leur cas d'égalité.",
+                  "reponse": "Logarithme : $\\forall x>-1,\\ \\ln(1+x)\\le x$ (égalité ssi $x=0$). Exponentielle : $\\forall x\\in\\mathbb{R},\\ e^x \\ge 1+x$ (égalité ssi $x=0$). Ces deux inégalités traduisent la position de la courbe par rapport à sa tangente en 0 (convexité de l'exponentielle, concavité du logarithme)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Convexité 2/2 — Énoncer l'inégalité de Jordan complète sur $\\left[0,\\frac{\\pi}{2}\\right[$, et préciser ce qu'apporte chacun de ses quatre membres.",
+                  "reponse": "$\\forall x \\in \\left[0,\\frac{\\pi}{2}\\right[,\\ \\dfrac{2}{\\pi}x \\le \\sin(x) \\le x \\le \\tan(x)$. Le membre $\\frac{2}{\\pi}x \\le \\sin(x)$ est l'inégalité de Jordan proprement dite (issue de la concavité de $\\sin$ sur $[0,\\pi/2]$) ; $\\sin(x)\\le x$ vient de la même concavité comparée à la tangente en 0 ; $x \\le \\tan(x)$ traduit que $\\tan$ croît plus vite que l'identité, jusqu'à diverger en $\\pi/2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Bernoulli — Énoncer l'inégalité de Bernoulli et préciser son domaine de validité en $x$ et $n$.",
+                  "reponse": "$\\forall x \\ge -1,\\ \\forall n \\in \\mathbb{N},\\ (1+x)^n \\ge 1+nx$. Elle se démontre par récurrence sur $n$ et est un cas particulier de la convexité de $x \\mapsto (1+x)^n$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Inégalité triangulaire — Écrire le double encadrement de $|x+y|$ par rapport à $|x|$ et $|y|$.",
+                  "reponse": "$\\big||x|-|y|\\big| \\le |x+y| \\le |x|+|y|$, valable pour des réels, des complexes (modules) ou des vecteurs (normes)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "AM-GM — Énoncer l'inégalité arithmético-géométrique et son cas d'égalité.",
+                  "reponse": "Pour tous $x_1,\\dots,x_n \\ge 0$ : $\\sqrt[n]{x_1x_2\\cdots x_n} \\le \\dfrac{x_1+x_2+\\cdots+x_n}{n}$ (la moyenne géométrique est majorée par la moyenne arithmétique), avec égalité si et seulement si $x_1=x_2=\\cdots=x_n$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Inégalité de Young — Énoncer l'inégalité de Young et préciser les conditions sur $p$ et $q$.",
+                  "reponse": "Pour $a,b\\ge0$ et $p,q>1$ tels que $\\frac{1}{p}+\\frac{1}{q}=1$ (exposants conjugués) : $ab \\le \\dfrac{a^p}{p}+\\dfrac{b^q}{q}$. C'est l'outil clé pour démontrer l'inégalité de Hölder."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Cauchy-Schwarz — Donner la forme abstraite (préhilbertienne), la forme discrète et la forme intégrale de l'inégalité de Cauchy-Schwarz.",
+                  "reponse": "Forme abstraite : $|\\langle x,y\\rangle| \\le \\|x\\|\\,\\|y\\|$. Forme discrète : $\\left(\\sum_{k=1}^n a_kb_k\\right)^2 \\le \\left(\\sum_{k=1}^n a_k^2\\right)\\left(\\sum_{k=1}^n b_k^2\\right)$. Forme intégrale : $\\left(\\int_I f(t)g(t)\\,\\mathrm{d}t\\right)^2 \\le \\left(\\int_I f(t)^2\\,\\mathrm{d}t\\right)\\left(\\int_I g(t)^2\\,\\mathrm{d}t\\right)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Hölder — Énoncer l'inégalité de Hölder sous sa forme intégrale et préciser la condition sur les exposants.",
+                  "reponse": "Pour $p,q \\in\\ ]1,+\\infty[$ avec $\\frac{1}{p}+\\frac{1}{q}=1$ : $\\int_I |f(t)g(t)|\\,\\mathrm{d}t \\le \\|f\\|_p\\,\\|g\\|_q = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}\\left(\\int_I |g(t)|^q\\,\\mathrm{d}t\\right)^{1/q}$. Elle généralise Cauchy-Schwarz (cas $p=q=2$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Minkowski — Que dit l'inégalité de Minkowski, et pourquoi est-elle qualifiée d'inégalité triangulaire dans $L^p$ ?",
+                  "reponse": "Pour $p\\ge1$ : $\\|f+g\\|_p \\le \\|f\\|_p + \\|g\\|_p$. Elle est l'analogue exact de l'inégalité triangulaire usuelle, mais pour la norme $\\|\\cdot\\|_p$ définie par $\\|f\\|_p = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Inégalité de la moyenne — Énoncer l'inégalité de la moyenne pour une fonction continue $f$ sur $[a,b]$.",
+                  "reponse": "Si $f$ est continue sur $[a,b]$ ($a\\le b$) : $\\left|\\int_a^b f(t)\\,\\mathrm{d}t\\right| \\le \\int_a^b |f(t)|\\,\\mathrm{d}t \\le (b-a)\\sup_{t\\in[a,b]}|f(t)|$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Inégalité des accroissements finis (IAF) — Sous quelles hypothèses peut-on écrire $|f(b)-f(a)| \\le M|b-a|$ ?",
+                  "reponse": "Si $f:[a,b]\\to\\mathbb{R}$ est continue sur $[a,b]$, dérivable sur $]a,b[$, et si $\\forall x\\in\\ ]a,b[,\\ |f'(x)|\\le M$, alors $|f(b)-f(a)| \\le M\\,|b-a|$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Taylor-Lagrange — Énoncer l'inégalité de Taylor-Lagrange et préciser l'hypothèse de régularité requise sur $f$.",
+                  "reponse": "Si $f \\in \\mathcal{C}^{n+1}(I,\\mathbb{R})$ avec $\\sup_{t\\in I}|f^{(n+1)}(t)| \\le M_{n+1}$, alors $\\forall a,x\\in I$ : $\\left|f(x) - \\sum_{k=0}^n \\dfrac{f^{(k)}(a)}{k!}(x-a)^k\\right| \\le \\dfrac{M_{n+1}}{(n+1)!}|x-a|^{n+1}$. Elle majore l'erreur commise en approchant $f$ par son polynôme de Taylor d'ordre $n$."
+                }
+              ]
+            },
+            {
+              "file": "questions_primitives.json",
+              "label": "primitives",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Puissances 1/2 — Quelle est la primitive de $x^\\alpha$ et comment son domaine de validité dépend-il de la nature de $\\alpha$ ?",
+                  "reponse": "$\\int x^\\alpha\\,\\mathrm{d}x = \\dfrac{x^{\\alpha+1}}{\\alpha+1} + C$ pour $\\alpha \\neq -1$. Le domaine dépend de $\\alpha$ : $\\mathbb{R}$ si $\\alpha \\in \\mathbb{N}$ (la fonction est un polynôme) ; $]-\\infty,0[$ ou $]0,+\\infty[$ si $\\alpha \\in \\mathbb{Z}_-\\setminus\\{-1\\}$ (puissance négative entière, non définie en 0) ; $]0,+\\infty[$ si $\\alpha \\in \\mathbb{R}\\setminus\\mathbb{Z}$ (puissance non entière, définie seulement pour $x>0$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Puissances 2/2 — Donner les primitives associées aux trois formes usuelles $\\frac{1}{x^2+1}$, $\\frac{1}{x^2+a^2}$ et $\\frac{1}{1-x^2}$, avec leurs domaines.",
+                  "reponse": "$\\int \\frac{\\mathrm{d}x}{x^2+1} = \\arctan(x)+C$ sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{x^2+a^2} = \\frac{1}{a}\\arctan\\!\\left(\\frac{x}{a}\\right)+C$ ($a>0$) sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{1-x^2} = \\frac{1}{2}\\ln\\left|\\frac{1+x}{1-x}\\right|+C$ sur $]-1,1[$ ou $]-\\infty,-1[$ ou $]1,+\\infty[$ (la fonction n'est pas définie en $x=\\pm1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Trinôme du second degré — Comment intègre-t-on $\\frac{1}{ax^2+bx+c}$ lorsque $\\Delta = b^2-4ac < 0$, et pourquoi cette condition est-elle nécessaire ?",
+                  "reponse": "$\\int \\frac{\\mathrm{d}x}{ax^2+bx+c} = \\frac{2}{\\sqrt{-\\Delta}}\\arctan\\!\\left(\\frac{2ax+b}{\\sqrt{-\\Delta}}\\right)+C$ sur $\\mathbb{R}$. La condition $\\Delta<0$ garantit que le trinôme ne s'annule jamais (pas de racine réelle) : il est donc de signe constant et la fonction $\\frac{1}{ax^2+bx+c}$ est bien définie et continue sur $\\mathbb{R}$ tout entier."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Logarithme et exponentielle — Rappeler les primitives de $e^x$ et de $\\ln|x|$, avec leurs domaines.",
+                  "reponse": "$\\int e^x\\,\\mathrm{d}x = e^x+C$ sur $\\mathbb{R}$. $\\int \\ln|x|\\,\\mathrm{d}x = x\\ln|x| - x + C$ sur $]-\\infty,0[$ ou $]0,+\\infty[$ (le logarithme n'est pas défini en 0)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Trigonométrie circulaire 1/3 — Quelles sont les primitives de $\\sin(x)$, $\\cos(x)$ et de $\\tan(x)$ ?",
+                  "reponse": "$\\int \\sin(x)\\,\\mathrm{d}x = -\\cos(x)+C$ et $\\int \\cos(x)\\,\\mathrm{d}x = \\sin(x)+C$, toutes deux sur $\\mathbb{R}$. $\\int \\tan(x)\\,\\mathrm{d}x = -\\ln|\\cos(x)|+C_k$ sur chaque intervalle $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$ (le cosinus s'annule en dehors)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Trigonométrie circulaire 2/3 — Donner les primitives de $\\frac{1}{\\cos^2(x)}$ et de $\\frac{1}{\\sin^2(x)}$, avec leurs domaines respectifs.",
+                  "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos^2(x)} = \\tan(x)+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$. $\\int \\frac{\\mathrm{d}x}{\\sin^2(x)} = -\\cot(x)+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$, $k\\in\\mathbb{Z}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Trigonométrie circulaire 3/3 — Comment obtient-on les primitives de $\\frac{1}{\\cos(x)}$ et $\\frac{1}{\\sin(x)}$, et quelle méthode de changement de variable est en jeu ?",
+                  "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}+\\frac{\\pi}{4}\\right)\\right|+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$ ; $\\int \\frac{\\mathrm{d}x}{\\sin(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}\\right)\\right|+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$. Ces deux primitives résultent du changement de variable de Bioche $t=\\tan(x/2)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Fonctions hyperboliques — Quelles sont les primitives de $\\sinh(x)$ et $\\cosh(x)$ ?",
+                  "reponse": "$\\int \\sinh(x)\\,\\mathrm{d}x = \\cosh(x)+C$ et $\\int \\cosh(x)\\,\\mathrm{d}x = \\sinh(x)+C$, toutes deux sur $\\mathbb{R}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Fonctions radicielles — Donner les primitives de $\\frac{1}{\\sqrt{1-x^2}}$ et de $\\frac{1}{\\sqrt{a^2-x^2}}$, en précisant les domaines exacts.",
+                  "reponse": "$\\int \\frac{\\mathrm{d}x}{\\sqrt{1-x^2}} = \\arcsin(x)+C$ sur l'intervalle ouvert $]-1,1[$ (non défini en $\\pm1$, division par zéro). $\\int \\frac{\\mathrm{d}x}{\\sqrt{a^2-x^2}} = \\arcsin\\!\\left(\\frac{x}{a}\\right)+C$ pour $a>0$, sur l'intervalle ouvert $]-a,a[$."
+                }
+              ]
+            },
+            {
+              "file": "questions_trigo.json",
+              "label": "trigo",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Relations fondamentales — Rappeler les deux identités fondamentales reliant $\\cos$, $\\sin$ et $\\tan$.",
+                  "reponse": "$\\cos^2(x)+\\sin^2(x)=1$ (identité de Pythagore trigonométrique) et $1+\\tan^2(x)=\\dfrac{1}{\\cos^2(x)}$ (obtenue en divisant la première par $\\cos^2(x)$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Symétries 1/2 — Que valent $\\cos(-x)$, $\\sin(-x)$, $\\cos(\\pi-x)$ et $\\sin(\\pi-x)$ ?",
+                  "reponse": "$\\cos(-x)=\\cos(x)$ (parité), $\\sin(-x)=-\\sin(x)$ (imparité), $\\cos(\\pi-x)=-\\cos(x)$, $\\sin(\\pi-x)=\\sin(x)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Symétries 2/2 — Que valent $\\cos(\\pi+x)$, $\\sin(\\pi+x)$, ainsi que les formules de l'angle complémentaire $\\cos\\left(\\frac{\\pi}{2}\\pm x\\right)$ et $\\sin\\left(\\frac{\\pi}{2}\\pm x\\right)$ ?",
+                  "reponse": "$\\cos(\\pi+x)=-\\cos(x)$, $\\sin(\\pi+x)=-\\sin(x)$. Pour l'angle complémentaire : $\\cos\\left(\\frac{\\pi}{2}-x\\right)=\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}-x\\right)=\\cos(x)$, $\\cos\\left(\\frac{\\pi}{2}+x\\right)=-\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}+x\\right)=\\cos(x)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formules d'addition — Écrire les développements de $\\cos(a+b)$, $\\cos(a-b)$, $\\sin(a+b)$ et $\\sin(a-b)$.",
+                  "reponse": "$\\cos(a+b)=\\cos(a)\\cos(b)-\\sin(a)\\sin(b)$ ; $\\cos(a-b)=\\cos(a)\\cos(b)+\\sin(a)\\sin(b)$ ; $\\sin(a+b)=\\sin(a)\\cos(b)+\\cos(a)\\sin(b)$ ; $\\sin(a-b)=\\sin(a)\\cos(b)-\\cos(a)\\sin(b)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formules d'addition pour la tangente — Donner les formules de $\\tan(a+b)$ et $\\tan(a-b)$.",
+                  "reponse": "$\\tan(a+b) = \\dfrac{\\tan(a)+\\tan(b)}{1-\\tan(a)\\tan(b)}$ et $\\tan(a-b) = \\dfrac{\\tan(a)-\\tan(b)}{1+\\tan(a)\\tan(b)}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Duplication — Donner les trois écritures équivalentes de $\\cos(2x)$ et la formule de $\\sin(2x)$.",
+                  "reponse": "$\\sin(2x)=2\\sin(x)\\cos(x)$. $\\cos(2x)=\\cos^2(x)-\\sin^2(x)=2\\cos^2(x)-1=1-2\\sin^2(x)$ (les trois formes se déduisent l'une de l'autre via $\\cos^2+\\sin^2=1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Linéarisation — Comment exprime-t-on $\\cos^2(x)$ et $\\sin^2(x)$ en fonction de $\\cos(2x)$, et à quoi sert cette technique ?",
+                  "reponse": "$\\cos^2(x)=\\dfrac{1+\\cos(2x)}{2}$ et $\\sin^2(x)=\\dfrac{1-\\cos(2x)}{2}$. Ce sont les formules de linéarisation : elles permettent de remplacer un carré (produit) par une somme d'expressions en angle double, utile notamment pour intégrer $\\cos^2$ ou $\\sin^2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Produits en sommes — Rappeler les trois formules de factorisation transformant $\\cos(a)\\cos(b)$, $\\sin(a)\\sin(b)$ et $\\sin(a)\\cos(b)$ en sommes.",
+                  "reponse": "$\\cos(a)\\cos(b)=\\frac{1}{2}[\\cos(a+b)+\\cos(a-b)]$ ; $\\sin(a)\\sin(b)=\\frac{1}{2}[\\cos(a-b)-\\cos(a+b)]$ ; $\\sin(a)\\cos(b)=\\frac{1}{2}[\\sin(a+b)+\\sin(a-b)]$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sommes en produits (Simpson) — Donner les formules transformant $\\cos(p)+\\cos(q)$ et $\\sin(p)+\\sin(q)$ en produits.",
+                  "reponse": "$\\cos(p)+\\cos(q) = 2\\cos\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$ et $\\sin(p)+\\sin(q) = 2\\sin\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$. (Les versions avec différence introduisent un signe $-$ et un $\\sin$ à la place du $\\cos$ extérieur pour $\\cos(p)-\\cos(q)$.)"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Arc moitié — En posant $t=\\tan(x/2)$, comment exprime-t-on $\\cos(x)$, $\\sin(x)$ et $\\tan(x)$ en fonction de $t$ ?",
+                  "reponse": "Pour $x \\not\\equiv \\pi \\pmod{2\\pi}$ : $\\cos(x)=\\dfrac{1-t^2}{1+t^2}$, $\\sin(x)=\\dfrac{2t}{1+t^2}$, $\\tan(x)=\\dfrac{2t}{1-t^2}$. Ce paramétrage rationalise les intégrales trigonométriques (changement de variable de Bioche)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formules d'Euler — Comment exprime-t-on $\\cos(x)$ et $\\sin(x)$ à l'aide de l'exponentielle complexe ?",
+                  "reponse": "$\\cos(x) = \\dfrac{e^{ix}+e^{-ix}}{2}$ et $\\sin(x) = \\dfrac{e^{ix}-e^{-ix}}{2i}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Formule de Moivre — Énoncer la formule de Moivre et donner la factorisation de l'angle moitié de $e^{ix}+1$ et $e^{ix}-1$.",
+                  "reponse": "Formule de Moivre : $(\\cos(x)+i\\sin(x))^n = \\cos(nx)+i\\sin(nx)$. Factorisation de l'angle moitié : $e^{ix}+1 = 2\\cos\\left(\\frac{x}{2}\\right)e^{ix/2}$ et $e^{ix}-1 = 2i\\sin\\left(\\frac{x}{2}\\right)e^{ix/2}$."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
+          "isAvantDernier": false,
+          "hue": 159.11538461538453,
+          "color": "hsl(159.1,100%,56%)"
+        },
+        {
+          "name": "DM - Claude",
+          "path": "X SUP/DM - Claude",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "Nombre d'or et Césaro (30min)_Corr.pdf",
+              "path": "X%20SUP/DM%20-%20Claude/Nombre%20d'or%20et%20C%C3%A9saro%20(30min)_Corr.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Nombre d'or et Césaro (30min).pdf",
+              "path": "X%20SUP/DM%20-%20Claude/Nombre%20d'or%20et%20C%C3%A9saro%20(30min).pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 211.11538461538453,
+          "color": "hsl(211.1,100%,60%)"
+        }
+      ],
       "files": [
         {
           "name": "outils_hors_programme_PSI.md",
@@ -2899,7 +3529,7 @@
       "questions": [],
       "questionSets": [],
       "hasQuestions": false,
-      "isAvantDernier": false,
+      "isAvantDernier": true,
       "hue": 159.11538461538453,
       "color": "hsl(159.1,100%,56%)"
     }
