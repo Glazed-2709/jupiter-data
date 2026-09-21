@@ -131,6 +131,10 @@
                 {
                   "name": "Cours",
                   "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
                 }
               ]
             },

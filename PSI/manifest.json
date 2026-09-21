@@ -1162,6 +1162,11 @@
               "children": [],
               "files": [
                 {
+                  "name": "Exercices – Intégrales généralisées.pdf",
+                  "path": "Math%C3%A9matiques/Int%C3%A9gration/TD/Exercices%20%E2%80%93%20Int%C3%A9grales%20g%C3%A9n%C3%A9ralis%C3%A9es.pdf",
+                  "corrige": false
+                },
+                {
                   "name": "Exercices – Intégration sur un segment.pdf",
                   "path": "Math%C3%A9matiques/Int%C3%A9gration/TD/Exercices%20%E2%80%93%20Int%C3%A9gration%20sur%20un%20segment.pdf",
                   "corrige": false
@@ -1178,89 +1183,229 @@
           "files": [],
           "questions": [
             {
-              "type": "Définition",
-              "enonce": "Donner la définition précise d'une fonction $f : [a,b] \\to \\mathbb{K}$ continue par morceaux sur un segment $[a,b]$.",
-              "reponse": "Une fonction $f$ de $[a,b]$ dans $\\mathbb{K}$ est continue par morceaux s'il existe une subdivision $a = a_0 < a_1 < \\dots < a_n = b$ telle que :\n1) pour chaque $i \\in \\{0, \\dots, n-1\\}$, la restriction de $f$ à l'ouvert $]a_i, a_{i+1}[$ est continue ;\n2) $f$ admet une limite finie à droite et à gauche en chaque $a_i$ (chaque fois que cela a un sens)."
+              "type": "Question",
+              "enonce": "CPM 1/4 — Donner la définition rigoureuse d'une fonction continue par morceaux (cpm) sur un segment $[a,b]$.",
+              "reponse": "$f:[a,b]\\to\\mathbb{K}$ est continue par morceaux s'il existe une subdivision $a=a_0<a_1<\\dots<a_n=b$ (dite adaptée à $f$) telle que : (1) les restrictions de $f$ à chaque $]a_i,a_{i+1}[$ sont continues ; (2) $f$ admet des limites finies à droite et à gauche en chaque $a_i$, chaque fois que cela a un sens (donc une limite à droite en $a_0$, à gauche en $a_n$, les deux aux points intérieurs)."
             },
             {
-              "type": "Propriété",
-              "enonce": "Une fonction continue par morceaux sur un segment $[a,b]$ est-elle nécessairement bornée ?",
-              "reponse": "Oui, d'après la Proposition 2 du cours, toute fonction continue par morceaux sur un segment est bornée."
+              "type": "Question",
+              "enonce": "CPM 2/4 — Qu'est-ce que cette définition exclut explicitement ?",
+              "reponse": "Elle exclut les limites infinies aux points de la subdivision, ainsi que le cas où $f$ n'admet pas de limite (oscillation) en l'un de ces points. Concrètement, $f$ est continue sauf en un nombre FINI de points, et y admet des limites finies à gauche et à droite."
             },
             {
-              "type": "Propriété",
-              "enonce": "Énoncer la propriété de positivité stricte pour l'intégrale d'une fonction continue.",
-              "reponse": "Soit $f$ une fonction continue sur $[a,b]$ (avec $a < b$). Si $f \\ge 0$ sur $[a,b]$ et $f \\neq 0$, alors $\\int_a^b f(t) dt > 0$."
+              "type": "Question",
+              "enonce": "CPM 3/4 — Que peut-on dire de la restriction $f_{|]a_k,a_{k+1}[}$ ? En quoi $\\mathscr{C}_{pm}([a,b],\\mathbb{K})$ est-elle une sous-algèbre ?",
+              "reponse": "Cette restriction est prolongeable en une fonction continue sur le segment fermé $[a_k,a_{k+1}]$ (c'est ce prolongement qu'on intègre morceau par morceau). $\\mathscr{C}_{pm}([a,b],\\mathbb{K})$ est une sous-algèbre de $\\mathbb{K}^I$ : les combinaisons linéaires et les produits de fonctions continues par morceaux restent continues par morceaux."
             },
             {
-              "type": "Formule",
-              "enonce": "Énoncer la formule de changement de variable pour l'intégrale d'une fonction continue sur un segment $[a,b]$ en précisant les hypothèses.",
-              "reponse": "Si $\\varphi$ est de classe $\\mathcal{C}^1$ sur $[a,b]$ et $f$ est continue sur un intervalle $[c,d]$ contenant l'image de $[a,b]$ par $\\varphi$, alors :\n$\\int_a^b f(\\varphi(t)) \\cdot \\varphi'(t) dt = \\int_{\\varphi(a)}^{\\varphi(b)} f(u) du$."
+              "type": "Question",
+              "enonce": "CPM 4/4 — Une fonction continue par morceaux sur un segment est-elle toujours bornée ? Cela reste-t-il vrai sur un intervalle quelconque ?",
+              "reponse": "Oui, sur un SEGMENT une fonction cpm est toujours bornée (Prop. 2) — chaque morceau, prolongé par continuité sur un segment, est borné, et il n'y en a qu'un nombre fini. ATTENTION : ce résultat est spécifique au segment ; sur un intervalle quelconque (non borné ou ouvert en une borne infinie), une fonction continue par morceaux n'est pas nécessairement bornée."
             },
             {
-              "type": "Définition",
-              "enonce": "Définir la convergence de l'intégrale impropre $\\int_a^b f(t) dt$ pour une fonction $f$ continue par morceaux sur l'intervalle $[a,b[$ (avec $b \\in \\mathbb{R}$ ou $b = +\\infty$).",
-              "reponse": "L'intégrale impropre $\\int_a^b f(t) dt$ converge si la limite $\\lim_{x \\to b} \\int_a^x f(t) dt$ existe et est finie."
+              "type": "Question",
+              "enonce": "Intégrale cpm 1/3 — Comment définit-on $\\int_a^b f(t)\\,\\mathrm{d}t$ pour $f$ continue par morceaux, et cette définition dépend-elle de la subdivision choisie ?",
+              "reponse": "Avec $a=a_0<\\dots<a_n=b$ une subdivision adaptée, on pose $\\int_a^b f(t)\\,\\mathrm{d}t = \\sum_{k=1}^n \\int_{a_k}^{a_{k+1}} \\tilde{f}(t)\\,\\mathrm{d}t$, où $\\tilde f$ est le prolongement par continuité de $f_{|]a_k,a_{k+1}[}$ à $[a_k,a_{k+1}]$. Cette définition NE dépend PAS de la subdivision adaptée choisie, ni des valeurs de $f$ en un nombre fini de points."
             },
             {
-              "type": "Théorème",
-              "enonce": "Énoncer le théorème d'intégration par parties pour les intégrales impropres de fonctions de classe $\\mathcal{C}^1$ sur $I = ]a,b[$.",
-              "reponse": "Soient $u$ et $v$ de classe $\\mathcal{C}^1$ sur $]a,b[$. Si le crochet $[uv]_a^b$ est fini (admet des limites finies en $a$ et $b$),\nalors les intégrales $\\int_a^b u(t)v'(t) dt$ et $\\int_a^b u'(t)v(t) dt$ sont de même nature. En cas de convergence :\n$\\int_a^b u(t)v'(t) dt = [uv]_a^b - \\int_a^b u'(t)v(t) dt$."
+              "type": "Question",
+              "enonce": "Intégrale cpm 2/3 — Lister les propriétés de l'intégrale valables pour de simples fonctions continues PAR MORCEAUX (pas besoin de continuité globale).",
+              "reponse": "Linéarité ; relation de Chasles $\\int_a^c f+\\int_c^b f=\\int_a^b f$ ; positivité ($a\\le b$, $f\\ge0 \\Rightarrow \\int_a^b f\\ge0$) ; croissance ($f\\le g \\Rightarrow \\int_a^b f\\le\\int_a^b g$) ; inégalité triangulaire $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$ ; invariance de l'intégrale lorsqu'on change $f$ en un nombre fini de points."
             },
             {
-              "type": "Définition",
-              "enonce": "Donner la définition de l'intégrabilité d'une fonction $f$ continue par morceaux sur un intervalle $I = ]a,b[$.",
-              "reponse": "La fonction $f$ est intégrable sur l'intervalle $I$ si l'intégrale $\\int_a^b |f(t)| dt$ converge."
+              "type": "Question",
+              "enonce": "Intégrale cpm 3/3 — Quelles DEUX propriétés supplémentaires exigent que $f$ soit CONTINUE (et pas seulement cpm) ?",
+              "reponse": "(1) La positivité stricte : $f$ continue, $f\\ge0$ et $f\\ne0$ sur $[a,b]$ $\\Rightarrow$ $\\int_a^b f>0$ (faux en général pour une simple fonction cpm, qui peut être non nulle seulement en un point isolé sans changer l'intégrale). (2) Le lien primitive-intégrale : $f$ continue sur $[a,b]$ admet une primitive $F$, et $\\int_a^b f = F(b)-F(a)$."
             },
             {
-              "type": "Théorème",
-              "enonce": "Quel est le lien entre la convergence d'une intégrale impropre et l'intégrabilité de la fonction ? La réciproque est-elle vraie ?",
-              "reponse": "Si $f$ est intégrable sur $[a,b[$, alors l'intégrale impropre $\\int_a^b f(t) dt$ converge (Théorème 3). La réciproque est fausse : il existe des fonctions dont l'intégrale converge mais qui ne sont pas intégrables (on parle d'intégrales semi-convergentes)."
+              "type": "Question",
+              "enonce": "Énoncer précisément le théorème d'intégration par parties sur un segment (hypothèses de régularité incluses).",
+              "reponse": "Si $u$ et $v$ sont de classe $\\mathscr{C}^1$ sur $[a,b]$, alors $\\int_a^b u(t)v'(t)\\,\\mathrm{d}t = [uv]_a^b - \\int_a^b u'(t)v(t)\\,\\mathrm{d}t$."
             },
             {
-              "type": "Définition",
-              "enonce": "Définir une intégrale impropre semi-convergente et donner l'exemple de référence du cours.",
-              "reponse": "L'intégrale impropre $\\int_a^b f$ est dite semi-convergente si elle converge sans que la fonction $f$ soit intégrable sur $[a,b[$. Un exemple classique est $\\int_0^{+\\infty} \\frac{\\sin t}{t} dt$."
+              "type": "Question",
+              "enonce": "Énoncer précisément le théorème de changement de variable sur un segment (hypothèses exactes sur $\\varphi$ et $f$).",
+              "reponse": "Si $\\varphi$ est de classe $\\mathscr{C}^1$ sur $[a,b]$ et $f$ continue sur $[c,d]=[\\varphi(a),\\varphi(b)]$, alors $\\int_a^b f(\\varphi(t))\\varphi'(t)\\,\\mathrm{d}t = \\int_{\\varphi(a)}^{\\varphi(b)} f(u)\\,\\mathrm{d}u$. Noter que sur un segment, $\\varphi$ n'a PAS besoin d'être monotone."
             },
             {
-              "type": "Propriété",
-              "enonce": "Énoncer le critère de comparaison série-intégrale.",
-              "reponse": "Soit $f$ continue par morceaux, décroissante et positive sur $[a, +\\infty[$. $f$ est intégrable sur $[a, +\\infty[$ si et seulement si la série $\\sum f(n)$ converge."
+              "type": "Question",
+              "enonce": "Intervalle quelconque 1/6 — Définir précisément la convergence de l'intégrale impropre $\\int_a^b f(t)\\,\\mathrm{d}t$ pour $f$ cpm sur $[a,b[$ ($b$ réel ou $+\\infty$).",
+              "reponse": "L'intégrale impropre $\\int_a^b f(t)\\,\\mathrm{d}t$ converge si $\\lim_{x\\to b}\\int_a^x f(t)\\,\\mathrm{d}t$ existe et est finie ; on dit alors que $f$ admet sur $[a,b[$ une intégrale impropre convergente, et on note $\\int_a^b f(t)\\,\\mathrm{d}t$ cette limite. Sinon, l'intégrale diverge."
             },
             {
-              "type": "Formule",
-              "enonce": "Donner les critères d'intégrabilité de Riemann (bornes critiques $0$ et $+\\infty$) pour les fonctions du type $t \\mapsto \\frac{1}{t^\\alpha}$.",
-              "reponse": "- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $]0,1]$ si et seulement si $\\alpha < 1$.\n- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $[1, +\\infty[$ si et seulement si $\\alpha > 1$."
+              "type": "Question",
+              "enonce": "Intervalle quelconque 2/6 — Qu'appelle-t-on une intégrale « faussement impropre » ? Donner les deux exemples du cours.",
+              "reponse": "Cas particulier où $b\\in\\mathbb{R}$ (borne finie) et $f$ est prolongeable par continuité en $b$ : l'intégrale sur $[a,b[$ converge alors automatiquement, sans réel phénomène d'impropreté. Exemples du cours : $\\int_0^1 \\frac{\\sin t}{t}\\,\\mathrm{d}t$ et $\\int_0^1 t\\ln t\\,\\mathrm{d}t$ (toutes deux prolongeables par continuité en $0$)."
             },
             {
-              "type": "Formule",
-              "enonce": "Définir la norme de la convergence en moyenne quadratique $N_2(f)$ pour une fonction continue $f$ sur $I$ appartenant à $L_2$.",
-              "reponse": "$N_2(f) = \\sqrt{\\int_I |f(t)|^2 dt}$."
+              "type": "Question",
+              "enonce": "Intervalle quelconque 3/6 — Énoncer la relation de Chasles / caractère local pour une intégrale impropre sur $[a,b[$, et sa conséquence sur la nature de l'intégrale.",
+              "reponse": "Pour $c\\in[a,b[$ : $\\int_a^b f$ converge $\\iff$ $\\int_c^b f$ converge, et dans ce cas $\\int_a^b f = \\int_a^c f + \\int_c^b f$. Conséquence essentielle : la NATURE (convergence/divergence) d'une intégrale impropre sur $[a,b[$ ne dépend que du comportement de $f$ AU VOISINAGE de $b$, la borne critique — pas de ce qui se passe près de $a$ (borne propre)."
             },
             {
-              "type": "Calcul",
-              "enonce": "Donner une primitive de la fonction $x \\mapsto \\frac{1}{x^2+a^2}$ pour $a > 0$.",
-              "reponse": "$\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a} \\arctan\\left(\\frac{x}{a}\\right) + C$ sur $\\mathbb{R}$."
+              "type": "Question",
+              "enonce": "Intervalle quelconque 4/6 — Comment étend-on la définition à un intervalle ouvert $]a,b[$ (deux bornes potentiellement critiques), et que se passe-t-il si $b<a$ ?",
+              "reponse": "Pour $f$ cpm sur $]a,b[$ : $\\int_a^b f$ converge $\\iff$ $\\int_a^c f$ ET $\\int_c^b f$ convergent toutes les deux, pour un $c$ arbitraire dans $]a,b[$ (et alors $\\int_a^b f = \\int_a^c f+\\int_c^b f$). Si l'une des deux diverge, l'intégrale globale diverge. Cas $b<a$ : $\\int_a^b f$ converge $\\iff$ $\\int_b^a f$ converge, et alors $\\int_a^b f = -\\int_b^a f$."
             },
             {
-              "type": "Exercice",
-              "enonce": "Soit $P$ un polynôme réel tel que $\\int_0^1 P^2(x) e^x dx = 0$. Montrer que $P = 0$.",
-              "reponse": "La fonction $x \\mapsto P^2(x) e^x$ est continue et positive sur $[0,1]$. Son intégrale sur $[0,1]$ étant nulle, cette fonction est identiquement nulle sur $[0,1]$. Comme $\\forall x \\in [0,1], e^x > 0$, on en déduit que $P^2(x) = 0$, donc $P(x) = 0$ pour tout $x \\in [0,1]$. Le polynôme $P$ admet une infinité de racines, il est donc nul."
+              "type": "Question",
+              "enonce": "Intervalle quelconque 5/6 — Énoncer le théorème de changement de variable pour une intégrale impropre, et préciser en quoi les hypothèses diffèrent du cas du segment.",
+              "reponse": "Soit $f$ continue sur $]a,b[$, $\\varphi$ de classe $\\mathscr{C}^1$, STRICTEMENT MONOTONE de $]c,d[$ dans $]a,b[$, telle que $\\lim_{t\\to c}\\varphi(t)=a$ et $\\lim_{t\\to d}\\varphi(t)=b$. Alors les intégrales $\\int_a^b f(u)\\,\\mathrm{d}u$ et $\\int_c^d f(\\varphi(t))\\varphi'(t)\\,\\mathrm{d}t$ sont de même nature, et égales en cas de convergence. Différence avec le segment : il faut ici vérifier explicitement la stricte monotonie de $\\varphi$ ET que ses limites aux bornes de $]c,d[$ coïncident bien avec $a$ et $b$."
             },
             {
-              "type": "Exercice",
-              "enonce": "Pour $n \\in \\mathbb{N}$, on considère les intégrales de Wallis $I_n = \\int_0^{\\pi/2} (\\sin\\theta)^n d\\theta$. Donner la relation de récurrence liant $I_{n+2}$ et $I_n$.",
-              "reponse": "$I_{n+2} = \\frac{n+1}{n+2} I_n$"
+              "type": "Question",
+              "enonce": "Intervalle quelconque 6/6 — Quelle précaution supplémentaire, absente du cas du segment, faut-il vérifier pour appliquer une IPP à une intégrale impropre ? Que faire si elle échoue ?",
+              "reponse": "Il faut vérifier que le crochet $[uv]_a^b$ est FINI (limites finies de $u(t)v(t)$ aux deux bornes), en plus de la classe $\\mathscr{C}^1$ de $u,v$ sur $]a,b[$. Si le crochet n'est pas fini (ou que l'IPP directe produit une intégrale divergente), il faut revenir à une intégrale PROPRE sur un segment $[x,y]\\subset\\,]a,b[$, y appliquer l'IPP normalement, puis faire tendre $x\\to a$ et $y\\to b$ dans le résultat obtenu."
             },
             {
-              "type": "Exercice",
-              "enonce": "Énoncer le lemme de Riemann-Lebesgue pour une fonction $f$ de classe $\\mathcal{C}^1$ sur un segment $[a,b]$.",
-              "reponse": "Si $f$ est de classe $\\mathcal{C}^1$ sur le segment $[a,b]$, alors :\n$\\lim_{n \\to +\\infty} \\int_a^b f(t)\\cos(nt) dt = 0$."
+              "type": "Question",
+              "enonce": "Donner l'exemple du cours où l'IPP directe échoue sur $I=\\int_0^1 \\frac{\\ln t}{(1+t)^2}\\,\\mathrm{d}t$, et détailler la méthode de correction.",
+              "reponse": "Avec $u=\\ln t$, $v'=1/(1+t)^2$ (donc $u'=1/t$, $v=-1/(1+t)$), l'IPP « directe » donnerait $\\left[-\\frac{\\ln t}{1+t}\\right]_0^1 + \\int_0^1 \\frac{\\mathrm{d}t}{t(1+t)}$ : or $\\lim_{t\\to0}\\frac{\\ln t}{1+t}=-\\infty$ (crochet non fini) et $\\int_0^1 \\frac{\\mathrm{d}t}{t(1+t)}$ diverge — l'IPP directe est invalide. On revient donc à l'intégrale PROPRE $I(x)=\\int_x^1 \\frac{\\ln t}{(1+t)^2}\\,\\mathrm{d}t$ pour $x>0$ : le crochet $\\left[-\\frac{\\ln t}{1+t}\\right]_x^1$ est bien fini, on calcule $I(x) = -\\ln2 - \\frac{x\\ln x}{1+x}+\\ln(1+x)$, puis on passe à la limite $x\\to0^+$ pour obtenir $I=-\\ln2$ (au passage, $f$ est bien intégrable sur $]0,1]$ car $|f(t)|\\underset{t\\to0}{\\sim}|\\ln t|$, elle-même intégrable en $0$)."
             },
             {
-              "type": "Exercice",
-              "enonce": "Déterminer la limite de la suite définie pour $n \\ge 1$ par $S_n = \\frac{1}{n} \\sum_{k=0}^{n-1} \\tan\\left(\\frac{k\\pi}{4n}\\right)$ à l'aide des sommes de Riemann.",
-              "reponse": "On reconnaît une somme de Riemann pour la fonction $f: t \\mapsto \\tan\\left(\\frac{\\pi}{4}t\\right)$ sur $[0,1]$. La limite vaut :\n$\\int_0^1 \\tan\\left(\\frac{\\pi}{4}t\\right) dt = \\left[ -\\frac{4}{\\pi} \\ln\\left|\\cos\\left(\\frac{\\pi}{4}t\\right)\\right| \\right]_0^1 = -\\frac{4}{\\pi} \\ln\\left(\\frac{\\sqrt{2}}{2}\\right) = \\frac{2\\ln(2)}{\\pi}$."
+              "type": "Question",
+              "enonce": "Intégrabilité 1/8 — Définir l'intégrabilité d'une fonction $f$ cpm sur $I=]a,b[$, et préciser à quoi cette notion est l'analogue.",
+              "reponse": "$f$ est intégrable sur $I$ si $\\int_a^b |f|$ converge (convergence de l'intégrale du MODULE/valeur absolue). C'est l'analogue de l'absolue convergence pour les séries : $f$ est intégrable sur $]a,b[$ si son intégrale converge ABSOLUMENT."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 2/8 — Énoncer le théorème reliant intégrabilité et convergence, et préciser précisément le sens de l'implication (est-elle réversible ?).",
+              "reponse": "Si $f$ est intégrable sur $[a,b[$ alors $\\int_a^b f$ converge (Théorème 3). L'implication est à SENS UNIQUE : la réciproque est FAUSSE — il existe des fonctions dont l'intégrale converge sans que la fonction soit intégrable (voir semi-convergence). Ce théorème permet d'établir une convergence par les outils de l'intégrabilité, à condition de ne jamais oublier les barres de module."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 3/8 — Qu'est-ce qu'une intégrale semi-convergente ? Donner l'exemple canonique du cours.",
+              "reponse": "$\\int_a^b f$ est semi-convergente si elle CONVERGE sans que $f$ soit intégrable sur $[a,b[$ (i.e. $\\int_a^b|f|$ diverge). Exemple canonique du cours : $\\int_0^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ est semi-convergente."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 4/8 — Quelle hypothèse de signe est rappelée en préambule de TOUS les critères de convergence du cours (comparaison, O, o, équivalence, série-intégrale) ? Quelle en est la conséquence pratique ?",
+              "reponse": "Le cours précise explicitement : « les fonctions qui interviennent ici sont continues par morceaux et à valeurs POSITIVES OU NULLES ». Conséquence pratique cruciale : ces critères (Prop. 9 à 12) ne s'appliquent PAS directement à une fonction de signe quelconque. Pour une fonction $f$ de signe non constant, il faut les appliquer à $|f|$ (pour établir l'intégrabilité), puis invoquer le Théorème 3 pour en déduire la convergence — jamais les appliquer tels quels à $f$ elle-même si elle change de signe."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 5/8 — Énoncer le critère de comparaison (Prop. 9) et les critères de domination / négligeabilité qui s'en déduisent (Prop. 10).",
+              "reponse": "Comparaison : si $0\\le|f(x)|\\le|g(x)|$ au voisinage de $b$ et $g$ intégrable sur $[a,b[$, alors $f$ l'est aussi (contraposée : $f$ non intégrable $\\Rightarrow$ $g$ non intégrable). Domination/négligeabilité : si $f(t)\\underset{t\\to b}{=}O(g(t))$ ou $f(t)\\underset{t\\to b}{=}o(g(t))$ et $g$ intégrable sur $[a,b[$, alors $f$ est intégrable sur $[a,b[$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 6/8 — Énoncer le critère d'équivalence (Prop. 11).",
+              "reponse": "Si $f,g$ cpm sur $[a,b[$ vérifient $f(t)\\underset{t\\to b}{\\sim}g(t)$, alors $f$ est intégrable sur $[a,b[$ $\\iff$ $g$ l'est. (Rappel : ce critère suppose $f,g\\ge0$ au voisinage de $b$, comme toute cette section.)"
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 7/8 — Énoncer la comparaison série-intégrale (Prop. 12) et préciser les DEUX hypothèses indispensables (au-delà de la continuité par morceaux).",
+              "reponse": "Soit $f$ cpm, DÉCROISSANTE et $\\ge0$ sur $[a,+\\infty[$ : $f$ est intégrable sur $[a,+\\infty[$ $\\iff$ $\\sum f(n)$ converge. Les deux hypothèses indispensables sont la POSITIVITÉ et la DÉCROISSANCE — sans la décroissance, l'équivalence entre intégrabilité de $f$ et convergence de $\\sum f(n)$ est fausse en général (contre-exemple : fonctions à pics fins, voir plus loin)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrabilité 8/8 — Donner un exemple de $L^2$ non inclus dans $L^1$ sur $[1,+\\infty[$, et un exemple de $L^1$ non inclus dans $L^2$ sur $]0,1]$.",
+              "reponse": "Sur $[1,+\\infty[$ : $f(t)=1/t$ est dans $L^2$ (car $f^2=1/t^2$, Riemann $\\alpha=2>1$, intégrable) mais pas dans $L^1$ (Riemann $\\alpha=1$, non intégrable). Sur $]0,1]$ : $f(t)=1/\\sqrt{t}$ est dans $L^1$ (Riemann en 0, $\\alpha=1/2<1$, intégrable) mais pas dans $L^2$ (car $f^2=1/t$, $\\alpha=1\\not<1$, non intégrable en 0). Ces deux exemples montrent qu'aucune des deux inclusions $L^1\\subset L^2$ ou $L^2\\subset L^1$ n'est vraie en général sur un intervalle non borné ou ouvert."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrales de référence 1/3 — Lister les intégrales de référence à borne critique $+\\infty$.",
+              "reponse": "$t\\mapsto e^{-at}$ est intégrable sur $[0,+\\infty[$ $\\iff$ $a>0$. $t\\mapsto \\dfrac{1}{t^\\alpha}$ est intégrable sur $[1,+\\infty[$ $\\iff$ $\\alpha>1$ (exemple de Riemann)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrales de référence 2/3 — Lister les intégrales de référence à borne critique $0$, et l'intégrale de $\\ln$.",
+              "reponse": "$t\\mapsto \\dfrac{1}{t^\\alpha}$ est intégrable sur $]0,1]$ $\\iff$ $\\alpha<1$. De même $\\int_a^b \\dfrac{\\mathrm{d}t}{(t-a)^\\alpha}$ et $\\int_a^b \\dfrac{\\mathrm{d}t}{(b-t)^\\alpha}$ convergent $\\iff$ $\\alpha<1$. La fonction $\\ln$ est intégrable sur $]0,1]$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Intégrales de référence 3/3 — Pourquoi $\\int_0^{+\\infty} \\frac{\\mathrm{d}t}{t^\\alpha}$ diverge-t-elle systématiquement, quel que soit $\\alpha\\in\\mathbb{R}$ ?",
+              "reponse": "Parce que la convergence en $0$ exige $\\alpha<1$ tandis que la convergence en $+\\infty$ exige $\\alpha>1$ : ces deux conditions sont mutuellement exclusives, aucun $\\alpha$ ne peut les satisfaire simultanément. L'intégrale de Riemann sur $]0,+\\infty[$ tout entier diverge donc TOUJOURS."
+            },
+            {
+              "type": "Question",
+              "enonce": "Règles du $t^\\alpha$ (HP) — Énoncer les règles du $t^\\alpha$ en $+\\infty$ et en $0$, et la mise en garde du cours sur leur usage en rédaction.",
+              "reponse": "En $+\\infty$ (Prop. 15) : $f$ cpm $\\ge0$ sur $[a,+\\infty[$ ; s'il existe $\\alpha>1$ tel que $\\lim_{t\\to+\\infty}t^\\alpha f(t)=0$, alors $f$ intégrable ; s'il existe $\\alpha\\le1$ tel que $\\lim_{t\\to+\\infty}t^\\alpha f(t)=+\\infty$, alors $f$ non intégrable. En $0$ (Prop. 16), symétriquement avec $\\alpha<1$ pour la convergence et $\\alpha\\ge1$ pour la divergence. MISE EN GARDE : ces règles sont HORS PROGRAMME et ne doivent jamais être citées « telles quelles » — il faut toujours dérouler la démonstration sous-jacente : $t^\\alpha f(t)\\to0$ donne $f(t)=o(1/t^\\alpha)$, puis on conclut par comparaison à l'exemple de Riemann."
+            },
+            {
+              "type": "Question",
+              "enonce": "Normes intégrales — Définir $L^1(I,\\mathbb{K})$ et $L^2(I,\\mathbb{K})$ ainsi que les normes $N_1$ et $N_2$ associées.",
+              "reponse": "$L^1=\\{f:I\\to\\mathbb{K} \\text{ continue et intégrable sur } I\\}$, avec $N_1(f)=\\int_I |f(t)|\\,\\mathrm{d}t$, la norme de la convergence en moyenne. $L^2=\\{f:I\\to\\mathbb{K} \\text{ continue telle que } f^2 \\text{ soit intégrable}\\}$, avec $N_2(f)=\\sqrt{\\int_I |f(t)|^2\\,\\mathrm{d}t}$, la norme de la convergence en moyenne quadratique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Normes intégrales — Si l'intervalle $I=[a,b[$ a sa borne $b$ FINIE, que peut-on dire de l'inclusion entre $L^1$ et $L^2$, et pourquoi ?",
+              "reponse": "Si $b$ est fini, alors $L^2\\subset L^1$. Idée de preuve : on majore $|f|=|f\\cdot1|\\le\\frac{|f|^2+1}{2}$ (inégalité de Young/AM-GM avec $g=1$, fonction constante), et $1$ est intégrable sur l'intervalle BORNÉ $[a,b[$ ; par comparaison, $f$ est donc intégrable. Ce résultat est faux si $b=+\\infty$ (cf. l'exemple $f(t)=1/t$ sur $[1,+\\infty[$, dans $L^2$ mais pas $L^1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce — Soit $f$ continue par morceaux, DÉCROISSANTE sur $[0,+\\infty[$, telle que $\\int_0^{+\\infty} f$ converge. Démontrer que $xf(x)\\to0$ quand $x\\to+\\infty$ (technique classique, ex. 8 du TD intervalles quelconques).",
+              "reponse": "Comme $f$ est décroissante, pour $t\\in[x/2,x]$ on a $f(t)\\ge f(x)$, donc $\\int_{x/2}^x f(t)\\,\\mathrm{d}t \\ge \\left(x-\\frac{x}{2}\\right)f(x) = \\frac{x}{2}f(x)$. Or $f$ décroissante et $\\int_0^{+\\infty}f$ convergente implique $f\\ge0$ au voisinage de $+\\infty$ (sinon $f$ tendrait vers une limite strictement négative, et l'intégrale divergerait vers $-\\infty$), donc $\\frac{x}{2}f(x)\\ge0$. Par ailleurs, $\\int_{x/2}^x f(t)\\,\\mathrm{d}t$ est un « reste » de l'intégrale convergente $\\int_0^{+\\infty}f$ (différence de deux quantités qui tendent vers la même limite quand $x\\to+\\infty$), donc $\\int_{x/2}^x f(t)\\,\\mathrm{d}t \\to 0$. Par encadrement, $\\frac{x}{2}f(x)\\to0$, donc $xf(x)\\to0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce (règles de Bioche) — Pour intégrer $\\int R(\\cos t,\\sin t)\\,\\mathrm{d}t$ avec $R$ fraction rationnelle, en notant $\\omega(t) = f(t)\\,\\mathrm{d}t$ la forme différentielle associée, énoncer les règles de Bioche.",
+              "reponse": "On teste l'invariance de $\\omega$ sous trois symétries : si $\\omega(-t)=\\omega(t)$ (invariance par $t\\mapsto-t$), poser $u=\\cos(t)$ ; si $\\omega(\\pi-t)=\\omega(t)$ (invariance par $t\\mapsto\\pi-t$), poser $u=\\sin(t)$ ; si $\\omega(\\pi+t)=\\omega(t)$ (invariance par $t\\mapsto\\pi+t$), poser $u=\\tan(t)$. Si aucune de ces trois symétries n'est vérifiée, on utilise en dernier recours le changement de variable de l'arc moitié $u=\\tan(t/2)$, qui rationalise toujours l'intégrale (mais mène en général à des calculs plus longs)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce — Comment choisir la substitution pour intégrer $\\sin^m(t)\\cos^n(t)$ selon la parité de $m,n$ ? Illustrer avec $\\sin^3t\\cos^2t$ puis $\\sin^4t\\cos^2t$.",
+              "reponse": "Si l'un des deux exposants est IMPAIR, on isole un facteur de la fonction correspondante pour reconstituer une différentielle, et on pose $u=$ l'AUTRE fonction. Pour $\\sin^3t\\cos^2t$ ($\\sin$ à une puissance impaire) : on écrit $\\sin^3t=(1-\\cos^2t)\\sin t$, on pose $u=\\cos t$ (donc $\\mathrm{d}u=-\\sin t\\,\\mathrm{d}t$), ce qui rationalise tout en un polynôme en $u$. Si les DEUX exposants sont PAIRS, comme $\\sin^4t\\cos^2t$, aucune substitution simple ne fonctionne : il faut LINÉARISER via les formules d'angle double ($\\cos^2t=\\frac{1+\\cos2t}{2}$, $\\sin^2t=\\frac{1-\\cos2t}{2}$) avant d'intégrer terme à terme."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce (Dirichlet) — Comment montre-t-on que $\\int_1^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ converge sans être absolument convergente, et comment généralise-t-on la technique à $\\int \\frac{\\sin t}{t^a}\\,\\mathrm{d}t$ ?",
+              "reponse": "On effectue une IPP avec $u=1/t$, $v'=\\sin t$ (donc $v=-\\cos t$) : $\\int_1^X \\frac{\\sin t}{t}\\,\\mathrm{d}t = \\left[-\\frac{\\cos t}{t}\\right]_1^X - \\int_1^X \\frac{\\cos t}{t^2}\\,\\mathrm{d}t$. Le crochet a une limite finie en $+\\infty$, et $\\int \\frac{\\cos t}{t^2}\\,\\mathrm{d}t$ converge ABSOLUMENT (car $\\left|\\frac{\\cos t}{t^2}\\right|\\le\\frac{1}{t^2}$, Riemann convergent) : l'intégrale de départ converge donc. Elle n'est pas absolument convergente car $|\\sin t|\\ge\\sin^2t=\\frac{1-\\cos2t}{2}$, dont l'intégrale diverge. Cette IPP se généralise directement à $\\int \\frac{\\sin t}{t^a}\\,\\mathrm{d}t$ ou $\\int\\frac{\\cos t}{t^a}\\,\\mathrm{d}t$ pour tout $a>0$ (convergence, mais absolue convergence seulement pour $a>1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce — Comment intègre-t-on une fraction rationnelle en $e^t$ (ex : $\\int \\frac{\\mathrm{d}t}{(e^t+1)(e^t-1)}$) ou en $\\sqrt{t}$ (ex : $\\int \\frac{\\sqrt{t}-1}{t+1}\\,\\mathrm{d}t$) ?",
+              "reponse": "Pour une fraction rationnelle en $e^t$, on pose $u=e^t$ (fonction bijective strictement croissante), ce qui ramène l'intégrale à une fraction rationnelle usuelle en $u$, décomposable en éléments simples. Pour une fraction rationnelle en $\\sqrt{t}$ (ou plus généralement en $t^{1/q}$), on pose $u=\\sqrt{t}$ (ou $u=t^{1/q}$ avec $q$ le ppcm des indices de racines présentes), ce qui rationalise également l'expression."
+            },
+            {
+              "type": "Question",
+              "enonce": "Astuce — Pour $\\int_a^b \\sqrt{(t-a)(b-t)}\\,\\mathrm{d}t$, quel changement de variable trigonométrique utiliser, et pourquoi supprime-t-il la racine carrée ?",
+              "reponse": "On pose $t = a\\cos^2u + b\\sin^2u$ (équivalent à $t=\\frac{a+b}{2}+\\frac{b-a}{2}\\sin\\theta$ à une reparamétrisation près), qui envoie un intervalle en $u$ sur $]a,b[$. On a alors $t-a = (b-a)\\sin^2u$ et $b-t=(b-a)\\cos^2u$, donc $(t-a)(b-t)=(b-a)^2\\sin^2u\\cos^2u$ est un CARRÉ PARFAIT, et $\\sqrt{(t-a)(b-t)}=(b-a)|\\sin u\\cos u|$ : la racine disparaît grâce à $\\cos^2u+\\sin^2u=1$."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 1 — Si $f$ est continue, positive et intégrable sur $[a,+\\infty[$, alors $f$ admet une limite nulle en $+\\infty$.",
+              "reponse": "FAUX. Contre-exemple : $f$ nulle partout sauf sur des « pics » $[n,n+1/n^3]$ où elle prend la valeur $n$ (fonction triangle ou plateau). L'aire totale vaut $\\sum n\\cdot\\frac{1}{n^3}=\\sum\\frac{1}{n^2}$, qui converge : $f$ est intégrable, mais $f$ ne tend pas vers $0$ puisqu'elle prend la valeur $n$, arbitrairement grande, en des points arbitrairement grands."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 2 — Si $f$ est continue, positive et intégrable sur $[a,+\\infty[$, alors $f$ est bornée.",
+              "reponse": "FAUX, avec le même contre-exemple que ci-dessus : les pics de hauteur $n$ (aussi grande que l'on veut) montrent que $f$ n'est pas bornée, bien que son intégrale converge."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 3 — Si $f$ est continue, positive, DÉCROISSANTE et intégrable sur $[a,+\\infty[$, alors $f$ admet une limite nulle en $+\\infty$.",
+              "reponse": "VRAI. $f$ décroissante et minorée par $0$ admet une limite $L\\ge0$ en $+\\infty$. Si $L>0$, alors $f(t)\\ge L>0$ au voisinage de $+\\infty$, donc $\\int f$ diverge (minorée par l'intégrale d'une constante strictement positive sur un intervalle infini) — ce qui contredit l'intégrabilité. Donc $L=0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 4 — Si $f$ est continue, positive, décroissante, de limite nulle en $+\\infty$, alors $f$ est intégrable sur $[a,+\\infty[$.",
+              "reponse": "FAUX. Contre-exemple canonique : $f(t)=1/t$ sur $[1,+\\infty[$ est continue, positive, décroissante, de limite nulle, mais NON intégrable (intégrale de Riemann divergente, $\\alpha=1\\not>1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 5 — Une fonction $f$ continue, positive (SANS hypothèse de décroissance) sur $[a,+\\infty[$ est intégrable si et seulement si $\\sum f(n)$ converge.",
+              "reponse": "FAUX. Sans la décroissance, l'équivalence n'a pas lieu. Contre-exemple : les pics de largeur $1/n^3$ et hauteur $n$ (cf. VRAI/FAUX 1) donnent une fonction intégrable ($\\sum 1/n^2$ converge) alors que $\\sum f(n)=\\sum n$ diverge grossièrement. La décroissance est une hypothèse essentielle de la Prop. 12, non superflue."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 6 — Si $\\int_a^b f$ converge, alors $f$ est nécessairement intégrable sur $[a,b[$ (au sens de la convergence absolue).",
+              "reponse": "FAUX — c'est exactement la distinction entre convergence et intégrabilité (semi-convergence). Contre-exemple : $\\int_0^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ converge mais $t\\mapsto \\sin(t)/t$ n'est pas intégrable sur $[1,+\\infty[$ (car $|\\sin t|\\ge\\sin^2 t$, dont l'intégrale diverge)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 7 — Si $f\\sim g$ au voisinage de $b$, avec $f,g$ de signe QUELCONQUE (non constant), alors $f$ intégrable $\\iff$ $g$ intégrable.",
+              "reponse": "FAUX en général. Le critère d'équivalence du cours (Prop. 11) est énoncé pour des fonctions à valeurs POSITIVES OU NULLES. Pour des fonctions de signe non constant, l'équivalent peut « effacer » des compensations de signe et ne rien dire sur l'intégrabilité ; il faut alors passer par d'autres méthodes (IPP pour la convergence, majoration directe de $|f|$ pour l'intégrabilité)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 8 — Si $f$ est continue par morceaux, décroissante sur $[a,+\\infty[$ et telle que $\\int_a^{+\\infty} f$ converge, alors $f(x)\\to0$ quand $x\\to+\\infty$ (sans même supposer $f\\ge0$).",
+              "reponse": "VRAI, et c'est plus fort que le résultat classique « décroissante $\\ge0$ intégrable $\\Rightarrow$ limite nulle » : ici, la décroissance ET la convergence de l'intégrale suffisent À ELLES SEULES à forcer $f\\ge0$ au voisinage de $+\\infty$ (sinon $f$ tendrait vers une limite $<0$ et l'intégrale divergerait vers $-\\infty$), puis on conclut comme en VRAI/FAUX 3. C'est ce résultat qui est utilisé pour justifier $f\\ge0$ dans la démonstration de l'astuce $xf(x)\\to0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 9 — L'intégrale $\\int_0^{+\\infty} \\frac{\\mathrm{d}t}{t^\\alpha}$ converge pour au moins une valeur de $\\alpha\\in\\mathbb{R}$.",
+              "reponse": "FAUX. Comme vu plus haut, cette intégrale diverge pour TOUTE valeur de $\\alpha$ réel, car les conditions de convergence en $0$ ($\\alpha<1$) et en $+\\infty$ ($\\alpha>1$) sont incompatibles."
             }
           ],
           "questionSets": [
@@ -1269,89 +1414,229 @@
               "label": "Cours",
               "items": [
                 {
-                  "type": "Définition",
-                  "enonce": "Donner la définition précise d'une fonction $f : [a,b] \\to \\mathbb{K}$ continue par morceaux sur un segment $[a,b]$.",
-                  "reponse": "Une fonction $f$ de $[a,b]$ dans $\\mathbb{K}$ est continue par morceaux s'il existe une subdivision $a = a_0 < a_1 < \\dots < a_n = b$ telle que :\n1) pour chaque $i \\in \\{0, \\dots, n-1\\}$, la restriction de $f$ à l'ouvert $]a_i, a_{i+1}[$ est continue ;\n2) $f$ admet une limite finie à droite et à gauche en chaque $a_i$ (chaque fois que cela a un sens)."
+                  "type": "Question",
+                  "enonce": "CPM 1/4 — Donner la définition rigoureuse d'une fonction continue par morceaux (cpm) sur un segment $[a,b]$.",
+                  "reponse": "$f:[a,b]\\to\\mathbb{K}$ est continue par morceaux s'il existe une subdivision $a=a_0<a_1<\\dots<a_n=b$ (dite adaptée à $f$) telle que : (1) les restrictions de $f$ à chaque $]a_i,a_{i+1}[$ sont continues ; (2) $f$ admet des limites finies à droite et à gauche en chaque $a_i$, chaque fois que cela a un sens (donc une limite à droite en $a_0$, à gauche en $a_n$, les deux aux points intérieurs)."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Une fonction continue par morceaux sur un segment $[a,b]$ est-elle nécessairement bornée ?",
-                  "reponse": "Oui, d'après la Proposition 2 du cours, toute fonction continue par morceaux sur un segment est bornée."
+                  "type": "Question",
+                  "enonce": "CPM 2/4 — Qu'est-ce que cette définition exclut explicitement ?",
+                  "reponse": "Elle exclut les limites infinies aux points de la subdivision, ainsi que le cas où $f$ n'admet pas de limite (oscillation) en l'un de ces points. Concrètement, $f$ est continue sauf en un nombre FINI de points, et y admet des limites finies à gauche et à droite."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Énoncer la propriété de positivité stricte pour l'intégrale d'une fonction continue.",
-                  "reponse": "Soit $f$ une fonction continue sur $[a,b]$ (avec $a < b$). Si $f \\ge 0$ sur $[a,b]$ et $f \\neq 0$, alors $\\int_a^b f(t) dt > 0$."
+                  "type": "Question",
+                  "enonce": "CPM 3/4 — Que peut-on dire de la restriction $f_{|]a_k,a_{k+1}[}$ ? En quoi $\\mathscr{C}_{pm}([a,b],\\mathbb{K})$ est-elle une sous-algèbre ?",
+                  "reponse": "Cette restriction est prolongeable en une fonction continue sur le segment fermé $[a_k,a_{k+1}]$ (c'est ce prolongement qu'on intègre morceau par morceau). $\\mathscr{C}_{pm}([a,b],\\mathbb{K})$ est une sous-algèbre de $\\mathbb{K}^I$ : les combinaisons linéaires et les produits de fonctions continues par morceaux restent continues par morceaux."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Énoncer la formule de changement de variable pour l'intégrale d'une fonction continue sur un segment $[a,b]$ en précisant les hypothèses.",
-                  "reponse": "Si $\\varphi$ est de classe $\\mathcal{C}^1$ sur $[a,b]$ et $f$ est continue sur un intervalle $[c,d]$ contenant l'image de $[a,b]$ par $\\varphi$, alors :\n$\\int_a^b f(\\varphi(t)) \\cdot \\varphi'(t) dt = \\int_{\\varphi(a)}^{\\varphi(b)} f(u) du$."
+                  "type": "Question",
+                  "enonce": "CPM 4/4 — Une fonction continue par morceaux sur un segment est-elle toujours bornée ? Cela reste-t-il vrai sur un intervalle quelconque ?",
+                  "reponse": "Oui, sur un SEGMENT une fonction cpm est toujours bornée (Prop. 2) — chaque morceau, prolongé par continuité sur un segment, est borné, et il n'y en a qu'un nombre fini. ATTENTION : ce résultat est spécifique au segment ; sur un intervalle quelconque (non borné ou ouvert en une borne infinie), une fonction continue par morceaux n'est pas nécessairement bornée."
                 },
                 {
-                  "type": "Définition",
-                  "enonce": "Définir la convergence de l'intégrale impropre $\\int_a^b f(t) dt$ pour une fonction $f$ continue par morceaux sur l'intervalle $[a,b[$ (avec $b \\in \\mathbb{R}$ ou $b = +\\infty$).",
-                  "reponse": "L'intégrale impropre $\\int_a^b f(t) dt$ converge si la limite $\\lim_{x \\to b} \\int_a^x f(t) dt$ existe et est finie."
+                  "type": "Question",
+                  "enonce": "Intégrale cpm 1/3 — Comment définit-on $\\int_a^b f(t)\\,\\mathrm{d}t$ pour $f$ continue par morceaux, et cette définition dépend-elle de la subdivision choisie ?",
+                  "reponse": "Avec $a=a_0<\\dots<a_n=b$ une subdivision adaptée, on pose $\\int_a^b f(t)\\,\\mathrm{d}t = \\sum_{k=1}^n \\int_{a_k}^{a_{k+1}} \\tilde{f}(t)\\,\\mathrm{d}t$, où $\\tilde f$ est le prolongement par continuité de $f_{|]a_k,a_{k+1}[}$ à $[a_k,a_{k+1}]$. Cette définition NE dépend PAS de la subdivision adaptée choisie, ni des valeurs de $f$ en un nombre fini de points."
                 },
                 {
-                  "type": "Théorème",
-                  "enonce": "Énoncer le théorème d'intégration par parties pour les intégrales impropres de fonctions de classe $\\mathcal{C}^1$ sur $I = ]a,b[$.",
-                  "reponse": "Soient $u$ et $v$ de classe $\\mathcal{C}^1$ sur $]a,b[$. Si le crochet $[uv]_a^b$ est fini (admet des limites finies en $a$ et $b$),\nalors les intégrales $\\int_a^b u(t)v'(t) dt$ et $\\int_a^b u'(t)v(t) dt$ sont de même nature. En cas de convergence :\n$\\int_a^b u(t)v'(t) dt = [uv]_a^b - \\int_a^b u'(t)v(t) dt$."
+                  "type": "Question",
+                  "enonce": "Intégrale cpm 2/3 — Lister les propriétés de l'intégrale valables pour de simples fonctions continues PAR MORCEAUX (pas besoin de continuité globale).",
+                  "reponse": "Linéarité ; relation de Chasles $\\int_a^c f+\\int_c^b f=\\int_a^b f$ ; positivité ($a\\le b$, $f\\ge0 \\Rightarrow \\int_a^b f\\ge0$) ; croissance ($f\\le g \\Rightarrow \\int_a^b f\\le\\int_a^b g$) ; inégalité triangulaire $\\left|\\int_a^b f\\right|\\le\\int_a^b|f|$ ; invariance de l'intégrale lorsqu'on change $f$ en un nombre fini de points."
                 },
                 {
-                  "type": "Définition",
-                  "enonce": "Donner la définition de l'intégrabilité d'une fonction $f$ continue par morceaux sur un intervalle $I = ]a,b[$.",
-                  "reponse": "La fonction $f$ est intégrable sur l'intervalle $I$ si l'intégrale $\\int_a^b |f(t)| dt$ converge."
+                  "type": "Question",
+                  "enonce": "Intégrale cpm 3/3 — Quelles DEUX propriétés supplémentaires exigent que $f$ soit CONTINUE (et pas seulement cpm) ?",
+                  "reponse": "(1) La positivité stricte : $f$ continue, $f\\ge0$ et $f\\ne0$ sur $[a,b]$ $\\Rightarrow$ $\\int_a^b f>0$ (faux en général pour une simple fonction cpm, qui peut être non nulle seulement en un point isolé sans changer l'intégrale). (2) Le lien primitive-intégrale : $f$ continue sur $[a,b]$ admet une primitive $F$, et $\\int_a^b f = F(b)-F(a)$."
                 },
                 {
-                  "type": "Théorème",
-                  "enonce": "Quel est le lien entre la convergence d'une intégrale impropre et l'intégrabilité de la fonction ? La réciproque est-elle vraie ?",
-                  "reponse": "Si $f$ est intégrable sur $[a,b[$, alors l'intégrale impropre $\\int_a^b f(t) dt$ converge (Théorème 3). La réciproque est fausse : il existe des fonctions dont l'intégrale converge mais qui ne sont pas intégrables (on parle d'intégrales semi-convergentes)."
+                  "type": "Question",
+                  "enonce": "Énoncer précisément le théorème d'intégration par parties sur un segment (hypothèses de régularité incluses).",
+                  "reponse": "Si $u$ et $v$ sont de classe $\\mathscr{C}^1$ sur $[a,b]$, alors $\\int_a^b u(t)v'(t)\\,\\mathrm{d}t = [uv]_a^b - \\int_a^b u'(t)v(t)\\,\\mathrm{d}t$."
                 },
                 {
-                  "type": "Définition",
-                  "enonce": "Définir une intégrale impropre semi-convergente et donner l'exemple de référence du cours.",
-                  "reponse": "L'intégrale impropre $\\int_a^b f$ est dite semi-convergente si elle converge sans que la fonction $f$ soit intégrable sur $[a,b[$. Un exemple classique est $\\int_0^{+\\infty} \\frac{\\sin t}{t} dt$."
+                  "type": "Question",
+                  "enonce": "Énoncer précisément le théorème de changement de variable sur un segment (hypothèses exactes sur $\\varphi$ et $f$).",
+                  "reponse": "Si $\\varphi$ est de classe $\\mathscr{C}^1$ sur $[a,b]$ et $f$ continue sur $[c,d]=[\\varphi(a),\\varphi(b)]$, alors $\\int_a^b f(\\varphi(t))\\varphi'(t)\\,\\mathrm{d}t = \\int_{\\varphi(a)}^{\\varphi(b)} f(u)\\,\\mathrm{d}u$. Noter que sur un segment, $\\varphi$ n'a PAS besoin d'être monotone."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Énoncer le critère de comparaison série-intégrale.",
-                  "reponse": "Soit $f$ continue par morceaux, décroissante et positive sur $[a, +\\infty[$. $f$ est intégrable sur $[a, +\\infty[$ si et seulement si la série $\\sum f(n)$ converge."
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 1/6 — Définir précisément la convergence de l'intégrale impropre $\\int_a^b f(t)\\,\\mathrm{d}t$ pour $f$ cpm sur $[a,b[$ ($b$ réel ou $+\\infty$).",
+                  "reponse": "L'intégrale impropre $\\int_a^b f(t)\\,\\mathrm{d}t$ converge si $\\lim_{x\\to b}\\int_a^x f(t)\\,\\mathrm{d}t$ existe et est finie ; on dit alors que $f$ admet sur $[a,b[$ une intégrale impropre convergente, et on note $\\int_a^b f(t)\\,\\mathrm{d}t$ cette limite. Sinon, l'intégrale diverge."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Donner les critères d'intégrabilité de Riemann (bornes critiques $0$ et $+\\infty$) pour les fonctions du type $t \\mapsto \\frac{1}{t^\\alpha}$.",
-                  "reponse": "- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $]0,1]$ si et seulement si $\\alpha < 1$.\n- $t \\mapsto \\frac{1}{t^\\alpha}$ est intégrable sur $[1, +\\infty[$ si et seulement si $\\alpha > 1$."
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 2/6 — Qu'appelle-t-on une intégrale « faussement impropre » ? Donner les deux exemples du cours.",
+                  "reponse": "Cas particulier où $b\\in\\mathbb{R}$ (borne finie) et $f$ est prolongeable par continuité en $b$ : l'intégrale sur $[a,b[$ converge alors automatiquement, sans réel phénomène d'impropreté. Exemples du cours : $\\int_0^1 \\frac{\\sin t}{t}\\,\\mathrm{d}t$ et $\\int_0^1 t\\ln t\\,\\mathrm{d}t$ (toutes deux prolongeables par continuité en $0$)."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Définir la norme de la convergence en moyenne quadratique $N_2(f)$ pour une fonction continue $f$ sur $I$ appartenant à $L_2$.",
-                  "reponse": "$N_2(f) = \\sqrt{\\int_I |f(t)|^2 dt}$."
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 3/6 — Énoncer la relation de Chasles / caractère local pour une intégrale impropre sur $[a,b[$, et sa conséquence sur la nature de l'intégrale.",
+                  "reponse": "Pour $c\\in[a,b[$ : $\\int_a^b f$ converge $\\iff$ $\\int_c^b f$ converge, et dans ce cas $\\int_a^b f = \\int_a^c f + \\int_c^b f$. Conséquence essentielle : la NATURE (convergence/divergence) d'une intégrale impropre sur $[a,b[$ ne dépend que du comportement de $f$ AU VOISINAGE de $b$, la borne critique — pas de ce qui se passe près de $a$ (borne propre)."
                 },
                 {
-                  "type": "Calcul",
-                  "enonce": "Donner une primitive de la fonction $x \\mapsto \\frac{1}{x^2+a^2}$ pour $a > 0$.",
-                  "reponse": "$\\int \\frac{dx}{x^2+a^2} = \\frac{1}{a} \\arctan\\left(\\frac{x}{a}\\right) + C$ sur $\\mathbb{R}$."
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 4/6 — Comment étend-on la définition à un intervalle ouvert $]a,b[$ (deux bornes potentiellement critiques), et que se passe-t-il si $b<a$ ?",
+                  "reponse": "Pour $f$ cpm sur $]a,b[$ : $\\int_a^b f$ converge $\\iff$ $\\int_a^c f$ ET $\\int_c^b f$ convergent toutes les deux, pour un $c$ arbitraire dans $]a,b[$ (et alors $\\int_a^b f = \\int_a^c f+\\int_c^b f$). Si l'une des deux diverge, l'intégrale globale diverge. Cas $b<a$ : $\\int_a^b f$ converge $\\iff$ $\\int_b^a f$ converge, et alors $\\int_a^b f = -\\int_b^a f$."
                 },
                 {
-                  "type": "Exercice",
-                  "enonce": "Soit $P$ un polynôme réel tel que $\\int_0^1 P^2(x) e^x dx = 0$. Montrer que $P = 0$.",
-                  "reponse": "La fonction $x \\mapsto P^2(x) e^x$ est continue et positive sur $[0,1]$. Son intégrale sur $[0,1]$ étant nulle, cette fonction est identiquement nulle sur $[0,1]$. Comme $\\forall x \\in [0,1], e^x > 0$, on en déduit que $P^2(x) = 0$, donc $P(x) = 0$ pour tout $x \\in [0,1]$. Le polynôme $P$ admet une infinité de racines, il est donc nul."
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 5/6 — Énoncer le théorème de changement de variable pour une intégrale impropre, et préciser en quoi les hypothèses diffèrent du cas du segment.",
+                  "reponse": "Soit $f$ continue sur $]a,b[$, $\\varphi$ de classe $\\mathscr{C}^1$, STRICTEMENT MONOTONE de $]c,d[$ dans $]a,b[$, telle que $\\lim_{t\\to c}\\varphi(t)=a$ et $\\lim_{t\\to d}\\varphi(t)=b$. Alors les intégrales $\\int_a^b f(u)\\,\\mathrm{d}u$ et $\\int_c^d f(\\varphi(t))\\varphi'(t)\\,\\mathrm{d}t$ sont de même nature, et égales en cas de convergence. Différence avec le segment : il faut ici vérifier explicitement la stricte monotonie de $\\varphi$ ET que ses limites aux bornes de $]c,d[$ coïncident bien avec $a$ et $b$."
                 },
                 {
-                  "type": "Exercice",
-                  "enonce": "Pour $n \\in \\mathbb{N}$, on considère les intégrales de Wallis $I_n = \\int_0^{\\pi/2} (\\sin\\theta)^n d\\theta$. Donner la relation de récurrence liant $I_{n+2}$ et $I_n$.",
-                  "reponse": "$I_{n+2} = \\frac{n+1}{n+2} I_n$"
+                  "type": "Question",
+                  "enonce": "Intervalle quelconque 6/6 — Quelle précaution supplémentaire, absente du cas du segment, faut-il vérifier pour appliquer une IPP à une intégrale impropre ? Que faire si elle échoue ?",
+                  "reponse": "Il faut vérifier que le crochet $[uv]_a^b$ est FINI (limites finies de $u(t)v(t)$ aux deux bornes), en plus de la classe $\\mathscr{C}^1$ de $u,v$ sur $]a,b[$. Si le crochet n'est pas fini (ou que l'IPP directe produit une intégrale divergente), il faut revenir à une intégrale PROPRE sur un segment $[x,y]\\subset\\,]a,b[$, y appliquer l'IPP normalement, puis faire tendre $x\\to a$ et $y\\to b$ dans le résultat obtenu."
                 },
                 {
-                  "type": "Exercice",
-                  "enonce": "Énoncer le lemme de Riemann-Lebesgue pour une fonction $f$ de classe $\\mathcal{C}^1$ sur un segment $[a,b]$.",
-                  "reponse": "Si $f$ est de classe $\\mathcal{C}^1$ sur le segment $[a,b]$, alors :\n$\\lim_{n \\to +\\infty} \\int_a^b f(t)\\cos(nt) dt = 0$."
+                  "type": "Question",
+                  "enonce": "Donner l'exemple du cours où l'IPP directe échoue sur $I=\\int_0^1 \\frac{\\ln t}{(1+t)^2}\\,\\mathrm{d}t$, et détailler la méthode de correction.",
+                  "reponse": "Avec $u=\\ln t$, $v'=1/(1+t)^2$ (donc $u'=1/t$, $v=-1/(1+t)$), l'IPP « directe » donnerait $\\left[-\\frac{\\ln t}{1+t}\\right]_0^1 + \\int_0^1 \\frac{\\mathrm{d}t}{t(1+t)}$ : or $\\lim_{t\\to0}\\frac{\\ln t}{1+t}=-\\infty$ (crochet non fini) et $\\int_0^1 \\frac{\\mathrm{d}t}{t(1+t)}$ diverge — l'IPP directe est invalide. On revient donc à l'intégrale PROPRE $I(x)=\\int_x^1 \\frac{\\ln t}{(1+t)^2}\\,\\mathrm{d}t$ pour $x>0$ : le crochet $\\left[-\\frac{\\ln t}{1+t}\\right]_x^1$ est bien fini, on calcule $I(x) = -\\ln2 - \\frac{x\\ln x}{1+x}+\\ln(1+x)$, puis on passe à la limite $x\\to0^+$ pour obtenir $I=-\\ln2$ (au passage, $f$ est bien intégrable sur $]0,1]$ car $|f(t)|\\underset{t\\to0}{\\sim}|\\ln t|$, elle-même intégrable en $0$)."
                 },
                 {
-                  "type": "Exercice",
-                  "enonce": "Déterminer la limite de la suite définie pour $n \\ge 1$ par $S_n = \\frac{1}{n} \\sum_{k=0}^{n-1} \\tan\\left(\\frac{k\\pi}{4n}\\right)$ à l'aide des sommes de Riemann.",
-                  "reponse": "On reconnaît une somme de Riemann pour la fonction $f: t \\mapsto \\tan\\left(\\frac{\\pi}{4}t\\right)$ sur $[0,1]$. La limite vaut :\n$\\int_0^1 \\tan\\left(\\frac{\\pi}{4}t\\right) dt = \\left[ -\\frac{4}{\\pi} \\ln\\left|\\cos\\left(\\frac{\\pi}{4}t\\right)\\right| \\right]_0^1 = -\\frac{4}{\\pi} \\ln\\left(\\frac{\\sqrt{2}}{2}\\right) = \\frac{2\\ln(2)}{\\pi}$."
+                  "type": "Question",
+                  "enonce": "Intégrabilité 1/8 — Définir l'intégrabilité d'une fonction $f$ cpm sur $I=]a,b[$, et préciser à quoi cette notion est l'analogue.",
+                  "reponse": "$f$ est intégrable sur $I$ si $\\int_a^b |f|$ converge (convergence de l'intégrale du MODULE/valeur absolue). C'est l'analogue de l'absolue convergence pour les séries : $f$ est intégrable sur $]a,b[$ si son intégrale converge ABSOLUMENT."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 2/8 — Énoncer le théorème reliant intégrabilité et convergence, et préciser précisément le sens de l'implication (est-elle réversible ?).",
+                  "reponse": "Si $f$ est intégrable sur $[a,b[$ alors $\\int_a^b f$ converge (Théorème 3). L'implication est à SENS UNIQUE : la réciproque est FAUSSE — il existe des fonctions dont l'intégrale converge sans que la fonction soit intégrable (voir semi-convergence). Ce théorème permet d'établir une convergence par les outils de l'intégrabilité, à condition de ne jamais oublier les barres de module."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 3/8 — Qu'est-ce qu'une intégrale semi-convergente ? Donner l'exemple canonique du cours.",
+                  "reponse": "$\\int_a^b f$ est semi-convergente si elle CONVERGE sans que $f$ soit intégrable sur $[a,b[$ (i.e. $\\int_a^b|f|$ diverge). Exemple canonique du cours : $\\int_0^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ est semi-convergente."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 4/8 — Quelle hypothèse de signe est rappelée en préambule de TOUS les critères de convergence du cours (comparaison, O, o, équivalence, série-intégrale) ? Quelle en est la conséquence pratique ?",
+                  "reponse": "Le cours précise explicitement : « les fonctions qui interviennent ici sont continues par morceaux et à valeurs POSITIVES OU NULLES ». Conséquence pratique cruciale : ces critères (Prop. 9 à 12) ne s'appliquent PAS directement à une fonction de signe quelconque. Pour une fonction $f$ de signe non constant, il faut les appliquer à $|f|$ (pour établir l'intégrabilité), puis invoquer le Théorème 3 pour en déduire la convergence — jamais les appliquer tels quels à $f$ elle-même si elle change de signe."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 5/8 — Énoncer le critère de comparaison (Prop. 9) et les critères de domination / négligeabilité qui s'en déduisent (Prop. 10).",
+                  "reponse": "Comparaison : si $0\\le|f(x)|\\le|g(x)|$ au voisinage de $b$ et $g$ intégrable sur $[a,b[$, alors $f$ l'est aussi (contraposée : $f$ non intégrable $\\Rightarrow$ $g$ non intégrable). Domination/négligeabilité : si $f(t)\\underset{t\\to b}{=}O(g(t))$ ou $f(t)\\underset{t\\to b}{=}o(g(t))$ et $g$ intégrable sur $[a,b[$, alors $f$ est intégrable sur $[a,b[$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 6/8 — Énoncer le critère d'équivalence (Prop. 11).",
+                  "reponse": "Si $f,g$ cpm sur $[a,b[$ vérifient $f(t)\\underset{t\\to b}{\\sim}g(t)$, alors $f$ est intégrable sur $[a,b[$ $\\iff$ $g$ l'est. (Rappel : ce critère suppose $f,g\\ge0$ au voisinage de $b$, comme toute cette section.)"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 7/8 — Énoncer la comparaison série-intégrale (Prop. 12) et préciser les DEUX hypothèses indispensables (au-delà de la continuité par morceaux).",
+                  "reponse": "Soit $f$ cpm, DÉCROISSANTE et $\\ge0$ sur $[a,+\\infty[$ : $f$ est intégrable sur $[a,+\\infty[$ $\\iff$ $\\sum f(n)$ converge. Les deux hypothèses indispensables sont la POSITIVITÉ et la DÉCROISSANCE — sans la décroissance, l'équivalence entre intégrabilité de $f$ et convergence de $\\sum f(n)$ est fausse en général (contre-exemple : fonctions à pics fins, voir plus loin)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrabilité 8/8 — Donner un exemple de $L^2$ non inclus dans $L^1$ sur $[1,+\\infty[$, et un exemple de $L^1$ non inclus dans $L^2$ sur $]0,1]$.",
+                  "reponse": "Sur $[1,+\\infty[$ : $f(t)=1/t$ est dans $L^2$ (car $f^2=1/t^2$, Riemann $\\alpha=2>1$, intégrable) mais pas dans $L^1$ (Riemann $\\alpha=1$, non intégrable). Sur $]0,1]$ : $f(t)=1/\\sqrt{t}$ est dans $L^1$ (Riemann en 0, $\\alpha=1/2<1$, intégrable) mais pas dans $L^2$ (car $f^2=1/t$, $\\alpha=1\\not<1$, non intégrable en 0). Ces deux exemples montrent qu'aucune des deux inclusions $L^1\\subset L^2$ ou $L^2\\subset L^1$ n'est vraie en général sur un intervalle non borné ou ouvert."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrales de référence 1/3 — Lister les intégrales de référence à borne critique $+\\infty$.",
+                  "reponse": "$t\\mapsto e^{-at}$ est intégrable sur $[0,+\\infty[$ $\\iff$ $a>0$. $t\\mapsto \\dfrac{1}{t^\\alpha}$ est intégrable sur $[1,+\\infty[$ $\\iff$ $\\alpha>1$ (exemple de Riemann)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrales de référence 2/3 — Lister les intégrales de référence à borne critique $0$, et l'intégrale de $\\ln$.",
+                  "reponse": "$t\\mapsto \\dfrac{1}{t^\\alpha}$ est intégrable sur $]0,1]$ $\\iff$ $\\alpha<1$. De même $\\int_a^b \\dfrac{\\mathrm{d}t}{(t-a)^\\alpha}$ et $\\int_a^b \\dfrac{\\mathrm{d}t}{(b-t)^\\alpha}$ convergent $\\iff$ $\\alpha<1$. La fonction $\\ln$ est intégrable sur $]0,1]$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Intégrales de référence 3/3 — Pourquoi $\\int_0^{+\\infty} \\frac{\\mathrm{d}t}{t^\\alpha}$ diverge-t-elle systématiquement, quel que soit $\\alpha\\in\\mathbb{R}$ ?",
+                  "reponse": "Parce que la convergence en $0$ exige $\\alpha<1$ tandis que la convergence en $+\\infty$ exige $\\alpha>1$ : ces deux conditions sont mutuellement exclusives, aucun $\\alpha$ ne peut les satisfaire simultanément. L'intégrale de Riemann sur $]0,+\\infty[$ tout entier diverge donc TOUJOURS."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Règles du $t^\\alpha$ (HP) — Énoncer les règles du $t^\\alpha$ en $+\\infty$ et en $0$, et la mise en garde du cours sur leur usage en rédaction.",
+                  "reponse": "En $+\\infty$ (Prop. 15) : $f$ cpm $\\ge0$ sur $[a,+\\infty[$ ; s'il existe $\\alpha>1$ tel que $\\lim_{t\\to+\\infty}t^\\alpha f(t)=0$, alors $f$ intégrable ; s'il existe $\\alpha\\le1$ tel que $\\lim_{t\\to+\\infty}t^\\alpha f(t)=+\\infty$, alors $f$ non intégrable. En $0$ (Prop. 16), symétriquement avec $\\alpha<1$ pour la convergence et $\\alpha\\ge1$ pour la divergence. MISE EN GARDE : ces règles sont HORS PROGRAMME et ne doivent jamais être citées « telles quelles » — il faut toujours dérouler la démonstration sous-jacente : $t^\\alpha f(t)\\to0$ donne $f(t)=o(1/t^\\alpha)$, puis on conclut par comparaison à l'exemple de Riemann."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Normes intégrales — Définir $L^1(I,\\mathbb{K})$ et $L^2(I,\\mathbb{K})$ ainsi que les normes $N_1$ et $N_2$ associées.",
+                  "reponse": "$L^1=\\{f:I\\to\\mathbb{K} \\text{ continue et intégrable sur } I\\}$, avec $N_1(f)=\\int_I |f(t)|\\,\\mathrm{d}t$, la norme de la convergence en moyenne. $L^2=\\{f:I\\to\\mathbb{K} \\text{ continue telle que } f^2 \\text{ soit intégrable}\\}$, avec $N_2(f)=\\sqrt{\\int_I |f(t)|^2\\,\\mathrm{d}t}$, la norme de la convergence en moyenne quadratique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Normes intégrales — Si l'intervalle $I=[a,b[$ a sa borne $b$ FINIE, que peut-on dire de l'inclusion entre $L^1$ et $L^2$, et pourquoi ?",
+                  "reponse": "Si $b$ est fini, alors $L^2\\subset L^1$. Idée de preuve : on majore $|f|=|f\\cdot1|\\le\\frac{|f|^2+1}{2}$ (inégalité de Young/AM-GM avec $g=1$, fonction constante), et $1$ est intégrable sur l'intervalle BORNÉ $[a,b[$ ; par comparaison, $f$ est donc intégrable. Ce résultat est faux si $b=+\\infty$ (cf. l'exemple $f(t)=1/t$ sur $[1,+\\infty[$, dans $L^2$ mais pas $L^1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce — Soit $f$ continue par morceaux, DÉCROISSANTE sur $[0,+\\infty[$, telle que $\\int_0^{+\\infty} f$ converge. Démontrer que $xf(x)\\to0$ quand $x\\to+\\infty$ (technique classique, ex. 8 du TD intervalles quelconques).",
+                  "reponse": "Comme $f$ est décroissante, pour $t\\in[x/2,x]$ on a $f(t)\\ge f(x)$, donc $\\int_{x/2}^x f(t)\\,\\mathrm{d}t \\ge \\left(x-\\frac{x}{2}\\right)f(x) = \\frac{x}{2}f(x)$. Or $f$ décroissante et $\\int_0^{+\\infty}f$ convergente implique $f\\ge0$ au voisinage de $+\\infty$ (sinon $f$ tendrait vers une limite strictement négative, et l'intégrale divergerait vers $-\\infty$), donc $\\frac{x}{2}f(x)\\ge0$. Par ailleurs, $\\int_{x/2}^x f(t)\\,\\mathrm{d}t$ est un « reste » de l'intégrale convergente $\\int_0^{+\\infty}f$ (différence de deux quantités qui tendent vers la même limite quand $x\\to+\\infty$), donc $\\int_{x/2}^x f(t)\\,\\mathrm{d}t \\to 0$. Par encadrement, $\\frac{x}{2}f(x)\\to0$, donc $xf(x)\\to0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce (règles de Bioche) — Pour intégrer $\\int R(\\cos t,\\sin t)\\,\\mathrm{d}t$ avec $R$ fraction rationnelle, en notant $\\omega(t) = f(t)\\,\\mathrm{d}t$ la forme différentielle associée, énoncer les règles de Bioche.",
+                  "reponse": "On teste l'invariance de $\\omega$ sous trois symétries : si $\\omega(-t)=\\omega(t)$ (invariance par $t\\mapsto-t$), poser $u=\\cos(t)$ ; si $\\omega(\\pi-t)=\\omega(t)$ (invariance par $t\\mapsto\\pi-t$), poser $u=\\sin(t)$ ; si $\\omega(\\pi+t)=\\omega(t)$ (invariance par $t\\mapsto\\pi+t$), poser $u=\\tan(t)$. Si aucune de ces trois symétries n'est vérifiée, on utilise en dernier recours le changement de variable de l'arc moitié $u=\\tan(t/2)$, qui rationalise toujours l'intégrale (mais mène en général à des calculs plus longs)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce — Comment choisir la substitution pour intégrer $\\sin^m(t)\\cos^n(t)$ selon la parité de $m,n$ ? Illustrer avec $\\sin^3t\\cos^2t$ puis $\\sin^4t\\cos^2t$.",
+                  "reponse": "Si l'un des deux exposants est IMPAIR, on isole un facteur de la fonction correspondante pour reconstituer une différentielle, et on pose $u=$ l'AUTRE fonction. Pour $\\sin^3t\\cos^2t$ ($\\sin$ à une puissance impaire) : on écrit $\\sin^3t=(1-\\cos^2t)\\sin t$, on pose $u=\\cos t$ (donc $\\mathrm{d}u=-\\sin t\\,\\mathrm{d}t$), ce qui rationalise tout en un polynôme en $u$. Si les DEUX exposants sont PAIRS, comme $\\sin^4t\\cos^2t$, aucune substitution simple ne fonctionne : il faut LINÉARISER via les formules d'angle double ($\\cos^2t=\\frac{1+\\cos2t}{2}$, $\\sin^2t=\\frac{1-\\cos2t}{2}$) avant d'intégrer terme à terme."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce (Dirichlet) — Comment montre-t-on que $\\int_1^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ converge sans être absolument convergente, et comment généralise-t-on la technique à $\\int \\frac{\\sin t}{t^a}\\,\\mathrm{d}t$ ?",
+                  "reponse": "On effectue une IPP avec $u=1/t$, $v'=\\sin t$ (donc $v=-\\cos t$) : $\\int_1^X \\frac{\\sin t}{t}\\,\\mathrm{d}t = \\left[-\\frac{\\cos t}{t}\\right]_1^X - \\int_1^X \\frac{\\cos t}{t^2}\\,\\mathrm{d}t$. Le crochet a une limite finie en $+\\infty$, et $\\int \\frac{\\cos t}{t^2}\\,\\mathrm{d}t$ converge ABSOLUMENT (car $\\left|\\frac{\\cos t}{t^2}\\right|\\le\\frac{1}{t^2}$, Riemann convergent) : l'intégrale de départ converge donc. Elle n'est pas absolument convergente car $|\\sin t|\\ge\\sin^2t=\\frac{1-\\cos2t}{2}$, dont l'intégrale diverge. Cette IPP se généralise directement à $\\int \\frac{\\sin t}{t^a}\\,\\mathrm{d}t$ ou $\\int\\frac{\\cos t}{t^a}\\,\\mathrm{d}t$ pour tout $a>0$ (convergence, mais absolue convergence seulement pour $a>1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce — Comment intègre-t-on une fraction rationnelle en $e^t$ (ex : $\\int \\frac{\\mathrm{d}t}{(e^t+1)(e^t-1)}$) ou en $\\sqrt{t}$ (ex : $\\int \\frac{\\sqrt{t}-1}{t+1}\\,\\mathrm{d}t$) ?",
+                  "reponse": "Pour une fraction rationnelle en $e^t$, on pose $u=e^t$ (fonction bijective strictement croissante), ce qui ramène l'intégrale à une fraction rationnelle usuelle en $u$, décomposable en éléments simples. Pour une fraction rationnelle en $\\sqrt{t}$ (ou plus généralement en $t^{1/q}$), on pose $u=\\sqrt{t}$ (ou $u=t^{1/q}$ avec $q$ le ppcm des indices de racines présentes), ce qui rationalise également l'expression."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Astuce — Pour $\\int_a^b \\sqrt{(t-a)(b-t)}\\,\\mathrm{d}t$, quel changement de variable trigonométrique utiliser, et pourquoi supprime-t-il la racine carrée ?",
+                  "reponse": "On pose $t = a\\cos^2u + b\\sin^2u$ (équivalent à $t=\\frac{a+b}{2}+\\frac{b-a}{2}\\sin\\theta$ à une reparamétrisation près), qui envoie un intervalle en $u$ sur $]a,b[$. On a alors $t-a = (b-a)\\sin^2u$ et $b-t=(b-a)\\cos^2u$, donc $(t-a)(b-t)=(b-a)^2\\sin^2u\\cos^2u$ est un CARRÉ PARFAIT, et $\\sqrt{(t-a)(b-t)}=(b-a)|\\sin u\\cos u|$ : la racine disparaît grâce à $\\cos^2u+\\sin^2u=1$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 1 — Si $f$ est continue, positive et intégrable sur $[a,+\\infty[$, alors $f$ admet une limite nulle en $+\\infty$.",
+                  "reponse": "FAUX. Contre-exemple : $f$ nulle partout sauf sur des « pics » $[n,n+1/n^3]$ où elle prend la valeur $n$ (fonction triangle ou plateau). L'aire totale vaut $\\sum n\\cdot\\frac{1}{n^3}=\\sum\\frac{1}{n^2}$, qui converge : $f$ est intégrable, mais $f$ ne tend pas vers $0$ puisqu'elle prend la valeur $n$, arbitrairement grande, en des points arbitrairement grands."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 2 — Si $f$ est continue, positive et intégrable sur $[a,+\\infty[$, alors $f$ est bornée.",
+                  "reponse": "FAUX, avec le même contre-exemple que ci-dessus : les pics de hauteur $n$ (aussi grande que l'on veut) montrent que $f$ n'est pas bornée, bien que son intégrale converge."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 3 — Si $f$ est continue, positive, DÉCROISSANTE et intégrable sur $[a,+\\infty[$, alors $f$ admet une limite nulle en $+\\infty$.",
+                  "reponse": "VRAI. $f$ décroissante et minorée par $0$ admet une limite $L\\ge0$ en $+\\infty$. Si $L>0$, alors $f(t)\\ge L>0$ au voisinage de $+\\infty$, donc $\\int f$ diverge (minorée par l'intégrale d'une constante strictement positive sur un intervalle infini) — ce qui contredit l'intégrabilité. Donc $L=0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 4 — Si $f$ est continue, positive, décroissante, de limite nulle en $+\\infty$, alors $f$ est intégrable sur $[a,+\\infty[$.",
+                  "reponse": "FAUX. Contre-exemple canonique : $f(t)=1/t$ sur $[1,+\\infty[$ est continue, positive, décroissante, de limite nulle, mais NON intégrable (intégrale de Riemann divergente, $\\alpha=1\\not>1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 5 — Une fonction $f$ continue, positive (SANS hypothèse de décroissance) sur $[a,+\\infty[$ est intégrable si et seulement si $\\sum f(n)$ converge.",
+                  "reponse": "FAUX. Sans la décroissance, l'équivalence n'a pas lieu. Contre-exemple : les pics de largeur $1/n^3$ et hauteur $n$ (cf. VRAI/FAUX 1) donnent une fonction intégrable ($\\sum 1/n^2$ converge) alors que $\\sum f(n)=\\sum n$ diverge grossièrement. La décroissance est une hypothèse essentielle de la Prop. 12, non superflue."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 6 — Si $\\int_a^b f$ converge, alors $f$ est nécessairement intégrable sur $[a,b[$ (au sens de la convergence absolue).",
+                  "reponse": "FAUX — c'est exactement la distinction entre convergence et intégrabilité (semi-convergence). Contre-exemple : $\\int_0^{+\\infty} \\frac{\\sin t}{t}\\,\\mathrm{d}t$ converge mais $t\\mapsto \\sin(t)/t$ n'est pas intégrable sur $[1,+\\infty[$ (car $|\\sin t|\\ge\\sin^2 t$, dont l'intégrale diverge)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 7 — Si $f\\sim g$ au voisinage de $b$, avec $f,g$ de signe QUELCONQUE (non constant), alors $f$ intégrable $\\iff$ $g$ intégrable.",
+                  "reponse": "FAUX en général. Le critère d'équivalence du cours (Prop. 11) est énoncé pour des fonctions à valeurs POSITIVES OU NULLES. Pour des fonctions de signe non constant, l'équivalent peut « effacer » des compensations de signe et ne rien dire sur l'intégrabilité ; il faut alors passer par d'autres méthodes (IPP pour la convergence, majoration directe de $|f|$ pour l'intégrabilité)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 8 — Si $f$ est continue par morceaux, décroissante sur $[a,+\\infty[$ et telle que $\\int_a^{+\\infty} f$ converge, alors $f(x)\\to0$ quand $x\\to+\\infty$ (sans même supposer $f\\ge0$).",
+                  "reponse": "VRAI, et c'est plus fort que le résultat classique « décroissante $\\ge0$ intégrable $\\Rightarrow$ limite nulle » : ici, la décroissance ET la convergence de l'intégrale suffisent À ELLES SEULES à forcer $f\\ge0$ au voisinage de $+\\infty$ (sinon $f$ tendrait vers une limite $<0$ et l'intégrale divergerait vers $-\\infty$), puis on conclut comme en VRAI/FAUX 3. C'est ce résultat qui est utilisé pour justifier $f\\ge0$ dans la démonstration de l'astuce $xf(x)\\to0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 9 — L'intégrale $\\int_0^{+\\infty} \\frac{\\mathrm{d}t}{t^\\alpha}$ converge pour au moins une valeur de $\\alpha\\in\\mathbb{R}$.",
+                  "reponse": "FAUX. Comme vu plus haut, cette intégrale diverge pour TOUTE valeur de $\\alpha$ réel, car les conditions de convergence en $0$ ($\\alpha<1$) et en $+\\infty$ ($\\alpha>1$) sont incompatibles."
                 }
               ]
             }
@@ -2279,6 +2564,11 @@
               "children": [],
               "files": [
                 {
+                  "name": "8_Ondes_Stationnaires.pdf",
+                  "path": "Physique/Corde%20Vibrante/Cours/8_Ondes_Stationnaires.pdf",
+                  "corrige": false
+                },
+                {
                   "name": "Corde_vibrante.pdf",
                   "path": "Physique/Corde%20Vibrante/Cours/Corde_vibrante.pdf",
                   "corrige": false
@@ -2290,6 +2580,25 @@
               "isAvantDernier": false,
               "hue": 71.11538461538453,
               "color": "hsl(71.1,100%,50%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/Corde Vibrante/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD6_Corde_vibrante.pdf",
+                  "path": "Physique/Corde%20Vibrante/TD/TD6_Corde_vibrante.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 123.11538461538453,
+              "color": "hsl(123.1,100%,56%)"
             }
           ],
           "files": [],
