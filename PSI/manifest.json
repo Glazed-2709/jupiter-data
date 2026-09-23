@@ -1658,13 +1658,23 @@
               "children": [],
               "files": [
                 {
+                  "name": "Algèbre linéaire.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Alg%C3%A8bre%20lin%C3%A9aire.pdf",
+                  "corrige": false
+                },
+                {
                   "name": "Analyse Asymptotique.pdf",
                   "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Analyse%20Asymptotique.pdf",
                   "corrige": false
                 },
                 {
-                  "name": "Cours – Séries numériques.pdf",
-                  "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Cours%20%E2%80%93%20S%C3%A9ries%20num%C3%A9riques.pdf",
+                  "name": "Fiche méthode – B-A-BA d'algèbre linéaire.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/Fiche%20m%C3%A9thode%20%E2%80%93%20B-A-BA%20d'alg%C3%A8bre%20lin%C3%A9aire.pdf",
+                  "corrige": false
+                },
+                {
+                  "name": "Séries numériques.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/Cours/S%C3%A9ries%20num%C3%A9riques.pdf",
                   "corrige": false
                 }
               ],
@@ -1681,6 +1691,11 @@
               "description": "",
               "children": [],
               "files": [
+                {
+                  "name": "Exercices – Algèbre linéaire.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9visions/TD/Exercices%20%E2%80%93%20Alg%C3%A8bre%20lin%C3%A9aire.pdf",
+                  "corrige": false
+                },
                 {
                   "name": "Exercices – Séries numériques.pdf",
                   "path": "Math%C3%A9matiques/R%C3%A9visions/TD/Exercices%20%E2%80%93%20S%C3%A9ries%20num%C3%A9riques.pdf",
@@ -1702,6 +1717,261 @@
           ],
           "files": [],
           "questions": [
+            {
+              "type": "Question",
+              "enonce": "Espaces vectoriels 1/4 — Rappeler les deux lois et les axiomes exacts définissant un $\\mathbb{K}$-espace vectoriel $(E,+,\\cdot)$.",
+              "reponse": "$(E,+)$ doit être un groupe abélien : $+$ associative, commutative, avec neutre $0_E$ et tout élément a un symétrique. La loi externe $\\cdot:\\mathbb{K}\\times E\\to E$ doit vérifier : $1\\cdot x=x$ ; $\\lambda\\cdot(x+y)=\\lambda\\cdot x+\\lambda\\cdot y$ ; $(\\lambda+\\mu)\\cdot x=\\lambda\\cdot x+\\mu\\cdot x$ ; $\\lambda\\cdot(\\mu\\cdot x)=(\\lambda\\mu)\\cdot x$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Espaces vectoriels 2/4 — Énoncer les trois propriétés élémentaires découlant des axiomes (Prop. 1), notamment celle liée à un produit nul.",
+              "reponse": "$\\lambda\\cdot x=0_E \\iff \\lambda=0$ ou $x=0_E$ ; $(\\lambda-\\mu)\\cdot x=\\lambda\\cdot x-\\mu\\cdot x$ ; $\\lambda\\cdot(x-y)=\\lambda\\cdot x-\\lambda\\cdot y$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Espaces vectoriels 3/4 — Définir combinaison linéaire, famille génératrice, famille libre et famille liée.",
+              "reponse": "Combinaison linéaire de $(x_i)_{1\\le i\\le n}$ : tout vecteur $\\sum_{i=1}^n\\lambda_ix_i$. Famille génératrice : tout vecteur de $E$ s'écrit comme combinaison linéaire de la famille. Famille liée : un des vecteurs s'écrit comme combinaison linéaire des AUTRES. Famille libre : famille qui n'est pas liée, caractérisée par $\\sum_{i=1}^n\\lambda_ix_i=0_E \\Rightarrow \\forall i,\\ \\lambda_i=0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Espaces vectoriels 4/4 — Donner la définition d'une base, et énoncer la proposition d'unicité des coordonnées associée.",
+              "reponse": "Une base est une famille libre ET génératrice. Si $\\mathscr{B}=(e_i)_{1\\le i\\le n}$ est une base de $E$, tout $x\\in E$ se décompose de façon UNIQUE : $\\exists!(x_1,\\dots,x_n)\\in\\mathbb{K}^n$, $x=\\sum_{i=1}^n x_ie_i$ (les $x_i$ sont les coordonnées de $x$ dans $\\mathscr{B}$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sous-espaces vectoriels 1/3 — Donner la définition d'un sev, et énoncer la proposition sur l'intersection de sev.",
+              "reponse": "$F\\subset E$ est un sev si $0_E\\in F$ et $F$ est stable par combinaison linéaire ($\\forall x,y\\in F,\\forall\\lambda,\\mu\\in\\mathbb{K}, \\lambda x+\\mu y\\in F$). Toute INTERSECTION de sev de $E$ est un sev de $E$ (Prop. 4). ATTENTION : la RÉUNION de sev n'est en général PAS un sev ($F_1\\cup F_2$ est un sev $\\iff F_1\\subset F_2$ ou $F_2\\subset F_1$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sous-espaces vectoriels 2/3 — Définir la somme de $p$ sev, et énoncer le théorème de caractérisation des sommes directes.",
+              "reponse": "$F=\\sum_{i=1}^p F_i = \\{\\sum_{i=1}^p x_i \\mid (x_1,\\dots,x_p)\\in F_1\\times\\cdots\\times F_p\\}$. La somme est DIRECTE ssi $\\forall(x_i)_{1\\le i\\le p}\\in\\prod F_i,\\ \\sum x_i=0_E \\Rightarrow \\forall i,\\ x_i=0_E$ (Théorème 1) — c'est-à-dire l'unicité de la décomposition du vecteur NUL suffit (pas besoin de vérifier l'unicité pour tout vecteur)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sous-espaces vectoriels 3/3 — Énoncer les trois caractérisations équivalentes de deux sev supplémentaires (Prop. 8), et donner le piège classique sur l'intersection deux à deux triviale.",
+              "reponse": "$E=F_1\\oplus F_2 \\iff \\forall x\\in E,\\exists!(x_1,x_2)\\in F_1\\times F_2, x=x_1+x_2 \\iff F_1\\cap F_2=\\{0_E\\}$ ET $E=F_1+F_2$. PIÈGE (cas $p\\ge3$) : il ne suffit PAS que $F_i\\cap F_j=\\{0_E\\}$ pour tout $i\\ne j$ pour que la somme soit directe — contre-exemple classique : trois droites distinctes du plan, deux à deux d'intersection nulle, mais dont la somme (le plan tout entier) n'est pas directe."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 1/6 — Donner la définition d'une application linéaire, et préciser ce qu'il est INUTILE de vérifier en pratique.",
+              "reponse": "$f:E\\to F$ est linéaire si $\\forall x,y\\in E,\\forall\\lambda,\\mu\\in\\mathbb{K},\\ f(\\lambda x+\\mu y)=\\lambda f(x)+\\mu f(y)$. Il est INUTILE de vérifier $f(0_E)=0_F$ séparément : c'est automatique, conséquence de la linéarité (en prenant $\\lambda=\\mu=0$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 2/6 — Énoncer la proposition de détermination d'une application linéaire par l'image d'une base, et la caractérisation de l'injectivité/surjectivité/bijectivité par l'image d'une base (dimension finie).",
+              "reponse": "$f$ linéaire est entièrement déterminée par les images $f(e_i)$ des vecteurs d'une base : $f(x)=\\sum x_if(e_i)$. En dimension finie : $u$ injective $\\iff$ l'image d'une base de $E$ par $u$ est une famille LIBRE de $F$ ; $u$ surjective $\\iff$ l'image d'une base est GÉNÉRATRICE de $F$ ; $u$ bijective $\\iff$ l'image d'une base est une BASE de $F$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 3/6 — Définir noyau et image d'une application linéaire, préciser leur nature (sev), et la caractérisation de l'injectivité par le noyau.",
+              "reponse": "$\\ker f=\\{x\\in E, f(x)=0_F\\}$ est un sev de $E$ ; $\\operatorname{Im}f$ est un sev de $F$ (Prop. 11). $f$ est injective $\\iff \\ker f=\\{0_E\\}$ (Prop. 12)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 4/6 — Énoncer la proposition sur l'image d'une famille génératrice, et le théorème de structure de $\\mathscr{L}(E,F)$.",
+              "reponse": "Si $(e_i)_{1\\le i\\le n}$ est génératrice de $E$ et $u\\in\\mathscr{L}(E,F)$, alors $(u(e_i))_{1\\le i\\le n}$ est génératrice de $\\operatorname{Im}u$ (l'image est engendrée par l'image d'une base). $\\mathscr{L}(E,F)$ est un $\\mathbb{K}$-espace vectoriel : toute combinaison linéaire d'applications linéaires est linéaire (Th. 2), et toute composée d'applications linéaires est linéaire (Th. 3, avec bilinéarité de la composition)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 5/6 — Définir un projecteur et une symétrie associés à deux sev supplémentaires $F_1,F_2$, et donner la caractérisation algébrique d'un projecteur.",
+              "reponse": "Si $E=F_1\\oplus F_2$, la projection sur $F_1$ parallèlement à $F_2$ est $p_1:x=x_1+x_2\\mapsto x_1$ ; la symétrie associée est $s_1:x\\mapsto x_1-x_2$. Caractérisation (Prop. 16) : $p$ est un projecteur $\\iff p\\in\\mathscr{L}(E)$ et $p\\circ p=p$ ; alors $\\operatorname{Im}p=\\ker(p-\\operatorname{Id}_E)$ et $E=\\operatorname{Im}p\\oplus\\ker p$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Applications linéaires 6/6 — Rappeler les relations remarquables entre deux projecteurs $p_1,p_2$ associés à une décomposition $E=F_1\\oplus F_2$, et les symétries associées $s_1,s_2$. Que signifie « hyperplan » ?",
+              "reponse": "$p_1^2=p_1$, $p_1+p_2=\\operatorname{Id}_E$, $p_1\\circ p_2=p_2\\circ p_1=0$ ; $s_1^2=\\operatorname{Id}_E$, $s_2=-s_1$ (attention : $s_2(x)=-s_1(x)$, pas $s_1+s_2=0$ trivial mais c'est équivalent), $s_1+\\operatorname{Id}_E=2p_1$. Un hyperplan est le NOYAU d'une forme linéaire NON NULLE."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 1/8 — Énoncer le théorème de la base incomplète (versions faible et forte).",
+              "reponse": "Version faible : toute famille LIBRE de $E$ (dimension finie) peut être complétée pour former une base de $E$. Version forte : une famille libre $\\mathscr{L}$ peut être complétée avec des vecteurs pris dans une famille génératrice $\\mathscr{G}$ donnée, pour former une base de $E$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 2/8 — Énoncer le théorème du cardinal des familles libres/génératrices, et la caractérisation des bases en dimension finie qui en découle.",
+              "reponse": "En dimension $n$ : toute famille LIBRE a AU PLUS $n$ vecteurs ; toute famille GÉNÉRATRICE a AU MOINS $n$ vecteurs (Th. 6). Caractérisation des bases (Th. 7) : $\\mathscr{F}$ est une base $\\iff$ $\\mathscr{F}$ est libre ET $\\operatorname{Card}\\mathscr{F}=n$ $\\iff$ $\\mathscr{F}$ est génératrice ET $\\operatorname{Card}\\mathscr{F}=n$ (l'un des deux critères, combiné au bon cardinal, suffit — pas besoin de vérifier les deux)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 3/8 — Énoncer le théorème sur les sev d'un espace de dimension finie, et la formule de Grassmann.",
+              "reponse": "Si $F$ est un sev de $E$ (dim finie), $F$ est de dimension finie, $\\dim F\\le\\dim E$, et $F=E\\iff \\dim F=\\dim E$ (Th. 8). Formule de Grassmann (Prop. 20) : pour $F_1,F_2$ sev de dimension finie, $\\dim(F_1+F_2)=\\dim F_1+\\dim F_2-\\dim(F_1\\cap F_2)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 4/8 — Énoncer la caractérisation d'une somme directe PAR LA DIMENSION (Prop. 23), et la notion de base adaptée à une somme directe.",
+              "reponse": "Les sev $F_1,\\dots,F_p$ sont en somme directe $\\iff \\dim\\sum_{i=1}^p F_i = \\sum_{i=1}^p \\dim F_i$ (comparer à l'inégalité générale $\\dim\\sum F_i\\le\\sum\\dim F_i$ toujours vraie, Corollaire 1). Une base est dite ADAPTÉE à la somme directe $E=\\bigoplus F_i$ si elle est obtenue en réunissant une base de chaque $F_i$ (Prop. 21) : $E=\\bigoplus F_i \\iff$ la réunion des bases $(\\mathscr{B}_i)$ forme une base de $E$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 5/8 — Définir le rang d'une famille de vecteurs, et énoncer les liens rang/liberté/génération (Prop. 24).",
+              "reponse": "$\\operatorname{rg}\\mathscr{F}=\\dim\\operatorname{Vect}(\\mathscr{F})$. En dimension $n$, pour $\\mathscr{F}=(x_1,\\dots,x_p)$ : $\\operatorname{rg}\\mathscr{F}\\le\\min(n,p)$ ; $\\operatorname{rg}\\mathscr{F}=\\dim E \\iff \\mathscr{F}$ est génératrice de $E$ ; $\\operatorname{rg}\\mathscr{F}=\\operatorname{Card}\\mathscr{F} \\iff \\mathscr{F}$ est libre."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 6/8 — Énoncer les conditions d'existence d'applications linéaires injective/surjective/bijective entre deux espaces de dimension finie (Prop. 25).",
+              "reponse": "Il existe $u\\in\\mathscr{L}(E,F)$ INJECTIVE $\\iff \\dim E\\le\\dim F$. Il existe $u$ SURJECTIVE $\\iff \\dim E\\ge\\dim F$. Il existe $u$ BIJECTIVE $\\iff \\dim E=\\dim F$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 7/8 — Énoncer le théorème du rang, et préciser un piège classique sur son interprétation.",
+              "reponse": "Pour $E$ de dimension finie, $F$ quelconque, $u\\in\\mathscr{L}(E,F)$ : $\\dim E=\\dim\\ker u+\\dim\\operatorname{Im}u$ (Th. 9). PIÈGE : cela ne signifie PAS que $\\ker u$ et $\\operatorname{Im}u$ sont SUPPLÉMENTAIRES dans $E$ — l'égalité des dimensions ($\\dim\\ker u+\\dim\\operatorname{Im}u=\\dim E$) est nécessaire mais pas suffisante pour la somme directe (il faudrait aussi $\\ker u\\cap\\operatorname{Im}u=\\{0_E\\}$, et $\\operatorname{Im}u\\subset E$ n'est même pas automatique si $F\\ne E$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Théorie de la dimension 8/8 — Énoncer les 6 conditions équivalentes à l'inversibilité d'un endomorphisme en dimension finie (Prop. 27), et préciser pourquoi ce résultat est FAUX en dimension infinie (donner le contre-exemple du cours).",
+              "reponse": "Pour $f\\in\\mathscr{L}(E)$, $E$ dim finie $n$ : $f$ inversible $\\iff$ $\\operatorname{rg}f=n$ $\\iff$ $f$ injectif $\\iff$ $f$ surjectif $\\iff$ $f$ inversible à droite $\\iff$ $f$ inversible à gauche. FAUX en dimension infinie : contre-exemple, les endomorphismes de $\\mathbb{R}[X]$ définis par $P\\mapsto P'$ (surjectif, non injectif) et $P\\mapsto XP$ (injectif, non surjectif) — l'équivalence injectif/surjectif s'effondre sans la dimension finie."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 1/6 — Rappeler la définition du produit matriciel, et le théorème de structure linéaire de $\\mathscr{M}_{np}(\\mathbb{K})$.",
+              "reponse": "Pour $A\\in\\mathscr{M}_{np}(\\mathbb{K})$, $B\\in\\mathscr{M}_{pq}(\\mathbb{K})$, le produit $AB\\in\\mathscr{M}_{nq}(\\mathbb{K})$ a pour terme général $c_{ij}=\\sum_{k=1}^p a_{ik}b_{kj}$. $\\mathscr{M}_{np}(\\mathbb{K})$ est un espace vectoriel de dimension $n\\times p$, dont les matrices élémentaires $E_{ij}$ forment la base canonique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 2/6 — Énoncer les 4 conditions équivalentes à l'inversibilité d'une matrice carrée (Prop. 36), et les trois méthodes de la fiche-méthode pour calculer l'inverse.",
+              "reponse": "$A\\in\\mathscr{M}_n(\\mathbb{K})$ : $A$ inversible $\\iff \\operatorname{rg}A=n$ $\\iff$ $A$ inversible à droite $\\iff$ $A$ inversible à gauche. Trois méthodes de calcul de $A^{-1}$ : (1) résoudre le système linéaire $AX=X'$ en exprimant $x,y,\\dots$ en fonction de $x',y',\\dots$ ; (2) méthode du pivot (total) : juxtaposer/superposer $A$ et $I_n$, transformer $A$ en $I_n$ par des opérations sur les LIGNES (ou les COLONNES, sans mélanger les deux) appliquées identiquement à $I_n$ ; (3) via un polynôme annulateur de valuation nulle $P(A)=\\sum_{j=0}^k a_jA^j=0$ avec $a_0\\ne0$ : alors $A^{-1}=-\\frac{1}{a_0}\\sum_{j=1}^k a_jA^{j-1}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 3/6 — Définir deux matrices SEMBLABLES, et lister les propriétés conservées par similitude (en précisant lesquelles ne sont PAS des équivalences).",
+              "reponse": "$A,B\\in\\mathscr{M}_n(\\mathbb{K})$ sont semblables s'il existe $P\\in\\operatorname{GL}_n(\\mathbb{K})$ telle que $A=P^{-1}BP$. Propriétés (Prop. 40, 41) : deux matrices semblables représentent le MÊME endomorphisme dans des bases différentes ; elles ont même RANG, même TRACE, même DÉTERMINANT (Prop. 54). ATTENTION : ces réciproques sont TOUTES FAUSSES — même rang (ou même trace, ou même déterminant) n'implique PAS que deux matrices soient semblables."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 4/6 — Définir la trace d'une matrice carrée et d'un endomorphisme, et rappeler les propriétés essentielles (notamment le piège sur $\\operatorname{tr}(ABC)$).",
+              "reponse": "$\\operatorname{tr}(A)=\\sum_{i=1}^n a_{ii}$. Propriétés : forme linéaire non nulle ; $\\operatorname{tr}(A^\\top)=\\operatorname{tr}A$ ; $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$ (mais PAS de commutativité cyclique arbitraire !) ; deux matrices semblables ont même trace. PIÈGE : $\\operatorname{tr}(ABC)=\\operatorname{tr}(A(BC))=\\operatorname{tr}((BC)A)=\\operatorname{tr}(BCA)$ (décalage circulaire valide), mais $\\operatorname{tr}(ABC)\\ne\\operatorname{tr}(BAC)$ EN GÉNÉRAL (échanger deux facteurs adjacents n'est PAS permis, seul le décalage circulaire l'est). La trace d'un endomorphisme est celle de sa matrice dans n'importe quelle base (indépendante du choix, car matrices semblables)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 5/6 — Énoncer la propriété de stabilité et matrice triangulaire (Prop. 45), et son cas particulier « trigonalisable ».",
+              "reponse": "Avec $\\mathscr{B}=(e_1,\\dots,e_n)$ et $F_i=\\operatorname{Vect}(e_1,\\dots,e_i)$ : $\\operatorname{Mat}(u,\\mathscr{B})$ est triangulaire SUPÉRIEURE $\\iff \\forall i,\\ F_i$ est stable par $u$. Cas particulier : si $p=\\dim E$ et $\\dim F_i=i$ pour tout $i$, il existe une base rendant la matrice de $u$ triangulaire supérieure — on dit alors que $u$ est TRIGONALISABLE."
+            },
+            {
+              "type": "Question",
+              "enonce": "Matrices 6/6 — Énoncer la propriété de stabilité et matrices DIAGONALES par blocs (Prop. 46), et sa généralisation.",
+              "reponse": "Si $E=F_1\\oplus F_2$ avec $F_1,F_2$ stables par $u$, alors dans une base adaptée à cette somme directe, la matrice de $u$ est diagonale par blocs — et réciproquement. Généralisation : pour $E=\\bigoplus_{i=1}^p F_i$ avec chaque $F_i$ stable par $u$, on peut construire une base de $E$ où la matrice de $u$ est diagonale par blocs (et réciproquement)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Polynômes d'endomorphismes 1/2 — Définir $P(u)$ et $P(A)$ pour $P\\in\\mathbb{K}[X]$, et lister les propriétés « en vrac » utiles (Prop. 47).",
+              "reponse": "Pour $P=\\sum_{k=0}^p a_kX^k$ : $P(u)=\\sum_{k=0}^p a_ku^k$ (endomorphisme), $P(A)=\\sum_{k=0}^p a_kA^k$ (matrice). Propriétés : $P\\mapsto P(u)$ (et $P\\mapsto P(A)$) est un MORPHISME D'ALGÈBRE (linéaire, respecte les produits : $(PQ)(u)=P(u)\\circ Q(u)$) ; $P(u)$ et $Q(u)$ COMMUTENT toujours (de même $P(A)$ et $Q(A)$) ; $\\ker P(u)$ et $\\operatorname{Im}P(u)$ sont STABLES par $u$ ; si $A,B$ semblables, alors $P(A),P(B)$ sont semblables pour tout $P$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Polynômes d'endomorphismes 2/2 — Définir un polynôme annulateur, et donner les deux méthodes de calcul des puissances d'une matrice qui en découlent (fiche-méthode).",
+              "reponse": "$P$ est annulateur de $u$ (resp. $A$) si $P(u)=0$ (resp. $P(A)=0$) ; il est MINIMAL s'il est de degré minimal parmi les annulateurs. Méthode 1 (matrice $A=aI_n+N$, $N$ nilpotente d'ordre $p$, cas des triangulaires à diagonale constante) : utiliser la formule du binôme, les termes d'indice $k\\ge p$ dans le développement de $N^k$ sont nuls. Méthode 2 (polynôme annulateur $P$ connu, éventuellement scindé) : calculer le reste de la division euclidienne de $X^n$ par $P$ (par substitution des racines de $P$, et de leurs dérivées en cas de racine multiple, dans l'égalité $X^n=PQ_n+R_n$), puis substituer $A$ à $X$ dans $R_n$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 1/6 — Énoncer le théorème d'existence et unicité du déterminant dans une base (les 3 propriétés caractéristiques), et la caractérisation des bases par le déterminant.",
+              "reponse": "Il existe une UNIQUE application $\\varphi:E^n\\to\\mathbb{K}$ ($n$-linéaire, alternée — nulle si deux vecteurs sont égaux —, et $\\varphi(\\mathscr{B})=1$) : c'est $\\det_{\\mathscr{B}}$ (Th. 12). Toute forme $n$-linéaire alternée sur $E$ est proportionnelle à $\\det_{\\mathscr{B}}$. Caractérisation des bases (Th. 13) : $(x_1,\\dots,x_n)$ est une base de $E$ $\\iff \\det_{\\mathscr{B}}(x_1,\\dots,x_n)\\ne0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 2/6 — Rappeler la formule de changement de base pour le déterminant, et les règles de calcul essentielles (Prop. 49).",
+              "reponse": "$\\det_{\\mathscr{B}'}=\\det_{\\mathscr{B}'}(\\mathscr{B})\\cdot\\det_{\\mathscr{B}}$. Règles : échanger deux vecteurs change le déterminant en son opposé ; répétition $\\Rightarrow$ déterminant nul ; on peut factoriser un scalaire par facteur, $\\det_{\\mathscr{B}}(\\lambda_1x_1,\\dots,\\lambda_nx_n)=\\lambda_1\\cdots\\lambda_n\\det_{\\mathscr{B}}(x_1,\\dots,x_n)$ (donc $\\det_{\\mathscr{B}}(\\lambda x_1,\\dots,\\lambda x_n)=\\lambda^n\\det_{\\mathscr{B}}(\\dots)$, PAS $\\lambda\\cdot\\det$) ; le déterminant est inchangé si on ajoute à un vecteur une combinaison linéaire des AUTRES ; famille liée $\\Rightarrow$ déterminant nul."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 3/6 — Définir le déterminant d'un endomorphisme, en quoi il est indépendant de la base, et lister ses propriétés multiplicatives (Prop. 50).",
+              "reponse": "$\\det f = \\det_{\\mathscr{B}}(f(\\mathscr{B})) = \\det(\\operatorname{Mat}_{\\mathscr{B}}(f))$, valeur INDÉPENDANTE de la base $\\mathscr{B}$ choisie (Th. 14). Propriétés : $\\det\\operatorname{Id}_E=1$ ; $\\det(u\\circ v)=\\det u\\cdot\\det v$ ; $u\\in\\operatorname{GL}(E)\\iff\\det u\\ne0$, et alors $\\det(u^{-1})=1/\\det u$ ; $\\det(\\lambda u)=\\lambda^n\\det u$ ($n=\\dim E$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 4/6 — Rappeler la règle de Sarrus pour les matrices $2\\times2$ et $3\\times3$, et préciser pourquoi elle ne se généralise PAS aux ordres supérieurs.",
+              "reponse": "Taille 2 : $\\begin{vmatrix}a&c\\\\b&d\\end{vmatrix}=ad-bc$. Taille 3 (Sarrus, en recopiant les deux premières colonnes) : $\\det=(a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32})-(a_{31}a_{22}a_{13}+a_{32}a_{23}a_{11}+a_{33}a_{21}a_{12})$. La règle de Sarrus est un TRUC MNÉMOTECHNIQUE spécifique aux petites tailles (2 et 3) ; elle ne se généralise PAS aux matrices $n\\ge4$ (il faut alors utiliser le développement selon une rangée ou d'autres techniques)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 5/6 — Définir mineur principal et cofacteur, énoncer la formule de développement selon une rangée, et le résultat sur le déterminant d'une matrice triangulaire par blocs.",
+              "reponse": "Mineur $\\Delta_{ij}$ : déterminant obtenu en supprimant la $i$-ème ligne et la $j$-ème colonne. Cofacteur $A_{ij}=(-1)^{i+j}\\Delta_{ij}$. Développement selon la colonne $j$ : $\\det A=\\sum_{i=1}^n(-1)^{i+j}a_{ij}\\Delta_{ij}$ (idem selon une ligne). Pour $M=\\begin{pmatrix}A&C\\\\0&B\\end{pmatrix}$ triangulaire par blocs avec $A,B$ carrés : $\\det M=\\det A\\cdot\\det B$ — résultat qui se généralise à un nombre quelconque de blocs diagonaux."
+            },
+            {
+              "type": "Question",
+              "enonce": "Déterminant 6/6 — Énoncer la formule du déterminant de Vandermonde et la condition de non-nullité qui en découle.",
+              "reponse": "$V(x_0,\\dots,x_n)=\\begin{vmatrix}1&1&\\cdots&1\\\\x_0&x_1&\\cdots&x_n\\\\\\vdots&&&\\vdots\\\\x_0^n&x_1^n&\\cdots&x_n^n\\end{vmatrix} = \\prod_{0\\le j<i\\le n}(x_i-x_j)$. On en déduit : $V(x_0,\\dots,x_n)\\ne0 \\iff$ les $(x_i)_{0\\le i\\le n}$ sont DEUX À DEUX DISTINCTS."
+            },
+            {
+              "type": "Question",
+              "enonce": "Polynômes de Lagrange — Énoncer la proposition du polynôme de Lagrange $L_{i_0}$ associé à une famille $(a_0,\\dots,a_n)$ de points distincts, et la conséquence sur les coordonnées d'un polynôme $P\\in\\mathbb{K}_n[X]$.",
+              "reponse": "Pour $i_0\\in\\llbracket0,n\\rrbracket$, l'unique polynôme $L_{i_0}$ de degré $\\le n$ tel que $\\forall j,\\ L_{i_0}(a_j)=\\delta_{i_0j}$ est $L_{i_0}=\\dfrac{1}{\\prod_{j\\ne i_0}(a_{i_0}-a_j)}\\prod_{j\\ne i_0}(X-a_j)$. La famille $(L_0,\\dots,L_n)$ est une base de $\\mathbb{K}_n[X]$, et tout $P\\in\\mathbb{K}_n[X]$ s'écrit $P(X)=\\sum_{i=0}^n P(a_i)L_i(X)$ — les coordonnées de $P$ dans cette base sont exactement ses valeurs $(P(a_0),\\dots,P(a_n))$ (isomorphisme évaluation, Prop. 59)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Lister les 4 façons usuelles de prouver qu'un ensemble $F$ est un sev de $E$ (fiche-méthode).",
+              "reponse": "(1) Vérifier directement : $F$ non vide (contient $0_E$) et stable par combinaison linéaire. (2) Montrer que $F=\\operatorname{Vect}(x_1,\\dots,x_p)$ (la famille apparaît naturellement en isolant les variables d'une description précise des vecteurs de $F$) — ceci fournit en prime une famille génératrice de $F$. (3) Montrer que $F$ est une intersection de sev de $E$. (4) Montrer que $F=\\ker u$ ou $F=\\operatorname{Im}u$ pour une application linéaire $u$ bien choisie (qui apparaît naturellement après description précise des vecteurs de $F$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Lister les techniques usuelles (fiche-méthode) pour prouver qu'une famille de FONCTIONS ou de POLYNÔMES est libre, une fois écrite une combinaison linéaire nulle $\\sum\\lambda_kf_k=0$.",
+              "reponse": "(1) Utiliser des valeurs particulières de la variable. (2) Utiliser des limites aux bornes de l'ensemble de définition. (3) Utiliser des relations de PRÉPONDÉRANCE au voisinage d'un point (souvent une borne). (4) Utiliser la régularité ou l'absence de régularité (continuité, dérivabilité, classe $\\mathscr{C}^p$). (5) Dériver une ou plusieurs fois. (6) Examiner les degrés, valuations, racines, ou pôles (cas de $\\mathbb{K}[X]$ ou $\\mathbb{K}(X)$) — en particulier, une famille de polynômes ÉTAGÉE en degrés (ou en valuations) est toujours libre."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Comment prouver que deux sev $F_1,F_2$ de dimension finie sont ÉGAUX ? Quelle est la méthode générale (3 conditions) pour prouver qu'ils sont SUPPLÉMENTAIRES en dimension finie ?",
+              "reponse": "Égalité (dim finie) : prouver qu'ils ont la MÊME DIMENSION et qu'un des espaces est inclus dans l'autre (cela suffit aussi pour prouver $F=E$, en montrant seulement $\\dim F=\\dim E$). Supplémentarité, il suffit de vérifier UNE des trois conditions : $\\dim F_1+\\dim F_2=\\dim E$ ET $F_1\\cap F_2=\\{0_E\\}$ ; ou $\\dim F_1+\\dim F_2=\\dim E$ ET $F_1+F_2=E$ ; ou la réunion d'une base de $F_1$ et d'une base de $F_2$ est une base de $E$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Décrire les deux approches de la fiche-méthode pour montrer que tout $x\\in E$ s'écrit de manière UNIQUE $x=x_1+x_2$ avec $x_i\\in F_i$ (première étape de la preuve de supplémentarité par définition).",
+              "reponse": "Méthode 1 (forme connue) : si l'on connaît la forme des vecteurs de $F_1$ et $F_2$ (souvent via des questions antérieures), on exhibe explicitement $x_1\\in F_1,x_2\\in F_2$ tels que $x=x_1+x_2$, puis on prouve l'UNICITÉ en supposant deux écritures $x_1+x_2=x_1'+x_2'$ et en réécrivant $x_1-x_1'=x_2'-x_2$, ce vecteur étant à la fois dans $F_1$ et $F_2$. Méthode 2 (analyse-synthèse) : on suppose $x=x_1+x_2$ et on cherche une EXPRESSION de $x_1$ (ou $x_2$) en fonction de $x$ à l'aide des définitions de $F_1,F_2$ (analyse) ; si cette expression est déterminée de manière unique, on vérifie ensuite qu'elle convient bien, i.e. que les $x_1,x_2$ ainsi définis appartiennent à $F_1,F_2$ et somment à $x$ (synthèse)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Lister les 5 façons usuelles de prouver qu'une application $f$ est un ISOMORPHISME de $E$ dans $F$.",
+              "reponse": "(1) $f$ linéaire et bijective. (2) $f$ linéaire, injective et surjective. (3) $f$ linéaire, et exhiber $g:F\\to E$ telle que $f\\circ g=\\operatorname{Id}_F$ et $g\\circ f=\\operatorname{Id}_E$ (alors $g$ est automatiquement linéaire et $g=f^{-1}$). (4) $f$ linéaire et trouver une base de $E$ dont l'image par $f$ est une base de $F$. (5) EN DIMENSION FINIE : montrer $\\dim E=\\dim F$, $f$ linéaire, et $f$ injective OU surjective (au choix, injective le plus souvent en pratique)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode — Comment détermine-t-on le rang d'une famille de vecteurs donnés par leurs coordonnées dans une base $E$ (fiche-méthode) ?",
+              "reponse": "On cherche la dimension du sous-espace engendré. Deux méthodes possibles : (1) méthode du PIVOT DE GAUSS, en manipulant les coordonnées des vecteurs pour les échelonner ; (2) retirer un à un les vecteurs de la famille qui sont combinaison linéaire des autres, jusqu'à obtenir une famille libre — le rang est alors le cardinal de la famille restante."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 1 — Une famille de trois vecteurs (ou plus) est libre si et seulement si les vecteurs sont deux à deux non proportionnels.",
+              "reponse": "FAUX. Ce critère (« deux à deux non proportionnels $\\Rightarrow$ libre ») n'est valable QUE pour une famille de DEUX vecteurs. Pour trois vecteurs ou plus, on peut avoir des vecteurs deux à deux non colinéaires tout en étant liés (par exemple trois vecteurs coplanaires non deux à deux proportionnels dans $\\mathbb{R}^3$, dont la somme ou une combinaison non triviale s'annule)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 2 — Si $F_1,F_2,F_3$ sont des sev de $E$ vérifiant $F_i\\cap F_j=\\{0_E\\}$ pour tout $i\\ne j$, alors $F_1+F_2+F_3$ est une somme directe.",
+              "reponse": "FAUX. Contre-exemple canonique : trois droites vectorielles DISTINCTES du plan $\\mathbb{R}^2$ — deux à deux, leur intersection est bien réduite à $\\{0\\}$, mais leur somme (qui vaut $\\mathbb{R}^2$ tout entier) n'est pas directe (par exemple la troisième droite est engendrée par la somme d'un vecteur de chacune des deux premières)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 3 — Pour $u\\in\\mathscr{L}(E)$ avec $E$ de dimension finie, le théorème du rang $\\dim E=\\dim\\ker u+\\dim\\operatorname{Im}u$ implique que $\\ker u$ et $\\operatorname{Im}u$ sont supplémentaires dans $E$.",
+              "reponse": "FAUX. L'égalité des dimensions est nécessaire mais pas suffisante : il faut EN PLUS que $\\ker u\\cap\\operatorname{Im}u=\\{0_E\\}$, ce qui n'est pas automatique (voir l'exercice classique du cours et du TD sur ce sujet — par exemple un endomorphisme nilpotent non nul a $\\ker u\\cap\\operatorname{Im}u\\ne\\{0_E\\}$ en général)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 4 — Pour un endomorphisme $f$ d'un espace vectoriel $E$ QUELCONQUE (dimension infinie autorisée), $f$ injectif $\\iff f$ surjectif.",
+              "reponse": "FAUX. Cette équivalence n'est vraie qu'en DIMENSION FINIE (Prop. 27). Contre-exemples classiques dans $\\mathbb{R}[X]$ (dimension infinie) : $P\\mapsto P'$ est surjectif mais pas injectif (noyau = constantes) ; $P\\mapsto XP$ est injectif mais pas surjectif (aucun antécédent pour un polynôme de terme constant non nul)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 5 — Deux matrices ayant le même rang sont nécessairement semblables.",
+              "reponse": "FAUX. Le rang est un INVARIANT de similitude (deux matrices semblables ont même rang), mais la réciproque est fausse : par exemple $I_n$ et une autre matrice inversible quelconque non semblable à $I_n$ (comme $2I_n$ si $n\\ge1$ et $\\mathbb{K}$ a plus de 2 éléments) ont toutes deux rang $n$ sans être semblables (elles n'ont pas la même trace, ni le même déterminant en général)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 6 — Deux matrices carrées ayant même trace ET même déterminant sont nécessairement semblables.",
+              "reponse": "FAUX (dès $n\\ge3$, ou même $n=2$ avec des exemples non diagonalisables adaptés). Même trace et même déterminant sont des conditions NÉCESSAIRES mais pas suffisantes à la similitude — il faut en général comparer bien plus d'invariants (les dimensions des espaces propres, le polynôme minimal, la réduction de Jordan, etc., hors du cadre de ce chapitre)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 7 — $\\operatorname{tr}(ABC)=\\operatorname{tr}(BAC)$ pour toutes matrices carrées $A,B,C$ de même taille.",
+              "reponse": "FAUX EN GÉNÉRAL. Seul le décalage CIRCULAIRE des facteurs préserve la trace : $\\operatorname{tr}(ABC)=\\operatorname{tr}(BCA)=\\operatorname{tr}(CAB)$, mais échanger deux facteurs adjacents (comme passer de $ABC$ à $BAC$) n'est PAS une opération qui préserve la trace en général."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 8 — $\\det(\\lambda A)=\\lambda\\det(A)$ pour toute matrice carrée $A$ d'ordre $n$ et tout scalaire $\\lambda$.",
+              "reponse": "FAUX (sauf si $n=1$). La bonne formule est $\\det(\\lambda A)=\\lambda^n\\det(A)$ (chacune des $n$ colonnes est multipliée par $\\lambda$, donc le facteur $\\lambda$ sort $n$ fois du déterminant, par $n$-linéarité)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 9 — La réunion de deux sous-espaces vectoriels $F_1\\cup F_2$ est toujours un sous-espace vectoriel.",
+              "reponse": "FAUX en général. $F_1\\cup F_2$ est un sev $\\iff F_1\\subset F_2$ ou $F_2\\subset F_1$ (l'un des deux inclus dans l'autre). Contre-exemple simple : deux droites vectorielles distinctes du plan — leur réunion n'est pas stable par addition (la somme d'un vecteur de chaque droite n'appartient en général à aucune des deux)."
+            },
             {
               "type": "Définition",
               "enonce": "Définir la notion de limite pour une fonction en un point/voisinage et pour une suite numérique.",
@@ -2005,6 +2275,267 @@
           ],
           "questionSets": [
             {
+              "file": "questions_AlgèbreLinéaire.json",
+              "label": "AlgèbreLinéaire",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Espaces vectoriels 1/4 — Rappeler les deux lois et les axiomes exacts définissant un $\\mathbb{K}$-espace vectoriel $(E,+,\\cdot)$.",
+                  "reponse": "$(E,+)$ doit être un groupe abélien : $+$ associative, commutative, avec neutre $0_E$ et tout élément a un symétrique. La loi externe $\\cdot:\\mathbb{K}\\times E\\to E$ doit vérifier : $1\\cdot x=x$ ; $\\lambda\\cdot(x+y)=\\lambda\\cdot x+\\lambda\\cdot y$ ; $(\\lambda+\\mu)\\cdot x=\\lambda\\cdot x+\\mu\\cdot x$ ; $\\lambda\\cdot(\\mu\\cdot x)=(\\lambda\\mu)\\cdot x$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Espaces vectoriels 2/4 — Énoncer les trois propriétés élémentaires découlant des axiomes (Prop. 1), notamment celle liée à un produit nul.",
+                  "reponse": "$\\lambda\\cdot x=0_E \\iff \\lambda=0$ ou $x=0_E$ ; $(\\lambda-\\mu)\\cdot x=\\lambda\\cdot x-\\mu\\cdot x$ ; $\\lambda\\cdot(x-y)=\\lambda\\cdot x-\\lambda\\cdot y$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Espaces vectoriels 3/4 — Définir combinaison linéaire, famille génératrice, famille libre et famille liée.",
+                  "reponse": "Combinaison linéaire de $(x_i)_{1\\le i\\le n}$ : tout vecteur $\\sum_{i=1}^n\\lambda_ix_i$. Famille génératrice : tout vecteur de $E$ s'écrit comme combinaison linéaire de la famille. Famille liée : un des vecteurs s'écrit comme combinaison linéaire des AUTRES. Famille libre : famille qui n'est pas liée, caractérisée par $\\sum_{i=1}^n\\lambda_ix_i=0_E \\Rightarrow \\forall i,\\ \\lambda_i=0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Espaces vectoriels 4/4 — Donner la définition d'une base, et énoncer la proposition d'unicité des coordonnées associée.",
+                  "reponse": "Une base est une famille libre ET génératrice. Si $\\mathscr{B}=(e_i)_{1\\le i\\le n}$ est une base de $E$, tout $x\\in E$ se décompose de façon UNIQUE : $\\exists!(x_1,\\dots,x_n)\\in\\mathbb{K}^n$, $x=\\sum_{i=1}^n x_ie_i$ (les $x_i$ sont les coordonnées de $x$ dans $\\mathscr{B}$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sous-espaces vectoriels 1/3 — Donner la définition d'un sev, et énoncer la proposition sur l'intersection de sev.",
+                  "reponse": "$F\\subset E$ est un sev si $0_E\\in F$ et $F$ est stable par combinaison linéaire ($\\forall x,y\\in F,\\forall\\lambda,\\mu\\in\\mathbb{K}, \\lambda x+\\mu y\\in F$). Toute INTERSECTION de sev de $E$ est un sev de $E$ (Prop. 4). ATTENTION : la RÉUNION de sev n'est en général PAS un sev ($F_1\\cup F_2$ est un sev $\\iff F_1\\subset F_2$ ou $F_2\\subset F_1$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sous-espaces vectoriels 2/3 — Définir la somme de $p$ sev, et énoncer le théorème de caractérisation des sommes directes.",
+                  "reponse": "$F=\\sum_{i=1}^p F_i = \\{\\sum_{i=1}^p x_i \\mid (x_1,\\dots,x_p)\\in F_1\\times\\cdots\\times F_p\\}$. La somme est DIRECTE ssi $\\forall(x_i)_{1\\le i\\le p}\\in\\prod F_i,\\ \\sum x_i=0_E \\Rightarrow \\forall i,\\ x_i=0_E$ (Théorème 1) — c'est-à-dire l'unicité de la décomposition du vecteur NUL suffit (pas besoin de vérifier l'unicité pour tout vecteur)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sous-espaces vectoriels 3/3 — Énoncer les trois caractérisations équivalentes de deux sev supplémentaires (Prop. 8), et donner le piège classique sur l'intersection deux à deux triviale.",
+                  "reponse": "$E=F_1\\oplus F_2 \\iff \\forall x\\in E,\\exists!(x_1,x_2)\\in F_1\\times F_2, x=x_1+x_2 \\iff F_1\\cap F_2=\\{0_E\\}$ ET $E=F_1+F_2$. PIÈGE (cas $p\\ge3$) : il ne suffit PAS que $F_i\\cap F_j=\\{0_E\\}$ pour tout $i\\ne j$ pour que la somme soit directe — contre-exemple classique : trois droites distinctes du plan, deux à deux d'intersection nulle, mais dont la somme (le plan tout entier) n'est pas directe."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 1/6 — Donner la définition d'une application linéaire, et préciser ce qu'il est INUTILE de vérifier en pratique.",
+                  "reponse": "$f:E\\to F$ est linéaire si $\\forall x,y\\in E,\\forall\\lambda,\\mu\\in\\mathbb{K},\\ f(\\lambda x+\\mu y)=\\lambda f(x)+\\mu f(y)$. Il est INUTILE de vérifier $f(0_E)=0_F$ séparément : c'est automatique, conséquence de la linéarité (en prenant $\\lambda=\\mu=0$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 2/6 — Énoncer la proposition de détermination d'une application linéaire par l'image d'une base, et la caractérisation de l'injectivité/surjectivité/bijectivité par l'image d'une base (dimension finie).",
+                  "reponse": "$f$ linéaire est entièrement déterminée par les images $f(e_i)$ des vecteurs d'une base : $f(x)=\\sum x_if(e_i)$. En dimension finie : $u$ injective $\\iff$ l'image d'une base de $E$ par $u$ est une famille LIBRE de $F$ ; $u$ surjective $\\iff$ l'image d'une base est GÉNÉRATRICE de $F$ ; $u$ bijective $\\iff$ l'image d'une base est une BASE de $F$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 3/6 — Définir noyau et image d'une application linéaire, préciser leur nature (sev), et la caractérisation de l'injectivité par le noyau.",
+                  "reponse": "$\\ker f=\\{x\\in E, f(x)=0_F\\}$ est un sev de $E$ ; $\\operatorname{Im}f$ est un sev de $F$ (Prop. 11). $f$ est injective $\\iff \\ker f=\\{0_E\\}$ (Prop. 12)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 4/6 — Énoncer la proposition sur l'image d'une famille génératrice, et le théorème de structure de $\\mathscr{L}(E,F)$.",
+                  "reponse": "Si $(e_i)_{1\\le i\\le n}$ est génératrice de $E$ et $u\\in\\mathscr{L}(E,F)$, alors $(u(e_i))_{1\\le i\\le n}$ est génératrice de $\\operatorname{Im}u$ (l'image est engendrée par l'image d'une base). $\\mathscr{L}(E,F)$ est un $\\mathbb{K}$-espace vectoriel : toute combinaison linéaire d'applications linéaires est linéaire (Th. 2), et toute composée d'applications linéaires est linéaire (Th. 3, avec bilinéarité de la composition)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 5/6 — Définir un projecteur et une symétrie associés à deux sev supplémentaires $F_1,F_2$, et donner la caractérisation algébrique d'un projecteur.",
+                  "reponse": "Si $E=F_1\\oplus F_2$, la projection sur $F_1$ parallèlement à $F_2$ est $p_1:x=x_1+x_2\\mapsto x_1$ ; la symétrie associée est $s_1:x\\mapsto x_1-x_2$. Caractérisation (Prop. 16) : $p$ est un projecteur $\\iff p\\in\\mathscr{L}(E)$ et $p\\circ p=p$ ; alors $\\operatorname{Im}p=\\ker(p-\\operatorname{Id}_E)$ et $E=\\operatorname{Im}p\\oplus\\ker p$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Applications linéaires 6/6 — Rappeler les relations remarquables entre deux projecteurs $p_1,p_2$ associés à une décomposition $E=F_1\\oplus F_2$, et les symétries associées $s_1,s_2$. Que signifie « hyperplan » ?",
+                  "reponse": "$p_1^2=p_1$, $p_1+p_2=\\operatorname{Id}_E$, $p_1\\circ p_2=p_2\\circ p_1=0$ ; $s_1^2=\\operatorname{Id}_E$, $s_2=-s_1$ (attention : $s_2(x)=-s_1(x)$, pas $s_1+s_2=0$ trivial mais c'est équivalent), $s_1+\\operatorname{Id}_E=2p_1$. Un hyperplan est le NOYAU d'une forme linéaire NON NULLE."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 1/8 — Énoncer le théorème de la base incomplète (versions faible et forte).",
+                  "reponse": "Version faible : toute famille LIBRE de $E$ (dimension finie) peut être complétée pour former une base de $E$. Version forte : une famille libre $\\mathscr{L}$ peut être complétée avec des vecteurs pris dans une famille génératrice $\\mathscr{G}$ donnée, pour former une base de $E$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 2/8 — Énoncer le théorème du cardinal des familles libres/génératrices, et la caractérisation des bases en dimension finie qui en découle.",
+                  "reponse": "En dimension $n$ : toute famille LIBRE a AU PLUS $n$ vecteurs ; toute famille GÉNÉRATRICE a AU MOINS $n$ vecteurs (Th. 6). Caractérisation des bases (Th. 7) : $\\mathscr{F}$ est une base $\\iff$ $\\mathscr{F}$ est libre ET $\\operatorname{Card}\\mathscr{F}=n$ $\\iff$ $\\mathscr{F}$ est génératrice ET $\\operatorname{Card}\\mathscr{F}=n$ (l'un des deux critères, combiné au bon cardinal, suffit — pas besoin de vérifier les deux)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 3/8 — Énoncer le théorème sur les sev d'un espace de dimension finie, et la formule de Grassmann.",
+                  "reponse": "Si $F$ est un sev de $E$ (dim finie), $F$ est de dimension finie, $\\dim F\\le\\dim E$, et $F=E\\iff \\dim F=\\dim E$ (Th. 8). Formule de Grassmann (Prop. 20) : pour $F_1,F_2$ sev de dimension finie, $\\dim(F_1+F_2)=\\dim F_1+\\dim F_2-\\dim(F_1\\cap F_2)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 4/8 — Énoncer la caractérisation d'une somme directe PAR LA DIMENSION (Prop. 23), et la notion de base adaptée à une somme directe.",
+                  "reponse": "Les sev $F_1,\\dots,F_p$ sont en somme directe $\\iff \\dim\\sum_{i=1}^p F_i = \\sum_{i=1}^p \\dim F_i$ (comparer à l'inégalité générale $\\dim\\sum F_i\\le\\sum\\dim F_i$ toujours vraie, Corollaire 1). Une base est dite ADAPTÉE à la somme directe $E=\\bigoplus F_i$ si elle est obtenue en réunissant une base de chaque $F_i$ (Prop. 21) : $E=\\bigoplus F_i \\iff$ la réunion des bases $(\\mathscr{B}_i)$ forme une base de $E$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 5/8 — Définir le rang d'une famille de vecteurs, et énoncer les liens rang/liberté/génération (Prop. 24).",
+                  "reponse": "$\\operatorname{rg}\\mathscr{F}=\\dim\\operatorname{Vect}(\\mathscr{F})$. En dimension $n$, pour $\\mathscr{F}=(x_1,\\dots,x_p)$ : $\\operatorname{rg}\\mathscr{F}\\le\\min(n,p)$ ; $\\operatorname{rg}\\mathscr{F}=\\dim E \\iff \\mathscr{F}$ est génératrice de $E$ ; $\\operatorname{rg}\\mathscr{F}=\\operatorname{Card}\\mathscr{F} \\iff \\mathscr{F}$ est libre."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 6/8 — Énoncer les conditions d'existence d'applications linéaires injective/surjective/bijective entre deux espaces de dimension finie (Prop. 25).",
+                  "reponse": "Il existe $u\\in\\mathscr{L}(E,F)$ INJECTIVE $\\iff \\dim E\\le\\dim F$. Il existe $u$ SURJECTIVE $\\iff \\dim E\\ge\\dim F$. Il existe $u$ BIJECTIVE $\\iff \\dim E=\\dim F$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 7/8 — Énoncer le théorème du rang, et préciser un piège classique sur son interprétation.",
+                  "reponse": "Pour $E$ de dimension finie, $F$ quelconque, $u\\in\\mathscr{L}(E,F)$ : $\\dim E=\\dim\\ker u+\\dim\\operatorname{Im}u$ (Th. 9). PIÈGE : cela ne signifie PAS que $\\ker u$ et $\\operatorname{Im}u$ sont SUPPLÉMENTAIRES dans $E$ — l'égalité des dimensions ($\\dim\\ker u+\\dim\\operatorname{Im}u=\\dim E$) est nécessaire mais pas suffisante pour la somme directe (il faudrait aussi $\\ker u\\cap\\operatorname{Im}u=\\{0_E\\}$, et $\\operatorname{Im}u\\subset E$ n'est même pas automatique si $F\\ne E$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Théorie de la dimension 8/8 — Énoncer les 6 conditions équivalentes à l'inversibilité d'un endomorphisme en dimension finie (Prop. 27), et préciser pourquoi ce résultat est FAUX en dimension infinie (donner le contre-exemple du cours).",
+                  "reponse": "Pour $f\\in\\mathscr{L}(E)$, $E$ dim finie $n$ : $f$ inversible $\\iff$ $\\operatorname{rg}f=n$ $\\iff$ $f$ injectif $\\iff$ $f$ surjectif $\\iff$ $f$ inversible à droite $\\iff$ $f$ inversible à gauche. FAUX en dimension infinie : contre-exemple, les endomorphismes de $\\mathbb{R}[X]$ définis par $P\\mapsto P'$ (surjectif, non injectif) et $P\\mapsto XP$ (injectif, non surjectif) — l'équivalence injectif/surjectif s'effondre sans la dimension finie."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 1/6 — Rappeler la définition du produit matriciel, et le théorème de structure linéaire de $\\mathscr{M}_{np}(\\mathbb{K})$.",
+                  "reponse": "Pour $A\\in\\mathscr{M}_{np}(\\mathbb{K})$, $B\\in\\mathscr{M}_{pq}(\\mathbb{K})$, le produit $AB\\in\\mathscr{M}_{nq}(\\mathbb{K})$ a pour terme général $c_{ij}=\\sum_{k=1}^p a_{ik}b_{kj}$. $\\mathscr{M}_{np}(\\mathbb{K})$ est un espace vectoriel de dimension $n\\times p$, dont les matrices élémentaires $E_{ij}$ forment la base canonique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 2/6 — Énoncer les 4 conditions équivalentes à l'inversibilité d'une matrice carrée (Prop. 36), et les trois méthodes de la fiche-méthode pour calculer l'inverse.",
+                  "reponse": "$A\\in\\mathscr{M}_n(\\mathbb{K})$ : $A$ inversible $\\iff \\operatorname{rg}A=n$ $\\iff$ $A$ inversible à droite $\\iff$ $A$ inversible à gauche. Trois méthodes de calcul de $A^{-1}$ : (1) résoudre le système linéaire $AX=X'$ en exprimant $x,y,\\dots$ en fonction de $x',y',\\dots$ ; (2) méthode du pivot (total) : juxtaposer/superposer $A$ et $I_n$, transformer $A$ en $I_n$ par des opérations sur les LIGNES (ou les COLONNES, sans mélanger les deux) appliquées identiquement à $I_n$ ; (3) via un polynôme annulateur de valuation nulle $P(A)=\\sum_{j=0}^k a_jA^j=0$ avec $a_0\\ne0$ : alors $A^{-1}=-\\frac{1}{a_0}\\sum_{j=1}^k a_jA^{j-1}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 3/6 — Définir deux matrices SEMBLABLES, et lister les propriétés conservées par similitude (en précisant lesquelles ne sont PAS des équivalences).",
+                  "reponse": "$A,B\\in\\mathscr{M}_n(\\mathbb{K})$ sont semblables s'il existe $P\\in\\operatorname{GL}_n(\\mathbb{K})$ telle que $A=P^{-1}BP$. Propriétés (Prop. 40, 41) : deux matrices semblables représentent le MÊME endomorphisme dans des bases différentes ; elles ont même RANG, même TRACE, même DÉTERMINANT (Prop. 54). ATTENTION : ces réciproques sont TOUTES FAUSSES — même rang (ou même trace, ou même déterminant) n'implique PAS que deux matrices soient semblables."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 4/6 — Définir la trace d'une matrice carrée et d'un endomorphisme, et rappeler les propriétés essentielles (notamment le piège sur $\\operatorname{tr}(ABC)$).",
+                  "reponse": "$\\operatorname{tr}(A)=\\sum_{i=1}^n a_{ii}$. Propriétés : forme linéaire non nulle ; $\\operatorname{tr}(A^\\top)=\\operatorname{tr}A$ ; $\\operatorname{tr}(AB)=\\operatorname{tr}(BA)$ (mais PAS de commutativité cyclique arbitraire !) ; deux matrices semblables ont même trace. PIÈGE : $\\operatorname{tr}(ABC)=\\operatorname{tr}(A(BC))=\\operatorname{tr}((BC)A)=\\operatorname{tr}(BCA)$ (décalage circulaire valide), mais $\\operatorname{tr}(ABC)\\ne\\operatorname{tr}(BAC)$ EN GÉNÉRAL (échanger deux facteurs adjacents n'est PAS permis, seul le décalage circulaire l'est). La trace d'un endomorphisme est celle de sa matrice dans n'importe quelle base (indépendante du choix, car matrices semblables)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 5/6 — Énoncer la propriété de stabilité et matrice triangulaire (Prop. 45), et son cas particulier « trigonalisable ».",
+                  "reponse": "Avec $\\mathscr{B}=(e_1,\\dots,e_n)$ et $F_i=\\operatorname{Vect}(e_1,\\dots,e_i)$ : $\\operatorname{Mat}(u,\\mathscr{B})$ est triangulaire SUPÉRIEURE $\\iff \\forall i,\\ F_i$ est stable par $u$. Cas particulier : si $p=\\dim E$ et $\\dim F_i=i$ pour tout $i$, il existe une base rendant la matrice de $u$ triangulaire supérieure — on dit alors que $u$ est TRIGONALISABLE."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Matrices 6/6 — Énoncer la propriété de stabilité et matrices DIAGONALES par blocs (Prop. 46), et sa généralisation.",
+                  "reponse": "Si $E=F_1\\oplus F_2$ avec $F_1,F_2$ stables par $u$, alors dans une base adaptée à cette somme directe, la matrice de $u$ est diagonale par blocs — et réciproquement. Généralisation : pour $E=\\bigoplus_{i=1}^p F_i$ avec chaque $F_i$ stable par $u$, on peut construire une base de $E$ où la matrice de $u$ est diagonale par blocs (et réciproquement)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Polynômes d'endomorphismes 1/2 — Définir $P(u)$ et $P(A)$ pour $P\\in\\mathbb{K}[X]$, et lister les propriétés « en vrac » utiles (Prop. 47).",
+                  "reponse": "Pour $P=\\sum_{k=0}^p a_kX^k$ : $P(u)=\\sum_{k=0}^p a_ku^k$ (endomorphisme), $P(A)=\\sum_{k=0}^p a_kA^k$ (matrice). Propriétés : $P\\mapsto P(u)$ (et $P\\mapsto P(A)$) est un MORPHISME D'ALGÈBRE (linéaire, respecte les produits : $(PQ)(u)=P(u)\\circ Q(u)$) ; $P(u)$ et $Q(u)$ COMMUTENT toujours (de même $P(A)$ et $Q(A)$) ; $\\ker P(u)$ et $\\operatorname{Im}P(u)$ sont STABLES par $u$ ; si $A,B$ semblables, alors $P(A),P(B)$ sont semblables pour tout $P$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Polynômes d'endomorphismes 2/2 — Définir un polynôme annulateur, et donner les deux méthodes de calcul des puissances d'une matrice qui en découlent (fiche-méthode).",
+                  "reponse": "$P$ est annulateur de $u$ (resp. $A$) si $P(u)=0$ (resp. $P(A)=0$) ; il est MINIMAL s'il est de degré minimal parmi les annulateurs. Méthode 1 (matrice $A=aI_n+N$, $N$ nilpotente d'ordre $p$, cas des triangulaires à diagonale constante) : utiliser la formule du binôme, les termes d'indice $k\\ge p$ dans le développement de $N^k$ sont nuls. Méthode 2 (polynôme annulateur $P$ connu, éventuellement scindé) : calculer le reste de la division euclidienne de $X^n$ par $P$ (par substitution des racines de $P$, et de leurs dérivées en cas de racine multiple, dans l'égalité $X^n=PQ_n+R_n$), puis substituer $A$ à $X$ dans $R_n$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 1/6 — Énoncer le théorème d'existence et unicité du déterminant dans une base (les 3 propriétés caractéristiques), et la caractérisation des bases par le déterminant.",
+                  "reponse": "Il existe une UNIQUE application $\\varphi:E^n\\to\\mathbb{K}$ ($n$-linéaire, alternée — nulle si deux vecteurs sont égaux —, et $\\varphi(\\mathscr{B})=1$) : c'est $\\det_{\\mathscr{B}}$ (Th. 12). Toute forme $n$-linéaire alternée sur $E$ est proportionnelle à $\\det_{\\mathscr{B}}$. Caractérisation des bases (Th. 13) : $(x_1,\\dots,x_n)$ est une base de $E$ $\\iff \\det_{\\mathscr{B}}(x_1,\\dots,x_n)\\ne0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 2/6 — Rappeler la formule de changement de base pour le déterminant, et les règles de calcul essentielles (Prop. 49).",
+                  "reponse": "$\\det_{\\mathscr{B}'}=\\det_{\\mathscr{B}'}(\\mathscr{B})\\cdot\\det_{\\mathscr{B}}$. Règles : échanger deux vecteurs change le déterminant en son opposé ; répétition $\\Rightarrow$ déterminant nul ; on peut factoriser un scalaire par facteur, $\\det_{\\mathscr{B}}(\\lambda_1x_1,\\dots,\\lambda_nx_n)=\\lambda_1\\cdots\\lambda_n\\det_{\\mathscr{B}}(x_1,\\dots,x_n)$ (donc $\\det_{\\mathscr{B}}(\\lambda x_1,\\dots,\\lambda x_n)=\\lambda^n\\det_{\\mathscr{B}}(\\dots)$, PAS $\\lambda\\cdot\\det$) ; le déterminant est inchangé si on ajoute à un vecteur une combinaison linéaire des AUTRES ; famille liée $\\Rightarrow$ déterminant nul."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 3/6 — Définir le déterminant d'un endomorphisme, en quoi il est indépendant de la base, et lister ses propriétés multiplicatives (Prop. 50).",
+                  "reponse": "$\\det f = \\det_{\\mathscr{B}}(f(\\mathscr{B})) = \\det(\\operatorname{Mat}_{\\mathscr{B}}(f))$, valeur INDÉPENDANTE de la base $\\mathscr{B}$ choisie (Th. 14). Propriétés : $\\det\\operatorname{Id}_E=1$ ; $\\det(u\\circ v)=\\det u\\cdot\\det v$ ; $u\\in\\operatorname{GL}(E)\\iff\\det u\\ne0$, et alors $\\det(u^{-1})=1/\\det u$ ; $\\det(\\lambda u)=\\lambda^n\\det u$ ($n=\\dim E$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 4/6 — Rappeler la règle de Sarrus pour les matrices $2\\times2$ et $3\\times3$, et préciser pourquoi elle ne se généralise PAS aux ordres supérieurs.",
+                  "reponse": "Taille 2 : $\\begin{vmatrix}a&c\\\\b&d\\end{vmatrix}=ad-bc$. Taille 3 (Sarrus, en recopiant les deux premières colonnes) : $\\det=(a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32})-(a_{31}a_{22}a_{13}+a_{32}a_{23}a_{11}+a_{33}a_{21}a_{12})$. La règle de Sarrus est un TRUC MNÉMOTECHNIQUE spécifique aux petites tailles (2 et 3) ; elle ne se généralise PAS aux matrices $n\\ge4$ (il faut alors utiliser le développement selon une rangée ou d'autres techniques)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 5/6 — Définir mineur principal et cofacteur, énoncer la formule de développement selon une rangée, et le résultat sur le déterminant d'une matrice triangulaire par blocs.",
+                  "reponse": "Mineur $\\Delta_{ij}$ : déterminant obtenu en supprimant la $i$-ème ligne et la $j$-ème colonne. Cofacteur $A_{ij}=(-1)^{i+j}\\Delta_{ij}$. Développement selon la colonne $j$ : $\\det A=\\sum_{i=1}^n(-1)^{i+j}a_{ij}\\Delta_{ij}$ (idem selon une ligne). Pour $M=\\begin{pmatrix}A&C\\\\0&B\\end{pmatrix}$ triangulaire par blocs avec $A,B$ carrés : $\\det M=\\det A\\cdot\\det B$ — résultat qui se généralise à un nombre quelconque de blocs diagonaux."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Déterminant 6/6 — Énoncer la formule du déterminant de Vandermonde et la condition de non-nullité qui en découle.",
+                  "reponse": "$V(x_0,\\dots,x_n)=\\begin{vmatrix}1&1&\\cdots&1\\\\x_0&x_1&\\cdots&x_n\\\\\\vdots&&&\\vdots\\\\x_0^n&x_1^n&\\cdots&x_n^n\\end{vmatrix} = \\prod_{0\\le j<i\\le n}(x_i-x_j)$. On en déduit : $V(x_0,\\dots,x_n)\\ne0 \\iff$ les $(x_i)_{0\\le i\\le n}$ sont DEUX À DEUX DISTINCTS."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Polynômes de Lagrange — Énoncer la proposition du polynôme de Lagrange $L_{i_0}$ associé à une famille $(a_0,\\dots,a_n)$ de points distincts, et la conséquence sur les coordonnées d'un polynôme $P\\in\\mathbb{K}_n[X]$.",
+                  "reponse": "Pour $i_0\\in\\llbracket0,n\\rrbracket$, l'unique polynôme $L_{i_0}$ de degré $\\le n$ tel que $\\forall j,\\ L_{i_0}(a_j)=\\delta_{i_0j}$ est $L_{i_0}=\\dfrac{1}{\\prod_{j\\ne i_0}(a_{i_0}-a_j)}\\prod_{j\\ne i_0}(X-a_j)$. La famille $(L_0,\\dots,L_n)$ est une base de $\\mathbb{K}_n[X]$, et tout $P\\in\\mathbb{K}_n[X]$ s'écrit $P(X)=\\sum_{i=0}^n P(a_i)L_i(X)$ — les coordonnées de $P$ dans cette base sont exactement ses valeurs $(P(a_0),\\dots,P(a_n))$ (isomorphisme évaluation, Prop. 59)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Lister les 4 façons usuelles de prouver qu'un ensemble $F$ est un sev de $E$ (fiche-méthode).",
+                  "reponse": "(1) Vérifier directement : $F$ non vide (contient $0_E$) et stable par combinaison linéaire. (2) Montrer que $F=\\operatorname{Vect}(x_1,\\dots,x_p)$ (la famille apparaît naturellement en isolant les variables d'une description précise des vecteurs de $F$) — ceci fournit en prime une famille génératrice de $F$. (3) Montrer que $F$ est une intersection de sev de $E$. (4) Montrer que $F=\\ker u$ ou $F=\\operatorname{Im}u$ pour une application linéaire $u$ bien choisie (qui apparaît naturellement après description précise des vecteurs de $F$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Lister les techniques usuelles (fiche-méthode) pour prouver qu'une famille de FONCTIONS ou de POLYNÔMES est libre, une fois écrite une combinaison linéaire nulle $\\sum\\lambda_kf_k=0$.",
+                  "reponse": "(1) Utiliser des valeurs particulières de la variable. (2) Utiliser des limites aux bornes de l'ensemble de définition. (3) Utiliser des relations de PRÉPONDÉRANCE au voisinage d'un point (souvent une borne). (4) Utiliser la régularité ou l'absence de régularité (continuité, dérivabilité, classe $\\mathscr{C}^p$). (5) Dériver une ou plusieurs fois. (6) Examiner les degrés, valuations, racines, ou pôles (cas de $\\mathbb{K}[X]$ ou $\\mathbb{K}(X)$) — en particulier, une famille de polynômes ÉTAGÉE en degrés (ou en valuations) est toujours libre."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Comment prouver que deux sev $F_1,F_2$ de dimension finie sont ÉGAUX ? Quelle est la méthode générale (3 conditions) pour prouver qu'ils sont SUPPLÉMENTAIRES en dimension finie ?",
+                  "reponse": "Égalité (dim finie) : prouver qu'ils ont la MÊME DIMENSION et qu'un des espaces est inclus dans l'autre (cela suffit aussi pour prouver $F=E$, en montrant seulement $\\dim F=\\dim E$). Supplémentarité, il suffit de vérifier UNE des trois conditions : $\\dim F_1+\\dim F_2=\\dim E$ ET $F_1\\cap F_2=\\{0_E\\}$ ; ou $\\dim F_1+\\dim F_2=\\dim E$ ET $F_1+F_2=E$ ; ou la réunion d'une base de $F_1$ et d'une base de $F_2$ est une base de $E$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Décrire les deux approches de la fiche-méthode pour montrer que tout $x\\in E$ s'écrit de manière UNIQUE $x=x_1+x_2$ avec $x_i\\in F_i$ (première étape de la preuve de supplémentarité par définition).",
+                  "reponse": "Méthode 1 (forme connue) : si l'on connaît la forme des vecteurs de $F_1$ et $F_2$ (souvent via des questions antérieures), on exhibe explicitement $x_1\\in F_1,x_2\\in F_2$ tels que $x=x_1+x_2$, puis on prouve l'UNICITÉ en supposant deux écritures $x_1+x_2=x_1'+x_2'$ et en réécrivant $x_1-x_1'=x_2'-x_2$, ce vecteur étant à la fois dans $F_1$ et $F_2$. Méthode 2 (analyse-synthèse) : on suppose $x=x_1+x_2$ et on cherche une EXPRESSION de $x_1$ (ou $x_2$) en fonction de $x$ à l'aide des définitions de $F_1,F_2$ (analyse) ; si cette expression est déterminée de manière unique, on vérifie ensuite qu'elle convient bien, i.e. que les $x_1,x_2$ ainsi définis appartiennent à $F_1,F_2$ et somment à $x$ (synthèse)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Lister les 5 façons usuelles de prouver qu'une application $f$ est un ISOMORPHISME de $E$ dans $F$.",
+                  "reponse": "(1) $f$ linéaire et bijective. (2) $f$ linéaire, injective et surjective. (3) $f$ linéaire, et exhiber $g:F\\to E$ telle que $f\\circ g=\\operatorname{Id}_F$ et $g\\circ f=\\operatorname{Id}_E$ (alors $g$ est automatiquement linéaire et $g=f^{-1}$). (4) $f$ linéaire et trouver une base de $E$ dont l'image par $f$ est une base de $F$. (5) EN DIMENSION FINIE : montrer $\\dim E=\\dim F$, $f$ linéaire, et $f$ injective OU surjective (au choix, injective le plus souvent en pratique)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode — Comment détermine-t-on le rang d'une famille de vecteurs donnés par leurs coordonnées dans une base $E$ (fiche-méthode) ?",
+                  "reponse": "On cherche la dimension du sous-espace engendré. Deux méthodes possibles : (1) méthode du PIVOT DE GAUSS, en manipulant les coordonnées des vecteurs pour les échelonner ; (2) retirer un à un les vecteurs de la famille qui sont combinaison linéaire des autres, jusqu'à obtenir une famille libre — le rang est alors le cardinal de la famille restante."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 1 — Une famille de trois vecteurs (ou plus) est libre si et seulement si les vecteurs sont deux à deux non proportionnels.",
+                  "reponse": "FAUX. Ce critère (« deux à deux non proportionnels $\\Rightarrow$ libre ») n'est valable QUE pour une famille de DEUX vecteurs. Pour trois vecteurs ou plus, on peut avoir des vecteurs deux à deux non colinéaires tout en étant liés (par exemple trois vecteurs coplanaires non deux à deux proportionnels dans $\\mathbb{R}^3$, dont la somme ou une combinaison non triviale s'annule)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 2 — Si $F_1,F_2,F_3$ sont des sev de $E$ vérifiant $F_i\\cap F_j=\\{0_E\\}$ pour tout $i\\ne j$, alors $F_1+F_2+F_3$ est une somme directe.",
+                  "reponse": "FAUX. Contre-exemple canonique : trois droites vectorielles DISTINCTES du plan $\\mathbb{R}^2$ — deux à deux, leur intersection est bien réduite à $\\{0\\}$, mais leur somme (qui vaut $\\mathbb{R}^2$ tout entier) n'est pas directe (par exemple la troisième droite est engendrée par la somme d'un vecteur de chacune des deux premières)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 3 — Pour $u\\in\\mathscr{L}(E)$ avec $E$ de dimension finie, le théorème du rang $\\dim E=\\dim\\ker u+\\dim\\operatorname{Im}u$ implique que $\\ker u$ et $\\operatorname{Im}u$ sont supplémentaires dans $E$.",
+                  "reponse": "FAUX. L'égalité des dimensions est nécessaire mais pas suffisante : il faut EN PLUS que $\\ker u\\cap\\operatorname{Im}u=\\{0_E\\}$, ce qui n'est pas automatique (voir l'exercice classique du cours et du TD sur ce sujet — par exemple un endomorphisme nilpotent non nul a $\\ker u\\cap\\operatorname{Im}u\\ne\\{0_E\\}$ en général)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 4 — Pour un endomorphisme $f$ d'un espace vectoriel $E$ QUELCONQUE (dimension infinie autorisée), $f$ injectif $\\iff f$ surjectif.",
+                  "reponse": "FAUX. Cette équivalence n'est vraie qu'en DIMENSION FINIE (Prop. 27). Contre-exemples classiques dans $\\mathbb{R}[X]$ (dimension infinie) : $P\\mapsto P'$ est surjectif mais pas injectif (noyau = constantes) ; $P\\mapsto XP$ est injectif mais pas surjectif (aucun antécédent pour un polynôme de terme constant non nul)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 5 — Deux matrices ayant le même rang sont nécessairement semblables.",
+                  "reponse": "FAUX. Le rang est un INVARIANT de similitude (deux matrices semblables ont même rang), mais la réciproque est fausse : par exemple $I_n$ et une autre matrice inversible quelconque non semblable à $I_n$ (comme $2I_n$ si $n\\ge1$ et $\\mathbb{K}$ a plus de 2 éléments) ont toutes deux rang $n$ sans être semblables (elles n'ont pas la même trace, ni le même déterminant en général)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 6 — Deux matrices carrées ayant même trace ET même déterminant sont nécessairement semblables.",
+                  "reponse": "FAUX (dès $n\\ge3$, ou même $n=2$ avec des exemples non diagonalisables adaptés). Même trace et même déterminant sont des conditions NÉCESSAIRES mais pas suffisantes à la similitude — il faut en général comparer bien plus d'invariants (les dimensions des espaces propres, le polynôme minimal, la réduction de Jordan, etc., hors du cadre de ce chapitre)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 7 — $\\operatorname{tr}(ABC)=\\operatorname{tr}(BAC)$ pour toutes matrices carrées $A,B,C$ de même taille.",
+                  "reponse": "FAUX EN GÉNÉRAL. Seul le décalage CIRCULAIRE des facteurs préserve la trace : $\\operatorname{tr}(ABC)=\\operatorname{tr}(BCA)=\\operatorname{tr}(CAB)$, mais échanger deux facteurs adjacents (comme passer de $ABC$ à $BAC$) n'est PAS une opération qui préserve la trace en général."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 8 — $\\det(\\lambda A)=\\lambda\\det(A)$ pour toute matrice carrée $A$ d'ordre $n$ et tout scalaire $\\lambda$.",
+                  "reponse": "FAUX (sauf si $n=1$). La bonne formule est $\\det(\\lambda A)=\\lambda^n\\det(A)$ (chacune des $n$ colonnes est multipliée par $\\lambda$, donc le facteur $\\lambda$ sort $n$ fois du déterminant, par $n$-linéarité)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 9 — La réunion de deux sous-espaces vectoriels $F_1\\cup F_2$ est toujours un sous-espace vectoriel.",
+                  "reponse": "FAUX en général. $F_1\\cup F_2$ est un sev $\\iff F_1\\subset F_2$ ou $F_2\\subset F_1$ (l'un des deux inclus dans l'autre). Contre-exemple simple : deux droites vectorielles distinctes du plan — leur réunion n'est pas stable par addition (la somme d'un vecteur de chaque droite n'appartient en général à aucune des deux)."
+                }
+              ]
+            },
+            {
               "file": "questions_Analyse Asymptotique.json",
               "label": "Analyse Asymptotique",
               "items": [
@@ -2207,8 +2738,8 @@
               ]
             },
             {
-              "file": "questions_séries.json",
-              "label": "séries",
+              "file": "questions_Séries.json",
+              "label": "Séries",
               "items": [
                 {
                   "type": "Définition",
@@ -4312,26 +4843,40 @@
           "color": "hsl(159.1,100%,56%)"
         },
         {
-          "name": "DM - Claude",
-          "path": "X SUP/DM - Claude",
+          "name": "Claude",
+          "path": "X SUP/Claude",
           "description": "",
-          "children": [],
-          "files": [
+          "children": [
             {
-              "name": "Nombre d'or et Césaro (30min)_Corr.pdf",
-              "path": "X%20SUP/DM%20-%20Claude/Nombre%20d'or%20et%20C%C3%A9saro%20(30min)_Corr.pdf",
-              "corrige": true
-            },
-            {
-              "name": "Nombre d'or et Césaro (30min).pdf",
-              "path": "X%20SUP/DM%20-%20Claude/Nombre%20d'or%20et%20C%C3%A9saro%20(30min).pdf",
-              "corrige": false
+              "name": "DM",
+              "path": "X SUP/Claude/DM",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Nombre d'or et Césaro (30min)_Corr.pdf",
+                  "path": "X%20SUP/Claude/DM/Nombre%20d'or%20et%20C%C3%A9saro%20(30min)_Corr.pdf",
+                  "corrige": true
+                },
+                {
+                  "name": "Nombre d'or et Césaro (30min).pdf",
+                  "path": "X%20SUP/Claude/DM/Nombre%20d'or%20et%20C%C3%A9saro%20(30min).pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 211.11538461538453,
+              "color": "hsl(211.1,100%,60%)"
             }
           ],
+          "files": [],
           "questions": [],
           "questionSets": [],
           "hasQuestions": false,
-          "isAvantDernier": false,
+          "isAvantDernier": true,
           "hue": 211.11538461538453,
           "color": "hsl(211.1,100%,60%)"
         }
@@ -4346,7 +4891,7 @@
       "questions": [],
       "questionSets": [],
       "hasQuestions": false,
-      "isAvantDernier": true,
+      "isAvantDernier": false,
       "hue": 159.11538461538453,
       "color": "hsl(159.1,100%,56%)"
     }

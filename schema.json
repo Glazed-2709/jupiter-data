@@ -179,8 +179,13 @@
               "children": []
             },
             {
-              "name": "DM - Claude",
-              "children": []
+              "name": "Claude",
+              "children": [
+                {
+                  "name": "DM",
+                  "children": []
+                }
+              ]
             }
           ]
         }
