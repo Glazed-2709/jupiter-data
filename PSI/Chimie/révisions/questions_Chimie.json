@@ -1,87 +1,232 @@
 [
   {
-    "type": "Définition",
-    "enonce": "Définir la notion de transformation chimique et préciser l'écriture générale d'une équation-bilan.",
-    "reponse": "Une **transformation chimique** est la réorganisation des atomes d'une ou plusieurs substances par rupture et formation de liaisons inter-atomiques[cite: 11].\nToute réaction chimique faisant intervenir des espèces $A_i$ s'écrit sous la forme générale[cite: 11] :\n$$0 = \\sum_{i} \\nu_i A_i$$\noù les $\\nu_i$ sont les **coefficients stœchiométriques** (positifs pour les produits, négatifs pour les réactifs)[cite: 11]."
+    "type": "Question",
+    "enonce": "Généralités 1/2 — Rappeler l'écriture générale d'une équation-bilan avec coefficients stœchiométriques signés, et la convention de signe.",
+    "reponse": "$0=\\sum_i \\nu_iA_i$, où les $\\nu_i$ sont les coefficients stœchiométriques : NÉGATIFS pour les réactifs, POSITIFS pour les produits (convention permettant d'écrire toutes les espèces du même côté de l'équation)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir l'avancement d'une réaction chimique ainsi que l'avancement volumique.",
-    "reponse": "Soit une espèce $A_i$ de coefficient stœchiométrique $\\nu_i$[cite: 11]. L'**avancement** $\\xi$ (en mol) est défini par[cite: 11] :\n$$\\xi = \\frac{n_i - n_{i,0}}{\\nu_i} \\iff n_i = n_{i,0} + \\nu_i \\xi$$\noù $n_{i,0}$ est la quantité de matière initiale et $n_i$ la quantité à l'instant $t$[cite: 11].\nEn chimie des solutions à volume $V$ constant, l'**avancement volumique** $x$ (en $\\text{mol}\\cdot\\text{L}^{-1}$) vaut[cite: 11] :\n$$x = \\frac{\\xi}{V}$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Généralités 2/2 — Définir l'avancement $\\xi$ d'une réaction, l'avancement volumique $x$, et l'avancement maximal $\\xi_{max}$.",
+    "reponse": "$\\xi = \\dfrac{n_i-n_{i,0}}{\\nu_i} \\iff n_i=n_{i,0}+\\nu_i\\xi$ (en mol). Avancement volumique (à volume $V$ constant) : $x=\\xi/V$, homogène à une concentration. $\\xi_{max}$ : avancement maximal atteint dans le sens direct, obtenu lorsque le RÉACTIF LIMITANT est totalement consommé (première quantité de matière à s'annuler dans le tableau d'avancement)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir le rendement d'une réaction et le taux de dissociation d'un réactif.",
-    "reponse": "- **Rendement $\\eta$** : Rapport de l'avancement à l'état d'équilibre final $\\xi_f$ sur l'avancement maximal $\\xi_{\\text{max}}$[cite: 11] :\n$$\\eta = \\frac{\\xi_f}{\\xi_{\\text{max}}}$$[cite: 11]\n- **Taux de dissociation $\\alpha$** (pour une réaction à réactif unique) : Proportion de réactif transformé par rapport à la quantité initiale $n_0$[cite: 11] :\n$$\\alpha = \\frac{n_0 - n}{n_0} = -\\nu_i \\frac{\\xi}{n_0}$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Rendement et taux de dissociation — Définir le rendement $\\eta$ d'une réaction et le taux de dissociation $\\alpha$, et donner la relation entre $\\alpha$ et l'avancement $\\xi$.",
+    "reponse": "Rendement : $\\eta = \\xi_f/\\xi_{max}$ (avancement à l'équilibre sur avancement maximal). Taux de dissociation (réaction à UN SEUL réactif) : $\\alpha = (n_0-n)/n_0$, où $n_0$ est la quantité initiale et $n$ la quantité restante ; en fonction de l'avancement : $\\alpha = -\\nu_i\\,\\xi/n_0$ (avec $\\nu_i<0$ pour le réactif, ce qui rend $\\alpha$ positif)."
   },
   {
-    "type": "Définition",
-    "enonce": "Donner les règles de calcul de l'activité d'un corps pur, d'un gaz dans un mélange et d'un soluté en solution.",
-    "reponse": "- **Corps pur** : $a = 1$ pour un solide ou un liquide pur[cite: 11] ; $a = \\frac{P}{P^\\circ}$ pour un gaz pur ($P^\\circ = 1\\text{ bar}$)[cite: 11].\n- **Mélange gazeux parfait** : $a_i = \\frac{P_i}{P^\\circ}$, où $P_i$ est la pression partielle du gaz $A_i$[cite: 11].\n- **Solution aqueuse diluée** : $a_{\\text{solvant}} = 1$ pour l'eau[cite: 11] ; $a_i = \\frac{c_i}{c^\\circ}$ pour un soluté $A_i$ ($c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$)[cite: 11]."
+    "type": "Question",
+    "enonce": "Activités 1/2 — Donner l'expression de l'activité d'un corps PUR à l'état gazeux, et à l'état liquide ou solide.",
+    "reponse": "Corps pur gazeux : $a = P/P^\\circ$ (avec $P^\\circ=1\\,\\text{bar}$). Corps pur liquide ou solide : $a=1$ (indépendamment de la pression, tant que le corps reste pur dans sa phase condensée)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la constante d'équilibre $K^\\circ(T)$ et le quotient réactionnel $Q_r$, puis expliciter le critère d'évolution spontanée.",
-    "reponse": "Pour une réaction $0 = \\sum_{i=1}^N \\nu_i A_i$ à la température $T$[cite: 11] :\n- **Constante d'équilibre** : $K^\\circ(T) = \\prod_{i=1}^N (a_{i,\\text{éq}})^{\\nu_i}$[cite: 11].\n- **Quotient réactionnel** : $Q_r = \\prod_{i=1}^N (a_i)^{\\nu_i}$ (hors équilibre)[cite: 11].\n- **Sens d'évolution**[cite: 11] :\n  - Si $Q_r = K^\\circ$ : Système à l'équilibre[cite: 11].\n  - Si $Q_r < K^\\circ$ : Évolution dans le **sens direct** (formation de produits)[cite: 11].\n  - Si $Q_r > K^\\circ$ : Évolution dans le **sens indirect** (formation de réactifs)[cite: 11]."
+    "type": "Question",
+    "enonce": "Activités 2/2 — Donner l'expression de l'activité d'un composant $A_i$ dans un mélange gazeux, celle du solvant, et celle d'un soluté dans une solution.",
+    "reponse": "Mélange de gaz parfaits : $a_i=P_i/P^\\circ$ (pression PARTIELLE de $A_i$). Solvant d'une solution : $a_{solvant}=1$. Soluté $A_i$ : $a_i=c_i/c^\\circ$ (avec $c^\\circ=1\\,\\text{mol}\\cdot\\text{L}^{-1}$)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la vitesse de réaction et la notion d'ordre de réaction.",
-    "reponse": "- **Vitesse de réaction $v$** : $v = \\frac{1}{V}\\frac{d\\xi}{dt} = \\frac{1}{\\nu_i}\\frac{d[A_i]}{dt}$[cite: 11].\n- **Ordre de réaction** : Si la réaction $aA + bB = cC + dD$ admet des ordres partiels $\\alpha$ et $\\beta$, sa vitesse s'écrit $v = k [A]^\\alpha [B]^\\beta$, où $k$ est la constante de vitesse et $\\alpha + \\beta$ l'ordre total[cite: 11]."
+    "type": "Question",
+    "enonce": "Équilibre chimique — Définir la constante d'équilibre $K^\\circ(T)$ et le quotient réactionnel $Q_r$, en précisant leur unique différence.",
+    "reponse": "$K^\\circ(T)=\\prod_{i=1}^N (a_{i,eq})^{\\nu_i}$ (activités calculées À L'ÉQUILIBRE). $Q_r=\\prod_{i=1}^N (a_i)^{\\nu_i}$ (activités calculées à un instant QUELCONQUE, pas nécessairement à l'équilibre). $K^\\circ$ est une constante caractéristique de la réaction à $T$ fixée ; $Q_r$ est une fonction de l'état instantané du système."
   },
   {
-    "type": "Proposition",
-    "enonce": "Présenter les lois d'évolution de $[A](t)$, l'unité de $k$ et le temps de demi-réaction $t_{1/2}$ pour des réactions d'ordre 0, 1 et 2 par rapport à un unique réactif ($aA = \\text{produits}$).",
-    "reponse": "- **Ordre 0** : $[A](t) = [A]_0 - a k t$[cite: 11] | Unité de $k$ : $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{[A]_0}{2ak}$[cite: 11].\n- **Ordre 1** : $[A](t) = [A]_0 e^{-a k t}$[cite: 11] | Unité de $k$ : $\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{\\ln 2}{ak}$[cite: 11].\n- **Ordre 2** : $\\frac{1}{[A](t)} - \\frac{1}{[A]_0} = a k t$[cite: 11] | Unité de $k$ : $\\text{L}\\cdot\\text{mol}^{-1}\\cdot\\text{s}^{-1}$[cite: 11] | $t_{1/2} = \\frac{1}{a k [A]_0}$[cite: 11]."
+    "type": "Question",
+    "enonce": "Prédiction du sens d'évolution — Énoncer les trois cas de comparaison entre $Q_r$ et $K^\\circ$ et la conséquence sur le sens d'évolution de la réaction.",
+    "reponse": "$Q_r=K^\\circ$ : équilibre, pas d'évolution. $Q_r<K^\\circ$ : $Q_r$ doit AUGMENTER pour atteindre l'équilibre, donc réaction dans le SENS DIRECT (formation de produits). $Q_r>K^\\circ$ : réaction dans le SENS INDIRECT (formation de réactifs)."
   },
   {
-    "type": "Proposition",
-    "enonce": "Expliquer le principe de la méthode de dégénérescence de l'ordre.",
-    "reponse": "Pour une réaction de vitesse $v = k [A]^\\alpha [B]^\\beta$, si l'on introduit le réactif $B$ en **large excès**, sa concentration reste quasi constante : $[B](t) \\approx [B]_0$[cite: 11].\nLa vitesse devient $v \\approx k_{\\text{app}} [A]^\\alpha$ avec $k_{\\text{app}} = k [B]_0^\\beta$[cite: 11]. La réaction se comporte comme s'il n'y avait qu'un seul réactif $A$, simplifiant la détermination expérimentale de l'ordre partiel $\\alpha$[cite: 11]."
+    "type": "Question",
+    "enonce": "Cinétique 1/2 — Donner les deux expressions équivalentes de la vitesse de réaction $v$, et définir l'ordre de réaction (partiel et total).",
+    "reponse": "$v = \\dfrac{1}{V}\\dfrac{\\mathrm{d}\\xi}{\\mathrm{d}t} = \\dfrac{1}{\\nu_i}\\dfrac{\\mathrm{d}[A_i]}{\\mathrm{d}t}$. Si la réaction admet un ordre partiel par rapport à chaque réactif, $v=k[A]^\\alpha[B]^\\beta$ ($\\alpha,\\beta$ ordres partiels, $k$ constante de vitesse) ; l'ordre TOTAL est $\\alpha+\\beta$."
   },
   {
-    "type": "Théorème",
-    "enonce": "Énoncer la loi d'Arrhénius pour la constante de vitesse d'une réaction.",
-    "reponse": "La constante de vitesse $k$ varie avec la température $T$ selon la **loi d'Arrhénius**[cite: 11] :\n$$k = A \\exp\\left(-\\frac{E_A}{RT}\\right)$$\noù $R$ est la constante des gaz parfaits et $E_A$ l'énergie d'activation molaire (en $\\text{J}\\cdot\\text{mol}^{-1}$)[cite: 11]."
+    "type": "Question",
+    "enonce": "Cinétique 2/2 — Définir le temps de demi-réaction $t_{1/2}$.",
+    "reponse": "$t_{1/2}$ est le temps nécessaire à la DISPARITION DE LA MOITIÉ du réactif LIMITANT (celui qui disparaît le premier, déterminant l'avancement maximal)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir un acide, une base (au sens de Brønsted), ainsi que le produit ionique de l'eau $K_e$ et la constante d'acidité $K_a$.",
-    "reponse": "- **Acide / Base** : Un acide $AH$ cède un proton $H^+$ ($AH + H_2O \\rightleftharpoons A^- + H_3O^+$) ; une base $B$ capte un proton ($B + H_2O \\rightleftharpoons BH^+ + HO^-$)[cite: 11]. Réaction totale = fort(e) ; limitée = faible[cite: 11].\n- **Produit ionique de l'eau $K_e$** : Constante de l'auto-protolyse de l'eau ($2H_2O \\rightleftharpoons H_3O^+ + HO^-$)[cite: 11] :\n$$K_e = [H_3O^+]_{\\text{éq}} [HO^-]_{\\text{éq}} = 10^{-14} \\quad (\\text{à } 25^\\circ\\text{C}, pK_e = 14)$$[cite: 11]\n- **Constante d'acidité $K_a$** : Constante de la réaction d'un acide $HA$ avec l'eau[cite: 11] :\n$$K_a = \\frac{[H_3O^+]_{\\text{éq}} [A^-]_{\\text{éq}}}{[HA]_{\\text{éq}}} \\quad (pK_a = -\\log K_a)$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Lois de vitesse — Pour une réaction $aA=bB+cC$ d'ordre 0, 1 ou 2 par rapport à $A$, donner l'unité de $k$ dans chaque cas, et l'expression de $[A](t)$.",
+    "reponse": "Ordre 0 : $k$ en $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$, $[A](t)=[A]_0-akt$ (décroissance linéaire). Ordre 1 : $k$ en $\\text{s}^{-1}$, $[A](t)=[A]_0\\exp(-akt)$ (décroissance exponentielle). Ordre 2 : $k$ en $\\text{L}\\cdot\\text{s}^{-1}\\cdot\\text{mol}^{-1}$, $\\dfrac{1}{[A](t)}-\\dfrac{1}{[A]_0}=akt$ (inverse de la concentration affine en $t$)."
   },
   {
-    "type": "Proposition",
-    "enonce": "Démontrer la règle des domaines de prédominance d'un couple acide-base $AH/A^-$.",
-    "reponse": "Par définition, $K_a = \\frac{[H_3O^+][A^-]}{[HA]} \\iff \\frac{[HA]}{[A^-]} = \\frac{[H_3O^+]}{K_a}$[cite: 11].\n1. L'espèce **acide $AH$ prédomine** si $[HA] \\ge 10 [A^-]$[cite: 11] :\n$$\\frac{[H_3O^+]}{K_a} \\ge 10 \\implies -\\log[H_3O^+] + \\log K_a \\le -1 \\implies pH \\le pK_a - 1$$[cite: 11]\n2. L'espèce **basique $A^-$ prédomine** si $[A^-] \\ge 10 [HA]$[cite: 11] :\n$$pH \\ge pK_a + 1$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Temps de demi-réaction 0/1/2 — Donner l'expression de $t_{1/2}$ pour chacun des trois ordres, et préciser laquelle est INDÉPENDANTE de $[A]_0$.",
+    "reponse": "Ordre 0 : $t_{1/2}=\\dfrac{[A]_0}{2ak}$ (proportionnel à $[A]_0$). Ordre 1 : $t_{1/2}=\\dfrac{\\ln2}{ak}$ (INDÉPENDANT de $[A]_0$ — signature caractéristique d'un ordre 1). Ordre 2 : $t_{1/2}=\\dfrac{1}{[A]_0\\,ak}$ (inversement proportionnel à $[A]_0$)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la constante de solubilité $K_s$ et la solubilité $s$ d'un précipité $A_p B_q(s)$.",
-    "reponse": "Pour l'équilibre de dissolution $A_p B_q(s) \\rightleftharpoons p A^{n+}(aq) + q B^{m-}(aq)$[cite: 11] :\n- **Constante de solubilité $K_s$**[cite: 11] :\n$$K_s = [A^{n+}]_{\\text{éq}}^p [B^{m-}]_{\\text{éq}}^q \\quad (pK_s = -\\log K_s)$$[cite: 11]\n- **Solubilité $s$** : Quantité maximale de solide (en $\\text{mol}\\cdot\\text{L}^{-1}$ ou $\\text{g}\\cdot\\text{L}^{-1}$) que l'on peut dissoudre dans 1 L de solution[cite: 11]."
+    "type": "Question",
+    "enonce": "Dégénérescence de l'ordre — Décrire le principe de la méthode de dégénérescence de l'ordre pour déterminer $\\alpha$ dans une loi $v=k[A]^\\alpha[B]^\\beta$.",
+    "reponse": "On introduit $B$ en LARGE EXCÈS, de sorte que sa concentration reste quasi constante au cours du temps : $[B](t)\\approx[B]_0$. La loi de vitesse devient alors $v\\approx k[B]_0^\\beta[A]^\\alpha=k_{app}[A]^\\alpha$, où $k_{app}=k[B]_0^\\beta$ est la constante de vitesse APPARENTE. Tout se passe comme si la réaction n'avait plus qu'un seul réactif $A$, ce qui permet de déterminer expérimentalement $\\alpha$ (puis de recommencer symétriquement en excès de $A$ pour déterminer $\\beta$)."
   },
   {
-    "type": "Proposition",
-    "enonce": "Énoncer la condition d'existence d'un précipité $A_p B_q(s)$ à partir du quotient réactionnel $Q_r$.",
-    "reponse": "- **$Q_r < K_s$** : Pas de précipitation (solution non saturée)[cite: 11]. Si du solide est présent, il se dissout[cite: 11].\n- **$Q_r = K_s$** : Équilibre de solubilité ; la solution est saturée en présence de solide[cite: 11].\n- **$Q_r > K_s$** : Précipitation du solide dans le sens indirect jusqu'à atteindre $Q_r = K_s$[cite: 11]."
+    "type": "Question",
+    "enonce": "Loi d'Arrhénius — Énoncer la loi d'Arrhénius, et lister les autres facteurs (hors température) influençant la vitesse d'une réaction.",
+    "reponse": "$k=\\exp\\left(-\\dfrac{E_A}{RT}\\right)$ (parfois écrite avec un facteur préexponentiel $A$ : $k=A\\exp(-E_A/RT)$), avec $E_A$ l'énergie d'activation molaire et $R$ la constante des gaz parfaits. Autres facteurs influençant la vitesse : la présence éventuelle d'un CATALYSEUR, et le choix du SOLVANT."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la notion d'équivalence dans un titrage chimique.",
-    "reponse": "L'**équivalence** est atteinte lorsque le réactif titrant $A_2$ et le réactif titré $A_1$ de la réaction $|\\nu_1|A_1 + |\\nu_2|A_2 = \\text{Produits}$ ont été introduits dans les **proportions stœchiométriques**[cite: 11] :\n$$\\frac{n(A_1)_0}{|\\nu_1|} = \\frac{n(A_2)_{\\text{équivalence}}}{|\\nu_2|}$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Acide/base fort/faible — Donner la définition d'un acide fort/faible et d'une base forte/faible, avec un exemple de chaque cité dans le cours.",
+    "reponse": "Acide $AH$ : réagit avec l'eau selon $AH+H_2O\\rightleftharpoons H_3O^++A^-$ — TOTALE = acide FORT (ex. HNO$_3$), LIMITÉE = acide FAIBLE (ex. CH$_3$COOH). Base $B$ : réagit selon $B+H_2O\\rightleftharpoons BH^++HO^-$ — TOTALE = base FORTE (ex. C$_2$H$_5$O$^-$), LIMITÉE = base FAIBLE (ex. NH$_3$)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la population $Z$, la coordinence et la compacité $C$ d'une maille cristalline.",
-    "reponse": "- **Population $Z$** : Nombre d'atomes, d'ions ou de molécules contenus en propre dans la maille[cite: 11].\n- **Coordinence** : Nombre des plus proches voisins d'une entité dans le cristal[cite: 11].\n- **Compacité $C$**[cite: 11] :\n$$C = \\frac{\\text{Volume occupé par les atomes de la maille}}{\\text{Volume de la maille}}$$[cite: 11]"
+    "type": "Question",
+    "enonce": "Espèce amphotère — Définir une espèce amphotère, et écrire la réaction d'autoprotolyse de l'eau qui en est l'exemple canonique.",
+    "reponse": "Une espèce amphotère (ampholyte) peut jouer à la fois le rôle d'acide ET de base. L'eau en est l'exemple : $H_2O(\\ell)+H_2O(\\ell)\\rightleftharpoons H_3O^+(aq)+HO^-(aq)$ (réaction d'autoprotolyse, une molécule d'eau se comportant en acide, l'autre en base)."
   },
   {
-    "type": "Proposition",
-    "enonce": "Présenter les caractéristiques (population, relation de tangence, compacité, masse volumique) des mailles cubique simple, cubique centré (CC) et cubique à faces centrées (CFC).",
-    "reponse": "- **Cubique simple** : $Z = 8 \\times \\frac{1}{8} = 1$[cite: 11] | Tangence sur l'arête : $a = 2R$[cite: 11] | $C = \\frac{\\pi}{6} \\approx 0{,}52$[cite: 11] | $\\rho = \\frac{M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique centré (CC)** : $Z = 8 \\times \\frac{1}{8} + 1 = 2$[cite: 11] | Tangence sur la grande diagonale : $4R = a\\sqrt{3}$[cite: 11] | $C = \\frac{\\pi\\sqrt{3}}{8} \\approx 0{,}68$[cite: 11] | $\\rho = \\frac{2M}{\\mathcal{N}_a a^3}$[cite: 11].\n- **Cubique à faces centrées (CFC)** : $Z = 8 \\times \\frac{1}{8} + 6 \\times \\frac{1}{2} = 4$[cite: 11] | Tangence sur la diagonale d'une face : $4R = a\\sqrt{2}$[cite: 11] | $C = \\frac{\\pi\\sqrt{2}}{6} \\approx 0{,}74$[cite: 11] | $\\rho = \\frac{4M}{\\mathcal{N}_a a^3}$[cite: 11]."
+    "type": "Question",
+    "enonce": "Ke et pKa — Définir le produit ionique de l'eau $K_e$ (avec sa valeur à 25°C), et la constante d'acidité $K_a$ d'un couple $HA/A^-$. Comment le $\\text{p}K_a$ est-il relié à la force de l'acide ?",
+    "reponse": "$K_e=[H_3O^+]_{eq}[HO^-]_{eq}$, $K_e=10^{-14}$ à $25\\,°\\text{C}$ ($\\text{p}K_e=14$). $K_a=\\dfrac{[H_3O^+]_{eq}[A^-]_{eq}}{[HA]_{eq}}$ pour $HA+H_2O\\rightleftharpoons A^-+H_3O^+$. Plus le $\\text{p}K_a$ est FAIBLE, plus l'acide est FORT."
   },
   {
-    "type": "Proposition",
-    "enonce": "Déterminer le nombre et l'habitabilité des sites octaédriques et tétraédriques d'une structure CFC.",
-    "reponse": "- **Sites octaédriques** : 4 sites par maille (1 au centre + 12 sur les arêtes)[cite: 11]. Habitabilité : $r = R(\\sqrt{2} - 1) \\approx 0{,}41 R$[cite: 11].\n- **Sites tétraédriques** : 8 sites par maille (au centre des 8 sous-cubes de côté $a/2$)[cite: 11]. Habitabilité : $r = R\\left(\\frac{\\sqrt{3}}{\\sqrt{2}} - 1\\right) \\approx 0{,}22 R$[cite: 11]."
+    "type": "Question",
+    "enonce": "pH — Donner la définition rigoureuse du pH (en activité), et son expression simplifiée pour une solution diluée. Dans quel intervalle usuel se situe-t-il pour une solution aqueuse ?",
+    "reponse": "$\\text{pH}=-\\log a_{H_3O^+}$ (définition rigoureuse, en ACTIVITÉ). Pour une solution DILUÉE : $\\text{pH}=-\\log[H_3O^+]$ (en assimilant l'activité à la concentration en $\\text{mol}\\cdot\\text{L}^{-1}$). Le pH d'une solution aqueuse est usuellement compris entre 0 et 14."
+  },
+  {
+    "type": "Question",
+    "enonce": "Domaine de prédominance — Démontrer, à partir de la définition de $K_a$, la condition sur le pH pour que l'espèce acide $HA$ prédomine sur $A^-$ (facteur 10).",
+    "reponse": "Prédominance de l'acide : $[HA]\\ge10[A^-]$. Or $K_a=\\dfrac{[H_3O^+]_{eq}[A^-]_{eq}}{[HA]_{eq}} \\Rightarrow \\dfrac{[HA]_{eq}}{[A^-]_{eq}}=\\dfrac{[H_3O^+]_{eq}}{K_a}$. La condition devient $\\dfrac{[H_3O^+]_{eq}}{K_a}\\ge10 \\iff -\\log[H_3O^+]_{eq}+\\log K_a\\le-1 \\iff \\text{pH}\\le\\text{p}K_a-1$. Symétriquement, la base prédomine si $\\text{pH}\\ge\\text{p}K_a+1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode de la réaction prépondérante 1/2 — Décrire les étapes 1 et 2 du principe de la méthode (échelle d'acidité, choix de la réaction).",
+    "reponse": "Étape 1 : placer TOUS les couples acido-basiques présents sur une échelle d'acidité (en $\\text{p}K_a$), sans oublier ceux impliquant le SOLVANT ; entourer les espèces effectivement PRÉSENTES en solution (sans oublier H$_2$O). Étape 2 : parmi toutes les réactions possibles entre les espèces présentes, repérer celle dont la constante d'équilibre $K^\\circ$ est la PLUS GRANDE — c'est la réaction PRÉPONDÉRANTE."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode de la réaction prépondérante 2/2 — Distinguer les deux cas de figure selon la valeur de $K^\\circ$ de la réaction prépondérante, et la suite de la méthode dans chaque cas.",
+    "reponse": "Si $K^\\circ>1$ : réaction PRÉPONDÉRANTE QUANTITATIVE, considérée TOTALE — on calcule les nouvelles quantités/concentrations après cette réaction, obtenant une solution ÉQUIVALENTE, et on RECOMMENCE le processus depuis l'étape 1 (nouvelle échelle, nouvelles espèces présentes). Si $K^\\circ\\le1$ : ÉQUILIBRE DE CONTRÔLE — on effectue un bilan de matière pour cette transformation LIMITÉE, ce qui donne directement l'état final du système (fin de la méthode)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Équilibre de solubilité — Écrire l'équilibre de solubilité générique d'un précipité $A_pB_q$, et définir la constante de solubilité $K_s$.",
+    "reponse": "$A_pB_q(s)\\rightleftharpoons pA^{n+}(aq)+qB^{m-}(aq)$. $K_s=\\left(\\dfrac{[A^{n+}]_{eq}}{c^\\circ}\\right)^p\\times\\left(\\dfrac{[B^{m-}]_{eq}}{c^\\circ}\\right)^q$, souvent notée sans $c^\\circ$ : $K_s=[A^{n+}]_{eq}^p[B^{m-}]_{eq}^q$. On introduit aussi $\\text{p}K_s=-\\log K_s$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Condition d'existence du solide — Énoncer les trois cas de comparaison entre $Q_r$ et $K_s$, en précisant la subtilité liée au caractère HÉTÉROGÈNE de cet équilibre.",
+    "reponse": "$Q_r=K_s$ : équilibre, coexistence du précipité et des ions (solution SATURÉE). $Q_r<K_s$ : évolution dans le sens DIRECT (dissolution) — MAIS s'il n'y a PAS de solide disponible, le système ne peut pas évoluer et reste HORS ÉQUILIBRE (subtilité propre aux équilibres hétérogènes : on ne peut dissoudre que s'il y a du solide à dissoudre). $Q_r>K_s$ : évolution dans le sens INDIRECT, le solide PRÉCIPITE."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solubilité — Définir la solubilité d'un solide (ou d'un gaz), et ses unités possibles.",
+    "reponse": "C'est la quantité MAXIMALE de ce solide (ou gaz) que l'on peut dissoudre dans 1 L de solution. Elle s'exprime en $\\text{mol}\\cdot\\text{L}^{-1}$ ou en $\\text{g}\\cdot\\text{L}^{-1}$ selon le contexte."
+  },
+  {
+    "type": "Question",
+    "enonce": "Titrages 1/2 — Définir un titrage et la condition d'équivalence.",
+    "reponse": "Un titrage mesure la quantité de matière d'une espèce $A_1$ via la quantité d'un réactif titrant $A_2$ qui réagit avec elle de façon RAPIDE et TOTALE : $|\\nu_1|A_1+|\\nu_2|A_2=\\text{Produits}$. L'équivalence est atteinte lorsque les réactifs ont été introduits en proportions STŒCHIOMÉTRIQUES : $\\dfrac{n(A_1)_0}{|\\nu_1|}=\\dfrac{n(A_2)_{\\text{équivalence}}}{|\\nu_2|}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Titrages 2/2 — Lister les trois méthodes usuelles de repérage de l'équivalence, et rappeler la formule de la conductivité utilisée en titrage conductimétrique.",
+    "reponse": "Colorimétrique (changement de couleur à l'équivalence) ; pH-métrique (saut brutal de pH) ; conductimétrique (rupture de pente de $\\sigma(V)$). Conductivité : $\\sigma=\\sum_i |z_i|\\lambda_ic_i$, où $z_i$ est la charge de l'ion $A_i$, $c_i$ sa concentration et $\\lambda_i$ sa conductivité molaire ionique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cristallographie — Définir solide cristallin, cristal parfait, population, coordinence et compacité d'une maille.",
+    "reponse": "Solide cristallin : assemblage d'entités dont la structure se répète PÉRIODIQUEMENT dans les 3 directions de l'espace. Cristal parfait : décrit par une maille se répétant INFINIMENT périodiquement. Population $N$ : nombre d'entités PAR MAILLE. Coordinence : nombre de PLUS PROCHES VOISINS d'une entité. Compacité $C = \\dfrac{\\text{volume occupé par les atomes de la maille}}{\\text{volume de la maille}}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Types de solides cristallins — Associer à chaque type de cristal (métal, ionique, covalent, moléculaire) sa structure, le type de liaison mise en jeu, et une gamme d'intensité de liaison.",
+    "reponse": "Métal : cations dans un gaz d'électrons, liaisons MÉTALLIQUES délocalisées ($100$–$800\\,\\text{kJ}\\cdot\\text{mol}^{-1}$). Ionique : cations/anions alternés, liaisons IONIQUES coulombiennes localisées ($100$–$600\\,\\text{kJ}\\cdot\\text{mol}^{-1}$). Covalent : atomes neutres, liaisons COVALENTES localisées et directionnelles ($200$–$800\\,\\text{kJ}\\cdot\\text{mol}^{-1}$). Moléculaire : molécules neutres, liaisons intermoléculaires de Van der Waals ($5$–$10\\,\\text{kJ}\\cdot\\text{mol}^{-1}$) ou hydrogène ($10$–$30\\,\\text{kJ}\\cdot\\text{mol}^{-1}$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés physiques des solides cristallins — À quel type associer : ductile/malléable, fragile+faible conductivité+soluble en solvant polaire, dur+mauvais conducteur+haute température de fusion, fragile+faible masse volumique+isolant ?",
+    "reponse": "Ductile/malléable, bon conducteur thermique/électrique, masse volumique élevée, réducteur $\\to$ MÉTAL. Fragile, faibles conductivités, soluble en solvant polaire $\\to$ CRISTAL IONIQUE. Dur, mauvais conducteur thermique/électrique, température de fusion élevée $\\to$ CRISTAL COVALENT. Fragile, faible masse volumique, isolant électrique et thermique $\\to$ CRISTAL MOLÉCULAIRE."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cubique simple — Donner la population $Z$, la coordinence, la relation de tangence et la compacité de la structure cubique simple.",
+    "reponse": "$Z=8\\times\\frac{1}{8}=1$ (atomes uniquement aux sommets, partagés entre 8 mailles). Coordinence $=6$. Tangence le long d'une ARÊTE : $a=2R$. Compacité $C=\\dfrac{4}{3}\\pi R^3\\times\\dfrac{1}{a^3}=\\dfrac{\\pi}{6}\\approx0{,}52$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cubique centré — Donner la population $Z$, la coordinence, la relation de tangence et la compacité de la structure cubique centrée.",
+    "reponse": "$Z=8\\times\\frac{1}{8}+1=2$ (sommets + centre entièrement inclus). Coordinence $=8$. Tangence le long de la DIAGONALE DU CUBE : $4R=a\\sqrt{3}$. Compacité $C=\\dfrac{\\pi\\sqrt{3}}{8}\\approx0{,}68$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cubique faces centrées (CFC) — Donner la population $Z$, la coordinence, la relation de tangence et la compacité de la structure CFC.",
+    "reponse": "$Z=8\\times\\frac{1}{8}+6\\times\\frac{1}{2}=4$ (sommets + centres des 6 faces, partagés entre 2 mailles). Coordinence $=12$. Tangence le long de la DIAGONALE D'UNE FACE : $4R=a\\sqrt{2}$. Compacité $C=\\dfrac{\\pi\\sqrt{2}}{6}\\approx0{,}74$ (empilement compact maximal)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Masses volumiques — Donner l'expression de la masse volumique $\\rho_X$ pour les structures cubique simple, cubique centrée et CFC, en fonction de $M_X$, $a$ et $\\mathscr{N}_a$.",
+    "reponse": "Cubique simple : $\\rho_X=\\dfrac{M_X}{\\mathscr{N}_a a^3}$ ($Z=1$). Cubique centrée : $\\rho_X=\\dfrac{2M_X}{\\mathscr{N}_a a^3}$ ($Z=2$). CFC : $\\rho_X=\\dfrac{4M_X}{\\mathscr{N}_a a^3}$ ($Z=4$). Formule générale : $\\rho_X=\\dfrac{Z\\,M_X}{\\mathscr{N}_a a^3}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sites interstitiels du CFC 1/2 — Donner le nombre de sites OCTAÉDRIQUES par maille CFC, et l'expression du rayon $r$ maximal logeable (habitabilité).",
+    "reponse": "4 sites octaédriques par maille ($1$ entièrement inclus $+\\ 12\\times\\frac{1}{4}$ sur les arêtes). Habitabilité : $2R+2r=a=\\dfrac{4R}{\\sqrt2} \\Rightarrow r=R(\\sqrt2-1)\\approx0{,}41R$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sites interstitiels du CFC 2/2 — Donner le nombre de sites TÉTRAÉDRIQUES par maille CFC, et l'expression du rayon $r$ maximal logeable.",
+    "reponse": "8 sites tétraédriques par maille (centres des 8 « sous-cubes » de côté $a/2$). Habitabilité (tangence le long de la diagonale du sous-cube) : $2R+2r=\\dfrac{a\\sqrt3}{2}=2R\\dfrac{\\sqrt3}{\\sqrt2} \\Rightarrow r=R\\left(\\dfrac{\\sqrt3}{\\sqrt2}-1\\right)\\approx0{,}22R$. Les sites tétraédriques sont donc PLUS PETITS que les sites octaédriques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD zircone) — Pour un cristal ionique où les cations forment un réseau CFC et les anions occupent des sites interstitiels, comment détermine-t-on la formule chimique du composé ?",
+    "reponse": "On compte séparément le nombre de cations par maille (population $Z$ du réseau CFC, ici $4$) et le nombre d'anions par maille (en fonction du type et du taux d'occupation des sites interstitiels occupés — ex. tous les sites tétraédriques occupés donnent $8$ anions pour $4$ cations). Le RAPPORT cations/anions par maille donne directement les indices de la formule chimique (après simplification), par exemple $4$ cations pour $8$ anions $\\to$ formule en $M X_2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD zircone, dopage) — Pourquoi la substitution d'une fraction $x$ des cations $\\text{Zr}^{4+}$ par des cations $\\text{Y}^{3+}$ (charge inférieure) rompt-elle l'électroneutralité, et comment la rétablir ?",
+    "reponse": "Chaque substitution Zr$^{4+}\\to$Y$^{3+}$ diminue la charge positive totale de la maille d'une unité par substitution (charge $4+$ remplacée par $3+$), sans changer le nombre d'anions O$^{2-}$ : la maille devient globalement NÉGATIVE. Pour rétablir l'électroneutralité, il faut RÉDUIRE le nombre d'anions $y$ en conséquence (créer des lacunes anioniques), en ajustant $y$ en fonction de $x$ de sorte que la somme des charges positives et négatives s'annule à nouveau."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD titrage pH-métrique d'une amine) — Comment détermine-t-on le $\\text{p}K_a$ du couple à partir des courbes de pourcentage superposées à la courbe de titrage, et comment choisit-on un indicateur coloré adapté ?",
+    "reponse": "Le $\\text{p}K_a$ correspond à l'ABSCISSE DU CROISEMENT des deux courbes de pourcentage (point où les deux espèces du couple sont à $50\\%$ chacune, donc $[\\text{forme acide}]=[\\text{forme basique}]$, ce qui annule $\\log([\\text{base}]/[\\text{acide}])$ dans la relation de Henderson-Hasselbalch, donnant $\\text{pH}=\\text{p}K_a$ à ce point) ; l'ordonnée de ce point lue sur l'axe du pH donne directement $\\text{p}K_a$. Pour l'indicateur coloré, on choisit celui dont la ZONE DE VIRAGE encadre le pH À L'ÉQUIVALENCE (lu sur le saut de la courbe de titrage), et non le $\\text{p}K_a$ du couple titré."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD dosage de Mohr) — Décrire le principe du dosage de Mohr pour repérer l'équivalence d'un titrage des ions chlorure par le nitrate d'argent.",
+    "reponse": "On introduit une petite concentration d'ions chromate (CrO$_4^{2-}$) AVANT le titrage. Tant que les ions Cl$^-$ ne sont pas épuisés, l'ion Ag$^+$ ajouté précipite préférentiellement avec Cl$^-$ (AgCl, $K_s$ plus petit donc précipite en premier), les ions chromate restant en solution (le chromate d'argent Ag$_2$CrO$_4$, de $K_s'$ plus grand, ne précipite pas encore). Dès que les Cl$^-$ sont épuisés (équivalence atteinte), l'excès d'Ag$^+$ ajouté fait précipiter Ag$_2$CrO$_4$, un précipité ROUGE VIF qui signale visuellement l'équivalence — à condition d'avoir choisi une concentration en chromate $C_2$ telle que ce second précipité apparaisse EXACTEMENT à l'équivalence (ni trop tôt, ni trop tard)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD précipitation sélective) — Décrire la méthode générale permettant de déterminer une zone de pH assurant la précipitation sélective d'un cation (ex. Co$^{2+}$) sans précipiter un autre cation (ex. Mg$^{2+}$), tous deux sous forme d'hydroxyde.",
+    "reponse": "On calcule séparément, pour chaque cation, la concentration en ions HO$^-$ (donc le pH, via $K_e$) nécessaire pour atteindre le SEUIL DE PRÉCIPITATION voulu (ex. 99% de Co$^{2+}$ précipité, 1% de Mg$^{2+}$ précipité au maximum), en utilisant le $K_s$ de chaque hydroxyde et la concentration résiduelle du cation en solution après précipitation partielle. On obtient ainsi une borne INFÉRIEURE de pH (à partir de laquelle le cobalt précipite suffisamment) et une borne SUPÉRIEURE de pH (au-delà de laquelle le magnésium précipite trop) ; s'il existe un intervalle de pH entre ces deux bornes, la précipitation sélective y est possible."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — La constante de vitesse $k$ d'une réaction a toujours la même unité, quel que soit l'ordre de la réaction.",
+    "reponse": "FAUX. L'unité de $k$ dépend de l'ordre TOTAL de la réaction : $\\text{mol}\\cdot\\text{L}^{-1}\\cdot\\text{s}^{-1}$ pour un ordre 0, $\\text{s}^{-1}$ pour un ordre 1, $\\text{L}\\cdot\\text{s}^{-1}\\cdot\\text{mol}^{-1}$ pour un ordre 2, et plus généralement $(\\text{mol}\\cdot\\text{L}^{-1})^{1-n}\\cdot\\text{s}^{-1}$ pour un ordre total $n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — À l'équilibre d'un système comportant un précipité, on a toujours $Q_r=K_s$.",
+    "reponse": "FAUX (nuance importante, propre aux équilibres HÉTÉROGÈNES). Si la quantité de solide introduite est INSUFFISANTE pour saturer la solution, tout le solide peut se dissoudre AVANT d'atteindre $Q_r=K_s$ : le système reste alors dans un état où $Q_r<K_s$, HORS ÉQUILIBRE DE SOLUBILITÉ, faute de solide restant à dissoudre. $Q_r=K_s$ n'est garanti que s'il subsiste du solide en équilibre avec la solution (solution saturée)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Plus le $\\text{p}K_a$ d'un couple acide-base est élevé, plus l'acide correspondant est fort.",
+    "reponse": "FAUX, c'est l'inverse : plus le $\\text{p}K_a$ est FAIBLE, plus l'acide est FORT (un $K_a$ grand, donc un $\\text{p}K_a$ petit, signifie que l'équilibre de dissociation de l'acide est très déplacé vers la formation des produits, donc que l'acide cède facilement son proton)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Dans la méthode de la réaction prépondérante, si la constante d'équilibre de la réaction repérée est $K^\\circ=0{,}5$, on la considère comme une transformation totale.",
+    "reponse": "FAUX. $K^\\circ\\le1$ correspond au cas de l'ÉQUILIBRE DE CONTRÔLE (transformation LIMITÉE, à traiter par un bilan de matière classique menant à l'état final) — pas une réaction totale. C'est seulement pour $K^\\circ>1$ que la réaction prépondérante est considérée comme QUANTITATIVE (totale)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — La compacité d'un empilement cubique à faces centrées (CFC) est supérieure à celle d'un empilement cubique centré, elle-même supérieure à celle d'un cubique simple.",
+    "reponse": "VRAI. $C_{CFC}\\approx0{,}74 > C_{\\text{cubique centré}}\\approx0{,}68 > C_{\\text{cubique simple}}\\approx0{,}52$. Le CFC (comme l'hexagonal compact) réalise l'empilement compact le plus dense possible de sphères identiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — La solubilité d'un précipité ionique ne dépend que de son produit de solubilité $K_s$, et est donc une caractéristique intrinsèque du solide, indépendante du milieu.",
+    "reponse": "FAUX. La solubilité dépend aussi de la COMPOSITION DU MILIEU, notamment de la présence d'ions COMMUNS déjà présents en solution (effet d'ion commun, illustré dans le TD par la comparaison solubilité dans l'eau pure vs. dans une solution de NaCl) : à $K_s$ fixé, la solubilité DIMINUE si l'un des ions constitutifs du précipité est déjà présent à une concentration non négligeable dans le milieu."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — L'activité du solvant dans une solution est toujours égale à 1, quelle que soit la concentration des solutés qu'elle contient.",
+    "reponse": "VRAI, dans le cadre des conventions de ce cours : par définition de l'état standard du solvant (corps pur liquide à $T$ et $P^\\circ$) et de l'approximation usuelle en solution diluée, on prend systématiquement $a_{solvant}=1$, indépendamment de la présence et de la concentration des solutés (cette approximation devient moins bonne pour des solutions très concentrées, mais reste la convention standard du programme)."
   }
 ]

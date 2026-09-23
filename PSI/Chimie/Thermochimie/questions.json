@@ -1,87 +1,167 @@
 [
   {
-    "type": "Définition",
-    "enonce": "Définir l'enthalpie molaire partielle $H_{m,i}$ du constituant $A_i$ d'un mélange.",
-    "reponse": "L'enthalpie molaire partielle est définie par la relation : $H_{m,i} = \\left(\\frac{\\partial H}{\\partial n_i}\\right)_{T,P,n_{j\\neq i}}$."
+    "type": "Question",
+    "enonce": "Avancement 1/2 — Rappeler la définition de l'avancement $\\xi(t)$ d'une réaction, et sa forme différentielle.",
+    "reponse": "$\\xi(t) = \\dfrac{n_i(t)-n_{i0}}{\\nu_i}$, avec $n_{i0}$ la quantité initiale de matière de $A_i$ et $\\nu_i$ son coefficient stœchiométrique (négatif pour un réactif, positif pour un produit). Forme différentielle : $\\mathrm{d}n_i = \\nu_i\\,\\mathrm{d}\\xi$."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir l'enthalpie de réaction $\\Delta_r H(T,P,\\xi)$ d'un système physicochimique.",
-    "reponse": "L'enthalpie de réaction est définie par : $\\Delta_r H(T,P,\\xi) = \\left(\\frac{\\partial H}{\\partial \\xi}\\right)_{T,P}$."
+    "type": "Question",
+    "enonce": "Avancement 2/2 — L'avancement $\\xi$ est-il défini de la même façon pour tous les constituants d'une réaction ? Pourquoi cette définition est-elle cohérente ?",
+    "reponse": "Oui : quel que soit le constituant $A_i$ choisi pour calculer $\\xi=(n_i(t)-n_{i0})/\\nu_i$, on obtient la MÊME valeur de $\\xi$, car les quantités de matière de tous les constituants évoluent proportionnellement à leur coefficient stœchiométrique respectif au cours de l'avancement de la réaction. C'est cette proportionnalité qui rend $\\xi$ une variable unique caractérisant l'état d'avancement global de la réaction."
   },
   {
-    "type": "Formule",
-    "enonce": "Donner la relation liant l'enthalpie de réaction $\\Delta_r H$ aux enthalpies molaires partielles $H_{m,i}$ des constituants d'un système chimique.",
-    "reponse": "La relation est : $\\Delta_r H = \\sum_{i=1}^N \\nu_i H_{m,i}$, où $\\nu_i$ désigne le coefficient stœchiométrique algébrique du constituant $A_i$."
+    "type": "Question",
+    "enonce": "Grandeurs molaires partielles — Définir l'enthalpie molaire partielle $H_{m,i}$ d'un constituant $A_i$, et généraliser à une grandeur extensive $X$ quelconque. Dans quelle unité s'exprime-t-elle ?",
+    "reponse": "$H_{m,i} = \\left(\\dfrac{\\partial H}{\\partial n_i}\\right)_{T,P,n_{j\\ne i}}$ : dérivée partielle de l'enthalpie par rapport à la quantité de matière du constituant $i$, à $T,P$ et aux autres quantités de matière fixées. Généralisation : $X_{m,i}=\\left(\\dfrac{\\partial X}{\\partial n_i}\\right)_{T,P,n_{j\\ne i}}$ pour toute grandeur extensive $X$. Elle s'exprime en $\\text{J}\\cdot\\text{mol}^{-1}$."
   },
   {
-    "type": "Définition",
-    "enonce": "Décrire l'état standard d'un constituant gazeux et d'un soluté à la température $T$.",
-    "reponse": "- Pour un constituant gazeux : correspond à l'état de ce gaz pur se comportant comme un gaz parfait, à la même température $T$ et à la pression standard $P^\\circ = 1\\text{ bar}$.\n- Pour un soluté en solution : correspond à l'état hypothétique de ce constituant à la concentration $c^\\circ = 1\\text{ mol}\\cdot\\text{L}^{-1}$, à la même température $T$ et à la pression standard $P^\\circ = 1\\text{ bar}$, avec des interactions nulles (dilution infinie)."
+    "type": "Question",
+    "enonce": "Enthalpie de réaction 1/2 — Définir l'enthalpie de réaction $\\Delta_rH$, préciser son unité, et la mise en garde sur la notation $\\Delta_r$.",
+    "reponse": "$\\Delta_rH(T,P,\\xi) = \\left(\\dfrac{\\partial H}{\\partial\\xi}\\right)_{T,P}$, exprimée en $\\text{J}\\cdot\\text{mol}^{-1}$. MISE EN GARDE : $\\Delta_r$ est un OPÉRATEUR (une dérivée partielle par rapport à $\\xi$), à ne surtout pas confondre avec une simple variation $\\Delta$ (différence entre deux états)."
   },
   {
-    "type": "Formule",
-    "enonce": "Donner la relation liant l'enthalpie de réaction $\\Delta_r H$ à l'enthalpie standard de réaction $\\Delta_r H^\\circ$ pour des phases condensées ou des gaz parfaits.",
-    "reponse": "Dans le cas de phases condensées (considérées indilatables et incompressibles) ou de gaz parfaits (obéissant à la deuxième loi de Joule), l'enthalpie ne dépend pas de la pression. On a donc : $\\Delta_r H = \\Delta_r H^\\circ$ pour toute pression $P$."
+    "type": "Question",
+    "enonce": "Enthalpie de réaction 2/2 — Énoncer la relation reliant $\\Delta_rH$ aux enthalpies molaires partielles $H_{m,i}$, et sa généralisation à une grandeur extensive $X$ quelconque.",
+    "reponse": "$\\Delta_rH = \\displaystyle\\sum_{i=1}^N \\nu_i H_{m,i}$. Généralisation : $\\Delta_rX = \\displaystyle\\sum_{i=1}^N \\nu_i X_{m,i}$ pour toute grandeur extensive $X$ (par exemple $\\Delta_rS$, $\\Delta_rG$, $\\Delta_rU$, etc.)."
   },
   {
-    "type": "Définition",
-    "enonce": "Qu'est-ce que l'état standard de référence d'un élément chimique à la température $T$ ?",
-    "reponse": "C'est l'état standard du corps simple associé à cet élément dans l'état physique le plus stable à la température $T$ (exemples : $C(graphite)$ ou $O_2(g)$ à $P^\\circ = 1\\text{ bar}$ et $T$)."
+    "type": "Question",
+    "enonce": "État standard 1/2 — Définir l'état standard d'un constituant GAZEUX, et d'un constituant en PHASE CONDENSÉE, à une température $T$ donnée.",
+    "reponse": "Gaz : état de ce gaz PUR se comportant comme un GAZ PARFAIT, à la même température $T$ et à la pression standard $P^\\circ=1\\,\\text{bar}$. Phase condensée (solide ou liquide) : état de ce constituant PUR, dans le MÊME état physique, à la même température $T$ et à $P^\\circ=1\\,\\text{bar}$."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la réaction standard de formation d'une espèce chimique à une température $T$.",
-    "reponse": "C'est la réaction chimique ayant pour produit une mole de l'espèce considérée dans son état standard, et pour réactifs les corps simples pris dans leur état standard de référence à la température $T$."
+    "type": "Question",
+    "enonce": "État standard 2/2 — Définir l'état standard du SOLVANT et du SOLUTÉ d'une solution. En quoi la définition pour le soluté est-elle particulière ?",
+    "reponse": "Solvant : état de ce constituant PUR à l'état liquide, à $T$ et $P^\\circ=1\\,\\text{bar}$. Soluté : état HYPOTHÉTIQUE de ce constituant à la concentration $c^\\circ=1\\,\\text{mol}\\cdot\\text{L}^{-1}$, à $T$ et $P^\\circ$, avec les interactions entre particules considérées comme NULLES, comme à dilution infinie. Particularité : c'est un état HYPOTHÉTIQUE (un soluté à $1\\,\\text{mol}\\cdot\\text{L}^{-1}$ réel présente des interactions non nulles ; l'état standard extrapole le comportement de dilution infinie jusqu'à cette concentration de référence)."
   },
   {
-    "type": "Propriété",
-    "enonce": "Quelle est la valeur de l'enthalpie standard de formation $\\Delta_f H^\\circ$ d'un corps simple pris dans son état standard de référence ?",
-    "reponse": "Elle est nulle par définition : $\\Delta_f H^\\circ = 0$."
+    "type": "Question",
+    "enonce": "Lien $\\Delta_rH$/$\\Delta_rH^\\circ$ — Justifier, dans le cadre du programme de CPGE, pourquoi $\\Delta_rH=\\Delta_rH^\\circ$ pour toute pression, aussi bien pour une phase condensée que pour un gaz.",
+    "reponse": "Phase condensée : on la suppose INDILATABLE et INCOMPRESSIBLE, donc son enthalpie ne dépend pas de la pression, d'où $\\Delta_rH=\\Delta_rH^\\circ$. Gaz : toujours supposé PARFAIT en CPGE, or un gaz parfait obéit à la DEUXIÈME LOI DE JOULE (son enthalpie ne dépend QUE de la température, pas de la pression), d'où également $\\Delta_rH=\\Delta_rH^\\circ$. Dans les deux cas, la relation $\\Delta_rH=\\Delta_rH^\\circ$ est vraie quelle que soit $P$."
   },
   {
-    "type": "Formule",
-    "enonce": "Énoncer la loi de Hess exprimant l'enthalpie standard de réaction $\\Delta_r H^\\circ$ d'une réaction d'équation $0 = \\sum_{i=1}^N \\nu_i A_i$ à l'aide des enthalpies standard de formation.",
-    "reponse": "La loi de Hess s'écrit : $\\Delta_r H^\\circ = \\sum_{i=1}^N \\nu_i \\Delta_f H^\\circ(A_i)$."
+    "type": "Question",
+    "enonce": "État standard de référence 1/2 — Définir l'état standard de référence d'un élément à une température $T$, et donner 3 exemples cités dans le cours.",
+    "reponse": "C'est l'état standard du CORPS SIMPLE dans l'état PHYSIQUE LE PLUS STABLE à la température $T$ (sauf exception). Exemples : carbone $\\to$ C(graphite) ; oxygène $\\to$ O$_2$(g) ; azote $\\to$ N$_2$(g) ; fer $\\to$ Fe(s) variété allotropique $\\alpha$."
   },
   {
-    "type": "Démonstration",
-    "enonce": "Démontrer que pour une transformation chimique monotherme et monobare sans travail utile, la variation d'enthalpie est égale au transfert thermique et s'exprime par $\\Delta H = Q = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$.",
-    "reponse": "À partir de la différentielle $dH = \\left(\\frac{\\partial H}{\\partial T}\\right)_{P,\\xi} dT + \\left(\\frac{\\partial H}{\\partial P}\\right)_{T,\\xi} dP + \\Delta_r H d\\xi$, on utilise un chemin fictif isobare ($dP = 0$) et isotherme ($dT = 0$). L'intégration donne $\\Delta H = \\int_{\\xi_i}^{\\xi_f} \\Delta_r H d\\xi$. En assimilant $\\Delta_r H$ à $\\Delta_r H^\\circ$ (indépendant de $P$), on obtient $\\Delta H = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$. Pour une transformation monobare sans travail utile, le premier principe s'écrit $\\Delta H = Q$, d'où $Q = \\Delta_r H^\\circ (\\xi_f - \\xi_i)$."
+    "type": "Question",
+    "enonce": "État standard de référence 2/2 — Pourquoi le choix de l'état standard de référence peut-il dépendre de la température ? Illustrer avec l'exemple du mercure (cf TD).",
+    "reponse": "L'état physique le plus stable d'un corps simple dépend de $T$ (un solide à basse température peut devenir liquide ou gazeux à haute température). Exemple du TD : le mercure Hg a une température de fusion de $234\\,\\text{K}$ ; à $298\\,\\text{K}$ (température usuelle des tables), il est donc LIQUIDE, et non solide — une réaction de formation de HgO écrite avec du Hg(s) comme réactif à $298\\,\\text{K}$ n'est donc PAS une réaction standard de formation correcte, l'état standard de référence du mercure à cette température étant Hg($\\ell$)."
   },
   {
-    "type": "Propriété",
-    "enonce": "Distinguer les termes endothermique, exothermique et athermique pour une réaction se déroulant dans le sens direct ($\\xi_f - \\xi_i > 0$).",
-    "reponse": "- Endothermique si $\\Delta_r H^\\circ > 0$, impliquant un transfert thermique reçu $Q > 0$.\n- Exothermique si $\\Delta_r H^\\circ < 0$, impliquant un transfert thermique fourni $Q < 0$.\n- Athermique si $\\Delta_r H^\\circ = 0$, impliquant un transfert thermique nul $Q = 0$."
+    "type": "Question",
+    "enonce": "Réaction standard de formation 1/2 — Donner la définition précise d'une réaction standard de formation d'une espèce chimique à une température $T$ (produit et réactifs).",
+    "reponse": "Produit : UNE MOLE de l'espèce chimique considérée, dans son état STANDARD. Réactifs : des CORPS SIMPLES pris dans leur état standard DE RÉFÉRENCE à la température $T$. Les trois conditions à vérifier simultanément : (1) exactement une mole de produit ; (2) le produit est dans son état standard (bon état physique, $P^\\circ$) ; (3) tous les réactifs sont des corps simples dans leur état standard de référence."
   },
   {
-    "type": "Formule",
-    "enonce": "Exprimer la variation d'enthalpie $\\Delta H$ lors de l'échauffement monobare d'un système sans transformation chimique constitué de $N$ constituants de quantités $n_i$ et de capacités thermiques molaires $C_{p,m,i}$ constantes.",
-    "reponse": "La variation d'enthalpie est : $\\Delta H = \\sum_{i=1}^N n_i C_{p,m,i} \\Delta T$."
+    "type": "Question",
+    "enonce": "Réaction standard de formation 2/2 — Pourquoi la réaction $\\text{NO}(g)+\\frac{1}{2}\\text{O}_2(g)\\rightleftharpoons\\text{NO}_2(g)$ n'est-elle PAS une réaction standard de formation de NO$_2$(g) ? Et pourquoi $\\text{C(graphite)}+\\text{O}_2(g)\\rightleftharpoons\\text{CO}_2(\\ell)$ n'en est-elle pas une non plus (cf TD) ?",
+    "reponse": "NO$_2$ : le réactif NO(g) n'est PAS un corps simple (il contient deux éléments différents, azote et oxygène) — il faudrait des corps simples (N$_2$, O$_2$) comme réactifs. CO$_2(\\ell)$ : même si les réactifs sont bien des corps simples en état standard de référence, le PRODUIT n'est pas dans son état standard attendu — à $298\\,\\text{K}$, l'état standard de CO$_2$ est GAZEUX, pas liquide (le CO$_2$ liquide à cette température n'est pas l'état standard de ce constituant)."
   },
   {
-    "type": "Définition",
-    "enonce": "Définir la température de flamme d'un réacteur chimique.",
-    "reponse": "C'est la température maximale atteignable par un système dans le cas d'une transformation adiabatique et monobare."
+    "type": "Question",
+    "enonce": "Enthalpie standard de formation — Définir $\\Delta_fH^\\circ$, et énoncer ses deux propriétés remarquables.",
+    "reponse": "$\\Delta_fH^\\circ$ est l'enthalpie STANDARD DE RÉACTION de la réaction standard de formation de l'espèce chimique considérée. Propriétés : (1) $\\Delta_fH^\\circ$ ne dépend QUE de $T$ (pas de la pression, par construction de l'état standard) ; (2) $\\Delta_fH^\\circ=0$ pour un corps pris dans SON PROPRE état standard de référence (car sa réaction de formation est triviale, sans transformation)."
   },
   {
-    "type": "Propriété",
-    "enonce": "Décrire les deux étapes du chemin fictif utilisé pour calculer une température de flamme à partir d'un état initial à la température $T_i$.",
-    "reponse": "1. Une réaction chimique isotherme menée à la température initiale $T_i$ conduisant à la composition finale du système (avec $\\Delta H_1 = (\\xi_f - \\xi_i)\\Delta_r H^\\circ(T_i)$).\n2. Un échauffement monobare de tous les constituants finaux (produits, réactifs non consommés, espèces inertes) de la température $T_i$ à la température finale de flamme $T_f$ (avec $\\Delta H_2 = \\sum n_{i,\\text{final}} C_{p,m,i} (T_f - T_i)$)."
+    "type": "Question",
+    "enonce": "Enthalpies de changement d'état — Définir l'enthalpie molaire standard de changement d'état, et citer trois exemples.",
+    "reponse": "C'est l'enthalpie standard de réaction de la réaction faisant passer UNE MOLE du constituant $A_i$ de la phase $\\alpha$ à la phase $\\beta$ : $A_i(\\alpha)\\rightleftharpoons A_i(\\beta)$. Exemples : enthalpie standard de FUSION (solide $\\to$ liquide), de VAPORISATION (liquide $\\to$ vapeur), de SUBLIMATION (solide $\\to$ vapeur)."
   },
   {
-    "type": "Calcul",
-    "enonce": "La réaction $CO(g) + \\frac{1}{2} O_2(g) = CO_2(g)$ correspond-elle à la réaction standard de formation de $CO_2(g)$ ? Justifier.",
-    "reponse": "Non, car le monoxyde de carbone $CO(g)$ n'est pas un corps simple."
+    "type": "Question",
+    "enonce": "Loi de Hess — Énoncer la loi de Hess, et préciser dans quel cas les enthalpies de changement d'état doivent intervenir en plus des enthalpies de formation.",
+    "reponse": "$\\Delta_rH^\\circ = \\displaystyle\\sum_{i=1}^N \\nu_i\\,\\Delta_fH^\\circ(A_i)$ (à une température $T$ donnée). Précision : si une ou plusieurs espèces de la réaction NE SONT PAS dans leur état standard de RÉFÉRENCE (mais dans un autre état standard, par exemple un solide alors que le liquide est plus stable à cette température), il faut ALORS ajouter les enthalpies de changement d'état correspondantes dans le cycle thermodynamique pour ramener chaque espèce à son état standard de référence."
   },
   {
-    "type": "Calcul",
-    "enonce": "Calculer l'enthalpie standard de la réaction $2\\text{Mg}(s) + \\text{CO}_2(g) \\rightarrow 2\\text{MgO}(s) + \\text{C}(graphite)$ à 298 K, sachant que $\\Delta_f H^\\circ(CO_2(g)) = -393,51\\text{ kJ}\\cdot\\text{mol}^{-1}$ et $\\Delta_f H^\\circ(MgO(s)) = -601,6\\text{ kJ}\\cdot\\text{mol}^{-1}$.",
-    "reponse": "En appliquant la loi de Hess :\n$\\Delta_r H^\\circ = 2\\Delta_f H^\\circ(MgO(s)) + \\Delta_f H^\\circ(C(graphite)) - 2\\Delta_f H^\\circ(Mg(s)) - \\Delta_f H^\\circ(CO_2(g))$\nPuisque $Mg(s)$ et $C(graphite)$ sont des corps simples dans leur état standard de référence, leurs enthalpies standard de formation sont nulles.\n$\\Delta_r H^\\circ = 2\\times(-601,6) - (-393,51) = -809,69\\text{ kJ}\\cdot\\text{mol}^{-1}$."
+    "type": "Question",
+    "enonce": "Transformation monotherme monobare 1/3 — Écrire la différentielle générale de $H(T,P,\\xi)$, et les deux contraintes imposées par une transformation monotherme monobare.",
+    "reponse": "$\\mathrm{d}H = \\left(\\dfrac{\\partial H}{\\partial T}\\right)_{P,\\xi}\\mathrm{d}T + \\left(\\dfrac{\\partial H}{\\partial P}\\right)_{T,\\xi}\\mathrm{d}P + \\Delta_rH\\,\\mathrm{d}\\xi$. Transformation MONOTHERME : $T_{ext}=T_i=T_f=\\text{cste}$. Transformation MONOBARE : $P_{ext}=P_i=P_f=\\text{cste}$."
   },
   {
-    "type": "Calcul",
-    "enonce": "On fait réagir de façon totale, monobare et monotherme à 298 K, un mélange de $2,0\\text{ mmol}$ de $Mg(s)$ et $2,0\\text{ mmol}$ de $CO_2(g)$ selon la réaction $2\\text{Mg}(s) + \\text{CO}_2(g) \\rightarrow 2\\text{MgO}(s) + \\text{C}(graphite)$. Déterminer la variation d'enthalpie $\\Delta H$ du système (on donne $\\Delta_r H^\\circ = -809,69\\text{ kJ}\\cdot\\text{mol}^{-1}$).",
-    "reponse": "Le réactif limitant est $Mg(s)$ car son coefficient stœchiométrique est 2. L'avancement maximal de cette réaction totale est :\n$\\xi_f = \\frac{n_0(Mg)}{2} = 1,0\\text{ mmol} = 1,0 \\times 10^{-3}\\text{ mol}$.\nLa variation d'enthalpie vaut :\n$\\Delta H = \\xi_f \\Delta_r H^\\circ = 1,0\\times 10^{-3} \\times (-809,69\\times 10^3) = -809,7\\text{ J}$."
+    "type": "Question",
+    "enonce": "Transformation monotherme monobare 2/3 — Justifier la construction du chemin hypothétique isotherme-isobare utilisé pour calculer $\\Delta H$, et en déduire l'expression de $\\Delta H$.",
+    "reponse": "$H$ étant une FONCTION D'ÉTAT, $\\Delta H$ ne dépend que des états initial et final, pas du chemin suivi. On choisit donc un chemin FICTIF isotherme et isobare reliant ces mêmes états initial et final (même si le chemin réel voit $T$ et $P$ varier en cours de route). Sur ce chemin fictif, $\\mathrm{d}T=0$ et $\\mathrm{d}P=0$, donc $\\mathrm{d}H=\\Delta_rH\\,\\mathrm{d}\\xi$. En intégrant : $\\Delta H = \\int_{\\xi_i}^{\\xi_f}\\Delta_rH\\,\\mathrm{d}\\xi = \\Delta_rH\\,(\\xi_f-\\xi_i)$ (en assimilant $\\Delta_rH$ à sa valeur standard, supposée constante sur l'intervalle)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Transformation monotherme monobare 3/3 — En déduire la relation finale entre $\\Delta H$ et le transfert thermique $Q$ pour une transformation monobare sans travail utile, et énoncer les trois cas (endo/exo/athermique).",
+    "reponse": "Pour une transformation MONOBARE sans travail utile, le premier principe s'écrit $\\Delta H=Q$, d'où : $\\Delta H = \\Delta_rH^\\circ(\\xi_f-\\xi_i) = Q$. Cas : si $\\Delta_rH^\\circ>0$, la réaction est ENDOTHERMIQUE (le système REÇOIT de la chaleur dans le sens direct, $Q>0$ si $\\xi_f-\\xi_i>0$ ; exemple : photosynthèse) ; si $\\Delta_rH^\\circ<0$, EXOTHERMIQUE ($Q<0$ dans le sens direct ; exemple : dissolution de NaOH dans l'eau) ; si $\\Delta_rH^\\circ=0$, ATHERMIQUE ($Q=0$ ; exemple : estérification)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Échauffement monobare — Donner l'expression de la variation d'enthalpie $\\Delta H$ lors de l'échauffement monobare (SANS transformation chimique) d'un système à $N$ constituants, et préciser l'hypothèse simplificatrice faite sur les capacités thermiques.",
+    "reponse": "$\\Delta H = \\displaystyle\\sum_{i=1}^N n_iC_{p,m,i}\\,\\Delta T$, avec $n_i$ la quantité de matière du constituant $A_i$. Hypothèse : la capacité thermique molaire $C_{p,m,i}$ de chaque constituant est supposée INDÉPENDANTE de la température sur les intervalles considérés (sinon il faudrait intégrer $C_{p,m,i}(T)$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Température de flamme 1/3 — Définir la température de flamme, et justifier physiquement pourquoi on peut considérer une transformation adiabatique lorsque la réaction est rapide.",
+    "reponse": "La température de flamme est la température MAXIMALE atteignable par un système dans le cas d'une transformation ADIABATIQUE monobare. Justification : si la réaction chimique est suffisamment RAPIDE, les échanges thermiques entre le milieu réactionnel et l'extérieur n'ont PAS le temps de s'effectuer (l'échelle de temps des transferts thermiques est plus longue que celle de la réaction) : la transformation peut alors être considérée comme adiabatique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Température de flamme 2/3 — Décrire le chemin fictif en deux étapes utilisé pour calculer une température de flamme, et pourquoi ce chemin est nécessaire (le chemin réel n'est pas exploitable directement).",
+    "reponse": "Le chemin RÉEL voit la température varier de façon CONTINUE et NON CONNUE simultanément à l'avancement de la réaction, ce qui rend le calcul direct impraticable. On choisit donc un chemin fictif en deux étapes (licite car $H$ est une fonction d'état) : (1) réaction chimique ISOTHERME à la température INITIALE, conduisant à la composition FINALE du système ; (2) échauffement MONOBARE de TOUS les constituants (réactifs en excès, produits, composants inertes) de la température initiale à la température finale."
+  },
+  {
+    "type": "Question",
+    "enonce": "Température de flamme 3/3 — Pour une transformation adiabatique ($Q=0$), écrire l'équation-bilan reliant $\\Delta H_1$ (réaction isotherme) et $\\Delta H_2$ (échauffement) qui permet de déterminer la température finale.",
+    "reponse": "Puisque $H$ est une fonction d'état et que le système est adiabatique ($Q=0$, transformation monobare sans travail utile donc $\\Delta H=Q=0$) : $\\Delta H=\\Delta H_1+\\Delta H_2=0$, avec $\\Delta H_1=\\xi\\,\\Delta_rH^\\circ$ (étape 1, réaction isotherme à $T_{initiale}$) et $\\Delta H_2=\\sum_i n_iC_{p,m,i}\\,\\Delta T$ (étape 2, échauffement de tous les constituants du système, sommé sur les produits ET les réactifs en excès ET les inertes). Cette équation, une fois les $n_i$ connus via $\\xi$, permet de résoudre $\\Delta T=T_{finale}-T_{initiale}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD calorimétrie) — Décrire le principe du bilan enthalpique utilisé pour déterminer une enthalpie de réaction à partir de mesures calorimétriques (élévation de température dans un calorimètre isolé).",
+    "reponse": "On suppose le calorimètre parfaitement ISOLÉ (adiabatique) : la transformation globale (réaction + échauffement de la solution et du calorimètre) se fait donc à $\\Delta H_{total}=Q=0$ (pression constante, pas de travail utile). On décompose alors, comme pour la température de flamme, en un chemin fictif : (1) réaction chimique à la température initiale $T_0$, dégageant $\\Delta H_1=\\xi\\,\\Delta_rH^\\circ$ ; (2) échauffement de la solution ET du calorimètre (via sa VALEUR EN EAU $\\mu$, masse fictive d'eau ayant la même capacité thermique) de $T_0$ à $T_f$, avec $\\Delta H_2=(m_{solution}c_{eau}+\\mu c_{eau})(T_f-T_0)$. On résout $\\Delta H_1+\\Delta H_2=0$ pour en déduire $\\Delta_rH^\\circ$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD combustion, cycle de Hess) — Comment calcule-t-on l'enthalpie standard d'une réaction de combustion (ex : propane) lorsqu'on ne dispose PAS directement des enthalpies de formation des réactifs et produits, mais de plusieurs réactions intermédiaires dont les $\\Delta_rH^\\circ$ sont connues ?",
+    "reponse": "On construit une COMBINAISON LINÉAIRE des réactions intermédiaires données, avec des coefficients choisis de sorte que la somme (pondérée) de ces réactions redonne exactement l'équation-bilan de la réaction cible (les espèces intermédiaires indésirables devant s'annuler). L'enthalpie de la réaction cible est alors la MÊME combinaison linéaire des enthalpies standard des réactions intermédiaires (linéarité de $\\Delta_r$, conséquence directe de la loi de Hess appliquée à un cycle thermodynamique plus général que la simple somme sur les $\\Delta_fH^\\circ$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD énergie de liaison) — Quelle est la différence conceptuelle entre une « enthalpie standard de formation » $\\Delta_fH^\\circ$ et une « enthalpie standard de dissociation de liaison » $\\Delta_{diss}H^\\circ$, et comment cette dernière permet-elle d'estimer $\\Delta_fH^\\circ$ d'une molécule ?",
+    "reponse": "$\\Delta_fH^\\circ$ part des CORPS SIMPLES en état standard de référence pour former une mole de composé. $\\Delta_{diss}H^\\circ(A-B)$ est l'énergie nécessaire pour BRISER une liaison $A-B$ en formant les éléments SEULS (radicaux/atomes isolés), tous les composés étant à l'état gazeux. Pour estimer $\\Delta_fH^\\circ$ d'une molécule via les énergies de liaison, on construit un cycle : (1) atomiser les corps simples (souvent via une enthalpie de sublimation/atomisation) pour obtenir les atomes gazeux isolés ; (2) former toutes les liaisons de la molécule cible à partir de ces atomes (somme des $-\\Delta_{diss}H^\\circ$ de chaque liaison, en énergie LIBÉRÉE) ; on obtient ainsi une estimation THÉORIQUE de $\\Delta_fH^\\circ$, généralement approximative."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD énergie de résonance du benzène) — Comment définit-on l'énergie de résonance du benzène à partir de deux évaluations différentes de $\\Delta_fH^\\circ(\\text{C}_6\\text{H}_6)$ ?",
+    "reponse": "On calcule $\\Delta_fH^\\circ(\\text{C}_6\\text{H}_6)$ de DEUX façons : (1) EXPÉRIMENTALEMENT, via un cycle de Hess utilisant l'enthalpie de combustion mesurée du benzène et les enthalpies de formation de CO$_2$ et H$_2$O (valeur « réelle ») ; (2) THÉORIQUEMENT, via les énergies de liaison, en supposant une structure hypothétique d'ALTERNANCE de liaisons simples C–C et doubles C=C (structure de Kekulé non délocalisée). L'énergie de résonance est la DIFFÉRENCE entre ces deux valeurs : elle représente l'énergie supplémentaire (stabilisation) gagnée par le système grâce à la délocalisation réelle des électrons $\\pi$ sur le cycle aromatique, que le modèle « alternance simple/double » ne capture pas."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode (TD grillage du minerai) — Comment détermine-t-on si une réaction exothermique peut être AUTO-ENTRETENUE thermiquement (sans apport d'énergie extérieur), une fois les réactifs introduits à une température $T_0$ et la réaction ayant lieu à une température cible $T_c$ ?",
+    "reponse": "On calcule, à l'aide du chemin fictif habituel (réaction isotherme à $T_0$ puis échauffement des réactifs), la température MAXIMALE que peut atteindre le système sous l'effet de la seule chaleur dégagée par la réaction (en supposant que cette chaleur sert intégralement à échauffer les réactifs ENTRANTS de $T_0$ à leur température finale). Si cette température calculée est SUPÉRIEURE ou ÉGALE à $T_c$ (température cible nécessaire, ici $1223\\,\\text{K}$ pour le grillage), la réaction est auto-entretenue (elle fournit assez d'énergie pour se maintenir, un système de refroidissement pouvant même être nécessaire pour évacuer l'excès). Si elle est INFÉRIEURE, il faut apporter de l'énergie supplémentaire pour porter les réactifs jusqu'à $T_c$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — L'enthalpie standard de réaction $\\Delta_rH^\\circ$ dépend de la pression à laquelle se déroule réellement la réaction.",
+    "reponse": "FAUX. Par définition, $\\Delta_rH^\\circ$ est évaluée à la pression standard $P^\\circ=1\\,\\text{bar}$ fixée — elle ne dépend QUE de la température $T$. C'est justement ce qui permet de tabuler ces grandeurs et de les utiliser ensuite pour calculer $\\Delta_rH$ à n'importe quelle pression réelle (via $\\Delta_rH=\\Delta_rH^\\circ$, vrai pour les gaz parfaits et les phases condensées incompressibles dans le cadre du programme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — Toute réaction produisant une mole d'un composé à partir de corps simples est une réaction standard de formation de ce composé.",
+    "reponse": "FAUX. Il faut EN PLUS que : le produit soit dans son état STANDARD (bon état physique, à $P^\\circ$) ; ET que les réactifs soient des corps simples pris dans leur état standard DE RÉFÉRENCE (le plus stable) à la température considérée — pas dans n'importe quel état standard. Contre-exemple du cours : $\\text{C(graphite)}+\\text{O}_2(g)\\to\\text{CO}_2(\\ell)$ n'est pas une réaction standard de formation de CO$_2$ car son état standard à $298\\,\\text{K}$ est gazeux, non liquide."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — L'enthalpie standard de formation d'un corps simple pris dans son état standard de référence est toujours nulle, quelle que soit la température.",
+    "reponse": "VRAI, à CHAQUE température $T$ où l'on considère ce corps dans son état standard de référence à cette température (la réaction de formation est triviale, sans transformation). Nuance : si l'état standard de référence change avec $T$ (ex. changement de phase), $\\Delta_fH^\\circ=0$ reste vrai pour l'état de référence à cette $T$ précise, mais il ne faut pas oublier de réévaluer quel est l'état de référence à la température considérée."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Une réaction endothermique signifie que le système cède de la chaleur au milieu extérieur.",
+    "reponse": "FAUX, c'est l'inverse. Une réaction ENDOTHERMIQUE ($\\Delta_rH^\\circ>0$) signifie que le système REÇOIT de la chaleur du milieu extérieur ($Q>0$ dans le sens direct) pour que la transformation ait lieu à température constante. Une réaction qui CÈDE de la chaleur ($Q<0$) est EXOTHERMIQUE ($\\Delta_rH^\\circ<0$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — Dans le calcul d'une température de flamme, seuls les produits de la réaction doivent être échauffés lors de la deuxième étape du chemin fictif.",
+    "reponse": "FAUX. Il faut échauffer TOUS les constituants du système final : les PRODUITS, mais aussi les RÉACTIFS EN EXCÈS (non consommés) et les COMPOSANTS INERTES (qui ne réagissent pas mais absorbent de la chaleur, comme le diazote de l'air dans une combustion) — tous contribuent à $\\Delta H_2=\\sum_i n_iC_{p,m,i}\\Delta T$, ce qui a un effet non négligeable sur la température de flamme atteinte (plus il y a d'inertes à chauffer, plus la température de flamme est basse)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Le chemin fictif en deux étapes utilisé pour calculer une température de flamme correspond exactement au déroulement réel de la réaction dans le temps.",
+    "reponse": "FAUX. C'est un artifice de calcul, rendu licite par le fait que $H$ est une FONCTION D'ÉTAT (donc $\\Delta H$ ne dépend que des états initial et final, pas du chemin parcouru). Dans la réalité, la température et l'avancement de la réaction varient SIMULTANÉMENT et de façon couplée — le chemin réel n'est ni isotherme-puis-échauffement, ni connu explicitement, d'où l'intérêt de ce détour par un chemin fictif calculable."
   }
 ]
