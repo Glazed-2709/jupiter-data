@@ -3834,24 +3834,24 @@
           "color": "hsl(19.1,100%,56%)"
         },
         {
-          "name": "Corde Vibrante",
-          "path": "Physique/Corde Vibrante",
+          "name": "Ondes",
+          "path": "Physique/Ondes",
           "description": "",
           "children": [
             {
               "name": "Cours",
-              "path": "Physique/Corde Vibrante/Cours",
+              "path": "Physique/Ondes/Cours",
               "description": "",
               "children": [],
               "files": [
                 {
                   "name": "8_Ondes_Stationnaires.pdf",
-                  "path": "Physique/Corde%20Vibrante/Cours/8_Ondes_Stationnaires.pdf",
+                  "path": "Physique/Ondes/Cours/8_Ondes_Stationnaires.pdf",
                   "corrige": false
                 },
                 {
                   "name": "Corde_vibrante.pdf",
-                  "path": "Physique/Corde%20Vibrante/Cours/Corde_vibrante.pdf",
+                  "path": "Physique/Ondes/Cours/Corde_vibrante.pdf",
                   "corrige": false
                 }
               ],
@@ -3864,13 +3864,13 @@
             },
             {
               "name": "TD",
-              "path": "Physique/Corde Vibrante/TD",
+              "path": "Physique/Ondes/TD",
               "description": "",
               "children": [],
               "files": [
                 {
                   "name": "TD6_Corde_vibrante.pdf",
-                  "path": "Physique/Corde%20Vibrante/TD/TD6_Corde_vibrante.pdf",
+                  "path": "Physique/Ondes/TD/TD6_Corde_vibrante.pdf",
                   "corrige": false
                 }
               ],
@@ -3885,104 +3885,214 @@
           "files": [],
           "questions": [
             {
-              "type": "Définition",
-              "enonce": "Quelles sont les hypothèses simplificatrices usuelles sous-jacentes à l'établissement de l'équation de d'Alembert pour une corde vibrante ?",
-              "reponse": "Les hypothèses sont : 1) La corde est inextensible (longueur $L$ constante). 2) On néglige l'effet de la pesanteur (corde horizontale à l'équilibre). 3) Le déplacement est purement transversal : $y(x,t) \\vec{u}_y$. 4) L'angle $\\alpha(x,t)$ formé avec l'horizontale reste très faible ($|\\alpha| \\ll 1$), ce qui permet de limiter les calculs au premier ordre en $\\alpha$. 5) La corde est infiniment souple (aucune résistance à la déformation). 6) Le référentiel d'étude est supposé galiléen."
+              "type": "Question",
+              "enonce": "Hypothèses 1/2 — Lister les hypothèses du modèle de la corde vibrante (cours 1), et préciser la validité de l'hypothèse « corde horizontale à l'équilibre ».",
+              "reponse": "Hypothèses : corde inextensible (longueur $L$ constante) ; pesanteur négligée (corde horizontale à l'équilibre) ; déplacement d'un point uniquement suivant $(Oy)$, noté $y(x,t)$ ; angle $\\alpha(x,t)$ avec l'horizontale FAIBLE, $|\\alpha|\\ll1$ (calculs au premier ordre en $\\alpha$) ; référentiel terrestre galiléen ; corde infiniment souple (aucune résistance à sa déformation). Validité de l'horizontalité : vraie tant que la force de TENSION tendant la corde est GRANDE devant son POIDS."
             },
             {
-              "type": "Démonstration",
-              "enonce": "En appliquant le principe fondamental de la dynamique (PFD) à un élément infinitésimal de corde de masse linéique $\\mu$ entre $x$ et $x+dx$, sous tension $T_0$, démontrer l'équation de d'Alembert pour le déplacement transversal $y(x,t)$.",
-              "reponse": "Le bilan des forces sur l'élément de corde de masse $dm = \\mu dx$ s'écrit : $dm \\frac{\\partial^2 y}{\\partial t^2} \\vec{u}_y = \\vec{T}(x+dx,t) - \\vec{T}(x,t)$ avec $\\vec{T}(x,t) = T(x,t)(\\cos\\alpha \\vec{u}_x + \\sin\\alpha \\vec{u}_y)$. La projection sur $(Ox)$ donne $\\frac{\\partial(T\\cos\\alpha)}{\\partial x} = 0$, soit au premier ordre $T(x,t) = T_0 = \\text{cte}$. La projection sur $(Oy)$ donne $\\mu dx \\frac{\\partial^2 y}{\\partial t^2} = T_0 \\sin\\alpha(x+dx,t) - T_0 \\sin\\alpha(x,t) = T_0 \\frac{\\partial \\sin\\alpha}{\\partial x} dx \\approx T_0 \\frac{\\partial \\alpha}{\\partial x} dx$. Comme au premier ordre $\\alpha \\approx \\tan\\alpha = \\frac{\\partial y}{\\partial x}$, on obtient $\\mu \\frac{\\partial^2 y}{\\partial t^2} = T_0 \\frac{\\partial^2 y}{\\partial x^2}$, soit $\\frac{\\partial^2 y}{\\partial t^2} - \\frac{T_0}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} = 0$."
+              "type": "Question",
+              "enonce": "Hypothèses 2/2 — Justifier pourquoi on peut assimiler la longueur $\\delta\\ell$ d'un élément de corde à $\\mathrm{d}x$ au premier ordre en $\\alpha$.",
+              "reponse": "Par le théorème de Pythagore, $\\delta\\ell=\\sqrt{\\mathrm{d}x^2+\\mathrm{d}y^2}=\\mathrm{d}x\\sqrt{1+\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)^2}=\\mathrm{d}x\\sqrt{1+\\alpha^2} = \\mathrm{d}x$ au premier ordre en $\\alpha$ (puisque $\\sqrt{1+\\alpha^2}\\approx1+O(\\alpha^2)$, négligeable au premier ordre)."
             },
             {
-              "type": "Formule",
-              "enonce": "Donner la définition de la célérité $c$ des ondes sur une corde vibrante de masse linéique $\\mu$ sous tension $T_0$, ainsi que sa dimension.",
-              "reponse": "$c = \\sqrt{\\frac{T_0}{\\mu}}$. Par analyse dimensionnelle, $[c] = L \\cdot T^{-1}$ (homogène à une vitesse)."
+              "type": "Question",
+              "enonce": "Mise en équation 1/3 — Après application du PFD à un élément de corde et décomposition de $\\vec{T}(x,t)=T(x,t)(\\cos\\alpha\\,\\vec{u_x}+\\sin\\alpha\\,\\vec{u_y})$, écrire le système obtenu par projection sur $(Ox)$ et $(Oy)$.",
+              "reponse": "$\\begin{cases} \\dfrac{\\partial(T\\cos\\alpha)}{\\partial x}=0 \\\\ \\mu\\dfrac{\\partial^2y}{\\partial t^2}=\\dfrac{\\partial(T\\sin\\alpha)}{\\partial x} \\end{cases}$, obtenu en développant $T(x+\\mathrm{d}x,t)-T(x,t)$ à l'ordre 1 en $\\mathrm{d}x$ sur chaque composante."
             },
             {
-              "type": "Définition",
-              "enonce": "Définir une onde plane, une onde transverse et une onde longitudinale. À quel type appartient l'onde se propageant sur une corde vibrante ?",
-              "reponse": "- Onde plane : la perturbation ne dépend que d'une seule coordonnée d'espace (notée $x$).\\n- Onde transverse : la direction de la perturbation est perpendiculaire à la direction de propagation (la perturbation est suivant $\\vec{u}_y$ alors que la propagation s'effectue suivant $\\vec{u}_x$).\\n- Onde longitudinale : la direction de la perturbation est colinéaire à la direction de propagation.\\nL'onde sur la corde vibrante est une onde plane et transverse."
+              "type": "Question",
+              "enonce": "Mise en équation 2/3 — En utilisant les développements limités $\\cos\\alpha\\approx1$ et $\\sin\\alpha\\approx\\alpha$ au premier ordre, que devient chacune des deux équations projetées ?",
+              "reponse": "Projection sur $(Ox)$ : $\\dfrac{\\partial T(x,t)}{\\partial x}=0$, d'où $T(x,t)=T_0$ constante (au premier ordre en $\\alpha$, en supposant la tension constante au point d'attache) — LA TENSION NE DÉPEND PAS DE $x$. Projection sur $(Oy)$ : $\\mu\\dfrac{\\partial^2y}{\\partial t^2}=T_0\\dfrac{\\partial\\alpha}{\\partial x}$."
             },
             {
-              "type": "Théorème",
-              "enonce": "Énoncer la forme générale des solutions de l'équation de d'Alembert unidimensionnelle (théorème de d'Alembert) et donner l'interprétation physique de chacun des termes.",
-              "reponse": "Toute solution de l'équation de d'Alembert unidimensionnelle se met sous la forme : $y(x,t) = f(x - ct) + g(x + ct)$. Le terme $f(x - ct)$ représente une onde progressive se propageant sans déformation suivant l'axe $(Ox)$ dans le sens des $x$ croissants à la vitesse $c$. Le terme $g(x + ct)$ représente une onde progressive se propageant sans déformation suivant l'axe $(Ox)$ dans le sens des $x$ décroissants à la vitesse $c$."
+              "type": "Question",
+              "enonce": "Mise en équation 3/3 — En exprimant $\\alpha$ en fonction de $y$ (au premier ordre), établir l'équation de d'Alembert et l'expression de la célérité $c$.",
+              "reponse": "$\\tan\\alpha=\\dfrac{\\partial y}{\\partial x}$, et au premier ordre $\\alpha\\approx\\tan\\alpha=\\dfrac{\\partial y}{\\partial x}$. En substituant : $\\mu\\dfrac{\\partial^2y}{\\partial t^2}=T_0\\dfrac{\\partial^2y}{\\partial x^2}$, soit $\\dfrac{\\partial^2y}{\\partial t^2}-c^2\\dfrac{\\partial^2y}{\\partial x^2}=0$ (équation de d'Alembert) avec $c=\\sqrt{T_0/\\mu}$ (homogène à une vitesse par analyse dimensionnelle de $T_0/\\mu$, en $\\text{N}/(\\text{kg}\\cdot\\text{m}^{-1})=\\text{m}^2\\cdot\\text{s}^{-2}$)."
             },
             {
-              "type": "Propriété",
-              "enonce": "Rappeler les relations reliant la longueur d'onde $\\lambda$ au vecteur d'onde $k$, et la période $T$ à la pulsation $\\omega$ pour une onde progressive harmonique.",
-              "reponse": "La périodicité spatiale est reliée au vecteur d'onde par : $|k|\\lambda = 2\\pi$.\\nLa périodicité temporelle est reliée à la pulsation par : $\\omega T = 2\\pi$."
+              "type": "Question",
+              "enonce": "Ondes plane/transverse/longitudinale — Définir ces trois types d'onde, et préciser à quelle catégorie appartient l'onde le long d'une corde vibrante.",
+              "reponse": "Onde PLANE : la perturbation ne dépend que d'une seule coordonnée d'espace (même valeur quel que soit $x$ dans un milieu multidimensionnel — indépendant de sa dépendance TEMPORELLE). Onde TRANSVERSE : direction de la perturbation PERPENDICULAIRE à la direction de propagation. Onde LONGITUDINALE : direction de la perturbation COLINÉAIRE à la propagation. L'onde le long de la corde est TRANSVERSE (perturbation suivant $\\vec{u_y}$, propagation suivant $\\vec{u_x}$)."
             },
             {
-              "type": "Formule",
-              "enonce": "En notation complexe, si la grandeur réelle est de la forme $y(x,t) = y_0 \\cos(\\omega t - kx + \\phi_0)$, par quels opérateurs multiplicatifs se traduisent les dérivées partielles $\\frac{\\partial}{\\partial t}$ et $\\frac{\\partial}{\\partial x}$ ?",
-              "reponse": "Pour la grandeur complexe associée $\\underline{y}(x,t) = \\underline{y}_0 \\exp(j(\\omega t - kx))$, les dérivations se traduisent par : $\\frac{\\partial}{\\partial t} \\leftrightarrow j\\omega$ et $\\frac{\\partial}{\\partial x} \\leftrightarrow -jk$."
+              "type": "Question",
+              "enonce": "Solutions générales 1/2 — Montrer que toute fonction $f(x-ct)$ est solution de l'équation de d'Alembert unidimensionnelle (calcul des dérivées partielles).",
+              "reponse": "En posant $u=x-ct$ : $\\dfrac{\\partial f}{\\partial t}=-c\\dfrac{\\mathrm{d}f}{\\mathrm{d}u} \\Rightarrow \\dfrac{\\partial^2f}{\\partial t^2}=c^2\\dfrac{\\mathrm{d}^2f}{\\mathrm{d}u^2}$ ; $\\dfrac{\\partial f}{\\partial x}=\\dfrac{\\mathrm{d}f}{\\mathrm{d}u} \\Rightarrow \\dfrac{\\partial^2f}{\\partial x^2}=\\dfrac{\\mathrm{d}^2f}{\\mathrm{d}u^2}$. On vérifie donc $\\dfrac{\\partial^2f}{\\partial t^2}=c^2\\dfrac{\\partial^2f}{\\partial x^2}$, soit $f(x-ct)$ solution de l'équation de d'Alembert, quelle que soit la fonction $f$."
             },
             {
-              "type": "Propriété",
-              "enonce": "Établir l'équation de dispersion pour une onde progressive harmonique vérifiant l'équation de d'Alembert unidimensionnelle, et expliciter les deux solutions possibles pour le vecteur d'onde $k$.",
-              "reponse": "En injectant la solution complexe dans l'équation de d'Alembert $\\frac{\\partial^2 y}{\\partial t^2} - c^2 \\frac{\\partial^2 y}{\\partial x^2} = 0$, on obtient : $(j\\omega)^2 \\underline{y} - c^2 (-jk)^2 \\underline{y} = 0 \\implies (\\omega^2 - c^2 k^2)\\underline{y} = 0$, d'où l'équation de dispersion : $\\omega^2 = c^2 k^2$.\\nLes deux solutions possibles pour $k$ sont :\\n- $k = \\frac{\\omega}{c}$ : propagation suivant les $x$ croissants\\n- $k = -\\frac{\\omega}{c}$ : propagation suivant les $x$ décroissants."
+              "type": "Question",
+              "enonce": "Solutions générales 2/2 — Énoncer la forme générale admise pour toute solution de l'équation de d'Alembert unidimensionnelle, et le piège classique sur la superposition.",
+              "reponse": "Toute solution s'écrit $y(x,t)=f(x-ct)+g(x+ct)$ (deux ondes progressives). PIÈGE : la SUPERPOSITION de deux ondes progressives n'est en général PAS elle-même une onde progressive — $y(x,t)$ globale n'a donc en général pas la forme d'une seule onde progressive simple."
             },
             {
-              "type": "Formule",
-              "enonce": "Définir la vitesse de phase $v_\\phi$ d'une onde progressive harmonique de pulsation $\\omega$ et de vecteur d'onde $k$. Quelle est sa valeur dans le cas de l'équation de d'Alembert ?",
-              "reponse": "$v_\\phi = \\frac{\\omega}{k}$. Dans le cas de l'équation de d'Alembert, la relation de dispersion impose $\\omega = \\pm ck$, ce qui donne $v_\\phi = c$ (vitesse de phase indépendante de la fréquence, le milieu n'est pas dispersif)."
+              "type": "Question",
+              "enonce": "Interprétation physique — Justifier pourquoi $f(x-ct)$ correspond à une onde se propageant SANS DÉFORMATION dans le sens des $x$ CROISSANTS à la vitesse $c$, et donner l'interprétation symétrique pour $g(x+ct)$.",
+              "reponse": "$f(x-ct_0)$ est la courbe $f(x)$ TRANSLATÉE de $ct_0$ dans le sens des $x$ croissants (même forme, décalée) : l'onde se propage donc sans déformation à la vitesse $c$ vers les $x$ croissants — d'où le terme « progressive » (propagation SANS déformation). Symétriquement, $g(x+ct)$ correspond à $g(x)$ translatée de $-ct_0$ : propagation SANS déformation vers les $x$ DÉCROISSANTS, à la même vitesse $c$."
             },
             {
-              "type": "Propriété",
-              "enonce": "Démontrer qu'il n'y a pas de modification de la fréquence de l'onde lors de sa réflexion sur un obstacle immobile en $x = 0$.",
-              "reponse": "La corde étant fixée en $x = 0$, la condition aux limites impose $y(0,t) = 0 \\ \\forall t$. En notation complexe : $y_{i,m} \\exp(j\\omega_i t) + y_{r,m} \\exp(j\\omega_r t) = 0 \\ \\forall t$. Pour que cette relation soit vérifiée quel que soit $t$, il faut nécessairement que les pulsations soient égales, soit $\\omega_i = \\omega_r = \\omega$. Il n'y a donc pas de modification de la fréquence lors de la réflexion sur un obstacle immobile."
+              "type": "Question",
+              "enonce": "Onde progressive sinusoïdale — Écrire l'expression générale d'une onde progressive sinusoïdale, et préciser le signe de $k$ selon le sens de propagation.",
+              "reponse": "$y(x,t)=y_0\\cos(\\omega t-kx+\\varphi_0)$, avec $\\omega>0$ la pulsation et $k$ le vecteur d'onde ($\\varphi_0$ phase à l'origine). $k>0$ pour une propagation suivant les $x$ CROISSANTS ; $k<0$ pour une propagation suivant les $x$ DÉCROISSANTS."
             },
             {
-              "type": "Formule",
-              "enonce": "Donner l'expression générale d'une onde stationnaire harmonique réelle.",
-              "reponse": "$y(x,t) = y_m \\cos(\\omega t + \\phi) \\cos(kx + \\psi)$ où $y_m$, $\\omega$, $\\phi$, $k$, et $\\psi$ sont des constantes réelles. Elle s'obtient par la superposition de deux ondes progressives se propageant dans des sens opposés."
+              "type": "Question",
+              "enonce": "Double périodicité — Énoncer les relations de périodicité spatiale ($\\lambda$) et temporelle ($T$) d'une onde progressive harmonique, et l'effet d'un décalage en $x$ ou en $t$ sur la phase.",
+              "reponse": "Périodicité spatiale : $|k|\\lambda=2\\pi$. Périodicité temporelle : $\\omega T=2\\pi$. Un décalage temporel $t_2-t_1$ entraîne un déphasage $\\omega(t_2-t_1)$ ; un décalage spatial $x_2-x_1$ entraîne un déphasage $|k|(x_2-x_1)$."
             },
             {
-              "type": "Définition",
-              "enonce": "Définir un nœud et un ventre de vibration pour une onde stationnaire. Quelle est la distance séparant deux nœuds consécutifs ?",
-              "reponse": "- Les nœuds sont les points de l'espace où l'amplitude de vibration est nulle pour tout $t$ ($y(x,t) = 0 \\ \\forall t$).\\n- Les ventres sont les points de l'espace où l'amplitude de vibration est maximale.\\nLa distance entre deux nœuds consécutifs (ou entre deux ventres consécutifs) est égale à $\\frac{\\lambda}{2}$."
+              "type": "Question",
+              "enonce": "Notation complexe — Donner l'expression complexe $\\underline{y}$ associée à $y(x,t)=y_0\\cos(\\omega t-kx+\\varphi_0)$, et les règles de dérivation en notation complexe.",
+              "reponse": "$\\underline{y}=\\underline{y_0}\\exp(j(\\omega t-kx))$, avec $\\underline{y_0}=y_0\\exp(j\\varphi_0)$ l'amplitude complexe. Règles : $\\dfrac{\\partial}{\\partial t}\\leftrightarrow j\\omega$ et $\\dfrac{\\partial}{\\partial x}\\leftrightarrow -jk$ (pour une onde en $\\omega t-kx$ — ATTENTION, le signe de la dérivation spatiale change si le signal est écrit sous la forme $\\cos(kx-\\omega t+\\varphi_0)$)."
             },
             {
-              "type": "Démonstration",
-              "enonce": "Démontrer la quantification du vecteur d'onde $k_n$ pour une corde fixée à ses deux extrémités en $x=0$ et $x=L$, à partir de la recherche de solutions sous forme de variables séparées $y(x,t) = f(x)g(t)$.",
-              "reponse": "En injectant $y(x,t) = f(x)g(t)$ dans l'équation de d'Alembert, on obtient : $\\frac{1}{c^2}\\frac{g''(t)}{g(t)} = \\frac{f''(x)}{f(x)} = K = \\text{cte}$.\\nPour avoir des solutions physiques non divergentes, on pose $K = -k^2 < 0$, ce qui mène à $f(x) = A\\cos(kx) + B\\sin(kx)$.\\nLa condition aux limites en $x=0$ impose $f(0) = 0 \\implies A = 0$, d'où $f(x) = B\\sin(kx)$.\\nLa condition aux limites en $x=L$ impose $f(L) = 0 \\implies B\\sin(kL) = 0$. Pour obtenir une solution non triviale ($B \\neq 0$), il faut $\\sin(kL) = 0$, ce qui impose $kL = n\\pi$, d'où la quantification du vecteur d'onde : $k_n = \\frac{n\\pi}{L}$ avec $n \\in \\mathbb{Z}^*$."
+              "type": "Question",
+              "enonce": "Équation de dispersion et vitesse de phase — Définir l'équation de dispersion, la méthode pour l'obtenir, et démontrer que la vitesse de phase $v_\\varphi=\\omega/k$ correspond bien à la vitesse de déplacement d'un plan de phase constante.",
+              "reponse": "Équation de dispersion : relation entre $\\omega$ et $k$ pour qu'une onde progressive soit solution de l'équation de propagation ; méthode : injecter la solution complexe dans l'équation de propagation (ici $(j\\omega)^2-c^2(-jk)^2=0 \\Rightarrow \\omega^2=c^2k^2$, soit $k=\\pm\\omega/c$). Vitesse de phase : en posant $\\Phi(x,t)=\\omega t-kx+\\varphi_0$ et en différenciant $\\Phi=\\Phi_0=\\text{cste}$ : $\\omega\\,\\mathrm{d}t-k\\,\\mathrm{d}x=0 \\Rightarrow \\dfrac{\\mathrm{d}x}{\\mathrm{d}t}=\\dfrac{\\omega}{k}=v_\\varphi$ — c'est la vitesse à laquelle se déplace un plan de phase constante. Pour l'équation de d'Alembert, $v_\\varphi=c$."
             },
             {
-              "type": "Propriété",
-              "enonce": "Pour une corde de longueur $L$ fixée à ses deux extrémités, donner les expressions des pulsations propres $\\omega_n$ et des fréquences propres $f_n$ associées aux modes propres de vibration.",
-              "reponse": "Les vecteurs d'ondes possibles étant $k_n = \\frac{n\\pi}{L}$, on a :\\n- Pulsations propres : $\\omega_n = n \\frac{\\pi c}{L}$ avec $n \\in \\mathbb{N}^*$\\n- Fréquences propres : $f_n = \\frac{nc}{2L}$ avec $n \\in \\mathbb{N}^*$."
+              "type": "Question",
+              "enonce": "Ondes stationnaires 1/5 — Pour une corde fixée en $x=0$, en imposant $y(0,t)=0$ à une superposition d'onde incidente et réfléchie, montrer que les pulsations et vecteurs d'onde incident/réfléchi sont nécessairement égaux.",
+              "reponse": "$y(0,t)=y_{i,m}\\exp(j\\omega_it)+y_{r,m}\\exp(j\\omega_rt)=0$ devant être vraie $\\forall t$, cela impose $\\omega_i=\\omega_r=\\omega$ (PAS de modification de fréquence à la réflexion sur un obstacle IMMOBILE — contrairement à un obstacle mobile où l'effet Doppler modifierait la fréquence). Par la relation de dispersion $c=\\omega/k_i=\\omega/k_r$, on en déduit aussi $k_i=k_r=k$ (pas de modification du vecteur d'onde non plus)."
             },
             {
-              "type": "Formule",
-              "enonce": "Écrire l'expression de la solution générale $y(x,t)$ des vibrations d'une corde fixée à ses deux extrémités $x=0$ et $x=L$ sous forme d'une somme de modes propres.",
-              "reponse": "$y(x,t) = \\sum_{n=1}^{\\infty} y_{m,n} \\cos\\left(\\frac{n\\pi c}{L} t + \\phi_n\\right) \\sin\\left(\\frac{n\\pi}{L} x\\right)$"
+              "type": "Question",
+              "enonce": "Ondes stationnaires 2/5 — Sachant que $y_{i,m}+y_{r,m}=0$ (condition en $x=0$), établir l'expression finale de l'onde stationnaire réelle $y(x,t)$.",
+              "reponse": "$y_{r,m}=-y_{i,m}$, d'où $\\underline{y}=y_{i,m}\\exp(j\\omega t)(\\exp(-jkx)-\\exp(jkx))=-2jy_{i,m}\\exp(j\\omega t)\\sin(kx)$. En posant $2y_{i,m}=y_{0,m}\\exp(j\\varphi)$ et en prenant la partie réelle : $y(x,t)=y_{0,m}\\sin(\\omega t+\\varphi)\\sin(kx)$ — le produit d'une fonction du TEMPS SEUL par une fonction de l'ESPACE SEUL est la signature d'une onde STATIONNAIRE."
             },
             {
-              "type": "Calcul",
-              "enonce": "Dans l'expérience de la corde de Melde, le vibreur impose en $x=0$ un déplacement $y(0,t) = a_0 \\cos(\\omega_0 t)$ et l'extrémité $x=L$ est fixée ($y(L,t) = 0$). Donner l'expression du déplacement réel $y(x,t)$ obtenu.",
-              "reponse": "$y(x,t) = \\frac{a_0}{\\sin(kL)} \\cos(\\omega_0 t) \\sin(k(L-x))$ avec $k = \\frac{\\omega_0}{c}$."
+              "type": "Question",
+              "enonce": "Ondes stationnaires 3/5 — Écrire la forme générale d'une onde stationnaire HARMONIQUE, et préciser comment elle est obtenue à partir d'ondes progressives.",
+              "reponse": "$y(x,t)=y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$. Elle est obtenue par SUPERPOSITION de deux ondes progressives harmoniques de même amplitude, même pulsation, se propageant dans des sens OPPOSÉS."
             },
             {
-              "type": "Démonstration",
-              "enonce": "Démontrer que la puissance mécanique instantanée $P_{\\text{méca}}(x,t)$ transférée en $x$ à travers la corde dans le sens des $x$ croissants s'exprime par $P_{\\text{méca}}(x,t) = -T \\frac{\\partial z}{\\partial t} \\frac{\\partial z}{\\partial x}$.",
-              "reponse": "La force exercée par la partie gauche de la corde sur la partie droite en $x$ est l'opposé de la force de tension $\\vec{T}_d(x,t)$, soit : $\\vec{F}_{g \\to d} = -\\vec{T}_d(x,t) \\approx -T(\\vec{u}_x + \\frac{\\partial z}{\\partial x} \\vec{u}_y)$.\\nLe point d'application de cette force se déplace à la vitesse transversale $\\vec{v} = \\frac{\\partial z}{\\partial t} \\vec{u}_y$.\\nLa puissance transférée vers les $x$ croissants est la puissance de cette force : $P_{\\text{méca}} = \\vec{F}_{g \\to d} \\cdot \\vec{v} = -T \\frac{\\partial z}{\\partial t} \\frac{\\partial z}{\\partial x}$."
+              "type": "Question",
+              "enonce": "Ondes stationnaires 4/5 — Définir nœud et ventre d'une onde stationnaire, et démontrer que la distance entre deux nœuds consécutifs vaut $\\lambda/2$.",
+              "reponse": "Nœud : point où l'amplitude de vibration est NULLE $\\forall t$. Ventre : point où l'amplitude est MAXIMALE. Démonstration : les nœuds vérifient $\\sin(kx)=0 \\Rightarrow kx=m\\pi$, $m\\in\\mathbb{Z}$, soit $x=\\dfrac{m\\pi}{k}=\\dfrac{m\\lambda\\pi}{2\\pi}=m\\dfrac{\\lambda}{2}$ (en utilisant $k=2\\pi/\\lambda$) : les nœuds (comme les ventres, par un argument symétrique) sont espacés de $\\lambda/2$."
             },
             {
-              "type": "Propriété",
-              "enonce": "Pour une corde de masse linéique $\\mu$ et sous tension $T$, exprimer l'énergie cinétique linéique $e_c$, l'énergie potentielle linéique $e_p$ et l'énergie mécanique linéique $e_m$.",
-              "reponse": "- Énergie cinétique linéique : $e_c = \\frac{1}{2}\\mu \\left(\\frac{\\partial z}{\\partial t}\\right)^2$\\n- Énergie potentielle linéique : $e_p = \\frac{1}{2}T \\left(\\frac{\\partial z}{\\partial x}\\right)^2$\\n- Énergie mécanique linéique : $e_m = e_c + e_p = \\frac{1}{2}\\mu \\left(\\frac{\\partial z}{\\partial t}\\right)^2 + \\frac{1}{2}T \\left(\\frac{\\partial z}{\\partial x}\\right)^2$."
+              "type": "Question",
+              "enonce": "Ondes stationnaires 5/5 — Énoncer la forme générale $y(x,t)=f(x)g(t)$ d'une onde stationnaire QUELCONQUE (pas nécessairement harmonique), et le résultat de décomposition qui lui est associé (théorème de Fourier).",
+              "reponse": "Une onde stationnaire se met toujours sous la forme $y(x,t)=f(x)g(t)$ (produit d'une fonction de $x$ seule et d'une fonction de $t$ seule). Une telle onde peut TOUJOURS s'exprimer comme une SUPERPOSITION d'ondes stationnaires HARMONIQUES (théorème de Fourier) — c'est-à-dire une somme (éventuellement infinie) de modes de la forme $y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$."
             },
             {
-              "type": "Théorème",
-              "enonce": "Établir l'équation locale de conservation de l'énergie mécanique (bilan local de puissance) pour un élément de corde en l'absence de pertes.",
-              "reponse": "Le bilan local s'écrit : $\\frac{\\partial P_{\\text{méca}}}{\\partial x} + \\frac{\\partial e_m}{\\partial t} = 0$. En effet, en dérivant $e_m$ par rapport à $t$, on obtient : $\\frac{\\partial e_m}{\\partial t} = \\mu \\frac{\\partial z}{\\partial t}\\frac{\\partial^2 z}{\\partial t^2} + T \\frac{\\partial z}{\\partial x}\\frac{\\partial^2 z}{\\partial x \\partial t}$. En utilisant l'équation de d'Alembert $\\mu \\frac{\\partial^2 z}{\\partial t^2} = T \\frac{\\partial^2 z}{\\partial x^2}$, on obtient : $\\frac{\\partial e_m}{\\partial t} = T \\frac{\\partial z}{\\partial t}\\frac{\\partial^2 z}{\\partial x^2} + T \\frac{\\partial z}{\\partial x}\\frac{\\partial^2 z}{\\partial x \\partial t} = \\frac{\\partial}{\\partial x}\\left( T \\frac{\\partial z}{\\partial t}\\frac{\\partial z}{\\partial x} \\right) = -\\frac{\\partial P_{\\text{méca}}}{\\partial x}$."
+              "type": "Question",
+              "enonce": "Séparation des variables 1/4 — En injectant $y(x,t)=f(x)g(t)$ dans l'équation de d'Alembert, montrer comment on aboutit à deux équations différentielles séparées, reliées par une constante $K$.",
+              "reponse": "$g''(t)f(x)-c^2g(t)f''(x)=0 \\Rightarrow \\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=\\dfrac{f''(x)}{f(x)}$. Le membre de gauche ne dépend QUE de $t$, celui de droite QUE de $x$ ; les variables $x,t$ étant indépendantes et l'égalité devant être vraie pour tout $x,t$, les deux membres sont nécessairement égaux à une même CONSTANTE $K$ : $\\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=\\dfrac{f''(x)}{f(x)}=K=\\text{cste}$."
             },
             {
-              "type": "Exercice",
-              "enonce": "Soit une corde de longueur $\\ell$ attachée en $x=0$ et dont la seconde extrémité en $x=\\ell$ est libre de se déplacer verticalement via un anneau sans frottement coulissant sur une tige verticale. Écrire les deux conditions aux limites.",
-              "reponse": "- En $x = 0$ : l'extrémité est fixe, donc $y(0,t) = 0$.\\n- En $x = \\ell$ : l'absence de force transversale exercée par l'anneau de masse quasi-nulle impose une tangente verticale horizontale, soit $\\frac{\\partial y}{\\partial x}(\\ell,t) = 0$."
+              "type": "Question",
+              "enonce": "Séparation des variables 2/4 — Pour une corde fixée aux deux extrémités ($f(0)=f(L)=0$), pourquoi les cas $K=0$ et $K>0$ ne conduisent-ils à AUCUNE solution physiquement acceptable ?",
+              "reponse": "$K=0$ : $f''(x)=0 \\Rightarrow f(x)=Ax+B$ ; $f(0)=0\\Rightarrow B=0$, $f(L)=0\\Rightarrow A=0$, donc $f\\equiv0$ (pas d'onde). $K>0$ (posé $K=\\kappa^2$) : $f(x)=A\\cosh(\\kappa x)+B\\sinh(\\kappa x)$ ; $f(0)=0\\Rightarrow A=0$, mais $\\sinh$ ne s'annule QU'EN $x=0$ (fonction strictement monotone, sans autre zéro) — impossible de vérifier $f(L)=0$ avec $B\\ne0$, donc de nouveau $f\\equiv0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Séparation des variables 3/4 — Pour le cas $K<0$ (posé $K=-k^2$), résoudre $f''(x)+k^2f(x)=0$ avec les conditions aux limites $f(0)=f(L)=0$, et en déduire la quantification de $k$.",
+              "reponse": "$f(x)=A\\cos(kx)+B\\sin(kx)$. $f(0)=0\\Rightarrow A=0$, donc $f(x)=B\\sin(kx)$. $f(L)=0\\Rightarrow \\sin(kL)=0 \\Rightarrow kL=n\\pi \\Rightarrow k_n=\\dfrac{n\\pi}{L}$, $n\\in\\mathbb{Z}^*$ : c'est la QUANTIFICATION du vecteur d'onde imposée par les conditions aux limites."
+            },
+            {
+              "type": "Question",
+              "enonce": "Séparation des variables 4/4 — Résoudre l'équation en $g(t)$ associée à $K=-k^2$, et identifier le type d'équation obtenue.",
+              "reponse": "$\\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=-k^2 \\Rightarrow g''(t)+k^2c^2g(t)=0$ : c'est une équation d'OSCILLATEUR HARMONIQUE de pulsation $\\omega=kc$ (on retrouve la relation de dispersion). Solution : $g(t)=C'\\cos(\\omega t+\\varphi)=C'\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi\\right)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Modes propres — Écrire l'expression des vecteurs d'onde $k_n$, pulsations $\\omega_n$ et fréquences propres $f_n$ pour une corde fixée aux deux extrémités, ainsi que la forme du mode propre $n$.",
+              "reponse": "$k_n=\\dfrac{n\\pi}{L}$, $\\omega_n=n\\dfrac{\\pi c}{L}$, $f_n=\\dfrac{nc}{2L}$ ($n\\in\\mathbb{N}^*$). Mode propre $n$ : $y_n(x,t)=y_{n,m}\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi_n\\right)\\sin\\left(\\dfrac{n\\pi}{L}x\\right)$, avec $\\varphi_n$ fixée par les conditions initiales. IMPORTANT : les modes propres dépendent des conditions aux limites — chaque jeu de conditions aux limites a son propre jeu de modes propres."
+            },
+            {
+              "type": "Question",
+              "enonce": "Interprétation géométrique et solution générale — Exprimer $\\lambda_n$ en fonction de $L$ et $n$ pour une corde fixée aux deux extrémités, et écrire la solution générale des vibrations sur la corde.",
+              "reponse": "$\\lambda_n=\\dfrac{2\\pi}{k_n}=\\dfrac{2L}{n} \\Rightarrow L=n\\dfrac{\\lambda_n}{2}$ (la longueur de la corde contient un nombre ENTIER de demi-longueurs d'onde). Solution générale, par LINÉARITÉ de l'équation de d'Alembert (toute combinaison linéaire de solutions est solution) : $y(x,t)=\\displaystyle\\sum_{n=1}^{\\infty} y_{m,n}\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi_n\\right)\\sin\\left(\\dfrac{n\\pi}{L}x\\right)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Corde de Melde 1/3 — Rappeler les deux conditions aux limites de l'expérience de Melde, et la valeur de $\\omega$ imposée par la première.",
+              "reponse": "En $x=0$ : le vibreur impose $y(0,t)=a_0\\cos(\\omega_0t)$ (mouvement forcé imposé). En $x=L$ : la corde est fixée, $y(L,t)=0$. La première condition impose, comme pour la réflexion simple, $\\omega=\\omega_0$ (la corde oscille à la pulsation IMPOSÉE par le vibreur, pas à une pulsation propre)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Corde de Melde 2/3 — Donner l'expression finale du signal réel $y(x,t)$ obtenu (après résolution du système à deux conditions aux limites), et identifier sa nature.",
+              "reponse": "$y(x,t)=\\dfrac{a_0}{\\sin(kL)}\\cos(\\omega_0t)\\sin(k(L-x))$. C'est une onde STATIONNAIRE HARMONIQUE oscillant à la pulsation $\\omega_0$ imposée par le vibreur (et non aux pulsations propres $\\omega_n$ de la corde en régime libre)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Corde de Melde 3/3 — Pour quelles pulsations $\\omega_0$ observe-t-on une résonance (amplitude infinie dans le modèle), et pourquoi cette divergence n'est-elle pas observée en réalité ?",
+              "reponse": "Résonance pour $\\sin(kL)=0$, soit $k_n=\\dfrac{n\\pi}{L} \\Rightarrow \\omega_n=\\dfrac{n\\pi c}{L}$ — EXACTEMENT les fréquences PROPRES de la corde équivalente fixée à ses deux extrémités (sans vibreur). En réalité, l'amplitude ne diverge pas : (1) les NON-LINÉARITÉS limitent la croissance une fois sorti du cadre des petites oscillations (par analogie avec la saturation de l'ALI) ; (2) les PHÉNOMÈNES DISSIPATIFS (frottements, non pris en compte dans ce modèle) viennent aussi limiter l'amplitude atteinte."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD réflexion/transmission entre 2 cordes) — Comment détermine-t-on les coefficients de réflexion $r$ et transmission $t$ en amplitude à la jonction de deux cordes de masses linéiques différentes, sous tension identique ?",
+              "reponse": "On écrit les trois ondes (incidente $y_i$, réfléchie $y_r$ sur la corde 1, transmise $y_t$ sur la corde 2). La CONTINUITÉ du déplacement en $x=0$ (la jonction ne peut pas se déchirer) impose l'égalité des pulsations temporelles ($\\omega_i=\\omega_r=\\omega_t$) et une première relation entre amplitudes. Le PFD appliqué à la jonction, de MASSE NULLE (donc de force résultante nulle malgré une accélération non infinie), impose la continuité de la PENTE (dérivée spatiale) de part et d'autre — ce qui fournit une deuxième relation. La résolution du système de ces deux relations donne $r$ et $t$ en fonction des célérités $c_1=\\sqrt{T/\\mu_1}$ et $c_2=\\sqrt{T/\\mu_2}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD énergétique) — Décrire la démarche générale (multiplier par la vitesse transversale) permettant d'obtenir l'équation de conservation locale de l'énergie mécanique linéique à partir de l'équation de d'Alembert.",
+              "reponse": "On multiplie l'équation de d'Alembert par la vitesse transversale $\\partial z/\\partial t$, ce qui fait apparaître des dérivées temporelles de quantités quadratiques (via la règle de dérivation d'un produit/carré, $\\frac{\\partial}{\\partial t}\\left(\\frac12\\left(\\frac{\\partial z}{\\partial t}\\right)^2\\right)=\\frac{\\partial z}{\\partial t}\\frac{\\partial^2z}{\\partial t^2}$, et une identité analogue en $x$) permettant de regrouper les termes en une relation de la forme $\\dfrac{\\partial}{\\partial t}\\left(\\dfrac{\\mu}{2}\\left(\\dfrac{\\partial z}{\\partial t}\\right)^2+\\dfrac{T}{2}\\left(\\dfrac{\\partial z}{\\partial x}\\right)^2\\right)=\\dfrac{\\partial}{\\partial x}\\left(T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}\\right)$, où le premier terme entre parenthèses à gauche est l'énergie cinétique linéique, le second l'énergie potentielle (élastique) linéique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD énergétique) — Identifier le terme $-T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}$ en $x$ comme une puissance mécanique, et écrire le bilan de puissance local pour un élément de corde sans dissipation.",
+              "reponse": "$-T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}$ représente la PUISSANCE MÉCANIQUE INSTANTANÉE transférée en $x$ dans le sens des $x$ croissants (travail de la force de tension par unité de temps). Bilan de puissance local (sans dissipation) : $\\dfrac{\\partial P_{méca}}{\\partial x}+\\dfrac{\\partial(e_m)}{\\partial t}=0$, avec $e_m$ la densité linéique d'énergie mécanique (analogue local du premier principe pour un système continu 1D)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD énergétique, généralisation) — Écrire la forme générale (3D) du bilan local de puissance en l'absence de dissipation, en termes de densité volumique d'énergie $\\varepsilon$ et de vecteur densité de courant d'énergie $\\vec\\pi$. Citer une équation analogue dans un autre domaine de la physique.",
+              "reponse": "$\\operatorname{div}\\vec\\pi+\\dfrac{\\partial\\varepsilon}{\\partial t}=0$ (équation de conservation locale de l'énergie, analogue à l'équation locale de conservation de la charge $\\operatorname{div}\\vec{j}+\\partial\\rho/\\partial t=0$ en électromagnétisme, ou à l'équation de conservation de la matière en mécanique des fluides)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD énergétique, onde stationnaire vs progressive) — Pour une onde PROGRESSIVE, quelle relation simple lie $\\langle e_m\\rangle$ (énergie mécanique linéique moyenne) et $\\langle\\vec\\pi\\rangle$ (flux d'énergie moyen) ? Que devient ce flux moyen pour un MODE STATIONNAIRE, et quelle en est l'interprétation physique ?",
+              "reponse": "Pour une onde progressive $z(x,t)=z_0\\cos(kx-\\omega t)$ : $\\langle\\pi\\rangle = c\\langle e_m\\rangle$ (le flux d'énergie moyen est le produit de la célérité par la densité d'énergie moyenne — analogue au transport d'énergie d'une onde électromagnétique, $\\Pi=c\\,u$). Pour un MODE STATIONNAIRE (corde fixée aux deux extrémités), le flux d'énergie $\\pi_n$ a une valeur MOYENNE NULLE : une onde stationnaire ne transporte PAS d'énergie en moyenne dans le temps — l'énergie oscille localement entre forme cinétique et potentielle mais ne se propage pas net le long de la corde (contrairement à une onde progressive)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD réflexion sur masse libre) — Pour une onde incidente arrivant sur une masse ponctuelle $m$ fixée en $x=0$ d'une corde infinie, quel est le comportement du coefficient de réflexion $r$ dans la limite $m\\to\\infty$ ? Interpréter physiquement.",
+              "reponse": "Dans la limite $m\\to\\infty$, la masse devient infiniment difficile à mettre en mouvement, ce qui revient à imposer un déplacement NUL en $x=0$ : on retrouve le cas de la corde FIXÉE, avec $r\\to-1$ (réflexion avec inversion de signe/déphasage de $\\pi$), par continuité avec le cas d'une extrémité rigide. (Pour $m=0$, on retrouverait au contraire le cas d'une extrémité LIBRE, avec $r=+1$, sans changement de signe.)"
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD conditions aux limites alternatives) — Pour une corde attachée en $x=0$ et dont l'extrémité en $x=\\ell$ coulisse librement sans frottement sur un anneau de masse nulle (extrémité LIBRE), quelle est la condition aux limites en $x=\\ell$, et en quoi diffère-t-elle de celle d'une extrémité fixée ?",
+              "reponse": "En $x=\\ell$ (extrémité LIBRE, anneau de masse nulle) : la condition porte sur la PENTE et non sur le déplacement — $\\dfrac{\\partial y}{\\partial x}(\\ell,t)=0$ (condition de Neumann, la force de tension transversale doit être nulle puisque l'anneau, sans masse, ne peut subir de force résultante non nulle). Ceci diffère de la condition en $x=0$ (extrémité fixée, condition de Dirichlet $y(0,t)=0$). Cette différence de conditions aux limites modifie entièrement la quantification des modes propres par rapport au cas « fixée-fixée »."
+            },
+            {
+              "type": "Question",
+              "enonce": "Méthode (TD ressort, analogie) — Pour un ressort de raideur $K$ et longueur à vide $L$, en quoi l'équation vérifiée par le déplacement longitudinal $\\xi(x,t)$ d'une spire est-elle analogue à celle d'une corde vibrante, malgré la nature LONGITUDINALE (et non transverse) de la perturbation ?",
+              "reponse": "En modélisant la force exercée par la partie droite sur la partie gauche du ressort (coupé fictivement en $x$) via la loi de Hooke $F=KL\\dfrac{\\partial\\xi}{\\partial x}$ et en appliquant le PFD à un élément de ressort, on obtient une équation aux dérivées partielles de la MÊME FORME que l'équation de d'Alembert (mêmes outils mathématiques : dérivées secondes en temps et en espace proportionnelles), bien que la grandeur physique $\\xi$ représente ici un déplacement LONGITUDINAL (compression/dilatation locale du ressort) et non transverse. C'est un exemple d'ANALOGIE FORMELLE entre deux systèmes physiques distincts régis par la même équation de propagation."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 1 — La réflexion d'une onde sur un obstacle modifie toujours sa fréquence.",
+              "reponse": "FAUX. Une réflexion sur un obstacle IMMOBILE ne modifie NI la fréquence, NI le vecteur d'onde de l'onde réfléchie (démontré à partir de la condition aux limites en $x=0$ devant être vérifiée $\\forall t$). Une modification de fréquence à la réflexion (effet Doppler) n'apparaît QUE si l'obstacle est en MOUVEMENT."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 2 — La tension le long d'une corde vibrante dépend de la position $x$, au premier ordre en $\\alpha$.",
+              "reponse": "FAUX. La projection de l'équation du mouvement sur $(Ox)$, au premier ordre en $\\alpha$ (avec $\\cos\\alpha\\approx1$), donne $\\partial T/\\partial x=0$ : la NORME de la tension est CONSTANTE le long de la corde (notée $T_0$), au premier ordre en $\\alpha$."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 3 — La superposition de deux ondes progressives se propageant en sens opposés est nécessairement une onde progressive.",
+              "reponse": "FAUX. C'est précisément le cas contraire qui est intéressant : la superposition d'une onde incidente $f(x-ct)$ et d'une onde réfléchie $g(x+ct)$ (sens opposés) NE se propage PAS sans déformation dans un sens unique — c'est exactement ce mécanisme qui produit une onde STATIONNAIRE (dont la forme $y(x,t)=y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$ n'est pas celle d'une onde progressive simple)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 4 — Les modes propres d'une corde fixée à ses deux extrémités sont les mêmes que ceux d'une corde fixée à une extrémité et libre à l'autre.",
+              "reponse": "FAUX. Les modes propres dépendent ENTIÈREMENT des conditions aux limites. Fixée-fixée : $k_n=n\\pi/L$ avec $n\\in\\mathbb{N}^*$ (condition de Dirichlet aux deux bouts). Fixée-libre : la condition en bout libre porte sur la dérivée ($\\partial y/\\partial x=0$, Neumann) et non sur $y$ lui-même, ce qui change la relation de quantification (typiquement $k_n=(2n-1)\\pi/(2L)$, un quart d'onde supplémentaire) — les deux jeux de modes propres sont DIFFÉRENTS."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 5 — Une onde stationnaire transporte de l'énergie le long de la corde, tout comme une onde progressive.",
+              "reponse": "FAUX. Le flux d'énergie moyen $\\langle\\pi_n\\rangle$ d'un mode stationnaire est NUL (démontré en TD) : contrairement à une onde progressive (qui transporte effectivement de l'énergie, $\\langle\\pi\\rangle=c\\langle e_m\\rangle\\ne0$), une onde stationnaire échange de l'énergie LOCALEMENT entre forme cinétique et potentielle sans transport net d'énergie le long de la corde."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 6 — Dans l'expérience de la corde de Melde, la corde vibre nécessairement à l'une de ses fréquences propres, quelle que soit la fréquence du vibreur.",
+              "reponse": "FAUX. La corde vibre à la fréquence IMPOSÉE par le vibreur, $\\omega=\\omega_0$ (régime forcé), et non à une fréquence propre en général. C'est seulement lorsque $\\omega_0$ COÏNCIDE avec l'une des fréquences propres $\\omega_n=n\\pi c/L$ de la corde équivalente fixée aux deux bouts que l'on observe le phénomène de RÉSONANCE (amplitude maximale, divergente dans le modèle idéalisé sans dissipation ni non-linéarité)."
+            },
+            {
+              "type": "Question",
+              "enonce": "VRAI/FAUX 7 — L'équation de dispersion d'une onde ne dépend que de l'équation de propagation, pas de la forme des solutions recherchées.",
+              "reponse": "FAUX. Le cours précise explicitement que l'équation de dispersion dépend à la fois de l'équation de PROPAGATION ET de la forme des SOLUTIONS recherchées (onde progressive vs stationnaire, par exemple) — la méthode d'obtention (injection de la forme choisie dans l'équation de propagation) illustre bien cette double dépendance."
             }
           ],
           "questionSets": [
@@ -3991,104 +4101,214 @@
               "label": "Cours",
               "items": [
                 {
-                  "type": "Définition",
-                  "enonce": "Quelles sont les hypothèses simplificatrices usuelles sous-jacentes à l'établissement de l'équation de d'Alembert pour une corde vibrante ?",
-                  "reponse": "Les hypothèses sont : 1) La corde est inextensible (longueur $L$ constante). 2) On néglige l'effet de la pesanteur (corde horizontale à l'équilibre). 3) Le déplacement est purement transversal : $y(x,t) \\vec{u}_y$. 4) L'angle $\\alpha(x,t)$ formé avec l'horizontale reste très faible ($|\\alpha| \\ll 1$), ce qui permet de limiter les calculs au premier ordre en $\\alpha$. 5) La corde est infiniment souple (aucune résistance à la déformation). 6) Le référentiel d'étude est supposé galiléen."
+                  "type": "Question",
+                  "enonce": "Hypothèses 1/2 — Lister les hypothèses du modèle de la corde vibrante (cours 1), et préciser la validité de l'hypothèse « corde horizontale à l'équilibre ».",
+                  "reponse": "Hypothèses : corde inextensible (longueur $L$ constante) ; pesanteur négligée (corde horizontale à l'équilibre) ; déplacement d'un point uniquement suivant $(Oy)$, noté $y(x,t)$ ; angle $\\alpha(x,t)$ avec l'horizontale FAIBLE, $|\\alpha|\\ll1$ (calculs au premier ordre en $\\alpha$) ; référentiel terrestre galiléen ; corde infiniment souple (aucune résistance à sa déformation). Validité de l'horizontalité : vraie tant que la force de TENSION tendant la corde est GRANDE devant son POIDS."
                 },
                 {
-                  "type": "Démonstration",
-                  "enonce": "En appliquant le principe fondamental de la dynamique (PFD) à un élément infinitésimal de corde de masse linéique $\\mu$ entre $x$ et $x+dx$, sous tension $T_0$, démontrer l'équation de d'Alembert pour le déplacement transversal $y(x,t)$.",
-                  "reponse": "Le bilan des forces sur l'élément de corde de masse $dm = \\mu dx$ s'écrit : $dm \\frac{\\partial^2 y}{\\partial t^2} \\vec{u}_y = \\vec{T}(x+dx,t) - \\vec{T}(x,t)$ avec $\\vec{T}(x,t) = T(x,t)(\\cos\\alpha \\vec{u}_x + \\sin\\alpha \\vec{u}_y)$. La projection sur $(Ox)$ donne $\\frac{\\partial(T\\cos\\alpha)}{\\partial x} = 0$, soit au premier ordre $T(x,t) = T_0 = \\text{cte}$. La projection sur $(Oy)$ donne $\\mu dx \\frac{\\partial^2 y}{\\partial t^2} = T_0 \\sin\\alpha(x+dx,t) - T_0 \\sin\\alpha(x,t) = T_0 \\frac{\\partial \\sin\\alpha}{\\partial x} dx \\approx T_0 \\frac{\\partial \\alpha}{\\partial x} dx$. Comme au premier ordre $\\alpha \\approx \\tan\\alpha = \\frac{\\partial y}{\\partial x}$, on obtient $\\mu \\frac{\\partial^2 y}{\\partial t^2} = T_0 \\frac{\\partial^2 y}{\\partial x^2}$, soit $\\frac{\\partial^2 y}{\\partial t^2} - \\frac{T_0}{\\mu} \\frac{\\partial^2 y}{\\partial x^2} = 0$."
+                  "type": "Question",
+                  "enonce": "Hypothèses 2/2 — Justifier pourquoi on peut assimiler la longueur $\\delta\\ell$ d'un élément de corde à $\\mathrm{d}x$ au premier ordre en $\\alpha$.",
+                  "reponse": "Par le théorème de Pythagore, $\\delta\\ell=\\sqrt{\\mathrm{d}x^2+\\mathrm{d}y^2}=\\mathrm{d}x\\sqrt{1+\\left(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\right)^2}=\\mathrm{d}x\\sqrt{1+\\alpha^2} = \\mathrm{d}x$ au premier ordre en $\\alpha$ (puisque $\\sqrt{1+\\alpha^2}\\approx1+O(\\alpha^2)$, négligeable au premier ordre)."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Donner la définition de la célérité $c$ des ondes sur une corde vibrante de masse linéique $\\mu$ sous tension $T_0$, ainsi que sa dimension.",
-                  "reponse": "$c = \\sqrt{\\frac{T_0}{\\mu}}$. Par analyse dimensionnelle, $[c] = L \\cdot T^{-1}$ (homogène à une vitesse)."
+                  "type": "Question",
+                  "enonce": "Mise en équation 1/3 — Après application du PFD à un élément de corde et décomposition de $\\vec{T}(x,t)=T(x,t)(\\cos\\alpha\\,\\vec{u_x}+\\sin\\alpha\\,\\vec{u_y})$, écrire le système obtenu par projection sur $(Ox)$ et $(Oy)$.",
+                  "reponse": "$\\begin{cases} \\dfrac{\\partial(T\\cos\\alpha)}{\\partial x}=0 \\\\ \\mu\\dfrac{\\partial^2y}{\\partial t^2}=\\dfrac{\\partial(T\\sin\\alpha)}{\\partial x} \\end{cases}$, obtenu en développant $T(x+\\mathrm{d}x,t)-T(x,t)$ à l'ordre 1 en $\\mathrm{d}x$ sur chaque composante."
                 },
                 {
-                  "type": "Définition",
-                  "enonce": "Définir une onde plane, une onde transverse et une onde longitudinale. À quel type appartient l'onde se propageant sur une corde vibrante ?",
-                  "reponse": "- Onde plane : la perturbation ne dépend que d'une seule coordonnée d'espace (notée $x$).\\n- Onde transverse : la direction de la perturbation est perpendiculaire à la direction de propagation (la perturbation est suivant $\\vec{u}_y$ alors que la propagation s'effectue suivant $\\vec{u}_x$).\\n- Onde longitudinale : la direction de la perturbation est colinéaire à la direction de propagation.\\nL'onde sur la corde vibrante est une onde plane et transverse."
+                  "type": "Question",
+                  "enonce": "Mise en équation 2/3 — En utilisant les développements limités $\\cos\\alpha\\approx1$ et $\\sin\\alpha\\approx\\alpha$ au premier ordre, que devient chacune des deux équations projetées ?",
+                  "reponse": "Projection sur $(Ox)$ : $\\dfrac{\\partial T(x,t)}{\\partial x}=0$, d'où $T(x,t)=T_0$ constante (au premier ordre en $\\alpha$, en supposant la tension constante au point d'attache) — LA TENSION NE DÉPEND PAS DE $x$. Projection sur $(Oy)$ : $\\mu\\dfrac{\\partial^2y}{\\partial t^2}=T_0\\dfrac{\\partial\\alpha}{\\partial x}$."
                 },
                 {
-                  "type": "Théorème",
-                  "enonce": "Énoncer la forme générale des solutions de l'équation de d'Alembert unidimensionnelle (théorème de d'Alembert) et donner l'interprétation physique de chacun des termes.",
-                  "reponse": "Toute solution de l'équation de d'Alembert unidimensionnelle se met sous la forme : $y(x,t) = f(x - ct) + g(x + ct)$. Le terme $f(x - ct)$ représente une onde progressive se propageant sans déformation suivant l'axe $(Ox)$ dans le sens des $x$ croissants à la vitesse $c$. Le terme $g(x + ct)$ représente une onde progressive se propageant sans déformation suivant l'axe $(Ox)$ dans le sens des $x$ décroissants à la vitesse $c$."
+                  "type": "Question",
+                  "enonce": "Mise en équation 3/3 — En exprimant $\\alpha$ en fonction de $y$ (au premier ordre), établir l'équation de d'Alembert et l'expression de la célérité $c$.",
+                  "reponse": "$\\tan\\alpha=\\dfrac{\\partial y}{\\partial x}$, et au premier ordre $\\alpha\\approx\\tan\\alpha=\\dfrac{\\partial y}{\\partial x}$. En substituant : $\\mu\\dfrac{\\partial^2y}{\\partial t^2}=T_0\\dfrac{\\partial^2y}{\\partial x^2}$, soit $\\dfrac{\\partial^2y}{\\partial t^2}-c^2\\dfrac{\\partial^2y}{\\partial x^2}=0$ (équation de d'Alembert) avec $c=\\sqrt{T_0/\\mu}$ (homogène à une vitesse par analyse dimensionnelle de $T_0/\\mu$, en $\\text{N}/(\\text{kg}\\cdot\\text{m}^{-1})=\\text{m}^2\\cdot\\text{s}^{-2}$)."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Rappeler les relations reliant la longueur d'onde $\\lambda$ au vecteur d'onde $k$, et la période $T$ à la pulsation $\\omega$ pour une onde progressive harmonique.",
-                  "reponse": "La périodicité spatiale est reliée au vecteur d'onde par : $|k|\\lambda = 2\\pi$.\\nLa périodicité temporelle est reliée à la pulsation par : $\\omega T = 2\\pi$."
+                  "type": "Question",
+                  "enonce": "Ondes plane/transverse/longitudinale — Définir ces trois types d'onde, et préciser à quelle catégorie appartient l'onde le long d'une corde vibrante.",
+                  "reponse": "Onde PLANE : la perturbation ne dépend que d'une seule coordonnée d'espace (même valeur quel que soit $x$ dans un milieu multidimensionnel — indépendant de sa dépendance TEMPORELLE). Onde TRANSVERSE : direction de la perturbation PERPENDICULAIRE à la direction de propagation. Onde LONGITUDINALE : direction de la perturbation COLINÉAIRE à la propagation. L'onde le long de la corde est TRANSVERSE (perturbation suivant $\\vec{u_y}$, propagation suivant $\\vec{u_x}$)."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "En notation complexe, si la grandeur réelle est de la forme $y(x,t) = y_0 \\cos(\\omega t - kx + \\phi_0)$, par quels opérateurs multiplicatifs se traduisent les dérivées partielles $\\frac{\\partial}{\\partial t}$ et $\\frac{\\partial}{\\partial x}$ ?",
-                  "reponse": "Pour la grandeur complexe associée $\\underline{y}(x,t) = \\underline{y}_0 \\exp(j(\\omega t - kx))$, les dérivations se traduisent par : $\\frac{\\partial}{\\partial t} \\leftrightarrow j\\omega$ et $\\frac{\\partial}{\\partial x} \\leftrightarrow -jk$."
+                  "type": "Question",
+                  "enonce": "Solutions générales 1/2 — Montrer que toute fonction $f(x-ct)$ est solution de l'équation de d'Alembert unidimensionnelle (calcul des dérivées partielles).",
+                  "reponse": "En posant $u=x-ct$ : $\\dfrac{\\partial f}{\\partial t}=-c\\dfrac{\\mathrm{d}f}{\\mathrm{d}u} \\Rightarrow \\dfrac{\\partial^2f}{\\partial t^2}=c^2\\dfrac{\\mathrm{d}^2f}{\\mathrm{d}u^2}$ ; $\\dfrac{\\partial f}{\\partial x}=\\dfrac{\\mathrm{d}f}{\\mathrm{d}u} \\Rightarrow \\dfrac{\\partial^2f}{\\partial x^2}=\\dfrac{\\mathrm{d}^2f}{\\mathrm{d}u^2}$. On vérifie donc $\\dfrac{\\partial^2f}{\\partial t^2}=c^2\\dfrac{\\partial^2f}{\\partial x^2}$, soit $f(x-ct)$ solution de l'équation de d'Alembert, quelle que soit la fonction $f$."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Établir l'équation de dispersion pour une onde progressive harmonique vérifiant l'équation de d'Alembert unidimensionnelle, et expliciter les deux solutions possibles pour le vecteur d'onde $k$.",
-                  "reponse": "En injectant la solution complexe dans l'équation de d'Alembert $\\frac{\\partial^2 y}{\\partial t^2} - c^2 \\frac{\\partial^2 y}{\\partial x^2} = 0$, on obtient : $(j\\omega)^2 \\underline{y} - c^2 (-jk)^2 \\underline{y} = 0 \\implies (\\omega^2 - c^2 k^2)\\underline{y} = 0$, d'où l'équation de dispersion : $\\omega^2 = c^2 k^2$.\\nLes deux solutions possibles pour $k$ sont :\\n- $k = \\frac{\\omega}{c}$ : propagation suivant les $x$ croissants\\n- $k = -\\frac{\\omega}{c}$ : propagation suivant les $x$ décroissants."
+                  "type": "Question",
+                  "enonce": "Solutions générales 2/2 — Énoncer la forme générale admise pour toute solution de l'équation de d'Alembert unidimensionnelle, et le piège classique sur la superposition.",
+                  "reponse": "Toute solution s'écrit $y(x,t)=f(x-ct)+g(x+ct)$ (deux ondes progressives). PIÈGE : la SUPERPOSITION de deux ondes progressives n'est en général PAS elle-même une onde progressive — $y(x,t)$ globale n'a donc en général pas la forme d'une seule onde progressive simple."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Définir la vitesse de phase $v_\\phi$ d'une onde progressive harmonique de pulsation $\\omega$ et de vecteur d'onde $k$. Quelle est sa valeur dans le cas de l'équation de d'Alembert ?",
-                  "reponse": "$v_\\phi = \\frac{\\omega}{k}$. Dans le cas de l'équation de d'Alembert, la relation de dispersion impose $\\omega = \\pm ck$, ce qui donne $v_\\phi = c$ (vitesse de phase indépendante de la fréquence, le milieu n'est pas dispersif)."
+                  "type": "Question",
+                  "enonce": "Interprétation physique — Justifier pourquoi $f(x-ct)$ correspond à une onde se propageant SANS DÉFORMATION dans le sens des $x$ CROISSANTS à la vitesse $c$, et donner l'interprétation symétrique pour $g(x+ct)$.",
+                  "reponse": "$f(x-ct_0)$ est la courbe $f(x)$ TRANSLATÉE de $ct_0$ dans le sens des $x$ croissants (même forme, décalée) : l'onde se propage donc sans déformation à la vitesse $c$ vers les $x$ croissants — d'où le terme « progressive » (propagation SANS déformation). Symétriquement, $g(x+ct)$ correspond à $g(x)$ translatée de $-ct_0$ : propagation SANS déformation vers les $x$ DÉCROISSANTS, à la même vitesse $c$."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Démontrer qu'il n'y a pas de modification de la fréquence de l'onde lors de sa réflexion sur un obstacle immobile en $x = 0$.",
-                  "reponse": "La corde étant fixée en $x = 0$, la condition aux limites impose $y(0,t) = 0 \\ \\forall t$. En notation complexe : $y_{i,m} \\exp(j\\omega_i t) + y_{r,m} \\exp(j\\omega_r t) = 0 \\ \\forall t$. Pour que cette relation soit vérifiée quel que soit $t$, il faut nécessairement que les pulsations soient égales, soit $\\omega_i = \\omega_r = \\omega$. Il n'y a donc pas de modification de la fréquence lors de la réflexion sur un obstacle immobile."
+                  "type": "Question",
+                  "enonce": "Onde progressive sinusoïdale — Écrire l'expression générale d'une onde progressive sinusoïdale, et préciser le signe de $k$ selon le sens de propagation.",
+                  "reponse": "$y(x,t)=y_0\\cos(\\omega t-kx+\\varphi_0)$, avec $\\omega>0$ la pulsation et $k$ le vecteur d'onde ($\\varphi_0$ phase à l'origine). $k>0$ pour une propagation suivant les $x$ CROISSANTS ; $k<0$ pour une propagation suivant les $x$ DÉCROISSANTS."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Donner l'expression générale d'une onde stationnaire harmonique réelle.",
-                  "reponse": "$y(x,t) = y_m \\cos(\\omega t + \\phi) \\cos(kx + \\psi)$ où $y_m$, $\\omega$, $\\phi$, $k$, et $\\psi$ sont des constantes réelles. Elle s'obtient par la superposition de deux ondes progressives se propageant dans des sens opposés."
+                  "type": "Question",
+                  "enonce": "Double périodicité — Énoncer les relations de périodicité spatiale ($\\lambda$) et temporelle ($T$) d'une onde progressive harmonique, et l'effet d'un décalage en $x$ ou en $t$ sur la phase.",
+                  "reponse": "Périodicité spatiale : $|k|\\lambda=2\\pi$. Périodicité temporelle : $\\omega T=2\\pi$. Un décalage temporel $t_2-t_1$ entraîne un déphasage $\\omega(t_2-t_1)$ ; un décalage spatial $x_2-x_1$ entraîne un déphasage $|k|(x_2-x_1)$."
                 },
                 {
-                  "type": "Définition",
-                  "enonce": "Définir un nœud et un ventre de vibration pour une onde stationnaire. Quelle est la distance séparant deux nœuds consécutifs ?",
-                  "reponse": "- Les nœuds sont les points de l'espace où l'amplitude de vibration est nulle pour tout $t$ ($y(x,t) = 0 \\ \\forall t$).\\n- Les ventres sont les points de l'espace où l'amplitude de vibration est maximale.\\nLa distance entre deux nœuds consécutifs (ou entre deux ventres consécutifs) est égale à $\\frac{\\lambda}{2}$."
+                  "type": "Question",
+                  "enonce": "Notation complexe — Donner l'expression complexe $\\underline{y}$ associée à $y(x,t)=y_0\\cos(\\omega t-kx+\\varphi_0)$, et les règles de dérivation en notation complexe.",
+                  "reponse": "$\\underline{y}=\\underline{y_0}\\exp(j(\\omega t-kx))$, avec $\\underline{y_0}=y_0\\exp(j\\varphi_0)$ l'amplitude complexe. Règles : $\\dfrac{\\partial}{\\partial t}\\leftrightarrow j\\omega$ et $\\dfrac{\\partial}{\\partial x}\\leftrightarrow -jk$ (pour une onde en $\\omega t-kx$ — ATTENTION, le signe de la dérivation spatiale change si le signal est écrit sous la forme $\\cos(kx-\\omega t+\\varphi_0)$)."
                 },
                 {
-                  "type": "Démonstration",
-                  "enonce": "Démontrer la quantification du vecteur d'onde $k_n$ pour une corde fixée à ses deux extrémités en $x=0$ et $x=L$, à partir de la recherche de solutions sous forme de variables séparées $y(x,t) = f(x)g(t)$.",
-                  "reponse": "En injectant $y(x,t) = f(x)g(t)$ dans l'équation de d'Alembert, on obtient : $\\frac{1}{c^2}\\frac{g''(t)}{g(t)} = \\frac{f''(x)}{f(x)} = K = \\text{cte}$.\\nPour avoir des solutions physiques non divergentes, on pose $K = -k^2 < 0$, ce qui mène à $f(x) = A\\cos(kx) + B\\sin(kx)$.\\nLa condition aux limites en $x=0$ impose $f(0) = 0 \\implies A = 0$, d'où $f(x) = B\\sin(kx)$.\\nLa condition aux limites en $x=L$ impose $f(L) = 0 \\implies B\\sin(kL) = 0$. Pour obtenir une solution non triviale ($B \\neq 0$), il faut $\\sin(kL) = 0$, ce qui impose $kL = n\\pi$, d'où la quantification du vecteur d'onde : $k_n = \\frac{n\\pi}{L}$ avec $n \\in \\mathbb{Z}^*$."
+                  "type": "Question",
+                  "enonce": "Équation de dispersion et vitesse de phase — Définir l'équation de dispersion, la méthode pour l'obtenir, et démontrer que la vitesse de phase $v_\\varphi=\\omega/k$ correspond bien à la vitesse de déplacement d'un plan de phase constante.",
+                  "reponse": "Équation de dispersion : relation entre $\\omega$ et $k$ pour qu'une onde progressive soit solution de l'équation de propagation ; méthode : injecter la solution complexe dans l'équation de propagation (ici $(j\\omega)^2-c^2(-jk)^2=0 \\Rightarrow \\omega^2=c^2k^2$, soit $k=\\pm\\omega/c$). Vitesse de phase : en posant $\\Phi(x,t)=\\omega t-kx+\\varphi_0$ et en différenciant $\\Phi=\\Phi_0=\\text{cste}$ : $\\omega\\,\\mathrm{d}t-k\\,\\mathrm{d}x=0 \\Rightarrow \\dfrac{\\mathrm{d}x}{\\mathrm{d}t}=\\dfrac{\\omega}{k}=v_\\varphi$ — c'est la vitesse à laquelle se déplace un plan de phase constante. Pour l'équation de d'Alembert, $v_\\varphi=c$."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Pour une corde de longueur $L$ fixée à ses deux extrémités, donner les expressions des pulsations propres $\\omega_n$ et des fréquences propres $f_n$ associées aux modes propres de vibration.",
-                  "reponse": "Les vecteurs d'ondes possibles étant $k_n = \\frac{n\\pi}{L}$, on a :\\n- Pulsations propres : $\\omega_n = n \\frac{\\pi c}{L}$ avec $n \\in \\mathbb{N}^*$\\n- Fréquences propres : $f_n = \\frac{nc}{2L}$ avec $n \\in \\mathbb{N}^*$."
+                  "type": "Question",
+                  "enonce": "Ondes stationnaires 1/5 — Pour une corde fixée en $x=0$, en imposant $y(0,t)=0$ à une superposition d'onde incidente et réfléchie, montrer que les pulsations et vecteurs d'onde incident/réfléchi sont nécessairement égaux.",
+                  "reponse": "$y(0,t)=y_{i,m}\\exp(j\\omega_it)+y_{r,m}\\exp(j\\omega_rt)=0$ devant être vraie $\\forall t$, cela impose $\\omega_i=\\omega_r=\\omega$ (PAS de modification de fréquence à la réflexion sur un obstacle IMMOBILE — contrairement à un obstacle mobile où l'effet Doppler modifierait la fréquence). Par la relation de dispersion $c=\\omega/k_i=\\omega/k_r$, on en déduit aussi $k_i=k_r=k$ (pas de modification du vecteur d'onde non plus)."
                 },
                 {
-                  "type": "Formule",
-                  "enonce": "Écrire l'expression de la solution générale $y(x,t)$ des vibrations d'une corde fixée à ses deux extrémités $x=0$ et $x=L$ sous forme d'une somme de modes propres.",
-                  "reponse": "$y(x,t) = \\sum_{n=1}^{\\infty} y_{m,n} \\cos\\left(\\frac{n\\pi c}{L} t + \\phi_n\\right) \\sin\\left(\\frac{n\\pi}{L} x\\right)$"
+                  "type": "Question",
+                  "enonce": "Ondes stationnaires 2/5 — Sachant que $y_{i,m}+y_{r,m}=0$ (condition en $x=0$), établir l'expression finale de l'onde stationnaire réelle $y(x,t)$.",
+                  "reponse": "$y_{r,m}=-y_{i,m}$, d'où $\\underline{y}=y_{i,m}\\exp(j\\omega t)(\\exp(-jkx)-\\exp(jkx))=-2jy_{i,m}\\exp(j\\omega t)\\sin(kx)$. En posant $2y_{i,m}=y_{0,m}\\exp(j\\varphi)$ et en prenant la partie réelle : $y(x,t)=y_{0,m}\\sin(\\omega t+\\varphi)\\sin(kx)$ — le produit d'une fonction du TEMPS SEUL par une fonction de l'ESPACE SEUL est la signature d'une onde STATIONNAIRE."
                 },
                 {
-                  "type": "Calcul",
-                  "enonce": "Dans l'expérience de la corde de Melde, le vibreur impose en $x=0$ un déplacement $y(0,t) = a_0 \\cos(\\omega_0 t)$ et l'extrémité $x=L$ est fixée ($y(L,t) = 0$). Donner l'expression du déplacement réel $y(x,t)$ obtenu.",
-                  "reponse": "$y(x,t) = \\frac{a_0}{\\sin(kL)} \\cos(\\omega_0 t) \\sin(k(L-x))$ avec $k = \\frac{\\omega_0}{c}$."
+                  "type": "Question",
+                  "enonce": "Ondes stationnaires 3/5 — Écrire la forme générale d'une onde stationnaire HARMONIQUE, et préciser comment elle est obtenue à partir d'ondes progressives.",
+                  "reponse": "$y(x,t)=y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$. Elle est obtenue par SUPERPOSITION de deux ondes progressives harmoniques de même amplitude, même pulsation, se propageant dans des sens OPPOSÉS."
                 },
                 {
-                  "type": "Démonstration",
-                  "enonce": "Démontrer que la puissance mécanique instantanée $P_{\\text{méca}}(x,t)$ transférée en $x$ à travers la corde dans le sens des $x$ croissants s'exprime par $P_{\\text{méca}}(x,t) = -T \\frac{\\partial z}{\\partial t} \\frac{\\partial z}{\\partial x}$.",
-                  "reponse": "La force exercée par la partie gauche de la corde sur la partie droite en $x$ est l'opposé de la force de tension $\\vec{T}_d(x,t)$, soit : $\\vec{F}_{g \\to d} = -\\vec{T}_d(x,t) \\approx -T(\\vec{u}_x + \\frac{\\partial z}{\\partial x} \\vec{u}_y)$.\\nLe point d'application de cette force se déplace à la vitesse transversale $\\vec{v} = \\frac{\\partial z}{\\partial t} \\vec{u}_y$.\\nLa puissance transférée vers les $x$ croissants est la puissance de cette force : $P_{\\text{méca}} = \\vec{F}_{g \\to d} \\cdot \\vec{v} = -T \\frac{\\partial z}{\\partial t} \\frac{\\partial z}{\\partial x}$."
+                  "type": "Question",
+                  "enonce": "Ondes stationnaires 4/5 — Définir nœud et ventre d'une onde stationnaire, et démontrer que la distance entre deux nœuds consécutifs vaut $\\lambda/2$.",
+                  "reponse": "Nœud : point où l'amplitude de vibration est NULLE $\\forall t$. Ventre : point où l'amplitude est MAXIMALE. Démonstration : les nœuds vérifient $\\sin(kx)=0 \\Rightarrow kx=m\\pi$, $m\\in\\mathbb{Z}$, soit $x=\\dfrac{m\\pi}{k}=\\dfrac{m\\lambda\\pi}{2\\pi}=m\\dfrac{\\lambda}{2}$ (en utilisant $k=2\\pi/\\lambda$) : les nœuds (comme les ventres, par un argument symétrique) sont espacés de $\\lambda/2$."
                 },
                 {
-                  "type": "Propriété",
-                  "enonce": "Pour une corde de masse linéique $\\mu$ et sous tension $T$, exprimer l'énergie cinétique linéique $e_c$, l'énergie potentielle linéique $e_p$ et l'énergie mécanique linéique $e_m$.",
-                  "reponse": "- Énergie cinétique linéique : $e_c = \\frac{1}{2}\\mu \\left(\\frac{\\partial z}{\\partial t}\\right)^2$\\n- Énergie potentielle linéique : $e_p = \\frac{1}{2}T \\left(\\frac{\\partial z}{\\partial x}\\right)^2$\\n- Énergie mécanique linéique : $e_m = e_c + e_p = \\frac{1}{2}\\mu \\left(\\frac{\\partial z}{\\partial t}\\right)^2 + \\frac{1}{2}T \\left(\\frac{\\partial z}{\\partial x}\\right)^2$."
+                  "type": "Question",
+                  "enonce": "Ondes stationnaires 5/5 — Énoncer la forme générale $y(x,t)=f(x)g(t)$ d'une onde stationnaire QUELCONQUE (pas nécessairement harmonique), et le résultat de décomposition qui lui est associé (théorème de Fourier).",
+                  "reponse": "Une onde stationnaire se met toujours sous la forme $y(x,t)=f(x)g(t)$ (produit d'une fonction de $x$ seule et d'une fonction de $t$ seule). Une telle onde peut TOUJOURS s'exprimer comme une SUPERPOSITION d'ondes stationnaires HARMONIQUES (théorème de Fourier) — c'est-à-dire une somme (éventuellement infinie) de modes de la forme $y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$."
                 },
                 {
-                  "type": "Théorème",
-                  "enonce": "Établir l'équation locale de conservation de l'énergie mécanique (bilan local de puissance) pour un élément de corde en l'absence de pertes.",
-                  "reponse": "Le bilan local s'écrit : $\\frac{\\partial P_{\\text{méca}}}{\\partial x} + \\frac{\\partial e_m}{\\partial t} = 0$. En effet, en dérivant $e_m$ par rapport à $t$, on obtient : $\\frac{\\partial e_m}{\\partial t} = \\mu \\frac{\\partial z}{\\partial t}\\frac{\\partial^2 z}{\\partial t^2} + T \\frac{\\partial z}{\\partial x}\\frac{\\partial^2 z}{\\partial x \\partial t}$. En utilisant l'équation de d'Alembert $\\mu \\frac{\\partial^2 z}{\\partial t^2} = T \\frac{\\partial^2 z}{\\partial x^2}$, on obtient : $\\frac{\\partial e_m}{\\partial t} = T \\frac{\\partial z}{\\partial t}\\frac{\\partial^2 z}{\\partial x^2} + T \\frac{\\partial z}{\\partial x}\\frac{\\partial^2 z}{\\partial x \\partial t} = \\frac{\\partial}{\\partial x}\\left( T \\frac{\\partial z}{\\partial t}\\frac{\\partial z}{\\partial x} \\right) = -\\frac{\\partial P_{\\text{méca}}}{\\partial x}$."
+                  "type": "Question",
+                  "enonce": "Séparation des variables 1/4 — En injectant $y(x,t)=f(x)g(t)$ dans l'équation de d'Alembert, montrer comment on aboutit à deux équations différentielles séparées, reliées par une constante $K$.",
+                  "reponse": "$g''(t)f(x)-c^2g(t)f''(x)=0 \\Rightarrow \\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=\\dfrac{f''(x)}{f(x)}$. Le membre de gauche ne dépend QUE de $t$, celui de droite QUE de $x$ ; les variables $x,t$ étant indépendantes et l'égalité devant être vraie pour tout $x,t$, les deux membres sont nécessairement égaux à une même CONSTANTE $K$ : $\\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=\\dfrac{f''(x)}{f(x)}=K=\\text{cste}$."
                 },
                 {
-                  "type": "Exercice",
-                  "enonce": "Soit une corde de longueur $\\ell$ attachée en $x=0$ et dont la seconde extrémité en $x=\\ell$ est libre de se déplacer verticalement via un anneau sans frottement coulissant sur une tige verticale. Écrire les deux conditions aux limites.",
-                  "reponse": "- En $x = 0$ : l'extrémité est fixe, donc $y(0,t) = 0$.\\n- En $x = \\ell$ : l'absence de force transversale exercée par l'anneau de masse quasi-nulle impose une tangente verticale horizontale, soit $\\frac{\\partial y}{\\partial x}(\\ell,t) = 0$."
+                  "type": "Question",
+                  "enonce": "Séparation des variables 2/4 — Pour une corde fixée aux deux extrémités ($f(0)=f(L)=0$), pourquoi les cas $K=0$ et $K>0$ ne conduisent-ils à AUCUNE solution physiquement acceptable ?",
+                  "reponse": "$K=0$ : $f''(x)=0 \\Rightarrow f(x)=Ax+B$ ; $f(0)=0\\Rightarrow B=0$, $f(L)=0\\Rightarrow A=0$, donc $f\\equiv0$ (pas d'onde). $K>0$ (posé $K=\\kappa^2$) : $f(x)=A\\cosh(\\kappa x)+B\\sinh(\\kappa x)$ ; $f(0)=0\\Rightarrow A=0$, mais $\\sinh$ ne s'annule QU'EN $x=0$ (fonction strictement monotone, sans autre zéro) — impossible de vérifier $f(L)=0$ avec $B\\ne0$, donc de nouveau $f\\equiv0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Séparation des variables 3/4 — Pour le cas $K<0$ (posé $K=-k^2$), résoudre $f''(x)+k^2f(x)=0$ avec les conditions aux limites $f(0)=f(L)=0$, et en déduire la quantification de $k$.",
+                  "reponse": "$f(x)=A\\cos(kx)+B\\sin(kx)$. $f(0)=0\\Rightarrow A=0$, donc $f(x)=B\\sin(kx)$. $f(L)=0\\Rightarrow \\sin(kL)=0 \\Rightarrow kL=n\\pi \\Rightarrow k_n=\\dfrac{n\\pi}{L}$, $n\\in\\mathbb{Z}^*$ : c'est la QUANTIFICATION du vecteur d'onde imposée par les conditions aux limites."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Séparation des variables 4/4 — Résoudre l'équation en $g(t)$ associée à $K=-k^2$, et identifier le type d'équation obtenue.",
+                  "reponse": "$\\dfrac{1}{c^2}\\dfrac{g''(t)}{g(t)}=-k^2 \\Rightarrow g''(t)+k^2c^2g(t)=0$ : c'est une équation d'OSCILLATEUR HARMONIQUE de pulsation $\\omega=kc$ (on retrouve la relation de dispersion). Solution : $g(t)=C'\\cos(\\omega t+\\varphi)=C'\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi\\right)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Modes propres — Écrire l'expression des vecteurs d'onde $k_n$, pulsations $\\omega_n$ et fréquences propres $f_n$ pour une corde fixée aux deux extrémités, ainsi que la forme du mode propre $n$.",
+                  "reponse": "$k_n=\\dfrac{n\\pi}{L}$, $\\omega_n=n\\dfrac{\\pi c}{L}$, $f_n=\\dfrac{nc}{2L}$ ($n\\in\\mathbb{N}^*$). Mode propre $n$ : $y_n(x,t)=y_{n,m}\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi_n\\right)\\sin\\left(\\dfrac{n\\pi}{L}x\\right)$, avec $\\varphi_n$ fixée par les conditions initiales. IMPORTANT : les modes propres dépendent des conditions aux limites — chaque jeu de conditions aux limites a son propre jeu de modes propres."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Interprétation géométrique et solution générale — Exprimer $\\lambda_n$ en fonction de $L$ et $n$ pour une corde fixée aux deux extrémités, et écrire la solution générale des vibrations sur la corde.",
+                  "reponse": "$\\lambda_n=\\dfrac{2\\pi}{k_n}=\\dfrac{2L}{n} \\Rightarrow L=n\\dfrac{\\lambda_n}{2}$ (la longueur de la corde contient un nombre ENTIER de demi-longueurs d'onde). Solution générale, par LINÉARITÉ de l'équation de d'Alembert (toute combinaison linéaire de solutions est solution) : $y(x,t)=\\displaystyle\\sum_{n=1}^{\\infty} y_{m,n}\\cos\\left(\\dfrac{n\\pi c}{L}t+\\varphi_n\\right)\\sin\\left(\\dfrac{n\\pi}{L}x\\right)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Corde de Melde 1/3 — Rappeler les deux conditions aux limites de l'expérience de Melde, et la valeur de $\\omega$ imposée par la première.",
+                  "reponse": "En $x=0$ : le vibreur impose $y(0,t)=a_0\\cos(\\omega_0t)$ (mouvement forcé imposé). En $x=L$ : la corde est fixée, $y(L,t)=0$. La première condition impose, comme pour la réflexion simple, $\\omega=\\omega_0$ (la corde oscille à la pulsation IMPOSÉE par le vibreur, pas à une pulsation propre)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Corde de Melde 2/3 — Donner l'expression finale du signal réel $y(x,t)$ obtenu (après résolution du système à deux conditions aux limites), et identifier sa nature.",
+                  "reponse": "$y(x,t)=\\dfrac{a_0}{\\sin(kL)}\\cos(\\omega_0t)\\sin(k(L-x))$. C'est une onde STATIONNAIRE HARMONIQUE oscillant à la pulsation $\\omega_0$ imposée par le vibreur (et non aux pulsations propres $\\omega_n$ de la corde en régime libre)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Corde de Melde 3/3 — Pour quelles pulsations $\\omega_0$ observe-t-on une résonance (amplitude infinie dans le modèle), et pourquoi cette divergence n'est-elle pas observée en réalité ?",
+                  "reponse": "Résonance pour $\\sin(kL)=0$, soit $k_n=\\dfrac{n\\pi}{L} \\Rightarrow \\omega_n=\\dfrac{n\\pi c}{L}$ — EXACTEMENT les fréquences PROPRES de la corde équivalente fixée à ses deux extrémités (sans vibreur). En réalité, l'amplitude ne diverge pas : (1) les NON-LINÉARITÉS limitent la croissance une fois sorti du cadre des petites oscillations (par analogie avec la saturation de l'ALI) ; (2) les PHÉNOMÈNES DISSIPATIFS (frottements, non pris en compte dans ce modèle) viennent aussi limiter l'amplitude atteinte."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD réflexion/transmission entre 2 cordes) — Comment détermine-t-on les coefficients de réflexion $r$ et transmission $t$ en amplitude à la jonction de deux cordes de masses linéiques différentes, sous tension identique ?",
+                  "reponse": "On écrit les trois ondes (incidente $y_i$, réfléchie $y_r$ sur la corde 1, transmise $y_t$ sur la corde 2). La CONTINUITÉ du déplacement en $x=0$ (la jonction ne peut pas se déchirer) impose l'égalité des pulsations temporelles ($\\omega_i=\\omega_r=\\omega_t$) et une première relation entre amplitudes. Le PFD appliqué à la jonction, de MASSE NULLE (donc de force résultante nulle malgré une accélération non infinie), impose la continuité de la PENTE (dérivée spatiale) de part et d'autre — ce qui fournit une deuxième relation. La résolution du système de ces deux relations donne $r$ et $t$ en fonction des célérités $c_1=\\sqrt{T/\\mu_1}$ et $c_2=\\sqrt{T/\\mu_2}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD énergétique) — Décrire la démarche générale (multiplier par la vitesse transversale) permettant d'obtenir l'équation de conservation locale de l'énergie mécanique linéique à partir de l'équation de d'Alembert.",
+                  "reponse": "On multiplie l'équation de d'Alembert par la vitesse transversale $\\partial z/\\partial t$, ce qui fait apparaître des dérivées temporelles de quantités quadratiques (via la règle de dérivation d'un produit/carré, $\\frac{\\partial}{\\partial t}\\left(\\frac12\\left(\\frac{\\partial z}{\\partial t}\\right)^2\\right)=\\frac{\\partial z}{\\partial t}\\frac{\\partial^2z}{\\partial t^2}$, et une identité analogue en $x$) permettant de regrouper les termes en une relation de la forme $\\dfrac{\\partial}{\\partial t}\\left(\\dfrac{\\mu}{2}\\left(\\dfrac{\\partial z}{\\partial t}\\right)^2+\\dfrac{T}{2}\\left(\\dfrac{\\partial z}{\\partial x}\\right)^2\\right)=\\dfrac{\\partial}{\\partial x}\\left(T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}\\right)$, où le premier terme entre parenthèses à gauche est l'énergie cinétique linéique, le second l'énergie potentielle (élastique) linéique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD énergétique) — Identifier le terme $-T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}$ en $x$ comme une puissance mécanique, et écrire le bilan de puissance local pour un élément de corde sans dissipation.",
+                  "reponse": "$-T\\dfrac{\\partial z}{\\partial t}\\dfrac{\\partial z}{\\partial x}$ représente la PUISSANCE MÉCANIQUE INSTANTANÉE transférée en $x$ dans le sens des $x$ croissants (travail de la force de tension par unité de temps). Bilan de puissance local (sans dissipation) : $\\dfrac{\\partial P_{méca}}{\\partial x}+\\dfrac{\\partial(e_m)}{\\partial t}=0$, avec $e_m$ la densité linéique d'énergie mécanique (analogue local du premier principe pour un système continu 1D)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD énergétique, généralisation) — Écrire la forme générale (3D) du bilan local de puissance en l'absence de dissipation, en termes de densité volumique d'énergie $\\varepsilon$ et de vecteur densité de courant d'énergie $\\vec\\pi$. Citer une équation analogue dans un autre domaine de la physique.",
+                  "reponse": "$\\operatorname{div}\\vec\\pi+\\dfrac{\\partial\\varepsilon}{\\partial t}=0$ (équation de conservation locale de l'énergie, analogue à l'équation locale de conservation de la charge $\\operatorname{div}\\vec{j}+\\partial\\rho/\\partial t=0$ en électromagnétisme, ou à l'équation de conservation de la matière en mécanique des fluides)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD énergétique, onde stationnaire vs progressive) — Pour une onde PROGRESSIVE, quelle relation simple lie $\\langle e_m\\rangle$ (énergie mécanique linéique moyenne) et $\\langle\\vec\\pi\\rangle$ (flux d'énergie moyen) ? Que devient ce flux moyen pour un MODE STATIONNAIRE, et quelle en est l'interprétation physique ?",
+                  "reponse": "Pour une onde progressive $z(x,t)=z_0\\cos(kx-\\omega t)$ : $\\langle\\pi\\rangle = c\\langle e_m\\rangle$ (le flux d'énergie moyen est le produit de la célérité par la densité d'énergie moyenne — analogue au transport d'énergie d'une onde électromagnétique, $\\Pi=c\\,u$). Pour un MODE STATIONNAIRE (corde fixée aux deux extrémités), le flux d'énergie $\\pi_n$ a une valeur MOYENNE NULLE : une onde stationnaire ne transporte PAS d'énergie en moyenne dans le temps — l'énergie oscille localement entre forme cinétique et potentielle mais ne se propage pas net le long de la corde (contrairement à une onde progressive)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD réflexion sur masse libre) — Pour une onde incidente arrivant sur une masse ponctuelle $m$ fixée en $x=0$ d'une corde infinie, quel est le comportement du coefficient de réflexion $r$ dans la limite $m\\to\\infty$ ? Interpréter physiquement.",
+                  "reponse": "Dans la limite $m\\to\\infty$, la masse devient infiniment difficile à mettre en mouvement, ce qui revient à imposer un déplacement NUL en $x=0$ : on retrouve le cas de la corde FIXÉE, avec $r\\to-1$ (réflexion avec inversion de signe/déphasage de $\\pi$), par continuité avec le cas d'une extrémité rigide. (Pour $m=0$, on retrouverait au contraire le cas d'une extrémité LIBRE, avec $r=+1$, sans changement de signe.)"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD conditions aux limites alternatives) — Pour une corde attachée en $x=0$ et dont l'extrémité en $x=\\ell$ coulisse librement sans frottement sur un anneau de masse nulle (extrémité LIBRE), quelle est la condition aux limites en $x=\\ell$, et en quoi diffère-t-elle de celle d'une extrémité fixée ?",
+                  "reponse": "En $x=\\ell$ (extrémité LIBRE, anneau de masse nulle) : la condition porte sur la PENTE et non sur le déplacement — $\\dfrac{\\partial y}{\\partial x}(\\ell,t)=0$ (condition de Neumann, la force de tension transversale doit être nulle puisque l'anneau, sans masse, ne peut subir de force résultante non nulle). Ceci diffère de la condition en $x=0$ (extrémité fixée, condition de Dirichlet $y(0,t)=0$). Cette différence de conditions aux limites modifie entièrement la quantification des modes propres par rapport au cas « fixée-fixée »."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Méthode (TD ressort, analogie) — Pour un ressort de raideur $K$ et longueur à vide $L$, en quoi l'équation vérifiée par le déplacement longitudinal $\\xi(x,t)$ d'une spire est-elle analogue à celle d'une corde vibrante, malgré la nature LONGITUDINALE (et non transverse) de la perturbation ?",
+                  "reponse": "En modélisant la force exercée par la partie droite sur la partie gauche du ressort (coupé fictivement en $x$) via la loi de Hooke $F=KL\\dfrac{\\partial\\xi}{\\partial x}$ et en appliquant le PFD à un élément de ressort, on obtient une équation aux dérivées partielles de la MÊME FORME que l'équation de d'Alembert (mêmes outils mathématiques : dérivées secondes en temps et en espace proportionnelles), bien que la grandeur physique $\\xi$ représente ici un déplacement LONGITUDINAL (compression/dilatation locale du ressort) et non transverse. C'est un exemple d'ANALOGIE FORMELLE entre deux systèmes physiques distincts régis par la même équation de propagation."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 1 — La réflexion d'une onde sur un obstacle modifie toujours sa fréquence.",
+                  "reponse": "FAUX. Une réflexion sur un obstacle IMMOBILE ne modifie NI la fréquence, NI le vecteur d'onde de l'onde réfléchie (démontré à partir de la condition aux limites en $x=0$ devant être vérifiée $\\forall t$). Une modification de fréquence à la réflexion (effet Doppler) n'apparaît QUE si l'obstacle est en MOUVEMENT."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 2 — La tension le long d'une corde vibrante dépend de la position $x$, au premier ordre en $\\alpha$.",
+                  "reponse": "FAUX. La projection de l'équation du mouvement sur $(Ox)$, au premier ordre en $\\alpha$ (avec $\\cos\\alpha\\approx1$), donne $\\partial T/\\partial x=0$ : la NORME de la tension est CONSTANTE le long de la corde (notée $T_0$), au premier ordre en $\\alpha$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 3 — La superposition de deux ondes progressives se propageant en sens opposés est nécessairement une onde progressive.",
+                  "reponse": "FAUX. C'est précisément le cas contraire qui est intéressant : la superposition d'une onde incidente $f(x-ct)$ et d'une onde réfléchie $g(x+ct)$ (sens opposés) NE se propage PAS sans déformation dans un sens unique — c'est exactement ce mécanisme qui produit une onde STATIONNAIRE (dont la forme $y(x,t)=y_m\\cos(\\omega t+\\varphi)\\cos(kx+\\psi)$ n'est pas celle d'une onde progressive simple)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 4 — Les modes propres d'une corde fixée à ses deux extrémités sont les mêmes que ceux d'une corde fixée à une extrémité et libre à l'autre.",
+                  "reponse": "FAUX. Les modes propres dépendent ENTIÈREMENT des conditions aux limites. Fixée-fixée : $k_n=n\\pi/L$ avec $n\\in\\mathbb{N}^*$ (condition de Dirichlet aux deux bouts). Fixée-libre : la condition en bout libre porte sur la dérivée ($\\partial y/\\partial x=0$, Neumann) et non sur $y$ lui-même, ce qui change la relation de quantification (typiquement $k_n=(2n-1)\\pi/(2L)$, un quart d'onde supplémentaire) — les deux jeux de modes propres sont DIFFÉRENTS."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 5 — Une onde stationnaire transporte de l'énergie le long de la corde, tout comme une onde progressive.",
+                  "reponse": "FAUX. Le flux d'énergie moyen $\\langle\\pi_n\\rangle$ d'un mode stationnaire est NUL (démontré en TD) : contrairement à une onde progressive (qui transporte effectivement de l'énergie, $\\langle\\pi\\rangle=c\\langle e_m\\rangle\\ne0$), une onde stationnaire échange de l'énergie LOCALEMENT entre forme cinétique et potentielle sans transport net d'énergie le long de la corde."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 6 — Dans l'expérience de la corde de Melde, la corde vibre nécessairement à l'une de ses fréquences propres, quelle que soit la fréquence du vibreur.",
+                  "reponse": "FAUX. La corde vibre à la fréquence IMPOSÉE par le vibreur, $\\omega=\\omega_0$ (régime forcé), et non à une fréquence propre en général. C'est seulement lorsque $\\omega_0$ COÏNCIDE avec l'une des fréquences propres $\\omega_n=n\\pi c/L$ de la corde équivalente fixée aux deux bouts que l'on observe le phénomène de RÉSONANCE (amplitude maximale, divergente dans le modèle idéalisé sans dissipation ni non-linéarité)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "VRAI/FAUX 7 — L'équation de dispersion d'une onde ne dépend que de l'équation de propagation, pas de la forme des solutions recherchées.",
+                  "reponse": "FAUX. Le cours précise explicitement que l'équation de dispersion dépend à la fois de l'équation de PROPAGATION ET de la forme des SOLUTIONS recherchées (onde progressive vs stationnaire, par exemple) — la méthode d'obtention (injection de la forme choisie dans l'équation de propagation) illustre bien cette double dépendance."
                 }
               ]
             }
