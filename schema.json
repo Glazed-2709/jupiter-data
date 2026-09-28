@@ -78,6 +78,19 @@
           "name": "Mathématiques",
           "children": [
             {
+              "name": "Algèbre Linéaire",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "DM",
               "children": []
             },
@@ -126,7 +139,29 @@
               ]
             },
             {
+              "name": "Numérique",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Ondes",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Oscillateur QS",
               "children": [
                 {
                   "name": "Cours",
