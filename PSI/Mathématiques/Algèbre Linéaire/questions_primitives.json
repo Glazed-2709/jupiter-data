@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Puissances 1/2 — Quelle est la primitive de $x^\\alpha$ et comment son domaine de validité dépend-il de la nature de $\\alpha$ ?",
+    "reponse": "$\\int x^\\alpha\\,\\mathrm{d}x = \\dfrac{x^{\\alpha+1}}{\\alpha+1} + C$ pour $\\alpha \\neq -1$. Le domaine dépend de $\\alpha$ : $\\mathbb{R}$ si $\\alpha \\in \\mathbb{N}$ (la fonction est un polynôme) ; $]-\\infty,0[$ ou $]0,+\\infty[$ si $\\alpha \\in \\mathbb{Z}_-\\setminus\\{-1\\}$ (puissance négative entière, non définie en 0) ; $]0,+\\infty[$ si $\\alpha \\in \\mathbb{R}\\setminus\\mathbb{Z}$ (puissance non entière, définie seulement pour $x>0$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Puissances 2/2 — Donner les primitives associées aux trois formes usuelles $\\frac{1}{x^2+1}$, $\\frac{1}{x^2+a^2}$ et $\\frac{1}{1-x^2}$, avec leurs domaines.",
+    "reponse": "$\\int \\frac{\\mathrm{d}x}{x^2+1} = \\arctan(x)+C$ sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{x^2+a^2} = \\frac{1}{a}\\arctan\\!\\left(\\frac{x}{a}\\right)+C$ ($a>0$) sur $\\mathbb{R}$ ; $\\int \\frac{\\mathrm{d}x}{1-x^2} = \\frac{1}{2}\\ln\\left|\\frac{1+x}{1-x}\\right|+C$ sur $]-1,1[$ ou $]-\\infty,-1[$ ou $]1,+\\infty[$ (la fonction n'est pas définie en $x=\\pm1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trinôme du second degré — Comment intègre-t-on $\\frac{1}{ax^2+bx+c}$ lorsque $\\Delta = b^2-4ac < 0$, et pourquoi cette condition est-elle nécessaire ?",
+    "reponse": "$\\int \\frac{\\mathrm{d}x}{ax^2+bx+c} = \\frac{2}{\\sqrt{-\\Delta}}\\arctan\\!\\left(\\frac{2ax+b}{\\sqrt{-\\Delta}}\\right)+C$ sur $\\mathbb{R}$. La condition $\\Delta<0$ garantit que le trinôme ne s'annule jamais (pas de racine réelle) : il est donc de signe constant et la fonction $\\frac{1}{ax^2+bx+c}$ est bien définie et continue sur $\\mathbb{R}$ tout entier."
+  },
+  {
+    "type": "Question",
+    "enonce": "Logarithme et exponentielle — Rappeler les primitives de $e^x$ et de $\\ln|x|$, avec leurs domaines.",
+    "reponse": "$\\int e^x\\,\\mathrm{d}x = e^x+C$ sur $\\mathbb{R}$. $\\int \\ln|x|\\,\\mathrm{d}x = x\\ln|x| - x + C$ sur $]-\\infty,0[$ ou $]0,+\\infty[$ (le logarithme n'est pas défini en 0)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonométrie circulaire 1/3 — Quelles sont les primitives de $\\sin(x)$, $\\cos(x)$ et de $\\tan(x)$ ?",
+    "reponse": "$\\int \\sin(x)\\,\\mathrm{d}x = -\\cos(x)+C$ et $\\int \\cos(x)\\,\\mathrm{d}x = \\sin(x)+C$, toutes deux sur $\\mathbb{R}$. $\\int \\tan(x)\\,\\mathrm{d}x = -\\ln|\\cos(x)|+C_k$ sur chaque intervalle $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$ (le cosinus s'annule en dehors)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonométrie circulaire 2/3 — Donner les primitives de $\\frac{1}{\\cos^2(x)}$ et de $\\frac{1}{\\sin^2(x)}$, avec leurs domaines respectifs.",
+    "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos^2(x)} = \\tan(x)+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$, $k\\in\\mathbb{Z}$. $\\int \\frac{\\mathrm{d}x}{\\sin^2(x)} = -\\cot(x)+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$, $k\\in\\mathbb{Z}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonométrie circulaire 3/3 — Comment obtient-on les primitives de $\\frac{1}{\\cos(x)}$ et $\\frac{1}{\\sin(x)}$, et quelle méthode de changement de variable est en jeu ?",
+    "reponse": "$\\int \\frac{\\mathrm{d}x}{\\cos(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}+\\frac{\\pi}{4}\\right)\\right|+C_k$ sur $\\left]-\\frac{\\pi}{2}+k\\pi,\\ \\frac{\\pi}{2}+k\\pi\\right[$ ; $\\int \\frac{\\mathrm{d}x}{\\sin(x)} = \\ln\\left|\\tan\\!\\left(\\frac{x}{2}\\right)\\right|+C_k$ sur $]k\\pi,\\ \\pi+k\\pi[$. Ces deux primitives résultent du changement de variable de Bioche $t=\\tan(x/2)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonctions hyperboliques — Quelles sont les primitives de $\\sinh(x)$ et $\\cosh(x)$ ?",
+    "reponse": "$\\int \\sinh(x)\\,\\mathrm{d}x = \\cosh(x)+C$ et $\\int \\cosh(x)\\,\\mathrm{d}x = \\sinh(x)+C$, toutes deux sur $\\mathbb{R}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonctions radicielles — Donner les primitives de $\\frac{1}{\\sqrt{1-x^2}}$ et de $\\frac{1}{\\sqrt{a^2-x^2}}$, en précisant les domaines exacts.",
+    "reponse": "$\\int \\frac{\\mathrm{d}x}{\\sqrt{1-x^2}} = \\arcsin(x)+C$ sur l'intervalle ouvert $]-1,1[$ (non défini en $\\pm1$, division par zéro). $\\int \\frac{\\mathrm{d}x}{\\sqrt{a^2-x^2}} = \\arcsin\\!\\left(\\frac{x}{a}\\right)+C$ pour $a>0$, sur l'intervalle ouvert $]-a,a[$."
+  }
+]
