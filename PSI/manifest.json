@@ -5056,7 +5056,13 @@
           "path": "X SUP/Brainmaxxing",
           "description": "",
           "children": [],
-          "files": [],
+          "files": [
+            {
+              "name": "DM_caracteristiques_dipoles_corrige.pdf",
+              "path": "X%20SUP/Brainmaxxing/DM_caracteristiques_dipoles_corrige.pdf",
+              "corrige": true
+            }
+          ],
           "questions": [
             {
               "type": "Question",
