@@ -5668,6 +5668,16 @@
               "children": [],
               "files": [
                 {
+                  "name": "DM_caracteristiques_dipoles_corrige.pdf",
+                  "path": "X%20SUP/Claude/DM/DM_caracteristiques_dipoles_corrige.pdf",
+                  "corrige": true
+                },
+                {
+                  "name": "DM_caracteristiques_dipoles_enonce.pdf",
+                  "path": "X%20SUP/Claude/DM/DM_caracteristiques_dipoles_enonce.pdf",
+                  "corrige": false
+                },
+                {
                   "name": "Nombre d'or et Césaro (30min)_Corr.pdf",
                   "path": "X%20SUP/Claude/DM/Nombre%20d'or%20et%20C%C3%A9saro%20(30min)_Corr.pdf",
                   "corrige": true
@@ -5675,6 +5685,16 @@
                 {
                   "name": "Nombre d'or et Césaro (30min).pdf",
                   "path": "X%20SUP/Claude/DM/Nombre%20d'or%20et%20C%C3%A9saro%20(30min).pdf",
+                  "corrige": false
+                },
+                {
+                  "name": "projection_vecteurs_corrige.pdf",
+                  "path": "X%20SUP/Claude/DM/projection_vecteurs_corrige.pdf",
+                  "corrige": true
+                },
+                {
+                  "name": "projection_vecteurs_enonce.pdf",
+                  "path": "X%20SUP/Claude/DM/projection_vecteurs_enonce.pdf",
                   "corrige": false
                 }
               ],
