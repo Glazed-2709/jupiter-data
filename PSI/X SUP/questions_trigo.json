@@ -1,0 +1,62 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Relations fondamentales — Rappeler les deux identités fondamentales reliant $\\cos$, $\\sin$ et $\\tan$.",
+    "reponse": "$\\cos^2(x)+\\sin^2(x)=1$ (identité de Pythagore trigonométrique) et $1+\\tan^2(x)=\\dfrac{1}{\\cos^2(x)}$ (obtenue en divisant la première par $\\cos^2(x)$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Symétries 1/2 — Que valent $\\cos(-x)$, $\\sin(-x)$, $\\cos(\\pi-x)$ et $\\sin(\\pi-x)$ ?",
+    "reponse": "$\\cos(-x)=\\cos(x)$ (parité), $\\sin(-x)=-\\sin(x)$ (imparité), $\\cos(\\pi-x)=-\\cos(x)$, $\\sin(\\pi-x)=\\sin(x)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Symétries 2/2 — Que valent $\\cos(\\pi+x)$, $\\sin(\\pi+x)$, ainsi que les formules de l'angle complémentaire $\\cos\\left(\\frac{\\pi}{2}\\pm x\\right)$ et $\\sin\\left(\\frac{\\pi}{2}\\pm x\\right)$ ?",
+    "reponse": "$\\cos(\\pi+x)=-\\cos(x)$, $\\sin(\\pi+x)=-\\sin(x)$. Pour l'angle complémentaire : $\\cos\\left(\\frac{\\pi}{2}-x\\right)=\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}-x\\right)=\\cos(x)$, $\\cos\\left(\\frac{\\pi}{2}+x\\right)=-\\sin(x)$, $\\sin\\left(\\frac{\\pi}{2}+x\\right)=\\cos(x)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formules d'addition — Écrire les développements de $\\cos(a+b)$, $\\cos(a-b)$, $\\sin(a+b)$ et $\\sin(a-b)$.",
+    "reponse": "$\\cos(a+b)=\\cos(a)\\cos(b)-\\sin(a)\\sin(b)$ ; $\\cos(a-b)=\\cos(a)\\cos(b)+\\sin(a)\\sin(b)$ ; $\\sin(a+b)=\\sin(a)\\cos(b)+\\cos(a)\\sin(b)$ ; $\\sin(a-b)=\\sin(a)\\cos(b)-\\cos(a)\\sin(b)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formules d'addition pour la tangente — Donner les formules de $\\tan(a+b)$ et $\\tan(a-b)$.",
+    "reponse": "$\\tan(a+b) = \\dfrac{\\tan(a)+\\tan(b)}{1-\\tan(a)\\tan(b)}$ et $\\tan(a-b) = \\dfrac{\\tan(a)-\\tan(b)}{1+\\tan(a)\\tan(b)}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Duplication — Donner les trois écritures équivalentes de $\\cos(2x)$ et la formule de $\\sin(2x)$.",
+    "reponse": "$\\sin(2x)=2\\sin(x)\\cos(x)$. $\\cos(2x)=\\cos^2(x)-\\sin^2(x)=2\\cos^2(x)-1=1-2\\sin^2(x)$ (les trois formes se déduisent l'une de l'autre via $\\cos^2+\\sin^2=1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Linéarisation — Comment exprime-t-on $\\cos^2(x)$ et $\\sin^2(x)$ en fonction de $\\cos(2x)$, et à quoi sert cette technique ?",
+    "reponse": "$\\cos^2(x)=\\dfrac{1+\\cos(2x)}{2}$ et $\\sin^2(x)=\\dfrac{1-\\cos(2x)}{2}$. Ce sont les formules de linéarisation : elles permettent de remplacer un carré (produit) par une somme d'expressions en angle double, utile notamment pour intégrer $\\cos^2$ ou $\\sin^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Produits en sommes — Rappeler les trois formules de factorisation transformant $\\cos(a)\\cos(b)$, $\\sin(a)\\sin(b)$ et $\\sin(a)\\cos(b)$ en sommes.",
+    "reponse": "$\\cos(a)\\cos(b)=\\frac{1}{2}[\\cos(a+b)+\\cos(a-b)]$ ; $\\sin(a)\\sin(b)=\\frac{1}{2}[\\cos(a-b)-\\cos(a+b)]$ ; $\\sin(a)\\cos(b)=\\frac{1}{2}[\\sin(a+b)+\\sin(a-b)]$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sommes en produits (Simpson) — Donner les formules transformant $\\cos(p)+\\cos(q)$ et $\\sin(p)+\\sin(q)$ en produits.",
+    "reponse": "$\\cos(p)+\\cos(q) = 2\\cos\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$ et $\\sin(p)+\\sin(q) = 2\\sin\\left(\\frac{p+q}{2}\\right)\\cos\\left(\\frac{p-q}{2}\\right)$. (Les versions avec différence introduisent un signe $-$ et un $\\sin$ à la place du $\\cos$ extérieur pour $\\cos(p)-\\cos(q)$.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Arc moitié — En posant $t=\\tan(x/2)$, comment exprime-t-on $\\cos(x)$, $\\sin(x)$ et $\\tan(x)$ en fonction de $t$ ?",
+    "reponse": "Pour $x \\not\\equiv \\pi \\pmod{2\\pi}$ : $\\cos(x)=\\dfrac{1-t^2}{1+t^2}$, $\\sin(x)=\\dfrac{2t}{1+t^2}$, $\\tan(x)=\\dfrac{2t}{1-t^2}$. Ce paramétrage rationalise les intégrales trigonométriques (changement de variable de Bioche)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formules d'Euler — Comment exprime-t-on $\\cos(x)$ et $\\sin(x)$ à l'aide de l'exponentielle complexe ?",
+    "reponse": "$\\cos(x) = \\dfrac{e^{ix}+e^{-ix}}{2}$ et $\\sin(x) = \\dfrac{e^{ix}-e^{-ix}}{2i}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formule de Moivre — Énoncer la formule de Moivre et donner la factorisation de l'angle moitié de $e^{ix}+1$ et $e^{ix}-1$.",
+    "reponse": "Formule de Moivre : $(\\cos(x)+i\\sin(x))^n = \\cos(nx)+i\\sin(nx)$. Factorisation de l'angle moitié : $e^{ix}+1 = 2\\cos\\left(\\frac{x}{2}\\right)e^{ix/2}$ et $e^{ix}-1 = 2i\\sin\\left(\\frac{x}{2}\\right)e^{ix/2}$."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Convexité 1/2 — Rappeler les inégalités classiques liées au logarithme et à l'exponentielle au voisinage de 0, avec leur cas d'égalité.",
+    "reponse": "Logarithme : $\\forall x>-1,\\ \\ln(1+x)\\le x$ (égalité ssi $x=0$). Exponentielle : $\\forall x\\in\\mathbb{R},\\ e^x \\ge 1+x$ (égalité ssi $x=0$). Ces deux inégalités traduisent la position de la courbe par rapport à sa tangente en 0 (convexité de l'exponentielle, concavité du logarithme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Convexité 2/2 — Énoncer l'inégalité de Jordan complète sur $\\left[0,\\frac{\\pi}{2}\\right[$, et préciser ce qu'apporte chacun de ses quatre membres.",
+    "reponse": "$\\forall x \\in \\left[0,\\frac{\\pi}{2}\\right[,\\ \\dfrac{2}{\\pi}x \\le \\sin(x) \\le x \\le \\tan(x)$. Le membre $\\frac{2}{\\pi}x \\le \\sin(x)$ est l'inégalité de Jordan proprement dite (issue de la concavité de $\\sin$ sur $[0,\\pi/2]$) ; $\\sin(x)\\le x$ vient de la même concavité comparée à la tangente en 0 ; $x \\le \\tan(x)$ traduit que $\\tan$ croît plus vite que l'identité, jusqu'à diverger en $\\pi/2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Bernoulli — Énoncer l'inégalité de Bernoulli et préciser son domaine de validité en $x$ et $n$.",
+    "reponse": "$\\forall x \\ge -1,\\ \\forall n \\in \\mathbb{N},\\ (1+x)^n \\ge 1+nx$. Elle se démontre par récurrence sur $n$ et est un cas particulier de la convexité de $x \\mapsto (1+x)^n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inégalité triangulaire — Écrire le double encadrement de $|x+y|$ par rapport à $|x|$ et $|y|$.",
+    "reponse": "$\\big||x|-|y|\\big| \\le |x+y| \\le |x|+|y|$, valable pour des réels, des complexes (modules) ou des vecteurs (normes)."
+  },
+  {
+    "type": "Question",
+    "enonce": "AM-GM — Énoncer l'inégalité arithmético-géométrique et son cas d'égalité.",
+    "reponse": "Pour tous $x_1,\\dots,x_n \\ge 0$ : $\\sqrt[n]{x_1x_2\\cdots x_n} \\le \\dfrac{x_1+x_2+\\cdots+x_n}{n}$ (la moyenne géométrique est majorée par la moyenne arithmétique), avec égalité si et seulement si $x_1=x_2=\\cdots=x_n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inégalité de Young — Énoncer l'inégalité de Young et préciser les conditions sur $p$ et $q$.",
+    "reponse": "Pour $a,b\\ge0$ et $p,q>1$ tels que $\\frac{1}{p}+\\frac{1}{q}=1$ (exposants conjugués) : $ab \\le \\dfrac{a^p}{p}+\\dfrac{b^q}{q}$. C'est l'outil clé pour démontrer l'inégalité de Hölder."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cauchy-Schwarz — Donner la forme abstraite (préhilbertienne), la forme discrète et la forme intégrale de l'inégalité de Cauchy-Schwarz.",
+    "reponse": "Forme abstraite : $|\\langle x,y\\rangle| \\le \\|x\\|\\,\\|y\\|$. Forme discrète : $\\left(\\sum_{k=1}^n a_kb_k\\right)^2 \\le \\left(\\sum_{k=1}^n a_k^2\\right)\\left(\\sum_{k=1}^n b_k^2\\right)$. Forme intégrale : $\\left(\\int_I f(t)g(t)\\,\\mathrm{d}t\\right)^2 \\le \\left(\\int_I f(t)^2\\,\\mathrm{d}t\\right)\\left(\\int_I g(t)^2\\,\\mathrm{d}t\\right)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Hölder — Énoncer l'inégalité de Hölder sous sa forme intégrale et préciser la condition sur les exposants.",
+    "reponse": "Pour $p,q \\in\\ ]1,+\\infty[$ avec $\\frac{1}{p}+\\frac{1}{q}=1$ : $\\int_I |f(t)g(t)|\\,\\mathrm{d}t \\le \\|f\\|_p\\,\\|g\\|_q = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}\\left(\\int_I |g(t)|^q\\,\\mathrm{d}t\\right)^{1/q}$. Elle généralise Cauchy-Schwarz (cas $p=q=2$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Minkowski — Que dit l'inégalité de Minkowski, et pourquoi est-elle qualifiée d'inégalité triangulaire dans $L^p$ ?",
+    "reponse": "Pour $p\\ge1$ : $\\|f+g\\|_p \\le \\|f\\|_p + \\|g\\|_p$. Elle est l'analogue exact de l'inégalité triangulaire usuelle, mais pour la norme $\\|\\cdot\\|_p$ définie par $\\|f\\|_p = \\left(\\int_I |f(t)|^p\\,\\mathrm{d}t\\right)^{1/p}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inégalité de la moyenne — Énoncer l'inégalité de la moyenne pour une fonction continue $f$ sur $[a,b]$.",
+    "reponse": "Si $f$ est continue sur $[a,b]$ ($a\\le b$) : $\\left|\\int_a^b f(t)\\,\\mathrm{d}t\\right| \\le \\int_a^b |f(t)|\\,\\mathrm{d}t \\le (b-a)\\sup_{t\\in[a,b]}|f(t)|$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inégalité des accroissements finis (IAF) — Sous quelles hypothèses peut-on écrire $|f(b)-f(a)| \\le M|b-a|$ ?",
+    "reponse": "Si $f:[a,b]\\to\\mathbb{R}$ est continue sur $[a,b]$, dérivable sur $]a,b[$, et si $\\forall x\\in\\ ]a,b[,\\ |f'(x)|\\le M$, alors $|f(b)-f(a)| \\le M\\,|b-a|$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Taylor-Lagrange — Énoncer l'inégalité de Taylor-Lagrange et préciser l'hypothèse de régularité requise sur $f$.",
+    "reponse": "Si $f \\in \\mathcal{C}^{n+1}(I,\\mathbb{R})$ avec $\\sup_{t\\in I}|f^{(n+1)}(t)| \\le M_{n+1}$, alors $\\forall a,x\\in I$ : $\\left|f(x) - \\sum_{k=0}^n \\dfrac{f^{(k)}(a)}{k!}(x-a)^k\\right| \\le \\dfrac{M_{n+1}}{(n+1)!}|x-a|^{n+1}$. Elle majore l'erreur commise en approchant $f$ par son polynôme de Taylor d'ordre $n$."
+  }
+]

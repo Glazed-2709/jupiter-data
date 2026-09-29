@@ -1,0 +1,47 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Racine carrée d'un complexe — Comment détermine-t-on algébriquement une racine carrée $x+iy$ de $z=a+ib$, et quel système faut-il résoudre ?",
+    "reponse": "On pose $x+iy$ une racine carrée cherchée de $z=a+ib$ et on résout le système : $x^2-y^2=a$ (identification de la partie réelle de $(x+iy)^2$), $2xy=b$ (identification de la partie imaginaire, qui donne le signe du produit $xy$), et $x^2+y^2=\\sqrt{a^2+b^2}$ (égalité des modules, $|x+iy|^2=|z|$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Module au carré — Pourquoi préfère-t-on travailler avec $|z|^2$ plutôt qu'avec $|z|$, et comment le calcule-t-on ?",
+    "reponse": "Travailler avec $|z|$ introduit des racines carrées inutiles dans les calculs. Le réflexe est d'utiliser $|z|^2 = z\\cdot\\bar z$, qui s'exprime uniquement à l'aide de produits et permet de développer facilement des expressions comme $|z_1+z_2|^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Développement d'un module de somme — Donner le développement de $|z_1+z_2|^2$ en fonction de $|z_1|^2$, $|z_2|^2$ et de $\\operatorname{Re}(z_1\\bar z_2)$.",
+    "reponse": "$|z_1+z_2|^2 = (z_1+z_2)(\\bar z_1+\\bar z_2) = |z_1|^2+|z_2|^2+2\\operatorname{Re}(z_1\\bar z_2)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Identité du parallélogramme — Énoncer l'identité du parallélogramme pour deux complexes $z_1,z_2$.",
+    "reponse": "$|z_1+z_2|^2 + |z_1-z_2|^2 = 2\\left(|z_1|^2+|z_2|^2\\right)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cercle unité — Si $|z|=1$, que peut-on dire de $\\bar z$ par rapport à $\\frac{1}{z}$ ?",
+    "reponse": "Si $|z|=1$ (élément du cercle unité $\\mathbb{U}$), alors $\\bar z = \\dfrac{1}{z}$. Cela vient de $z\\bar z = |z|^2 = 1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivées usuelles 1/4 — Donner les dérivées de $x^n$ ($n\\in\\mathbb{N}^*$), $x^\\alpha$, $\\frac{1}{x}$ et $\\sqrt{x}$, avec leurs domaines de dérivabilité.",
+    "reponse": "$(x^n)' = nx^{n-1}$ sur $\\mathbb{R}$ ; $(x^\\alpha)' = \\alpha x^{\\alpha-1}$ sur $]0,+\\infty[$ ; $\\left(\\frac{1}{x}\\right)' = -\\frac{1}{x^2}$ sur $\\mathbb{R}^*$ ; $(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}$ sur $]0,+\\infty[$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivées usuelles 2/4 — Donner les dérivées de $e^x$, $a^x$, $\\ln|x|$ et $\\log_a(x)$.",
+    "reponse": "$(e^x)'=e^x$ sur $\\mathbb{R}$ ; $(a^x)' = \\ln(a)\\,a^x$ sur $\\mathbb{R}$ ($a>0$) ; $(\\ln|x|)' = \\frac{1}{x}$ sur $\\mathbb{R}^*$ ; $(\\log_a(x))' = \\frac{1}{x\\ln(a)}$ sur $]0,+\\infty[$ ($a>0,\\ a\\neq1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivées usuelles 3/4 — Donner les dérivées de $\\sin(x)$, $\\cos(x)$, $\\tan(x)$, $\\arcsin(x)$, $\\arccos(x)$ et $\\arctan(x)$.",
+    "reponse": "$(\\sin(x))'=\\cos(x)$ et $(\\cos(x))'=-\\sin(x)$ sur $\\mathbb{R}$ ; $(\\tan(x))' = 1+\\tan^2(x) = \\frac{1}{\\cos^2(x)}$ sur $\\mathbb{R}\\setminus\\{\\frac{\\pi}{2}+k\\pi\\}$ ; $(\\arcsin(x))' = \\frac{1}{\\sqrt{1-x^2}}$ et $(\\arccos(x))' = -\\frac{1}{\\sqrt{1-x^2}}$ sur $]-1,1[$ ; $(\\arctan(x))' = \\frac{1}{1+x^2}$ sur $\\mathbb{R}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivées usuelles 4/4 — Donner les dérivées de $\\sinh(x)$, $\\cosh(x)$, $\\tanh(x)$, $\\operatorname{argsh}(x)$, $\\operatorname{argch}(x)$ et $\\operatorname{argth}(x)$.",
+    "reponse": "$(\\sinh(x))'=\\cosh(x)$ et $(\\cosh(x))'=\\sinh(x)$ sur $\\mathbb{R}$ ; $(\\tanh(x))' = 1-\\tanh^2(x) = \\frac{1}{\\cosh^2(x)}$ sur $\\mathbb{R}$ ; $(\\operatorname{argsh}(x))' = \\frac{1}{\\sqrt{x^2+1}}$ sur $\\mathbb{R}$ ; $(\\operatorname{argch}(x))' = \\frac{1}{\\sqrt{x^2-1}}$ sur $]1,+\\infty[$ ; $(\\operatorname{argth}(x))' = \\frac{1}{1-x^2}$ sur $]-1,1[$."
+  }
+]
