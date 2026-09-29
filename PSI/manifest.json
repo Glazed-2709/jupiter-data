@@ -5657,6 +5657,19 @@
           "color": "hsl(159.1,100%,56%)"
         },
         {
+          "name": "Brainmaxxing",
+          "path": "X SUP/Brainmaxxing",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 211.11538461538453,
+          "color": "hsl(211.1,100%,60%)"
+        },
+        {
           "name": "Claude",
           "path": "X SUP/Claude",
           "description": "",
@@ -5702,8 +5715,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 211.11538461538453,
-              "color": "hsl(211.1,100%,60%)"
+              "hue": 305.1153846153845,
+              "color": "hsl(305.1,100%,56%)"
             }
           ],
           "files": [],
@@ -5711,8 +5724,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 211.11538461538453,
-          "color": "hsl(211.1,100%,60%)"
+          "hue": 305.1153846153845,
+          "color": "hsl(305.1,100%,56%)"
         }
       ],
       "files": [
