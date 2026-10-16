@@ -1611,6 +1611,11 @@
                   "name": "Exercices – Algèbre linéaire.pdf",
                   "path": "Math%C3%A9matiques/Alg%C3%A8bre%20Lin%C3%A9aire/TD/Exercices%20%E2%80%93%20Alg%C3%A8bre%20lin%C3%A9aire.pdf",
                   "corrige": false
+                },
+                {
+                  "name": "Exercices – Déterminants.pdf",
+                  "path": "Math%C3%A9matiques/Alg%C3%A8bre%20Lin%C3%A9aire/TD/Exercices%20%E2%80%93%20D%C3%A9terminants.pdf",
+                  "corrige": false
                 }
               ],
               "questions": [],
@@ -2163,8 +2168,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 211.11538461538453,
-          "color": "hsl(211.1,100%,60%)"
+          "hue": 196.11538461538453,
+          "color": "hsl(196.1,100%,60%)"
         },
         {
           "name": "Intégration",
@@ -2187,8 +2192,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 305.1153846153845,
-              "color": "hsl(305.1,100%,56%)"
+              "hue": 251.11538461538453,
+              "color": "hsl(251.1,100%,60%)"
             },
             {
               "name": "TD",
@@ -2211,8 +2216,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 357.1153846153845,
-              "color": "hsl(357.1,100%,56%)"
+              "hue": 303.1153846153845,
+              "color": "hsl(303.1,100%,56%)"
             }
           ],
           "files": [],
@@ -2678,8 +2683,60 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 305.1153846153845,
-          "color": "hsl(305.1,100%,56%)"
+          "hue": 251.11538461538453,
+          "color": "hsl(251.1,100%,60%)"
+        },
+        {
+          "name": "Réduction",
+          "path": "Mathématiques/Réduction",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Mathématiques/Réduction/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Cours – Réduction.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9duction/Cours/Cours%20%E2%80%93%20R%C3%A9duction.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 336.1153846153845,
+              "color": "hsl(336.1,100%,56%)"
+            },
+            {
+              "name": "TD",
+              "path": "Mathématiques/Réduction/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "Exercices – Réduction.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9duction/TD/Exercices%20%E2%80%93%20R%C3%A9duction.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.115384615384528,
+              "color": "hsl(28.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 336.1153846153845,
+          "color": "hsl(336.1,100%,56%)"
         },
         {
           "name": "Révisions",
@@ -2712,8 +2769,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 61.11538461538453,
-              "color": "hsl(61.1,100%,50%)"
+              "hue": 196.11538461538453,
+              "color": "hsl(196.1,100%,60%)"
             },
             {
               "name": "TD",
@@ -2736,8 +2793,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 113.11538461538453,
-              "color": "hsl(113.1,100%,56%)"
+              "hue": 248.11538461538453,
+              "color": "hsl(248.1,100%,60%)"
             }
           ],
           "files": [],
@@ -3365,8 +3422,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 61.11538461538453,
-          "color": "hsl(61.1,100%,50%)"
+          "hue": 196.11538461538453,
+          "color": "hsl(196.1,100%,60%)"
         }
       ],
       "files": [],
@@ -3893,6 +3950,241 @@
           "color": "hsl(19.1,100%,56%)"
         },
         {
+          "name": "Câble coaxial",
+          "path": "Physique/Câble coaxial",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/Câble coaxial/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "13_Cable_coaxial.pdf",
+                  "path": "Physique/C%C3%A2ble%20coaxial/Cours/13_Cable_coaxial.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.11538461538453,
+              "color": "hsl(47.1,100%,50%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/Câble coaxial/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD9_Cable_coaxial.pdf",
+                  "path": "Physique/C%C3%A2ble%20coaxial/TD/TD9_Cable_coaxial.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 99.11538461538453,
+              "color": "hsl(99.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 47.11538461538453,
+          "color": "hsl(47.1,100%,50%)"
+        },
+        {
+          "name": "Conduction",
+          "path": "Physique/Conduction",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/Conduction/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "15_Conduction_electrique.pdf",
+                  "path": "Physique/Conduction/Cours/15_Conduction_electrique.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 87.11538461538453,
+              "color": "hsl(87.1,100%,50%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/Conduction/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD11_Conduction_electrique.pdf",
+                  "path": "Physique/Conduction/TD/TD11_Conduction_electrique.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 139.11538461538453,
+              "color": "hsl(139.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 87.11538461538453,
+          "color": "hsl(87.1,100%,50%)"
+        },
+        {
+          "name": "Electrostatique",
+          "path": "Physique/Electrostatique",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/Electrostatique/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "17_Electrostatique.pdf",
+                  "path": "Physique/Electrostatique/Cours/17_Electrostatique.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 143.5153846153845,
+              "color": "hsl(143.5,100%,56%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/Electrostatique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 195.5153846153845,
+              "color": "hsl(195.5,100%,60%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 143.5153846153845,
+          "color": "hsl(143.5,100%,56%)"
+        },
+        {
+          "name": "Maxwell",
+          "path": "Physique/Maxwell",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/Maxwell/Cours",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 47.11538461538453,
+              "color": "hsl(47.1,100%,50%)"
+            }
+          ],
+          "files": [
+            {
+              "name": "16_Equations_de_Maxwell.pdf",
+              "path": "Physique/Maxwell/16_Equations_de_Maxwell.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 47.11538461538453,
+          "color": "hsl(47.1,100%,50%)"
+        },
+        {
+          "name": "Mécanique",
+          "path": "Physique/Mécanique",
+          "description": "",
+          "children": [
+            {
+              "name": "Cours",
+              "path": "Physique/Mécanique/Cours",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "14_Systemes_de_coordonnees.pdf",
+                  "path": "Physique/M%C3%A9canique/Cours/14_Systemes_de_coordonnees.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 87.11538461538453,
+              "color": "hsl(87.1,100%,50%)"
+            },
+            {
+              "name": "TD",
+              "path": "Physique/Mécanique/TD",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "TD10_Revisions_Mecanique.pdf",
+                  "path": "Physique/M%C3%A9canique/TD/TD10_Revisions_Mecanique.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 139.11538461538453,
+              "color": "hsl(139.1,100%,56%)"
+            }
+          ],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 87.11538461538453,
+          "color": "hsl(87.1,100%,50%)"
+        },
+        {
           "name": "Numérique",
           "path": "Physique/Numérique",
           "description": "",
@@ -3913,8 +4205,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 56.11538461538453,
-              "color": "hsl(56.1,100%,50%)"
+              "hue": 143.5153846153845,
+              "color": "hsl(143.5,100%,56%)"
             }
           ],
           "files": [],
@@ -3922,8 +4214,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 56.11538461538453,
-          "color": "hsl(56.1,100%,50%)"
+          "hue": 143.5153846153845,
+          "color": "hsl(143.5,100%,56%)"
         },
         {
           "name": "Ondes",
@@ -3951,8 +4243,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 111.11538461538453,
-              "color": "hsl(111.1,100%,56%)"
+              "hue": 214.71538461538455,
+              "color": "hsl(214.7,100%,60%)"
             },
             {
               "name": "TD",
@@ -3970,8 +4262,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 163.11538461538453,
-              "color": "hsl(163.1,100%,60%)"
+              "hue": 266.71538461538455,
+              "color": "hsl(266.7,100%,60%)"
             }
           ],
           "files": [],
@@ -4407,8 +4699,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 111.11538461538453,
-          "color": "hsl(111.1,100%,56%)"
+          "hue": 214.71538461538455,
+          "color": "hsl(214.7,100%,60%)"
         },
         {
           "name": "Oscillateur QS",
@@ -4431,8 +4723,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 196.11538461538453,
-              "color": "hsl(196.1,100%,60%)"
+              "hue": 87.11538461538453,
+              "color": "hsl(87.1,100%,50%)"
             },
             {
               "name": "TD",
@@ -4450,8 +4742,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 248.11538461538453,
-              "color": "hsl(248.1,100%,60%)"
+              "hue": 139.11538461538453,
+              "color": "hsl(139.1,100%,56%)"
             }
           ],
           "files": [],
@@ -4459,8 +4751,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": true,
-          "hue": 196.11538461538453,
-          "color": "hsl(196.1,100%,60%)"
+          "hue": 87.11538461538453,
+          "color": "hsl(87.1,100%,50%)"
         },
         {
           "name": "révisions",
@@ -4493,8 +4785,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 56.11538461538453,
-              "color": "hsl(56.1,100%,50%)"
+              "hue": 143.5153846153845,
+              "color": "hsl(143.5,100%,56%)"
             },
             {
               "name": "TD",
@@ -4517,8 +4809,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 108.11538461538453,
-              "color": "hsl(108.1,100%,56%)"
+              "hue": 195.5153846153845,
+              "color": "hsl(195.5,100%,60%)"
             }
           ],
           "files": [],
@@ -4890,8 +5182,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 56.11538461538453,
-          "color": "hsl(56.1,100%,50%)"
+          "hue": 143.5153846153845,
+          "color": "hsl(143.5,100%,56%)"
         }
       ],
       "files": [],
@@ -4907,6 +5199,35 @@
       "path": "SI",
       "description": "",
       "children": [
+        {
+          "name": "DS",
+          "path": "SI/DS",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "DS1_MP_2025_10_04_corrige.pdf",
+              "path": "SI/DS/DS1_MP_2025_10_04_corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "DS1_MP_2025_10_04_DR.pdf",
+              "path": "SI/DS/DS1_MP_2025_10_04_DR.pdf",
+              "corrige": false
+            },
+            {
+              "name": "DS1_MP_2025_10_04_sujet.pdf",
+              "path": "SI/DS/DS1_MP_2025_10_04_sujet.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 74.11538461538453,
+          "color": "hsl(74.1,100%,50%)"
+        },
         {
           "name": "SLCI",
           "path": "SI/SLCI",
@@ -4928,8 +5249,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 74.11538461538453,
-              "color": "hsl(74.1,100%,50%)"
+              "hue": 126.11538461538453,
+              "color": "hsl(126.1,100%,56%)"
             },
             {
               "name": "TD",
@@ -4947,8 +5268,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 126.11538461538453,
-              "color": "hsl(126.1,100%,56%)"
+              "hue": 178.11538461538453,
+              "color": "hsl(178.1,100%,60%)"
             }
           ],
           "files": [],
@@ -5034,8 +5355,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 74.11538461538453,
-          "color": "hsl(74.1,100%,50%)"
+          "hue": 126.11538461538453,
+          "color": "hsl(126.1,100%,56%)"
         }
       ],
       "files": [],

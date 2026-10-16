@@ -108,6 +108,19 @@
               ]
             },
             {
+              "name": "Réduction",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Révisions",
               "children": [
                 {
@@ -127,6 +140,67 @@
           "children": [
             {
               "name": "ALI",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Câble coaxial",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Conduction",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Electrostatique",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Maxwell",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Mécanique",
               "children": [
                 {
                   "name": "Cours",
@@ -191,6 +265,10 @@
         {
           "name": "SI",
           "children": [
+            {
+              "name": "DS",
+              "children": []
+            },
             {
               "name": "SLCI",
               "children": [
