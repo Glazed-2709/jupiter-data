@@ -7,7 +7,21 @@
       "name": "Maths",
       "path": "Maths",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "Analyse",
+          "path": "Maths/Analyse",
+          "description": "",
+          "children": [],
+          "files": [],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 342.1153846153845,
+          "color": "hsl(342.1,100%,56%)"
+        }
+      ],
       "files": [],
       "questions": [
         {
@@ -1060,7 +1074,7 @@
         }
       ],
       "hasQuestions": true,
-      "isAvantDernier": false,
+      "isAvantDernier": true,
       "hue": 342.1153846153845,
       "color": "hsl(342.1,100%,56%)"
     }
@@ -1069,7 +1083,7 @@
   "questions": [],
   "questionSets": [],
   "hasQuestions": false,
-  "isAvantDernier": true,
+  "isAvantDernier": false,
   "hue": 342.1153846153845,
   "color": "hsl(342.1,100%,56%)"
 }

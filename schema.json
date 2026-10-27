@@ -6,7 +6,12 @@
       "children": [
         {
           "name": "Maths",
-          "children": []
+          "children": [
+            {
+              "name": "Analyse",
+              "children": []
+            }
+          ]
         }
       ]
     },
