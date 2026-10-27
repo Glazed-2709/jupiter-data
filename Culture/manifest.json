@@ -44,8 +44,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 342.1153846153845,
-      "color": "hsl(342.1,100%,56%)"
+      "hue": 119.6231446153846,
+      "color": "hsl(119.6,100%,56%)"
     },
     {
       "name": "Bonheur",
@@ -88,8 +88,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 34.11538461538453,
-      "color": "hsl(34.1,100%,56%)"
+      "hue": 171.6231446153846,
+      "color": "hsl(171.6,100%,60%)"
     },
     {
       "name": "Temps",
@@ -132,8 +132,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 128.11538461538453,
-      "color": "hsl(128.1,100%,56%)"
+      "hue": 265.6231446153846,
+      "color": "hsl(265.6,100%,60%)"
     }
   ],
   "files": [],
@@ -431,6 +431,6 @@
   ],
   "hasQuestions": true,
   "isAvantDernier": true,
-  "hue": 342.1153846153845,
-  "color": "hsl(342.1,100%,56%)"
+  "hue": 119.6231446153846,
+  "color": "hsl(119.6,100%,56%)"
 }

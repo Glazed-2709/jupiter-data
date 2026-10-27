@@ -2,6 +2,15 @@
   "name": "Objectif X",
   "children": [
     {
+      "name": "BrainMaxing",
+      "children": [
+        {
+          "name": "Maths",
+          "children": []
+        }
+      ]
+    },
+    {
       "name": "Culture",
       "children": [
         {
@@ -307,9 +316,21 @@
   ],
   "sections": [
     {
+      "id": "BrainMaxing",
+      "label": "BrainMaxing",
+      "color": "hsl(342.1,100%,56%)",
+      "manifest": "BrainMaxing/manifest.json",
+      "subjects": [
+        {
+          "id": "Maths",
+          "label": "Maths"
+        }
+      ]
+    },
+    {
       "id": "Culture",
       "label": "Culture",
-      "color": "hsl(342.1,100%,56%)",
+      "color": "hsl(119.6,100%,56%)",
       "manifest": "Culture/manifest.json",
       "subjects": [
         {
