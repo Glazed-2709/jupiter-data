@@ -297,10 +297,6 @@
           "name": "X SUP",
           "children": [
             {
-              "name": "Brainmaxxing",
-              "children": []
-            },
-            {
               "name": "Claude",
               "children": [
                 {
