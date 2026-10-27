@@ -246,6 +246,31 @@
         },
         {
           "type": "Question",
+          "enonce": "Logarithme en base $a$ — Donner la primitive de $\\log_a(x)$ pour $a > 0$ et $a \\neq 1$, ainsi que son domaine de définition.",
+          "reponse": "$\\int \\log_a(x)\\,\\mathrm{d}x = \\frac{x\\ln(x) - x}{\\ln(a)} + C$ sur $]0, +\\infty[$. Cela provient de la formule de changement de base $\\log_a(x) = \\frac{\\ln(x)}{\\ln(a)}$."
+        },
+        {
+          "type": "Question",
+          "enonce": "Réciproques des fonctions circulaires — Donner les primitives des fonctions $\\arcsin(x)$ et $\\arccos(x)$ avec leurs domaines de validité.",
+          "reponse": "$\\int \\arcsin(x)\\,\\mathrm{d}x = x\\arcsin(x) + \\sqrt{1-x^2} + C$ sur $[-1, 1]$. $\\int \\arccos(x)\\,\\mathrm{d}x = x\\arccos(x) - \\sqrt{1-x^2} + C$ sur $[-1, 1]$. Ces primitives s'obtiennent directement par intégration par parties (IPP)."
+        },
+        {
+          "type": "Question",
+          "enonce": "Réciproques des fonctions hyperboliques — Donner les primitives de $\\mathrm{argsh}(x)$, $\\mathrm{argch}(x)$ et $\\mathrm{argth}(x)$, avec leurs domaines respectifs.",
+          "reponse": "$\\int \\mathrm{argsh}(x)\\,\\mathrm{d}x = x\\mathrm{argsh}(x) - \\sqrt{x^2+1} + C$ sur $\\mathbb{R}$. $\\int \\mathrm{argch}(x)\\,\\mathrm{d}x = x\\mathrm{argch}(x) - \\sqrt{x^2-1} + C$ sur $[1, +\\infty[$. $\\int \\mathrm{argth}(x)\\,\\mathrm{d}x = x\\mathrm{argth}(x) + \\frac{1}{2}\\ln(1-x^2) + C$ sur $]-1, 1[$. Elles s'obtiennent par IPP."
+        },
+        {
+          "type": "Question",
+          "enonce": "Règles de Bioche — Énoncer les règles de Bioche pour l'intégration de formes $\\omega(x) = R(\\cos x, \\sin x)\\,\\mathrm{d}x$.",
+          "reponse": "Pour déterminer le changement de variable adapté à la forme différentielle $\\omega(x) = R(\\cos x, \\sin x)\\,\\mathrm{d}x$ :\n- Si $\\omega(-x) = \\omega(x)$, poser $u = \\cos x$.\n- Si $\\omega(\\pi - x) = \\omega(x)$, poser $u = \\sin x$.\n- Si $\\omega(\\pi + x) = \\omega(x)$, poser $u = \\tan x$.\n- Si aucune invariance n'est vérifiée, poser le changement universel de Weierstrass $t = \\tan(x/2)$."
+        },
+        {
+          "type": "Question",
+          "enonce": "Substitution de Weierstrass — Rappeler le changement de variable universel $t = \\tan(x/2)$ et exprimer $\\cos x$, $\\sin x$, $\\tan x$ et $\\mathrm{d}x$ en fonction de $t$.",
+          "reponse": "En posant $t = \\tan\\left(\\frac{x}{2}\\right)$ sur $]-\\pi, \\pi[$ :\n- $\\mathrm{d}x = \\frac{2\\,\\mathrm{d}t}{1+t^2}$\n- $\\sin x = \\frac{2t}{1+t^2}$\n- $\\cos x = \\frac{1-t^2}{1+t^2}$\n- $\\tan x = \\frac{2t}{1-t^2}$"
+        },
+        {
+          "type": "Question",
           "enonce": "Relations fondamentales — Rappeler les deux identités fondamentales reliant $\\cos$, $\\sin$ et $\\tan$.",
           "reponse": "$\\cos^2(x)+\\sin^2(x)=1$ (identité de Pythagore trigonométrique) et $1+\\tan^2(x)=\\dfrac{1}{\\cos^2(x)}$ (obtenue en divisant la première par $\\cos^2(x)$)."
         },
@@ -547,6 +572,31 @@
               "type": "Question",
               "enonce": "Fonctions radicielles — Donner les primitives de $\\frac{1}{\\sqrt{1-x^2}}$ et de $\\frac{1}{\\sqrt{a^2-x^2}}$, en précisant les domaines exacts.",
               "reponse": "$\\int \\frac{\\mathrm{d}x}{\\sqrt{1-x^2}} = \\arcsin(x)+C$ sur l'intervalle ouvert $]-1,1[$ (non défini en $\\pm1$, division par zéro). $\\int \\frac{\\mathrm{d}x}{\\sqrt{a^2-x^2}} = \\arcsin\\!\\left(\\frac{x}{a}\\right)+C$ pour $a>0$, sur l'intervalle ouvert $]-a,a[$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Logarithme en base $a$ — Donner la primitive de $\\log_a(x)$ pour $a > 0$ et $a \\neq 1$, ainsi que son domaine de définition.",
+              "reponse": "$\\int \\log_a(x)\\,\\mathrm{d}x = \\frac{x\\ln(x) - x}{\\ln(a)} + C$ sur $]0, +\\infty[$. Cela provient de la formule de changement de base $\\log_a(x) = \\frac{\\ln(x)}{\\ln(a)}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Réciproques des fonctions circulaires — Donner les primitives des fonctions $\\arcsin(x)$ et $\\arccos(x)$ avec leurs domaines de validité.",
+              "reponse": "$\\int \\arcsin(x)\\,\\mathrm{d}x = x\\arcsin(x) + \\sqrt{1-x^2} + C$ sur $[-1, 1]$. $\\int \\arccos(x)\\,\\mathrm{d}x = x\\arccos(x) - \\sqrt{1-x^2} + C$ sur $[-1, 1]$. Ces primitives s'obtiennent directement par intégration par parties (IPP)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Réciproques des fonctions hyperboliques — Donner les primitives de $\\mathrm{argsh}(x)$, $\\mathrm{argch}(x)$ et $\\mathrm{argth}(x)$, avec leurs domaines respectifs.",
+              "reponse": "$\\int \\mathrm{argsh}(x)\\,\\mathrm{d}x = x\\mathrm{argsh}(x) - \\sqrt{x^2+1} + C$ sur $\\mathbb{R}$. $\\int \\mathrm{argch}(x)\\,\\mathrm{d}x = x\\mathrm{argch}(x) - \\sqrt{x^2-1} + C$ sur $[1, +\\infty[$. $\\int \\mathrm{argth}(x)\\,\\mathrm{d}x = x\\mathrm{argth}(x) + \\frac{1}{2}\\ln(1-x^2) + C$ sur $]-1, 1[$. Elles s'obtiennent par IPP."
+            },
+            {
+              "type": "Question",
+              "enonce": "Règles de Bioche — Énoncer les règles de Bioche pour l'intégration de formes $\\omega(x) = R(\\cos x, \\sin x)\\,\\mathrm{d}x$.",
+              "reponse": "Pour déterminer le changement de variable adapté à la forme différentielle $\\omega(x) = R(\\cos x, \\sin x)\\,\\mathrm{d}x$ :\n- Si $\\omega(-x) = \\omega(x)$, poser $u = \\cos x$.\n- Si $\\omega(\\pi - x) = \\omega(x)$, poser $u = \\sin x$.\n- Si $\\omega(\\pi + x) = \\omega(x)$, poser $u = \\tan x$.\n- Si aucune invariance n'est vérifiée, poser le changement universel de Weierstrass $t = \\tan(x/2)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Substitution de Weierstrass — Rappeler le changement de variable universel $t = \\tan(x/2)$ et exprimer $\\cos x$, $\\sin x$, $\\tan x$ et $\\mathrm{d}x$ en fonction de $t$.",
+              "reponse": "En posant $t = \\tan\\left(\\frac{x}{2}\\right)$ sur $]-\\pi, \\pi[$ :\n- $\\mathrm{d}x = \\frac{2\\,\\mathrm{d}t}{1+t^2}$\n- $\\sin x = \\frac{2t}{1+t^2}$\n- $\\cos x = \\frac{1-t^2}{1+t^2}$\n- $\\tan x = \\frac{2t}{1-t^2}$"
             }
           ]
         },
