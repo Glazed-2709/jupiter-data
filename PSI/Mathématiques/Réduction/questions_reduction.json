@@ -1,0 +1,242 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 1/6 — Définir une valeur propre et un vecteur propre d'un endomorphisme $u\\in\\mathscr{L}(E)$ (deux caractérisations du vecteur propre).",
+    "reponse": "Une valeur propre de $u$ est un scalaire $\\lambda$ tel qu'il existe un vecteur $x$ NON NUL vérifiant $u(x)=\\lambda x$. Un vecteur propre est un vecteur $x$ NON NUL tel que la famille $(x,u(x))$ est liée, i.e. tel qu'il existe $\\lambda$ avec $u(x)=\\lambda x$ ; $x$ est alors dit associé à la valeur propre $\\lambda$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 2/6 — Définir l'équation aux éléments propres, le sous-espace propre $E_\\lambda(u)$ et le spectre $\\operatorname{Sp}(u)$.",
+    "reponse": "Équation aux éléments propres : $u(x)=\\lambda x$, d'inconnues le vecteur $x$ ET le scalaire $\\lambda$. Sous-espace propre : $E_\\lambda(u)=\\ker(u-\\lambda\\operatorname{Id}_E)=\\{x\\in E,\\ u(x)=\\lambda x\\}$, un sev de $E$. Spectre : $\\operatorname{Sp}(u)$ est l'ensemble des valeurs propres de $u$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 3/6 — Piège : $0_E$ est-il un vecteur propre ? Appartient-il à $E_\\lambda(u)$ ?",
+    "reponse": "$0_E\\in E_\\lambda(u)$ (c'est un sev, il contient toujours le vecteur nul), mais $0_E$ n'est PAS un vecteur propre de $u$ car un vecteur propre est par définition NON NUL. Attention à ne pas confondre « valeur propre nulle » (ce qui est possible : $\\lambda=0$) et « vecteur propre nul » (impossible)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 4/6 — Pourquoi cherche-t-on les éléments propres ? Énoncer la Proposition 12 (base de diagonalisation).",
+    "reponse": "Le but est de trouver une base où la matrice de $u$ est simple (diagonale ou triangulaire). Proposition 12 : si $\\mathscr{B}$ est une base de $E$, $\\mathscr{M}_{\\mathscr{B}}(u)$ est DIAGONALE $\\iff$ les vecteurs de $\\mathscr{B}$ sont PROPRES pour $u$ ; dans ce cas, les termes diagonaux de la matrice sont les valeurs propres de $u$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 5/6 — Exemples « à connaître par cœur » : donner les éléments propres d'une homothétie, d'un projecteur et d'une symétrie.",
+    "reponse": "Homothétie $\\lambda_0\\operatorname{Id}$ : unique valeur propre $\\lambda_0$, $E_{\\lambda_0}=E$ tout entier. Projecteur $p\\ne0,\\operatorname{Id}$ : $\\operatorname{Sp}(p)=\\{0,1\\}$ avec $E_1=\\operatorname{Im}p$ et $E_0=\\ker p$. Symétrie $s\\ne\\pm\\operatorname{Id}$ : $\\operatorname{Sp}(s)=\\{-1,1\\}$ avec $E_1=\\ker(s-\\operatorname{Id})$ et $E_{-1}=\\ker(s+\\operatorname{Id})$ (et $E=E_1\\oplus E_{-1}$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Éléments propres 6/6 — Déterminer le spectre dans les exemples classiques : décalage $\\Delta$ sur $E=\\mathbb{C}^{\\mathbb{N}}$ ($\\Delta(u)_n=u_{n+1}$), dérivation $f\\mapsto f'$ sur $\\mathscr{C}^\\infty(\\mathbb{R},\\mathbb{R})$, dérivation $P\\mapsto P'$ sur $\\mathbb{R}[X]$, rotation du plan.",
+    "reponse": "Décalage sur $\\mathbb{C}^{\\mathbb{N}}$ : TOUT $\\lambda\\in\\mathbb{C}$ est valeur propre (la suite géométrique $(\\lambda^n)_n$ est propre : $\\Delta((\\lambda^n))=\\lambda(\\lambda^n)$), donc spectre infini — possible car $E$ est de dimension infinie. Dérivation sur $\\mathscr{C}^\\infty(\\mathbb{R},\\mathbb{R})$ : tout réel $\\lambda$ est valeur propre, de vecteur propre $x\\mapsto e^{\\lambda x}$. Dérivation sur $\\mathbb{R}[X]$ : seule valeur propre $0$ (polynômes constants), car pour $P$ non constant $\\deg P'<\\deg P$ donc $P'=\\lambda P$ impose $\\lambda=0$. Rotation d'angle $\\theta\\notin\\pi\\mathbb{Z}$ de $\\mathbb{R}^2$ : AUCUNE valeur propre réelle (aucune droite stable), alors que sur $\\mathbb{C}$ elle a les deux valeurs propres $e^{\\pm i\\theta}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 1/6 — Énoncer la Proposition 1 (injectivité et valeur propre 0).",
+    "reponse": "$0$ est valeur propre de $u$ $\\iff$ $u$ est NON injective (car $E_0=\\ker u$). En dimension finie : $0\\in\\operatorname{Sp}(u)\\iff u$ non bijectif $\\iff\\det u=0$. Pour une matrice : $0\\in\\operatorname{Sp}(A)\\iff A$ non inversible."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 2/6 — Énoncer la Proposition 2 (sous-espaces propres et stabilité).",
+    "reponse": "(1) Les sous-espaces propres associés à des valeurs propres NON NULLES sont inclus dans $\\operatorname{Im}u$. (2) Une droite vectorielle est stable par $u$ $\\iff$ elle est engendrée par un vecteur propre de $u$. (3) Tout sous-espace propre est stable par $u$, et l'endomorphisme induit sur $E_\\lambda$ est l'HOMOTHÉTIE de rapport $\\lambda$. (4) Si $u$ et $v$ COMMUTENT, les sous-espaces propres de $u$ sont stables par $v$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 3/6 — Énoncer la Proposition 3 et ses deux corollaires (somme de sous-espaces propres, liberté).",
+    "reponse": "Proposition 3 : la somme d'une famille finie de sous-espaces propres associés à des valeurs propres DEUX À DEUX DISTINCTES est DIRECTE. Corollaire 1 : (a) toute famille de vecteurs propres associés à des valeurs propres deux à deux distinctes est LIBRE ; (b) la réunion de bases de sous-espaces propres associés à des valeurs propres deux à deux distinctes est une famille libre."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 4/6 — Énoncer la Proposition 4 (valeur propre de $P(u)$) et le Corollaire 2 (valeurs propres et annulateur).",
+    "reponse": "Proposition 4 : si $\\lambda\\in\\operatorname{Sp}(u)$ et $P\\in\\mathbb{K}[X]$, alors $P(\\lambda)\\in\\operatorname{Sp}(P(u))$ (un vecteur propre de $u$ pour $\\lambda$ est propre pour $P(u)$ pour $P(\\lambda)$). Corollaire 2 : si $P$ est un ANNULATEUR de $u$, toute valeur propre de $u$ est RACINE de $P$ (car $P(\\lambda)\\in\\operatorname{Sp}(0)=\\{0\\}$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 5/6 — Quelles valeurs propres sont possibles pour $u$ vérifiant $u^2-3u+2\\operatorname{Id}=0$ ? Et pour $u^2-u+\\operatorname{Id}=0$ ?",
+    "reponse": "$X^2-3X+2=(X-1)(X-2)$ annule $u$, donc $\\operatorname{Sp}(u)\\subset\\{1,2\\}$. $X^2-X+1$ a pour racines $e^{\\pm i\\pi/3}$ (non réelles) : sur $\\mathbb{R}$ le spectre est VIDE (aucune valeur propre réelle possible), sur $\\mathbb{C}$ on a $\\operatorname{Sp}(u)\\subset\\{e^{i\\pi/3},e^{-i\\pi/3}\\}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 6/6 — Les racines d'un polynôme annulateur de $u$ sont-elles toutes des valeurs propres de $u$ ?",
+    "reponse": "NON : la condition du Corollaire 2 est NÉCESSAIRE mais pas suffisante. Les valeurs propres sont PARMI les racines d'un annulateur, mais un annulateur peut avoir des racines qui ne sont pas valeurs propres (exemple : $u=\\operatorname{Id}$ est annulé par $(X-1)(X-2)$, mais $2\\notin\\operatorname{Sp}(\\operatorname{Id})$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Matrices 1/4 — Définir les éléments propres d'une matrice carrée $A\\in\\mathscr{M}_n(\\mathbb{K})$, et énoncer les propriétés transposées de celles des endomorphismes.",
+    "reponse": "Ce sont ceux de l'endomorphisme canoniquement associé : $\\lambda$ est valeur propre de $A$ s'il existe $X\\in\\mathbb{K}^n$ NON NUL avec $AX=\\lambda X$ ; $E_\\lambda(A)=\\ker(A-\\lambda I_n)$ ; $\\operatorname{Sp}(A)$ est le spectre. Propriétés : $0\\in\\operatorname{Sp}(A)\\iff A$ non inversible ; $\\lambda\\in\\operatorname{Sp}(A)\\Rightarrow P(\\lambda)\\in\\operatorname{Sp}(P(A))$ ; si $P(A)=0$ alors $\\lambda\\in\\operatorname{Sp}(A)\\Rightarrow P(\\lambda)=0$ ; une matrice de $\\mathscr{M}_n(\\mathbb{K})$ a AU PLUS $n$ valeurs propres."
+  },
+  {
+    "type": "Question",
+    "enonce": "Matrices 2/4 — Que dire des valeurs propres de deux matrices semblables, et d'une matrice diagonale ou triangulaire ?",
+    "reponse": "Deux matrices semblables ont même spectre (Prop. 6). Si $A$ est diagonale ou triangulaire, ses valeurs propres sont ses ÉLÉMENTS DIAGONAUX (Prop. 8) ; de même, si $u$ admet une matrice diagonale ou triangulaire dans une base, ses valeurs propres sont les éléments diagonaux de cette matrice."
+  },
+  {
+    "type": "Question",
+    "enonce": "Matrices 3/4 — Importance du corps de base : comparer $\\operatorname{Sp}_{\\mathbb{R}}(A)$ et $\\operatorname{Sp}_{\\mathbb{C}}(A)$ pour $A\\in\\mathscr{M}_n(\\mathbb{R})$, et énoncer la propriété de conjugaison.",
+    "reponse": "(i) $\\operatorname{Sp}_{\\mathbb{R}}(A)\\subset\\operatorname{Sp}_{\\mathbb{C}}(A)$, l'inclusion pouvant être STRICTE : $A=\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$ n'a aucune valeur propre réelle mais $\\operatorname{Sp}_{\\mathbb{C}}(A)=\\{i,-i\\}$. (ii) Si $\\lambda\\in\\mathbb{C}$ est valeur propre de $A$ réelle, alors $\\bar\\lambda$ aussi, et $X\\in E_\\lambda(A)\\iff\\bar X\\in E_{\\bar\\lambda}(A)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Matrices 4/4 — Exemple de la matrice $J$ de tous les coefficients égaux à 1 (« matrice d'Attila ») de taille $n$ : spectre et sous-espaces propres ?",
+    "reponse": "$J$ est de rang 1 : $\\ker J$ est un hyperplan (dimension $n-1$), donc $0$ est valeur propre avec $\\dim E_0=n-1$. De plus $J\\mathbf{1}=n\\mathbf{1}$ où $\\mathbf{1}=(1,\\dots,1)^\\top$ : $n$ est valeur propre avec $E_n=\\operatorname{Vect}(\\mathbf{1})$. Donc $\\chi_J=X^{n-1}(X-n)$, $\\operatorname{Sp}(J)=\\{0,n\\}$ et $J$ est diagonalisable (somme $(n-1)+1=n$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 1/6 — Définir $\\chi_u$ et $\\chi_A$, et donner leur degré, coefficient dominant, terme constant et coefficient de degré $n-1$ (Prop. 7).",
+    "reponse": "$\\chi_u(x)=\\det(x\\operatorname{Id}_E-u)$ et $\\chi_A(x)=\\det(xI_n-A)$. Proposition 7 : $\\chi_u=\\chi_A$ est un polynôme de degré $n$, unitaire, avec $\\chi_A=X^n-\\operatorname{tr}(A)X^{n-1}+\\cdots+(-1)^n\\det A$. (Une matrice et sa transposée ont le même polynôme caractéristique.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 2/6 — Énoncer le Théorème 1 liant valeurs propres et polynôme caractéristique, et le justifier.",
+    "reponse": "Les valeurs propres de $u$ (resp. $A$) sont exactement les RACINES de $\\chi_u$ (resp. $\\chi_A$). Justification : $\\lambda\\in\\operatorname{Sp}(u)\\iff\\ker(u-\\lambda\\operatorname{Id})\\ne\\{0\\}\\iff u-\\lambda\\operatorname{Id}$ non bijectif $\\iff\\det(\\lambda\\operatorname{Id}-u)=0\\iff\\chi_u(\\lambda)=0$. Conseil pratique : chercher à obtenir des FACTORISATIONS en cours de calcul du déterminant plutôt que de développer brutalement."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 3/6 — Énoncer les Propositions 9 et 10 (sev stable, matrices semblables).",
+    "reponse": "Proposition 9 : si $F$ est un sev stable par $u$, le polynôme caractéristique de l'endomorphisme induit $u_{|F}$ DIVISE $\\chi_u$. Proposition 10 : deux matrices semblables ont même polynôme caractéristique (donc même spectre, même trace, même déterminant avec leurs multiplicités)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 4/6 — Définir l'ordre de multiplicité d'une valeur propre, et énoncer la Proposition 11 (somme et produit des valeurs propres).",
+    "reponse": "L'ordre de multiplicité $m_\\lambda$ de la valeur propre $\\lambda$ est son ordre de multiplicité comme RACINE de $\\chi_u$. Proposition 11 : si $\\chi_u$ est SCINDÉ sur $\\mathbb{K}$, alors $\\operatorname{tr}u$ et $\\det u$ sont respectivement la SOMME et le PRODUIT des valeurs propres comptées avec multiplicité. Pour une matrice réelle, il faut compter TOUTES les valeurs propres, y compris les complexes non réelles."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 5/6 — Énoncer le Théorème 2 (encadrement de la dimension d'un sous-espace propre) et sa remarque sur les valeurs propres simples.",
+    "reponse": "Pour toute valeur propre $\\lambda$ de $u$ : $1\\le d_\\lambda\\le m_\\lambda$ avec $d_\\lambda=\\dim\\ker(u-\\lambda\\operatorname{Id}_E)$ et $m_\\lambda$ l'ordre de multiplicité. Conséquence : pour une valeur propre SIMPLE ($m_\\lambda=1$), on a automatiquement $d_\\lambda=m_\\lambda=1$ (sous-espace propre = droite) ; il suffit donc de vérifier $d_\\lambda=m_\\lambda$ pour les valeurs propres MULTIPLES."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynôme caractéristique 6/6 — Énoncer le théorème de Cayley-Hamilton et son intérêt.",
+    "reponse": "Pour $u\\in\\mathscr{L}(E)$ ($\\dim E<\\infty$) et pour $A\\in\\mathscr{M}_n(\\mathbb{K})$ : $\\chi_u(u)=0$ et $\\chi_A(A)=0$ — le polynôme caractéristique est un ANNULATEUR (démonstration non exigible). Intérêt : il fournit toujours un annulateur de degré $n$, utilisé pour calculer l'inverse ou les puissances ($X^k\\bmod\\chi$) ; en dimension finie, $A^n$ s'exprime par les puissances plus petites."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 1/8 — Définir un endomorphisme diagonalisable, une matrice diagonalisable, et la décomposition en somme directe équivalente.",
+    "reponse": "$u$ est diagonalisable s'il existe une base de $E$ constituée de VECTEURS PROPRES de $u$, i.e. une base où sa matrice est diagonale (les éléments diagonaux sont les valeurs propres, la base est dite de diagonalisation). Équivalent : $E=\\bigoplus_{\\lambda\\in\\operatorname{Sp}(u)}\\ker(u-\\lambda\\operatorname{Id})$. Une matrice $A$ est diagonalisable si elle est SEMBLABLE à une diagonale : $\\exists P\\in\\operatorname{GL}_n(\\mathbb{K})$, $P^{-1}AP$ diagonale."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 2/8 — Énoncer les Propositions 13 et 14 (décomposition spectrale, sous-espaces stables avec homothéties).",
+    "reponse": "Proposition 13 : si $u$ est diagonalisable et $p_\\lambda$ est le projecteur sur $E_\\lambda(u)$ parallèlement à la somme des autres sous-espaces propres, alors $u=\\sum_{\\lambda\\in\\operatorname{Sp}(u)}\\lambda\\,p_\\lambda$. Proposition 14 : $u$ est diagonalisable $\\iff$ il existe des sev $F_1,\\dots,F_q$ stables par $u$ avec $E=\\sum F_j$ (somme) tels que $u$ induit sur chaque $F_j$ une HOMOTHÉTIE."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 3/8 — Énoncer la condition suffisante de diagonalisabilité (Prop. 15).",
+    "reponse": "Si $\\chi_u$ est SCINDÉ sur $\\mathbb{K}$ et n'a que des racines SIMPLES, alors $u$ est diagonalisable et ses sous-espaces propres sont des droites. Autrement dit : si $u$ a exactement $n=\\dim E$ valeurs propres distinctes, il est diagonalisable. ATTENTION : la réciproque est fausse (l'identité est diagonalisable avec une seule valeur propre de multiplicité $n$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 4/8 — Énoncer la CNS géométrique de diagonalisabilité (Théorème 4) et sa reformulation par les dimensions.",
+    "reponse": "$u$ est diagonalisable $\\iff$ (1) $\\chi_u$ est SCINDÉ sur $\\mathbb{K}$ ET (2) pour chaque valeur propre $\\lambda$, $d_\\lambda=m_\\lambda$. Reformulation (compte tenu de $d_\\lambda\\le m_\\lambda$) : $u$ est diagonalisable $\\iff\\sum_{\\lambda\\in\\operatorname{Sp}(u)}d_\\lambda=\\dim E$. Vérification : il suffit de contrôler $d_\\lambda=m_\\lambda$ pour les valeurs propres multiples."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 5/8 — Énoncer la CNS algébrique de diagonalisabilité (Théorème 5) et sa forme explicite.",
+    "reponse": "$u$ est diagonalisable $\\iff$ il existe un polynôme ANNULATEUR de $u$ SCINDÉ sur $\\mathbb{K}$ et à racines SIMPLES (démonstration non exigible). Forme explicite : $u$ est diagonalisable $\\iff\\prod_{\\lambda\\in\\operatorname{Sp}(u)}(X-\\lambda)$ est un annulateur de $u$. Application : projecteurs ($X^2-X$) et symétries ($X^2-1$) sont diagonalisables."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 6/8 — Application : à quelle condition sur $a,b,c$ la matrice $B=\\begin{pmatrix}1&a&b\\\\0&1&c\\\\0&0&-1\\end{pmatrix}$ est-elle diagonalisable ?",
+    "reponse": "$B$ est triangulaire : $\\chi_B=(X-1)^2(X+1)$, scindé, avec $1$ double et $-1$ simple. Seule la valeur propre double demande vérification : $B-I=\\begin{pmatrix}0&a&b\\\\0&0&c\\\\0&0&-2\\end{pmatrix}$ ; la 3e colonne $(b,c,-2)^\\top$ est non nulle et indépendante de $(a,0,0)^\\top$ dès que $a\\ne0$. On a $d_1=3-\\operatorname{rg}(B-I)$, donc $d_1=2\\iff\\operatorname{rg}(B-I)=1\\iff a=0$. Conclusion : $B$ est diagonalisable $\\iff a=0$ ($b,c$ quelconques)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 7/8 — Exemple : $u:M\\mapsto M+\\operatorname{tr}(M)I_n$ sur $\\mathscr{M}_n(\\mathbb{K})$. Diagonaliser $u$.",
+    "reponse": "Pour $M\\in\\ker(\\operatorname{tr})$ (hyperplan, dimension $n^2-1$) : $u(M)=M$, donc $1$ est valeur propre avec $E_1\\supset\\ker(\\operatorname{tr})$. Pour $M=I_n$ : $\\operatorname{tr}I_n=n$ donc $u(I_n)=(1+n)I_n$ : $1+n$ est valeur propre, de droite propre $\\operatorname{Vect}(I_n)$. Comme $I_n\\notin\\ker(\\operatorname{tr})$ (car $\\operatorname{tr}I_n=n\\ne0$ dans $\\mathbb{K}$, caractéristique 0) : $\\mathscr{M}_n=\\ker(\\operatorname{tr})\\oplus\\operatorname{Vect}(I_n)$, somme des dimensions $(n^2-1)+1=n^2$ : $u$ est DIAGONALISABLE, de spectre $\\{1,n+1\\}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Diagonalisation 8/8 — Énoncer la Proposition 16 (restriction à un sev stable) et la Proposition 17 (sev stables par un endomorphisme diagonalisable).",
+    "reponse": "Proposition 16 : si $u$ est diagonalisable et $F$ un sev STABLE par $u$, alors l'endomorphisme induit $u_{|F}$ est diagonalisable (car un annulateur scindé à racines simples de $u$ annule aussi $u_{|F}$). Proposition 17 : si $u$ est diagonalisable, un sev $F$ est stable par $u\\iff F$ est ENGENDRÉ par des vecteurs propres de $u$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Pratique de la diagonalisation — Décrire la méthode pas à pas pour diagonaliser une matrice $A$.",
+    "reponse": "(1) Calculer $\\chi_A$ en faisant apparaître le plus de FACTORISATIONS possible en cours de calcul. (2) Pour chaque valeur propre (en commençant par les MULTIPLES), déterminer une base de $E_\\lambda$ : écrire explicitement $A-\\lambda I$ et repérer les combinaisons linéaires nulles de colonnes, sinon résoudre le système. (3) Introduire la matrice de passage $P$ dont les COLONNES sont les vecteurs propres trouvés. (4) Écrire $D=P^{-1}AP$ (diagonale des valeurs propres, dans le même ordre). On ne calcule effectivement $P^{-1}$ qu'en cas de nécessité ou de demande explicite."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonalisation 1/3 — Définir la trigonalisabilité, et énoncer la remarque sur l'ordre de la base et le lien avec la diagonalisabilité.",
+    "reponse": "$u$ (resp. $A$) est trigonalisable sur $\\mathbb{K}$ s'il existe une base où sa matrice est TRIANGULAIRE SUPÉRIEURE (resp. $A$ est semblable à une triangulaire supérieure). Remarques : changer l'ordre des vecteurs de base rend équivalent le cas triangulaire INFÉRIEUR ; tout endomorphisme DIAGONALISABLE est trigonalisable (la réciproque est fausse)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonalisation 2/3 — Énoncer la CNS de trigonalisabilité (Théorème 6) et sa conséquence importante sur $\\mathbb{C}$.",
+    "reponse": "Tout endomorphisme $u$ (toute matrice $A$) dont le polynôme caractéristique est SCINDÉ sur $\\mathbb{K}$ est trigonalisable sur $\\mathbb{K}$ (et réciproquement, une matrice triangulaire a un $\\chi$ scindé) — démonstration non exigible. Conséquence : tout endomorphisme d'un $\\mathbb{C}$-espace vectoriel de dimension finie (toute matrice complexe) est TRIGONALISABLE, puisque $\\mathbb{C}$ est algébriquement clos."
+  },
+  {
+    "type": "Question",
+    "enonce": "Trigonalisation 3/3 — Recherche pratique en dimension 3 : quelle stratégie suivre pour une valeur propre simple + double, et pour une valeur propre triple ?",
+    "reponse": "On cherche une base où la matrice est diagonale si possible, sinon triangulaire supérieure. Cas 1 valeur propre SIMPLE + 1 DOUBLE (ex. $B=\\begin{pmatrix}4&-1&-2\\\\6&-2&-6\\\\-1&1&3\\end{pmatrix}$) : on calcule $E_{\\lambda_{simple}}$ (droite) et $E_{\\lambda_{double}}$ ; si $d=2$ on diagonalise, sinon on complète avec un vecteur adapté (vérifiant $(u-\\lambda)(e_3)\\in E_\\lambda$) pour obtenir une forme triangulaire. Cas 1 valeur propre TRIPLE (ex. $E$, $F$ du cours) : $A=\\lambda I+N$ avec $N$ nilpotente ; on étudie $\\ker N\\subset\\ker N^2\\subset\\cdots$ pour construire une base adaptée à la chaîne de noyaux."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications 1/5 — Calcul de puissances d'une matrice : idée de base, cas diagonalisable, cas trigonalisable non diagonalisable.",
+    "reponse": "Idée de base : si $M=PAP^{-1}$, alors $M^k=PA^kP^{-1}$ pour $k\\in\\mathbb{N}$ (et même $k\\in\\mathbb{Z}$ si $M$ inversible). Si $M$ est diagonalisable : on prend $A=D$ diagonale, et $D^k=\\operatorname{diag}(\\lambda_i^k)$ est évidente. Si $n=3$ et $M$ trigonalisable non diagonalisable : on prend $A$ triangulaire de la forme $D+N$ avec $D$ diagonale, $N$ NILPOTENTE, et $DN=ND$ (à vérifier IMPÉRATIVEMENT à chaque fois), puis on applique le binôme de Newton (les termes en $N^k$ s'arrêtent à $k$ égal à l'indice de nilpotence)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications 2/5 — Systèmes de suites récurrentes linéaires d'ordre 1 : méthode, et comment ramener une récurrence d'ordre $p$ à ce cadre.",
+    "reponse": "Pour $U_{n+1}=AU_n$ ($A\\in\\mathscr{M}_p(\\mathbb{K})$, $U_n\\in\\mathbb{K}^p$) : $U_n=A^nU_0$, on calcule donc $A^n$ comme ci-dessus. Pour une récurrence linéaire d'ordre $p$, $u_{n+p}=a_{p-1}u_{n+p-1}+\\cdots+a_0u_n$, on pose $U_n=(u_n,\\dots,u_{n+p-1})^\\top$ ; alors $U_{n+1}=AU_n$ avec $A$ une MATRICE COMPAGNON (1 sur la sur-diagonale, dernière ligne $(a_0,\\dots,a_{p-1})$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications 3/5 — Commutant d'un endomorphisme diagonalisable : méthode et dimension.",
+    "reponse": "Soit $u$ diagonalisable et $G=\\{g\\in\\mathscr{L}(E),\\ u\\circ g=g\\circ u\\}$. On diagonalise $u$ ; si $g\\in G$, chaque sous-espace propre de $u$ est STABLE par $g$ (Prop. 2), donc dans une base adaptée à $E=\\bigoplus E_\\lambda(u)$, la matrice de $g$ est DIAGONALE PAR BLOCS. La réciproque est triviale. Ainsi $G\\simeq\\prod_\\lambda\\mathscr{L}(E_\\lambda)$ et $\\dim G=\\sum_{\\lambda\\in\\operatorname{Sp}(u)}m_\\lambda^2$ (somme des CARRÉS des multiplicités)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications 4/5 — Sous-espaces stables par un endomorphisme (dimension 3, corps $\\mathbb{C}$) : comment les déterminer ?",
+    "reponse": "On cherche les sev stables par dimension : $\\{0\\}$ et $E$ sont toujours stables. Les DROITES stables sont les droites engendrées par un vecteur propre (Prop. 2). Les PLANS stables s'obtiennent via la matrice transposée (un plan est stable pour $u$ $\\iff$ il est le noyau d'une forme linéaire propre, i.e. un vecteur propre de $A^\\top$), ou s'ils contiennent des droites stables (somme de sous-espaces propres, ou plan engendré par un vecteur propre et un vecteur $v$ avec $u(v)$ dans le plan). Si $u$ est diagonalisable, tout sev stable est engendré par des vecteurs propres (Prop. 17)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications 5/5 — Systèmes différentiels linéaires $X'=AX$ : méthode de résolution et forme de la solution générale.",
+    "reponse": "On diagonalise $A=PDP^{-1}$ avec $D=\\operatorname{diag}(\\lambda_1,\\dots,\\lambda_n)$ et on pose $X=PY$ : $X'=AX\\iff Y'=DY$, système diagonal dont chaque équation $y_i'=\\lambda_iy_i$ se résout indépendamment, d'où $Y(t)=(C_1e^{\\lambda_1t},\\dots,C_ne^{\\lambda_nt})^\\top$ et $X(t)=\\sum_{i=1}^nC_ie^{\\lambda_it}V_i$ où les $V_i=PE_i$ sont les colonnes de $P$ (vecteurs propres). Un SYSTÈME FONDAMENTAL de solutions (base de l'espace des solutions, de dimension $n$) est donc $(t\\mapsto e^{\\lambda_it}V_i)_{1\\le i\\le n}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Systèmes différentiels — Cas particuliers : $A$ réelle diagonalisable sur $\\mathbb{C}$ mais pas sur $\\mathbb{R}$, et $A$ seulement trigonalisable.",
+    "reponse": "$A$ réelle diagonalisable sur $\\mathbb{C}$ non sur $\\mathbb{R}$ : les valeurs propres non réelles sont conjuguées DEUX À DEUX, avec même multiplicité ; on résout sur $\\mathbb{C}$, puis on prend les PARTIES RÉELLES et IMAGINAIRES d'un système fondamental complexe pour obtenir un système fondamental réel. $A$ trigonalisable : on écrit $A=PTP^{-1}$ (en passant à $\\mathbb{C}$ si besoin), $X=PY$ donne $Y'=TY$ triangulaire ; on résout en partant de la DERNIÈRE équation (une équation différentielle simple), on reporte dans l'avant-dernière (équation avec second membre), et ainsi de suite en remontant."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — Le vecteur nul est un vecteur propre de tout endomorphisme (associé à n'importe quelle valeur propre).",
+    "reponse": "FAUX. Un vecteur propre est par définition NON NUL. Le vecteur nul appartient à tous les sous-espaces propres $E_\\lambda(u)$ (qui sont des sev) mais n'est pas un vecteur propre."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — Toute racine d'un polynôme annulateur de $u$ est une valeur propre de $u$.",
+    "reponse": "FAUX. Seule l'implication inverse est vraie : toute valeur propre est racine d'un annulateur. Contre-exemple : $u=\\operatorname{Id}$ est annulé par $(X-1)(X-2)$ mais $2$ n'est pas valeur propre. Seul le polynôme MINIMAL a exactement le spectre pour racines."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Un endomorphisme dont le polynôme caractéristique est scindé est diagonalisable.",
+    "reponse": "FAUX. Scindé donne seulement la TRIGONALISABILITÉ. Il faut en plus $d_\\lambda=m_\\lambda$ pour chaque valeur propre. Contre-exemple : $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ a $\\chi=(X-1)^2$ scindé, mais $E_1=\\operatorname{Vect}(e_1)$ est de dimension $1<2$ : non diagonalisable."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Si $u$ est diagonalisable, alors toutes ses valeurs propres sont simples.",
+    "reponse": "FAUX. La CS « $n$ valeurs propres distinctes $\\Rightarrow$ diagonalisable » n'est pas une équivalence. Une homothétie ou l'identité est diagonalisable avec une unique valeur propre de multiplicité $n$ ; plus généralement, $u$ diagonalisable $\\iff d_\\lambda=m_\\lambda$ pour tout $\\lambda$ (les multiplicités peuvent être $>1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — Une matrice réelle qui n'est pas diagonalisable sur $\\mathbb{R}$ n'est jamais diagonalisable sur $\\mathbb{C}$.",
+    "reponse": "FAUX. La rotation $\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$ n'a aucune valeur propre réelle donc n'est pas diagonalisable sur $\\mathbb{R}$, mais admet deux valeurs propres complexes distinctes $\\pm i$ : elle est diagonalisable sur $\\mathbb{C}$. Le corps de base est essentiel."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Si $u$ et $v$ commutent, alors tout vecteur propre de $u$ est aussi vecteur propre de $v$.",
+    "reponse": "FAUX. On sait seulement que les SOUS-ESPACES propres de $u$ sont STABLES par $v$ (Prop. 2). Un vecteur de $E_\\lambda(u)$ n'est en général pas propre pour $v$ : par exemple si $u=\\operatorname{Id}$ (qui commute avec tout), $E_1(u)=E$ et tout vecteur est propre pour $u$, mais pas pour un $v$ quelconque."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — Deux matrices ayant les mêmes valeurs propres sont semblables.",
+    "reponse": "FAUX. Des matrices semblables ont même polynôme caractéristique (donc mêmes valeurs propres avec multiplicités), mais la réciproque est fausse : $I_2$ et $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ ont toutes deux $\\chi=(X-1)^2$ mais ne sont pas semblables (la première est diagonale, la seconde non diagonalisable). Il faut comparer aussi les dimensions des sous-espaces propres (et, pour les non-diagonalisables, d'autres invariants)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — En dimension infinie, un endomorphisme a toujours au plus $\\dim E$ valeurs propres, et celles-ci sont racines de $\\chi_u$.",
+    "reponse": "FAUX : en dimension infinie, $\\chi_u=\\det(x\\operatorname{Id}-u)$ n'est pas défini, et le spectre peut être infini (le décalage sur $\\mathbb{C}^{\\mathbb{N}}$ ou la dérivation sur $\\mathscr{C}^\\infty(\\mathbb{R})$ ont tout $\\mathbb{C}$, resp. tout $\\mathbb{R}$, pour valeurs propres). Tout le chapitre suppose $E$ de dimension FINIE."
+  }
+]
