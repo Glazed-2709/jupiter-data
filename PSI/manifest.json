@@ -2711,6 +2711,25 @@
               "color": "hsl(336.1,100%,56%)"
             },
             {
+              "name": "DM",
+              "path": "Mathématiques/Réduction/DM",
+              "description": "",
+              "children": [],
+              "files": [
+                {
+                  "name": "DM04.pdf",
+                  "path": "Math%C3%A9matiques/R%C3%A9duction/DM/DM04.pdf",
+                  "corrige": false
+                }
+              ],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 28.115384615384528,
+              "color": "hsl(28.1,100%,56%)"
+            },
+            {
               "name": "TD",
               "path": "Mathématiques/Réduction/TD",
               "description": "",
@@ -2726,8 +2745,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 28.115384615384528,
-              "color": "hsl(28.1,100%,56%)"
+              "hue": 122.11538461538453,
+              "color": "hsl(122.1,100%,56%)"
             }
           ],
           "files": [],
@@ -4597,7 +4616,13 @@
               "path": "Physique/Maxwell/Cours",
               "description": "",
               "children": [],
-              "files": [],
+              "files": [
+                {
+                  "name": "16_Equations_de_Maxwell.pdf",
+                  "path": "Physique/Maxwell/Cours/16_Equations_de_Maxwell.pdf",
+                  "corrige": false
+                }
+              ],
               "questions": [],
               "questionSets": [],
               "hasQuestions": false,
@@ -4606,13 +4631,7 @@
               "color": "hsl(47.1,100%,50%)"
             }
           ],
-          "files": [
-            {
-              "name": "16_Equations_de_Maxwell.pdf",
-              "path": "Physique/Maxwell/16_Equations_de_Maxwell.pdf",
-              "corrige": false
-            }
-          ],
+          "files": [],
           "questions": [],
           "questionSets": [],
           "hasQuestions": false,
