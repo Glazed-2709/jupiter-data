@@ -1,0 +1,177 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Propriétés de la charge — Rappeler les quatre propriétés de la charge électrique et la valeur de $e$.",
+    "reponse": "Deux signes (attraction entre signes opposés, répulsion entre signes égaux) ; additive ; quantifiée (multiple entier de $e=1{,}6\\times10^{-19}\\ \\mathrm{C}$) ; conservative (ni créée ni détruite, notamment lors d'une réaction chimique ou nucléaire)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi de Coulomb — Énoncer la force exercée par $q_1$ en $M_1$ sur $q_2$ en $M_2$ et ses limites.",
+    "reponse": "$$\\vec F_{1/2}=\\frac{1}{4\\pi\\epsilon_0}\\frac{q_1q_2}{(M_1M_2)^2}\\vec u_{12},$$ $\\vec u_{12}$ unitaire de $M_1$ vers $M_2$, $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$. Répulsive si $q_1q_2>0$, attractive sinon. Valable uniquement pour des charges fixes : cesse de l'être si les particules sont en mouvement."
+  },
+  {
+    "type": "Question",
+    "enonce": "Échelles — Définir les échelles macroscopique, microscopique et mésoscopique et la condition sur $\\ell$.",
+    "reponse": "Macroscopique : $L\\approx1\\ \\mathrm{mm}$ (matière continue). Microscopique : $\\lambda$ (libre parcours moyen, $\\sim 0{,}1\\ \\mu$m dans un gaz, $\\sim$ nm dans un liquide ; distance interatomique $\\sim10^{-10}$ m dans un solide). Mésoscopique : $\\ell$ avec $\\lambda^3\\ll\\ell^3\\ll L^3$, c'est-à-dire microscopiquement grand (beaucoup de particules) et macroscopiquement petit (ponctuel). La physique des milieux continus raisonne toujours sur des volumes mésoscopiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Densités de charge — Définir $\\rho$, $\\sigma$, $\\lambda$ avec leurs unités et les formules donnant la charge totale.",
+    "reponse": "$\\delta q=\\rho\\,\\mathrm{d}\\tau$ ($\\mathrm{C\\cdot m^{-3}}$), $Q=\\iiint_V\\rho\\,\\mathrm{d}\\tau$ ; $\\delta q=\\sigma\\,\\mathrm{d}S$ ($\\mathrm{C\\cdot m^{-2}}$), $Q=\\iint_S\\sigma\\,\\mathrm{d}S$ ; $\\delta q=\\lambda\\,\\mathrm{d}\\ell$ ($\\mathrm{C\\cdot m^{-1}}$), $Q=\\int_L\\lambda\\,\\mathrm{d}\\ell$. La modélisation surfacique convient quand les charges sont réparties sur quelques couches atomiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Champ électrique — Définir $\\vec E$ à partir de la force. Qu'implique l'existence de $\\vec E$ en un point sans charge ?",
+    "reponse": "Une charge immobile $q$ en $M$ subit $\\vec F=q\\vec E(M,t)$. Même en l'absence de $q$, une grandeur physique préexiste en $M$, dont la manifestation est la force exercée dès qu'une charge s'y trouve."
+  },
+  {
+    "type": "Question",
+    "enonce": "Potentiel — Relation $\\vec E$–$V$, énergie potentielle, et limite de validité.",
+    "reponse": "En régime stationnaire : $\\vec E=-\\overrightarrow{\\mathrm{grad}}\\,V$ ; une charge $q$ a l'énergie potentielle $E_p=qV(M)$. Cette relation cesse d'être valable en régime dépendant du temps (il faut alors tenir compte de $-\\partial\\vec A/\\partial t$, induction)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Gradient — Expression cartésienne et sens physique du gradient.",
+    "reponse": "$\\overrightarrow{\\mathrm{grad}}f=\\dfrac{\\partial f}{\\partial x}\\vec u_x+\\dfrac{\\partial f}{\\partial y}\\vec u_y+\\dfrac{\\partial f}{\\partial z}\\vec u_z$. Il est orienté des zones de faible $f$ vers les zones de $f$ forte, sa norme est d'autant plus grande que $f$ varie brutalement. Donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ pointe vers les potentiels décroissants."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vecteur densité de courant — Définir $\\vec j$ par la charge traversant $\\mathrm{d}\\vec S$, et donner son unité.",
+    "reponse": "$\\delta^2q=\\vec j(M,t)\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ : charge qui traverse algébriquement $\\mathrm{d}\\vec S$ entre $t$ et $t+\\mathrm{d}t$. Unité : $\\mathrm{A\\cdot m^{-2}}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Démonstration — Établir $\\vec j=\\rho\\vec v$ pour un seul type de porteurs.",
+    "reponse": "Les charges qui traversent $\\mathrm{d}S$ pendant $\\mathrm{d}t$ occupent le cylindre oblique de volume $\\mathrm{d}\\tau=\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ (base $\\mathrm{d}S$, hauteur $v\\,\\mathrm{d}t\\cos\\theta$). La charge correspondante est $\\delta^2q=\\rho\\,\\mathrm{d}\\tau=\\rho\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$. Par identification, $\\vec j=\\rho\\vec v$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Plusieurs porteurs — Donner $\\vec j$ avec $N$ types de porteurs. Cas d'un électrolyte ?",
+    "reponse": "$\\vec j=\\sum_{i=1}^N\\rho_i\\vec v_i$. Dans un électrolyte, au moins deux types : cations et anions ; leurs contributions s'ajoutent (cations et anions se déplaçant en sens opposés apportent des contributions de même sens à $\\vec j$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Vitesse $\\vec v$ dans $\\vec j=\\rho\\vec v$ : de quelle vitesse s'agit-il ?",
+    "reponse": "De la vitesse moyenne de dérive des porteurs (moyenne sur le volume mésoscopique), et non de la vitesse d'agitation thermique, dont la moyenne est nulle. Ordre de grandeur : la dérive est très faible devant l'agitation thermique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Flux et intensité — Définir le flux d'un champ vectoriel et l'intensité à travers une surface. Qu'implique le signe ?",
+    "reponse": "$\\Phi_a=\\iint_S\\vec a\\cdot\\mathrm{d}\\vec S$ ; $I_S=\\dfrac{\\delta q}{\\mathrm{d}t}=\\iint_S\\vec j\\cdot\\mathrm{d}\\vec S$ (en A). Le signe de $I$ dépend de l'orientation choisie de $\\mathrm{d}\\vec S$ : $I>0$ si le courant traverse $S$ dans le sens de l'orientation."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conservation de la charge 1D — Établir $\\dfrac{\\partial\\rho}{\\partial t}=-\\dfrac{\\partial j}{\\partial x}$.",
+    "reponse": "Cylindre de section $S$ entre $x$ et $x+\\mathrm{d}x$ ($\\mathrm{d}\\tau=S\\,\\mathrm{d}x$), $\\vec j=j(x,t)\\vec u_x$. Variation : $\\mathrm{d}(\\delta q)=\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t$. Charge entrante $j(x,t)S\\,\\mathrm{d}t$, sortante $j(x+\\mathrm{d}x,t)S\\,\\mathrm{d}t$. Bilan : $\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t=-\\dfrac{\\partial j}{\\partial x}S\\,\\mathrm{d}x\\,\\mathrm{d}t$, d'où le résultat."
+  },
+  {
+    "type": "Question",
+    "enonce": "Divergence — Rappeler l'expression cartésienne et le théorème de Green–Ostrogradski.",
+    "reponse": "$\\mathrm{div}\\,\\vec j=\\dfrac{\\partial j_x}{\\partial x}+\\dfrac{\\partial j_y}{\\partial y}+\\dfrac{\\partial j_z}{\\partial z}$. Théorème : $\\displaystyle\\iiint_V\\mathrm{div}\\,\\vec j\\,\\mathrm{d}\\tau=\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S$ pour une surface $S$ fermée entourant $V$, orientée vers l'extérieur."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conservation de la charge 3D — Énoncer l'équation locale.",
+    "reponse": "$$\\frac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0.$$ En 1D cartésien, $\\mathrm{div}\\,\\vec j=\\partial_xj$ et on retrouve le résultat précédent. Elle traduit qu'une variation de charge dans un volume ne peut venir que d'un flux de courant à travers sa surface."
+  },
+  {
+    "type": "Question",
+    "enonce": "Régime stationnaire — Que devient la conservation de la charge ? Interprétation ?",
+    "reponse": "$\\partial\\rho/\\partial t=0$ donc $\\mathrm{div}\\,\\vec j=0$ : $\\vec j$ est à flux conservatif, $\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S=0$ pour toute surface fermée : la charge entrant dans un volume est égale à celle qui en sort (sinon $\\rho$ varierait)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi des nœuds — Démontrer la loi des nœuds à partir de la conservation du flux de $\\vec j$.",
+    "reponse": "Surface fermée entourant un nœud à trois branches, orientée vers l'extérieur : $\\Phi=-I_1+I_2+I_3=0$ (la branche 1 est entrante, donc $\\vec j_1\\cdot\\vec S_1=-I_1$). Soit $I_1=I_2+I_3$ : somme des intensités entrantes égale à celle des sortantes. C'est une conséquence de la conservation du flux de $\\vec j$ en régime stationnaire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil de section variable — Comment varie $j$ le long d'un tube de courant ? Et $I$ ?",
+    "reponse": "Avec $\\vec j$ uniforme sur chaque section, $j_1S_1=j_2S_2=I$ : $I$ est la même en tout point d'un conducteur filiforme en régime stationnaire, et $j$ augmente quand la section diminue (les lignes de courant se resserrent) : si $S_1>S_2$ alors $j_1<j_2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lignes et tubes de courant — Définir ligne de courant (équation) et tube de courant.",
+    "reponse": "Ligne de courant : courbe en tout point tangente à $\\vec j$, d'équation $\\vec j(M)\\wedge\\mathrm d\\vec\\ell=\\vec0$. Tube de courant : ensemble des lignes de courant s'appuyant sur un contour fermé (fictif ou non). Sa paroi latérale n'est traversée par aucun courant, donc le flux conservatif entraîne $I$ constant le long du tube."
+  },
+  {
+    "type": "Question",
+    "enonce": "Modèle de Drude — Énoncer les hypothèses et la force phénoménologique.",
+    "reponse": "Les électrons de conduction (délocalisés dans le réseau cristallin) forment un gaz d'électrons libres qui subissent des chocs avec les atomes ; $\\tau$ est la durée moyenne entre deux chocs. Les collisions sont modélisées par une force résistive $\\vec f=-\\dfrac{m}{\\tau}\\vec v$, $\\vec v$ vitesse moyenne de dérive."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conductivité statique — Établir $\\vec j=\\gamma_0\\vec E$ et $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ avec le modèle de Drude.",
+    "reponse": "PFD en régime stationnaire (référentiel du métal galiléen, poids négligé) : $0=-e\\vec E-\\dfrac{m}{\\tau}\\vec v$, donc $\\vec v=-\\dfrac{e\\tau}{m}\\vec E$. Avec $\\rho_e=-n_ee$ : $\\vec j=\\rho_e\\vec v=\\dfrac{n_ee^2\\tau}{m}\\vec E$. D'où la loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ avec $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ (en $\\mathrm{S\\cdot m^{-1}}$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Signe — Les électrons vont-ils dans le sens de $\\vec E$ ? Et $\\vec j$ ?",
+    "reponse": "$\\vec v=-\\dfrac{e\\tau}{m}\\vec E$ : les électrons dérivent en sens opposé à $\\vec E$. Mais leur charge est négative donc $\\vec j=\\rho_e\\vec v$ est dans le sens de $\\vec E$ (sens conventionnel du courant)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Résistivité — Définir $\\rho_0$ et comparer les métaux usuels et l'effet de la température.",
+    "reponse": "$\\rho_0=1/\\gamma_0$ (en $\\Omega\\cdot\\mathrm m$). Les métaux usuels (Cu, Au, Al, Fe) ont de faibles résistivités (quelques $10^{-8}\\ \\Omega\\cdot$m) ; elle augmente avec la température (par ex. le cuivre passe de $\\approx1{,}56$ à $\\approx2{,}24\\times10^{-6}\\ \\Omega\\cdot$cm entre 273 K et 373 K, le fer de $8{,}9$ à $14{,}7$) : plus d'agitation thermique, plus de chocs, $\\tau$ plus petit."
+  },
+  {
+    "type": "Question",
+    "enonce": "Ordre de grandeur de $\\tau$ — Calculer $\\tau$ pour le cuivre avec $\\gamma_0\\approx10^8\\ \\mathrm{S\\cdot m^{-1}}$.",
+    "reponse": "$\\tau=\\dfrac{m\\gamma_0}{ne^2}$ avec $n\\approx10^{30}\\ \\mathrm m^{-3}$ (un électron libre par atome, $\\sim10^{-30}\\ \\mathrm m^3$ par atome), $m\\approx10^{-30}$ kg, $e\\approx10^{-19}$ C : $\\tau\\approx\\dfrac{10^{-30}\\times10^8}{10^{30}\\times10^{-38}}=10^{-14}\\ \\mathrm s$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Régime variable — Dans quelle limite la loi d'Ohm locale reste-t-elle valable ?",
+    "reponse": "En régime variable, $\\mathrm d\\vec v/\\mathrm dt\\ne\\vec0$ et le résultat précédent n'est plus exact a priori. Tant que $f\\ll1/\\tau\\approx10^{14}\\ \\mathrm{Hz}$, on peut faire une approximation du régime quasi-stationnaire et utiliser $\\vec j=\\gamma_0\\vec E$. Aux fréquences usuelles (de la continue au GHz), cette condition est très largement vérifiée."
+  },
+  {
+    "type": "Question",
+    "enonce": "Pertinence du modèle — Que valent le modèle de Drude et ses limites ?",
+    "reponse": "Il dégage les paramètres pertinents de la conductivité ($n$, $e$, $m$, $\\tau$) mais n'est pas rigoureux : seul un modèle quantique rend compte de toutes les observations expérimentales (le gaz d'électrons libres classique est trop simpliste, $\\tau$ est un paramètre phénoménologique)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi d'Ohm intégrale — Démontrer $U=RI$ et $R=\\dfrac{\\ell}{\\gamma_0S}$ pour un conducteur cylindrique.",
+    "reponse": "Fil de longueur $\\ell$, section $S$, $\\vec j=j\\vec u_z$ uniforme, $V=V(z)$. $I=\\iint\\vec j\\cdot\\mathrm d\\vec S=\\iint\\gamma_0\\vec E\\cdot\\mathrm d\\vec S=-\\gamma_0\\dfrac{\\mathrm dV}{\\mathrm dz}S$. $I$ étant indépendant de $z$, $\\dfrac{\\mathrm dV}{\\mathrm dz}=-\\dfrac{V_{A_1}-V_{A_2}}{\\ell}=-\\dfrac U\\ell$, donc $I=\\dfrac{\\gamma_0S}{\\ell}U$ et $$U=RI,\\quad R=\\frac{\\ell}{\\gamma_0S}=\\frac{\\rho_0\\ell}{S}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Application numérique — Résistance linéique d'un fil de cuivre de rayon 1 mm. Conséquence ?",
+    "reponse": "$R_\\ell=\\dfrac{1}{\\gamma_0S}=\\dfrac{1}{10^8\\times\\pi\\times10^{-6}}\\approx3\\ \\mathrm{m\\Omega\\cdot m^{-1}}$ (quelques milliohms par mètre). Pour un fil de 50 cm, $R\\sim$ qq m$\\Omega$, très inférieure aux résistances du montage : la résistance des fils est souvent négligeable."
+  },
+  {
+    "type": "Question",
+    "enonce": "Effet Joule local — Établir $p_v=\\vec j\\cdot\\vec E=\\gamma_0E^2$.",
+    "reponse": "Puissance de la force électrique sur un électron : $\\vec F\\cdot\\vec v=-e\\vec E\\cdot\\vec v$. Pour $n_0$ électrons par unité de volume : $\\delta P=-n_0e\\vec E\\cdot\\vec v\\,\\mathrm d\\tau=\\vec j\\cdot\\vec E\\,\\mathrm d\\tau$ car $\\vec j=-n_0e\\vec v$. Avec $\\vec j=\\gamma_0\\vec E$ : $p_v=\\dfrac{\\delta P}{\\mathrm d\\tau}=\\gamma_0E^2$ (en $\\mathrm{W\\cdot m^{-3}}$). Cette puissance compense les pertes par chocs sur le réseau, elle échauffe le conducteur (effet Joule)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cohérence — Retrouver la puissance Joule totale $P=RI^2$ à partir de $p_v$.",
+    "reponse": "Pour le fil cylindrique : $P=\\iiint\\gamma_0E^2\\mathrm d\\tau=\\gamma_0E^2S\\ell$ avec $E=U/\\ell$ : $P=\\gamma_0\\dfrac{U^2}{\\ell^2}S\\ell=\\dfrac{\\gamma_0S}{\\ell}U^2=\\dfrac{U^2}{R}=RI^2$ ✓."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « En régime stationnaire, $\\rho$ est nulle dans un conducteur ». Justifier.",
+    "reponse": "Faux (confusion). Régime stationnaire signifie $\\partial\\rho/\\partial t=0$, pas $\\rho=0$ ; un conducteur ohmique est neutre globalement mais la densité $\\rho_e=-n_ee$ des électrons mobiles est non nulle (compensée par les ions fixes, de sorte que la charge totale locale est nulle). Ce qui est nul est $\\mathrm{div}\\,\\vec j$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « La vitesse des électrons dans un fil est de l'ordre de la vitesse de la lumière ». Justifier.",
+    "reponse": "Faux. La vitesse de dérive est très faible (de l'ordre du mm/s), c'est le champ (l'information) qui se propage à une vitesse de l'ordre de $c$. L'allumage quasi instantané d'une lampe ne signifie pas que les électrons vont vite."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « La loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ est valable en toutes circonstances ». Justifier.",
+    "reponse": "Faux. Elle est établie en régime stationnaire pour un métal (Drude) et prolongée au régime variable tant que $f\\ll1/\\tau\\sim10^{14}$ Hz. Elle n'est pas valable pour les très hautes fréquences, ni pour des milieux non ohmiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « La résistance d'un métal diminue quand la température augmente ». Justifier.",
+    "reponse": "Faux. La résistivité des métaux augmente avec $T$ (plus de chocs, $\\tau$ diminue, donc $\\gamma_0=ne^2\\tau/m$ diminue). Les valeurs tabulées croissent de 273 K à 373 K."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Si une surface fermée est traversée par des courants en régime variable, le flux total de $\\vec j$ est nul ». Justifier.",
+    "reponse": "Faux. Le flux total de $\\vec j$ à travers une surface fermée vaut $-\\dfrac{\\mathrm dQ_{int}}{\\mathrm dt}$ (conservation de la charge). Il n'est nul qu'en régime stationnaire."
+  }
+]

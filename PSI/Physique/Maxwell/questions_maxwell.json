@@ -1,0 +1,107 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Notations — Que représentent $\\vec E$, $\\vec B$, $\\rho$, $\\vec j$, $\\epsilon_0$, $\\mu_0$ et quelles sont les valeurs de $\\epsilon_0$ et $\\mu_0$ ?",
+    "reponse": "$\\vec E$ : champ électrique ; $\\vec B$ : champ magnétique ; $\\rho$ : densité volumique de charge ; $\\vec j$ : densité volumique de courant ; $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$ (permittivité du vide) ; $\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{H\\cdot m^{-1}}$ (perméabilité du vide)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Maxwell–Gauss — Énoncer l'équation et son interprétation.",
+    "reponse": "$$\\mathrm{div}\\,\\vec E(M,t)=\\frac{\\rho(M,t)}{\\epsilon_0}.$$ Une distribution de charges est source de champ électrique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Maxwell–Faraday — Énoncer l'équation et son interprétation physique.",
+    "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec E=-\\frac{\\partial\\vec B}{\\partial t}.$$ Un champ magnétique variable est source de champ électrique : c'est la loi de l'induction électromagnétique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Maxwell–Thomson — Énoncer l'équation (maxwell-flux) et son interprétation.",
+    "reponse": "$$\\mathrm{div}\\,\\vec B=0.$$ Le champ magnétique est à flux conservatif : pas de charge magnétique (monopôle) ; les lignes de champ magnétique sont fermées."
+  },
+  {
+    "type": "Question",
+    "enonce": "Maxwell–Ampère — Énoncer l'équation et les sources de $\\vec B$.",
+    "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j+\\epsilon_0\\mu_0\\frac{\\partial\\vec E}{\\partial t}.$$ Les sources du champ magnétique sont les distributions de courant ($\\mu_0\\vec j$) et les variations temporelles du champ électrique (terme $\\epsilon_0\\mu_0\\partial_t\\vec E$, courant de déplacement)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Rotationnel — Donner l'expression cartésienne de $\\overrightarrow{\\mathrm{rot}}\\vec A$ et le moyen mnémotechnique.",
+    "reponse": "$\\overrightarrow{\\mathrm{rot}}\\vec A=\\left(\\dfrac{\\partial A_z}{\\partial y}-\\dfrac{\\partial A_y}{\\partial z}\\right)\\vec u_x+\\left(\\dfrac{\\partial A_x}{\\partial z}-\\dfrac{\\partial A_z}{\\partial x}\\right)\\vec u_y+\\left(\\dfrac{\\partial A_y}{\\partial x}-\\dfrac{\\partial A_x}{\\partial y}\\right)\\vec u_z$. Mnémotechnique : produit vectoriel formel $\\vec\\nabla\\wedge\\vec A$ avec $\\vec\\nabla=(\\partial_x,\\partial_y,\\partial_z)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Équations de structure et de couplage — Classer les quatre équations selon ce qu'elles relient.",
+    "reponse": "Équations « avec sources » (Gauss, Ampère) : relient les champs aux charges $\\rho$ et courants $\\vec j$. Équations « sans sources » (Faraday, Thomson) : expriment des propriétés intrinsèques du champ (induction, absence de monopôle magnétique). Faraday et Ampère couplent $\\vec E$ et $\\vec B$ en régime variable."
+  },
+  {
+    "type": "Question",
+    "enonce": "Régime stationnaire — Que deviennent les équations de Maxwell ?",
+    "reponse": "Avec $\\partial_t=0$ : $\\mathrm{div}\\,\\vec E=\\rho/\\epsilon_0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec E=\\vec0$ (donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$, électrostatique), $\\mathrm{div}\\,\\vec B=0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j$ (magnétostatique). $\\vec E$ et $\\vec B$ sont alors découplés."
+  },
+  {
+    "type": "Question",
+    "enonce": "Compatibilité — Démontrer que Maxwell est compatible avec la conservation de la charge.",
+    "reponse": "On prend la divergence de Maxwell–Ampère : $\\mathrm{div}\\,\\overrightarrow{\\mathrm{rot}}\\vec B=0$ (identité d'analyse vectorielle) $=\\mu_0\\,\\mathrm{div}\\,\\vec j+\\epsilon_0\\mu_0\\dfrac{\\partial}{\\partial t}\\mathrm{div}\\vec E$. Avec Maxwell–Gauss, $\\mathrm{div}\\vec E=\\rho/\\epsilon_0$ : $0=\\mu_0\\,\\mathrm{div}\\vec j+\\mu_0\\dfrac{\\partial\\rho}{\\partial t}$, soit $\\dfrac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courant de déplacement — Pourquoi Maxwell a-t-il ajouté le terme $\\epsilon_0\\mu_0\\partial_t\\vec E$ ?",
+    "reponse": "Sans ce terme, $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$ donnerait en divergence $\\mathrm{div}\\,\\vec j=0$ : incompatible avec la conservation de la charge en régime variable (par ex. condensateur en charge, où $\\rho$ varie). Le terme en $\\partial_t\\vec E$ assure la compatibilité."
+  },
+  {
+    "type": "Question",
+    "enonce": "Force de Lorentz — Écrire la force de Lorentz et en déduire la définition de $\\vec E$ et $\\vec B$.",
+    "reponse": "$$\\vec F=q\\left(\\vec E(M,t)+\\vec v\\wedge\\vec B(M,t)\\right).$$ $\\vec E=\\vec F_E/q$ (force indépendante de la vitesse) et $\\vec B$ défini par $\\vec F_B=q\\,\\vec v\\wedge\\vec B$ (force perpendiculaire à $\\vec v$ et $\\vec B$, qui ne travaille pas)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polaire/axial — Définir vecteur polaire et vecteur axial.",
+    "reponse": "Un vecteur polaire (vrai vecteur) a un sens indépendant de la convention d'orientation de l'espace. Un vecteur axial (pseudo-vecteur) a un sens qui dépend de cette convention (règle de la main droite). En physique, tous les vecteurs sont polaires sauf ceux définis par un produit vectoriel."
+  },
+  {
+    "type": "Question",
+    "enonce": "Nature de $\\vec E$ — Montrer que $\\vec E$ est un vecteur polaire.",
+    "reponse": "$\\vec E=\\vec F/q$ : la force est un vecteur polaire et l'expression ne comporte aucun produit vectoriel, donc $\\vec E$ est un vecteur polaire (vrai vecteur)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Nature de $\\vec B$ — Montrer que $\\vec B$ est un vecteur axial.",
+    "reponse": "$\\vec F_B=q\\,\\vec v\\wedge\\vec B$ avec $\\vec F_B$ et $\\vec v$ polaires. Le produit vectoriel dépend de la convention d'orientation, donc pour que $\\vec F_B$ reste polaire, $\\vec B$ doit être axial (pseudo-vecteur)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cohérence — Vérifier que Maxwell–Faraday est cohérente avec la nature de $\\vec E$ et $\\vec B$.",
+    "reponse": "$\\overrightarrow{\\mathrm{rot}}$ d'un vecteur polaire (donc $\\overrightarrow{\\mathrm{rot}}\\vec E$) est un vecteur axial, comme $\\partial_t\\vec B$ ($\\vec B$ axial) : les deux membres ont la même nature. De même $\\overrightarrow{\\mathrm{rot}}\\vec B$ (rotationnel d'un axial) est polaire, comme $\\vec j$ et $\\partial_t\\vec E$ ✓."
+  },
+  {
+    "type": "Question",
+    "enonce": "Unités — Vérifier la cohérence dimensionnelle de $\\epsilon_0\\mu_0$ et sa signification.",
+    "reponse": "$\\epsilon_0\\mu_0$ s'exprime en $\\mathrm{s^2\\cdot m^{-2}}$, c'est l'inverse d'un carré de vitesse : $\\epsilon_0\\mu_0c^2=1$, soit $c=1/\\sqrt{\\epsilon_0\\mu_0}\\approx3\\times10^8\\ \\mathrm{m\\cdot s^{-1}}$ (lien avec la propagation des ondes électromagnétiques dans le vide, vu en cours ultérieur)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « $\\mathrm{div}\\,\\vec B=0$ signifie que $\\vec B$ est nul ». Justifier.",
+    "reponse": "Faux. Cela signifie que $\\vec B$ est à flux conservatif (lignes de champ fermées, pas de monopôle magnétique), pas qu'il est nul. Par exemple $\\vec B$ créé par un fil est non nul et sa divergence est nulle."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « En régime variable, $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ reste valable ». Justifier.",
+    "reponse": "Faux. Maxwell–Faraday donne $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B\\neq\\vec0$ donc $\\vec E$ ne dérive plus d'un potentiel scalaire seul ($\\overrightarrow{\\mathrm{rot}}\\,\\overrightarrow{\\mathrm{grad}}=\\vec0$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le champ magnétique est un vecteur polaire comme le champ électrique ». Justifier.",
+    "reponse": "Faux. $\\vec E$ est polaire, $\\vec B$ est axial (pseudo-vecteur), car défini par un produit vectoriel dans la force de Lorentz."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Un champ électrique variable dans le temps peut créer un champ magnétique en l'absence de courants ». Justifier.",
+    "reponse": "Vrai. Dans Maxwell–Ampère avec $\\vec j=\\vec0$ : $\\overrightarrow{\\mathrm{rot}}\\vec B=\\epsilon_0\\mu_0\\partial_t\\vec E\\ne\\vec0$ si $\\vec E$ varie. De même un $\\vec B$ variable crée $\\vec E$ (Faraday) : c'est le couplage à l'origine de la propagation des ondes électromagnétiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « La force magnétique $q\\vec v\\wedge\\vec B$ peut modifier l'énergie cinétique de la particule ». Justifier.",
+    "reponse": "Faux. La force magnétique est orthogonale à $\\vec v$ : sa puissance $q(\\vec v\\wedge\\vec B)\\cdot\\vec v=0$. Elle courbe la trajectoire sans modifier la norme de la vitesse ; seul $q\\vec E$ fournit de l'énergie."
+  }
+]

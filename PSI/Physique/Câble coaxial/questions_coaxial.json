@@ -1,0 +1,177 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Structure — De quoi est constitué un câble coaxial, et quel est le rôle de chacun de ses conducteurs ?",
+    "reponse": "Deux conducteurs séparés par un isolant : l'âme (conducteur cylindrique central, qui transporte le signal, équivalent du « fil rouge ») et la gaine (conducteur en couronne autour de l'âme, reliée à la masse, équivalent du « fil noir »). L'ensemble est entouré d'un isolant."
+  },
+  {
+    "type": "Question",
+    "enonce": "Modélisation — Quels effets physiques sont modélisés dans une portion $\\mathrm{d}x$ de câble, par quels composants, et quel effet néglige-t-on d'abord ?",
+    "reponse": "Effet inductif (champ magnétique créé par le courant de l'âme) : inductance $\\Lambda\\,\\mathrm{d}x$ en série, $\\Lambda$ inductance linéique. Effet capacitif (âme et gaine se font face) : capacité $\\Gamma\\,\\mathrm{d}x$ en parallèle, $\\Gamma$ capacité linéique. L'effet résistif (Joule dans l'âme, résistivité non nulle) est négligé dans un premier temps."
+  },
+  {
+    "type": "Question",
+    "enonce": "Unités et ordres de grandeur — Quelles sont les unités de $\\Lambda$ et $\\Gamma$ et leurs valeurs usuelles ?",
+    "reponse": "$\\Lambda$ en $\\mathrm{H\\cdot m^{-1}}$, typiquement $\\Lambda\\approx 0{,}25$–$0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$ ; $\\Gamma$ en $\\mathrm{F\\cdot m^{-1}}$, typiquement $\\Gamma\\approx 100\\ \\mathrm{pF\\cdot m^{-1}}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "ARQS — Pourquoi peut-on appliquer l'ARQS à la portion $\\mathrm{d}x$ mais pas à tout le câble ?",
+    "reponse": "La portion $\\mathrm{d}x$ est assez petite pour que l'intensité soit la même en tout point d'une même branche du « circuit infinitésimal » : on peut y écrire lois des mailles et des nœuds. Sur tout le câble, l'ARQS reviendrait à supposer une propagation instantanée du signal, ce qui interdirait justement de trouver une célérité finie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi des mailles — Établir la première équation couplée entre $u(x,t)$ et $i(x,t)$.",
+    "reponse": "Maille : $u(x,t)=u(x+\\mathrm{d}x,t)+\\Lambda\\,\\mathrm{d}x\\,\\dfrac{\\partial i}{\\partial t}$. Avec $u(x+\\mathrm{d}x,t)=u(x,t)+\\dfrac{\\partial u}{\\partial x}\\mathrm{d}x$ au premier ordre : $$-\\frac{\\partial u}{\\partial x}=\\Lambda\\frac{\\partial i}{\\partial t}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi des nœuds — Établir la seconde équation couplée. Pourquoi peut-on remplacer $\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$ par $\\dfrac{\\partial u}{\\partial t}(x,t)$ ?",
+    "reponse": "Nœud : $i(x,t)-i(x+\\mathrm{d}x,t)=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$, soit $-\\dfrac{\\partial i}{\\partial x}\\mathrm{d}x=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}$. Le développement de $\\partial_t u(x+\\mathrm{d}x)$ donne $\\partial_t u(x)+\\partial^2_{xt}u\\,\\mathrm{d}x$ ; le second terme est d'ordre 2 en $\\mathrm{d}x$ (on travaille en $\\mathrm{d}x\\to0$) donc négligé : $$-\\frac{\\partial i}{\\partial x}=\\Gamma\\frac{\\partial u}{\\partial t}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Équation de propagation de la tension — Démontrer que $u$ vérifie une équation de d'Alembert et donner la célérité.",
+    "reponse": "On dérive la 1re équation par rapport à $x$ et la 2e par rapport à $t$ : $-\\partial_x^2u=\\Lambda\\,\\partial^2_{xt}i$ et $-\\partial^2_{tx}i=\\Gamma\\,\\partial_t^2u$. Par le théorème de Schwarz, $\\partial^2_{xt}i=\\partial^2_{tx}i$, d'où $\\partial_x^2u=\\Lambda\\Gamma\\,\\partial_t^2u$, soit $$\\frac{\\partial^2u}{\\partial t^2}-c^2\\frac{\\partial^2u}{\\partial x^2}=0,\\qquad c=\\frac{1}{\\sqrt{\\Lambda\\Gamma}}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Équation de propagation de l'intensité — Comment obtient-on celle de $i$ ?",
+    "reponse": "On dérive cette fois la 1re équation couplée par rapport à $t$ et la 2e par rapport à $x$ : $-\\partial^2_{tx}u=\\Lambda\\,\\partial_t^2 i$ et $-\\partial_x^2 i=\\Gamma\\,\\partial^2_{xt}u$. Schwarz donne $\\partial_t^2 i-\\dfrac{1}{\\Lambda\\Gamma}\\partial_x^2 i=0$ : $i$ vérifie la même équation de d'Alembert, avec la même célérité $c$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application numérique — Calculer la célérité pour $\\Gamma=100\\ \\mathrm{pF\\cdot m^{-1}}$ et $\\Lambda=0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$. Quel retard pour 10 m de câble ?",
+    "reponse": "$c=1/\\sqrt{\\Lambda\\Gamma}=1/\\sqrt{2{,}7\\times10^{-17}}\\approx 1{,}9\\times10^{8}\\approx 2\\times10^{8}\\ \\mathrm{m\\cdot s^{-1}}$ (environ $2/3$ de la vitesse de la lumière dans le vide). Retard sur 10 m : $\\tau=L/c\\approx 50\\ \\mathrm{ns}$ (soit environ 5 ns par mètre)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dispersion — Établir la relation de dispersion pour $u=u_0\\exp\\,j(\\omega t-kx)$. Le câble idéal est-il dispersif ?",
+    "reponse": "On injecte dans d'Alembert : $-\\omega^2u+c^2k^2u=0$, donc $\\omega^2=k^2c^2$, soit $\\omega=\\pm kc$. Vitesse de phase $\\omega/k=c$ indépendante de $\\omega$ : le câble idéal (sans résistance) est non dispersif, un signal quelconque se propage sans déformation."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solution générale — Donner la forme générale de la solution de d'Alembert pour $u(x,t)$ et la relier à $i(x,t)$.",
+    "reponse": "$u(x,t)=f\\!\\left(t-\\dfrac{x}{c}\\right)+g\\!\\left(t+\\dfrac{x}{c}\\right)$ : onde progressive vers les $x$ croissants plus onde progressive vers les $x$ décroissants. Alors $i(x,t)=\\dfrac{1}{Z_C}\\left[f\\!\\left(t-\\dfrac{x}{c}\\right)-g\\!\\left(t+\\dfrac{x}{c}\\right)\\right]$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Énergie linéique — Donner l'énergie stockée dans une portion $\\mathrm{d}x$ et l'énergie linéique $e(x,t)$.",
+    "reponse": "Condensateur : $\\delta E_C=\\tfrac12\\Gamma\\,\\mathrm{d}x\\,u^2$ ; bobine : $\\delta E_L=\\tfrac12\\Lambda\\,\\mathrm{d}x\\,i^2$. Donc $$e(x,t)=\\frac{\\delta E}{\\mathrm{d}x}=\\frac12\\Gamma u^2(x,t)+\\frac12\\Lambda i^2(x,t)\\quad(\\mathrm{J\\cdot m^{-1}}).$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Conservation de l'énergie — Établir $\\dfrac{\\partial e}{\\partial t}=-\\dfrac{\\partial \\Pi}{\\partial x}$ et identifier $\\Pi$.",
+    "reponse": "Bilan sur $\\mathrm{d}x$ pendant $\\mathrm{d}t$ : $(e(t+\\mathrm{d}t)-e(t))\\mathrm{d}x=\\Pi(x)\\mathrm{d}t-\\Pi(x+\\mathrm{d}x)\\mathrm{d}t$, d'où $\\partial_t e=-\\partial_x\\Pi$ (aucune source ni dissipation). Par ailleurs $\\partial_t e=\\Gamma u\\,\\partial_t u+\\Lambda i\\,\\partial_t i$ ; avec $\\Gamma\\partial_tu=-\\partial_xi$ et $\\Lambda\\partial_ti=-\\partial_xu$ : $\\partial_te=-u\\,\\partial_xi-i\\,\\partial_xu=-\\partial_x(ui)$. Donc $\\Pi=u\\,i$, puissance traversant l'abscisse $x$ dans le sens des $x$ croissants."
+  },
+  {
+    "type": "Question",
+    "enonce": "Signe de $\\Pi$ — Que signifie $\\Pi(x,t)<0$ ? Que peut-on dire de $\\Pi$ pour une onde progressive vers les $x$ décroissants ?",
+    "reponse": "$\\Pi$ est algébrique : $\\Pi>0$ signifie que la puissance circule vers les $x$ croissants, $\\Pi<0$ vers les $x$ décroissants. Pour une onde progressive vers $-x$ : $u_-=-Z_Ci_-$ donc $\\Pi=u_-i_-=-u_-^2/Z_C<0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Impédance caractéristique (onde vers $+x$) — Démontrer $u_+=Z_C\\,i_+$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$.",
+    "reponse": "Pour $u_+=u_0e^{j(\\omega t-kx)}$, la loi des mailles $-\\partial_xu_+=\\Lambda\\partial_ti_+$ donne $jk\\,u_+=\\Lambda j\\omega\\,i_+$, soit $u_+=\\Lambda\\dfrac{\\omega}{k}i_+=\\Lambda c\\,i_+$. Comme $c=1/\\sqrt{\\Lambda\\Gamma}$ : $u_+=\\sqrt{\\Lambda/\\Gamma}\\;i_+=Z_C\\,i_+$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Impédance caractéristique (onde vers $-x$) — Que devient la relation entre $u_-$ et $i_-$ ? Pourquoi le signe ?",
+    "reponse": "Pour $u_-=u_0e^{j(\\omega t+kx)}$ : $-jk\\,u_-=\\Lambda j\\omega\\,i_-$ donc $u_-=-Z_C\\,i_-$. Le signe $-$ vient de l'inversion du sens de propagation : à tension donnée, le courant circule dans le sens opposé à celui de l'onde progressive $+x$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application numérique de $Z_C$ — Calculer $Z_C$ et commenter.",
+    "reponse": "$Z_C=\\sqrt{0{,}27\\times10^{-6}/10^{-10}}=\\sqrt{2700}\\approx 52\\ \\Omega\\approx 50\\ \\Omega$. C'est la valeur normalisée des câbles usuels ; les GBF ont une impédance de sortie de $50\\ \\Omega$ pour éviter toute réflexion parasite (adaptation)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — $Z_C$ est-elle la résistance du câble ? Dissipe-t-elle de l'énergie ?",
+    "reponse": "Non. $Z_C$ n'est pas une résistance ohmique du câble (le câble idéal n'en a aucune) : elle lie $u$ et $i$ d'une onde progressive, $u=\\pm Z_Ci$, et ne se mesure pas avec un ohmmètre. Elle est indépendante de la longueur du câble. Un câble infini se comporte vu de son entrée comme une résistance $Z_C$, mais l'énergie n'est pas dissipée dans le câble : elle est emportée par l'onde."
+  },
+  {
+    "type": "Question",
+    "enonce": "Validité — La relation $u=\\pm Z_Ci$ est-elle valable pour un signal quelconque ?",
+    "reponse": "Pour une onde progressive (dans un seul sens) : oui, pour tout signal $f(t\\mp x/c)$ puisque câble non dispersif. En revanche pour une superposition (onde stationnaire, onde incidente + réfléchie), il n'y a pas de relation simple $u=Z_Ci$ : on l'applique séparément à chaque onde progressive $u_i=Z_Ci_i$, $u_r=-Z_Ci_r$. Pour un signal non harmonique, on décompose par Fourier : chaque harmonique vérifie $u=\\pm Z_Ci$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Puissance d'une onde progressive — Exprimer $\\Pi$ pour une onde progressive $+x$ et sa valeur moyenne pour une tension d'amplitude $u_0$.",
+    "reponse": "$\\Pi=u_+i_+=u_+^2/Z_C=Z_Ci_+^2$. Pour $u_+=u_0\\cos(\\omega t-kx)$ : $\\langle\\Pi\\rangle=\\dfrac{u_0^2}{2Z_C}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Réflexion — Pourquoi étudie-t-on la réflexion en bout de câble ? Quelle situation modélise-t-on ?",
+    "reponse": "Le câble relie des dipôles : on veut que l'onde soit absorbée par le récepteur. On modélise un câble infini côté $x<0$ qui se termine en $x=0$ par une impédance $Z$. On cherche $u=u_i+u_r$ avec $u_i=u_{0i}e^{j(\\omega t-kx)}$ (incidente) et $u_r=u_{0r}e^{j(\\omega t+kx)}$ (réfléchie), $i_i=u_i/Z_C$ et $i_r=-u_r/Z_C$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conditions aux limites — Pourquoi $\\omega_r=\\omega_i$ et $k_r=k_i$ ?",
+    "reponse": "La condition en $x=0$ doit être vérifiée $\\forall t$ : cela impose l'égalité des pulsations ($\\omega_i=\\omega_r$). Chaque onde vérifiant la relation de dispersion $k=\\omega/c$, on a aussi $k_i=k_r=k$ (l'extrémité est immobile, pas d'effet Doppler)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Court-circuit — Que vaut $u_{0r}/u_{0i}$ ? Donner l'expression de $u(x,t)$ (réelle).",
+    "reponse": "Condition $u(0,t)=0$ : $u_{0i}+u_{0r}=0$, soit $r_u=-1$. Alors $u=u_0[e^{j(\\omega t-kx)}-e^{j(\\omega t+kx)}]=-2ju_0e^{j\\omega t}\\sin kx$, et en réel avec $u_0=u_{0m}e^{j\\varphi}$ : $$u(x,t)=U_0\\sin(\\omega t+\\varphi)\\sin(kx),\\quad U_0=2u_{0m}.$$ C'est une onde stationnaire (variables $t$ et $x$ séparées)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Court-circuit — Donner l'onde de courant, la position des nœuds et ventres.",
+    "reponse": "$i=i_i+i_r=\\dfrac{u_i-u_r}{Z_C}$, d'où $$i(x,t)=\\frac{U_0}{Z_C}\\cos(\\omega t+\\varphi)\\cos(kx).$$ Tension et courant sont en quadrature (spatiale et temporelle). Un nœud de tension est un ventre de courant et réciproquement : en $x=0$ nœud de tension, ventre de courant. Nœuds de tension en $kx=n\\pi$, soit $x=-n\\lambda/2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Court-circuit — Calculer la puissance instantanée $p=ui$ et sa moyenne.",
+    "reponse": "$p=\\dfrac{U_0^2}{Z_C}\\cos(\\omega t+\\varphi)\\sin(\\omega t+\\varphi)\\cos kx\\,\\sin kx=\\dfrac{U_0^2}{4Z_C}\\sin\\!\\big(2(\\omega t+\\varphi)\\big)\\sin(2kx)$. Sa moyenne temporelle est nulle ($\\langle\\sin 2(\\omega t+\\varphi)\\rangle=0$) : une onde stationnaire ne transporte pas de puissance en moyenne. L'énergie oscille localement entre énergie électrique et magnétique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sortie ouverte — Quelle condition aux limites, quel coefficient de réflexion, quelles ondes ?",
+    "reponse": "$i(0,t)=0$ : $i_{0i}+i_{0r}=0$, donc $u_{0r}=+u_{0i}$ : $r_u=+1$ et $r_i=-1$. On obtient $i(x,t)=I_0\\sin(\\omega t+\\varphi)\\sin(kx)$ et $u(x,t)=Z_CI_0\\cos(\\omega t+\\varphi)\\cos(kx)$ : ondes stationnaires, tension maximale (ventre) et courant nul (nœud) à l'extrémité, puissance moyenne nulle."
+  },
+  {
+    "type": "Question",
+    "enonce": "Résistance terminale — Démontrer $r_u=\\dfrac{R-Z_C}{R+Z_C}$ et $r_i=\\dfrac{Z_C-R}{R+Z_C}$.",
+    "reponse": "Condition de Ohm : $u(0,t)=R\\,i(0,t)$. Avec $i=\\dfrac{u_i-u_r}{Z_C}$ : $u_{0i}+u_{0r}=\\dfrac{R}{Z_C}(u_{0i}-u_{0r})$. On divise par $u_{0i}$ : $Z_C(1+r_u)=R(1-r_u)$, d'où $r_u=\\dfrac{R-Z_C}{R+Z_C}$. Comme $i_r/i_i=-u_r/u_i$ : $r_i=-r_u=\\dfrac{Z_C-R}{R+Z_C}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cas limites — Retrouver les coefficients pour $R=0$, $R\\to\\infty$, $R=Z_C$.",
+    "reponse": "$R=0$ (court-circuit) : $r_u=-1$, $r_i=+1$. $R\\to\\infty$ (sortie ouverte) : $r_u=+1$, $r_i=-1$. $R=Z_C$ : $r_u=r_i=0$ : pas d'onde réfléchie, c'est l'adaptation d'impédance. Pour $R$ réelle, $|r_u|\\le1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Adaptation d'impédance — Que se passe-t-il pour $R=Z_C$ ? Pourquoi les GBF ont-ils $50\\ \\Omega$ de sortie ?",
+    "reponse": "Aucune onde réfléchie : toute l'énergie transportée est transmise à la résistance. Le câble de $Z_C=50\\ \\Omega$ chargé par $R=50\\ \\Omega$ se comporte comme un câble infini ; la sortie $50\\ \\Omega$ du GBF évite les réflexions parasites aller-retour au niveau du générateur."
+  },
+  {
+    "type": "Question",
+    "enonce": "Bilan de puissance — Quelle fraction de la puissance incidente est absorbée par $R$ ?",
+    "reponse": "Puissance réfléchie / incidente $=r_u^2$ (car $\\langle\\Pi_r\\rangle=-u_{0r}^2/2Z_C$). Fraction transmise à $R$ : $$1-r_u^2=\\frac{4RZ_C}{(R+Z_C)^2}.$$ Elle vaut 1 pour $R=Z_C$ et $0$ pour $R=0$ ou $R\\to\\infty$ (réflexion totale). Vérification : $u(0)=u_i(1+r_u)=\\dfrac{2R}{R+Z_C}u_i$ puis $\\langle u^2\\rangle/R$ redonne le même résultat."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « $Z_C=\\sqrt{\\Lambda\\Gamma}$ ». Justifier.",
+    "reponse": "Faux. $Z_C=\\sqrt{\\Lambda/\\Gamma}$ (en ohms), alors que $c=1/\\sqrt{\\Lambda\\Gamma}$. Contrôle dimensionnel : $\\Lambda/\\Gamma$ en $\\mathrm{H/F}=\\Omega^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le courant $i$ vérifie une équation de d'Alembert différente de celle de $u$ ». Justifier.",
+    "reponse": "Faux. $u$ et $i$ vérifient exactement la même équation de d'Alembert, de même célérité $c=1/\\sqrt{\\Lambda\\Gamma}$ ; ce sont les conditions aux limites et la relation $u=\\pm Z_Ci$ qui les distinguent."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Une onde stationnaire dans un câble transporte en moyenne de la puissance vers l'extrémité ». Justifier.",
+    "reponse": "Faux. $\\langle p\\rangle=\\frac{U_0^2}{4Z_C}\\langle\\sin2(\\omega t+\\varphi)\\rangle\\sin(2kx)=0$ : puissance moyenne nulle, qu'il s'agisse du court-circuit ou de la sortie ouverte (réflexion totale)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « En court-circuit, il y a un ventre de tension en bout de câble ». Justifier.",
+    "reponse": "Faux. $u(0,t)=0$ : nœud de tension, donc ventre de courant ($i\\propto\\cos kx$ maximal en $x=0$). C'est en sortie ouverte qu'on a un ventre de tension et un nœud de courant."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Si $R=2Z_C$, il n'y a pas de réflexion ». Calculer $r_u$ et la fraction de puissance absorbée.",
+    "reponse": "Faux. $r_u=\\dfrac{2Z_C-Z_C}{3Z_C}=\\dfrac13$, $r_i=-\\dfrac13$. Fraction réfléchie $r_u^2=\\dfrac19$, fraction absorbée $\\dfrac89=\\dfrac{4\\cdot2}{9}$ ✓. Seule la valeur $R=Z_C$ annule la réflexion."
+  }
+]

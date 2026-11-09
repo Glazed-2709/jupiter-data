@@ -4501,9 +4501,367 @@
             }
           ],
           "files": [],
-          "questions": [],
-          "questionSets": [],
-          "hasQuestions": false,
+          "questions": [
+            {
+              "type": "Question",
+              "enonce": "Structure — De quoi est constitué un câble coaxial, et quel est le rôle de chacun de ses conducteurs ?",
+              "reponse": "Deux conducteurs séparés par un isolant : l'âme (conducteur cylindrique central, qui transporte le signal, équivalent du « fil rouge ») et la gaine (conducteur en couronne autour de l'âme, reliée à la masse, équivalent du « fil noir »). L'ensemble est entouré d'un isolant."
+            },
+            {
+              "type": "Question",
+              "enonce": "Modélisation — Quels effets physiques sont modélisés dans une portion $\\mathrm{d}x$ de câble, par quels composants, et quel effet néglige-t-on d'abord ?",
+              "reponse": "Effet inductif (champ magnétique créé par le courant de l'âme) : inductance $\\Lambda\\,\\mathrm{d}x$ en série, $\\Lambda$ inductance linéique. Effet capacitif (âme et gaine se font face) : capacité $\\Gamma\\,\\mathrm{d}x$ en parallèle, $\\Gamma$ capacité linéique. L'effet résistif (Joule dans l'âme, résistivité non nulle) est négligé dans un premier temps."
+            },
+            {
+              "type": "Question",
+              "enonce": "Unités et ordres de grandeur — Quelles sont les unités de $\\Lambda$ et $\\Gamma$ et leurs valeurs usuelles ?",
+              "reponse": "$\\Lambda$ en $\\mathrm{H\\cdot m^{-1}}$, typiquement $\\Lambda\\approx 0{,}25$–$0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$ ; $\\Gamma$ en $\\mathrm{F\\cdot m^{-1}}$, typiquement $\\Gamma\\approx 100\\ \\mathrm{pF\\cdot m^{-1}}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "ARQS — Pourquoi peut-on appliquer l'ARQS à la portion $\\mathrm{d}x$ mais pas à tout le câble ?",
+              "reponse": "La portion $\\mathrm{d}x$ est assez petite pour que l'intensité soit la même en tout point d'une même branche du « circuit infinitésimal » : on peut y écrire lois des mailles et des nœuds. Sur tout le câble, l'ARQS reviendrait à supposer une propagation instantanée du signal, ce qui interdirait justement de trouver une célérité finie."
+            },
+            {
+              "type": "Question",
+              "enonce": "Loi des mailles — Établir la première équation couplée entre $u(x,t)$ et $i(x,t)$.",
+              "reponse": "Maille : $u(x,t)=u(x+\\mathrm{d}x,t)+\\Lambda\\,\\mathrm{d}x\\,\\dfrac{\\partial i}{\\partial t}$. Avec $u(x+\\mathrm{d}x,t)=u(x,t)+\\dfrac{\\partial u}{\\partial x}\\mathrm{d}x$ au premier ordre : $$-\\frac{\\partial u}{\\partial x}=\\Lambda\\frac{\\partial i}{\\partial t}.$$"
+            },
+            {
+              "type": "Question",
+              "enonce": "Loi des nœuds — Établir la seconde équation couplée. Pourquoi peut-on remplacer $\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$ par $\\dfrac{\\partial u}{\\partial t}(x,t)$ ?",
+              "reponse": "Nœud : $i(x,t)-i(x+\\mathrm{d}x,t)=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$, soit $-\\dfrac{\\partial i}{\\partial x}\\mathrm{d}x=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}$. Le développement de $\\partial_t u(x+\\mathrm{d}x)$ donne $\\partial_t u(x)+\\partial^2_{xt}u\\,\\mathrm{d}x$ ; le second terme est d'ordre 2 en $\\mathrm{d}x$ (on travaille en $\\mathrm{d}x\\to0$) donc négligé : $$-\\frac{\\partial i}{\\partial x}=\\Gamma\\frac{\\partial u}{\\partial t}.$$"
+            },
+            {
+              "type": "Question",
+              "enonce": "Équation de propagation de la tension — Démontrer que $u$ vérifie une équation de d'Alembert et donner la célérité.",
+              "reponse": "On dérive la 1re équation par rapport à $x$ et la 2e par rapport à $t$ : $-\\partial_x^2u=\\Lambda\\,\\partial^2_{xt}i$ et $-\\partial^2_{tx}i=\\Gamma\\,\\partial_t^2u$. Par le théorème de Schwarz, $\\partial^2_{xt}i=\\partial^2_{tx}i$, d'où $\\partial_x^2u=\\Lambda\\Gamma\\,\\partial_t^2u$, soit $$\\frac{\\partial^2u}{\\partial t^2}-c^2\\frac{\\partial^2u}{\\partial x^2}=0,\\qquad c=\\frac{1}{\\sqrt{\\Lambda\\Gamma}}.$$"
+            },
+            {
+              "type": "Question",
+              "enonce": "Équation de propagation de l'intensité — Comment obtient-on celle de $i$ ?",
+              "reponse": "On dérive cette fois la 1re équation couplée par rapport à $t$ et la 2e par rapport à $x$ : $-\\partial^2_{tx}u=\\Lambda\\,\\partial_t^2 i$ et $-\\partial_x^2 i=\\Gamma\\,\\partial^2_{xt}u$. Schwarz donne $\\partial_t^2 i-\\dfrac{1}{\\Lambda\\Gamma}\\partial_x^2 i=0$ : $i$ vérifie la même équation de d'Alembert, avec la même célérité $c$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Application numérique — Calculer la célérité pour $\\Gamma=100\\ \\mathrm{pF\\cdot m^{-1}}$ et $\\Lambda=0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$. Quel retard pour 10 m de câble ?",
+              "reponse": "$c=1/\\sqrt{\\Lambda\\Gamma}=1/\\sqrt{2{,}7\\times10^{-17}}\\approx 1{,}9\\times10^{8}\\approx 2\\times10^{8}\\ \\mathrm{m\\cdot s^{-1}}$ (environ $2/3$ de la vitesse de la lumière dans le vide). Retard sur 10 m : $\\tau=L/c\\approx 50\\ \\mathrm{ns}$ (soit environ 5 ns par mètre)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Dispersion — Établir la relation de dispersion pour $u=u_0\\exp\\,j(\\omega t-kx)$. Le câble idéal est-il dispersif ?",
+              "reponse": "On injecte dans d'Alembert : $-\\omega^2u+c^2k^2u=0$, donc $\\omega^2=k^2c^2$, soit $\\omega=\\pm kc$. Vitesse de phase $\\omega/k=c$ indépendante de $\\omega$ : le câble idéal (sans résistance) est non dispersif, un signal quelconque se propage sans déformation."
+            },
+            {
+              "type": "Question",
+              "enonce": "Solution générale — Donner la forme générale de la solution de d'Alembert pour $u(x,t)$ et la relier à $i(x,t)$.",
+              "reponse": "$u(x,t)=f\\!\\left(t-\\dfrac{x}{c}\\right)+g\\!\\left(t+\\dfrac{x}{c}\\right)$ : onde progressive vers les $x$ croissants plus onde progressive vers les $x$ décroissants. Alors $i(x,t)=\\dfrac{1}{Z_C}\\left[f\\!\\left(t-\\dfrac{x}{c}\\right)-g\\!\\left(t+\\dfrac{x}{c}\\right)\\right]$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Énergie linéique — Donner l'énergie stockée dans une portion $\\mathrm{d}x$ et l'énergie linéique $e(x,t)$.",
+              "reponse": "Condensateur : $\\delta E_C=\\tfrac12\\Gamma\\,\\mathrm{d}x\\,u^2$ ; bobine : $\\delta E_L=\\tfrac12\\Lambda\\,\\mathrm{d}x\\,i^2$. Donc $$e(x,t)=\\frac{\\delta E}{\\mathrm{d}x}=\\frac12\\Gamma u^2(x,t)+\\frac12\\Lambda i^2(x,t)\\quad(\\mathrm{J\\cdot m^{-1}}).$$"
+            },
+            {
+              "type": "Question",
+              "enonce": "Conservation de l'énergie — Établir $\\dfrac{\\partial e}{\\partial t}=-\\dfrac{\\partial \\Pi}{\\partial x}$ et identifier $\\Pi$.",
+              "reponse": "Bilan sur $\\mathrm{d}x$ pendant $\\mathrm{d}t$ : $(e(t+\\mathrm{d}t)-e(t))\\mathrm{d}x=\\Pi(x)\\mathrm{d}t-\\Pi(x+\\mathrm{d}x)\\mathrm{d}t$, d'où $\\partial_t e=-\\partial_x\\Pi$ (aucune source ni dissipation). Par ailleurs $\\partial_t e=\\Gamma u\\,\\partial_t u+\\Lambda i\\,\\partial_t i$ ; avec $\\Gamma\\partial_tu=-\\partial_xi$ et $\\Lambda\\partial_ti=-\\partial_xu$ : $\\partial_te=-u\\,\\partial_xi-i\\,\\partial_xu=-\\partial_x(ui)$. Donc $\\Pi=u\\,i$, puissance traversant l'abscisse $x$ dans le sens des $x$ croissants."
+            },
+            {
+              "type": "Question",
+              "enonce": "Signe de $\\Pi$ — Que signifie $\\Pi(x,t)<0$ ? Que peut-on dire de $\\Pi$ pour une onde progressive vers les $x$ décroissants ?",
+              "reponse": "$\\Pi$ est algébrique : $\\Pi>0$ signifie que la puissance circule vers les $x$ croissants, $\\Pi<0$ vers les $x$ décroissants. Pour une onde progressive vers $-x$ : $u_-=-Z_Ci_-$ donc $\\Pi=u_-i_-=-u_-^2/Z_C<0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Impédance caractéristique (onde vers $+x$) — Démontrer $u_+=Z_C\\,i_+$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$.",
+              "reponse": "Pour $u_+=u_0e^{j(\\omega t-kx)}$, la loi des mailles $-\\partial_xu_+=\\Lambda\\partial_ti_+$ donne $jk\\,u_+=\\Lambda j\\omega\\,i_+$, soit $u_+=\\Lambda\\dfrac{\\omega}{k}i_+=\\Lambda c\\,i_+$. Comme $c=1/\\sqrt{\\Lambda\\Gamma}$ : $u_+=\\sqrt{\\Lambda/\\Gamma}\\;i_+=Z_C\\,i_+$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Impédance caractéristique (onde vers $-x$) — Que devient la relation entre $u_-$ et $i_-$ ? Pourquoi le signe ?",
+              "reponse": "Pour $u_-=u_0e^{j(\\omega t+kx)}$ : $-jk\\,u_-=\\Lambda j\\omega\\,i_-$ donc $u_-=-Z_C\\,i_-$. Le signe $-$ vient de l'inversion du sens de propagation : à tension donnée, le courant circule dans le sens opposé à celui de l'onde progressive $+x$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Application numérique de $Z_C$ — Calculer $Z_C$ et commenter.",
+              "reponse": "$Z_C=\\sqrt{0{,}27\\times10^{-6}/10^{-10}}=\\sqrt{2700}\\approx 52\\ \\Omega\\approx 50\\ \\Omega$. C'est la valeur normalisée des câbles usuels ; les GBF ont une impédance de sortie de $50\\ \\Omega$ pour éviter toute réflexion parasite (adaptation)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Piège — $Z_C$ est-elle la résistance du câble ? Dissipe-t-elle de l'énergie ?",
+              "reponse": "Non. $Z_C$ n'est pas une résistance ohmique du câble (le câble idéal n'en a aucune) : elle lie $u$ et $i$ d'une onde progressive, $u=\\pm Z_Ci$, et ne se mesure pas avec un ohmmètre. Elle est indépendante de la longueur du câble. Un câble infini se comporte vu de son entrée comme une résistance $Z_C$, mais l'énergie n'est pas dissipée dans le câble : elle est emportée par l'onde."
+            },
+            {
+              "type": "Question",
+              "enonce": "Validité — La relation $u=\\pm Z_Ci$ est-elle valable pour un signal quelconque ?",
+              "reponse": "Pour une onde progressive (dans un seul sens) : oui, pour tout signal $f(t\\mp x/c)$ puisque câble non dispersif. En revanche pour une superposition (onde stationnaire, onde incidente + réfléchie), il n'y a pas de relation simple $u=Z_Ci$ : on l'applique séparément à chaque onde progressive $u_i=Z_Ci_i$, $u_r=-Z_Ci_r$. Pour un signal non harmonique, on décompose par Fourier : chaque harmonique vérifie $u=\\pm Z_Ci$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Puissance d'une onde progressive — Exprimer $\\Pi$ pour une onde progressive $+x$ et sa valeur moyenne pour une tension d'amplitude $u_0$.",
+              "reponse": "$\\Pi=u_+i_+=u_+^2/Z_C=Z_Ci_+^2$. Pour $u_+=u_0\\cos(\\omega t-kx)$ : $\\langle\\Pi\\rangle=\\dfrac{u_0^2}{2Z_C}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Réflexion — Pourquoi étudie-t-on la réflexion en bout de câble ? Quelle situation modélise-t-on ?",
+              "reponse": "Le câble relie des dipôles : on veut que l'onde soit absorbée par le récepteur. On modélise un câble infini côté $x<0$ qui se termine en $x=0$ par une impédance $Z$. On cherche $u=u_i+u_r$ avec $u_i=u_{0i}e^{j(\\omega t-kx)}$ (incidente) et $u_r=u_{0r}e^{j(\\omega t+kx)}$ (réfléchie), $i_i=u_i/Z_C$ et $i_r=-u_r/Z_C$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Conditions aux limites — Pourquoi $\\omega_r=\\omega_i$ et $k_r=k_i$ ?",
+              "reponse": "La condition en $x=0$ doit être vérifiée $\\forall t$ : cela impose l'égalité des pulsations ($\\omega_i=\\omega_r$). Chaque onde vérifiant la relation de dispersion $k=\\omega/c$, on a aussi $k_i=k_r=k$ (l'extrémité est immobile, pas d'effet Doppler)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Court-circuit — Que vaut $u_{0r}/u_{0i}$ ? Donner l'expression de $u(x,t)$ (réelle).",
+              "reponse": "Condition $u(0,t)=0$ : $u_{0i}+u_{0r}=0$, soit $r_u=-1$. Alors $u=u_0[e^{j(\\omega t-kx)}-e^{j(\\omega t+kx)}]=-2ju_0e^{j\\omega t}\\sin kx$, et en réel avec $u_0=u_{0m}e^{j\\varphi}$ : $$u(x,t)=U_0\\sin(\\omega t+\\varphi)\\sin(kx),\\quad U_0=2u_{0m}.$$ C'est une onde stationnaire (variables $t$ et $x$ séparées)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Court-circuit — Donner l'onde de courant, la position des nœuds et ventres.",
+              "reponse": "$i=i_i+i_r=\\dfrac{u_i-u_r}{Z_C}$, d'où $$i(x,t)=\\frac{U_0}{Z_C}\\cos(\\omega t+\\varphi)\\cos(kx).$$ Tension et courant sont en quadrature (spatiale et temporelle). Un nœud de tension est un ventre de courant et réciproquement : en $x=0$ nœud de tension, ventre de courant. Nœuds de tension en $kx=n\\pi$, soit $x=-n\\lambda/2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Court-circuit — Calculer la puissance instantanée $p=ui$ et sa moyenne.",
+              "reponse": "$p=\\dfrac{U_0^2}{Z_C}\\cos(\\omega t+\\varphi)\\sin(\\omega t+\\varphi)\\cos kx\\,\\sin kx=\\dfrac{U_0^2}{4Z_C}\\sin\\!\\big(2(\\omega t+\\varphi)\\big)\\sin(2kx)$. Sa moyenne temporelle est nulle ($\\langle\\sin 2(\\omega t+\\varphi)\\rangle=0$) : une onde stationnaire ne transporte pas de puissance en moyenne. L'énergie oscille localement entre énergie électrique et magnétique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Sortie ouverte — Quelle condition aux limites, quel coefficient de réflexion, quelles ondes ?",
+              "reponse": "$i(0,t)=0$ : $i_{0i}+i_{0r}=0$, donc $u_{0r}=+u_{0i}$ : $r_u=+1$ et $r_i=-1$. On obtient $i(x,t)=I_0\\sin(\\omega t+\\varphi)\\sin(kx)$ et $u(x,t)=Z_CI_0\\cos(\\omega t+\\varphi)\\cos(kx)$ : ondes stationnaires, tension maximale (ventre) et courant nul (nœud) à l'extrémité, puissance moyenne nulle."
+            },
+            {
+              "type": "Question",
+              "enonce": "Résistance terminale — Démontrer $r_u=\\dfrac{R-Z_C}{R+Z_C}$ et $r_i=\\dfrac{Z_C-R}{R+Z_C}$.",
+              "reponse": "Condition de Ohm : $u(0,t)=R\\,i(0,t)$. Avec $i=\\dfrac{u_i-u_r}{Z_C}$ : $u_{0i}+u_{0r}=\\dfrac{R}{Z_C}(u_{0i}-u_{0r})$. On divise par $u_{0i}$ : $Z_C(1+r_u)=R(1-r_u)$, d'où $r_u=\\dfrac{R-Z_C}{R+Z_C}$. Comme $i_r/i_i=-u_r/u_i$ : $r_i=-r_u=\\dfrac{Z_C-R}{R+Z_C}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Cas limites — Retrouver les coefficients pour $R=0$, $R\\to\\infty$, $R=Z_C$.",
+              "reponse": "$R=0$ (court-circuit) : $r_u=-1$, $r_i=+1$. $R\\to\\infty$ (sortie ouverte) : $r_u=+1$, $r_i=-1$. $R=Z_C$ : $r_u=r_i=0$ : pas d'onde réfléchie, c'est l'adaptation d'impédance. Pour $R$ réelle, $|r_u|\\le1$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Adaptation d'impédance — Que se passe-t-il pour $R=Z_C$ ? Pourquoi les GBF ont-ils $50\\ \\Omega$ de sortie ?",
+              "reponse": "Aucune onde réfléchie : toute l'énergie transportée est transmise à la résistance. Le câble de $Z_C=50\\ \\Omega$ chargé par $R=50\\ \\Omega$ se comporte comme un câble infini ; la sortie $50\\ \\Omega$ du GBF évite les réflexions parasites aller-retour au niveau du générateur."
+            },
+            {
+              "type": "Question",
+              "enonce": "Bilan de puissance — Quelle fraction de la puissance incidente est absorbée par $R$ ?",
+              "reponse": "Puissance réfléchie / incidente $=r_u^2$ (car $\\langle\\Pi_r\\rangle=-u_{0r}^2/2Z_C$). Fraction transmise à $R$ : $$1-r_u^2=\\frac{4RZ_C}{(R+Z_C)^2}.$$ Elle vaut 1 pour $R=Z_C$ et $0$ pour $R=0$ ou $R\\to\\infty$ (réflexion totale). Vérification : $u(0)=u_i(1+r_u)=\\dfrac{2R}{R+Z_C}u_i$ puis $\\langle u^2\\rangle/R$ redonne le même résultat."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « $Z_C=\\sqrt{\\Lambda\\Gamma}$ ». Justifier.",
+              "reponse": "Faux. $Z_C=\\sqrt{\\Lambda/\\Gamma}$ (en ohms), alors que $c=1/\\sqrt{\\Lambda\\Gamma}$. Contrôle dimensionnel : $\\Lambda/\\Gamma$ en $\\mathrm{H/F}=\\Omega^2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Le courant $i$ vérifie une équation de d'Alembert différente de celle de $u$ ». Justifier.",
+              "reponse": "Faux. $u$ et $i$ vérifient exactement la même équation de d'Alembert, de même célérité $c=1/\\sqrt{\\Lambda\\Gamma}$ ; ce sont les conditions aux limites et la relation $u=\\pm Z_Ci$ qui les distinguent."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Une onde stationnaire dans un câble transporte en moyenne de la puissance vers l'extrémité ». Justifier.",
+              "reponse": "Faux. $\\langle p\\rangle=\\frac{U_0^2}{4Z_C}\\langle\\sin2(\\omega t+\\varphi)\\rangle\\sin(2kx)=0$ : puissance moyenne nulle, qu'il s'agisse du court-circuit ou de la sortie ouverte (réflexion totale)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « En court-circuit, il y a un ventre de tension en bout de câble ». Justifier.",
+              "reponse": "Faux. $u(0,t)=0$ : nœud de tension, donc ventre de courant ($i\\propto\\cos kx$ maximal en $x=0$). C'est en sortie ouverte qu'on a un ventre de tension et un nœud de courant."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Si $R=2Z_C$, il n'y a pas de réflexion ». Calculer $r_u$ et la fraction de puissance absorbée.",
+              "reponse": "Faux. $r_u=\\dfrac{2Z_C-Z_C}{3Z_C}=\\dfrac13$, $r_i=-\\dfrac13$. Fraction réfléchie $r_u^2=\\dfrac19$, fraction absorbée $\\dfrac89=\\dfrac{4\\cdot2}{9}$ ✓. Seule la valeur $R=Z_C$ annule la réflexion."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_coaxial.json",
+              "label": "coaxial",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Structure — De quoi est constitué un câble coaxial, et quel est le rôle de chacun de ses conducteurs ?",
+                  "reponse": "Deux conducteurs séparés par un isolant : l'âme (conducteur cylindrique central, qui transporte le signal, équivalent du « fil rouge ») et la gaine (conducteur en couronne autour de l'âme, reliée à la masse, équivalent du « fil noir »). L'ensemble est entouré d'un isolant."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Modélisation — Quels effets physiques sont modélisés dans une portion $\\mathrm{d}x$ de câble, par quels composants, et quel effet néglige-t-on d'abord ?",
+                  "reponse": "Effet inductif (champ magnétique créé par le courant de l'âme) : inductance $\\Lambda\\,\\mathrm{d}x$ en série, $\\Lambda$ inductance linéique. Effet capacitif (âme et gaine se font face) : capacité $\\Gamma\\,\\mathrm{d}x$ en parallèle, $\\Gamma$ capacité linéique. L'effet résistif (Joule dans l'âme, résistivité non nulle) est négligé dans un premier temps."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Unités et ordres de grandeur — Quelles sont les unités de $\\Lambda$ et $\\Gamma$ et leurs valeurs usuelles ?",
+                  "reponse": "$\\Lambda$ en $\\mathrm{H\\cdot m^{-1}}$, typiquement $\\Lambda\\approx 0{,}25$–$0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$ ; $\\Gamma$ en $\\mathrm{F\\cdot m^{-1}}$, typiquement $\\Gamma\\approx 100\\ \\mathrm{pF\\cdot m^{-1}}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "ARQS — Pourquoi peut-on appliquer l'ARQS à la portion $\\mathrm{d}x$ mais pas à tout le câble ?",
+                  "reponse": "La portion $\\mathrm{d}x$ est assez petite pour que l'intensité soit la même en tout point d'une même branche du « circuit infinitésimal » : on peut y écrire lois des mailles et des nœuds. Sur tout le câble, l'ARQS reviendrait à supposer une propagation instantanée du signal, ce qui interdirait justement de trouver une célérité finie."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Loi des mailles — Établir la première équation couplée entre $u(x,t)$ et $i(x,t)$.",
+                  "reponse": "Maille : $u(x,t)=u(x+\\mathrm{d}x,t)+\\Lambda\\,\\mathrm{d}x\\,\\dfrac{\\partial i}{\\partial t}$. Avec $u(x+\\mathrm{d}x,t)=u(x,t)+\\dfrac{\\partial u}{\\partial x}\\mathrm{d}x$ au premier ordre : $$-\\frac{\\partial u}{\\partial x}=\\Lambda\\frac{\\partial i}{\\partial t}.$$"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Loi des nœuds — Établir la seconde équation couplée. Pourquoi peut-on remplacer $\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$ par $\\dfrac{\\partial u}{\\partial t}(x,t)$ ?",
+                  "reponse": "Nœud : $i(x,t)-i(x+\\mathrm{d}x,t)=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}(x+\\mathrm{d}x,t)$, soit $-\\dfrac{\\partial i}{\\partial x}\\mathrm{d}x=\\Gamma\\,\\mathrm{d}x\\,\\dfrac{\\partial u}{\\partial t}$. Le développement de $\\partial_t u(x+\\mathrm{d}x)$ donne $\\partial_t u(x)+\\partial^2_{xt}u\\,\\mathrm{d}x$ ; le second terme est d'ordre 2 en $\\mathrm{d}x$ (on travaille en $\\mathrm{d}x\\to0$) donc négligé : $$-\\frac{\\partial i}{\\partial x}=\\Gamma\\frac{\\partial u}{\\partial t}.$$"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Équation de propagation de la tension — Démontrer que $u$ vérifie une équation de d'Alembert et donner la célérité.",
+                  "reponse": "On dérive la 1re équation par rapport à $x$ et la 2e par rapport à $t$ : $-\\partial_x^2u=\\Lambda\\,\\partial^2_{xt}i$ et $-\\partial^2_{tx}i=\\Gamma\\,\\partial_t^2u$. Par le théorème de Schwarz, $\\partial^2_{xt}i=\\partial^2_{tx}i$, d'où $\\partial_x^2u=\\Lambda\\Gamma\\,\\partial_t^2u$, soit $$\\frac{\\partial^2u}{\\partial t^2}-c^2\\frac{\\partial^2u}{\\partial x^2}=0,\\qquad c=\\frac{1}{\\sqrt{\\Lambda\\Gamma}}.$$"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Équation de propagation de l'intensité — Comment obtient-on celle de $i$ ?",
+                  "reponse": "On dérive cette fois la 1re équation couplée par rapport à $t$ et la 2e par rapport à $x$ : $-\\partial^2_{tx}u=\\Lambda\\,\\partial_t^2 i$ et $-\\partial_x^2 i=\\Gamma\\,\\partial^2_{xt}u$. Schwarz donne $\\partial_t^2 i-\\dfrac{1}{\\Lambda\\Gamma}\\partial_x^2 i=0$ : $i$ vérifie la même équation de d'Alembert, avec la même célérité $c$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Application numérique — Calculer la célérité pour $\\Gamma=100\\ \\mathrm{pF\\cdot m^{-1}}$ et $\\Lambda=0{,}27\\ \\mu\\mathrm{H\\cdot m^{-1}}$. Quel retard pour 10 m de câble ?",
+                  "reponse": "$c=1/\\sqrt{\\Lambda\\Gamma}=1/\\sqrt{2{,}7\\times10^{-17}}\\approx 1{,}9\\times10^{8}\\approx 2\\times10^{8}\\ \\mathrm{m\\cdot s^{-1}}$ (environ $2/3$ de la vitesse de la lumière dans le vide). Retard sur 10 m : $\\tau=L/c\\approx 50\\ \\mathrm{ns}$ (soit environ 5 ns par mètre)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Dispersion — Établir la relation de dispersion pour $u=u_0\\exp\\,j(\\omega t-kx)$. Le câble idéal est-il dispersif ?",
+                  "reponse": "On injecte dans d'Alembert : $-\\omega^2u+c^2k^2u=0$, donc $\\omega^2=k^2c^2$, soit $\\omega=\\pm kc$. Vitesse de phase $\\omega/k=c$ indépendante de $\\omega$ : le câble idéal (sans résistance) est non dispersif, un signal quelconque se propage sans déformation."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Solution générale — Donner la forme générale de la solution de d'Alembert pour $u(x,t)$ et la relier à $i(x,t)$.",
+                  "reponse": "$u(x,t)=f\\!\\left(t-\\dfrac{x}{c}\\right)+g\\!\\left(t+\\dfrac{x}{c}\\right)$ : onde progressive vers les $x$ croissants plus onde progressive vers les $x$ décroissants. Alors $i(x,t)=\\dfrac{1}{Z_C}\\left[f\\!\\left(t-\\dfrac{x}{c}\\right)-g\\!\\left(t+\\dfrac{x}{c}\\right)\\right]$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Énergie linéique — Donner l'énergie stockée dans une portion $\\mathrm{d}x$ et l'énergie linéique $e(x,t)$.",
+                  "reponse": "Condensateur : $\\delta E_C=\\tfrac12\\Gamma\\,\\mathrm{d}x\\,u^2$ ; bobine : $\\delta E_L=\\tfrac12\\Lambda\\,\\mathrm{d}x\\,i^2$. Donc $$e(x,t)=\\frac{\\delta E}{\\mathrm{d}x}=\\frac12\\Gamma u^2(x,t)+\\frac12\\Lambda i^2(x,t)\\quad(\\mathrm{J\\cdot m^{-1}}).$$"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Conservation de l'énergie — Établir $\\dfrac{\\partial e}{\\partial t}=-\\dfrac{\\partial \\Pi}{\\partial x}$ et identifier $\\Pi$.",
+                  "reponse": "Bilan sur $\\mathrm{d}x$ pendant $\\mathrm{d}t$ : $(e(t+\\mathrm{d}t)-e(t))\\mathrm{d}x=\\Pi(x)\\mathrm{d}t-\\Pi(x+\\mathrm{d}x)\\mathrm{d}t$, d'où $\\partial_t e=-\\partial_x\\Pi$ (aucune source ni dissipation). Par ailleurs $\\partial_t e=\\Gamma u\\,\\partial_t u+\\Lambda i\\,\\partial_t i$ ; avec $\\Gamma\\partial_tu=-\\partial_xi$ et $\\Lambda\\partial_ti=-\\partial_xu$ : $\\partial_te=-u\\,\\partial_xi-i\\,\\partial_xu=-\\partial_x(ui)$. Donc $\\Pi=u\\,i$, puissance traversant l'abscisse $x$ dans le sens des $x$ croissants."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Signe de $\\Pi$ — Que signifie $\\Pi(x,t)<0$ ? Que peut-on dire de $\\Pi$ pour une onde progressive vers les $x$ décroissants ?",
+                  "reponse": "$\\Pi$ est algébrique : $\\Pi>0$ signifie que la puissance circule vers les $x$ croissants, $\\Pi<0$ vers les $x$ décroissants. Pour une onde progressive vers $-x$ : $u_-=-Z_Ci_-$ donc $\\Pi=u_-i_-=-u_-^2/Z_C<0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Impédance caractéristique (onde vers $+x$) — Démontrer $u_+=Z_C\\,i_+$ avec $Z_C=\\sqrt{\\Lambda/\\Gamma}$.",
+                  "reponse": "Pour $u_+=u_0e^{j(\\omega t-kx)}$, la loi des mailles $-\\partial_xu_+=\\Lambda\\partial_ti_+$ donne $jk\\,u_+=\\Lambda j\\omega\\,i_+$, soit $u_+=\\Lambda\\dfrac{\\omega}{k}i_+=\\Lambda c\\,i_+$. Comme $c=1/\\sqrt{\\Lambda\\Gamma}$ : $u_+=\\sqrt{\\Lambda/\\Gamma}\\;i_+=Z_C\\,i_+$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Impédance caractéristique (onde vers $-x$) — Que devient la relation entre $u_-$ et $i_-$ ? Pourquoi le signe ?",
+                  "reponse": "Pour $u_-=u_0e^{j(\\omega t+kx)}$ : $-jk\\,u_-=\\Lambda j\\omega\\,i_-$ donc $u_-=-Z_C\\,i_-$. Le signe $-$ vient de l'inversion du sens de propagation : à tension donnée, le courant circule dans le sens opposé à celui de l'onde progressive $+x$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Application numérique de $Z_C$ — Calculer $Z_C$ et commenter.",
+                  "reponse": "$Z_C=\\sqrt{0{,}27\\times10^{-6}/10^{-10}}=\\sqrt{2700}\\approx 52\\ \\Omega\\approx 50\\ \\Omega$. C'est la valeur normalisée des câbles usuels ; les GBF ont une impédance de sortie de $50\\ \\Omega$ pour éviter toute réflexion parasite (adaptation)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Piège — $Z_C$ est-elle la résistance du câble ? Dissipe-t-elle de l'énergie ?",
+                  "reponse": "Non. $Z_C$ n'est pas une résistance ohmique du câble (le câble idéal n'en a aucune) : elle lie $u$ et $i$ d'une onde progressive, $u=\\pm Z_Ci$, et ne se mesure pas avec un ohmmètre. Elle est indépendante de la longueur du câble. Un câble infini se comporte vu de son entrée comme une résistance $Z_C$, mais l'énergie n'est pas dissipée dans le câble : elle est emportée par l'onde."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Validité — La relation $u=\\pm Z_Ci$ est-elle valable pour un signal quelconque ?",
+                  "reponse": "Pour une onde progressive (dans un seul sens) : oui, pour tout signal $f(t\\mp x/c)$ puisque câble non dispersif. En revanche pour une superposition (onde stationnaire, onde incidente + réfléchie), il n'y a pas de relation simple $u=Z_Ci$ : on l'applique séparément à chaque onde progressive $u_i=Z_Ci_i$, $u_r=-Z_Ci_r$. Pour un signal non harmonique, on décompose par Fourier : chaque harmonique vérifie $u=\\pm Z_Ci$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Puissance d'une onde progressive — Exprimer $\\Pi$ pour une onde progressive $+x$ et sa valeur moyenne pour une tension d'amplitude $u_0$.",
+                  "reponse": "$\\Pi=u_+i_+=u_+^2/Z_C=Z_Ci_+^2$. Pour $u_+=u_0\\cos(\\omega t-kx)$ : $\\langle\\Pi\\rangle=\\dfrac{u_0^2}{2Z_C}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Réflexion — Pourquoi étudie-t-on la réflexion en bout de câble ? Quelle situation modélise-t-on ?",
+                  "reponse": "Le câble relie des dipôles : on veut que l'onde soit absorbée par le récepteur. On modélise un câble infini côté $x<0$ qui se termine en $x=0$ par une impédance $Z$. On cherche $u=u_i+u_r$ avec $u_i=u_{0i}e^{j(\\omega t-kx)}$ (incidente) et $u_r=u_{0r}e^{j(\\omega t+kx)}$ (réfléchie), $i_i=u_i/Z_C$ et $i_r=-u_r/Z_C$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Conditions aux limites — Pourquoi $\\omega_r=\\omega_i$ et $k_r=k_i$ ?",
+                  "reponse": "La condition en $x=0$ doit être vérifiée $\\forall t$ : cela impose l'égalité des pulsations ($\\omega_i=\\omega_r$). Chaque onde vérifiant la relation de dispersion $k=\\omega/c$, on a aussi $k_i=k_r=k$ (l'extrémité est immobile, pas d'effet Doppler)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Court-circuit — Que vaut $u_{0r}/u_{0i}$ ? Donner l'expression de $u(x,t)$ (réelle).",
+                  "reponse": "Condition $u(0,t)=0$ : $u_{0i}+u_{0r}=0$, soit $r_u=-1$. Alors $u=u_0[e^{j(\\omega t-kx)}-e^{j(\\omega t+kx)}]=-2ju_0e^{j\\omega t}\\sin kx$, et en réel avec $u_0=u_{0m}e^{j\\varphi}$ : $$u(x,t)=U_0\\sin(\\omega t+\\varphi)\\sin(kx),\\quad U_0=2u_{0m}.$$ C'est une onde stationnaire (variables $t$ et $x$ séparées)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Court-circuit — Donner l'onde de courant, la position des nœuds et ventres.",
+                  "reponse": "$i=i_i+i_r=\\dfrac{u_i-u_r}{Z_C}$, d'où $$i(x,t)=\\frac{U_0}{Z_C}\\cos(\\omega t+\\varphi)\\cos(kx).$$ Tension et courant sont en quadrature (spatiale et temporelle). Un nœud de tension est un ventre de courant et réciproquement : en $x=0$ nœud de tension, ventre de courant. Nœuds de tension en $kx=n\\pi$, soit $x=-n\\lambda/2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Court-circuit — Calculer la puissance instantanée $p=ui$ et sa moyenne.",
+                  "reponse": "$p=\\dfrac{U_0^2}{Z_C}\\cos(\\omega t+\\varphi)\\sin(\\omega t+\\varphi)\\cos kx\\,\\sin kx=\\dfrac{U_0^2}{4Z_C}\\sin\\!\\big(2(\\omega t+\\varphi)\\big)\\sin(2kx)$. Sa moyenne temporelle est nulle ($\\langle\\sin 2(\\omega t+\\varphi)\\rangle=0$) : une onde stationnaire ne transporte pas de puissance en moyenne. L'énergie oscille localement entre énergie électrique et magnétique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Sortie ouverte — Quelle condition aux limites, quel coefficient de réflexion, quelles ondes ?",
+                  "reponse": "$i(0,t)=0$ : $i_{0i}+i_{0r}=0$, donc $u_{0r}=+u_{0i}$ : $r_u=+1$ et $r_i=-1$. On obtient $i(x,t)=I_0\\sin(\\omega t+\\varphi)\\sin(kx)$ et $u(x,t)=Z_CI_0\\cos(\\omega t+\\varphi)\\cos(kx)$ : ondes stationnaires, tension maximale (ventre) et courant nul (nœud) à l'extrémité, puissance moyenne nulle."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Résistance terminale — Démontrer $r_u=\\dfrac{R-Z_C}{R+Z_C}$ et $r_i=\\dfrac{Z_C-R}{R+Z_C}$.",
+                  "reponse": "Condition de Ohm : $u(0,t)=R\\,i(0,t)$. Avec $i=\\dfrac{u_i-u_r}{Z_C}$ : $u_{0i}+u_{0r}=\\dfrac{R}{Z_C}(u_{0i}-u_{0r})$. On divise par $u_{0i}$ : $Z_C(1+r_u)=R(1-r_u)$, d'où $r_u=\\dfrac{R-Z_C}{R+Z_C}$. Comme $i_r/i_i=-u_r/u_i$ : $r_i=-r_u=\\dfrac{Z_C-R}{R+Z_C}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Cas limites — Retrouver les coefficients pour $R=0$, $R\\to\\infty$, $R=Z_C$.",
+                  "reponse": "$R=0$ (court-circuit) : $r_u=-1$, $r_i=+1$. $R\\to\\infty$ (sortie ouverte) : $r_u=+1$, $r_i=-1$. $R=Z_C$ : $r_u=r_i=0$ : pas d'onde réfléchie, c'est l'adaptation d'impédance. Pour $R$ réelle, $|r_u|\\le1$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Adaptation d'impédance — Que se passe-t-il pour $R=Z_C$ ? Pourquoi les GBF ont-ils $50\\ \\Omega$ de sortie ?",
+                  "reponse": "Aucune onde réfléchie : toute l'énergie transportée est transmise à la résistance. Le câble de $Z_C=50\\ \\Omega$ chargé par $R=50\\ \\Omega$ se comporte comme un câble infini ; la sortie $50\\ \\Omega$ du GBF évite les réflexions parasites aller-retour au niveau du générateur."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Bilan de puissance — Quelle fraction de la puissance incidente est absorbée par $R$ ?",
+                  "reponse": "Puissance réfléchie / incidente $=r_u^2$ (car $\\langle\\Pi_r\\rangle=-u_{0r}^2/2Z_C$). Fraction transmise à $R$ : $$1-r_u^2=\\frac{4RZ_C}{(R+Z_C)^2}.$$ Elle vaut 1 pour $R=Z_C$ et $0$ pour $R=0$ ou $R\\to\\infty$ (réflexion totale). Vérification : $u(0)=u_i(1+r_u)=\\dfrac{2R}{R+Z_C}u_i$ puis $\\langle u^2\\rangle/R$ redonne le même résultat."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « $Z_C=\\sqrt{\\Lambda\\Gamma}$ ». Justifier.",
+                  "reponse": "Faux. $Z_C=\\sqrt{\\Lambda/\\Gamma}$ (en ohms), alors que $c=1/\\sqrt{\\Lambda\\Gamma}$. Contrôle dimensionnel : $\\Lambda/\\Gamma$ en $\\mathrm{H/F}=\\Omega^2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Le courant $i$ vérifie une équation de d'Alembert différente de celle de $u$ ». Justifier.",
+                  "reponse": "Faux. $u$ et $i$ vérifient exactement la même équation de d'Alembert, de même célérité $c=1/\\sqrt{\\Lambda\\Gamma}$ ; ce sont les conditions aux limites et la relation $u=\\pm Z_Ci$ qui les distinguent."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Une onde stationnaire dans un câble transporte en moyenne de la puissance vers l'extrémité ». Justifier.",
+                  "reponse": "Faux. $\\langle p\\rangle=\\frac{U_0^2}{4Z_C}\\langle\\sin2(\\omega t+\\varphi)\\rangle\\sin(2kx)=0$ : puissance moyenne nulle, qu'il s'agisse du court-circuit ou de la sortie ouverte (réflexion totale)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « En court-circuit, il y a un ventre de tension en bout de câble ». Justifier.",
+                  "reponse": "Faux. $u(0,t)=0$ : nœud de tension, donc ventre de courant ($i\\propto\\cos kx$ maximal en $x=0$). C'est en sortie ouverte qu'on a un ventre de tension et un nœud de courant."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Si $R=2Z_C$, il n'y a pas de réflexion ». Calculer $r_u$ et la fraction de puissance absorbée.",
+                  "reponse": "Faux. $r_u=\\dfrac{2Z_C-Z_C}{3Z_C}=\\dfrac13$, $r_i=-\\dfrac13$. Fraction réfléchie $r_u^2=\\dfrac19$, fraction absorbée $\\dfrac89=\\dfrac{4\\cdot2}{9}$ ✓. Seule la valeur $R=Z_C$ annule la réflexion."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
           "isAvantDernier": true,
           "hue": 47.11538461538453,
           "color": "hsl(47.1,100%,50%)"
@@ -4553,9 +4911,367 @@
             }
           ],
           "files": [],
-          "questions": [],
-          "questionSets": [],
-          "hasQuestions": false,
+          "questions": [
+            {
+              "type": "Question",
+              "enonce": "Propriétés de la charge — Rappeler les quatre propriétés de la charge électrique et la valeur de $e$.",
+              "reponse": "Deux signes (attraction entre signes opposés, répulsion entre signes égaux) ; additive ; quantifiée (multiple entier de $e=1{,}6\\times10^{-19}\\ \\mathrm{C}$) ; conservative (ni créée ni détruite, notamment lors d'une réaction chimique ou nucléaire)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Loi de Coulomb — Énoncer la force exercée par $q_1$ en $M_1$ sur $q_2$ en $M_2$ et ses limites.",
+              "reponse": "$$\\vec F_{1/2}=\\frac{1}{4\\pi\\epsilon_0}\\frac{q_1q_2}{(M_1M_2)^2}\\vec u_{12},$$ $\\vec u_{12}$ unitaire de $M_1$ vers $M_2$, $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$. Répulsive si $q_1q_2>0$, attractive sinon. Valable uniquement pour des charges fixes : cesse de l'être si les particules sont en mouvement."
+            },
+            {
+              "type": "Question",
+              "enonce": "Échelles — Définir les échelles macroscopique, microscopique et mésoscopique et la condition sur $\\ell$.",
+              "reponse": "Macroscopique : $L\\approx1\\ \\mathrm{mm}$ (matière continue). Microscopique : $\\lambda$ (libre parcours moyen, $\\sim 0{,}1\\ \\mu$m dans un gaz, $\\sim$ nm dans un liquide ; distance interatomique $\\sim10^{-10}$ m dans un solide). Mésoscopique : $\\ell$ avec $\\lambda^3\\ll\\ell^3\\ll L^3$, c'est-à-dire microscopiquement grand (beaucoup de particules) et macroscopiquement petit (ponctuel). La physique des milieux continus raisonne toujours sur des volumes mésoscopiques."
+            },
+            {
+              "type": "Question",
+              "enonce": "Densités de charge — Définir $\\rho$, $\\sigma$, $\\lambda$ avec leurs unités et les formules donnant la charge totale.",
+              "reponse": "$\\delta q=\\rho\\,\\mathrm{d}\\tau$ ($\\mathrm{C\\cdot m^{-3}}$), $Q=\\iiint_V\\rho\\,\\mathrm{d}\\tau$ ; $\\delta q=\\sigma\\,\\mathrm{d}S$ ($\\mathrm{C\\cdot m^{-2}}$), $Q=\\iint_S\\sigma\\,\\mathrm{d}S$ ; $\\delta q=\\lambda\\,\\mathrm{d}\\ell$ ($\\mathrm{C\\cdot m^{-1}}$), $Q=\\int_L\\lambda\\,\\mathrm{d}\\ell$. La modélisation surfacique convient quand les charges sont réparties sur quelques couches atomiques."
+            },
+            {
+              "type": "Question",
+              "enonce": "Champ électrique — Définir $\\vec E$ à partir de la force. Qu'implique l'existence de $\\vec E$ en un point sans charge ?",
+              "reponse": "Une charge immobile $q$ en $M$ subit $\\vec F=q\\vec E(M,t)$. Même en l'absence de $q$, une grandeur physique préexiste en $M$, dont la manifestation est la force exercée dès qu'une charge s'y trouve."
+            },
+            {
+              "type": "Question",
+              "enonce": "Potentiel — Relation $\\vec E$–$V$, énergie potentielle, et limite de validité.",
+              "reponse": "En régime stationnaire : $\\vec E=-\\overrightarrow{\\mathrm{grad}}\\,V$ ; une charge $q$ a l'énergie potentielle $E_p=qV(M)$. Cette relation cesse d'être valable en régime dépendant du temps (il faut alors tenir compte de $-\\partial\\vec A/\\partial t$, induction)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Gradient — Expression cartésienne et sens physique du gradient.",
+              "reponse": "$\\overrightarrow{\\mathrm{grad}}f=\\dfrac{\\partial f}{\\partial x}\\vec u_x+\\dfrac{\\partial f}{\\partial y}\\vec u_y+\\dfrac{\\partial f}{\\partial z}\\vec u_z$. Il est orienté des zones de faible $f$ vers les zones de $f$ forte, sa norme est d'autant plus grande que $f$ varie brutalement. Donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ pointe vers les potentiels décroissants."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vecteur densité de courant — Définir $\\vec j$ par la charge traversant $\\mathrm{d}\\vec S$, et donner son unité.",
+              "reponse": "$\\delta^2q=\\vec j(M,t)\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ : charge qui traverse algébriquement $\\mathrm{d}\\vec S$ entre $t$ et $t+\\mathrm{d}t$. Unité : $\\mathrm{A\\cdot m^{-2}}$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Démonstration — Établir $\\vec j=\\rho\\vec v$ pour un seul type de porteurs.",
+              "reponse": "Les charges qui traversent $\\mathrm{d}S$ pendant $\\mathrm{d}t$ occupent le cylindre oblique de volume $\\mathrm{d}\\tau=\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ (base $\\mathrm{d}S$, hauteur $v\\,\\mathrm{d}t\\cos\\theta$). La charge correspondante est $\\delta^2q=\\rho\\,\\mathrm{d}\\tau=\\rho\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$. Par identification, $\\vec j=\\rho\\vec v$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Plusieurs porteurs — Donner $\\vec j$ avec $N$ types de porteurs. Cas d'un électrolyte ?",
+              "reponse": "$\\vec j=\\sum_{i=1}^N\\rho_i\\vec v_i$. Dans un électrolyte, au moins deux types : cations et anions ; leurs contributions s'ajoutent (cations et anions se déplaçant en sens opposés apportent des contributions de même sens à $\\vec j$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Piège — Vitesse $\\vec v$ dans $\\vec j=\\rho\\vec v$ : de quelle vitesse s'agit-il ?",
+              "reponse": "De la vitesse moyenne de dérive des porteurs (moyenne sur le volume mésoscopique), et non de la vitesse d'agitation thermique, dont la moyenne est nulle. Ordre de grandeur : la dérive est très faible devant l'agitation thermique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Flux et intensité — Définir le flux d'un champ vectoriel et l'intensité à travers une surface. Qu'implique le signe ?",
+              "reponse": "$\\Phi_a=\\iint_S\\vec a\\cdot\\mathrm{d}\\vec S$ ; $I_S=\\dfrac{\\delta q}{\\mathrm{d}t}=\\iint_S\\vec j\\cdot\\mathrm{d}\\vec S$ (en A). Le signe de $I$ dépend de l'orientation choisie de $\\mathrm{d}\\vec S$ : $I>0$ si le courant traverse $S$ dans le sens de l'orientation."
+            },
+            {
+              "type": "Question",
+              "enonce": "Conservation de la charge 1D — Établir $\\dfrac{\\partial\\rho}{\\partial t}=-\\dfrac{\\partial j}{\\partial x}$.",
+              "reponse": "Cylindre de section $S$ entre $x$ et $x+\\mathrm{d}x$ ($\\mathrm{d}\\tau=S\\,\\mathrm{d}x$), $\\vec j=j(x,t)\\vec u_x$. Variation : $\\mathrm{d}(\\delta q)=\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t$. Charge entrante $j(x,t)S\\,\\mathrm{d}t$, sortante $j(x+\\mathrm{d}x,t)S\\,\\mathrm{d}t$. Bilan : $\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t=-\\dfrac{\\partial j}{\\partial x}S\\,\\mathrm{d}x\\,\\mathrm{d}t$, d'où le résultat."
+            },
+            {
+              "type": "Question",
+              "enonce": "Divergence — Rappeler l'expression cartésienne et le théorème de Green–Ostrogradski.",
+              "reponse": "$\\mathrm{div}\\,\\vec j=\\dfrac{\\partial j_x}{\\partial x}+\\dfrac{\\partial j_y}{\\partial y}+\\dfrac{\\partial j_z}{\\partial z}$. Théorème : $\\displaystyle\\iiint_V\\mathrm{div}\\,\\vec j\\,\\mathrm{d}\\tau=\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S$ pour une surface $S$ fermée entourant $V$, orientée vers l'extérieur."
+            },
+            {
+              "type": "Question",
+              "enonce": "Conservation de la charge 3D — Énoncer l'équation locale.",
+              "reponse": "$$\\frac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0.$$ En 1D cartésien, $\\mathrm{div}\\,\\vec j=\\partial_xj$ et on retrouve le résultat précédent. Elle traduit qu'une variation de charge dans un volume ne peut venir que d'un flux de courant à travers sa surface."
+            },
+            {
+              "type": "Question",
+              "enonce": "Régime stationnaire — Que devient la conservation de la charge ? Interprétation ?",
+              "reponse": "$\\partial\\rho/\\partial t=0$ donc $\\mathrm{div}\\,\\vec j=0$ : $\\vec j$ est à flux conservatif, $\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S=0$ pour toute surface fermée : la charge entrant dans un volume est égale à celle qui en sort (sinon $\\rho$ varierait)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Loi des nœuds — Démontrer la loi des nœuds à partir de la conservation du flux de $\\vec j$.",
+              "reponse": "Surface fermée entourant un nœud à trois branches, orientée vers l'extérieur : $\\Phi=-I_1+I_2+I_3=0$ (la branche 1 est entrante, donc $\\vec j_1\\cdot\\vec S_1=-I_1$). Soit $I_1=I_2+I_3$ : somme des intensités entrantes égale à celle des sortantes. C'est une conséquence de la conservation du flux de $\\vec j$ en régime stationnaire."
+            },
+            {
+              "type": "Question",
+              "enonce": "Fil de section variable — Comment varie $j$ le long d'un tube de courant ? Et $I$ ?",
+              "reponse": "Avec $\\vec j$ uniforme sur chaque section, $j_1S_1=j_2S_2=I$ : $I$ est la même en tout point d'un conducteur filiforme en régime stationnaire, et $j$ augmente quand la section diminue (les lignes de courant se resserrent) : si $S_1>S_2$ alors $j_1<j_2$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Lignes et tubes de courant — Définir ligne de courant (équation) et tube de courant.",
+              "reponse": "Ligne de courant : courbe en tout point tangente à $\\vec j$, d'équation $\\vec j(M)\\wedge\\mathrm d\\vec\\ell=\\vec0$. Tube de courant : ensemble des lignes de courant s'appuyant sur un contour fermé (fictif ou non). Sa paroi latérale n'est traversée par aucun courant, donc le flux conservatif entraîne $I$ constant le long du tube."
+            },
+            {
+              "type": "Question",
+              "enonce": "Modèle de Drude — Énoncer les hypothèses et la force phénoménologique.",
+              "reponse": "Les électrons de conduction (délocalisés dans le réseau cristallin) forment un gaz d'électrons libres qui subissent des chocs avec les atomes ; $\\tau$ est la durée moyenne entre deux chocs. Les collisions sont modélisées par une force résistive $\\vec f=-\\dfrac{m}{\\tau}\\vec v$, $\\vec v$ vitesse moyenne de dérive."
+            },
+            {
+              "type": "Question",
+              "enonce": "Conductivité statique — Établir $\\vec j=\\gamma_0\\vec E$ et $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ avec le modèle de Drude.",
+              "reponse": "PFD en régime stationnaire (référentiel du métal galiléen, poids négligé) : $0=-e\\vec E-\\dfrac{m}{\\tau}\\vec v$, donc $\\vec v=-\\dfrac{e\\tau}{m}\\vec E$. Avec $\\rho_e=-n_ee$ : $\\vec j=\\rho_e\\vec v=\\dfrac{n_ee^2\\tau}{m}\\vec E$. D'où la loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ avec $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ (en $\\mathrm{S\\cdot m^{-1}}$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Signe — Les électrons vont-ils dans le sens de $\\vec E$ ? Et $\\vec j$ ?",
+              "reponse": "$\\vec v=-\\dfrac{e\\tau}{m}\\vec E$ : les électrons dérivent en sens opposé à $\\vec E$. Mais leur charge est négative donc $\\vec j=\\rho_e\\vec v$ est dans le sens de $\\vec E$ (sens conventionnel du courant)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Résistivité — Définir $\\rho_0$ et comparer les métaux usuels et l'effet de la température.",
+              "reponse": "$\\rho_0=1/\\gamma_0$ (en $\\Omega\\cdot\\mathrm m$). Les métaux usuels (Cu, Au, Al, Fe) ont de faibles résistivités (quelques $10^{-8}\\ \\Omega\\cdot$m) ; elle augmente avec la température (par ex. le cuivre passe de $\\approx1{,}56$ à $\\approx2{,}24\\times10^{-6}\\ \\Omega\\cdot$cm entre 273 K et 373 K, le fer de $8{,}9$ à $14{,}7$) : plus d'agitation thermique, plus de chocs, $\\tau$ plus petit."
+            },
+            {
+              "type": "Question",
+              "enonce": "Ordre de grandeur de $\\tau$ — Calculer $\\tau$ pour le cuivre avec $\\gamma_0\\approx10^8\\ \\mathrm{S\\cdot m^{-1}}$.",
+              "reponse": "$\\tau=\\dfrac{m\\gamma_0}{ne^2}$ avec $n\\approx10^{30}\\ \\mathrm m^{-3}$ (un électron libre par atome, $\\sim10^{-30}\\ \\mathrm m^3$ par atome), $m\\approx10^{-30}$ kg, $e\\approx10^{-19}$ C : $\\tau\\approx\\dfrac{10^{-30}\\times10^8}{10^{30}\\times10^{-38}}=10^{-14}\\ \\mathrm s$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Régime variable — Dans quelle limite la loi d'Ohm locale reste-t-elle valable ?",
+              "reponse": "En régime variable, $\\mathrm d\\vec v/\\mathrm dt\\ne\\vec0$ et le résultat précédent n'est plus exact a priori. Tant que $f\\ll1/\\tau\\approx10^{14}\\ \\mathrm{Hz}$, on peut faire une approximation du régime quasi-stationnaire et utiliser $\\vec j=\\gamma_0\\vec E$. Aux fréquences usuelles (de la continue au GHz), cette condition est très largement vérifiée."
+            },
+            {
+              "type": "Question",
+              "enonce": "Pertinence du modèle — Que valent le modèle de Drude et ses limites ?",
+              "reponse": "Il dégage les paramètres pertinents de la conductivité ($n$, $e$, $m$, $\\tau$) mais n'est pas rigoureux : seul un modèle quantique rend compte de toutes les observations expérimentales (le gaz d'électrons libres classique est trop simpliste, $\\tau$ est un paramètre phénoménologique)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Loi d'Ohm intégrale — Démontrer $U=RI$ et $R=\\dfrac{\\ell}{\\gamma_0S}$ pour un conducteur cylindrique.",
+              "reponse": "Fil de longueur $\\ell$, section $S$, $\\vec j=j\\vec u_z$ uniforme, $V=V(z)$. $I=\\iint\\vec j\\cdot\\mathrm d\\vec S=\\iint\\gamma_0\\vec E\\cdot\\mathrm d\\vec S=-\\gamma_0\\dfrac{\\mathrm dV}{\\mathrm dz}S$. $I$ étant indépendant de $z$, $\\dfrac{\\mathrm dV}{\\mathrm dz}=-\\dfrac{V_{A_1}-V_{A_2}}{\\ell}=-\\dfrac U\\ell$, donc $I=\\dfrac{\\gamma_0S}{\\ell}U$ et $$U=RI,\\quad R=\\frac{\\ell}{\\gamma_0S}=\\frac{\\rho_0\\ell}{S}.$$"
+            },
+            {
+              "type": "Question",
+              "enonce": "Application numérique — Résistance linéique d'un fil de cuivre de rayon 1 mm. Conséquence ?",
+              "reponse": "$R_\\ell=\\dfrac{1}{\\gamma_0S}=\\dfrac{1}{10^8\\times\\pi\\times10^{-6}}\\approx3\\ \\mathrm{m\\Omega\\cdot m^{-1}}$ (quelques milliohms par mètre). Pour un fil de 50 cm, $R\\sim$ qq m$\\Omega$, très inférieure aux résistances du montage : la résistance des fils est souvent négligeable."
+            },
+            {
+              "type": "Question",
+              "enonce": "Effet Joule local — Établir $p_v=\\vec j\\cdot\\vec E=\\gamma_0E^2$.",
+              "reponse": "Puissance de la force électrique sur un électron : $\\vec F\\cdot\\vec v=-e\\vec E\\cdot\\vec v$. Pour $n_0$ électrons par unité de volume : $\\delta P=-n_0e\\vec E\\cdot\\vec v\\,\\mathrm d\\tau=\\vec j\\cdot\\vec E\\,\\mathrm d\\tau$ car $\\vec j=-n_0e\\vec v$. Avec $\\vec j=\\gamma_0\\vec E$ : $p_v=\\dfrac{\\delta P}{\\mathrm d\\tau}=\\gamma_0E^2$ (en $\\mathrm{W\\cdot m^{-3}}$). Cette puissance compense les pertes par chocs sur le réseau, elle échauffe le conducteur (effet Joule)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Cohérence — Retrouver la puissance Joule totale $P=RI^2$ à partir de $p_v$.",
+              "reponse": "Pour le fil cylindrique : $P=\\iiint\\gamma_0E^2\\mathrm d\\tau=\\gamma_0E^2S\\ell$ avec $E=U/\\ell$ : $P=\\gamma_0\\dfrac{U^2}{\\ell^2}S\\ell=\\dfrac{\\gamma_0S}{\\ell}U^2=\\dfrac{U^2}{R}=RI^2$ ✓."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « En régime stationnaire, $\\rho$ est nulle dans un conducteur ». Justifier.",
+              "reponse": "Faux (confusion). Régime stationnaire signifie $\\partial\\rho/\\partial t=0$, pas $\\rho=0$ ; un conducteur ohmique est neutre globalement mais la densité $\\rho_e=-n_ee$ des électrons mobiles est non nulle (compensée par les ions fixes, de sorte que la charge totale locale est nulle). Ce qui est nul est $\\mathrm{div}\\,\\vec j$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « La vitesse des électrons dans un fil est de l'ordre de la vitesse de la lumière ». Justifier.",
+              "reponse": "Faux. La vitesse de dérive est très faible (de l'ordre du mm/s), c'est le champ (l'information) qui se propage à une vitesse de l'ordre de $c$. L'allumage quasi instantané d'une lampe ne signifie pas que les électrons vont vite."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « La loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ est valable en toutes circonstances ». Justifier.",
+              "reponse": "Faux. Elle est établie en régime stationnaire pour un métal (Drude) et prolongée au régime variable tant que $f\\ll1/\\tau\\sim10^{14}$ Hz. Elle n'est pas valable pour les très hautes fréquences, ni pour des milieux non ohmiques."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « La résistance d'un métal diminue quand la température augmente ». Justifier.",
+              "reponse": "Faux. La résistivité des métaux augmente avec $T$ (plus de chocs, $\\tau$ diminue, donc $\\gamma_0=ne^2\\tau/m$ diminue). Les valeurs tabulées croissent de 273 K à 373 K."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Si une surface fermée est traversée par des courants en régime variable, le flux total de $\\vec j$ est nul ». Justifier.",
+              "reponse": "Faux. Le flux total de $\\vec j$ à travers une surface fermée vaut $-\\dfrac{\\mathrm dQ_{int}}{\\mathrm dt}$ (conservation de la charge). Il n'est nul qu'en régime stationnaire."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_conduction_electrique.json",
+              "label": "conduction_electrique",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Propriétés de la charge — Rappeler les quatre propriétés de la charge électrique et la valeur de $e$.",
+                  "reponse": "Deux signes (attraction entre signes opposés, répulsion entre signes égaux) ; additive ; quantifiée (multiple entier de $e=1{,}6\\times10^{-19}\\ \\mathrm{C}$) ; conservative (ni créée ni détruite, notamment lors d'une réaction chimique ou nucléaire)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Loi de Coulomb — Énoncer la force exercée par $q_1$ en $M_1$ sur $q_2$ en $M_2$ et ses limites.",
+                  "reponse": "$$\\vec F_{1/2}=\\frac{1}{4\\pi\\epsilon_0}\\frac{q_1q_2}{(M_1M_2)^2}\\vec u_{12},$$ $\\vec u_{12}$ unitaire de $M_1$ vers $M_2$, $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$. Répulsive si $q_1q_2>0$, attractive sinon. Valable uniquement pour des charges fixes : cesse de l'être si les particules sont en mouvement."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Échelles — Définir les échelles macroscopique, microscopique et mésoscopique et la condition sur $\\ell$.",
+                  "reponse": "Macroscopique : $L\\approx1\\ \\mathrm{mm}$ (matière continue). Microscopique : $\\lambda$ (libre parcours moyen, $\\sim 0{,}1\\ \\mu$m dans un gaz, $\\sim$ nm dans un liquide ; distance interatomique $\\sim10^{-10}$ m dans un solide). Mésoscopique : $\\ell$ avec $\\lambda^3\\ll\\ell^3\\ll L^3$, c'est-à-dire microscopiquement grand (beaucoup de particules) et macroscopiquement petit (ponctuel). La physique des milieux continus raisonne toujours sur des volumes mésoscopiques."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Densités de charge — Définir $\\rho$, $\\sigma$, $\\lambda$ avec leurs unités et les formules donnant la charge totale.",
+                  "reponse": "$\\delta q=\\rho\\,\\mathrm{d}\\tau$ ($\\mathrm{C\\cdot m^{-3}}$), $Q=\\iiint_V\\rho\\,\\mathrm{d}\\tau$ ; $\\delta q=\\sigma\\,\\mathrm{d}S$ ($\\mathrm{C\\cdot m^{-2}}$), $Q=\\iint_S\\sigma\\,\\mathrm{d}S$ ; $\\delta q=\\lambda\\,\\mathrm{d}\\ell$ ($\\mathrm{C\\cdot m^{-1}}$), $Q=\\int_L\\lambda\\,\\mathrm{d}\\ell$. La modélisation surfacique convient quand les charges sont réparties sur quelques couches atomiques."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Champ électrique — Définir $\\vec E$ à partir de la force. Qu'implique l'existence de $\\vec E$ en un point sans charge ?",
+                  "reponse": "Une charge immobile $q$ en $M$ subit $\\vec F=q\\vec E(M,t)$. Même en l'absence de $q$, une grandeur physique préexiste en $M$, dont la manifestation est la force exercée dès qu'une charge s'y trouve."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Potentiel — Relation $\\vec E$–$V$, énergie potentielle, et limite de validité.",
+                  "reponse": "En régime stationnaire : $\\vec E=-\\overrightarrow{\\mathrm{grad}}\\,V$ ; une charge $q$ a l'énergie potentielle $E_p=qV(M)$. Cette relation cesse d'être valable en régime dépendant du temps (il faut alors tenir compte de $-\\partial\\vec A/\\partial t$, induction)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Gradient — Expression cartésienne et sens physique du gradient.",
+                  "reponse": "$\\overrightarrow{\\mathrm{grad}}f=\\dfrac{\\partial f}{\\partial x}\\vec u_x+\\dfrac{\\partial f}{\\partial y}\\vec u_y+\\dfrac{\\partial f}{\\partial z}\\vec u_z$. Il est orienté des zones de faible $f$ vers les zones de $f$ forte, sa norme est d'autant plus grande que $f$ varie brutalement. Donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ pointe vers les potentiels décroissants."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vecteur densité de courant — Définir $\\vec j$ par la charge traversant $\\mathrm{d}\\vec S$, et donner son unité.",
+                  "reponse": "$\\delta^2q=\\vec j(M,t)\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ : charge qui traverse algébriquement $\\mathrm{d}\\vec S$ entre $t$ et $t+\\mathrm{d}t$. Unité : $\\mathrm{A\\cdot m^{-2}}$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Démonstration — Établir $\\vec j=\\rho\\vec v$ pour un seul type de porteurs.",
+                  "reponse": "Les charges qui traversent $\\mathrm{d}S$ pendant $\\mathrm{d}t$ occupent le cylindre oblique de volume $\\mathrm{d}\\tau=\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$ (base $\\mathrm{d}S$, hauteur $v\\,\\mathrm{d}t\\cos\\theta$). La charge correspondante est $\\delta^2q=\\rho\\,\\mathrm{d}\\tau=\\rho\\vec v\\cdot\\mathrm{d}\\vec S\\,\\mathrm{d}t$. Par identification, $\\vec j=\\rho\\vec v$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Plusieurs porteurs — Donner $\\vec j$ avec $N$ types de porteurs. Cas d'un électrolyte ?",
+                  "reponse": "$\\vec j=\\sum_{i=1}^N\\rho_i\\vec v_i$. Dans un électrolyte, au moins deux types : cations et anions ; leurs contributions s'ajoutent (cations et anions se déplaçant en sens opposés apportent des contributions de même sens à $\\vec j$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Piège — Vitesse $\\vec v$ dans $\\vec j=\\rho\\vec v$ : de quelle vitesse s'agit-il ?",
+                  "reponse": "De la vitesse moyenne de dérive des porteurs (moyenne sur le volume mésoscopique), et non de la vitesse d'agitation thermique, dont la moyenne est nulle. Ordre de grandeur : la dérive est très faible devant l'agitation thermique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Flux et intensité — Définir le flux d'un champ vectoriel et l'intensité à travers une surface. Qu'implique le signe ?",
+                  "reponse": "$\\Phi_a=\\iint_S\\vec a\\cdot\\mathrm{d}\\vec S$ ; $I_S=\\dfrac{\\delta q}{\\mathrm{d}t}=\\iint_S\\vec j\\cdot\\mathrm{d}\\vec S$ (en A). Le signe de $I$ dépend de l'orientation choisie de $\\mathrm{d}\\vec S$ : $I>0$ si le courant traverse $S$ dans le sens de l'orientation."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Conservation de la charge 1D — Établir $\\dfrac{\\partial\\rho}{\\partial t}=-\\dfrac{\\partial j}{\\partial x}$.",
+                  "reponse": "Cylindre de section $S$ entre $x$ et $x+\\mathrm{d}x$ ($\\mathrm{d}\\tau=S\\,\\mathrm{d}x$), $\\vec j=j(x,t)\\vec u_x$. Variation : $\\mathrm{d}(\\delta q)=\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t$. Charge entrante $j(x,t)S\\,\\mathrm{d}t$, sortante $j(x+\\mathrm{d}x,t)S\\,\\mathrm{d}t$. Bilan : $\\dfrac{\\partial\\rho}{\\partial t}S\\,\\mathrm{d}x\\,\\mathrm{d}t=-\\dfrac{\\partial j}{\\partial x}S\\,\\mathrm{d}x\\,\\mathrm{d}t$, d'où le résultat."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Divergence — Rappeler l'expression cartésienne et le théorème de Green–Ostrogradski.",
+                  "reponse": "$\\mathrm{div}\\,\\vec j=\\dfrac{\\partial j_x}{\\partial x}+\\dfrac{\\partial j_y}{\\partial y}+\\dfrac{\\partial j_z}{\\partial z}$. Théorème : $\\displaystyle\\iiint_V\\mathrm{div}\\,\\vec j\\,\\mathrm{d}\\tau=\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S$ pour une surface $S$ fermée entourant $V$, orientée vers l'extérieur."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Conservation de la charge 3D — Énoncer l'équation locale.",
+                  "reponse": "$$\\frac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0.$$ En 1D cartésien, $\\mathrm{div}\\,\\vec j=\\partial_xj$ et on retrouve le résultat précédent. Elle traduit qu'une variation de charge dans un volume ne peut venir que d'un flux de courant à travers sa surface."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Régime stationnaire — Que devient la conservation de la charge ? Interprétation ?",
+                  "reponse": "$\\partial\\rho/\\partial t=0$ donc $\\mathrm{div}\\,\\vec j=0$ : $\\vec j$ est à flux conservatif, $\\oint_S\\vec j\\cdot\\mathrm{d}\\vec S=0$ pour toute surface fermée : la charge entrant dans un volume est égale à celle qui en sort (sinon $\\rho$ varierait)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Loi des nœuds — Démontrer la loi des nœuds à partir de la conservation du flux de $\\vec j$.",
+                  "reponse": "Surface fermée entourant un nœud à trois branches, orientée vers l'extérieur : $\\Phi=-I_1+I_2+I_3=0$ (la branche 1 est entrante, donc $\\vec j_1\\cdot\\vec S_1=-I_1$). Soit $I_1=I_2+I_3$ : somme des intensités entrantes égale à celle des sortantes. C'est une conséquence de la conservation du flux de $\\vec j$ en régime stationnaire."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Fil de section variable — Comment varie $j$ le long d'un tube de courant ? Et $I$ ?",
+                  "reponse": "Avec $\\vec j$ uniforme sur chaque section, $j_1S_1=j_2S_2=I$ : $I$ est la même en tout point d'un conducteur filiforme en régime stationnaire, et $j$ augmente quand la section diminue (les lignes de courant se resserrent) : si $S_1>S_2$ alors $j_1<j_2$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Lignes et tubes de courant — Définir ligne de courant (équation) et tube de courant.",
+                  "reponse": "Ligne de courant : courbe en tout point tangente à $\\vec j$, d'équation $\\vec j(M)\\wedge\\mathrm d\\vec\\ell=\\vec0$. Tube de courant : ensemble des lignes de courant s'appuyant sur un contour fermé (fictif ou non). Sa paroi latérale n'est traversée par aucun courant, donc le flux conservatif entraîne $I$ constant le long du tube."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Modèle de Drude — Énoncer les hypothèses et la force phénoménologique.",
+                  "reponse": "Les électrons de conduction (délocalisés dans le réseau cristallin) forment un gaz d'électrons libres qui subissent des chocs avec les atomes ; $\\tau$ est la durée moyenne entre deux chocs. Les collisions sont modélisées par une force résistive $\\vec f=-\\dfrac{m}{\\tau}\\vec v$, $\\vec v$ vitesse moyenne de dérive."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Conductivité statique — Établir $\\vec j=\\gamma_0\\vec E$ et $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ avec le modèle de Drude.",
+                  "reponse": "PFD en régime stationnaire (référentiel du métal galiléen, poids négligé) : $0=-e\\vec E-\\dfrac{m}{\\tau}\\vec v$, donc $\\vec v=-\\dfrac{e\\tau}{m}\\vec E$. Avec $\\rho_e=-n_ee$ : $\\vec j=\\rho_e\\vec v=\\dfrac{n_ee^2\\tau}{m}\\vec E$. D'où la loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ avec $\\gamma_0=\\dfrac{n_ee^2\\tau}{m}$ (en $\\mathrm{S\\cdot m^{-1}}$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Signe — Les électrons vont-ils dans le sens de $\\vec E$ ? Et $\\vec j$ ?",
+                  "reponse": "$\\vec v=-\\dfrac{e\\tau}{m}\\vec E$ : les électrons dérivent en sens opposé à $\\vec E$. Mais leur charge est négative donc $\\vec j=\\rho_e\\vec v$ est dans le sens de $\\vec E$ (sens conventionnel du courant)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Résistivité — Définir $\\rho_0$ et comparer les métaux usuels et l'effet de la température.",
+                  "reponse": "$\\rho_0=1/\\gamma_0$ (en $\\Omega\\cdot\\mathrm m$). Les métaux usuels (Cu, Au, Al, Fe) ont de faibles résistivités (quelques $10^{-8}\\ \\Omega\\cdot$m) ; elle augmente avec la température (par ex. le cuivre passe de $\\approx1{,}56$ à $\\approx2{,}24\\times10^{-6}\\ \\Omega\\cdot$cm entre 273 K et 373 K, le fer de $8{,}9$ à $14{,}7$) : plus d'agitation thermique, plus de chocs, $\\tau$ plus petit."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Ordre de grandeur de $\\tau$ — Calculer $\\tau$ pour le cuivre avec $\\gamma_0\\approx10^8\\ \\mathrm{S\\cdot m^{-1}}$.",
+                  "reponse": "$\\tau=\\dfrac{m\\gamma_0}{ne^2}$ avec $n\\approx10^{30}\\ \\mathrm m^{-3}$ (un électron libre par atome, $\\sim10^{-30}\\ \\mathrm m^3$ par atome), $m\\approx10^{-30}$ kg, $e\\approx10^{-19}$ C : $\\tau\\approx\\dfrac{10^{-30}\\times10^8}{10^{30}\\times10^{-38}}=10^{-14}\\ \\mathrm s$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Régime variable — Dans quelle limite la loi d'Ohm locale reste-t-elle valable ?",
+                  "reponse": "En régime variable, $\\mathrm d\\vec v/\\mathrm dt\\ne\\vec0$ et le résultat précédent n'est plus exact a priori. Tant que $f\\ll1/\\tau\\approx10^{14}\\ \\mathrm{Hz}$, on peut faire une approximation du régime quasi-stationnaire et utiliser $\\vec j=\\gamma_0\\vec E$. Aux fréquences usuelles (de la continue au GHz), cette condition est très largement vérifiée."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Pertinence du modèle — Que valent le modèle de Drude et ses limites ?",
+                  "reponse": "Il dégage les paramètres pertinents de la conductivité ($n$, $e$, $m$, $\\tau$) mais n'est pas rigoureux : seul un modèle quantique rend compte de toutes les observations expérimentales (le gaz d'électrons libres classique est trop simpliste, $\\tau$ est un paramètre phénoménologique)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Loi d'Ohm intégrale — Démontrer $U=RI$ et $R=\\dfrac{\\ell}{\\gamma_0S}$ pour un conducteur cylindrique.",
+                  "reponse": "Fil de longueur $\\ell$, section $S$, $\\vec j=j\\vec u_z$ uniforme, $V=V(z)$. $I=\\iint\\vec j\\cdot\\mathrm d\\vec S=\\iint\\gamma_0\\vec E\\cdot\\mathrm d\\vec S=-\\gamma_0\\dfrac{\\mathrm dV}{\\mathrm dz}S$. $I$ étant indépendant de $z$, $\\dfrac{\\mathrm dV}{\\mathrm dz}=-\\dfrac{V_{A_1}-V_{A_2}}{\\ell}=-\\dfrac U\\ell$, donc $I=\\dfrac{\\gamma_0S}{\\ell}U$ et $$U=RI,\\quad R=\\frac{\\ell}{\\gamma_0S}=\\frac{\\rho_0\\ell}{S}.$$"
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Application numérique — Résistance linéique d'un fil de cuivre de rayon 1 mm. Conséquence ?",
+                  "reponse": "$R_\\ell=\\dfrac{1}{\\gamma_0S}=\\dfrac{1}{10^8\\times\\pi\\times10^{-6}}\\approx3\\ \\mathrm{m\\Omega\\cdot m^{-1}}$ (quelques milliohms par mètre). Pour un fil de 50 cm, $R\\sim$ qq m$\\Omega$, très inférieure aux résistances du montage : la résistance des fils est souvent négligeable."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Effet Joule local — Établir $p_v=\\vec j\\cdot\\vec E=\\gamma_0E^2$.",
+                  "reponse": "Puissance de la force électrique sur un électron : $\\vec F\\cdot\\vec v=-e\\vec E\\cdot\\vec v$. Pour $n_0$ électrons par unité de volume : $\\delta P=-n_0e\\vec E\\cdot\\vec v\\,\\mathrm d\\tau=\\vec j\\cdot\\vec E\\,\\mathrm d\\tau$ car $\\vec j=-n_0e\\vec v$. Avec $\\vec j=\\gamma_0\\vec E$ : $p_v=\\dfrac{\\delta P}{\\mathrm d\\tau}=\\gamma_0E^2$ (en $\\mathrm{W\\cdot m^{-3}}$). Cette puissance compense les pertes par chocs sur le réseau, elle échauffe le conducteur (effet Joule)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Cohérence — Retrouver la puissance Joule totale $P=RI^2$ à partir de $p_v$.",
+                  "reponse": "Pour le fil cylindrique : $P=\\iiint\\gamma_0E^2\\mathrm d\\tau=\\gamma_0E^2S\\ell$ avec $E=U/\\ell$ : $P=\\gamma_0\\dfrac{U^2}{\\ell^2}S\\ell=\\dfrac{\\gamma_0S}{\\ell}U^2=\\dfrac{U^2}{R}=RI^2$ ✓."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « En régime stationnaire, $\\rho$ est nulle dans un conducteur ». Justifier.",
+                  "reponse": "Faux (confusion). Régime stationnaire signifie $\\partial\\rho/\\partial t=0$, pas $\\rho=0$ ; un conducteur ohmique est neutre globalement mais la densité $\\rho_e=-n_ee$ des électrons mobiles est non nulle (compensée par les ions fixes, de sorte que la charge totale locale est nulle). Ce qui est nul est $\\mathrm{div}\\,\\vec j$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « La vitesse des électrons dans un fil est de l'ordre de la vitesse de la lumière ». Justifier.",
+                  "reponse": "Faux. La vitesse de dérive est très faible (de l'ordre du mm/s), c'est le champ (l'information) qui se propage à une vitesse de l'ordre de $c$. L'allumage quasi instantané d'une lampe ne signifie pas que les électrons vont vite."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « La loi d'Ohm locale $\\vec j=\\gamma_0\\vec E$ est valable en toutes circonstances ». Justifier.",
+                  "reponse": "Faux. Elle est établie en régime stationnaire pour un métal (Drude) et prolongée au régime variable tant que $f\\ll1/\\tau\\sim10^{14}$ Hz. Elle n'est pas valable pour les très hautes fréquences, ni pour des milieux non ohmiques."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « La résistance d'un métal diminue quand la température augmente ». Justifier.",
+                  "reponse": "Faux. La résistivité des métaux augmente avec $T$ (plus de chocs, $\\tau$ diminue, donc $\\gamma_0=ne^2\\tau/m$ diminue). Les valeurs tabulées croissent de 273 K à 373 K."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Si une surface fermée est traversée par des courants en régime variable, le flux total de $\\vec j$ est nul ». Justifier.",
+                  "reponse": "Faux. Le flux total de $\\vec j$ à travers une surface fermée vaut $-\\dfrac{\\mathrm dQ_{int}}{\\mathrm dt}$ (conservation de la charge). Il n'est nul qu'en régime stationnaire."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
           "isAvantDernier": true,
           "hue": 87.11538461538453,
           "color": "hsl(87.1,100%,50%)"
@@ -4632,9 +5348,227 @@
             }
           ],
           "files": [],
-          "questions": [],
-          "questionSets": [],
-          "hasQuestions": false,
+          "questions": [
+            {
+              "type": "Question",
+              "enonce": "Notations — Que représentent $\\vec E$, $\\vec B$, $\\rho$, $\\vec j$, $\\epsilon_0$, $\\mu_0$ et quelles sont les valeurs de $\\epsilon_0$ et $\\mu_0$ ?",
+              "reponse": "$\\vec E$ : champ électrique ; $\\vec B$ : champ magnétique ; $\\rho$ : densité volumique de charge ; $\\vec j$ : densité volumique de courant ; $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$ (permittivité du vide) ; $\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{H\\cdot m^{-1}}$ (perméabilité du vide)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Maxwell–Gauss — Énoncer l'équation et son interprétation.",
+              "reponse": "$$\\mathrm{div}\\,\\vec E(M,t)=\\frac{\\rho(M,t)}{\\epsilon_0}.$$ Une distribution de charges est source de champ électrique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Maxwell–Faraday — Énoncer l'équation et son interprétation physique.",
+              "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec E=-\\frac{\\partial\\vec B}{\\partial t}.$$ Un champ magnétique variable est source de champ électrique : c'est la loi de l'induction électromagnétique."
+            },
+            {
+              "type": "Question",
+              "enonce": "Maxwell–Thomson — Énoncer l'équation (maxwell-flux) et son interprétation.",
+              "reponse": "$$\\mathrm{div}\\,\\vec B=0.$$ Le champ magnétique est à flux conservatif : pas de charge magnétique (monopôle) ; les lignes de champ magnétique sont fermées."
+            },
+            {
+              "type": "Question",
+              "enonce": "Maxwell–Ampère — Énoncer l'équation et les sources de $\\vec B$.",
+              "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j+\\epsilon_0\\mu_0\\frac{\\partial\\vec E}{\\partial t}.$$ Les sources du champ magnétique sont les distributions de courant ($\\mu_0\\vec j$) et les variations temporelles du champ électrique (terme $\\epsilon_0\\mu_0\\partial_t\\vec E$, courant de déplacement)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Rotationnel — Donner l'expression cartésienne de $\\overrightarrow{\\mathrm{rot}}\\vec A$ et le moyen mnémotechnique.",
+              "reponse": "$\\overrightarrow{\\mathrm{rot}}\\vec A=\\left(\\dfrac{\\partial A_z}{\\partial y}-\\dfrac{\\partial A_y}{\\partial z}\\right)\\vec u_x+\\left(\\dfrac{\\partial A_x}{\\partial z}-\\dfrac{\\partial A_z}{\\partial x}\\right)\\vec u_y+\\left(\\dfrac{\\partial A_y}{\\partial x}-\\dfrac{\\partial A_x}{\\partial y}\\right)\\vec u_z$. Mnémotechnique : produit vectoriel formel $\\vec\\nabla\\wedge\\vec A$ avec $\\vec\\nabla=(\\partial_x,\\partial_y,\\partial_z)$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Équations de structure et de couplage — Classer les quatre équations selon ce qu'elles relient.",
+              "reponse": "Équations « avec sources » (Gauss, Ampère) : relient les champs aux charges $\\rho$ et courants $\\vec j$. Équations « sans sources » (Faraday, Thomson) : expriment des propriétés intrinsèques du champ (induction, absence de monopôle magnétique). Faraday et Ampère couplent $\\vec E$ et $\\vec B$ en régime variable."
+            },
+            {
+              "type": "Question",
+              "enonce": "Régime stationnaire — Que deviennent les équations de Maxwell ?",
+              "reponse": "Avec $\\partial_t=0$ : $\\mathrm{div}\\,\\vec E=\\rho/\\epsilon_0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec E=\\vec0$ (donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$, électrostatique), $\\mathrm{div}\\,\\vec B=0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j$ (magnétostatique). $\\vec E$ et $\\vec B$ sont alors découplés."
+            },
+            {
+              "type": "Question",
+              "enonce": "Compatibilité — Démontrer que Maxwell est compatible avec la conservation de la charge.",
+              "reponse": "On prend la divergence de Maxwell–Ampère : $\\mathrm{div}\\,\\overrightarrow{\\mathrm{rot}}\\vec B=0$ (identité d'analyse vectorielle) $=\\mu_0\\,\\mathrm{div}\\,\\vec j+\\epsilon_0\\mu_0\\dfrac{\\partial}{\\partial t}\\mathrm{div}\\vec E$. Avec Maxwell–Gauss, $\\mathrm{div}\\vec E=\\rho/\\epsilon_0$ : $0=\\mu_0\\,\\mathrm{div}\\vec j+\\mu_0\\dfrac{\\partial\\rho}{\\partial t}$, soit $\\dfrac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0$."
+            },
+            {
+              "type": "Question",
+              "enonce": "Courant de déplacement — Pourquoi Maxwell a-t-il ajouté le terme $\\epsilon_0\\mu_0\\partial_t\\vec E$ ?",
+              "reponse": "Sans ce terme, $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$ donnerait en divergence $\\mathrm{div}\\,\\vec j=0$ : incompatible avec la conservation de la charge en régime variable (par ex. condensateur en charge, où $\\rho$ varie). Le terme en $\\partial_t\\vec E$ assure la compatibilité."
+            },
+            {
+              "type": "Question",
+              "enonce": "Force de Lorentz — Écrire la force de Lorentz et en déduire la définition de $\\vec E$ et $\\vec B$.",
+              "reponse": "$$\\vec F=q\\left(\\vec E(M,t)+\\vec v\\wedge\\vec B(M,t)\\right).$$ $\\vec E=\\vec F_E/q$ (force indépendante de la vitesse) et $\\vec B$ défini par $\\vec F_B=q\\,\\vec v\\wedge\\vec B$ (force perpendiculaire à $\\vec v$ et $\\vec B$, qui ne travaille pas)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Polaire/axial — Définir vecteur polaire et vecteur axial.",
+              "reponse": "Un vecteur polaire (vrai vecteur) a un sens indépendant de la convention d'orientation de l'espace. Un vecteur axial (pseudo-vecteur) a un sens qui dépend de cette convention (règle de la main droite). En physique, tous les vecteurs sont polaires sauf ceux définis par un produit vectoriel."
+            },
+            {
+              "type": "Question",
+              "enonce": "Nature de $\\vec E$ — Montrer que $\\vec E$ est un vecteur polaire.",
+              "reponse": "$\\vec E=\\vec F/q$ : la force est un vecteur polaire et l'expression ne comporte aucun produit vectoriel, donc $\\vec E$ est un vecteur polaire (vrai vecteur)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Nature de $\\vec B$ — Montrer que $\\vec B$ est un vecteur axial.",
+              "reponse": "$\\vec F_B=q\\,\\vec v\\wedge\\vec B$ avec $\\vec F_B$ et $\\vec v$ polaires. Le produit vectoriel dépend de la convention d'orientation, donc pour que $\\vec F_B$ reste polaire, $\\vec B$ doit être axial (pseudo-vecteur)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Cohérence — Vérifier que Maxwell–Faraday est cohérente avec la nature de $\\vec E$ et $\\vec B$.",
+              "reponse": "$\\overrightarrow{\\mathrm{rot}}$ d'un vecteur polaire (donc $\\overrightarrow{\\mathrm{rot}}\\vec E$) est un vecteur axial, comme $\\partial_t\\vec B$ ($\\vec B$ axial) : les deux membres ont la même nature. De même $\\overrightarrow{\\mathrm{rot}}\\vec B$ (rotationnel d'un axial) est polaire, comme $\\vec j$ et $\\partial_t\\vec E$ ✓."
+            },
+            {
+              "type": "Question",
+              "enonce": "Unités — Vérifier la cohérence dimensionnelle de $\\epsilon_0\\mu_0$ et sa signification.",
+              "reponse": "$\\epsilon_0\\mu_0$ s'exprime en $\\mathrm{s^2\\cdot m^{-2}}$, c'est l'inverse d'un carré de vitesse : $\\epsilon_0\\mu_0c^2=1$, soit $c=1/\\sqrt{\\epsilon_0\\mu_0}\\approx3\\times10^8\\ \\mathrm{m\\cdot s^{-1}}$ (lien avec la propagation des ondes électromagnétiques dans le vide, vu en cours ultérieur)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « $\\mathrm{div}\\,\\vec B=0$ signifie que $\\vec B$ est nul ». Justifier.",
+              "reponse": "Faux. Cela signifie que $\\vec B$ est à flux conservatif (lignes de champ fermées, pas de monopôle magnétique), pas qu'il est nul. Par exemple $\\vec B$ créé par un fil est non nul et sa divergence est nulle."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « En régime variable, $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ reste valable ». Justifier.",
+              "reponse": "Faux. Maxwell–Faraday donne $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B\\neq\\vec0$ donc $\\vec E$ ne dérive plus d'un potentiel scalaire seul ($\\overrightarrow{\\mathrm{rot}}\\,\\overrightarrow{\\mathrm{grad}}=\\vec0$)."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Le champ magnétique est un vecteur polaire comme le champ électrique ». Justifier.",
+              "reponse": "Faux. $\\vec E$ est polaire, $\\vec B$ est axial (pseudo-vecteur), car défini par un produit vectoriel dans la force de Lorentz."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « Un champ électrique variable dans le temps peut créer un champ magnétique en l'absence de courants ». Justifier.",
+              "reponse": "Vrai. Dans Maxwell–Ampère avec $\\vec j=\\vec0$ : $\\overrightarrow{\\mathrm{rot}}\\vec B=\\epsilon_0\\mu_0\\partial_t\\vec E\\ne\\vec0$ si $\\vec E$ varie. De même un $\\vec B$ variable crée $\\vec E$ (Faraday) : c'est le couplage à l'origine de la propagation des ondes électromagnétiques."
+            },
+            {
+              "type": "Question",
+              "enonce": "Vrai ou faux — « La force magnétique $q\\vec v\\wedge\\vec B$ peut modifier l'énergie cinétique de la particule ». Justifier.",
+              "reponse": "Faux. La force magnétique est orthogonale à $\\vec v$ : sa puissance $q(\\vec v\\wedge\\vec B)\\cdot\\vec v=0$. Elle courbe la trajectoire sans modifier la norme de la vitesse ; seul $q\\vec E$ fournit de l'énergie."
+            }
+          ],
+          "questionSets": [
+            {
+              "file": "questions_maxwell.json",
+              "label": "maxwell",
+              "items": [
+                {
+                  "type": "Question",
+                  "enonce": "Notations — Que représentent $\\vec E$, $\\vec B$, $\\rho$, $\\vec j$, $\\epsilon_0$, $\\mu_0$ et quelles sont les valeurs de $\\epsilon_0$ et $\\mu_0$ ?",
+                  "reponse": "$\\vec E$ : champ électrique ; $\\vec B$ : champ magnétique ; $\\rho$ : densité volumique de charge ; $\\vec j$ : densité volumique de courant ; $\\epsilon_0=8{,}85\\times10^{-12}\\ \\mathrm{F\\cdot m^{-1}}$ (permittivité du vide) ; $\\mu_0=4\\pi\\times10^{-7}\\ \\mathrm{H\\cdot m^{-1}}$ (perméabilité du vide)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Maxwell–Gauss — Énoncer l'équation et son interprétation.",
+                  "reponse": "$$\\mathrm{div}\\,\\vec E(M,t)=\\frac{\\rho(M,t)}{\\epsilon_0}.$$ Une distribution de charges est source de champ électrique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Maxwell–Faraday — Énoncer l'équation et son interprétation physique.",
+                  "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec E=-\\frac{\\partial\\vec B}{\\partial t}.$$ Un champ magnétique variable est source de champ électrique : c'est la loi de l'induction électromagnétique."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Maxwell–Thomson — Énoncer l'équation (maxwell-flux) et son interprétation.",
+                  "reponse": "$$\\mathrm{div}\\,\\vec B=0.$$ Le champ magnétique est à flux conservatif : pas de charge magnétique (monopôle) ; les lignes de champ magnétique sont fermées."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Maxwell–Ampère — Énoncer l'équation et les sources de $\\vec B$.",
+                  "reponse": "$$\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j+\\epsilon_0\\mu_0\\frac{\\partial\\vec E}{\\partial t}.$$ Les sources du champ magnétique sont les distributions de courant ($\\mu_0\\vec j$) et les variations temporelles du champ électrique (terme $\\epsilon_0\\mu_0\\partial_t\\vec E$, courant de déplacement)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Rotationnel — Donner l'expression cartésienne de $\\overrightarrow{\\mathrm{rot}}\\vec A$ et le moyen mnémotechnique.",
+                  "reponse": "$\\overrightarrow{\\mathrm{rot}}\\vec A=\\left(\\dfrac{\\partial A_z}{\\partial y}-\\dfrac{\\partial A_y}{\\partial z}\\right)\\vec u_x+\\left(\\dfrac{\\partial A_x}{\\partial z}-\\dfrac{\\partial A_z}{\\partial x}\\right)\\vec u_y+\\left(\\dfrac{\\partial A_y}{\\partial x}-\\dfrac{\\partial A_x}{\\partial y}\\right)\\vec u_z$. Mnémotechnique : produit vectoriel formel $\\vec\\nabla\\wedge\\vec A$ avec $\\vec\\nabla=(\\partial_x,\\partial_y,\\partial_z)$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Équations de structure et de couplage — Classer les quatre équations selon ce qu'elles relient.",
+                  "reponse": "Équations « avec sources » (Gauss, Ampère) : relient les champs aux charges $\\rho$ et courants $\\vec j$. Équations « sans sources » (Faraday, Thomson) : expriment des propriétés intrinsèques du champ (induction, absence de monopôle magnétique). Faraday et Ampère couplent $\\vec E$ et $\\vec B$ en régime variable."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Régime stationnaire — Que deviennent les équations de Maxwell ?",
+                  "reponse": "Avec $\\partial_t=0$ : $\\mathrm{div}\\,\\vec E=\\rho/\\epsilon_0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec E=\\vec0$ (donc $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$, électrostatique), $\\mathrm{div}\\,\\vec B=0$, $\\overrightarrow{\\mathrm{rot}}\\,\\vec B=\\mu_0\\vec j$ (magnétostatique). $\\vec E$ et $\\vec B$ sont alors découplés."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Compatibilité — Démontrer que Maxwell est compatible avec la conservation de la charge.",
+                  "reponse": "On prend la divergence de Maxwell–Ampère : $\\mathrm{div}\\,\\overrightarrow{\\mathrm{rot}}\\vec B=0$ (identité d'analyse vectorielle) $=\\mu_0\\,\\mathrm{div}\\,\\vec j+\\epsilon_0\\mu_0\\dfrac{\\partial}{\\partial t}\\mathrm{div}\\vec E$. Avec Maxwell–Gauss, $\\mathrm{div}\\vec E=\\rho/\\epsilon_0$ : $0=\\mu_0\\,\\mathrm{div}\\vec j+\\mu_0\\dfrac{\\partial\\rho}{\\partial t}$, soit $\\dfrac{\\partial\\rho}{\\partial t}+\\mathrm{div}\\,\\vec j=0$."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Courant de déplacement — Pourquoi Maxwell a-t-il ajouté le terme $\\epsilon_0\\mu_0\\partial_t\\vec E$ ?",
+                  "reponse": "Sans ce terme, $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$ donnerait en divergence $\\mathrm{div}\\,\\vec j=0$ : incompatible avec la conservation de la charge en régime variable (par ex. condensateur en charge, où $\\rho$ varie). Le terme en $\\partial_t\\vec E$ assure la compatibilité."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Force de Lorentz — Écrire la force de Lorentz et en déduire la définition de $\\vec E$ et $\\vec B$.",
+                  "reponse": "$$\\vec F=q\\left(\\vec E(M,t)+\\vec v\\wedge\\vec B(M,t)\\right).$$ $\\vec E=\\vec F_E/q$ (force indépendante de la vitesse) et $\\vec B$ défini par $\\vec F_B=q\\,\\vec v\\wedge\\vec B$ (force perpendiculaire à $\\vec v$ et $\\vec B$, qui ne travaille pas)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Polaire/axial — Définir vecteur polaire et vecteur axial.",
+                  "reponse": "Un vecteur polaire (vrai vecteur) a un sens indépendant de la convention d'orientation de l'espace. Un vecteur axial (pseudo-vecteur) a un sens qui dépend de cette convention (règle de la main droite). En physique, tous les vecteurs sont polaires sauf ceux définis par un produit vectoriel."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Nature de $\\vec E$ — Montrer que $\\vec E$ est un vecteur polaire.",
+                  "reponse": "$\\vec E=\\vec F/q$ : la force est un vecteur polaire et l'expression ne comporte aucun produit vectoriel, donc $\\vec E$ est un vecteur polaire (vrai vecteur)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Nature de $\\vec B$ — Montrer que $\\vec B$ est un vecteur axial.",
+                  "reponse": "$\\vec F_B=q\\,\\vec v\\wedge\\vec B$ avec $\\vec F_B$ et $\\vec v$ polaires. Le produit vectoriel dépend de la convention d'orientation, donc pour que $\\vec F_B$ reste polaire, $\\vec B$ doit être axial (pseudo-vecteur)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Cohérence — Vérifier que Maxwell–Faraday est cohérente avec la nature de $\\vec E$ et $\\vec B$.",
+                  "reponse": "$\\overrightarrow{\\mathrm{rot}}$ d'un vecteur polaire (donc $\\overrightarrow{\\mathrm{rot}}\\vec E$) est un vecteur axial, comme $\\partial_t\\vec B$ ($\\vec B$ axial) : les deux membres ont la même nature. De même $\\overrightarrow{\\mathrm{rot}}\\vec B$ (rotationnel d'un axial) est polaire, comme $\\vec j$ et $\\partial_t\\vec E$ ✓."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Unités — Vérifier la cohérence dimensionnelle de $\\epsilon_0\\mu_0$ et sa signification.",
+                  "reponse": "$\\epsilon_0\\mu_0$ s'exprime en $\\mathrm{s^2\\cdot m^{-2}}$, c'est l'inverse d'un carré de vitesse : $\\epsilon_0\\mu_0c^2=1$, soit $c=1/\\sqrt{\\epsilon_0\\mu_0}\\approx3\\times10^8\\ \\mathrm{m\\cdot s^{-1}}$ (lien avec la propagation des ondes électromagnétiques dans le vide, vu en cours ultérieur)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « $\\mathrm{div}\\,\\vec B=0$ signifie que $\\vec B$ est nul ». Justifier.",
+                  "reponse": "Faux. Cela signifie que $\\vec B$ est à flux conservatif (lignes de champ fermées, pas de monopôle magnétique), pas qu'il est nul. Par exemple $\\vec B$ créé par un fil est non nul et sa divergence est nulle."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « En régime variable, $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ reste valable ». Justifier.",
+                  "reponse": "Faux. Maxwell–Faraday donne $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B\\neq\\vec0$ donc $\\vec E$ ne dérive plus d'un potentiel scalaire seul ($\\overrightarrow{\\mathrm{rot}}\\,\\overrightarrow{\\mathrm{grad}}=\\vec0$)."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Le champ magnétique est un vecteur polaire comme le champ électrique ». Justifier.",
+                  "reponse": "Faux. $\\vec E$ est polaire, $\\vec B$ est axial (pseudo-vecteur), car défini par un produit vectoriel dans la force de Lorentz."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « Un champ électrique variable dans le temps peut créer un champ magnétique en l'absence de courants ». Justifier.",
+                  "reponse": "Vrai. Dans Maxwell–Ampère avec $\\vec j=\\vec0$ : $\\overrightarrow{\\mathrm{rot}}\\vec B=\\epsilon_0\\mu_0\\partial_t\\vec E\\ne\\vec0$ si $\\vec E$ varie. De même un $\\vec B$ variable crée $\\vec E$ (Faraday) : c'est le couplage à l'origine de la propagation des ondes électromagnétiques."
+                },
+                {
+                  "type": "Question",
+                  "enonce": "Vrai ou faux — « La force magnétique $q\\vec v\\wedge\\vec B$ peut modifier l'énergie cinétique de la particule ». Justifier.",
+                  "reponse": "Faux. La force magnétique est orthogonale à $\\vec v$ : sa puissance $q(\\vec v\\wedge\\vec B)\\cdot\\vec v=0$. Elle courbe la trajectoire sans modifier la norme de la vitesse ; seul $q\\vec E$ fournit de l'énergie."
+                }
+              ]
+            }
+          ],
+          "hasQuestions": true,
           "isAvantDernier": true,
           "hue": 47.11538461538453,
           "color": "hsl(47.1,100%,50%)"
