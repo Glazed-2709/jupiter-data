@@ -241,172 +241,37 @@
   },
   {
     "type": "Question",
-    "enonce": "Matrice compagnon 1/3 — Définir la matrice compagnon $C_P$ d'un polynôme unitaire $P=X^n+a_{n-1}X^{n-1}+\\dots+a_0$ et donner ses propriétés immédiates (polynôme caractéristique, vecteur cyclique).",
-    "reponse": "$$C_P=\\begin{pmatrix}0&&&-a_0\\\\1&0&&-a_1\\\\&\\ddots&\\ddots&\\vdots\\\\&&1&-a_{n-1}\\end{pmatrix}$$ (des $1$ sur la sous-diagonale, derniere colonne $-a_k$). Si $(e_j)$ est la base canonique, $C_Pe_j=e_{j+1}$ pour $j<n$ : $e_1$ est un **vecteur cyclique** ($e_1,C_Pe_1,\\dots,C_P^{n-1}e_1$ est la base canonique). On a $\\chi_{C_P}=P$ (et $P$ est aussi son polynôme minimal). Les racines de $P$ sont exactement les valeurs propres de $C_P$."
+    "enonce": "Matrice compagnon — Si $P$ unitaire de degré $n$ a $n$ racines distinctes $\\lambda_1,\\dots,\\lambda_n$, quelle est la matrice de passage qui diagonalise sa matrice compagnon ? Précisez le croisement ligne/colonne.",
+    "reponse": "C'est la matrice de **Vandermonde** $V=(\\lambda_j^{\\,i-1})$, de colonnes $(1,\\lambda_j,\\dots,\\lambda_j^{n-1})^\\top$, inversible car $\\det V=\\prod_{i<j}(\\lambda_j-\\lambda_i)\\ne0$. Pour la compagnon à sur-diagonale de $1$ et dernière ligne $(-a_0,\\dots,-a_{n-1})$ : $C=VDV^{-1}$, les $(1,\\lambda,\\dots,\\lambda^{n-1})^\\top$ sont des vecteurs propres en **colonnes** (car $\\lambda^n=-\\sum a_k\\lambda^k$). Pour la compagnon transposée (sous-diagonale de $1$, dernière colonne $-a_k$) : $C=V^{-\\top}DV^{\\top}$, ce sont des vecteurs propres **à gauche** (lignes) : la Vandermonde apparaît transposée, dans $P^{-1}=V^\\top$. Dans les deux cas $\\chi_C=P$ et les sous-espaces propres sont de dimension $1$ (diagonalisable ssi racines simples)."
   },
   {
     "type": "Question",
-    "enonce": "Matrice compagnon 2/3 — Si $P$ a $n$ racines distinctes $\\lambda_1,\\dots,\\lambda_n$, montrer que $C_P$ est diagonalisable et que la matrice de passage est une matrice de Vandermonde. Expliquer le « croisement » ligne $\\leftrightarrow$ colonne selon la convention.",
-    "reponse": "Soit $V=(\\lambda_j^{\\,i-1})_{i,j}$ la matrice de Vandermonde (colonne $j$ : $(1,\\lambda_j,\\dots,\\lambda_j^{n-1})^\\top$). Pour la compagnon **transposée** $C_P^\\top$ (des $1$ sur la sur-diagonale, derniere **ligne** $-a_k$) : $C_P^\\top\\,(1,\\lambda,\\dots,\\lambda^{n-1})^\\top=(\\lambda,\\lambda^2,\\dots,\\lambda^{n-1},-\\sum_{k<n}a_k\\lambda^k)^\\top=\\lambda(1,\\lambda,\\dots,\\lambda^{n-1})^\\top$ car $\\lambda^n=-\\sum_{k<n}a_k\\lambda^k$ quand $P(\\lambda)=0$. Donc $C_P^\\top=VDV^{-1}$ avec $D=\\mathrm{diag}(\\lambda_j)$ : la matrice de passage est $V$ (vecteurs propres en **colonnes**). Pour la compagnon $C_P$ (sous-diagonale, derniere colonne), les vecteurs $(1,\\lambda,\\dots,\\lambda^{n-1})$ sont des vecteurs propres **à gauche** (**lignes**) : $C_P=V^{-\\top}DV^{\\top}$, donc $P_{passage}=(V^\\top)^{-1}$ et $P_{passage}^{-1}=V^\\top$ : la Vandermonde apparaît dans $P^{-1}$, en lignes. Changer de convention transpose la Vandermonde (croisement ligne $\\leftrightarrow$ colonne). Comme $\\det V=\\prod_{i<j}(\\lambda_j-\\lambda_i)\\neq0$ pour des racines distinctes, la matrice est bien inversible."
+    "enonce": "Nilpotence — Pourquoi l'indice de nilpotence d'un endomorphisme d'un espace de dimension $n$ est-il majoré par $n$ ?",
+    "reponse": "Soit $p$ l'indice ($u^p=0$, $u^{p-1}\\ne0$) et $x$ tel que $u^{p-1}(x)\\ne0$. La famille $(x,u(x),\\dots,u^{p-1}(x))$ est libre : si $\\sum a_ku^k(x)=0$ et $k_0$ est le plus petit indice avec $a_{k_0}\\ne0$, on applique $u^{p-1-k_0}$ : il reste $a_{k_0}u^{p-1}(x)=0$, contradiction. Donc $p\\le n$ et $u^n=0$. (Variante : $\\chi_u=X^n$ et Cayley–Hamilton.)"
   },
   {
     "type": "Question",
-    "enonce": "Matrice compagnon 3/3 — À quelle condition $C_P$ est-elle diagonalisable ? Pourquoi les sous-espaces propres sont-ils de dimension $1$ ?",
-    "reponse": "Pour toute valeur propre $\\lambda$, $\\operatorname{rg}(C_P-\\lambda I_n)\\ge n-1$ (les $n-1$ premières colonnes $e_{j+1}-\\lambda e_j$ sont libres : matrice « presque triangulaire » avec des $1$ sur la sous-diagonale), donc $\\dim E_\\lambda(C_P)=1$. Or $C_P$ est diagonalisable ssi $\\dim E_\\lambda=m_\\lambda$ pour toute racine : il faut $m_\\lambda=1$. Donc $C_P$ est diagonalisable (sur $\\mathbb K$) ssi $P$ est **scindé à racines simples** sur $\\mathbb K$. Pour $P$ scindé avec une racine multiple, $C_P$ est trigonalisable mais non diagonalisable."
+    "enonce": "Rang 1 — Pourquoi une matrice $A$ de rang $1$ est-elle diagonalisable si et seulement si $\\operatorname{tr}A\\ne0$ ?",
+    "reponse": "$A=XY^\\top$ donc $A^2=X(Y^\\top X)Y^\\top=\\operatorname{tr}(A)\\,A$. Si $\\operatorname{tr}A\\ne0$ : $X(X-\\operatorname{tr}A)$ est annulateur à racines simples, donc $A$ diagonalisable ($\\chi_A=X^{n-1}(X-\\operatorname{tr}A)$). Si $\\operatorname{tr}A=0$ : $A^2=0$ avec $A\\ne0$, nilpotente non nulle, donc non diagonalisable (la seule valeur propre est $0$)."
   },
   {
     "type": "Question",
-    "enonce": "Nilpotence 1/2 — Soit $u\\in\\mathscr L(E)$ nilpotent d'indice $p$ (c'est-à-dire $u^p=0$ et $u^{p-1}\\neq0$), $\\dim E=n$. Montrer que $p\\le n$, donc $u^n=0$.",
-    "reponse": "Soit $x$ tel que $u^{p-1}(x)\\ne0$. On montre que $(x,u(x),\\dots,u^{p-1}(x))$ est libre : si $\\sum_{k=0}^{p-1}a_ku^k(x)=0$ et que $k_0$ est le plus petit indice avec $a_{k_0}\\ne0$, on applique $u^{p-1-k_0}$ : $a_{k_0}u^{p-1}(x)+\\sum_{k>k_0}a_ku^{p-1+(k-k_0)}(x)=a_{k_0}u^{p-1}(x)=0$ (car $u^p=0$), d'où $a_{k_0}=0$, contradiction. Une famille libre de $p$ vecteurs dans $E$ impose $p\\le n$. Donc $u^n=u^{n-p}u^p=0$ : **l'indice de nilpotence est majoré par la dimension**. (Variante : $\\mathrm{Sp}_{\\mathbb C}(u)=\\{0\\}$ donc $\\chi_u=X^n$ et Cayley–Hamilton donne $u^n=0$.)"
+    "enonce": "Homothétie — Pourquoi un endomorphisme diagonalisable qui n'a qu'une seule valeur propre est-il une homothétie ?",
+    "reponse": "Diagonalisable : $E=\\bigoplus E_\\lambda(u)$. Une seule valeur propre $\\lambda$ donne $E=E_\\lambda(u)$, donc $u(x)=\\lambda x$ pour tout $x$ : $u=\\lambda\\,\\mathrm{Id}$ (sa matrice est $\\lambda I_n$ dans toute base)."
   },
   {
     "type": "Question",
-    "enonce": "Nilpotence 2/2 — Propriétés spectrales d'un nilpotent et lien avec la diagonalisabilité.",
-    "reponse": "Si $u^p=0$, tout polynôme annulateur $X^p$ n'a que $0$ pour racine : $\\mathrm{Sp}(u)\\subset\\{0\\}$, et $\\mathrm{Sp}_{\\mathbb C}(u)=\\{0\\}$ si $E\\ne\\{0\\}$ ($u$ n'est pas injectif), donc $\\chi_u=X^n$ ($u$ est trigonalisable, strictement triangulaire). Un nilpotent **non nul n'est jamais diagonalisable** : diagonalisable avec pour seule valeur propre $0$ force $u=0$. Un nilpotent est toujours trigonalisable (même sur $\\mathbb R$)."
+    "enonce": "Matrice réelle — Pour $A\\in\\mathscr M_n(\\mathbb R)$ (par exemple de taille $2$ avec $\\Delta<0$), que dire des valeurs propres non réelles et de leurs multiplicités ?",
+    "reponse": "Équivalence : $\\lambda$ est valeur propre de multiplicité $m$ ssi $\\bar\\lambda$ l'est avec la même multiplicité, car $\\chi_A\\in\\mathbb R[X]$ ($P^{(k)}(\\bar z)=\\overline{P^{(k)}(z)}$ et la conjugaison est involutive). De plus $E_{\\bar\\lambda}(A)=\\overline{E_\\lambda(A)}$. En taille $2$ : $\\chi_A=X^2-\\operatorname{tr}A\\,X+\\det A$, $\\Delta<0\\iff$ pas de racine réelle $\\iff$ deux racines complexes conjuguées simples : $A$ est diagonalisable sur $\\mathbb C$ mais pas sur $\\mathbb R$."
   },
   {
     "type": "Question",
-    "enonce": "Rang 1 — Montrer qu'une matrice $A\\in\\mathscr M_n(\\mathbb K)$ de rang $1$ est diagonalisable si et seulement si $\\operatorname{tr}A\\ne0$, et donner son polynôme caractéristique.",
-    "reponse": "Rang $1$ : $A=XY^\\top$ avec $X,Y\\in\\mathbb K^n\\setminus\\{0\\}$, donc $A^2=X(Y^\\top X)Y^\\top=(Y^\\top X)A=\\operatorname{tr}(A)\\,A$ (car $Y^\\top X=\\operatorname{tr}(XY^\\top)$). Si $\\operatorname{tr}A\\ne0$ : $X^2-\\operatorname{tr}(A)X=X(X-\\operatorname{tr}A)$ est annulateur à racines simples $0\\ne\\operatorname{tr}A$ : $A$ est diagonalisable (ou : $\\operatorname{Im}A=\\mathrm{Vect}(X)$, $AX=(\\operatorname{tr}A)X$, $\\ker A$ de dimension $n-1$ et $X\\notin\\ker A$ : $\\mathbb K^n=\\ker A\\oplus\\mathrm{Vect}(X)$). Si $\\operatorname{tr}A=0$ : $A^2=0$ avec $A\\ne0$, nilpotente non nulle donc non diagonalisable. Dans les deux cas $\\chi_A=X^{n-1}(X-\\operatorname{tr}A)$ (la valeur propre $0$ a un sous-espace propre de dimension $n-1$ par le théorème du rang, la dernière valeur propre est donnée par la trace)."
+    "enonce": "Polynôme en $u$ — Si $f$ et $g$ commutent, que peut-on dire de $f$ et de $P(g)$ ? Que se conserve entre $u$ et $P(u)$ comme éléments propres ?",
+    "reponse": "Commutation : $fg^k=g^kf$ (récurrence) puis par linéarité $fP(g)=P(g)f$ ; en particulier $f$ commute avec tout $P(f)$, et les sous-espaces propres de $g$, $\\ker g$, $\\operatorname{Im}g$ sont stables par $f$ (mais un vecteur propre de $g$ n'est pas forcément propre pour $f$). Conservation : $u(x)=\\lambda x\\Rightarrow P(u)(x)=P(\\lambda)x$ : mêmes vecteurs propres avec valeur propre $P(\\lambda)$, $E_\\lambda(u)\\subset E_{P(\\lambda)}(P(u))$ (inclusion seulement) et $P(\\mathrm{Sp}\\,u)\\subset\\mathrm{Sp}\\,P(u)$, avec **égalité si $\\chi_u$ est scindé** (fausse sur $\\mathbb R$ : rotation d'angle $\\pi/2$, $R^2=-\\mathrm{Id}$). $u$ diagonalisable $\\Rightarrow P(u)$ diagonalisable, mais pas la réciproque ($N^2=0$ avec $N\\ne0$ nilpotent). Les sev stables par $u$ le sont par $P(u)$."
   },
   {
     "type": "Question",
-    "enonce": "Rang 1 — Exemple : diagonaliser $J=(1)_{1\\le i,j\\le n}$ et $A=\\begin{pmatrix}1&1\\\\-1&-1\\end{pmatrix}$.",
-    "reponse": "$J=\\mathbf 1\\mathbf 1^\\top$, rang $1$, $\\operatorname{tr}J=n\\ne0$ : diagonalisable, $\\mathrm{Sp}=\\{0,n\\}$, $E_n=\\mathrm{Vect}(\\mathbf 1)$, $E_0=\\{x:\\sum x_i=0\\}$ de dimension $n-1$. $A=\\binom{1}{-1}(1\\ \\ 1)$ : rang $1$, $\\operatorname{tr}A=0$ donc $A^2=0$, $A$ non diagonalisable (nilpotente non nulle)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Homothétie — Pourquoi un endomorphisme diagonalisable qui n'a qu'une seule valeur propre est-il une homothétie ? Réciproque ?",
-    "reponse": "Si $u$ est diagonalisable de spectre $\\{\\lambda\\}$ : $E=E_\\lambda(u)$ donc $u(x)=\\lambda x$ pour tout $x$, soit $u=\\lambda\\,\\mathrm{Id}_E$. Dans une base de diagonalisation, $\\mathrm{Mat}(u)=\\lambda I_n$ ; en particulier $u$ est une homothétie et sa matrice est la même dans **toute** base. Réciproque évidente : une homothétie est diagonalisable avec une unique valeur propre. Conséquence : une matrice $A$ ayant $\\lambda$ pour unique valeur propre est diagonalisable ssi $A=\\lambda I_n$ ; sinon $A-\\lambda I_n$ est un nilpotent non nul (en dimension finie sur $\\mathbb C$)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Matrice réelle 1/3 — Soit $A\\in\\mathscr M_n(\\mathbb R)$. Montrer que si $\\lambda\\in\\mathbb C$ est valeur propre de $A$, alors $\\bar\\lambda$ aussi, avec la même multiplicité (équivalence). Que dire des sous-espaces propres ?",
-    "reponse": "$\\chi_A\\in\\mathbb R[X]$. Pour $P\\in\\mathbb R[X]$, $P^{(k)}(\\bar z)=\\overline{P^{(k)}(z)}$ : $z$ racine de multiplicité $m$ ($P^{(k)}(z)=0$ pour $k<m$, $P^{(m)}(z)\\ne0$) ssi $\\bar z$ racine de multiplicité $m$. Comme $\\bar{\\bar z}=z$, l'implication est une **équivalence** : $\\lambda$ valeur propre de multiplicité $m$ ssi $\\bar\\lambda$ valeur propre de multiplicité $m$. Pour les sous-espaces propres : $AX=\\lambda X\\iff A\\bar X=\\bar\\lambda\\bar X$ ($A$ réelle), donc $E_{\\bar\\lambda}(A)=\\overline{E_\\lambda(A)}$ (conjugaison coordonnée par coordonnée), de **même dimension**. Les valeurs propres non réelles d'une matrice réelle viennent donc par paires conjuguées ; en dimension impaire, il existe au moins une valeur propre réelle."
-  },
-  {
-    "type": "Question",
-    "enonce": "Matrice réelle 2/3 — Cas des polynômes réels d'ordre 2 : racines et équivalence avec le signe du discriminant.",
-    "reponse": "Soit $P=aX^2+bX+c\\in\\mathbb R[X]$, $\\Delta=b^2-4ac$. $\\Delta>0$ : deux racines réelles distinctes ; $\\Delta=0$ : racine double réelle ; $\\Delta<0$ : deux racines **complexes conjuguées** $\\dfrac{-b\\pm i\\sqrt{-\\Delta}}{2a}$, simples (même multiplicité $1$). On a l'équivalence : $P$ n'a pas de racine réelle $\\iff\\Delta<0\\iff$ ses racines sont non réelles conjuguées ($P$ irréductible sur $\\mathbb R$). Pour $A\\in\\mathscr M_2(\\mathbb R)$, $\\chi_A=X^2-\\operatorname{tr}(A)X+\\det A$, $\\Delta=\\operatorname{tr}(A)^2-4\\det A$ : $\\Delta>0$ diagonalisable sur $\\mathbb R$ ; $\\Delta=0$ diagonalisable ssi $A=\\lambda I_2$ ; $\\Delta<0$ non diagonalisable sur $\\mathbb R$ mais diagonalisable sur $\\mathbb C$ (racines simples conjuguées)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Matrice réelle 3/3 — Exemple : la rotation $R_\\theta=\\begin{pmatrix}\\cos\\theta&-\\sin\\theta\\\\\\sin\\theta&\\cos\\theta\\end{pmatrix}$, $\\theta\\notin\\pi\\mathbb Z$. Spectre sur $\\mathbb R$ et sur $\\mathbb C$, vecteurs propres.",
-    "reponse": "$\\chi=X^2-2\\cos\\theta X+1$, $\\Delta=-4\\sin^2\\theta<0$ : $\\mathrm{Sp}_{\\mathbb R}=\\emptyset$, $\\mathrm{Sp}_{\\mathbb C}=\\{e^{i\\theta},e^{-i\\theta}\\}$ (conjuguées, simples). Vecteurs propres $\\binom{1}{-i}$ pour $e^{i\\theta}$ et $\\binom{1}{i}$ pour $e^{-i\\theta}$ (conjugués l'un de l'autre). $R_\\theta$ est diagonalisable dans $\\mathscr M_2(\\mathbb C)$, pas dans $\\mathscr M_2(\\mathbb R)$."
-  },
-  {
-    "type": "Question",
-    "enonce": "Commutation 1/3 — Si $f\\circ g=g\\circ f$, montrer que $f$ commute avec tout polynôme en $g$ (et avec tout polynôme en $f$).",
-    "reponse": "Récurrence : $f\\,g^0=g^0f$ ; si $fg^k=g^kf$ alors $fg^{k+1}=(fg^k)g=g^kfg=g^{k}gf=g^{k+1}f$. Par linéarité de $h\\mapsto f\\circ h-h\\circ f$, pour $Q=\\sum a_kX^k$ : $f\\,Q(g)=\\sum a_kfg^k=\\sum a_kg^kf=Q(g)\\,f$. En prenant $g=f$ : $f$ commute avec tout $P(f)$, et plus généralement $P(f)$ et $Q(f)$ commutent ($\\mathbb K[f]$ est une sous-algèbre commutative de $\\mathscr L(E)$)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Commutation 2/3 — Si $u$ et $v$ commutent, que peut-on dire des sous-espaces propres, du noyau et de l'image ? Un vecteur propre de $u$ est-il vecteur propre de $v$ ?",
-    "reponse": "Tout sous-espace propre de $u$ est **stable** par $v$ : si $u(x)=\\lambda x$ alors $u(v(x))=v(u(x))=\\lambda v(x)$. De même $\\ker u$, $\\operatorname{Im}u$ et plus généralement $\\ker P(u)$ et $\\operatorname{Im}P(u)$ sont stables par $v$. En revanche un vecteur propre de $u$ n'est **pas** forcément vecteur propre de $v$ (stabilité $\\ne$ vecteur propre) : $u=\\mathrm{Id}$ commute avec tout $v$ et tout vecteur est propre pour $u$. Si $E_\\lambda(u)$ est une droite, alors $v(x)\\in E_\\lambda(u)$ donc ses vecteurs propres sont communs."
-  },
-  {
-    "type": "Question",
-    "enonce": "Commutation 3/3 — Diagonalisation simultanée : si $u$ et $v$ sont diagonalisables et commutent, montrer qu'il existe une base commune de diagonalisation. Que dit la réciproque ?",
-    "reponse": "Soit $E=\\bigoplus_\\lambda E_\\lambda(u)$. Chaque $E_\\lambda(u)$ est stable par $v$ et la restriction $v_{|E_\\lambda(u)}$ est diagonalisable (restriction d'un diagonalisable à un sous-espace stable : le polynôme annulateur à racines simples de $v$ annule aussi la restriction). On choisit dans chaque $E_\\lambda(u)$ une base de vecteurs propres de $v$ ; la réunion est une base de $E$ formée de vecteurs propres de $u$ **et** de $v$. Réciproque : si $u,v$ sont diagonalisables dans une même base, leurs matrices diagonales commutent donc $uv=vu$. Ainsi : deux diagonalisables commutent $\\iff$ codiagonalisables. Si $u$ a $n$ valeurs propres distinctes, $v$ commutant avec $u$ est un polynôme en $u$ ($v\\in\\mathrm{Vect}(\\mathrm{Id},u,\\dots,u^{n-1})$)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Polynôme en $u$ 1/4 — Que se conserve-t-il comme éléments propres entre $u$ et $P(u)$ ? Énoncer et démontrer le sens $u\\to P(u)$.",
-    "reponse": "Si $u(x)=\\lambda x$ alors $u^k(x)=\\lambda^kx$ puis $P(u)(x)=P(\\lambda)x$. Donc : un vecteur propre de $u$ pour $\\lambda$ est vecteur propre de $P(u)$ pour $P(\\lambda)$ ; $E_\\lambda(u)\\subset E_{P(\\lambda)}(P(u))$ (**inclusion**, pas égalité en général) ; $P(\\mathrm{Sp}(u))\\subset\\mathrm{Sp}(P(u))$. Exemple d'inclusion stricte : $u=\\mathrm{diag}(1,-1)$, $P=X^2$ : $E_1(P(u))=\\mathbb K^2\\supsetneq E_1(u)$."
-  },
-  {
-    "type": "Question",
-    "enonce": "Polynôme en $u$ 2/4 — Quand a-t-on $\\mathrm{Sp}(P(u))=P(\\mathrm{Sp}(u))$ ? Contre-exemple sur $\\mathbb R$. Multiplicités.",
-    "reponse": "Égalité si $\\chi_u$ est scindé (en particulier sur $\\mathbb C$) : $u$ est trigonalisable, $P(u)$ est alors triangulaire de diagonale $(P(\\lambda_i))_i$ (multiplicités comprises) donc $\\chi_{P(u)}=\\prod_i(X-P(\\lambda_i))$ et $\\mathrm{Sp}(P(u))=P(\\mathrm{Sp}\\,u)$. Cela redonne aussi $\\operatorname{tr}P(u)=\\sum P(\\lambda_i)$, $\\det P(u)=\\prod P(\\lambda_i)$. L'égalité tombe en défaut sans hypothèse de scindage : la rotation $R$ d'angle $\\pi/2$ sur $\\mathbb R^2$ a $\\mathrm{Sp}_{\\mathbb R}(R)=\\emptyset$ mais $R^2=-\\mathrm{Id}$ a pour spectre $\\{-1\\}$. (Un polynôme **annulateur** $Q$ de $u$ donne seulement $\\mathrm{Sp}(u)\\subset Z(Q)$.)"
-  },
-  {
-    "type": "Question",
-    "enonce": "Polynôme en $u$ 3/4 — Diagonalisabilité de $P(u)$ versus celle de $u$ ; sous-espaces stables ; inversibilité.",
-    "reponse": "$u$ diagonalisable $\\Rightarrow$ $P(u)$ diagonalisable (même base, matrice $\\mathrm{diag}(P(\\lambda_i))$), avec $E_\\mu(P(u))=\\bigoplus_{P(\\lambda)=\\mu}E_\\lambda(u)$ (égalité cette fois, pour $u$ diagonalisable). La réciproque est **fausse** : $N=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$ n'est pas diagonalisable mais $N^2=0$ l'est. Tout sous-espace stable par $u$ est stable par $P(u)$ ; la réciproque est fausse en général (vraie si $u\\in\\mathbb K[P(u)]$). $P(u)$ est inversible ssi $P(\\lambda)\\neq0$ pour tout $\\lambda\\in\\mathrm{Sp}(u)$ (cas $\\chi_u$ scindé) ; en général ssi $P$ est premier avec le polynôme minimal de $u$. Si $u$ est inversible, $u^{-1}\\in\\mathbb K[u]$ (Cayley–Hamilton), $\\mathrm{Sp}(u^{-1})=\\{1/\\lambda\\}$ et $E_{1/\\lambda}(u^{-1})=E_\\lambda(u)$."
-  },
-  {
-    "type": "Question",
-    "enonce": "Polynôme en $u$ 4/4 — Résumé : quelles propriétés $u$ et $P(u)$ partagent-elles toujours, souvent, jamais ?",
-    "reponse": "Toujours : mêmes vecteurs propres (au moins) avec valeurs propres $P(\\lambda)$, $\\ker u\\subset\\ker P(u)$ si $P(0)=0$, stabilité des sev stables par $u$, commutation $u\\,P(u)=P(u)\\,u$, $\\mathrm{Sp}(P(u))\\supset P(\\mathrm{Sp}\\,u)$. Sous hypothèse $\\chi_u$ scindé : égalité des spectres $P(\\mathrm{Sp}\\,u)$, multiplicités $\\prod(X-P(\\lambda_i))$. Sous hypothèse $u$ diagonalisable : $P(u)$ diagonalisable et $E_\\mu(P(u))=\\bigoplus_{P(\\lambda)=\\mu}E_\\lambda(u)$. **Pas** de réciproque en général : $P(u)$ diagonalisable $\\not\\Rightarrow$ $u$ diagonalisable ; $E_{P(\\lambda)}(P(u))\\ne E_\\lambda(u)$ en général (non-injectivité de $P$ sur $\\mathrm{Sp}\\,u$)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral 1/4 — Énoncer le théorème spectral (matrice et endomorphisme) dans le cas réel.",
-    "reponse": "**Matriciel** : toute matrice symétrique réelle $A\\in\\mathscr S_n(\\mathbb R)$ est diagonalisable en base orthonormée : $\\exists P\\in O_n(\\mathbb R)$, $D$ diagonale réelle, $A=PDP^{-1}=PDP^\\top$. **Endomorphisme** : si $u$ est auto-adjoint sur un espace euclidien $E$ ($\\langle u(x),y\\rangle=\\langle x,u(y)\\rangle$), il existe une base **orthonormée** de vecteurs propres, $E=\\bigoplus^\\perp_\\lambda E_\\lambda(u)$, et $\\mathrm{Sp}(u)\\subset\\mathbb R$. Réciproque : $PDP^\\top$ est toujours symétrique, donc les matrices diagonalisables en base orthonormée sont exactement les symétriques réelles."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral 2/4 — Démontrer les deux faits clés : valeurs propres réelles et sous-espaces propres orthogonaux.",
-    "reponse": "Réalité : si $AX=\\lambda X$, $X\\in\\mathbb C^n\\setminus\\{0\\}$, alors $\\lambda\\|X\\|^2=\\bar X^\\top AX$ ; ce nombre est égal à son conjugué ($\\overline{\\bar X^\\top AX}=X^\\top A\\bar X=(X^\\top A\\bar X)^\\top=\\bar X^\\top A^\\top X=\\bar X^\\top AX$ car $A=A^\\top=\\bar A$), donc réel, donc $\\lambda\\in\\mathbb R$. Orthogonalité : si $u(x)=\\lambda x$, $u(y)=\\mu y$, $\\lambda\\neq\\mu$ : $\\lambda\\langle x,y\\rangle=\\langle u(x),y\\rangle=\\langle x,u(y)\\rangle=\\mu\\langle x,y\\rangle$ d'où $\\langle x,y\\rangle=0$."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral 3/4 — Esquisse de la preuve de l'existence d'une base orthonormée de diagonalisation (récurrence sur $\\dim E$).",
-    "reponse": "Récurrence sur $n=\\dim E$. $\\chi_u$ a une racine réelle (réalité du spectre + racine dans $\\mathbb C$), donc un vecteur propre unitaire $e_1$. $F=e_1^\\perp$ est stable par $u$ (si $x\\perp e_1$ : $\\langle u(x),e_1\\rangle=\\langle x,u(e_1)\\rangle=\\lambda\\langle x,e_1\\rangle=0$) et $u_{|F}$ est auto-adjoint ; par hypothèse de récurrence, $F$ admet une base orthonormée de vecteurs propres de $u_{|F}$. On complète par $e_1$. Idée-clé : **l'orthogonal d'un sev stable est stable pour un auto-adjoint**."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral 4/4 — Conséquences : décomposition spectrale, signe d'une forme quadratique, quotient de Rayleigh.",
-    "reponse": "$A=\\sum_i\\lambda_iu_iu_i^\\top=\\sum_{\\lambda\\in\\mathrm{Sp}}\\lambda\\,p_\\lambda$ avec $p_\\lambda$ le projecteur orthogonal sur $E_\\lambda$, $\\sum p_\\lambda=I_n$, $p_\\lambda p_\\mu=0$ ($\\lambda\\ne\\mu$). $A$ est définie positive ssi toutes ses valeurs propres sont $>0$, positive ssi $\\ge0$. Rayleigh : $\\lambda_{\\min}\\le\\dfrac{\\langle Ax,x\\rangle}{\\|x\\|^2}\\le\\lambda_{\\max}$, avec égalité atteinte aux vecteurs propres associés ; $\\|A\\|_{op}=\\max|\\lambda_i|$ pour $A$ symétrique. Un polynôme en $A$ est aussi symétrique, diagonalisé dans la même base orthonormée."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral — Piège : une matrice symétrique **complexe** est-elle toujours diagonalisable ? Quelle est la version complexe correcte ?",
-    "reponse": "**Non.** $S=\\begin{pmatrix}1&i\\\\i&-1\\end{pmatrix}$ est symétrique ($S^\\top=S$), $S\\ne0$ mais $S^2=\\begin{pmatrix}1+i^2&i-i\\\\i-i&i^2+1\\end{pmatrix}=0$ : nilpotente non nulle, donc non diagonalisable. Le bon cadre complexe est celui des matrices **hermitiennes** ($A^*=\\overline{A}^\\top=A$) : diagonalisables en base orthonormée pour le produit hermitien, par une matrice **unitaire**, avec valeurs propres **réelles** (plus généralement : les matrices normales $AA^*=A^*A$)."
-  },
-  {
-    "type": "Question",
-    "enonce": "Théorème spectral — Comparer : matrices orthogonales, symétriques, antisymétriques réelles. Lesquelles sont diagonalisables sur $\\mathbb R$ ?",
-    "reponse": "Symétriques réelles : toujours diagonalisables sur $\\mathbb R$, en base orthonormée. Orthogonales : diagonalisables sur $\\mathbb C$ (matrices normales) mais pas sur $\\mathbb R$ en général (rotations d'angle $\\theta\\notin\\pi\\mathbb Z$ du plan), spectre dans $\\mathbb U$. Antisymétriques réelles : diagonalisables sur $\\mathbb C$, valeurs propres imaginaires pures, pas sur $\\mathbb R$ sauf si nulles ; ainsi $\\begin{pmatrix}0&-1\\\\1&0\\end{pmatrix}$ n'a pas de valeur propre réelle."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 9 — Un endomorphisme nilpotent d'un espace de dimension $n$ vérifie $u^{n}=0$.",
-    "reponse": "**Vrai.** L'indice de nilpotence $p$ vérifie $p\\le n$ (la famille $(x,u(x),\\dots,u^{p-1}(x))$ est libre), donc $u^n=u^{n-p}u^p=0$ ; ou bien $\\chi_u=X^n$ et Cayley–Hamilton."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 10 — Toute matrice de rang $1$ est diagonalisable.",
-    "reponse": "**Faux.** Seulement si $\\operatorname{tr}A\\ne0$. Contre-exemple : $\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$ (rang $1$, trace nulle, nilpotente)."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 11 — Un endomorphisme diagonalisable dont le spectre est un singleton est une homothétie.",
-    "reponse": "**Vrai.** $E=E_\\lambda(u)$, donc $u=\\lambda\\,\\mathrm{Id}$. (Faux sans diagonalisabilité : $\\begin{pmatrix}1&1\\\\0&1\\end{pmatrix}$ a pour seul spectre $\\{1\\}$ et n'est pas $I_2$.)"
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 12 — Si $f$ et $g$ commutent, tout vecteur propre de $f$ est un vecteur propre de $g$.",
-    "reponse": "**Faux.** Seuls les sous-espaces propres de $f$ sont stables par $g$. Contre-exemple : $f=\\mathrm{Id}$ (commute avec tout) et $g$ quelconque ayant des vecteurs non propres. (Vrai si le sous-espace propre est une droite.)"
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 13 — Si $f$ et $g$ commutent, alors $f$ commute avec $g^2-3g+\\mathrm{Id}$.",
-    "reponse": "**Vrai.** $f$ commute avec $g^k$ pour tout $k$ (récurrence), donc avec toute combinaison linéaire : $f\\,Q(g)=Q(g)\\,f$."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 14 — Si $P(u)$ est diagonalisable, alors $u$ est diagonalisable.",
-    "reponse": "**Faux.** $N=\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$, $P=X^2$ : $P(N)=0$ diagonalisable mais $N$ non diagonalisable. La réciproque ($u$ diagonalisable $\\Rightarrow P(u)$ diagonalisable) est vraie."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 15 — $\\mathrm{Sp}(P(u))=P(\\mathrm{Sp}(u))$ pour tout endomorphisme en dimension finie sur $\\mathbb R$.",
-    "reponse": "**Faux sur $\\mathbb R$** (vrai si $\\chi_u$ est scindé, par exemple sur $\\mathbb C$). Contre-exemple : rotation $R$ d'angle $\\pi/2$, $\\mathrm{Sp}_{\\mathbb R}(R)=\\emptyset$, $R^2=-\\mathrm{Id}$ de spectre $\\{-1\\}$."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 16 — Une matrice symétrique réelle est toujours diagonalisable, et une symétrique complexe aussi.",
-    "reponse": "**Vrai pour les réelles** (théorème spectral, en base orthonormée) ; **faux pour les complexes** : $\\begin{pmatrix}1&i\\\\i&-1\\end{pmatrix}$ est symétrique, non nulle, de carré nul."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 17 — Si $A\\in\\mathscr M_n(\\mathbb R)$ admet $2+i$ comme valeur propre, alors $2-i$ en est une aussi, avec la même multiplicité.",
-    "reponse": "**Vrai.** $\\chi_A\\in\\mathbb R[X]$ donc ses racines non réelles sont conjuguées de même multiplicité ; de plus $E_{\\bar\\lambda}(A)=\\overline{E_\\lambda(A)}$."
-  },
-  {
-    "type": "Question",
-    "enonce": "VRAI/FAUX 18 — La matrice compagnon d'un polynôme scindé est toujours diagonalisable.",
-    "reponse": "**Faux.** Il faut des racines **simples** : $C_P$ a des sous-espaces propres de dimension $1$, donc diagonalisable ssi chaque racine est simple. Ex. $P=(X-1)^2$, $C_P=\\begin{pmatrix}0&-1\\\\1&2\\end{pmatrix}$ n'est pas diagonalisable."
+    "enonce": "Théorème spectral — Énoncer le théorème spectral et indiquer pourquoi les valeurs propres sont réelles et les sous-espaces propres orthogonaux.",
+    "reponse": "Toute matrice symétrique réelle $A$ est diagonalisable en base orthonormée : $A=PDP^\\top$ avec $P\\in O_n(\\mathbb R)$, $D$ diagonale réelle ; de même un endomorphisme auto-adjoint d'un espace euclidien admet une base orthonormée de vecteurs propres. Valeurs propres réelles : $\\lambda\\|X\\|^2=\\bar X^\\top AX$ est égal à son conjugué (car $A=\\bar A=A^\\top$). Orthogonalité : $\\lambda\\langle x,y\\rangle=\\langle u(x),y\\rangle=\\langle x,u(y)\\rangle=\\mu\\langle x,y\\rangle$ avec $\\lambda\\ne\\mu$. Existence : récurrence, l'orthogonal d'un vecteur propre est stable. Piège : une symétrique **complexe** peut ne pas être diagonalisable ($\\begin{pmatrix}1&i\\\\i&-1\\end{pmatrix}$, nilpotente non nulle) ; le bon cadre est hermitien/unitaire."
   }
 ]
