@@ -209,6 +209,19 @@
               ]
             },
             {
+              "name": "Magnétostatique",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Maxwell",
               "children": [
                 {
@@ -310,6 +323,15 @@
               "children": [
                 {
                   "name": "DM",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "X-ENS",
+              "children": [
+                {
+                  "name": "SI",
                   "children": []
                 }
               ]

@@ -1,0 +1,207 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Équations de Maxwell en électrostatique — Écrire les équations de Maxwell en régime stationnaire pour $\\vec E$ et dire ce qui change par rapport au cas général.",
+    "reponse": "$\\mathrm{div}\\,\\vec E=\\dfrac{\\rho}{\\epsilon_0}$ (Maxwell–Gauss) et $\\overrightarrow{\\mathrm{rot}}\\,\\vec E=\\vec0$ (Maxwell–Faraday, car $\\partial_t\\vec B=\\vec0$). Les équations de $\\vec E$ et $\\vec B$ ne sont plus couplées : on étudie séparément champ électrique et champ magnétique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Potentiel — Pourquoi peut-on introduire $V$ avec $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$ ? À quoi est-il défini ?",
+    "reponse": "Parce que $\\overrightarrow{\\mathrm{rot}}\\,\\overrightarrow{\\mathrm{grad}}\\,a=\\vec0$ pour tout champ scalaire, et que $\\overrightarrow{\\mathrm{rot}}\\vec E=\\vec0$ : il existe $V$ tel que $\\vec E=-\\overrightarrow{\\mathrm{grad}}V$. Le gradient d'une constante étant nul, $V$ est défini **à une constante additive près** ($V'=V+C$ donne le même $\\vec E$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Circulation — Définir la circulation d'un champ de vecteurs le long d'un chemin $\\Gamma_{AB}$ ; en général dépend-elle du chemin ?",
+    "reponse": "$C=\\displaystyle\\int_{M\\in\\Gamma_{AB}}\\vec a(M)\\cdot\\mathrm d\\vec\\ell$. En général elle dépend du chemin (exemple : travail d'une force le long d'une trajectoire). Pour un contour fermé on la note $\\oint$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Circulation de $\\vec E$ — Montrer qu'elle ne dépend pas du chemin et la calculer.",
+    "reponse": "$\\vec E\\cdot\\mathrm d\\vec\\ell=-\\overrightarrow{\\mathrm{grad}}V\\cdot\\mathrm d\\vec\\ell=-\\mathrm dV$, donc $\\displaystyle\\int_{\\Gamma_{AB}}\\vec E\\cdot\\mathrm d\\vec\\ell=V(A)-V(B)$, indépendante du chemin. En particulier $\\oint_\\Gamma\\vec E\\cdot\\mathrm d\\vec\\ell=0$ : le champ électrostatique est à circulation conservative."
+  },
+  {
+    "type": "Question",
+    "enonce": "Stokes — Énoncer le théorème de Stokes et l'appliquer à Maxwell–Faraday.",
+    "reponse": "Pour un contour orienté $\\Gamma$ et une surface $S$ s'appuyant dessus, orientée par la règle de la main droite : $\\oint_\\Gamma\\vec A\\cdot\\mathrm d\\vec\\ell=\\iint_S\\overrightarrow{\\mathrm{rot}}\\vec A\\cdot\\mathrm d\\vec S$. Avec $\\overrightarrow{\\mathrm{rot}}\\vec E=\\vec0$ on retrouve $\\oint\\vec E\\cdot\\mathrm d\\vec\\ell=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Théorème de Gauss — Le démontrer à partir de Maxwell–Gauss.",
+    "reponse": "On intègre $\\mathrm{div}\\vec E=\\rho/\\epsilon_0$ sur le volume $V$ : $\\iiint\\mathrm{div}\\vec E\\,\\mathrm d\\tau=\\iiint\\rho/\\epsilon_0\\,\\mathrm d\\tau=Q_{int}/\\epsilon_0$. Green–Ostrogradski transforme le membre de gauche en le flux sortant : $$\\oiint_S\\vec E\\cdot\\mathrm d\\vec S=\\frac{Q_{int}}{\\epsilon_0},$$ $S$ fermée orientée vers l'extérieur, $Q_{int}$ charge dans le volume délimité."
+  },
+  {
+    "type": "Question",
+    "enonce": "Laplacien — Définir $\\Delta$ et donner son expression cartésienne.",
+    "reponse": "$\\Delta V=\\mathrm{div}\\,\\overrightarrow{\\mathrm{grad}}\\,V=\\dfrac{\\partial^2V}{\\partial x^2}+\\dfrac{\\partial^2V}{\\partial y^2}+\\dfrac{\\partial^2V}{\\partial z^2}$ (champ scalaire). Les expressions dans les autres systèmes de coordonnées sont fournies."
+  },
+  {
+    "type": "Question",
+    "enonce": "Poisson et Laplace — Établir l'équation de Poisson et préciser le cas sans charge.",
+    "reponse": "$\\mathrm{div}\\vec E=\\mathrm{div}(-\\overrightarrow{\\mathrm{grad}}V)=-\\Delta V=\\rho/\\epsilon_0$, donc $$\\Delta V+\\frac{\\rho}{\\epsilon_0}=0\\quad(\\text{Poisson}).$$ Sans charge ($\\rho=0$) : $\\Delta V=0$ (équation de Laplace)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Principe de Curie — L'énoncer et dire à quoi il sert pour $\\vec E$.",
+    "reponse": "Les éléments de symétrie des causes se retrouvent dans les effets : le champ électrostatique présente au moins autant de symétries et d'invariances que la distribution de charges. L'étude des symétries donne la **direction** du champ, l'étude des invariances donne **les variables** dont il dépend."
+  },
+  {
+    "type": "Question",
+    "enonce": "Invariances — Que déduit-on d'une invariance par translation le long d'un axe, ou par rotation autour d'un axe ?",
+    "reponse": "Invariance par translation le long de $(Ox)$ : $\\vec E$ et $V$ ne dépendent pas de $x$ (ex. plan infini $xOy$ : seulement $z$). Invariance par rotation autour de $(Oz)$ : ils ne dépendent pas de l'angle $\\theta$ (ex. cylindre uniformément chargé)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Symétries — Définir plan de symétrie et plan d'antisymétrie d'une distribution de charges.",
+    "reponse": "Plan de symétrie $\\Pi_s$ : le symétrique de la distribution par rapport à $\\Pi_s$ lui est identique. Plan d'antisymétrie $\\Pi_a$ : le symétrique est l'**opposée** de la distribution (charges positives remplacées par négatives et réciproquement)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conséquences des symétries — Quelles sont les propriétés de symétrie de $\\vec E$ en un point d'un plan de symétrie ou d'antisymétrie ?",
+    "reponse": "Tout plan de symétrie (resp. d'antisymétrie) de la distribution est plan de symétrie (resp. d'antisymétrie) de $\\vec E$. Si $M\\in\\Pi_s$, $\\vec E(M)$ est **contenu** dans $\\Pi_s$ ; si $M\\in\\Pi_a$, $\\vec E(M)$ est **normal** à $\\Pi_a$. Valable pour tout vecteur polaire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Comparer avec le champ magnétique : que devient la règle pour $\\vec B$ ?",
+    "reponse": "$\\vec B$ est axial : il est antisymétrique par rapport aux plans de symétrie de la distribution de courant (donc **normal** à un plan de symétrie qui contient $M$) et symétrique par rapport aux plans d'antisymétrie (donc **contenu** dans un plan d'antisymétrie). C'est l'inverse de $\\vec E$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lignes de champ — Définir ligne de champ, son équation et un tube de champ.",
+    "reponse": "Ligne de champ : courbe tangente en tout point à $\\vec E(M)$ ; équation $\\vec E\\wedge\\mathrm d\\vec\\ell=\\vec0$. Tube de champ : ensemble des lignes de champ s'appuyant sur un contour fermé."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriété 1 — Dans quel sens sont orientées les lignes de champ ? Le démontrer.",
+    "reponse": "Dans le sens des potentiels décroissants. Le long d'une ligne, $\\mathrm d\\vec\\ell$ dans le sens de $\\vec E$ donne $\\vec E\\cdot\\mathrm d\\vec\\ell>0$ ; or $\\vec E\\cdot\\mathrm d\\vec\\ell=-\\mathrm dV$, donc $\\mathrm dV<0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriété 2 — Les lignes de champ peuvent-elles se refermer ? Que dire d'un point de croisement ?",
+    "reponse": "Non : $V$ décroît strictement le long d'une ligne, qui ne peut donc pas revenir à son point de départ (cohérent avec $\\oint\\vec E\\cdot\\mathrm d\\vec\\ell=0$). Deux lignes distinctes ne peuvent se croiser qu'en un point où $\\vec E=\\vec0$ (seul le vecteur nul est tangent à deux courbes distinctes)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriétés 3 et 4 — Que dit-on des extrema du potentiel ?",
+    "reponse": "En un extremum, $\\vec E=-\\overrightarrow{\\mathrm{grad}}V=\\vec0$ et les lignes de champ divergent (maximum) ou convergent (minimum). Le flux à travers une petite sphère autour du point est non nul, donc par Gauss il y a une charge : $V$ ne peut admettre d'extremum que dans une région comportant des charges. (Maximum $\\Rightarrow$ charge positive, minimum $\\Rightarrow$ charge négative.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriété 5 — Quelle est l'orientation relative lignes de champ / équipotentielles ? Démontrer.",
+    "reponse": "Elles sont orthogonales. Pour un déplacement $\\mathrm d\\vec\\ell$ sur une équipotentielle, $\\mathrm dV=0=-\\vec E\\cdot\\mathrm d\\vec\\ell$, donc $\\vec E\\perp\\mathrm d\\vec\\ell$ : le champ est normal à l'équipotentielle."
+  },
+  {
+    "type": "Question",
+    "enonce": "Propriété 6 — Comment varie $\\|\\vec E\\|$ le long d'un tube de champ dans une zone sans charge ?",
+    "reponse": "Dans le vide de charge, le flux de $\\vec E$ est conservatif (Gauss, $Q_{int}=0$) : $E_1S_1=E_2S_2$. Plus le tube est étroit, plus la norme du champ est grande : le champ est intense là où les lignes se resserrent."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lecture de cartes — Que lit-on sur la carte de champ de deux charges de même signe et de signes opposés ? Qu'est-ce que l'équipotentielle critique ?",
+    "reponse": "Deux charges de même signe : toutes les lignes divergent des deux points (charges positives), il existe un point de champ nul entre elles ; l'équipotentielle critique $V_{cr}$ passe par ce point et sépare les équipotentielles qui entourent une seule charge (deux morceaux) de celles qui entourent les deux (un seul morceau). Deux charges opposées : les lignes vont de la positive vers la négative, $\\vec E$ ne s'annule jamais, pas d'équipotentielle critique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Analogie gravitationnelle — Quelles substitutions fait-on pour passer du champ électrostatique au champ gravitationnel ?",
+    "reponse": "$\\rho\\to\\mu$ (masse volumique) et $\\dfrac{1}{4\\pi\\epsilon_0}\\to-G$ (donc $\\dfrac1{\\epsilon_0}\\to-4\\pi G$). On obtient $\\vec G=-G\\dfrac{m_0}{r^2}\\vec u_r$ pour une masse ponctuelle, $\\overrightarrow{\\mathrm{rot}}\\vec G=\\vec0$, $\\mathrm{div}\\vec G=-4\\pi G\\mu$ et le théorème de Gauss $\\oiint\\vec G\\cdot\\mathrm d\\vec S=-4\\pi GM_{int}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Pourquoi le champ gravitationnel n'a-t-il pas de plan d'antisymétrie ?",
+    "reponse": "Un plan d'antisymétrie échange une distribution et son opposée ; il n'existe pas de masse négative, donc aucune distribution de masse ne peut être antisymétrique. Le champ gravitationnel est toujours attractif (le signe $-$ dans $-G$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode du théorème de Gauss — Quelles sont les étapes et les critères sur la surface de Gauss ?",
+    "reponse": "1) Symétries (plans contenant $M$) pour la direction de $\\vec E$ ; 2) invariances pour les variables ; 3) choix d'une surface de Gauss **fermée**, contenant $M$, sur laquelle $\\vec E$ est en tout point normal ou tangent à la surface ; 4) calcul du flux $\\Phi_E$ ; 5) calcul de $Q_{int}$ ; 6) $\\Phi_E=Q_{int}/\\epsilon_0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil infini chargé — Déterminer la direction et les variables de $\\vec E$ pour un fil de densité linéique $\\lambda$ sur $(Oz)$.",
+    "reponse": "Les plans $(M,\\vec u_r,\\vec u_z)$ et $(M,\\vec u_r,\\vec u_\\theta)$ sont plans de symétrie : $\\vec E$ appartient à leur intersection, donc $\\vec E=E_r\\vec u_r$. Invariance par translation selon $z$ et par rotation autour de $(Oz)$ : $E_r=E_r(r)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil infini chargé — Calculer le champ par le théorème de Gauss.",
+    "reponse": "Surface de Gauss : cylindre de rayon $r$, hauteur $h$, d'axe $(Oz)$. Flux : nul sur les bases ($\\vec E\\perp\\vec u_z$), $E_r\\cdot2\\pi rh$ sur la surface latérale. $Q_{int}=\\lambda h$. Donc $2\\pi rhE_r=\\lambda h/\\epsilon_0$ et $$\\vec E=\\frac{\\lambda}{2\\pi\\epsilon_0r}\\vec u_r.$$ Il diverge en $r=0$ : limite du modèle linéique (la distribution est en réalité volumique)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil infini chargé — Calculer le potentiel (attention au signe).",
+    "reponse": "$E_r=-\\dfrac{\\mathrm dV}{\\mathrm dr}$ donc $\\dfrac{\\mathrm dV}{\\mathrm dr}=-\\dfrac{\\lambda}{2\\pi\\epsilon_0r}$ et $$V(r)=-\\frac{\\lambda}{2\\pi\\epsilon_0}\\ln\\frac r{r_0}+V_0\\quad(\\lambda>0\\Rightarrow V\\text{ décroît avec }r).$$ On ne peut pas prendre $V(\\infty)=0$ (charges à l'infini) : on fixe $V(r_0)=V_0$. Attention : le polycopié écrit $+\\dfrac{\\lambda}{2\\pi\\epsilon_0}\\ln\\dfrac r{r_0}$, ce qui contredirait la propriété « $V$ décroît le long des lignes de champ » ; le signe correct est $-$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Boule uniforme (gravitation) — Établir le champ gravitationnel pour $r\\le R$ et $r\\ge R$.",
+    "reponse": "Symétrie sphérique : $\\vec G=G_r(r)\\vec u_r$. Gauss sur une sphère de rayon $r$ : $4\\pi r^2G_r=-4\\pi GM_{int}$. Pour $r\\le R$, $M_{int}=M_0r^3/R^3$ : $\\vec G=-\\dfrac{GM_0}{R^3}r\\,\\vec u_r=-\\dfrac{GM_0}{R^3}\\overrightarrow{OM}$. Pour $r\\ge R$, $M_{int}=M_0$ : $\\vec G=-\\dfrac{GM_0}{r^2}\\vec u_r$ : comme une masse ponctuelle $M_0$ en $O$. Le champ est continu en $r=R$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Dans le calcul précédent, que ne faut-il pas confondre ?",
+    "reponse": "Le rayon $r$ de la surface de Gauss (quelconque) et le rayon $R$ de la boule. Il faut distinguer deux cas selon que la sphère de Gauss est dans la boule ($r\\le R$, charge/masse intérieure partielle $\\propto r^3$) ou englobe la boule ($r\\ge R$, charge/masse totale)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Plan infini chargé — Déterminer la direction, les variables et la parité de $E_z$.",
+    "reponse": "Plans $(M,\\vec u_x,\\vec u_z)$ et $(M,\\vec u_y,\\vec u_z)$ de symétrie : $\\vec E=E_z\\vec u_z$. Invariance par translation selon $x$ et $y$ : $E_z=E_z(z)$. Le plan $xOy$ étant plan de symétrie de la distribution, $\\vec E(-z)$ est le symétrique de $\\vec E(z)$ par rapport à ce plan, ce qui change le signe de la composante normale : $E_z(-z)=-E_z(z)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Plan infini chargé — Calculer le champ par Gauss.",
+    "reponse": "Surface de Gauss : petit cube de côté $a$ à cheval sur le plan. Flux nul sur les parois latérales, $E_z(z)a^2$ sur chaque face parallèle au plan : $\\Phi=2a^2E_z(z)$ pour $z>0$. $Q_{int}=\\sigma a^2$. Donc $E_z=\\dfrac{\\sigma}{2\\epsilon_0}$ pour $z>0$ et $-\\dfrac{\\sigma}{2\\epsilon_0}$ pour $z<0$ : champ uniforme de chaque côté, indépendant de la distance au plan."
+  },
+  {
+    "type": "Question",
+    "enonce": "Discontinuité — Énoncer les relations de passage du champ au voisinage d'une surface chargée.",
+    "reponse": "Composante tangentielle continue : $\\vec E_{tg}(M^+)-\\vec E_{tg}(M^-)=\\vec0$. Composante normale discontinue : $\\vec E(M^+)-\\vec E(M^-)=\\dfrac{\\sigma}{\\epsilon_0}\\vec n_{-\\to+}$, où $\\vec n_{-\\to+}$ est la normale unitaire orientée de $M^-$ vers $M^+$ (par ex. $\\dfrac{\\sigma}{\\epsilon_0}\\vec u_z$ pour le plan $xOy$ : $\\dfrac\\sigma{2\\epsilon_0}-(-\\dfrac\\sigma{2\\epsilon_0})$). Le polycopié oriente $\\vec n$ de $M^+$ vers $M^-$ mais écrit le résultat avec le signe $+$, ce qui est incohérent avec son exemple : la forme correcte est celle-ci. La discontinuité est un artefact du modèle surfacique."
+  },
+  {
+    "type": "Question",
+    "enonce": "Potentiel du plan — Calculer $V(z)$ avec $V(0)=0$. Pourquoi pas $V(\\infty)=0$ ?",
+    "reponse": "$E_z=-\\mathrm dV/\\mathrm dz$ : $V=-\\dfrac{\\sigma z}{2\\epsilon_0}+A$ ($z>0$), $+\\dfrac{\\sigma z}{2\\epsilon_0}+B$ ($z<0$). Continuité de $V$ en 0 : $A=B$, et $V(0)=0$ donne $A=0$ : $V=-\\dfrac{\\sigma|z|}{2\\epsilon_0}$. On ne peut pas prendre $V(\\infty)=0$ car il y a des charges à l'infini (distribution infinie). $V$ est continu, mais $\\vec E$ ne l'est pas."
+  },
+  {
+    "type": "Question",
+    "enonce": "Condensateur plan — Définir un condensateur et l'influence électrostatique, et l'influence totale.",
+    "reponse": "Un condensateur est formé de deux surfaces conductrices (armatures) en regard, séparées par un isolant. Influence : modification de la distribution de charge d'un conducteur sous l'effet d'un champ électrique extérieur (ex. objet chargé approché). L'influence est totale quand les charges des deux conducteurs sont opposées, comme pour les armatures d'un condensateur plan."
+  },
+  {
+    "type": "Question",
+    "enonce": "Champ dans un condensateur plan — Établir $\\vec E$ par superposition (plaques à $z=\\mp e/2$ de charges $\\pm\\sigma$).",
+    "reponse": "$\\vec E=\\vec E_1+\\vec E_2$ avec $\\vec E_1=\\pm\\dfrac{\\sigma}{2\\epsilon_0}\\vec u_z$ (au-dessus/au-dessous de $P_1$ en $z=-e/2$, charge $+\\sigma$) et $\\vec E_2=\\mp\\dfrac\\sigma{2\\epsilon_0}\\vec u_z$ (pour $P_2$ en $z=e/2$, charge $-\\sigma$). Entre les plaques les deux champs s'ajoutent : $\\vec E=\\dfrac\\sigma{\\epsilon_0}\\vec u_z=\\dfrac{Q}{\\epsilon_0S}\\vec u$, $\\vec u$ de l'armature $+$ vers l'armature $-$. À l'extérieur ils se compensent : $\\vec E=\\vec0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Capacité du condensateur plan — Démontrer $C=\\epsilon_0S/e$ et la version avec diélectrique.",
+    "reponse": "$U=V(A_1)-V(A_2)=\\displaystyle\\int_{-e/2}^{e/2}\\dfrac{Q}{\\epsilon_0S}\\mathrm dz=\\dfrac{Qe}{\\epsilon_0S}$, donc $Q=CU$ avec $C=\\dfrac{\\epsilon_0S}{e}$. Avec un diélectrique de permittivité relative $\\epsilon_r$ : $C=\\dfrac{\\epsilon_0\\epsilon_rS}{e}$ ($\\epsilon_r\\approx2{,}2$ paraffine, $3{,}3$ plexiglas, $5$–$6$ porcelaine, $\\approx1$ air sec) : un diélectrique à forte permittivité augmente la capacité."
+  },
+  {
+    "type": "Question",
+    "enonce": "Énergie électrique — Montrer que l'énergie du condensateur s'écrit avec une densité volumique $w_e=\\tfrac12\\epsilon_0E^2$.",
+    "reponse": "$E_c=\\dfrac12CU^2=\\dfrac12\\dfrac{e}{\\epsilon_0S}Q^2$ avec $Q=\\epsilon_0SE$ : $E_c=\\dfrac12\\dfrac{e}{\\epsilon_0S}\\epsilon_0^2S^2E^2=\\dfrac12\\epsilon_0E^2\\,(Se)$. Le volume entre les armatures est $Se$, donc $w_e=\\dfrac12\\epsilon_0E^2$ (en $\\mathrm{J\\cdot m^{-3}}$), résultat général ; dans un diélectrique $\\epsilon_0\\to\\epsilon_0\\epsilon_r$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le champ d'un plan infini chargé décroît comme $1/r$ avec la distance ». Justifier.",
+    "reponse": "**Faux.** Le champ d'un plan infini est uniforme de chaque côté : $|E|=\\sigma/(2\\epsilon_0)$ indépendamment de $z$. Le $1/r$ est celui du fil infini ($\\lambda/2\\pi\\epsilon_0r$) ; le $1/r^2$ celui de la charge ponctuelle ou d'une distribution à symétrie sphérique à l'extérieur."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le théorème de Gauss permet de calculer le champ de n'importe quelle distribution ». Justifier.",
+    "reponse": "**Faux.** Le théorème est toujours vrai, mais il ne permet de **calculer** $\\vec E$ que si les symétries et invariances permettent de choisir une surface où $\\vec E$ est normal ou tangent et de module constant (sphère, cylindre infini, plan infini…). Pour un disque ou un fil fini, il faut une autre méthode."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Une ligne de champ électrostatique peut être fermée ». Justifier.",
+    "reponse": "**Faux.** $\\oint\\vec E\\cdot\\mathrm d\\vec\\ell=0$ et $V$ décroît strictement le long d'une ligne de champ. (En revanche les lignes de $\\vec B$ sont fermées, $\\mathrm{div}\\vec B=0$.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Si $\\vec E=\\vec0$ en un point alors le potentiel y est nul ». Justifier.",
+    "reponse": "**Faux.** $\\vec E=-\\overrightarrow{\\mathrm{grad}}V=\\vec0$ dit seulement que $V$ est stationnaire (extremum ou point selle, comme le point milieu de deux charges égales), pas qu'il est nul ; de plus $V$ est défini à une constante près."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le champ électrique entre deux plaques d'un condensateur plan dépend de la distance entre les plaques à charge fixée ». Justifier.",
+    "reponse": "**Faux (condensateur infini).** À $Q$ (donc $\\sigma$) fixé, $E=\\sigma/\\epsilon_0$ est indépendant de $e$ ; c'est la tension $U=Ee$ qui croît avec $e$ (donc $C=Q/U$ décroît). L'énergie $\\frac12\\epsilon_0E^2Se$ augmente avec $e$ (il faut fournir un travail pour écarter les armatures)."
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Maxwell de la magnétostatique — Écrire les équations pour $\\vec B$ en régime stationnaire.",
+    "reponse": "Maxwell–Ampère : $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$ (le terme $\\epsilon_0\\mu_0\\partial_t\\vec E$ disparaît) ; Maxwell–Thomson : $\\mathrm{div}\\vec B=0$. Les champs $\\vec E$ et $\\vec B$ sont découplés."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conservation du flux — Énoncer la conséquence de $\\mathrm{div}\\vec B=0$ sous forme intégrale.",
+    "reponse": "Par Green–Ostrogradski, $\\oiint_S\\vec B\\cdot\\mathrm d\\vec S=0$ pour toute surface fermée $S$ : $\\vec B$ est à flux conservatif (pas de monopôle magnétique)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Tube de champ — Comment varie $\\|\\vec B\\|$ le long d'un tube de champ magnétique ?",
+    "reponse": "Le flux à travers la surface latérale est nul (ses éléments sont tangents aux lignes de champ) donc $B_1S_1=B_2S_2$ : quand les lignes de champ se rapprochent (section qui diminue), $\\|\\vec B\\|$ augmente. Ceci vaut partout, y compris dans les zones traversées par des courants."
+  },
+  {
+    "type": "Question",
+    "enonce": "Théorème d'Ampère — Le démontrer à partir de Maxwell–Ampère.",
+    "reponse": "On intègre $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$ sur une surface $S$ s'appuyant sur un contour orienté $\\mathcal C$ : $\\iint\\overrightarrow{\\mathrm{rot}}\\vec B\\cdot\\mathrm d\\vec S=\\mu_0\\iint\\vec j\\cdot\\mathrm d\\vec S=\\mu_0I_{enlac\\acute e}$. Stokes donne alors $$\\oint_{\\mathcal C}\\vec B\\cdot\\mathrm d\\vec\\ell=\\mu_0I_{enlac\\acute e}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Courant enlacé — Comment compte-t-on le signe de $I_{enlac\\acute e}$ ?",
+    "reponse": "C'est une grandeur algébrique. Le sens du contour fixe l'orientation de $\\vec S$ par la règle de la main droite (doigts le long du contour, pouce = sens positif). Un courant qui traverse $S$ dans le sens de $\\vec S$ compte $+$, dans le sens opposé $-$. Exemple de la figure : $I_{enlac\\acute e}=i_1-i_2-i_3$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lignes de champ de $\\vec B$ — Où sont-elles par rapport aux sources ?",
+    "reponse": "Comme $\\oint\\vec B\\cdot\\mathrm d\\vec\\ell=\\mu_0I_{enlac\\acute e}\\ne0$, les lignes de champ magnétique **entourent** les distributions de courant (elles sont fermées et enlacent les sources)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Symétries de $\\vec B$ — Définir plan de symétrie/antisymétrie d'une distribution de courant et énoncer les propriétés de $\\vec B$.",
+    "reponse": "Plan de symétrie $\\Pi_s$ : le symétrique de $\\vec j(M)$ est $\\vec j$ en le point symétrique ; plan d'antisymétrie $\\Pi_a$ : le symétrique de $\\vec j$ est $-\\vec j$ (sens de tous les courants changé). Pour $\\vec B$ (axial) : antisymétrique par rapport à un plan de symétrie des courants, symétrique par rapport à un plan d'antisymétrie. En un point d'un plan de symétrie, $\\vec B$ est **normal** au plan ; en un point d'un plan d'antisymétrie, $\\vec B$ est **contenu** dans le plan."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Comparer aux propriétés de $\\vec E$ pour savoir lequel est normal / contenu.",
+    "reponse": "Pour $\\vec E$ (polaire) : plan de symétrie $\\Rightarrow$ $\\vec E$ contenu ; plan d'antisymétrie $\\Rightarrow$ normal. Pour $\\vec B$ (axial) c'est inversé : plan de symétrie $\\Rightarrow$ normal, plan d'antisymétrie $\\Rightarrow$ contenu. Mnémotechnique : pour $\\vec j$ (polaire), un plan de symétrie contient $\\vec j$ et $\\vec B$ lui est perpendiculaire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple — Spire circulaire — Quels sont ses plans de symétrie/antisymétrie et que dit-on de $\\vec B$ sur l'axe ?",
+    "reponse": "Le plan de la spire est plan de symétrie ; tout plan contenant l'axe de révolution est plan d'antisymétrie (le symétrique de la distribution a la même géométrie mais le courant circule en sens opposé). Un point de l'axe appartient à tous ces plans d'antisymétrie, donc $\\vec B$ y est contenu dans chacun d'eux, donc **dirigé selon l'axe** ; et en un point du plan de la spire (plan de symétrie), $\\vec B$ est normal à ce plan."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode d'Ampère — Quelles sont les étapes et les critères sur le contour d'Ampère ?",
+    "reponse": "1) Symétries (plans contenant $M$) : direction de $\\vec B$ ; 2) invariances : variables de $\\vec B$ ; 3) contour d'Ampère **fermé**, contenant $M$, sur lequel $\\vec B$ est en tout point tangent ou normal ; 4) circulation $\\oint\\vec B\\cdot\\mathrm d\\vec\\ell$ ; 5) $I_{enlac\\acute e}$ ; 6) $\\oint\\vec B\\cdot\\mathrm d\\vec\\ell=\\mu_0I_{enlac\\acute e}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil infini — Déterminer la direction et les variables de $\\vec B$ pour un fil sur $(Oz)$ parcouru par $I$.",
+    "reponse": "Le plan $(M,\\vec u_r,\\vec u_z)$ contient le fil : plan de symétrie, donc $\\vec B$ y est normal : $\\vec B=B\\vec u_\\theta$. Invariance par translation selon $z$ et rotation autour de $(Oz)$ : $B=B(r)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil infini — Calculer $\\vec B$ par Ampère.",
+    "reponse": "Contour : cercle de rayon $r$ centré sur le fil, orienté selon $+\\vec u_\\theta$. $\\oint\\vec B\\cdot\\mathrm d\\vec\\ell=2\\pi rB(r)$, $I_{enlac\\acute e}=I$ (orientation compatible avec $+\\vec u_z$ par la main droite). Donc $$\\vec B=\\frac{\\mu_0I}{2\\pi r}\\vec u_\\theta.$$ Valable pour $r\\ll L$ ; $B$ n'est pas défini en $r=0$ (fil d'épaisseur nulle)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fil épais — Calculer $\\vec B$ créé par un cylindre de rayon $a$ à $\\vec j=\\dfrac{I}{\\pi a^2}\\vec u_z$ uniforme.",
+    "reponse": "Mêmes symétries : $\\vec B=B(r)\\vec u_\\theta$. Pour $r\\le a$ : $I_{enlac\\acute e}=j\\pi r^2=\\dfrac{Ir^2}{a^2}$, d'où $B=\\dfrac{\\mu_0Ir}{2\\pi a^2}$ (croît linéairement). Pour $r\\ge a$ : $I_{enlac\\acute e}=I$ et $B=\\dfrac{\\mu_0I}{2\\pi r}$. $B$ est continu en $r=a$ où il vaut $\\dfrac{\\mu_0I}{2\\pi a}$ (maximum), puis décroît en $1/r$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cohérence — Comparer le comportement de $E$ (cylindre chargé) et de $B$ (fil épais) à l'intérieur.",
+    "reponse": "Les deux croissent linéairement avec $r$ à l'intérieur et décroissent en $1/r$ à l'extérieur : Gauss ($\\Phi=Q_{int}/\\epsilon_0$) et Ampère ($C=\\mu_0I_{enlac\\acute e}$) jouent des rôles analogues, avec $Q_{int}\\propto r^2$ (charge volumique uniforme) ou $I_{enlac\\acute e}\\propto r^2$ (courant uniforme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solénoïde — Définir le modèle de solénoïde infini et la grandeur $n$.",
+    "reponse": "Enroulement de $N$ spires circulaires jointives sur un cylindre de rayon $a$ et longueur $\\ell\\gg a$ ; infini suivant $(Oz)$. $n=N/\\ell$ est le nombre de spires par unité de longueur, $I$ le courant dans une spire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solénoïde — Symétries et invariances de $\\vec B$.",
+    "reponse": "Plan $(M,\\vec u_r,\\vec u_\\theta)$ plan de symétrie : $\\vec B$ y est normal, donc $\\vec B=B\\vec u_z$ (cohérent avec le plan $(M,\\vec u_r,\\vec u_z)$ d'antisymétrie qui contient $\\vec B$). Invariance par translation selon $z$ et rotation autour de $(Oz)$ : $B=B(r)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solénoïde — Contour d'Ampère et champ uniforme à l'intérieur / à l'extérieur.",
+    "reponse": "Contour rectangulaire $MNOP$ dans un plan $\\theta=$cste, deux côtés parallèles à $(Oz)$ à $r_1<r_2$, de longueur $h$ ; les côtés radiaux ne contribuent pas ($\\vec B\\perp\\mathrm d\\vec\\ell$). Circulation $=h[B(r_1)-B(r_2)]$. Si le contour est entièrement dehors ou entièrement dedans, $I_{enlac\\acute e}=0$ donc $B(r_1)=B(r_2)$ : champ **uniforme** dans chaque région. À l'extérieur on admet qu'il est nul (il tend vers 0 à l'infini)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Solénoïde — Établir $\\vec B_{int}=\\mu_0nI\\vec u_z$.",
+    "reponse": "Contour à cheval ($r_1<a<r_2$) : $I_{enlac\\acute e}=nIh$ (nombre de spires traversées $nh$). Ampère : $h[B(r_1)-B(r_2)]=\\mu_0nIh$, avec $B(r_2)=0$ à l'extérieur : $$\\vec B_{int}=\\mu_0nI\\vec u_z,\\quad\\vec B_{ext}=\\vec0.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Validité — Dans quel domaine le modèle du solénoïde infini est-il valable ? Que se passe-t-il aux bords ?",
+    "reponse": "Dans la zone centrale d'une bobine longue ($\\ell\\gg a$), loin des bords. Près des extrémités, $\\vec B$ n'est plus seulement selon $\\vec u_z$ afin que les lignes de champ se referment (dans le solénoïde infini, elles se ferment à l'infini)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inductance propre — Définir $L$ puis calculer $L$ d'une bobine longue.",
+    "reponse": "$\\phi=Li$. Pour une bobine de $N$ spires, de section $\\pi a^2$, de longueur $\\ell$ : $\\phi=N\\iint\\vec B\\cdot\\mathrm d\\vec S=N\\mu_0\\dfrac N\\ell i\\,\\pi a^2$, donc $$L=\\frac{\\mu_0N^2\\pi a^2}{\\ell}=\\mu_0n^2\\,\\pi a^2\\ell.$$ $L$ ne dépend que de la géométrie ; elle croît en $N^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Énergie magnétique — Montrer que la densité volumique d'énergie magnétique est $w_B=\\dfrac{B^2}{2\\mu_0}$.",
+    "reponse": "$E_L=\\tfrac12Li^2$ avec $B=\\mu_0Ni/\\ell$, donc $i=B\\ell/(\\mu_0N)$ : $E_L=\\dfrac12\\dfrac{\\mu_0N^2\\pi a^2}{\\ell}\\dfrac{B^2\\ell^2}{\\mu_0^2N^2}=\\dfrac{B^2}{2\\mu_0}(\\pi a^2\\ell)$. Le volume de la bobine est $\\pi a^2\\ell$, donc $w_B=\\dfrac{B^2}{2\\mu_0}$ (en $\\mathrm{J\\cdot m^{-3}}$), résultat général."
+  },
+  {
+    "type": "Question",
+    "enonce": "Analogie — Comparer $w_e$ et $w_B$.",
+    "reponse": "$w_e=\\tfrac12\\epsilon_0E^2$ (condensateur) et $w_B=\\dfrac{B^2}{2\\mu_0}$ (bobine) : mêmes structures ; l'énergie électromagnétique est localisée dans les champs. On retrouve ces termes dans l'énergie linéique du câble coaxial $\\tfrac12\\Gamma u^2+\\tfrac12\\Lambda i^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Force de Laplace volumique — Établir $\\vec f_{Laplace}=\\vec j\\wedge\\vec B$.",
+    "reponse": "Conducteur à vitesse $\\vec u$ dans $R$ ; électrons de conduction (densité $n_0$, vitesse $\\vec v+\\vec u$) et cations fixes (densité $n_0$, vitesse $\\vec u$). $\\delta\\vec F=n_0\\mathrm d\\tau(-e)(\\vec v+\\vec u)\\wedge\\vec B+n_0\\mathrm d\\tau\\,e\\,\\vec u\\wedge\\vec B=-n_0e\\vec v\\wedge\\vec B\\,\\mathrm d\\tau$. Avec $\\vec j=-n_0e\\vec v$ : $\\delta\\vec F=\\vec j\\wedge\\vec B\\,\\mathrm d\\tau$, soit $\\vec f_{Laplace}=\\vec j\\wedge\\vec B$ (en $\\mathrm{N\\cdot m^{-3}}$). Les termes en $\\vec u$ s'annulent : seule la dérive des électrons compte."
+  },
+  {
+    "type": "Question",
+    "enonce": "Force de Laplace filiforme — Établir $\\delta\\vec F=i\\,\\delta\\vec\\ell\\wedge\\vec B$.",
+    "reponse": "Pour un élément $\\delta\\vec\\ell$ de section $\\vec S$ orientée selon $i$ : $\\mathrm d\\tau=\\vec S\\cdot\\delta\\vec\\ell$. $\\delta\\vec F=\\vec j\\wedge\\vec B\\,(\\vec S\\cdot\\delta\\vec\\ell)$ ; $\\vec j$ et $\\delta\\vec\\ell$ étant colinéaires et de même sens, $\\vec j\\,(\\vec S\\cdot\\delta\\vec\\ell)=(\\vec j\\cdot\\vec S)\\delta\\vec\\ell=i\\,\\delta\\vec\\ell$. Donc $\\delta\\vec F_{Laplace}=i\\,\\delta\\vec\\ell\\wedge\\vec B$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — Pourquoi la force de Laplace sur un conducteur ne dépend-elle pas de sa vitesse $\\vec u$ (au sens de la force résultante sur le solide) ?",
+    "reponse": "Parce que la force magnétique sur les électrons et celle sur les cations s'écrivent chacune avec $\\vec u\\wedge\\vec B$ et ces termes se compensent (charges opposées, densités égales, neutralité du conducteur). Il reste la contribution due à la dérive des porteurs, c'est-à-dire au courant $\\vec j$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le champ $B$ d'un fil infini est non nul à l'intérieur d'un fil épais en $r=0$ ». Justifier.",
+    "reponse": "**Faux.** Pour le fil épais, $B(r)=\\dfrac{\\mu_0Ir}{2\\pi a^2}$ pour $r\\le a$ donc $B(0)=0$ (aucun courant enlacé). La divergence en $r=0$ de $\\dfrac{\\mu_0I}{2\\pi r}$ concerne le fil de rayon nul (modèle filiforme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le champ magnétique à l'intérieur d'un solénoïde infini dépend de la distance à l'axe ». Justifier.",
+    "reponse": "**Faux.** $\\vec B_{int}=\\mu_0nI\\vec u_z$ est uniforme dans tout l'intérieur (Ampère sur un contour entièrement intérieur : $B(r_1)=B(r_2)$). Il ne dépend ni de $r$ ni de $z$, ni du rayon $a$ du solénoïde."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Une bobine de $N$ spires a une inductance proportionnelle à $N$ ». Justifier.",
+    "reponse": "**Faux.** $L=\\mu_0N^2\\pi a^2/\\ell$ est proportionnelle à $N^2$ : $N$ spires donnent un champ $\\propto N$ et un flux total $\\propto N\\times B\\propto N^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Le théorème d'Ampère permet de calculer le champ d'une spire circulaire en tout point ». Justifier.",
+    "reponse": "**Faux.** Les symétries de la spire ne permettent pas de choisir un contour d'Ampère sur lequel $\\vec B$ soit tangent ou normal de module constant. Le théorème reste vrai, mais on doit alors utiliser une autre méthode (loi de Biot et Savart, hors programme ici). On sait seulement que sur l'axe $\\vec B$ est dirigé selon l'axe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vrai ou faux — « Les lignes de champ magnétostatique peuvent diverger d'un point, comme celles de $\\vec E$ ». Justifier.",
+    "reponse": "**Faux.** $\\mathrm{div}\\vec B=0$ : pas de source ni de puits de lignes de champ (pas de monopôle magnétique), les lignes sont fermées (ou se ferment à l'infini) et enlacent les courants. Pour $\\vec E$, les lignes divergent des charges positives."
+  }
+]
