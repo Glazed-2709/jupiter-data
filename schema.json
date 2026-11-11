@@ -408,7 +408,24 @@
         },
         {
           "name": "SI",
-          "children": []
+          "children": [
+            {
+              "name": "CCINP",
+              "children": []
+            },
+            {
+              "name": "Centrale",
+              "children": []
+            },
+            {
+              "name": "Mines",
+              "children": []
+            },
+            {
+              "name": "X -ENS",
+              "children": []
+            }
+          ]
         }
       ]
     }

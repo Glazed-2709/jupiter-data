@@ -1,2 +1,4 @@
 ERREUR : Mines - Rapport jury - 2026.pdf <- https://assets.hadamard.fr/annales/mines-ponts/2026/rapport-ecrit.pdf (The remote server returned an error: (404) Not Found.)
 ERREUR : X-ENS - Physique - 2024 - rapport.pdf <- https://assets.hadamard.fr/annales/x-ens/2024/PSI/physique-xsr_rapport.pdf (The remote server returned an error: (404) Not Found.)
+ERREUR : CCINP - SI - 2025 - rapport.pdf <- https://assets.hadamard.fr/annales/ccinp/2025/PSI/si_rapport.pdf (The remote server returned an error: (404) Not Found.)
+ERREUR : CCINP - SI - 2021 - rapport.pdf <- https://assets.hadamard.fr/annales/ccinp/2021/PSI/si_rapport.pdf (The remote server returned an error: (404) Not Found.)

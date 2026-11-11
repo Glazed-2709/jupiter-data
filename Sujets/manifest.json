@@ -1391,17 +1391,424 @@
       "name": "SI",
       "path": "SI",
       "description": "",
-      "children": [],
+      "children": [
+        {
+          "name": "CCINP",
+          "path": "SI/CCINP",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "CCINP - SI - 2015 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202015%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2015.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202015.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2016 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202016%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2016.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202016.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2017 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202017%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2017.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202017.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2018 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202018%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2018.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202018.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2019 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202019%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2019.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202019.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2020 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202020%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2020.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202020.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2021 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202021%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2021.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202021.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2022 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202022%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2022 - rapport.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202022%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2022.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202022.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2023 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202023%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2023 - rapport.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202023%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2023.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202023.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2024 - corrige.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202024%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "CCINP - SI - 2024 - rapport.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202024%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2024.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2025.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202025.pdf",
+              "corrige": false
+            },
+            {
+              "name": "CCINP - SI - 2026.pdf",
+              "path": "SI/CCINP/CCINP%20-%20SI%20-%202026.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 332,
+          "color": "hsl(332.0,100%,56%)"
+        },
+        {
+          "name": "Centrale",
+          "path": "SI/Centrale",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "Centrale - Rapport jury - 2024.pdf",
+              "path": "SI/Centrale/Centrale%20-%20Rapport%20jury%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - Rapport jury - 2025.pdf",
+              "path": "SI/Centrale/Centrale%20-%20Rapport%20jury%20-%202025.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2018 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202018%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2018.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202018.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2019 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202019%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2019.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202019.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2020 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202020%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2020.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202020.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2021 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202021%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2021.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202021.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2022 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202022%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2022.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202022.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2023 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202023%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2023.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202023.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2024 - corrige.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202024%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Centrale - SI - 2024.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2025.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202025.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Centrale - SI - 2026.pdf",
+              "path": "SI/Centrale/Centrale%20-%20SI%20-%202026.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 24,
+          "color": "hsl(24.0,100%,56%)"
+        },
+        {
+          "name": "Mines",
+          "path": "SI/Mines",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "Mines - Rapport jury - 2021.pdf",
+              "path": "SI/Mines/Mines%20-%20Rapport%20jury%20-%202021.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - Rapport jury - 2022.pdf",
+              "path": "SI/Mines/Mines%20-%20Rapport%20jury%20-%202022.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - Rapport jury - 2023.pdf",
+              "path": "SI/Mines/Mines%20-%20Rapport%20jury%20-%202023.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - Rapport jury - 2024.pdf",
+              "path": "SI/Mines/Mines%20-%20Rapport%20jury%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - Rapport jury - 2025.pdf",
+              "path": "SI/Mines/Mines%20-%20Rapport%20jury%20-%202025.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2021 - corrige.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202021%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Mines - SI - 2021.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202021.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2022 - corrige.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202022%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Mines - SI - 2022.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202022.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2023 - corrige.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202023%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Mines - SI - 2023.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202023.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2024 - corrige.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202024%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "Mines - SI - 2024.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2025.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202025.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Mines - SI - 2026.pdf",
+              "path": "SI/Mines/Mines%20-%20SI%20-%202026.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 118,
+          "color": "hsl(118.0,100%,56%)"
+        },
+        {
+          "name": "X -ENS",
+          "path": "SI/X -ENS",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "X-ENS - SI - 2021 - rapport.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202021%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2021.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202021.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2022 - corrige.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202022%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "X-ENS - SI - 2022.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202022.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2023 - corrige.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202023%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "X-ENS - SI - 2023 - rapport.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202023%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2023.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202023.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2024 - corrige.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202024%20-%20corrige.pdf",
+              "corrige": true
+            },
+            {
+              "name": "X-ENS - SI - 2024 - rapport.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202024%20-%20rapport.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2024.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202024.pdf",
+              "corrige": false
+            },
+            {
+              "name": "X-ENS - SI - 2025.pdf",
+              "path": "SI/X%20-ENS/X-ENS%20-%20SI%20-%202025.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 234,
+          "color": "hsl(234.0,100%,60%)"
+        }
+      ],
       "files": [],
       "questions": [],
       "questionSets": [],
       "hasQuestions": false,
-      "isAvantDernier": false,
+      "isAvantDernier": true,
       "hue": 332,
       "color": "hsl(332.0,100%,56%)"
     }
   ],
   "files": [
+    {
+      "name": "corriges_rates.txt",
+      "path": "corriges_rates.txt",
+      "corrige": true
+    },
     {
       "name": "Index chapitres - Maths PSI.pdf",
       "path": "Index%20chapitres%20-%20Maths%20PSI.pdf",
@@ -1411,6 +1818,16 @@
       "name": "Index chapitres - Physique-Chimie PSI.pdf",
       "path": "Index%20chapitres%20-%20Physique-Chimie%20PSI.pdf",
       "corrige": false
+    },
+    {
+      "name": "Index chapitres - SI PSI.pdf",
+      "path": "Index%20chapitres%20-%20SI%20PSI.pdf",
+      "corrige": false
+    },
+    {
+      "name": "manifest_corriges_SI.csv",
+      "path": "manifest_corriges_SI.csv",
+      "corrige": true
     },
     {
       "name": "manifest.csv",
@@ -1431,6 +1848,16 @@
       "name": "Telecharger_annales.ps1",
       "path": "Telecharger_annales.ps1",
       "corrige": false
+    },
+    {
+      "name": "Telecharger_corriges_SI.bat",
+      "path": "Telecharger_corriges_SI.bat",
+      "corrige": true
+    },
+    {
+      "name": "Telecharger_corriges_SI.ps1",
+      "path": "Telecharger_corriges_SI.ps1",
+      "corrige": true
     }
   ],
   "questions": [],
