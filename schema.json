@@ -301,6 +301,15 @@
               "children": []
             },
             {
+              "name": "Mécanique",
+              "children": [
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "SLCI",
               "children": [
                 {
@@ -337,6 +346,52 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Sujets",
+      "children": [
+        {
+          "name": "Anglais",
+          "children": []
+        },
+        {
+          "name": "Français",
+          "children": []
+        },
+        {
+          "name": "Info",
+          "children": []
+        },
+        {
+          "name": "Maths",
+          "children": [
+            {
+              "name": "CCINP",
+              "children": []
+            },
+            {
+              "name": "Centrale",
+              "children": []
+            },
+            {
+              "name": "Mines",
+              "children": []
+            },
+            {
+              "name": "X -ENS",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Physique",
+          "children": []
+        },
+        {
+          "name": "SI",
+          "children": []
         }
       ]
     }
@@ -414,6 +469,38 @@
         {
           "id": "X SUP",
           "label": "X SUP"
+        }
+      ]
+    },
+    {
+      "id": "Sujets",
+      "label": "Sujets",
+      "color": "#2b2bee",
+      "manifest": "Sujets/manifest.json",
+      "subjects": [
+        {
+          "id": "Anglais",
+          "label": "Anglais"
+        },
+        {
+          "id": "Français",
+          "label": "Français"
+        },
+        {
+          "id": "Info",
+          "label": "Info"
+        },
+        {
+          "id": "Maths",
+          "label": "Maths"
+        },
+        {
+          "id": "Physique",
+          "label": "Physique"
+        },
+        {
+          "id": "SI",
+          "label": "SI"
         }
       ]
     }

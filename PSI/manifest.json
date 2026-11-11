@@ -7518,6 +7518,44 @@
           "color": "hsl(74.1,100%,50%)"
         },
         {
+          "name": "Mécanique",
+          "path": "SI/Mécanique",
+          "description": "",
+          "children": [
+            {
+              "name": "TD",
+              "path": "SI/Mécanique/TD",
+              "description": "",
+              "children": [],
+              "files": [],
+              "questions": [],
+              "questionSets": [],
+              "hasQuestions": false,
+              "isAvantDernier": false,
+              "hue": 126.11538461538453,
+              "color": "hsl(126.1,100%,56%)"
+            }
+          ],
+          "files": [
+            {
+              "name": "TD1_inverseur de poussee_etras_v2.pdf",
+              "path": "SI/M%C3%A9canique/TD1_inverseur%20de%20poussee_etras_v2.pdf",
+              "corrige": false
+            },
+            {
+              "name": "TD2_voile-solaire_TEC.pdf",
+              "path": "SI/M%C3%A9canique/TD2_voile-solaire_TEC.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": true,
+          "hue": 126.11538461538453,
+          "color": "hsl(126.1,100%,56%)"
+        },
+        {
           "name": "SLCI",
           "path": "SI/SLCI",
           "description": "",
@@ -7538,8 +7576,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 126.11538461538453,
-              "color": "hsl(126.1,100%,56%)"
+              "hue": 220.11538461538453,
+              "color": "hsl(220.1,100%,60%)"
             },
             {
               "name": "TD",
@@ -7557,8 +7595,8 @@
               "questionSets": [],
               "hasQuestions": false,
               "isAvantDernier": false,
-              "hue": 178.11538461538453,
-              "color": "hsl(178.1,100%,60%)"
+              "hue": 272.1153846153845,
+              "color": "hsl(272.1,100%,60%)"
             }
           ],
           "files": [],
@@ -7644,8 +7682,8 @@
           ],
           "hasQuestions": true,
           "isAvantDernier": true,
-          "hue": 126.11538461538453,
-          "color": "hsl(126.1,100%,56%)"
+          "hue": 220.11538461538453,
+          "color": "hsl(220.1,100%,60%)"
         }
       ],
       "files": [],
