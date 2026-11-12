@@ -17,6 +17,65 @@
       "color": "hsl(240.0,100%,60%)"
     },
     {
+      "name": "Annexes",
+      "path": "Annexes",
+      "description": "",
+      "children": [
+        {
+          "name": "Index",
+          "path": "Annexes/Index",
+          "description": "",
+          "children": [],
+          "files": [
+            {
+              "name": "Index - Français PSI.pdf",
+              "path": "Annexes/Index/Index%20-%20Fran%C3%A7ais%20PSI.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Index chapitres - Info PSI.pdf",
+              "path": "Annexes/Index/Index%20chapitres%20-%20Info%20PSI.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Index chapitres - Maths PSI.pdf",
+              "path": "Annexes/Index/Index%20chapitres%20-%20Maths%20PSI.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Index chapitres - Physique-Chimie PSI.pdf",
+              "path": "Annexes/Index/Index%20chapitres%20-%20Physique-Chimie%20PSI.pdf",
+              "corrige": false
+            },
+            {
+              "name": "Index chapitres - SI PSI.pdf",
+              "path": "Annexes/Index/Index%20chapitres%20-%20SI%20PSI.pdf",
+              "corrige": false
+            }
+          ],
+          "questions": [],
+          "questionSets": [],
+          "hasQuestions": false,
+          "isAvantDernier": false,
+          "hue": 277,
+          "color": "hsl(277.0,100%,60%)"
+        }
+      ],
+      "files": [
+        {
+          "name": "Planning annales PSI 2026-2027.pdf",
+          "path": "Annexes/Planning%20annales%20PSI%202026-2027.pdf",
+          "corrige": false
+        }
+      ],
+      "questions": [],
+      "questionSets": [],
+      "hasQuestions": false,
+      "isAvantDernier": true,
+      "hue": 277,
+      "color": "hsl(277.0,100%,60%)"
+    },
+    {
       "name": "Français",
       "path": "Français",
       "description": "",
@@ -26,8 +85,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 277,
-      "color": "hsl(277.0,100%,60%)"
+      "hue": 332,
+      "color": "hsl(332.0,100%,56%)"
     },
     {
       "name": "Info",
@@ -39,8 +98,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": false,
-      "hue": 332,
-      "color": "hsl(332.0,100%,56%)"
+      "hue": 57,
+      "color": "hsl(57.0,100%,50%)"
     },
     {
       "name": "Maths",
@@ -123,8 +182,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 57,
-          "color": "hsl(57.0,100%,50%)"
+          "hue": 277,
+          "color": "hsl(277.0,100%,60%)"
         },
         {
           "name": "Centrale",
@@ -372,8 +431,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 109,
-          "color": "hsl(109.0,100%,56%)"
+          "hue": 329,
+          "color": "hsl(329.0,100%,56%)"
         },
         {
           "name": "Mines",
@@ -616,8 +675,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 203,
-          "color": "hsl(203.0,100%,60%)"
+          "hue": 63,
+          "color": "hsl(63.0,100%,50%)"
         },
         {
           "name": "X -ENS",
@@ -775,8 +834,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 319,
-          "color": "hsl(319.0,100%,56%)"
+          "hue": 179,
+          "color": "hsl(179.0,100%,60%)"
         }
       ],
       "files": [],
@@ -784,8 +843,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": true,
-      "hue": 57,
-      "color": "hsl(57.0,100%,50%)"
+      "hue": 277,
+      "color": "hsl(277.0,100%,60%)"
     },
     {
       "name": "Physique",
@@ -873,8 +932,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 277,
-          "color": "hsl(277.0,100%,60%)"
+          "hue": 332,
+          "color": "hsl(332.0,100%,56%)"
         },
         {
           "name": "Centrale",
@@ -1077,8 +1136,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 329,
-          "color": "hsl(329.0,100%,56%)"
+          "hue": 24,
+          "color": "hsl(24.0,100%,56%)"
         },
         {
           "name": "Mines",
@@ -1291,8 +1350,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 63,
-          "color": "hsl(63.0,100%,50%)"
+          "hue": 118,
+          "color": "hsl(118.0,100%,56%)"
         },
         {
           "name": "X -ENS",
@@ -1375,8 +1434,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 179,
-          "color": "hsl(179.0,100%,60%)"
+          "hue": 234,
+          "color": "hsl(234.0,100%,60%)"
         }
       ],
       "files": [],
@@ -1384,8 +1443,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": true,
-      "hue": 277,
-      "color": "hsl(277.0,100%,60%)"
+      "hue": 332,
+      "color": "hsl(332.0,100%,56%)"
     },
     {
       "name": "SI",
@@ -1528,8 +1587,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 332,
-          "color": "hsl(332.0,100%,56%)"
+          "hue": 57,
+          "color": "hsl(57.0,100%,50%)"
         },
         {
           "name": "Centrale",
@@ -1632,8 +1691,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 24,
-          "color": "hsl(24.0,100%,56%)"
+          "hue": 109,
+          "color": "hsl(109.0,100%,56%)"
         },
         {
           "name": "Mines",
@@ -1721,8 +1780,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 118,
-          "color": "hsl(118.0,100%,56%)"
+          "hue": 203,
+          "color": "hsl(203.0,100%,60%)"
         },
         {
           "name": "X -ENS",
@@ -1790,8 +1849,8 @@
           "questionSets": [],
           "hasQuestions": false,
           "isAvantDernier": false,
-          "hue": 234,
-          "color": "hsl(234.0,100%,60%)"
+          "hue": 319,
+          "color": "hsl(319.0,100%,56%)"
         }
       ],
       "files": [],
@@ -1799,8 +1858,8 @@
       "questionSets": [],
       "hasQuestions": false,
       "isAvantDernier": true,
-      "hue": 332,
-      "color": "hsl(332.0,100%,56%)"
+      "hue": 57,
+      "color": "hsl(57.0,100%,50%)"
     }
   ],
   "files": [
@@ -1808,21 +1867,6 @@
       "name": "corriges_rates.txt",
       "path": "corriges_rates.txt",
       "corrige": true
-    },
-    {
-      "name": "Index chapitres - Maths PSI.pdf",
-      "path": "Index%20chapitres%20-%20Maths%20PSI.pdf",
-      "corrige": false
-    },
-    {
-      "name": "Index chapitres - Physique-Chimie PSI.pdf",
-      "path": "Index%20chapitres%20-%20Physique-Chimie%20PSI.pdf",
-      "corrige": false
-    },
-    {
-      "name": "Index chapitres - SI PSI.pdf",
-      "path": "Index%20chapitres%20-%20SI%20PSI.pdf",
-      "corrige": false
     },
     {
       "name": "manifest_corriges_SI.csv",

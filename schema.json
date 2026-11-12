@@ -109,6 +109,19 @@
               "children": []
             },
             {
+              "name": "Espaces Normés",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Intégration",
               "children": [
                 {
@@ -150,6 +163,19 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Suites de fonctions",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -158,6 +184,19 @@
           "children": [
             {
               "name": "ALI",
+              "children": [
+                {
+                  "name": "Cours",
+                  "children": []
+                },
+                {
+                  "name": "TD",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "ARQS Induction",
               "children": [
                 {
                   "name": "Cours",
@@ -357,6 +396,15 @@
           "children": []
         },
         {
+          "name": "Annexes",
+          "children": [
+            {
+              "name": "Index",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Français",
           "children": []
         },
@@ -515,6 +563,10 @@
         {
           "id": "Anglais",
           "label": "Anglais"
+        },
+        {
+          "id": "Annexes",
+          "label": "Annexes"
         },
         {
           "id": "Français",
