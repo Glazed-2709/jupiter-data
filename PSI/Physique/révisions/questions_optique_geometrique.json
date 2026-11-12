@@ -1,0 +1,197 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Célérité de la lumière — Donner la valeur de $c$ dans le vide et la relation avec la vitesse dans un milieu transparent d'indice $n$.",
+    "reponse": "$c=3{,}00\\times10^{8}\\ \\mathrm{m\\cdot s^{-1}}$ (le polycopié écrit « $3{,}00\\ \\mathrm{m\\cdot s^{-1}}$ », il manque $\\times10^8$). Dans un milieu d'indice $n$ : $v=\\dfrac cn$ avec $n\\ge1$ pour les milieux transparents usuels (donc $v\\le c$). Exemples : eau $n\\approx1{,}33$, verre $n\\approx1{,}5$, air $n\\approx1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Milieu transparent et indice — Définir un milieu transparent et l'indice de réfraction.",
+    "reponse": "Milieu transparent : milieu dans lequel l'absorption de la lumière est négligeable (« on voit au travers »). Indice de réfraction $n=\\dfrac cv\\ge1$ (rapport de la célérité dans le vide à celle dans le milieu)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Longueur d'onde dans un milieu — Qu'est-ce qui change et qu'est-ce qui est conservé quand la lumière passe du vide à un milieu d'indice $n$ ? Application : $\\lambda_0=600$ nm dans un verre $n=1{,}5$.",
+    "reponse": "La **fréquence** (donc la période) est conservée ; la célérité et la longueur d'onde changent : $v=c/n$, $\\lambda=\\dfrac{\\lambda_0}n$ (car $\\lambda=vT$). Application : $\\lambda=\\dfrac{600}{1{,}5}=400$ nm. La couleur perçue (liée à la fréquence) ne change pas en changeant de milieu."
+  },
+  {
+    "type": "Question",
+    "enonce": "Spectre — Ordonner les domaines des ondes électromagnétiques et situer le visible.",
+    "reponse": "Par longueur d'onde décroissante (fréquence croissante) : ondes hertziennes (radio, TV), micro-ondes, infrarouge, **visible**, ultraviolet, rayons X, rayons $\\gamma$. Le visible occupe environ $400$–$800$ nm (de $\\approx4\\times10^{14}$ à $7{,}5\\times10^{14}$ Hz) : violet vers $400$ nm, rouge vers $800$ nm."
+  },
+  {
+    "type": "Question",
+    "enonce": "Optique géométrique — Définir l'approximation et sa condition de validité. Qu'est-ce qui est négligé ?",
+    "reponse": "L'optique géométrique décrit la propagation par des **rayons lumineux** (courbes suivant lesquelles se propage l'énergie lumineuse) en négligeant le caractère ondulatoire : diffraction et interférences. Condition : $\\lambda\\ll a$, $a$ étant la dimension caractéristique des obstacles/ouvertures rencontrés. Si $a\\sim\\lambda$ (fentes très fines, petits diaphragmes), la diffraction n'est plus négligeable."
+  },
+  {
+    "type": "Question",
+    "enonce": "Vocabulaire du dioptre — Définir dioptre, rayon incident/réfléchi/réfracté, point d'incidence, normale, plan d'incidence, angles.",
+    "reponse": "Dioptre : surface séparant deux milieux homogènes d'indices différents $n_1$, $n_2$. Rayon incident : arrive sur le dioptre ; point d'incidence $I$ : intersection rayon incident/dioptre ; rayon réfléchi : reste dans le milieu 1 ; rayon réfracté : passe dans le milieu 2 ; normale : droite perpendiculaire au dioptre en $I$ ; plan d'incidence : plan contenant le rayon incident et la normale. Angles mesurés **par rapport à la normale** : incidence $i_1$, réflexion $r$, réfraction $i_2$ (et non par rapport au dioptre)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lois de Snell–Descartes pour la réflexion — Énoncer.",
+    "reponse": "Le rayon réfléchi appartient au plan d'incidence ; les angles sont liés par $i_1=-r$ (angles algébriques mesurés depuis la normale : le rayon réfléchi est symétrique du rayon incident par rapport à la normale ; en valeur absolue $|i_1|=|r|$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lois de Snell–Descartes pour la réfraction — Énoncer et dire dans quel sens se dévie le rayon.",
+    "reponse": "Le rayon réfracté appartient au plan d'incidence et $n_1\\sin i_1=n_2\\sin i_2$. Si $n_2>n_1$ (milieu plus réfringent), $\\sin i_2<\\sin i_1$ : le rayon se **rapproche de la normale** ; si $n_2<n_1$ il s'en **éloigne**. Incidence normale ($i_1=0$) : pas de déviation."
+  },
+  {
+    "type": "Question",
+    "enonce": "Réflexion totale — Établir la condition et l'angle limite.",
+    "reponse": "Le rayon réfracté existe si $\\sin i_2=\\dfrac{n_1}{n_2}\\sin i_1\\le1$. Si $n_1>n_2$ (milieu 1 plus réfringent), cela impose $\\sin i_1\\le\\dfrac{n_2}{n_1}$. Réflexion totale (plus de rayon réfracté, tout est réfléchi) pour $$\\sin i_1\\ge\\frac{n_2}{n_1},\\qquad i_{lim}=\\arcsin\\frac{n_2}{n_1}.$$ Condition **nécessaire** : $n_1>n_2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Applications numériques — Angle limite verre–air ($n=1{,}5$) et eau–air ($n=1{,}33$).",
+    "reponse": "Verre–air : $i_{lim}=\\arcsin\\frac1{1{,}5}\\approx41{,}8^\\circ$. Eau–air : $i_{lim}=\\arcsin\\frac1{1{,}33}\\approx48{,}8^\\circ$. Pour un prisme à angle droit en verre (rayon à $45^\\circ>41{,}8^\\circ$) la réflexion est totale : principe du prisme à réflexion totale et des fibres optiques."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — La réflexion totale peut-elle se produire en passant d'un milieu moins réfringent à un milieu plus réfringent ?",
+    "reponse": "**Non.** Si $n_1<n_2$, $\\sin i_2=\\frac{n_1}{n_2}\\sin i_1<1$ : le rayon réfracté existe toujours, quel que soit $i_1$ (il y a toujours réfraction, avec réflexion partielle). La réflexion totale exige $n_1>n_2$ **et** $i_1\\ge i_{lim}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Système optique centré — Définir, ainsi que point objet, point image, rayons réels et virtuels.",
+    "reponse": "Centré : symétrie de révolution autour de l'axe optique. Point objet : point d'intersection des rayons lumineux **arrivant** sur le système ; point image : point d'intersection des rayons **émergents**. Un rayon est **réel** s'il représente le chemin effectivement suivi (trait plein), **virtuel** sinon (pointillés, prolongement). Objet/image **réel(le)** si intersection de rayons réels, **virtuel(le)** si intersection de prolongements de rayons."
+  },
+  {
+    "type": "Question",
+    "enonce": "Foyers — Définir foyers principaux objet et image, plans focaux, foyers secondaires.",
+    "reponse": "Foyer principal **objet** $F$ : point de l'axe dont l'image est à l'infini (sur l'axe). Foyer principal **image** $F'$ : image d'un point objet à l'infini sur l'axe. Plan focal objet (image) : plan normal à l'axe contenant $F$ ($F'$). Foyer objet secondaire : point du plan focal objet distinct de $F$, son image est à l'infini hors axe ; foyer image secondaire : point du plan focal image distinct de $F'$, image d'un point objet à l'infini hors axe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Stigmatisme et aplanétisme — Définir et donner des exemples.",
+    "reponse": "Stigmatisme : association d'un point image **ponctuel** à un point objet ponctuel. Aplanétisme : association d'une image **plane** à un objet plan (perpendiculaire à l'axe). À l'exception du miroir plan (stigmatique rigoureux), les systèmes usuels (lentilles, miroirs sphériques) ne sont pas rigoureusement stigmatiques ; ils le sont **approximativement** dans les conditions de Gauss. Un système peut être stigmatique sans être aplanétique (l'image d'un objet plan est alors courbe)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conditions de Gauss — Énoncer.",
+    "reponse": "Rayons **proches de l'axe optique** et **peu inclinés** par rapport à lui. Dans ces conditions les lentilles minces et miroirs sphériques réalisent un stigmatisme et un aplanétisme approchés, et les relations de conjugaison sont valables."
+  },
+  {
+    "type": "Question",
+    "enonce": "Grandissement — Définir et interpréter signe et valeur absolue.",
+    "reponse": "$\\gamma=\\dfrac{\\overline{A'B'}}{\\overline{AB}}$ (grandeurs algébrisées : vertical positif vers le haut, horizontal positif dans le sens de la lumière). $\\gamma>0$ : image **droite** ; $\\gamma<0$ : image **renversée**. $|\\gamma|>1$ : image **agrandie** ; $|\\gamma|<1$ : image **rétrécie**."
+  },
+  {
+    "type": "Question",
+    "enonce": "Lentilles — Définir lentille, lentille mince, lentilles convergente/divergente ; vergence et signe de $f'$.",
+    "reponse": "Lentille : milieu transparent limité par deux dioptres sphériques ou un sphérique et un plan. Mince : épaisseur maximale très petite devant les rayons de courbure. **Convergente** : bords moins épais que le centre ; **divergente** : bords plus épais. Vergence $V=\\dfrac1{f'}$ (en dioptries, $1\\ \\delta=1\\ \\mathrm m^{-1}$), $f'=\\overline{OF'}$ : $f'>0$ pour une convergente, $f'<0$ pour une divergente."
+  },
+  {
+    "type": "Question",
+    "enonce": "Foyers d'une lentille mince — Où sont $F$ et $F'$ ? Centre optique ?",
+    "reponse": "Centre optique $O$ : tout rayon passant par $O$ n'est pas dévié. Pour une lentille mince, $F$ et $F'$ sont **symétriques par rapport à $O$** ($OF=-OF'$). Convergente : $F$ avant la lentille et $F'$ après (foyers réels). Divergente : $F$ après et $F'$ avant (foyers virtuels)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Règles de construction — Énoncer les trois règles principales et les deux règles complémentaires.",
+    "reponse": "(1) Rayon issu de $B$ passant par $O$ : non dévié. (2) Rayon issu de $B$ parallèle à l'axe : émerge en passant par $F'$. (3) Rayon issu de $B$ passant par $F$ : émerge parallèle à l'axe (intersections éventuelles sur les prolongements virtuels). Complémentaires : deux rayons incidents parallèles entre eux émergent en se croisant dans le **plan focal image** ; deux rayons se croisant dans le **plan focal objet** émergent parallèles entre eux."
+  },
+  {
+    "type": "Question",
+    "enonce": "Formules du grandissement — Donner les expressions de $\\gamma$ avec $O$, $F$, $F'$ (théorème de Thalès).",
+    "reponse": "$$\\gamma=\\frac{\\overline{A'B'}}{\\overline{AB}}=\\frac{\\overline{OA'}}{\\overline{OA}}=\\frac{\\overline{F'A'}}{\\overline{F'O}}=\\frac{\\overline{FO}}{\\overline{FA}}.$$ La première égalité utilise le rayon passant par $O$ (triangles semblables $OAB$ et $OA'B'$) ; les suivantes, le rayon parallèle à l'axe passant par $F'$ et le rayon passant par $F$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Relation de conjugaison de Descartes — L'énoncer et la démontrer à partir de $\\gamma$.",
+    "reponse": "$\\dfrac1{\\overline{OA'}}-\\dfrac1{\\overline{OA}}=\\dfrac1{f'}$ (origine au centre optique). Preuve : $\\gamma=\\dfrac{\\overline{OA'}}{\\overline{OA}}$ et $\\gamma=\\dfrac{\\overline{F'A'}}{\\overline{F'O}}=\\dfrac{\\overline{OA'}-f'}{-f'}=1-\\dfrac{\\overline{OA'}}{f'}$. En égalant et en divisant par $\\overline{OA'}$ : $\\dfrac1{\\overline{OA}}=\\dfrac1{\\overline{OA'}}-\\dfrac1{f'}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Relation de conjugaison de Newton — L'énoncer et la démontrer.",
+    "reponse": "$\\overline{F'A'}\\cdot\\overline{FA}=-f'^2$ (origines aux foyers). Preuve : $\\gamma=\\dfrac{\\overline{FO}}{\\overline{FA}}=\\dfrac{\\overline{F'A'}}{\\overline{F'O}}$ avec $\\overline{FO}=f'$ et $\\overline{F'O}=-f'$ : $\\dfrac{f'}{\\overline{FA}}=\\dfrac{\\overline{F'A'}}{-f'}$ d'où $\\overline{FA}\\cdot\\overline{F'A'}=-f'^2$. Utile pour les objets proches du foyer ; elle donne aussi $\\gamma=\\dfrac{f'}{\\overline{FA}}=-\\dfrac{\\overline{F'A'}}{f'}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 1 — Lentille convergente $f'=10$ cm, objet réel à $30$ cm devant la lentille. Position, nature et grandissement.",
+    "reponse": "$\\overline{OA}=-30$ cm : $\\dfrac1{\\overline{OA'}}=\\dfrac1{10}-\\dfrac1{30}=\\dfrac2{30}$, $\\overline{OA'}=15$ cm : image **réelle** (après la lentille). $\\gamma=\\dfrac{15}{-30}=-\\dfrac12$ : image renversée et rétrécie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 2 — Même lentille, objet à $5$ cm devant la lentille (entre $F$ et $O$).",
+    "reponse": "$\\dfrac1{\\overline{OA'}}=\\dfrac1{10}-\\dfrac15=-\\dfrac1{10}$, $\\overline{OA'}=-10$ cm : image **virtuelle** (avant la lentille), $\\gamma=\\dfrac{-10}{-5}=+2$ : droite et agrandie (principe de la loupe). Un objet entre $F$ et $O$ donne toujours une image virtuelle droite agrandie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Application 3 — Lentille divergente $f'=-10$ cm, objet réel à $30$ cm. Résultat général pour un objet réel.",
+    "reponse": "$\\dfrac1{\\overline{OA'}}=-\\dfrac1{10}-\\dfrac1{30}=-\\dfrac4{30}$, $\\overline{OA'}=-7{,}5$ cm : image virtuelle, $\\gamma=\\dfrac{-7{,}5}{-30}=\\dfrac14$ : droite et rétrécie. Pour tout objet réel, une lentille divergente donne une image virtuelle, droite, rétrécie, située entre $F'$ et $O$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Objet à l'infini hors axe — Où se forme l'image et quelle est sa taille pour un objet de diamètre apparent $\\alpha$ ?",
+    "reponse": "Les rayons issus d'un point à l'infini sous l'angle $\\theta$ forment un faisceau parallèle incliné qui converge en un foyer image **secondaire** du plan focal image, à la hauteur $\\overline{F'B'}=f'\\tan\\theta\\approx f'\\theta$. Un objet de diamètre apparent $\\alpha$ (Soleil, Lune $\\approx0{,}5^\\circ\\approx9\\times10^{-3}$ rad) a pour image dans le plan focal une tache de taille $f'\\alpha$ (ex. $f'=1$ m : $\\approx9$ mm)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode de Bessel — Montrer que, pour une lentille convergente, la distance objet réel–image réelle vérifie $D\\ge4f'$ ; cas limite.",
+    "reponse": "Posons $x=-\\overline{OA}>0$. Descartes : $\\overline{OA'}=\\dfrac{f'x}{x-f'}$ et $D=x+\\overline{OA'}=\\dfrac{x^2}{x-f'}$, soit $x^2-Dx+Df'=0$. Une solution réelle existe ssi $\\Delta=D^2-4Df'\\ge0$, i.e. $D\\ge4f'$. Cas limite $D=4f'$ : $x=2f'$, $\\overline{OA'}=2f'$, $\\gamma=-1$ (objet et image symétriques). Pour $D>4f'$ il y a deux positions de la lentille donnant une image nette (méthode de Bessel pour mesurer $f'$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Œil — Rôle des éléments : cornée, iris/pupille, cristallin, corps vitreux, rétine, nerf optique.",
+    "reponse": "Cornée : enveloppe externe. Iris : partie colorée, percée de la pupille, joue le rôle de **diaphragme** (la pupille se dilate à faible éclairement, se ferme sinon). Cristallin : organe transparent assimilable à une lentille de courbure variable (accommodation par les muscles ciliaires). Corps vitreux : fluide gélatineux transparent (90 % du volume) qui assure la rigidité du globe et maintient la rétine. Rétine : écran où se forment les images, couverte de photorécepteurs (cônes et bâtonnets). Nerf optique : transmet le signal électrique au cerveau."
+  },
+  {
+    "type": "Question",
+    "enonce": "Modèle optique de l'œil — Décrire et donner les ordres de grandeur.",
+    "reponse": "Trois éléments : une lentille mince convergente de distance focale **variable** (cristallin + corps vitreux), un écran fixe (rétine) à distance fixe $\\approx17$ mm de la lentille, un diaphragme (iris). Pour qu'une image soit nette, elle doit se former sur la rétine : l'œil adapte $f'$ par accommodation, la distance lentille–rétine restant fixe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Œil emmétrope — Définir punctum remotum, punctum proximum, accommodation ; et calculer les vergences extrêmes avec le modèle ($OA'=17$ mm, PP à $25$ cm).",
+    "reponse": "Punctum remotum (PR) : point le plus éloigné vu net (sans accommodation, sans fatigue) ; à l'infini pour un emmétrope. Punctum proximum (PP) : point le plus proche vu net (accommodation maximale) ; $\\approx25$ cm. Calcul : PR : $\\overline{OA}\\to-\\infty$, $V_{min}=\\dfrac1{f'}=\\dfrac1{\\overline{OA'}}=\\dfrac1{0{,}017}\\approx59\\ \\delta$. PP : $V_{max}=\\dfrac1{\\overline{OA'}}-\\dfrac1{\\overline{OA}}=59+\\dfrac1{0{,}25}\\approx63\\ \\delta$. Amplitude d'accommodation $\\approx4\\ \\delta$ ($f'$ passe de $17$ mm à $\\approx15{,}9$ mm)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Résolution angulaire — Définir la limite de résolution de l'œil et en déduire la plus petite distance séparable à 25 cm.",
+    "reponse": "Angle apparent minimal entre deux points pour qu'ils soient distingués : $\\varepsilon\\approx3\\times10^{-4}$ rad ($\\approx1'$). À $d=25$ cm : $\\Delta\\approx\\varepsilon d\\approx75\\ \\mu$m ; à $1$ m : $0{,}3$ mm. Sur la rétine : $\\varepsilon\\times17$ mm $\\approx5\\ \\mu$m, de l'ordre de la taille d'un photorécepteur."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — Quand la lumière passe de l'air dans le verre, sa fréquence est multipliée par $1/n$.",
+    "reponse": "**Faux.** La fréquence est conservée ; ce sont la célérité ($c/n$) et la longueur d'onde ($\\lambda_0/n$) qui sont divisées par $n$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — Il y a réflexion totale pour tout rayon allant du verre vers l'air.",
+    "reponse": "**Faux.** Il faut $i_1\\ge i_{lim}=\\arcsin(n_{air}/n_{verre})\\approx41{,}8^\\circ$. En dessous, il y a réfraction (avec réflexion partielle)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Une lentille convergente donne toujours une image réelle d'un objet réel.",
+    "reponse": "**Faux.** Si l'objet est entre $F$ et $O$ (distance $<f'$), l'image est virtuelle, droite et agrandie (loupe). Pour un objet au-delà de $F$, image réelle renversée."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Pour une lentille convergente, l'image réelle d'un objet réel est toujours renversée.",
+    "reponse": "**Vrai.** Image réelle : $\\overline{OA'}>0$ ; objet réel : $\\overline{OA}<0$ ; $\\gamma=\\overline{OA'}/\\overline{OA}<0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — Une lentille divergente peut donner une image réelle d'un objet réel.",
+    "reponse": "**Faux.** $\\dfrac1{\\overline{OA'}}=\\dfrac1{f'}+\\dfrac1{\\overline{OA}}$ avec $f'<0$ et $\\overline{OA}<0$ : le membre de droite est négatif, donc $\\overline{OA'}<0$ : image virtuelle (et rétrécie). Une divergente peut donner une image réelle seulement d'un **objet virtuel** situé entre $O$ et $F$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Dans les conditions de Gauss, les lentilles minces sont rigoureusement stigmatiques.",
+    "reponse": "**Faux.** Elles ne le sont qu'**approximativement** : seul le miroir plan est rigoureusement stigmatique parmi les systèmes usuels. Hors conditions de Gauss apparaissent les aberrations (sphérique, etc.)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — La vergence d'une lentille convergente est négative.",
+    "reponse": "**Faux.** $V=1/f'>0$ pour une convergente, $<0$ pour une divergente (en dioptries)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — Lors de l'accommodation, l'œil modifie la distance entre le cristallin et la rétine.",
+    "reponse": "**Faux.** Cette distance est fixe ($\\approx17$ mm) ; ce sont les muscles ciliaires qui modifient la courbure du cristallin donc sa vergence (donc $f'$)."
+  }
+]

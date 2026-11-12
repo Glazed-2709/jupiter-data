@@ -1,0 +1,227 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Convergence simple — Définir la CVS d'une suite $(f_n)$ de fonctions de $I$ dans $\\mathbb K$ (avec des $\\varepsilon$) et dire de quoi dépend $N$. Exemple de référence ?",
+    "reponse": "$f_n\\xrightarrow{CVS}f$ sur $I$ si $\\forall x\\in I$, $f_n(x)\\to f(x)$, c'est-à-dire $\\forall x\\in I,\\forall\\varepsilon>0,\\exists N,\\forall n\\ge N,\\ |f_n(x)-f(x)|<\\varepsilon$. Ici $N$ dépend de $x$ **et** de $\\varepsilon$. Inconvénient : la CVS ne conserve pas les propriétés analytiques (continuité, dérivabilité…). Exemple : $f_n(x)=x^n$ sur $[0,1]$ converge simplement vers $f=\\mathbf 1_{\\{1\\}}$ (nulle sur $[0,1[$, $f(1)=1$), discontinue alors que chaque $f_n$ est continue."
+  },
+  {
+    "type": "Question",
+    "enonce": "Convergence uniforme — Définir la CVU avec des $\\varepsilon$ et expliquer la différence de quantificateurs avec la CVS.",
+    "reponse": "$f_n\\xrightarrow{CVU}f$ sur $I$ si $\\forall\\varepsilon>0,\\ \\exists N,\\ \\forall x\\in I,\\ \\forall n\\ge N,\\ |f_n(x)-f(x)|<\\varepsilon$. Cette fois $N$ ne dépend plus de $x$ (on a permuté $\\exists N$ et $\\forall x$) : c'est le même rang pour tous les points, d'où « uniforme »."
+  },
+  {
+    "type": "Question",
+    "enonce": "Caractérisation de la CVU par la norme infinie — Énoncer précisément (avec la condition de bornitude) et justifier.",
+    "reponse": "$(f_n)$ CVU vers $f$ sur $I$ ssi (i) $f_n-f$ est bornée à partir d'un certain rang, et (ii) $\\|f_n-f\\|_\\infty=\\sup_I|f_n-f|\\to0$. Preuve : $\\sup_I|f_n-f|\\le\\varepsilon$ pour $n\\ge N$ équivaut à $|f_n(x)-f(x)|\\le\\varepsilon$ pour tout $x$ ; la bornitude est nécessaire pour que $\\|\\cdot\\|_\\infty$ soit définie (finie). Autrement dit : CVU $\\iff$ convergence pour la norme $\\|\\cdot\\|_\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "CVU et CVS — Montrer que CVU $\\Rightarrow$ CVS, que la limite uniforme est la limite simple, et dire pourquoi la différence est dans la « façon » de converger.",
+    "reponse": "Si $\\|f_n-f\\|_\\infty\\to0$ alors pour tout $x$, $|f_n(x)-f(x)|\\le\\|f_n-f\\|_\\infty\\to0$. Donc la CVU implique la CVS, avec **la même limite** (unicité de la limite pour chaque $x$) : pour déterminer la limite, on cherche toujours d'abord la limite simple. La réciproque est fausse ($x^n$ sur $[0,1]$). La différence tient à la manière dont $N$ dépend de $x$ : graphiquement, les courbes $f_n$ « s'écrasent » toutes sur la courbe de $f$ (bande de largeur $\\varepsilon$) en CVU."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode — Comment démontrer en pratique la CVU d'une suite de fonctions ? Que faut-il éviter (YAPLUDIX) ?",
+    "reponse": "1) Chercher la limite simple $f$ ($x$ fixé). 2) Soit majorer $|f_n(x)-f(x)|\\le a_n$ avec $a_n$ **indépendant de $x$** (YAPLUDIX : « y a plus de $x$ ») et $a_n\\to0$ ; soit calculer $\\|f_n-f\\|_\\infty$ (étude de variations de $f_n-f$) et montrer qu'elle tend vers $0$. Tant qu'il reste du $x$ dans l'expression, **pas de limite ni d'équivalent**, seulement des $\\le$. Pour **réfuter** la CVU : exhiber $x_n$ avec $|f_n(x_n)-f(x_n)|\\not\\to0$, ou montrer que $\\|f_n-f\\|_\\infty\\not\\to0$, ou utiliser la contraposée d'un théorème d'interversion."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple — Étudier la CVU de $f_n(x)=x^n(1-x)$ et $g_n(x)=nx^n(1-x)$ sur $[0,1]$.",
+    "reponse": "Les deux suites CVS vers $0$ ($x^n\\to0$ si $x<1$ ; valeur $0$ en $x=1$). Variations : $f_n'(x)=x^{n-1}(n-(n+1)x)$, maximum en $x=\\frac n{n+1}$ où $f_n=\\left(\\frac n{n+1}\\right)^n\\frac1{n+1}\\le\\frac1{n+1}\\to0$ : $f_n\\xrightarrow{CVU}0$. Pour $g_n$ : $\\|g_n\\|_\\infty=\\frac n{n+1}\\left(\\frac n{n+1}\\right)^n=\\frac n{n+1}e^{-n\\ln(1+1/n)}\\to e^{-1}\\ne0$ : pas de CVU (mais $g_n\\to0$ simplement). Les courbes de $f_n$ s'écrasent sur l'axe, pas celles de $g_n$ (bosse de hauteur $\\approx e^{-1}$ qui se déplace vers $1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "CVU locale — Définir la CVUL et l'exemple de $f_n(x)=x^n$ sur $[0,1[$.",
+    "reponse": "$(f_n)$ CVU localement sur $I$ si elle CVU sur tout **segment** inclus dans $I$. Pour $f_n=x^n$ sur $I=[0,1[$ : sur $[0,a]$ avec $a<1$, $\\|f_n\\|_\\infty=a^n\\to0$ donc CVUL ; mais $\\sup_{[0,1[}x^n=1$ : pas de CVU sur $[0,1[$. La CVUL est le bon outil quand $I$ n'est pas un segment (ex. $I=\\mathbb R$, $]0,1[$) car continuité, dérivabilité, primitivation sont des propriétés locales."
+  },
+  {
+    "type": "Question",
+    "enonce": "CV en moyenne et en moyenne quadratique — Définir ces convergences sur un segment et énoncer leur lien avec la CVU.",
+    "reponse": "Pour $f_n,f$ continues sur $[a,b]$ : CV en moyenne si $\\|f_n-f\\|_1=\\int_a^b|f_n-f|\\to0$ ; CV en moyenne quadratique si $\\|f_n-f\\|_2=\\sqrt{\\int_a^b|f_n-f|^2}\\to0$. On a : CVU $\\Rightarrow$ CV en moyenne quadratique $\\Rightarrow$ CV en moyenne (car $N_1\\le\\sqrt{b-a}N_2\\le(b-a)N_\\infty$). Les réciproques sont fausses."
+  },
+  {
+    "type": "Question",
+    "enonce": "Contre-exemples aux réciproques — Les donner (sur $[0,1]$).",
+    "reponse": "CV en moyenne $\\not\\Rightarrow$ CVU : $f_n=x^n$ ($\\int x^n=\\frac1{n+1}\\to0$, $\\|f_n\\|_\\infty=1$ ; la limite $\\mathbf 1_{\\{1\\}}$ n'est même pas continue). CV en moyenne $\\not\\Rightarrow$ CV quadratique : $g_n(x)=\\dfrac1{\\sqrt{\\ln n}}\\dfrac1{\\sqrt{x+1/n}}$ : $\\|g_n\\|_1=\\dfrac{2(\\sqrt{1+1/n}-\\sqrt{1/n})}{\\sqrt{\\ln n}}\\to0$ mais $\\|g_n\\|_2^2=\\dfrac{\\ln(1+n)}{\\ln n}\\to1\\ne0$. (Ces suites montrent aussi que $N_1,N_2,N_\\infty$ ne sont pas équivalentes.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Théorème de continuité (suites) — Énoncer, démontrer et interpréter comme interversion de limites.",
+    "reponse": "Si les $f_n$ sont continues sur $I$ (à partir d'un certain rang) et $f_n\\to f$ CVU(L) sur $I$, alors $f$ est continue sur $I$ : « une limite uniforme de fonctions continues est continue ». Preuve ($\\varepsilon/3$) : pour $a\\in I$, $|f(x)-f(a)|\\le|f(x)-f_n(x)|+|f_n(x)-f_n(a)|+|f_n(a)-f(a)|$ ; on fixe $n$ avec $\\|f_n-f\\|_\\infty<\\varepsilon/3$, puis $\\delta$ de continuité de $f_n$ en $a$. Interprétation : $\\lim_{x\\to a}\\lim_nf_n(x)=\\lim_n\\lim_{x\\to a}f_n(x)$. La CVUL suffit (propriété locale)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Contraposée de la continuité — Comment s'en servir pour prouver qu'une CV n'est pas uniforme ? Exemple.",
+    "reponse": "Si les $f_n$ sont continues et la limite simple $f$ est discontinue, la CV n'est pas uniforme (même localement sur un segment contenant le point de discontinuité). Exemple : $x^n$ sur $[0,1]$ a pour limite simple $\\mathbf 1_{\\{1\\}}$, discontinue en $1$ : pas de CVU sur $[0,1]$ (ni sur $[a,1]$). Sur $[0,1[$ la limite est continue (nulle) et il y a CVUL mais pas CVU."
+  },
+  {
+    "type": "Question",
+    "enonce": "Corollaire — Si $f_n$ continues CVU vers $f$ et $x_n\\to x$, que vaut $\\lim f_n(x_n)$ ? L'utiliser pour réfuter la CVU de $x^n$.",
+    "reponse": "$f_n(x_n)\\to f(x)$ (car $|f_n(x_n)-f(x)|\\le\\|f_n-f\\|_\\infty+|f(x_n)-f(x)|\\to0$ par continuité de $f$). Application : $f_n(x)=x^n$ sur $[0,1]$, $x_n=2^{-1/n}\\to1$ : $f_n(x_n)=\\frac12$ alors que $f(1)=1$ : pas de CVU. (On prend $x_n$ qui « suit la bosse ».)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Interversion limite-intégrale — Énoncer le théorème, le démontrer et préciser l'hypothèse sur l'intervalle.",
+    "reponse": "Si $f_n$ continues sur le **segment** $[a,b]$ et $f_n\\to f$ CVU sur $[a,b]$, alors $\\int_a^bf_n\\to\\int_a^bf$ (et $f$ est continue). Preuve : $\\left|\\int_a^b(f_n-f)\\right|\\le(b-a)\\|f_n-f\\|_\\infty\\to0$. La CVU **locale sur $]a,b[$ ne suffit pas** : propriété globale (l'intégrale porte sur tout $[a,b]$), cf. $f_n(x)=n^2x(1-x)^n$ ci-dessous."
+  },
+  {
+    "type": "Question",
+    "enonce": "Contre-exemple pour l'intégrale — Trouver $f_n$ CVS vers $0$ sur $[0,1]$ avec $\\int f_n\\not\\to0$.",
+    "reponse": "$f_n(x)=n^2x(1-x)^n$ : pour $x\\in]0,1]$, $n^2(1-x)^n\\to0$ (croissances comparées) et $f_n(0)=0$ : CVS vers $0$. Mais $\\int_0^1f_n=n^2B(2,n+1)=\\dfrac{n^2}{(n+1)(n+2)}\\to1\\ne0$. Il n'y a donc pas CVU sur $[0,1]$ (sinon on pourrait intervertir), même si elle est CVUL sur $]0,1]$. Autre exemple classique : pics $f_n=n\\cdot$(triangle sur $[0,1/n]$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège — CVU est-elle nécessaire pour échanger limite et intégrale ?",
+    "reponse": "**Non**, elle est suffisante, pas nécessaire. Exemple : $g_n=nx^n(1-x)\\to0$ simplement, sans CVU (cf. $\\|g_n\\|_\\infty\\to e^{-1}$), mais $\\int_0^1g_n=\\dfrac n{(n+1)(n+2)}\\to0=\\int_0^10$. Le théorème de convergence dominée (hors programme ici, vu plus tard) généralise."
+  },
+  {
+    "type": "Question",
+    "enonce": "Primitives de la limite — Énoncer le corollaire sur les suites de primitives.",
+    "reponse": "Si $f_n$ continues sur $I$ et $f_n\\to f$ CVU(L) sur $I$, $a\\in I$, alors les primitives $F_n(x)=\\int_a^xf_n$ (nulles en $a$) convergent uniformément sur tout segment de $I$ vers $F(x)=\\int_a^xf$ : sur un segment $J\\ni a$ de longueur $L$, $|F_n(x)-F(x)|=\\left|\\int_a^x(f_n-f)\\right|\\le|x-a|\\,\\|f_n-f\\|_{\\infty,J}\\le L\\,\\|f_n-f\\|_{\\infty,J}\\to0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Interversion limite-dérivation — Énoncer le théorème (hypothèses ❶❷❸) et en esquisser la preuve.",
+    "reponse": "Si ❶ les $f_n$ sont $\\mathscr C^1$ sur $I$ (à partir d'un rang), ❷ $f_n\\to f$ CVS sur $I$, ❸ $f_n'\\to g$ CVU(L) sur $I$, alors $f$ est $\\mathscr C^1$ et $f'=g$. Preuve : $g$ continue (limite uniforme de continues) ; pour $a\\in I$, $f_n(x)=f_n(a)+\\int_a^xf_n'$ ; par CVS à gauche et interversion limite-intégrale sur le segment $[a,x]$ à droite : $f(x)=f(a)+\\int_a^xg$, donc $f$ est $\\mathscr C^1$ avec $f'=g$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège de la dérivation — Que faut-il faire converger uniformément ? Contre-exemples.",
+    "reponse": "C'est la suite des **dérivées** $f_n'$ qui doit être CVU(L) (pas $f_n$). Contre-exemples : (1) $f_n(x)=\\sqrt{x^2+\\frac1n}\\to|x|$ CVU sur $\\mathbb R$ ($0\\le f_n-|x|\\le\\frac1{\\sqrt n}$) mais $|x|$ n'est pas dérivable en $0$ : $f_n'(x)=\\frac x{\\sqrt{x^2+1/n}}\\to\\operatorname{sgn}x$, qui n'est pas continue donc pas de CVU de $f_n'$. (2) $f_n(x)=\\frac{\\sin(nx)}n\\to0$ uniformément sur $\\mathbb R$ mais $f_n'(x)=\\cos(nx)$ ne converge pas : la limite de $f_n'$ n'est pas $f'=0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivées d'ordre supérieur (suites) — Énoncer le corollaire avec $\\mathscr C^p$.",
+    "reponse": "Si les $f_n$ sont $\\mathscr C^p$, si pour tout $k\\in[\\![1,p-1]\\!]$ la suite $(f_n^{(k)})$ CVS sur $I$ (en pratique la suite $(f_n)$ CVS), et si $(f_n^{(p)})$ CVU(L) sur $I$, alors $f=\\lim f_n$ est $\\mathscr C^p$ et $f^{(k)}=\\lim f_n^{(k)}$ pour $1\\le k\\le p$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Séries de fonctions — Définir CVS, somme, reste, CVU pour $\\sum u_n$ et la lien avec les suites de fonctions.",
+    "reponse": "On applique tout aux sommes partielles $S_n=\\sum_{k\\le n}u_k$. CVS : $\\forall x$, $\\sum u_n(x)$ converge ; somme $S(x)=\\sum_{n=0}^{+\\infty}u_n(x)$ ; reste $R_n(x)=\\sum_{k\\ge n+1}u_k(x)$ (défini en cas de CVS). CVU : $S_n\\to S$ uniformément, i.e. $R_n\\to0$ uniformément sur $I$ ($\\|R_n\\|_\\infty\\to0$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "CVN — Définir la convergence normale, et prouver que CVN $\\Rightarrow$ CVU.",
+    "reponse": "$\\sum u_n$ CVN sur $I$ si chaque $u_n$ est bornée sur $I$ et $\\sum\\|u_n\\|_\\infty$ converge. Alors pour $x\\in I$, $|R_n(x)|\\le\\sum_{k>n}|u_k(x)|\\le\\sum_{k>n}\\|u_k\\|_\\infty$, reste d'une série convergente, indépendant de $x$ : $\\|R_n\\|_\\infty\\to0$ donc CVU (et la série converge absolument en chaque $x$, donc CVA et CVS)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Hiérarchie — Donner le schéma des implications entre CVN, CVU, CVA, CVS et justifier qu'aucune réciproque n'est vraie.",
+    "reponse": "CVN $\\Rightarrow$ CVU $\\Rightarrow$ CVS et CVN $\\Rightarrow$ CVA $\\Rightarrow$ CVS (et idem en version locale). Contre-exemples aux réciproques : CVA $\\not\\Rightarrow$ CVU : $\\sum x^n$ sur $]-1,1[$ (CVA, mais $R_n(x)=\\frac{x^{n+1}}{1-x}$ non borné donc pas de CVU) ; CVU $\\not\\Rightarrow$ CVN (et $\\not\\Rightarrow$ CVA) : $\\sum\\frac{(-1)^nx^n}n$ sur $[0,1]$ ($|R_n|\\le\\frac1{n+1}$ par CSSA mais $\\|u_n\\|_\\infty=\\frac1n$ non sommable, et en $x=1$ CV seulement semi-convergente) ; CVS $\\not\\Rightarrow$ CVU : $\\sum x^n(1-x)$ sur $[0,1]$ (somme discontinue)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Méthode — Comment démontrer la CVN ? Et comment gérer les séries alternées ?",
+    "reponse": "CVS d'abord (sans calculer la somme), puis : majorer $|u_n(x)|\\le a_n$ avec $a_n$ indépendant de $x$ (YAPLUDIX) et $\\sum a_n$ convergente ; sinon calculer $\\|u_n\\|_\\infty$ (variations de $u_n$) et prouver que $\\sum\\|u_n\\|_\\infty$ converge (comparaison, équivalent **sur la suite** $\\|u_n\\|_\\infty$ : c'est autorisé, car une fois le sup pris il n'y a plus de $x$). Cas rare (séries alternées) : pas de CVN mais CVU par le CSSA : $|R_n(x)|\\le|u_{n+1}(x)|\\le\\|u_{n+1}\\|_\\infty\\to0$ ; on revient à la CVU des restes."
+  },
+  {
+    "type": "Question",
+    "enonce": "Continuité de la somme — Énoncer le théorème et expliquer pourquoi, pour les séries, on ne peut pas dire « à partir d'un certain rang ».",
+    "reponse": "Si les $u_n$ sont continues sur $I$ et $\\sum u_n$ CVU(L) ou CVN(L) sur $I$, alors $S=\\sum_{n=0}^{+\\infty}u_n$ est continue sur $I$. Pour les **suites**, on peut supposer les $f_n$ continues à partir d'un rang (seul le comportement limite compte). Pour les **séries**, il faut que **tous** les $u_n$ soient continus : un seul terme discontinu rend $S$ discontinue (la somme contient les premiers termes)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple — Montrer que $\\sum x^n(1-x)$ ne CVU pas sur $[0,1]$ et que $\\sum x^n$ CVN sur $[-a,a]$ pour $a<1$.",
+    "reponse": "Sur $[0,1]$ : pour $x\\in[0,1[$, $\\sum_{n\\ge0}x^n(1-x)=(1-x)\\cdot\\frac1{1-x}=1$, et la somme vaut $0$ en $x=1$ : somme discontinue alors que les $u_n$ sont continues, donc pas de CVU (par contraposée). Sur $[-a,a]$ : $\\|u_n\\|_\\infty=a^n$, $\\sum a^n$ converge : CVN, d'où continuité (et même $\\mathscr C^\\infty$) de $x\\mapsto\\frac1{1-x}$ sur $]-1,1[$ (CVNL)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Théorème de la double limite (limite terme à terme) — Énoncer.",
+    "reponse": "Si $\\sum u_n$ est une série de fonctions sur $]a,b[$ telle que (❶) $\\forall n$, $\\lim_{x\\to a}u_n(x)=\\ell_n\\in\\mathbb C$ et (❷) $\\sum u_n$ CVU ou CVN sur $]a,c]$ (un voisinage de $a$), alors $\\sum\\ell_n$ converge et $\\lim_{x\\to a}\\sum_{n=0}^{+\\infty}u_n(x)=\\sum_{n=0}^{+\\infty}\\ell_n$. En particulier la somme se prolonge par continuité en $a$ (idem en $b$). Admis (HP)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Double limite — Comment l'utiliser pour réfuter la CVU d'une série ? (exemple $\\sum 1/n^x$ sur $]1,+\\infty[$).",
+    "reponse": "Si $u_n(x)\\to\\ell_n$ en $a$ mais que $\\sum\\ell_n$ diverge, alors $\\sum u_n$ ne CVU sur aucun voisinage de $a$. Exemple : $u_n(x)=\\frac1{n^x}\\to\\frac1n$ quand $x\\to1^+$, et $\\sum\\frac1n$ diverge : pas de CVU sur $]1,c]$, donc pas sur $]1,+\\infty[$ (en revanche CVN sur $[a,+\\infty[$ pour $a>1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Intégration terme à terme — Énoncer le théorème et la remarque sur l'hypothèse « segment ».",
+    "reponse": "Si $u_n$ continues sur $[a,b]$ et $\\sum u_n$ CVU (ou CVN) sur le **segment** $[a,b]$, alors $\\sum\\int_a^bu_n$ converge et $\\int_a^b\\sum_{n=0}^{+\\infty}u_n=\\sum_{n=0}^{+\\infty}\\int_a^bu_n$. La CVU **locale** ne suffit pas car l'intégrale est une propriété **globale** sur $[a,b]$ (appliquer le contre-exemple $f_n=n^2x(1-x)^n$ aux sommes partielles $u_n=f_n-f_{n-1}$ : $\\sum\\int u_n=\\lim\\int f_n=1\\ne\\int0$). Corollaire : primitivation terme à terme sur $I$, CVU(L) sur tout segment."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple d'intégration terme à terme — Calculer $\\int_0^{1/2}\\frac{\\mathrm dx}{1-x}$ comme somme de série.",
+    "reponse": "$\\sum x^n$ CVN sur $[0,\\frac12]$ ($\\|x^n\\|_\\infty=2^{-n}$), donc $\\int_0^{1/2}\\frac{\\mathrm dx}{1-x}=\\sum_{n\\ge0}\\int_0^{1/2}x^n\\,\\mathrm dx=\\sum_{n\\ge0}\\frac{(1/2)^{n+1}}{n+1}=\\sum_{n\\ge1}\\frac1{n2^n}$. Comme le membre de gauche vaut $\\ln2$ : $\\ln2=\\sum_{n\\ge1}\\frac1{n2^n}$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Dérivation terme à terme — Énoncer le théorème (hypothèses ❶❷❸) et la version $\\mathscr C^p$.",
+    "reponse": "Si ❶ $u_n$ de classe $\\mathscr C^1$ sur $I$, ❷ $\\sum u_n$ CVS sur $I$, ❸ $\\sum u_n'$ CVU(L) ou CVN(L) sur $I$, alors $S=\\sum u_n$ est $\\mathscr C^1$ sur $I$ et $S'=\\sum u_n'$. Version $\\mathscr C^p$ : $u_n\\in\\mathscr C^p$, $\\sum u_n^{(k)}$ CVS pour $k\\in[\\![0,p-1]\\!]$, $\\sum u_n^{(p)}$ CVU(L) ou CVN(L) $\\Rightarrow$ $S\\in\\mathscr C^p$ et $S^{(k)}=\\sum u_n^{(k)}$ ($1\\le k\\le p$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Remarques sur les hypothèses — CVU ou CVN ? Locale ou globale ? Quand suffit une CV sur un voisinage ?",
+    "reponse": "Presque toujours on vise la **CVN** (plus simple à établir). Les séries alternées semi-convergentes donnent la CVU par le CSSA. **Locale** (sur tout segment) suffit pour les propriétés locales : continuité, dérivation, primitivation ; l'**intégrale sur $[a,b]$** exige la CV sur $[a,b]$ en entier ; une limite en une borne ouverte $a$ exige la CVU/CVN sur un voisinage $]a,c]$ ou $[c,a[$ de $a$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonction zêta de Riemann — Donner l'ensemble de définition et le domaine de CVN, et montrer qu'il n'y a pas CVU sur $]1,+\\infty[$.",
+    "reponse": "$\\zeta(x)=\\sum_{n\\ge1}\\frac1{n^x}$ converge simplement ssi $x>1$ (Riemann). Sur $[a,+\\infty[$ avec $a>1$ : $\\|u_n\\|_\\infty=\\frac1{n^a}$ sommable : CVN, donc CVN sur tout segment de $]1,+\\infty[$ (CVNL). Pas de CVU sur $]1,+\\infty[$ : $\\frac1{n^x}\\xrightarrow[x\\to1^+]{}\\frac1n$ et $\\sum\\frac1n$ diverge (théorème de la double limite), ou directement $R_n(x)\\ge\\int_{n+1}^{+\\infty}\\frac{\\mathrm dt}{t^x}=\\frac{(n+1)^{1-x}}{x-1}\\to+\\infty$ quand $x\\to1^+$ : $\\|R_n\\|_\\infty=+\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonction zêta — Montrer que $\\zeta$ est $\\mathscr C^\\infty$ sur $]1,+\\infty[$ et donner $\\zeta^{(k)}$.",
+    "reponse": "$u_n(x)=n^{-x}=e^{-x\\ln n}$ est $\\mathscr C^\\infty$ avec $u_n^{(k)}(x)=(-\\ln n)^kn^{-x}$. Sur $[a,+\\infty[$, $a>1$ : $\\|u_n^{(k)}\\|_\\infty=\\frac{(\\ln n)^k}{n^a}=o\\!\\left(\\frac1{n^{(1+a)/2}}\\right)$, sommable : CVN. Par dérivation terme à terme itérée sur tout segment de $]1,+\\infty[$ : $\\zeta\\in\\mathscr C^\\infty$ et $\\zeta^{(k)}(x)=\\sum_{n\\ge2}\\frac{(-\\ln n)^k}{n^x}$. En particulier $\\zeta'<0$ et $\\zeta''>0$ : $\\zeta$ est strictement décroissante et convexe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonction zêta — Limite en $+\\infty$.",
+    "reponse": "CVN sur $[2,+\\infty[$ ($\\|u_n\\|_\\infty=\\frac1{n^2}$) et $\\lim_{x\\to+\\infty}\\frac1{n^x}=\\ell_n$ avec $\\ell_1=1$ et $\\ell_n=0$ ($n\\ge2$). Théorème de la double limite : $\\lim_{x\\to+\\infty}\\zeta(x)=\\sum\\ell_n=1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Fonction zêta — Équivalent en $1^+$ : $\\zeta(x)\\sim\\frac1{x-1}$.",
+    "reponse": "Comparaison série-intégrale avec $t\\mapsto t^{-x}$ décroissante : $\\int_n^{n+1}\\frac{\\mathrm dt}{t^x}\\le\\frac1{n^x}\\le\\int_{n-1}^n\\frac{\\mathrm dt}{t^x}$. Sommation : $\\int_1^{+\\infty}\\frac{\\mathrm dt}{t^x}\\le\\zeta(x)\\le1+\\int_1^{+\\infty}\\frac{\\mathrm dt}{t^x}$, soit $\\frac1{x-1}\\le\\zeta(x)\\le1+\\frac1{x-1}$. En multipliant par $x-1>0$ : $1\\le(x-1)\\zeta(x)\\le x\\to1$, donc $\\zeta(x)\\sim\\frac1{x-1}$ en $1^+$."
+  },
+  {
+    "type": "Question",
+    "enonce": "CVU et bornitude — Si $f_n$ bornées et CVU vers $f$, que peut-on dire de $f$ ? Et si seulement CVS ?",
+    "reponse": "CVU : $f$ bornée (à partir d'un rang $\\|f_n-f\\|_\\infty\\le1$ donc $|f|\\le\\|f_n\\|_\\infty+1$). CVS : rien (ex. $f_n(x)=\\min(x,n)$ bornée sur $\\mathbb R_+$, $f_n\\to\\mathrm{id}$ non bornée). La CVU conserve la bornitude, la CVS non."
+  },
+  {
+    "type": "Question",
+    "enonce": "Cas $I$ non segment — Que gagne-t-on avec la CVUL sur $\\mathbb R$ ou $]0,1[$ ? Exemple avec $\\sin(x/n)$.",
+    "reponse": "Continuité, dérivabilité et primitivation passent à la limite si CVU sur tout segment. Exemple : $f_n(x)=\\sin(x/n)\\to0$ simplement ; sur $[-A,A]$, $|f_n|\\le A/n$ : CVU sur tout segment, donc CVUL sur $\\mathbb R$ ; mais $\\sup_{\\mathbb R}|\\sin(x/n)|=1$ : pas de CVU sur $\\mathbb R$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — Si $f_n\\to f$ simplement sur $I$ et que chaque $f_n$ est continue, alors $f$ est continue.",
+    "reponse": "**Faux.** $x^n$ sur $[0,1]$, limite $\\mathbf 1_{\\{1\\}}$. Il faut la CVU (ou CVUL)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — Si $\\sum u_n$ converge normalement sur $I$ alors elle converge uniformément sur $I$.",
+    "reponse": "**Vrai.** $|R_n(x)|\\le\\sum_{k>n}\\|u_k\\|_\\infty$ indépendant de $x$ et tendant vers $0$. La réciproque est fausse (séries alternées)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Si $\\sum u_n$ converge uniformément sur $I$ alors $\\|u_n\\|_\\infty\\to0$.",
+    "reponse": "**Vrai.** $u_n=R_{n-1}-R_n$ donc $\\|u_n\\|_\\infty\\le\\|R_{n-1}\\|_\\infty+\\|R_n\\|_\\infty\\to0$. C'est la version uniforme du « terme général tend vers $0$ » (condition nécessaire de CVU). Elle permet de réfuter la CVU : si $\\|u_n\\|_\\infty\\not\\to0$, pas de CVU (ex. $x^n$ sur $[0,1[$ : $\\sup=1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Si $\\sum u_n$ CVU sur $I$ alors elle CVA sur $I$.",
+    "reponse": "**Faux.** $\\sum\\frac{(-1)^n}{n+x}$ (ou $\\sum\\frac{(-1)^nx^n}n$ sur $[0,1]$) CVU par CSSA mais non absolument convergente (en $x=1$ série de Riemann alternée)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — On peut intervertir $\\lim$ et $\\int$ dès que $f_n\\to f$ simplement sur $[a,b]$.",
+    "reponse": "**Faux.** $f_n(x)=n^2x(1-x)^n\\to0$ simplement, mais $\\int_0^1f_n\\to1$. Il faut la CVU sur le segment (ou une hypothèse de domination, plus tard)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Si $f_n\\to f$ CVU et $f_n$ dérivables, alors $f$ est dérivable et $f_n'\\to f'$.",
+    "reponse": "**Faux.** $\\sqrt{x^2+1/n}\\to|x|$ CVU, non dérivable en $0$ ; $\\frac{\\sin nx}{n}\\to0$ CVU mais $f_n'=\\cos nx$ diverge. L'hypothèse porte sur $(f_n')$, qui doit CVU(L)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — Si $\\sum u_n$ converge simplement sur $[0,1[$ et que chaque $u_n$ a une limite finie en $1$, alors $\\lim_{x\\to1}\\sum u_n(x)=\\sum\\lim u_n(x)$.",
+    "reponse": "**Faux sans CVU/CVN près de $1$.** $\\sum x^n(1-x)$ : $\\lim_{x\\to1}u_n=0$ pour tout $n$ mais $\\lim_{x\\to1^-}\\sum u_n(x)=1\\ne0=\\sum0$. Le théorème de la double limite exige la CVU ou CVN sur un voisinage de $1$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — Pour une série de fonctions, on peut ignorer un nombre fini de termes non continus : la somme reste continue.",
+    "reponse": "**Faux.** La somme $S=\\sum u_n$ contient ces termes : si $u_0$ est discontinue en $a$ et que $\\sum_{n\\ge1}u_n$ est continue (CVU), alors $S=u_0+(\\text{continue})$ est discontinue en $a$. L'expression « à partir d'un certain rang » est valable pour les **suites** de fonctions, pas pour les séries."
+  }
+]

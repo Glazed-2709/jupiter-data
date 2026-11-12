@@ -1,0 +1,227 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Norme — Donner la définition d'une norme sur un $\\mathbb K$-espace vectoriel $E$ ($\\mathbb K=\\mathbb R$ ou $\\mathbb C$) et d'un evn.",
+    "reponse": "Une norme est une application $N:E\\to\\mathbb R_+$ vérifiant : (séparation) $N(x)=0\\iff x=0_E$ ; (homogénéité) $N(\\lambda x)=|\\lambda|N(x)$ pour tous $\\lambda\\in\\mathbb K$, $x\\in E$ ; (inégalité triangulaire) $N(x+y)\\le N(x)+N(y)$. Un evn est un espace vectoriel muni d'une norme."
+  },
+  {
+    "type": "Question",
+    "enonce": "Inégalité triangulaire inversée — Énoncer et démontrer $\\big|N(x)-N(y)\\big|\\le N(x-y)$ (et $\\le N(x+y)$ en changeant $y$ en $-y$).",
+    "reponse": "$N(x)=N((x-y)+y)\\le N(x-y)+N(y)$ donc $N(x)-N(y)\\le N(x-y)$ ; en échangeant les rôles, $N(y)-N(x)\\le N(y-x)=N(x-y)$ (homogénéité avec $\\lambda=-1$). D'où $|N(x)-N(y)|\\le N(x-y)$. Le cours écrit $|N(x)-N(y)|\\le N(x+y)$ : c'est le cas $y\\to-y$ de la précédente ($N(-y)=N(y)$). Conséquence : $N$ est $1$-lipschitzienne, donc continue pour la distance associée."
+  },
+  {
+    "type": "Question",
+    "enonce": "Normes de référence sur $\\mathbb K^n$ — Rappeler $\\|\\cdot\\|_1,\\|\\cdot\\|_2,\\|\\cdot\\|_\\infty$ et préciser leur dépendance vis-à-vis de la base.",
+    "reponse": "Pour $x=\\sum x_ie_i$ : $\\|x\\|_1=\\sum|x_i|$, $\\|x\\|_2=\\sqrt{\\sum|x_i|^2}$, $\\|x\\|_\\infty=\\max_i|x_i|$. Pour un espace $E$ de dimension finie $n$, ces normes sont définies à partir des coordonnées dans une base : **elles dépendent de la base choisie** (changer de base change la norme, même si toutes restent équivalentes)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Comparaison des normes usuelles de $\\mathbb K^n$ — Établir les encadrements entre $\\|\\cdot\\|_1$, $\\|\\cdot\\|_2$, $\\|\\cdot\\|_\\infty$ avec constantes optimales.",
+    "reponse": "$\\|x\\|_\\infty\\le\\|x\\|_2\\le\\|x\\|_1\\le n\\|x\\|_\\infty$ et $\\|x\\|_1\\le\\sqrt n\\|x\\|_2$, $\\|x\\|_2\\le\\sqrt n\\|x\\|_\\infty$. Preuves : $|x_i|\\le\\|x\\|_\\infty$ ; $\\|x\\|_2^2=\\sum|x_i|^2\\le(\\sum|x_i|)^2$ (termes croisés positifs) ; $\\|x\\|_1\\le n\\max|x_i|$ ; $\\|x\\|_1=\\sum1\\cdot|x_i|\\le\\sqrt n\\|x\\|_2$ (Cauchy–Schwarz). Optimalité : égalité pour $e_1$ (sauf les inégalités avec $n$) et pour $x=(1,\\dots,1)$ dans $\\|x\\|_1\\le n\\|x\\|_\\infty$, $\\|x\\|_1\\le\\sqrt n\\|x\\|_2$, $\\|x\\|_2\\le\\sqrt n\\|x\\|_\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Normes sur $\\mathscr M_n(\\mathbb R)$ — Donner $\\|A\\|_1,\\|A\\|_2,\\|A\\|_\\infty$ et l'expression matricielle de $\\|A\\|_2$.",
+    "reponse": "$\\|A\\|_1=\\sum_{i,j}|a_{ij}|$, $\\|A\\|_2=\\sqrt{\\sum_{i,j}a_{ij}^2}=\\sqrt{\\operatorname{tr}(A^\\top A)}$ (norme de Frobenius, issue du produit scalaire $\\langle A,B\\rangle=\\operatorname{tr}(A^\\top B)$), $\\|A\\|_\\infty=\\max_{i,j}|a_{ij}|$. Sur $\\mathscr L(E)$ ($\\dim E=p$, base $\\mathscr B$), on pose $\\|f\\|_i=\\|\\mathrm{Mat}_{\\mathscr B}(f)\\|_i$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Sous-multiplicativité — Parmi $\\|\\cdot\\|_1,\\|\\cdot\\|_2,\\|\\cdot\\|_\\infty$ sur $\\mathscr M_n$, lesquelles vérifient $\\|AB\\|\\le\\|A\\|\\|B\\|$ ? Preuves et contre-exemple.",
+    "reponse": "$\\|\\cdot\\|_2$ : $|(AB)_{ij}|^2=|\\sum_ka_{ik}b_{kj}|^2\\le(\\sum_ka_{ik}^2)(\\sum_kb_{kj}^2)$ (Cauchy–Schwarz), on somme sur $i,j$ : $\\|AB\\|_2^2\\le\\|A\\|_2^2\\|B\\|_2^2$. $\\|\\cdot\\|_1$ : $\\sum_{i,j}|\\sum_ka_{ik}b_{kj}|\\le\\sum_{i,j,k}|a_{ik}||b_{kj}|\\le\\|A\\|_1\\|B\\|_1$ (on ajoute des termes positifs). **Pas** $\\|\\cdot\\|_\\infty$ : $A=B=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$, $AB=2A$, $\\|AB\\|_\\infty=2>1=\\|A\\|_\\infty\\|B\\|_\\infty$ ; on a seulement $\\|AB\\|_\\infty\\le n\\|A\\|_\\infty\\|B\\|_\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Normes sur $\\mathscr C([a,b],\\mathbb K)$ — Donner $N_1,N_2,N_\\infty$, leur nom et les inégalités qui les relient.",
+    "reponse": "$N_1(f)=\\int_a^b|f|$ (convergence en moyenne), $N_2(f)=\\sqrt{\\int_a^b|f|^2}$ (en moyenne quadratique), $N_\\infty(f)=\\sup_{[a,b]}|f|$ (convergence uniforme). On a $N_1\\le(b-a)N_\\infty$, $N_2\\le\\sqrt{b-a}\\,N_\\infty$ et $N_1\\le\\sqrt{b-a}\\,N_2$ (Cauchy–Schwarz). Aucune inégalité en sens inverse (cf. non-équivalence)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège de la séparation — $N_1$ est-elle une norme sur les fonctions continues ? Sur les fonctions continues par morceaux (ou intégrables au sens de Riemann) ?",
+    "reponse": "Sur $\\mathscr C([a,b])$ oui : si $\\int|f|=0$ avec $|f|$ continue, positive, alors $f=0$ (une fonction continue positive d'intégrale nulle est nulle). Sur les fonctions continues par morceaux **non** : $f=\\mathbf 1_{\\{a\\}}$ (nulle sauf en un point) est non nulle avec $N_1(f)=0$ : la séparation échoue (de même pour $N_2$). Idem $f\\mapsto|f(0)|$ n'est pas une norme sur $\\mathscr C([0,1])$ (c'est une semi-norme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Est-ce une norme ? — Étudier sur $\\mathscr C^1([0,1],\\mathbb R)$ : $f\\mapsto\\|f'\\|_\\infty$, $f\\mapsto|f(0)|+\\|f'\\|_\\infty$, $f\\mapsto\\|f\\|_\\infty+\\|f'\\|_\\infty$.",
+    "reponse": "$\\|f'\\|_\\infty$ : **pas une norme** (séparation fausse : $f$ constante non nulle donne $0$). $|f(0)|+\\|f'\\|_\\infty$ : norme (si elle est nulle, $f'=0$ donc $f$ constante, $f(0)=0$ donc $f=0$ ; homogénéité et triangulaire par somme de semi-normes). $\\|f\\|_\\infty+\\|f'\\|_\\infty$ : norme usuelle de $\\mathscr C^1$. Méthode : vérifier la séparation en premier, c'est elle qui échoue le plus souvent."
+  },
+  {
+    "type": "Question",
+    "enonce": "Suites — $\\ell^1\\subset\\ell^2\\subset\\ell^\\infty$ : énoncer correctement les inclusions, les normes et le sens des inégalités. Que dire de la remarque du cours ?",
+    "reponse": "$\\ell^1=\\{u:\\sum|u_n|\\text{ converge}\\}$, $\\ell^2=\\{u:\\sum|u_n|^2\\text{ converge}\\}$, $\\ell^\\infty=\\{\\text{suites bornées}\\}$ ; les inclusions correctes sont **$\\ell^1\\subset\\ell^2\\subset\\ell^\\infty$** (le polycopié écrit $\\ell^2\\subset\\ell^1\\subset\\ell^\\infty$, ce qui est une coquille). Preuve : si $\\sum|u_n|$ converge, $u_n\\to0$ donc $|u_n|\\le1$ à partir d'un rang et $|u_n|^2\\le|u_n|$ ; si $\\sum|u_n|^2$ converge, $|u_n|^2\\to0$ donc $u$ est bornée. Inégalités $\\|u\\|_\\infty\\le\\|u\\|_2\\le\\|u\\|_1$. Inclusions strictes : $(1/n)\\in\\ell^2\\setminus\\ell^1$, $(1)\\in\\ell^\\infty\\setminus\\ell^2$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Polynômes — Donner les normes classiques de $\\mathbb K[X]$ et préciser pourquoi $N_\\infty(P)=\\sup_{[a,b]}|P|$ est bien une norme.",
+    "reponse": "Avec $P=\\sum a_nX^n$ (suite presque nulle) : $\\|P\\|_1=\\sum|a_n|$, $\\|P\\|_2=\\sqrt{\\sum|a_n|^2}$, $\\|P\\|_\\infty=\\sup_n|a_n|$ (normes des coefficients) ; et $N_1,N_2,N_\\infty$ par intégrales/sup sur $[a,b]$. Pour $a<b$, $\\sup_{[a,b]}|P|=0$ force $P$ nul sur un ensemble infini donc $P=0$ : séparation vérifiée (si $a=b$ ce ne serait plus une norme)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Distance — Définir une distance et la distance associée à une norme ; énoncer l'inégalité triangulaire inversée pour une distance.",
+    "reponse": "Une distance est $d:E\\times E\\to\\mathbb R_+$ avec : $d(x,y)=0\\iff x=y$, symétrie $d(x,y)=d(y,x)$, inégalité triangulaire $d(x,y)\\le d(x,z)+d(z,y)$. Pour une norme $N$, $d(x,y)=N(x-y)$ en est une (la norme « dérive de la distance »). Inverse : $d(x,y)\\ge|d(x,z)-d(z,y)|$ (comme pour la norme : $d(x,z)\\le d(x,y)+d(y,z)$ et symétrique)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Distance ou norme ? — Toute distance sur un espace vectoriel provient-elle d'une norme ? Comment caractériser celles qui en viennent ?",
+    "reponse": "**Non.** La distance discrète ($d(x,y)=1$ si $x\\ne y$, $0$ sinon) ou $d(x,y)=\\min(1,|x-y|)$ sur $\\mathbb R$ ne viennent d'aucune norme (ces distances ne sont pas homogènes : $d(\\lambda x,\\lambda y)\\ne|\\lambda|d(x,y)$). Une distance provient d'une norme ssi elle est **invariante par translation** ($d(x+z,y+z)=d(x,y)$) et **homogène** ($d(\\lambda x,\\lambda y)=|\\lambda|d(x,y)$) : alors $N(x)=d(x,0)$ convient."
+  },
+  {
+    "type": "Question",
+    "enonce": "Boules et sphères — Définir $B(x,r)$, $B'(x,r)$, $S(x,r)$, boule unité, vecteur unitaire.",
+    "reponse": "$B(x,r)=\\{y:N(x-y)<r\\}$ (ouverte), $B'(x,r)=\\{y:N(x-y)\\le r\\}$ (fermée), $S(x,r)=\\{y:N(x-y)=r\\}$, avec $r>0$. Boule/sphère unité : $x=0_E$, $r=1$. Un vecteur est unitaire si $N(x)=1$ ; pour $x\\ne0$, $x/N(x)$ est unitaire (c'est la normalisation)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Boules unités de $\\mathbb R^2$ — Décrire les boules unités fermées pour $\\|\\cdot\\|_1,\\|\\cdot\\|_2,\\|\\cdot\\|_\\infty$ et leurs inclusions.",
+    "reponse": "$\\|\\cdot\\|_1$ : le losange (carré tourné de $45^\\circ$) de sommets $(\\pm1,0),(0,\\pm1)$ ; $\\|\\cdot\\|_2$ : le disque unité ; $\\|\\cdot\\|_\\infty$ : le carré $[-1,1]^2$. Comme $\\|x\\|_\\infty\\le\\|x\\|_2\\le\\|x\\|_1$, on a $B'_1\\subset B'_2\\subset B'_\\infty$ (le plus petit en norme $1$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Convexité — Montrer que toute boule d'un evn est convexe. Que dit la boule unité d'une application $N$ qui n'est pas convexe ?",
+    "reponse": "Soit $x,y\\in B(c,r)$, $t\\in[0,1]$ : $N(tx+(1-t)y-c)=N(t(x-c)+(1-t)(y-c))\\le tN(x-c)+(1-t)N(y-c)<r$. Donc $B(c,r)$ (et $B'(c,r)$) est convexe, symétrique par rapport à $c$. Réciproquement une fonction « $N$ » dont la boule unité n'est pas convexe ne vérifie pas l'inégalité triangulaire : par exemple $N(x,y)=(\\sqrt{|x|}+\\sqrt{|y|})^2$ sur $\\mathbb R^2$ (boule en forme d'astroïde) n'est pas une norme."
+  },
+  {
+    "type": "Question",
+    "enonce": "Séparation — Démontrer que deux points distincts $a\\ne b$ ont des boules ouvertes disjointes de même rayon.",
+    "reponse": "Prenons $r=N(a-b)/2>0$. Si $y\\in B(a,r)\\cap B(b,r)$ alors $N(a-b)\\le N(a-y)+N(y-b)<2r=N(a-b)$, absurde. Donc $B(a,r)\\cap B(b,r)=\\emptyset$. (C'est la propriété de séparation ; elle sert à prouver l'unicité de la limite.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Partie bornée — Définir et démontrer que toute boule est bornée et qu'une réunion finie de parties bornées est bornée.",
+    "reponse": "$A$ bornée s'il existe $M$ tel que $\\forall x\\in A,\\ N(x)\\le M$, i.e. $A\\subset B'(0,M)$. Une boule $B(c,r)$ : pour $y\\in B(c,r)$, $N(y)\\le N(c)+N(y-c)<N(c)+r$. Réunion finie $A_1\\cup\\dots\\cup A_p$ avec bornes $M_1,\\dots,M_p$ : $N(x)\\le\\max M_i$. (Une réunion **infinie** de bornées n'est pas bornée : $\\bigcup_n[-n,n]=\\mathbb R$.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Sous-espaces bornés — Un sous-espace vectoriel $F\\ne\\{0\\}$ peut-il être borné ?",
+    "reponse": "**Non.** Si $x\\in F\\setminus\\{0\\}$ alors $\\lambda x\\in F$ pour tout $\\lambda$, de norme $|\\lambda|N(x)\\to+\\infty$. Plus généralement une droite, un plan, $\\mathbb R^n$, $\\mathscr C([a,b])$ entier ne sont jamais bornés. Seules les parties « bornées » sont de type boule, sphère, polytopes, etc."
+  },
+  {
+    "type": "Question",
+    "enonce": "Normes équivalentes — Définir, et montrer que c'est une relation d'équivalence sur l'ensemble des normes de $E$.",
+    "reponse": "$N\\sim N'$ si $\\exists\\alpha,\\beta>0$, $\\forall x\\in E$, $\\alpha N(x)\\le N'(x)\\le\\beta N(x)$ (rapports $N'/N$ et $N/N'$ bornés sur $E\\setminus\\{0\\}$). Réflexive ($\\alpha=\\beta=1$) ; symétrique ($\\beta^{-1}N'\\le N\\le\\alpha^{-1}N'$) ; transitive : $\\alpha N\\le N'\\le\\beta N$ et $\\alpha'N'\\le N''\\le\\beta'N'$ donnent $\\alpha\\alpha'N\\le N''\\le\\beta\\beta'N$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Théorème de dimension finie — Énoncer et en donner les conséquences. Que devient-il en dimension infinie ?",
+    "reponse": "Dans un evn de **dimension finie**, toutes les normes sont équivalentes (admis, preuve hors programme). Conséquences : convergence, limite, caractère borné, etc. sont indépendants de la norme choisie ; on choisit la plus commode (souvent $\\|\\cdot\\|_\\infty$ ou $\\|\\cdot\\|_1$ sur les coordonnées). En dimension **infinie** c'est faux : $N_1,N_2,N_\\infty$ sur $\\mathscr C^0([0,1])$ ne sont pas équivalentes deux à deux ; $\\|\\cdot\\|_1$ et $\\|\\cdot\\|_\\infty$ sur $\\mathbb K[X]$ non plus."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemples — Les normes de $\\mathbb K^n$ sont équivalentes : donner un exemple explicite de constantes entre $\\|\\cdot\\|_\\infty$ et $\\|\\cdot\\|_1$ et en déduire quelle norme choisir pour montrer une convergence.",
+    "reponse": "$\\|x\\|_\\infty\\le\\|x\\|_1\\le n\\|x\\|_\\infty$ : $\\alpha=1,\\beta=n$. Donc $x^{(k)}\\to\\ell$ pour $\\|\\cdot\\|_\\infty$ ssi pour $\\|\\cdot\\|_1$ ssi pour $\\|\\cdot\\|_2$ ssi **chaque coordonnée** converge (on choisit $\\|\\cdot\\|_\\infty$ pour faire coordonnée par coordonnée)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Non-équivalence — Comment montrer que deux normes $N,N'$ ne sont pas équivalentes ?",
+    "reponse": "Il suffit d'exhiber une suite qui tend vers $0$ pour l'une des normes sans tendre vers $0$ pour l'autre, ou une suite bornée pour l'une et non bornée pour l'autre : si $N\\sim N'$ on aurait $N'(x_n)\\le\\beta N(x_n)\\to0$. Plus précisément : l'absence de constante $\\beta$ avec $N'\\le\\beta N$ se traduit par une suite $(x_n)$ avec $N'(x_n)/N(x_n)\\to+\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Non-équivalence sur $\\mathscr C([0,1],\\mathbb R)$ — Montrer que $N_1,N_2,N_\\infty$ ne sont pas équivalentes deux à deux.",
+    "reponse": "Avec $f_n(t)=t^n$ : $N_\\infty(f_n)=1$, $N_1(f_n)=\\dfrac1{n+1}$, $N_2(f_n)=\\dfrac1{\\sqrt{2n+1}}$. Donc $N_\\infty/N_1=n+1\\to\\infty$ et $N_\\infty/N_2=\\sqrt{2n+1}\\to\\infty$ : $N_\\infty$ n'est équivalente ni à $N_1$ ni à $N_2$. Enfin $N_2/N_1=\\dfrac{n+1}{\\sqrt{2n+1}}\\to\\infty$ : $N_1$ et $N_2$ ne sont pas équivalentes. On a seulement $N_1\\le N_2\\le N_\\infty$ (sur $[0,1]$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Non-équivalence sur $\\mathbb K[X]$ — Comparer $\\|\\cdot\\|_1$ et $\\|\\cdot\\|_\\infty$ (normes sur les coefficients).",
+    "reponse": "Avec $P_n=1+X+\\dots+X^n$ : $\\|P_n\\|_\\infty=1$ et $\\|P_n\\|_1=n+1$. Le rapport $\\|P\\|_1/\\|P\\|_\\infty$ n'est pas borné : pas d'équivalence (on a seulement $\\|P\\|_\\infty\\le\\|P\\|_2\\le\\|P\\|_1$). Cohérent avec le fait que $\\mathbb K[X]$ est de dimension infinie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Caractérisation — Montrer que deux normes sont équivalentes ssi elles définissent les mêmes suites convergentes vers $0$.",
+    "reponse": "($\\Rightarrow$) $N'(x_n)\\le\\beta N(x_n)$ et $N(x_n)\\le\\alpha^{-1}N'(x_n)$. ($\\Leftarrow$) Supposons que $N'\\le\\beta N$ soit fausse pour tout $\\beta$ : il existe $x_n$ avec $N'(x_n)>nN(x_n)$ ($x_n\\ne0$) ; $y_n=x_n/N'(x_n)$ vérifie $N'(y_n)=1$ et $N(y_n)<1/n\\to0$ : $(y_n)$ tend vers $0$ pour $N$ mais pas pour $N'$, contradiction. De même dans l'autre sens. Ainsi « même convergence » $\\iff$ « équivalence » (cela donne d'ailleurs un sens à la phrase du cours : c'est tout l'intérêt de la notion)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Suites — Définir suite bornée, suite extraite, convergence dans un evn.",
+    "reponse": "$(u_n)$ bornée : $\\exists M$, $\\forall n$, $N(u_n)\\le M$. Extraite : $(u_{\\varphi(n)})$ avec $\\varphi:\\mathbb N\\to\\mathbb N$ strictement croissante (donc $\\varphi(n)\\ge n$). Convergence : $u_n\\to\\ell\\in E$ si la suite **réelle** $N(u_n-\\ell)\\to0$, c'est-à-dire $\\forall\\varepsilon>0$, $\\exists n_0$, $n\\ge n_0\\Rightarrow N(u_n-\\ell)\\le\\varepsilon$. La convergence dépend donc de la norme en dimension infinie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Unicité de la limite — La démontrer.",
+    "reponse": "Si $u_n\\to\\ell$ et $u_n\\to\\ell'$ : $N(\\ell-\\ell')\\le N(\\ell-u_n)+N(u_n-\\ell')\\to0$, donc $N(\\ell-\\ell')=0$ et $\\ell=\\ell'$. (Variante : boules disjointes de rayon $N(\\ell-\\ell')/2$.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "Convergente implique bornée — Démonstration, et réciproque.",
+    "reponse": "Si $u_n\\to\\ell$, il existe $n_0$ tel que $n\\ge n_0\\Rightarrow N(u_n-\\ell)\\le1$ donc $N(u_n)\\le N(\\ell)+1$ ; avec $M=\\max(N(u_0),\\dots,N(u_{n_0-1}),N(\\ell)+1)$, $\\forall n$, $N(u_n)\\le M$. Réciproque **fausse** : $u_n=(-1)^ne$ ($e\\ne0$) est bornée mais ne converge pas (deux extraites de limites $e$ et $-e$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Opérations — Énoncer les opérations sur les limites (combinaison linéaire, produit matriciel) et démontrer le produit.",
+    "reponse": "Si $u_n\\to\\ell_1$, $v_n\\to\\ell_2$ dans $E$, $\\lambda_n\\to\\lambda$ dans $\\mathbb K$, alors $u_n+\\lambda_nv_n\\to\\ell_1+\\lambda\\ell_2$ (car $N(\\lambda_nv_n-\\lambda\\ell_2)\\le|\\lambda_n-\\lambda|N(v_n)+|\\lambda|N(v_n-\\ell_2)$, $v_n$ bornée). Si $A_k\\to A$ et $B_k\\to B$ (matrices) alors $A_kB_k\\to AB$ : avec la norme de Frobenius (sous-multiplicative), $\\|A_kB_k-AB\\|\\le\\|A_k-A\\|\\|B_k\\|+\\|A\\|\\|B_k-B\\|\\to0$ ($B_k$ bornée) ; toute autre norme convient par équivalence en dimension finie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Suites extraites — Énoncer le résultat et deux conséquences pratiques pour montrer qu'une suite diverge ou converge.",
+    "reponse": "Une suite extraite d'une suite convergente converge vers la même limite. Divergence : si deux extraites ont des limites différentes (ou si une extraite diverge), la suite diverge (ex. $u_{2n}\\to1$, $u_{2n+1}\\to-1$). Convergence : si $u_{2n}$ et $u_{2n+1}$ convergent vers la **même** limite $\\ell$, alors $u_n\\to\\ell$ (rangs $\\ge\\max(n_1,n_2)$). Attention : une extraite convergente n'implique pas que la suite converge."
+  },
+  {
+    "type": "Question",
+    "enonce": "Changement de norme — Si $N\\sim N'$, montrer que $(x_n)$ converge vers $\\ell$ pour $N$ ssi pour $N'$.",
+    "reponse": "$N'(x_n-\\ell)\\le\\beta N(x_n-\\ell)\\to0$ ; réciproquement $N(x_n-\\ell)\\le\\alpha^{-1}N'(x_n-\\ell)$. Les notions de convergence et de limite (donc aussi d'unicité) sont les mêmes pour deux normes équivalentes. En dimension finie, on choisit donc la norme qui arrange."
+  },
+  {
+    "type": "Question",
+    "enonce": "Convergence coordonnée par coordonnée — Énoncer et démontrer pour une suite de $E$ de dimension finie.",
+    "reponse": "Soit $(e_1,\\dots,e_n)$ une base et $u_k=\\sum u_{k,i}e_i$. $u_k\\to\\ell=\\sum\\ell_ie_i$ ssi pour tout $i$, $u_{k,i}\\to\\ell_i$. Preuve : pour la norme $\\|\\cdot\\|_\\infty$ des coordonnées dans cette base, $|u_{k,i}-\\ell_i|\\le\\|u_k-\\ell\\|_\\infty\\le\\sum_i|u_{k,i}-\\ell_i|$, puis équivalence de toutes les normes. Par exemple $A_k\\to A$ dans $\\mathscr M_n(\\mathbb K)$ ssi chaque coefficient $(A_k)_{ij}\\to a_{ij}$ ; $P_k\\to P$ dans $\\mathbb K_d[X]$ ssi chaque coefficient converge."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple du cours — Dans $\\mathscr C([0,1],\\mathbb R)$, étudier $f_n:t\\mapsto t^n$ pour $N_1$, $N_2$ et $N_\\infty$.",
+    "reponse": "$N_1(f_n)=\\frac1{n+1}\\to0$ et $N_2(f_n)=\\frac1{\\sqrt{2n+1}}\\to0$ : $f_n\\to0$ pour $N_1$ et $N_2$. Pour $N_\\infty$ : $N_\\infty(f_n-0)=1\\not\\to0$ donc la limite ne peut pas être $0$ ; en fait $(f_n)$ **diverge** pour $N_\\infty$ : la limite simple est $\\mathbf 1_{\\{1\\}}$ (discontinue), et une limite uniforme de fonctions continues est continue, donc si $f_n\\to g$ uniformément, $g$ est continue et égale à la limite simple, absurde. Même suite, deux comportements : la convergence dépend de la norme en dimension infinie."
+  },
+  {
+    "type": "Question",
+    "enonce": "Implications entre modes de convergence — Comparer convergences uniforme, quadratique et en moyenne sur $[a,b]$.",
+    "reponse": "$N_1\\le\\sqrt{b-a}N_2\\le(b-a)N_\\infty$ : $f_n\\to f$ uniformément $\\Rightarrow$ en moyenne quadratique $\\Rightarrow$ en moyenne. Aucune réciproque : $t^n\\to0$ en $N_1,N_2$ mais pas en $N_\\infty$ ; et $N_1\\to0\\not\\Rightarrow N_2\\to0$ : des pics triangulaires de hauteur $n$ et de base $n^{-3/2}$ donnent $N_1\\approx\\frac12n^{-1/2}\\to0$ mais $N_2^2\\approx\\frac13n^{1/2}\\to\\infty$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Convergence d'une suite de matrices — Comment étudier $A_k=\\frac1k\\begin{pmatrix}1&2\\\\3&4\\end{pmatrix}+\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$ ?",
+    "reponse": "Dimension finie : convergence coefficient par coefficient. $(A_k)_{11}=\\frac1k\\to0$, $\\frac2k+1\\to1$, $\\frac3k\\to0$, $\\frac4k\\to0$ : $A_k\\to\\begin{pmatrix}0&1\\\\0&0\\end{pmatrix}$. On peut aussi écrire $A_k=\\frac1kM+N$ et utiliser $\\lambda_k\\to0$ et la combinaison linéaire."
+  },
+  {
+    "type": "Question",
+    "enonce": "Rédaction — Comment démontrer rigoureusement $\\|x\\|_\\infty\\le\\|x\\|_2\\le\\sqrt n\\|x\\|_\\infty$ (sans calcul inutile) ?",
+    "reponse": "Soit $i_0$ tel que $|x_{i_0}|=\\|x\\|_\\infty$. Alors $\\|x\\|_\\infty^2=|x_{i_0}|^2\\le\\sum_i|x_i|^2=\\|x\\|_2^2$ (somme de termes positifs contenant $|x_{i_0}|^2$) et $\\sum_i|x_i|^2\\le n\\|x\\|_\\infty^2$ (chaque terme $\\le\\|x\\|_\\infty^2$). On passe à la racine, croissante sur $\\mathbb R_+$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — Toute suite bornée d'un evn admet une suite extraite convergente.",
+    "reponse": "**Faux en dimension infinie** (vrai en dimension finie, théorème de Bolzano–Weierstrass). Contre-exemple : dans $\\ell^2$ (ou $\\ell^\\infty$), la suite $(e_n)$ de la base canonique est bornée mais $\\|e_n-e_m\\|_2=\\sqrt2$ pour $n\\ne m$ : aucune extraite n'est de Cauchy donc convergente."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — La norme $\\|\\cdot\\|_\\infty$ de $\\mathscr M_n(\\mathbb R)$ (max des coefficients) est sous-multiplicative.",
+    "reponse": "**Faux.** $A=\\begin{pmatrix}1&1\\\\1&1\\end{pmatrix}$ : $\\|A^2\\|_\\infty=2>1=\\|A\\|_\\infty^2$ ; on a $\\|AB\\|_\\infty\\le n\\|A\\|_\\infty\\|B\\|_\\infty$. En revanche $\\|\\cdot\\|_1$ et $\\|\\cdot\\|_2$ (Frobenius) sont sous-multiplicatives."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — Si $(u_n)$ diverge, toute suite extraite de $(u_n)$ diverge.",
+    "reponse": "**Faux.** $u_n=(-1)^n$ diverge, mais $u_{2n}=1$ converge. Seule l'implication « $u$ converge $\\Rightarrow$ toute extraite converge vers la même limite » est vraie."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — Dans un evn, une suite converge pour une norme ssi elle converge pour toute autre norme.",
+    "reponse": "**Faux en général** (vrai en dimension finie, par équivalence des normes). Contre-exemple : $f_n=t^n\\to0$ pour $N_1$ mais pas pour $N_\\infty$ dans $\\mathscr C([0,1])$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — Une réunion quelconque de parties bornées est bornée.",
+    "reponse": "**Faux.** Seule une réunion **finie** l'est. $[-n,n]$ est borné pour tout $n$ mais $\\bigcup_n[-n,n]=\\mathbb R$ ne l'est pas."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Si $N$ et $N'$ sont deux normes sur $E$, alors $\\max(N,N')$ et $N+N'$ sont des normes équivalentes à $N$ lorsque $N\\sim N'$.",
+    "reponse": "**Vrai.** $\\max(N,N')$ et $N+N'$ sont des normes (séparation par positivité, homogénéité, triangulaire par sup/somme). Si $\\alpha N\\le N'\\le\\beta N$ alors $N\\le\\max(N,N')\\le\\max(1,\\beta)N$ et $N\\le N+N'\\le(1+\\beta)N$ : équivalentes à $N$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — La distance $d(x,y)=\\min(1,|x-y|)$ sur $\\mathbb R$ dérive d'une norme.",
+    "reponse": "**Faux.** Elle est bornée par $1$ : $d(0,\\lambda)=1$ pour $\\lambda\\ge1$ alors que l'homogénéité d'une distance issue d'une norme donnerait $d(0,\\lambda)=\\lambda d(0,1)=\\lambda$ pour $\\lambda>0$. (Elle vérifie tout de même les axiomes de distance et définit la même convergence que $|\\cdot|$.)"
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — Les normes de $\\mathbb K^n$ ($\\|\\cdot\\|_1,\\|\\cdot\\|_2,\\|\\cdot\\|_\\infty$) sont équivalentes mais pas égales, et les constantes dépendent de $n$.",
+    "reponse": "**Vrai.** Par exemple $\\|x\\|_1\\le n\\|x\\|_\\infty$ avec constante optimale $n$ (atteinte en $(1,\\dots,1)$). La constante $\\beta=n$ tend vers l'infini avec $n$ : l'équivalence des normes **n'est pas uniforme en la dimension**, ce qui explique pourquoi elle échoue en dimension infinie."
+  }
+]

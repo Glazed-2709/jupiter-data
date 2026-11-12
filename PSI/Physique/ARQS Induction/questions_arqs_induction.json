@@ -1,0 +1,202 @@
+[
+  {
+    "type": "Question",
+    "enonce": "Rappel — Écrire les quatre équations de Maxwell en régime variable et préciser ce qui change par rapport au régime stationnaire.",
+    "reponse": "Gauss : $\\mathrm{div}\\vec E=\\rho/\\epsilon_0$ ; Faraday : $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B$ ; Ampère : $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j+\\epsilon_0\\mu_0\\partial_t\\vec E$ ; flux : $\\mathrm{div}\\vec B=0$. Par rapport au régime stationnaire, les termes en $\\partial_t$ réapparaissent : $\\vec E$ et $\\vec B$ sont **couplés** (un champ variable engendre l'autre), on ne peut plus les étudier séparément."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courant de déplacement — Définir $\\vec j_D$ et justifier le nom.",
+    "reponse": "$\\vec j_D=\\epsilon_0\\dfrac{\\partial\\vec E}{\\partial t}$ est homogène à une densité volumique de courant ($\\mathrm{A\\cdot m^{-2}}$) et apparaît dans Maxwell–Ampère sous la forme $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0(\\vec j+\\vec j_D)$ : une variation de $\\vec E$ crée du champ magnétique comme le ferait un courant."
+  },
+  {
+    "type": "Question",
+    "enonce": "Symétries en régime variable — Énoncer les propriétés de symétrie du champ $(\\vec E,\\vec B)$ pour un plan de symétrie ou d'antisymétrie de la distribution $(\\rho,\\vec j)$.",
+    "reponse": "Si $\\Pi_s$ est plan de symétrie de $(\\rho,\\vec j)$, alors pour $M\\in\\Pi_s$ : $\\vec E(M)\\in\\Pi_s$ et $\\vec B(M)\\perp\\Pi_s$. Si $\\Pi_a$ est plan d'antisymétrie, alors pour $M\\in\\Pi_a$ : $\\vec E(M)\\perp\\Pi_a$ et $\\vec B(M)\\in\\Pi_a$. Les invariances (rotation, translation) sont traitées comme en stationnaire. Ces règles viennent du caractère polaire de $\\vec E$ et axial de $\\vec B$ ; elles restent valables en régime variable, mais $\\vec E$ et $\\vec B$ ne se calculent plus indépendamment."
+  },
+  {
+    "type": "Question",
+    "enonce": "Nécessité de l'ARQS — Pourquoi cherche-t-on à simplifier les équations de Maxwell ?",
+    "reponse": "Un courant variable crée un $\\vec B$ variable (Ampère), qui crée un $\\vec E$ (Faraday), lui-même source de $\\vec B$ par $\\epsilon_0\\partial_t\\vec E$ (Ampère)… Le système d'EDP couplées est difficile à résoudre. Dans le cadre de l'ARQS magnétique, on néglige $\\epsilon_0\\mu_0\\partial_t\\vec E$ devant $\\mu_0\\vec j$, et Maxwell–Ampère retrouve sa forme de magnétostatique."
+  },
+  {
+    "type": "Question",
+    "enonce": "ARQS magnétique — Énoncer la condition de validité et la conséquence sur Maxwell–Ampère.",
+    "reponse": "Si $\\ell\\ll cT$ ($\\ell$ longueur caractéristique du système, $T$ durée caractéristique de variation des signaux, par ex. la période, $c=1/\\sqrt{\\epsilon_0\\mu_0}$), les courants de déplacement sont négligeables devant $\\vec j$ et $\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$. Les trois autres équations de Maxwell sont inchangées."
+  },
+  {
+    "type": "Question",
+    "enonce": "Établissement de la condition — Retrouver $\\ell\\ll cT$ par ordres de grandeur.",
+    "reponse": "On veut $\\left|\\overrightarrow{\\mathrm{rot}}\\vec B\\right|\\gg\\left|\\mu_0\\epsilon_0\\dfrac{\\partial\\vec E}{\\partial t}\\right|$ soit $\\dfrac B\\ell\\gg\\mu_0\\epsilon_0\\dfrac ET$. Faraday donne $\\dfrac E\\ell\\approx\\dfrac BT$ donc $B\\approx\\dfrac{TE}{\\ell}$. Alors $\\dfrac{ET}{\\ell^2}\\gg\\mu_0\\epsilon_0\\dfrac ET\\iff\\ell^2\\ll\\dfrac{T^2}{\\epsilon_0\\mu_0}\\iff\\ell\\ll\\dfrac{T}{\\sqrt{\\epsilon_0\\mu_0}}=cT$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Interprétation — Que signifie $\\ell\\ll cT$ physiquement ? Application numérique pour un circuit de 1 m.",
+    "reponse": "Le temps de propagation d'un signal à travers le système, $\\ell/c$, est négligeable devant la période $T$ : la propagation est quasi instantanée. De manière équivalente, $f=\\frac1T\\ll\\frac c\\ell$. Pour $\\ell=1\\ \\mathrm m$ : $\\ell/c\\approx3{,}3$ ns donc ARQS valable pour $f\\ll300$ MHz (par exemple $50$ Hz ou $1$ kHz sans problème : $cT=6000$ km à $50$ Hz). Elle devient fausse pour des lignes très longues ou des fréquences élevées (câbles, antennes : on passe à la propagation)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conséquence 1 — Montrer que $\\vec j$ est à flux conservatif en ARQS magnétique et en déduire la loi des nœuds.",
+    "reponse": "$\\mathrm{div}\\,\\overrightarrow{\\mathrm{rot}}\\vec B=0=\\mu_0\\,\\mathrm{div}\\,\\vec j$ donc $\\mathrm{div}\\,\\vec j=0$ : $\\oiint_S\\vec j\\cdot\\mathrm d\\vec S=0$ pour toute surface fermée, c'est-à-dire la **loi des nœuds** (comme en régime stationnaire), valable à chaque instant en ARQS."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conséquence 2 — Théorème d'Ampère en ARQS.",
+    "reponse": "Maxwell–Ampère étant identique à la magnétostatique ($\\overrightarrow{\\mathrm{rot}}\\vec B=\\mu_0\\vec j$), le théorème d'Ampère $\\oint_{\\mathcal C}\\vec B\\cdot\\mathrm d\\vec\\ell=\\mu_0I_{enlac\\acute e}(t)$ reste valable, et **tous les calculs de champ magnétique de la magnétostatique** (fil, solénoïde…) restent valables à chaque instant, avec $I(t)$ ; par exemple $\\vec B=\\mu_0ni(t)\\vec u_z$ dans un solénoïde infini."
+  },
+  {
+    "type": "Question",
+    "enonce": "Conséquence 3 — Le champ électrique est-il à circulation conservative en ARQS ? Que deviennent ses lignes de champ ?",
+    "reponse": "**Non.** $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B\\ne\\vec0$ : la circulation de $\\vec E$ sur un contour fermé n'est pas nulle, $\\vec E$ ne dérive plus d'un potentiel scalaire seul, et ses lignes de champ **peuvent se refermer sur elles-mêmes** (contrairement à l'électrostatique)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Principe général de l'induction — Décrire la chaîne causale dans un conducteur de conductivité $\\gamma$ plongé dans un $\\vec B$ variable.",
+    "reponse": "$\\vec B(M,t)$ variable $\\Rightarrow$ (Faraday) champ électrique $\\vec E$ avec $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B$ $\\Rightarrow$ (Ohm local) courants induits $\\vec j=\\gamma\\vec E$ $\\Rightarrow$ champ magnétique induit $\\vec B_{ind}$ avec $\\overrightarrow{\\mathrm{rot}}\\vec B_{ind}=\\mu_0\\vec j$. Le cours admet que ce champ induit, dans l'ARQS magnétique, n'engendre pas de nouveau champ électrique notable (il est négligé devant le champ imposé)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi de Faraday — Établir $e=-\\dfrac{\\mathrm d\\phi_B}{\\mathrm dt}$ pour un circuit filiforme fixe.",
+    "reponse": "Maxwell–Faraday intégrée sur une surface $S$ s'appuyant sur le circuit $\\mathcal C$ orienté : $\\iint\\overrightarrow{\\mathrm{rot}}\\vec E\\cdot\\mathrm d\\vec S=-\\iint\\partial_t\\vec B\\cdot\\mathrm d\\vec S$. Stokes pour le membre de gauche : $\\oint_{\\mathcal C}\\vec E\\cdot\\mathrm d\\vec\\ell$ ; pour le membre de droite on sort $\\partial_t$ (circuit fixe, variables $t$ et espace indépendantes) : $-\\dfrac{\\mathrm d}{\\mathrm dt}\\iint\\vec B\\cdot\\mathrm d\\vec S=-\\dfrac{\\mathrm d\\phi_B}{\\mathrm dt}$. Définissant la fem $e=\\oint\\vec E\\cdot\\mathrm d\\vec\\ell$ (en volts, analogue d'une tension imposée) : $$e=-\\frac{\\mathrm d\\phi_B}{\\mathrm dt}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Orientation de la fem — Dans quelle convention $e$ est-elle orientée ? Comment faire le schéma équivalent ?",
+    "reponse": "La fem induite est **toujours orientée en convention générateur** par rapport au sens d'orientation choisi pour le circuit (le sens qui définit aussi l'orientation de $\\vec S$ par la règle de la main droite et le signe de $\\phi_B$). Schéma électrique équivalent : un générateur de fem $e$ (flèche dans le sens du courant $i$) en série avec les autres éléments (résistance, bobine…)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Circuit mobile — La loi de Faraday s'applique-t-elle à un circuit mobile dans un champ stationnaire ?",
+    "reponse": "Oui : le cours admet que $e=-\\dfrac{\\mathrm d\\phi_B}{\\mathrm dt}$ reste valable pour un circuit mobile plongé dans un $\\vec B$ stationnaire (induction de Lorentz, $\\vec E_m=\\vec v\\wedge\\vec B$ ressenti par les charges), l'établissement ayant été fait pour un circuit fixe."
+  },
+  {
+    "type": "Question",
+    "enonce": "Loi de Lenz — Énoncer et interpréter le signe « $-$ » de la loi de Faraday.",
+    "reponse": "« Les effets de l'induction s'opposent aux causes qui leur ont donné naissance » : le courant induit crée un champ magnétique induit qui tend à **compenser les variations du flux** (loi de modération). Si $\\phi_B$ augmente, $\\vec B_{ind}$ s'oppose à $\\vec B$ à travers le circuit ; si $\\phi_B$ diminue, $\\vec B_{ind}$ est dans le même sens que $\\vec B$. La loi s'oppose à la **variation** du flux, pas au champ ou au flux lui-même."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple — Spire plane tournant à vitesse angulaire $\\omega$ autour d'un axe de son plan dans un champ uniforme stationnaire $\\vec B$ perpendiculaire à l'axe. Calculer la fem.",
+    "reponse": "Flux $\\phi_B=BS\\cos(\\omega t)$ (angle entre $\\vec n$ et $\\vec B$ égal à $\\omega t$). Faraday : $e=-\\dfrac{\\mathrm d\\phi_B}{\\mathrm dt}=BS\\omega\\sin(\\omega t)$ : fem sinusoïdale d'amplitude $BS\\omega$ (principe de l'alternateur). Avec $N$ spires, $e_{max}=NBS\\omega$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Décrire le dispositif étudié et le champ imposé $\\vec B_0$.",
+    "reponse": "Un conducteur massif cylindrique (rayon $\\ell$, hauteur $h$, conductivité $\\gamma$, axe $(Oz)$) est placé à l'intérieur d'un solénoïde long ($N$ spires, longueur $L$) parcouru par $i_0(t)=I_m\\cos\\omega t$, avec effets de bord négligés. En ARQS : $\\vec B=\\mu_0\\dfrac NLi_0(t)\\vec u_z=B_0\\cos(\\omega t)\\vec u_z$ avec $B_0=\\dfrac{\\mu_0NI_m}L$. Les courants induits dans le conducteur sont appelés courants de Foucault."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Déterminer la direction et les variables de $\\vec E$ par les symétries.",
+    "reponse": "Le plan $(M,\\vec u_r,\\vec u_z)$ est plan d'antisymétrie de la distribution de courants (les courants sont orthoradiaux) : $\\vec E(M)$ est orthogonal à ce plan, donc $\\vec E=E\\vec u_\\theta$. La distribution est invariante par rotation autour de $(Oz)$ et (cylindre assez long, effets de bord négligés) par translation selon $z$ : $E=E(r,t)$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Calculer $\\vec E$ par la loi de Faraday.",
+    "reponse": "Contour : cercle de rayon $r\\le\\ell$ centré sur l'axe, orienté suivant $\\vec u_\\theta$ ($\\vec S=\\pi r^2\\vec u_z$). Circulation : $\\oint\\vec E\\cdot\\mathrm d\\vec\\ell=2\\pi rE$. Flux : $\\phi=B_0\\cos(\\omega t)\\pi r^2$. Faraday : $2\\pi rE=-\\dfrac{\\mathrm d\\phi}{\\mathrm dt}=B_0\\omega\\sin(\\omega t)\\pi r^2$, d'où $$\\vec E=\\frac{B_0\\omega r}{2}\\sin(\\omega t)\\,\\vec u_\\theta.$$ Le champ est orthoradial et croît linéairement avec $r$ (nul sur l'axe) : ses lignes sont des cercles (lignes de champ fermées)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Densité de courant induite et puissance volumique dissipée.",
+    "reponse": "Loi d'Ohm locale : $\\vec j=\\gamma\\vec E=\\dfrac{\\gamma B_0\\omega r}2\\sin(\\omega t)\\vec u_\\theta$. Puissance volumique : $p_v=\\vec j\\cdot\\vec E=\\dfrac{\\gamma B_0^2\\omega^2r^2}{4}\\sin^2(\\omega t)$, de moyenne (avec $\\langle\\sin^2\\rangle=\\frac12$) $\\langle p_v\\rangle=\\dfrac{\\gamma B_0^2\\omega^2r^2}8$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Puissance moyenne totale dissipée par effet Joule et lois d'échelle.",
+    "reponse": "$P_{moy}=\\iiint\\langle p_v\\rangle\\,\\mathrm d\\tau=\\dfrac{\\gamma B_0^2\\omega^2}8\\int_0^\\ell r^3\\mathrm dr\\int_0^{2\\pi}\\mathrm d\\theta\\int_0^h\\mathrm dz=\\dfrac{\\gamma B_0^2\\omega^2}8\\cdot\\dfrac{\\ell^4}4\\cdot2\\pi h$, soit $$P_{moy}=\\frac{\\pi\\gamma B_0^2\\omega^2h\\,\\ell^4}{16}.$$ Elle croît comme $\\omega^2$ (doubler la fréquence quadruple la puissance), $B_0^2$, $\\gamma$, $h$ et surtout comme $\\ell^4$ (le diamètre)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Courants de Foucault — Applications utiles et nuisibles ; comment les limiter ?",
+    "reponse": "Utiles : fours et plaques à induction (matériaux très conducteurs), freinage par induction (énergie cinétique convertie en chaleur dans des disques métalliques). Nuisibles : transformateurs, moteurs (pertes Joule qui diminuent le rendement), d'où l'usage de noyaux feuilletés/laminés ou de matériaux peu conducteurs pour réduire $\\gamma$ et les boucles de courant ($P\\propto\\ell^4$ : diviser le conducteur en lamelles de petite section réduit fortement $P$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Limite du modèle — Pourquoi le résultat est-il approché ? (hors cours)",
+    "reponse": "On a supposé que le champ à l'intérieur du conducteur est celui imposé par le solénoïde, en négligeant le champ magnétique induit par les courants de Foucault. C'est valable si ce champ induit est petit devant $B_0$, c'est-à-dire si $\\mu_0\\gamma\\omega\\ell^2\\ll1$ (profondeur de peau $\\delta=\\sqrt{2/(\\mu_0\\gamma\\omega)}\\gg\\ell$). Sinon l'effet de peau concentre les courants près de la surface et la loi en $\\omega^2$, $\\ell^4$ n'est plus valable."
+  },
+  {
+    "type": "Question",
+    "enonce": "Auto-induction — Définir le phénomène, le flux propre, l'inductance propre $L$ et son énergie.",
+    "reponse": "Auto-induction : induction due à la variation du flux du champ créé par un circuit à travers lui-même. Un courant $i$ crée $\\vec B_{propre}\\propto i$, de flux $\\phi_{propre}=Li$ avec $L$ l'inductance propre (en henry), coefficient **positif** ne dépendant que de la géométrie. Énergie magnétique : $E_{mag}=\\frac12Li^2$. Faraday donne la fem d'auto-induction $e=-L\\dfrac{\\mathrm di}{\\mathrm dt}$ (en convention générateur)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Induction mutuelle — Définir les flux croisés et le coefficient $M$ ; propriétés (unité, signe, symétrie).",
+    "reponse": "Pour deux circuits $\\mathcal C_1,\\mathcal C_2$ parcourus par $i_1,i_2$, le flux de $\\vec B_1$ à travers $\\mathcal C_2$ est $\\phi_{1\\to2}=M_{12}i_1$ et celui de $\\vec B_2$ à travers $\\mathcal C_1$ est $\\phi_{2\\to1}=M_{21}i_2$. Résultat (démonstration hors programme) : $M_{12}=M_{21}=M$. $M$ s'exprime en **henry**, ne dépend que de la géométrie **relative** des circuits, et son **signe est quelconque** (il dépend de l'orientation relative des circuits), contrairement à $L>0$."
+  },
+  {
+    "type": "Question",
+    "enonce": "Flux totaux et équations couplées — Écrire les flux totaux à travers $\\mathcal C_1$ et $\\mathcal C_2$ et les fem induites.",
+    "reponse": "$\\phi_1=L_1i_1+Mi_2$ et $\\phi_2=L_2i_2+Mi_1$ (circuits orientés, $M$ algébrique). Fem induites en convention générateur : $e_1=-\\dfrac{\\mathrm d\\phi_1}{\\mathrm dt}=-L_1\\dfrac{\\mathrm di_1}{\\mathrm dt}-M\\dfrac{\\mathrm di_2}{\\mathrm dt}$ et $e_2=-L_2\\dfrac{\\mathrm di_2}{\\mathrm dt}-M\\dfrac{\\mathrm di_1}{\\mathrm dt}$. Un circuit soumis à $i_2$ variable voit donc une fem due à l'autre circuit."
+  },
+  {
+    "type": "Question",
+    "enonce": "Énergie de deux circuits couplés — Donner $E_{mag}$ totale.",
+    "reponse": "$$E_{mag}=\\tfrac12L_1i_1^2+\\tfrac12L_2i_2^2+Mi_1i_2.$$ Le terme $Mi_1i_2$ est l'énergie d'interaction (énergie mutuelle), signe de $M$ quelconque. Le cours l'énonce comme « énergie d'interaction mutuelle ». L'énergie totale est bien la somme des trois termes."
+  },
+  {
+    "type": "Question",
+    "enonce": "Limitation du couplage — Démontrer $|M|\\le\\sqrt{L_1L_2}$.",
+    "reponse": "L'énergie magnétique $\\int\\frac{B^2}{2\\mu_0}\\mathrm d\\tau$ est $\\ge0$ pour tous $i_1,i_2$. Pour $i_2\\ne0$, avec $x=i_1/i_2$ : $E_{mag}=i_2^2\\left(\\frac12L_1x^2+Mx+\\frac12L_2\\right)\\ge0$ pour tout $x\\in\\mathbb R$. Le trinôme du second degré (coefficient dominant $\\frac12L_1>0$) est donc de signe constant, son discriminant est négatif ou nul : $\\Delta=M^2-L_1L_2\\le0$, soit $$|M|\\le\\sqrt{L_1L_2}.$$"
+  },
+  {
+    "type": "Question",
+    "enonce": "Couplage — Définir le coefficient de couplage et les cas de couplage nul et parfait.",
+    "reponse": "$k=\\dfrac{M}{\\sqrt{L_1L_2}}\\in[-1,1]$. Couplage nul : $M=0$ (circuits sans interaction magnétique). Couplage parfait : $|M|=\\sqrt{L_1L_2}$ ($|k|=1$), réalisé quand **toutes les lignes de champ** créées par un circuit traversent l'autre, et réciproquement (cas du transformateur idéal). Couplage partiel sinon."
+  },
+  {
+    "type": "Question",
+    "enonce": "Exemple — Deux solénoïdes coaxiaux de même longueur $\\ell$, rayons $a_1\\le a_2$, de $N_1$ et $N_2$ spires (le premier à l'intérieur du second). Calculer $L_1,L_2,M$ et vérifier $M^2\\le L_1L_2$.",
+    "reponse": "$L_1=\\dfrac{\\mu_0N_1^2\\pi a_1^2}\\ell$, $L_2=\\dfrac{\\mu_0N_2^2\\pi a_2^2}\\ell$. Le champ de $\\mathcal C_2$ est $\\mu_0\\frac{N_2}\\ell i_2$ uniforme dans $r<a_2$ : flux à travers $\\mathcal C_1$ : $\\phi_{2\\to1}=N_1\\cdot\\mu_0\\frac{N_2}\\ell i_2\\cdot\\pi a_1^2$ donc $M=\\dfrac{\\mu_0N_1N_2\\pi a_1^2}{\\ell}$. Alors $M^2=\\dfrac{\\mu_0^2N_1^2N_2^2\\pi^2a_1^4}{\\ell^2}\\le L_1L_2=\\dfrac{\\mu_0^2N_1^2N_2^2\\pi^2a_1^2a_2^2}{\\ell^2}\\iff a_1\\le a_2$ ✓, égalité (couplage parfait) si $a_1=a_2$ (même section)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Unités — Donner les unités du flux magnétique, de $L$, $M$, et la relation $e=-\\mathrm d\\phi/\\mathrm dt$.",
+    "reponse": "Flux en weber : $1\\ \\mathrm{Wb}=1\\ \\mathrm{T\\cdot m^2}=1\\ \\mathrm{V\\cdot s}$ ; $L$ et $M$ en henry : $1\\ \\mathrm H=1\\ \\mathrm{Wb\\cdot A^{-1}}=1\\ \\Omega\\cdot\\mathrm s$. Fem en volts : $\\mathrm{Wb\\cdot s^{-1}}=\\mathrm V$ (cohérent avec $e=-\\mathrm d\\phi/\\mathrm dt$ et $e=-L\\,\\mathrm di/\\mathrm dt$ : $\\mathrm H\\cdot\\mathrm{A\\cdot s^{-1}}=\\mathrm V$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "Piège de signe — Dans $\\phi=Li\\ (L>0)$, que dit le signe de $M$ ?",
+    "reponse": "$M$ change de signe si l'on change le sens d'orientation d'un seul des deux circuits : $\\phi_{1\\to2}=Mi_1$ est algébrique. $M>0$ si les flux créés par $\\mathcal C_1$ à travers $\\mathcal C_2$ sont dans le sens de l'orientation de $\\mathcal C_2$ ; on ne peut jamais retourner un circuit sans changer $M\\to-M$. $L$, elle, est toujours positive (flux propre dans le même sens que celui défini par $i$, énergie $\\frac12Li^2\\ge0$)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 1 — En ARQS magnétique, les courants de déplacement sont nuls.",
+    "reponse": "**Faux.** Ils sont **négligeables** devant $\\vec j$ dans Maxwell–Ampère (car $\\ell\\ll cT$), pas nuls. $\\vec E$ varie toujours dans le temps ; ce qu'on néglige c'est son effet magnétique."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 2 — En ARQS magnétique, le champ électrique est à circulation conservative.",
+    "reponse": "**Faux.** Maxwell–Faraday reste inchangée : $\\overrightarrow{\\mathrm{rot}}\\vec E=-\\partial_t\\vec B\\ne\\vec0$ ; c'est précisément le moteur de l'induction. Les lignes de $\\vec E$ peuvent se refermer."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 3 — La loi de Lenz dit que le champ induit est toujours opposé au champ inducteur.",
+    "reponse": "**Faux.** Il s'oppose à la **variation** du flux : si le flux inducteur diminue, le champ induit est de même sens que $\\vec B$ inducteur (il tend à maintenir le flux)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 4 — La loi des nœuds reste valable pour des signaux de fréquence 50 Hz dans un circuit de quelques mètres.",
+    "reponse": "**Vrai.** $cT=6000$ km $\\gg\\ell$ : ARQS magnétique valable, donc $\\mathrm{div}\\,\\vec j=0$ et loi des nœuds."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 5 — Un circuit fixe plongé dans un champ magnétique uniforme et stationnaire est le siège d'une fem induite.",
+    "reponse": "**Faux.** $\\phi_B=\\vec B\\cdot\\vec S$ est constant donc $e=-\\mathrm d\\phi_B/\\mathrm dt=0$. Il faut que le flux varie (champ variable, ou circuit mobile/déformable)."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 6 — Doubler la fréquence double la puissance dissipée par courants de Foucault dans le dispositif étudié.",
+    "reponse": "**Faux (elle quadruple).** $P_{moy}=\\dfrac{\\pi\\gamma B_0^2\\omega^2h\\ell^4}{16}\\propto\\omega^2$ (à $B_0$ fixé). Doubler le rayon multiplie par $16$."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 7 — L'inductance mutuelle $M$ entre deux circuits est toujours positive.",
+    "reponse": "**Faux.** Son signe dépend de l'orientation relative choisie des circuits ; seule $|M|\\le\\sqrt{L_1L_2}$ est imposée. L'inductance propre $L$ est, elle, positive."
+  },
+  {
+    "type": "Question",
+    "enonce": "VRAI/FAUX 8 — Deux circuits peuvent avoir $M>\\sqrt{L_1L_2}$ s'ils sont très proches.",
+    "reponse": "**Faux.** $E_{mag}\\ge0$ impose $M^2\\le L_1L_2$, quelle que soit la géométrie. Le couplage maximal $|M|=\\sqrt{L_1L_2}$ est atteint quand toutes les lignes de champ de l'un traversent l'autre."
+  }
+]
